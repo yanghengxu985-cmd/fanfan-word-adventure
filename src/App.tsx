@@ -1,14 +1,17 @@
-import { useState, useSyncExternalStore, useRef, useEffect, lazy, Suspense } from 'react';
+import { useState, useSyncExternalStore, useRef, useEffect, useMemo, lazy, Suspense } from 'react';
 import { ArrowRight, ArrowLeft, BookOpen, Map, Backpack, Leaf, Sparkles, Volume2, Check, X, Home, Users, Presentation, Search, ChevronRight, ChevronLeft, Download, Upload, Printer, Maximize2, Flag, Lightbulb, RotateCcw, Pause, Play, Compass, Settings2, CheckCircle2, Clock, ExternalLink } from 'lucide-react';
 import Island from './components/Island';
+import './components/chineseForestShell.css';
 import { courses, lexemes, getCourseLexemes, contentNotes, type Course, type Lexeme, type Subject } from './data/curriculum';
-import { createProgressStore, recordAttempt, getSkillState, getLexemeState, getDueReviews, importProgress, exportProgress, localDateKey, SKILLS, type Progress, type Skill, type AttemptInput } from './lib/progress';
+import { createProgressStore, recordAttempt, getSkillState, getLexemeState, getDueReviews, localDateKey, SKILLS, type Progress, type Skill, type AttemptInput } from './lib/progress';
 import { makeRound, makeReviewRound, checkAnswer, spellingPracticeNote, type Question } from './lib/questions';
 import { createEnglishAudioPlayer, getEnglishAudioEntry } from './lib/englishAudio';
 import EnglishAdventure from './components/EnglishAdventure';
 import EnglishLearningLab from './components/EnglishLearningLab';
 import { englishLabLessons, getLabLessonForLexeme, type LabLessonId } from './data/englishLearningLab';
 import { hasEnglishActivities, hasEnglishActivityReview, makeEnglishActivityRound, type EnglishActivityKind } from './data/englishActivities';
+import { getChineseRouteOptions, getChineseViewedCourseId, resolveChineseLegacyRoute } from './lib/chineseRoutes';
+import { CHINESE_RECORDS_UPDATED_EVENT, createLearningBackup, exportLearningBackup, getChinesePaperReviews, getChineseWordDueReviews, getForestLearningSummaries, loadChineseLearningRecords, parseLearningBackup, recordChineseLessonView, restoreLearningBackup, type LearningBackupCandidate } from './lib/chineseLearningRecords';
 
 const ChinesePilot = lazy(() => import('./components/ChinesePilot'));
 const ChineseSemesterPlan = lazy(() => import('./components/ChineseSemesterPlan'));
@@ -19,6 +22,8 @@ const OldHouseLesson = lazy(() => import('./components/OldHouseLesson'));
 const ChineseBookStudio = lazy(() => import('./components/ChineseBookStudio'));
 const ChineseLessonViewer = lazy(() => import('./components/ChineseLessonViewer'));
 const ChineseBookCompanionViewer = lazy(() => import('./components/ChineseBookCompanionViewer'));
+const ChineseForest = lazy(() => import('./components/ChineseForest'));
+const ChineseLearningRecords = lazy(() => import('./components/ChineseLearningRecords'));
 
 const allowedIds = new Set(lexemes.map(item => item.id));
 const progressStore = createProgressStore(allowedIds);
@@ -107,11 +112,27 @@ export default function App() {
   const [preferences, setPreferences] = useState(readPreferences);
   const [notice, setNotice] = useState('');
   const [auxiliaryGameFocus, setAuxiliaryGameFocus] = useState(false);
-  const segments = route.split('/').filter(Boolean);
+  const requestedSegments = route.split('/').filter(Boolean);
+  const segments = resolveChineseLegacyRoute(requestedSegments) || requestedSegments;
   const page = segments[0] || 'home';
+  const chineseRouteOptions = getChineseRouteOptions(segments);
+  const [recordsRevision, setRecordsRevision] = useState(0);
+  const viewedChineseCourse = getChineseViewedCourseId(segments);
+  useEffect(() => {
+    const refresh = () => setRecordsRevision(value => value + 1);
+    window.addEventListener(CHINESE_RECORDS_UPDATED_EVENT, refresh);
+    window.addEventListener('storage', refresh);
+    return () => { window.removeEventListener(CHINESE_RECORDS_UPDATED_EVENT, refresh); window.removeEventListener('storage', refresh); };
+  }, []);
+  useEffect(() => { if (viewedChineseCourse) recordChineseLessonView(viewedChineseCourse); }, [viewedChineseCourse]);
+  const teacherView = page === 'teacher' || segments.includes('teacher');
+  const chineseRecords = useMemo(() => teacherView ? null : loadChineseLearningRecords(progress), [teacherView, progress, recordsRevision]);
+  const forestSummaries = useMemo(() => chineseRecords ? getForestLearningSummaries(chineseRecords) : {}, [chineseRecords]);
   const today = localDateKey();
   const due = getDueReviews(progress).filter(reviewAvailable);
   const dueIds = [...new Set(due.map(item => item.lexemeId))];
+  const reviewCount = teacherView ? 0 : due.filter(item => lexemes.find(word => word.id === item.lexemeId)?.subject === 'english').length
+    + (chineseRecords ? getChineseWordDueReviews(chineseRecords).length + getChinesePaperReviews(chineseRecords).length : 0);
   const todayAttempts = progress.attempts.filter(item => item.localDate === today);
   const activeCourse = courses.find(course => course.id === preferences.courseId) || courses[0];
   const selectedCourse = courses.find(course => course.id === segments[1]);
@@ -141,19 +162,19 @@ export default function App() {
     { path: '/review', key: 'review', icon: Backpack, label: '复习背包' },
   ];
   const activeKey = page === 'map' ? `map-${segments[1]}` : page;
-  if (page === 'chinese-lesson' && segments[1] === 'shanxing') return <Suspense fallback={<div className="empty-state">正在打开《山行》一课体验…</div>}><ShanxingLesson /></Suspense>;
-  if (page === 'chinese-lesson' && segments[1] === 'cn-14') return <Suspense fallback={<div className="empty-state">正在打开《搭船的鸟》观察课堂…</div>}><KingfisherLesson teacher={segments[2] === 'teacher'} /></Suspense>;
-  if (page === 'chinese-lesson' && segments[1] === 'cn-15') return <Suspense fallback={<div className="empty-state">正在打开《金色的草地》观察课堂…</div>}><GoldenMeadowLesson teacher={segments[2] === 'teacher'} /></Suspense>;
-  if (page === 'chinese-lesson' && segments[1] === 'cn-08') return <Suspense fallback={<div className="empty-state">正在打开《总也倒不了的老屋》预测课堂…</div>}><OldHouseLesson teacher={segments[2] === 'teacher'} /></Suspense>;
-  if (page === 'chinese-lesson') return <Suspense fallback={<div className="empty-state">正在打开语文课件…</div>}><ChineseLessonViewer courseId={segments[1] || ''} teacher={segments[2] === 'teacher'} /></Suspense>;
-  if (page === 'chinese-companion') return <Suspense fallback={<div className="empty-state">正在打开配套课件…</div>}><ChineseBookCompanionViewer companionId={segments[1] || ''} teacher={segments[2] === 'teacher'} /></Suspense>;
+  if (page === 'chinese-lesson' && segments[1] === 'shanxing') return <Suspense fallback={<div className="empty-state">正在打开《山行》一课体验…</div>}><ShanxingLesson {...chineseRouteOptions} /></Suspense>;
+  if (page === 'chinese-lesson' && segments[1] === 'cn-14') return <Suspense fallback={<div className="empty-state">正在打开《搭船的鸟》观察课堂…</div>}><KingfisherLesson {...chineseRouteOptions} /></Suspense>;
+  if (page === 'chinese-lesson' && segments[1] === 'cn-15') return <Suspense fallback={<div className="empty-state">正在打开《金色的草地》观察课堂…</div>}><GoldenMeadowLesson {...chineseRouteOptions} /></Suspense>;
+  if (page === 'chinese-lesson' && segments[1] === 'cn-08') return <Suspense fallback={<div className="empty-state">正在打开《总也倒不了的老屋》预测课堂…</div>}><OldHouseLesson {...chineseRouteOptions} /></Suspense>;
+  if (page === 'chinese-lesson') return <Suspense fallback={<div className="empty-state">正在打开语文课件…</div>}><ChineseLessonViewer courseId={segments[1] || ''} {...chineseRouteOptions} /></Suspense>;
+  if (page === 'chinese-companion') return <Suspense fallback={<div className="empty-state">正在打开配套课件…</div>}><ChineseBookCompanionViewer companionId={segments[1] || ''} {...chineseRouteOptions} /></Suspense>;
   if (page === 'chinese-book') return <Suspense fallback={<div className="empty-state">正在打开全册学习安排…</div>}><ChineseBookStudio selectedId={segments[1]} /></Suspense>;
-  return <div className={`app-shell${focusedGame ? ' game-focus' : ''}${focusedGame && page === 'teacher' ? ' teacher-game-focus' : ''}`}>
+  return <div className={`app-shell${page === 'map' && segments[1] === 'chinese' ? ' chinese-forest-shell' : ''}${page === 'teacher' ? ' teacher-directory-shell' : ''}${focusedGame ? ' game-focus' : ''}${focusedGame && page === 'teacher' ? ' teacher-game-focus' : ''}`}>
     <a href="#main" className="skip-link" onClick={event => { event.preventDefault(); document.getElementById('main')?.focus(); }}>跳到内容</a>
     <aside className="sidebar">
       <a className="brand" href="#/" aria-label="字词冒险岛首页"><span className="brand-mark"><BookOpen size={24} strokeWidth={1.7} /></span><span>字词冒险岛<small>每次发现一点点</small></span></a>
       <span className="nav-caption">凡凡的探险手册</span>
-      <nav aria-label="主要导航">{navigation.map(({ path, key, icon: Icon, label }) => <a key={key} className={`nav-item ${activeKey === key ? 'active' : ''}`} href={`#${path}`} aria-current={activeKey === key ? 'page' : undefined}><Icon size={20} /><span>{label}</span>{key === 'review' && dueIds.length > 0 && <b>{dueIds.length}</b>}</a>)}</nav>
+      <nav aria-label="主要导航">{navigation.map(({ path, key, icon: Icon, label }) => <a key={key} className={`nav-item ${activeKey === key ? 'active' : ''}`} href={`#${path}`} aria-current={activeKey === key ? 'page' : undefined}><Icon size={20} /><span>{label}</span>{key === 'review' && reviewCount > 0 && <b>{reviewCount}</b>}</a>)}</nav>
       <div className="side-note"><Leaf size={22} /><strong>小小的一步，<br />也是大大的发现。</strong><p>学会了可以停下来。<br />明天，我们再见。</p></div>
       <nav className="adult-nav" aria-label="大人入口"><a href="#/teacher" className={page === 'teacher' ? 'active' : ''}><Presentation size={18} />老师投屏<ExternalLink size={12} /></a><a href="#/parent" className={page === 'parent' ? 'active' : ''}><Users size={18} />家长手册<Settings2 size={14} /></a></nav>
       <div className="side-footer"><span className="avatar">凡</span><div><strong>凡凡的小岛</strong><small>三年级 · 上学期</small></div><Leaf size={15} /></div>
@@ -171,7 +192,7 @@ export default function App() {
           <div className="section-heading"><div><span className="eyebrow">YOUR LITTLE PLAN</span><h2>今天的探险计划</h2></div><a href="#/parent">调整学习计划 <Settings2 size={15} /></a></div>
           <section className="daily-grid" aria-label="今日计划">
             <a className="daily-card current" href={`#/course/${activeCourse.id}`}><span className="icon-box green"><BookOpen size={23} /></span><div><small>① 跟着课本出发</small><h3>{courseTitle(activeCourse)}</h3><p>{activeCourse.subject === 'chinese' ? '语文' : '英语'} · {activeCourse.subtitle}</p></div><ArrowRight size={19} /></a>
-            <a className="daily-card" href="#/review"><span className="icon-box ochre"><Backpack size={23} /></span><div><small>② 和老朋友见一面</small><h3>{dueIds.length ? `${dueIds.length} 个字词等你复习` : '背包里，慢慢装满发现'}</h3><p>{dueIds.length ? '先回忆，再对照答案' : '练习之后，明天安排再见'}</p></div><ArrowRight size={19} /></a>
+            <a className="daily-card" href="#/review"><span className="icon-box ochre"><Backpack size={23} /></span><div><small>② 和老朋友见一面</small><h3>{reviewCount ? `${reviewCount} 项练习等你复习` : '背包里，慢慢装满发现'}</h3><p>{reviewCount ? '字词和纸稿里需要再练的内容' : '练习之后，明天安排再见'}</p></div><ArrowRight size={19} /></a>
             <div className="daily-card journal"><span className="icon-box coral"><Leaf size={23} /></span><div><small>③ 记录每一小步</small><h3>{todayAttempts.length ? `今天留下 ${todayAttempts.length} 次尝试` : '今天的小岛，等你来探索'}</h3><p>{todayAttempts.length ? '学习记录已留在这个浏览器' : '按自己的节奏，一点点积累'}</p></div></div>
           </section>
           <div className="section-heading"><div><span className="eyebrow">TWO WAYS TO WONDER</span><h2>想去哪里探索？</h2></div><span className="subtle">每一课都有自己的入口</span></div>
@@ -181,15 +202,15 @@ export default function App() {
           </section>
           <div className="gentle-note"><Lightbulb size={19} /><p><strong>今天的小提醒</strong>　先自己想一想，再看答案。能在明天想起来，也是一种进步。</p></div>
         </>}
-        {page === 'map' && <SemesterMap subject={segments[1] === 'english' ? 'english' : 'chinese'} progress={progress} />}
+        {page === 'map' && (segments[1] === 'english' ? <SemesterMap subject="english" progress={progress} /> : <Suspense fallback={<div className="empty-state">正在打开语文森林…</div>}><ChineseForest selectedId={segments[2]} currentCourseId={preferences.courseId} courseSummaries={forestSummaries} reviewHref="#/review/chinese" /></Suspense>)}
         {page === 'chinese-plan' && <Suspense fallback={<div className="empty-state">正在打开全学期清单…</div>}><ChineseSemesterPlan /></Suspense>}
         {page === 'chinese-pilot' && <Suspense fallback={<div className="empty-state">正在打开语文练习…</div>}><ChinesePilot key={route} courseId={segments[1]} mode={segments[2]} teacher={segments.includes('teacher')} taskId={segments[3] && segments[3] !== 'teacher' ? decodeURIComponent(segments[3]) : undefined} /></Suspense>}
-        {page === 'english-lab' && <EnglishLearningLab key={route} lessonId={segments[1]} teacher={segments[2] === 'teacher'} onAttempt={onAttempt} onExit={segments[2] === 'teacher' ? () => navigate('/teacher') : undefined} />}
+        {page === 'english-lab' && <EnglishLearningLab key={route} lessonId={segments[1]} teacher={segments[2] === 'teacher'} onAttempt={onAttempt} onExit={segments[2] === 'teacher' ? () => navigate('/teacher/english') : undefined} />}
         {page === 'course' && selectedCourse && <CoursePage key={selectedCourse.id} course={selectedCourse} progress={progress} onSetCurrent={() => { savePreferences({ ...preferences, courseId: selectedCourse.id }); setNotice('已经设为今天的学习课。'); }} onNotice={setNotice} />}
         {page === 'play' && selectedCourse && <CourseRound key={route} course={selectedCourse} mode={modes.includes(segments[2] as GameMode) ? segments[2] as GameMode : 'meaning'} limit={preferences.limit} onAttempt={onAttempt} />}
-        {page === 'review' && <ReviewPage progress={progress} dueIds={dueIds} limit={preferences.limit} onAttempt={onAttempt} onGameFocus={setAuxiliaryGameFocus} />}
-        {page === 'teacher' && <TeacherPage limit={preferences.limit} onGameFocus={setAuxiliaryGameFocus} />}
-        {page === 'parent' && <ParentPage progress={progress} preferences={preferences} onPreferences={savePreferences} onImport={saveProgress} onNotice={setNotice} />}
+        {page === 'review' && <ReviewPage key={segments[1] || 'all'} subject={['chinese', 'english'].includes(segments[1]) ? segments[1] as Subject : undefined} progress={progress} dueIds={dueIds} limit={preferences.limit} onAttempt={onAttempt} onGameFocus={setAuxiliaryGameFocus} />}
+        {page === 'teacher' && <TeacherPage key={segments[1] === 'english' ? 'english' : 'chinese'} limit={preferences.limit} selectedId={segments[1]} onGameFocus={setAuxiliaryGameFocus} />}
+        {page === 'parent' && <ParentPage progress={progress} preferences={preferences} onPreferences={savePreferences} onImport={setProgress} onNotice={setNotice} />}
         {((page === 'course' || page === 'play') && !selectedCourse || !['home', 'map', 'course', 'play', 'review', 'teacher', 'parent', 'english-lab', 'chinese-plan', 'chinese-pilot'].includes(page)) && <EmptyState title="这条小路暂时没有找到" text="回到地图，重新选择一课吧。" action={<a className="primary" href="#/">返回小岛 <Home size={18} /></a>} />}
       </main>
       <footer className="page-footer"><BookOpen size={14} /> 每次发现一点点。<a href="#/teacher">老师投屏</a><span>学习记录保存在当前浏览器 · <a href="#/parent">备份与内容说明</a></span></footer>
@@ -289,7 +310,7 @@ function Round({ course, mode, limit, onAttempt, teacher = false, preferredIds, 
   </section>;
 }
 
-function ReviewPage({ progress, dueIds, limit, onAttempt, onGameFocus }: { progress: Progress; dueIds: string[]; limit: number; onAttempt: (input: AttemptInput) => void; onGameFocus: (focused: boolean) => void }) {
+function ReviewPage({ progress, subject, dueIds, limit, onAttempt, onGameFocus }: { progress: Progress; subject?: Subject; dueIds: string[]; limit: number; onAttempt: (input: AttemptInput) => void; onGameFocus: (focused: boolean) => void }) {
   const [playing, setPlaying] = useState(false);
   const [englishReview, setEnglishReview] = useState<{ courseId: string; kind: EnglishActivityKind; ids: string[] } | null>(null);
   const [labReview, setLabReview] = useState<{ lessonId: LabLessonId; ids: string[] } | null>(null);
@@ -298,9 +319,11 @@ function ReviewPage({ progress, dueIds, limit, onAttempt, onGameFocus }: { progr
     onGameFocus(focused);
     return () => onGameFocus(false);
   }, [focused, onGameFocus]);
-  const practicedIds = [...new Set(progress.attempts.map(item => item.lexemeId))];
+  const englishIds = new Set(lexemes.filter(item => item.subject === 'english').map(item => item.id));
+  const englishDueIds = dueIds.filter(id => englishIds.has(id));
+  const practicedIds = [...new Set(progress.attempts.filter(item => englishIds.has(item.lexemeId)).map(item => item.lexemeId))];
   const [reviewSnapshot, setReviewSnapshot] = useState<{ ids: string[]; targets: { lexemeId: string; skill: Skill }[] }>({ ids: [], targets: [] });
-  const targets = (dueIds.length ? getDueReviews(progress).filter(target => dueIds.includes(target.lexemeId))
+  const targets = (englishDueIds.length ? getDueReviews(progress).filter(target => englishDueIds.includes(target.lexemeId))
     : practicedIds.flatMap(id => SKILLS.filter(skill => getSkillState(progress, id, skill).attempts > 0).map(skill => ({ lexemeId: id, skill })))).filter(reviewAvailable);
   const labIds = new Set(progress.attempts.filter(attempt => attempt.skill === 'listening' && attempt.sourceEvidence.startsWith('english-lab:')).map(attempt => attempt.lexemeId));
   const labTargets = targets.filter(target => target.skill === 'listening' && labIds.has(target.lexemeId) && getLabLessonForLexeme(target.lexemeId));
@@ -327,59 +350,79 @@ function ReviewPage({ progress, dueIds, limit, onAttempt, onGameFocus }: { progr
     setReviewSnapshot({ ids: [...new Set(classicTargets.map(target => target.lexemeId))], targets: classicTargets });
     setPlaying(true);
   }
+  const reviewNavigation = <nav className="review-subject-picker" aria-label="选择复习科目"><a href="#/review" aria-current={!subject ? 'page' : undefined}>全部</a><a href="#/review/chinese" aria-current={subject === 'chinese' ? 'page' : undefined}>语文</a><a href="#/review/english" aria-current={subject === 'english' ? 'page' : undefined}>英语</a></nav>;
+  if (subject === 'chinese') return <><div className="lesson-heading"><div><h1>语文复习背包</h1><p>从纸稿和历史练习里，选一项再练。</p></div><Backpack className="page-emblem" size={58} strokeWidth={1.2} /></div>{reviewNavigation}<Suspense fallback={null}><ChineseLearningRecords progress={progress} mode="review" /></Suspense></>;
   if (labReview) return <EnglishLearningLab key={labReview.lessonId} lessonId={labReview.lessonId} reviewLexemeIds={labReview.ids} onAttempt={onAttempt} onExit={() => setLabReview(null)} />;
   if (englishReview) return <EnglishAdventure key={englishReview.courseId + englishReview.kind} course={courses.find(course => course.id === englishReview.courseId)!}
     kind={englishReview.kind} limit={limit} preferredLexemeIds={englishReview.ids} onAttempt={onAttempt} onExit={() => setEnglishReview(null)} />;
   if (playing) return <><button className="text-button" onClick={() => setPlaying(false)}><ArrowLeft size={16} />返回复习背包</button><Round key="review-round" mode="recall" limit={limit} preferredIds={reviewSnapshot.ids} reviewTargets={reviewSnapshot.targets} onAttempt={onAttempt} onExit={() => setPlaying(false)} /></>;
   return <><div className="lesson-heading"><div><span className="eyebrow">OLD FRIENDS, NEW DISCOVERIES</span><h1>复习背包</h1><p>按练过的能力，再和熟悉的字词见一面。</p></div><Backpack className="page-emblem" size={58} strokeWidth={1.2} /></div>
+    {reviewNavigation}
+    {subject !== 'english' && <Suspense fallback={null}><ChineseLearningRecords progress={progress} mode="review" /></Suspense>}
     {labGroups.length > 0 && <section aria-label="英语体验课复习"><div className="section-heading"><h2>换个情景，再听一听</h2><span className="subtle">继续练听懂，不直接计作独立回忆</span></div><div className="lesson-actions">{labGroups.map(group => <button className="mode-card recall" key={group.lessonId} onClick={() => setLabReview(group)}><span><Volume2 size={22} /></span><h3>{englishLabLessons.find(lesson => lesson.id === group.lessonId)?.title}</h3><p>{group.ids.length} 个字词 · 英文情景体验课</p><ArrowRight size={16} /></button>)}</div></section>}
-    {dueIds.length ? <div className="review-banner"><div><h2>{dueIds.length} 个字词，今天到了见面的日子</h2><p>选一条练习小路，完成后就可以休息。</p></div><button className="primary" onClick={startReview}>开始复习 <ArrowRight size={18} /></button></div>
-      : <EmptyState title={practicedIds.length ? '今天暂时没有到期的字词' : '背包里还没有字词'} text={practicedIds.length ? '明天再回来看看。也可以主动复习学过的字词。' : '从课本地图选一课，完成第一次小冒险吧。'} action={targets.length ? <button className="secondary" onClick={startReview}>提前练一练 <RotateCcw size={16} /></button> : <a className="primary" href="#/map/english">去英语港湾 <ArrowRight size={16} /></a>} />}
+    {englishDueIds.length ? <div className="review-banner"><div><h2>{englishDueIds.length} 个英语字词，今天到了见面的日子</h2><p>选一条练习小路，完成后就可以休息。</p></div><button className="primary" onClick={startReview}>开始复习 <ArrowRight size={18} /></button></div>
+      : <EmptyState title={practicedIds.length ? '今天暂时没有到期的英语字词' : '英语背包里还没有字词'} text={practicedIds.length ? '明天再回来看看。也可以主动复习学过的字词。' : '从课本地图选一课，完成第一次小冒险吧。'} action={targets.length ? <button className="secondary" onClick={startReview}>提前练一练 <RotateCcw size={16} /></button> : <a className="primary" href="#/map/english">去英语港湾 <ArrowRight size={16} /></a>} />}
     {englishGroups.size > 0 && <section aria-label="英语新玩法复习"><div className="section-heading"><h2>再玩一小关</h2><span className="subtle">听懂和接话，分别练习</span></div><div className="lesson-actions">{[...englishGroups.entries()].map(([key, group]) => <button className={'mode-card ' + (group.kind === 'scene' ? 'context' : 'recall')} key={key} onClick={() => setEnglishReview(group)}><span><Volume2 size={22} /></span><h3>{group.kind === 'scene' ? '情景接话' : '听音寻宝'}</h3><p>{courses.find(course => course.id === group.courseId)?.subtitle} · {group.ids.length} 个字词</p><ArrowRight size={16} /></button>)}</div></section>}
-    {practicedIds.length > 0 && <><div className="section-heading"><h2>背包里的发现</h2><span className="subtle">{practicedIds.length} 项练习过 · 能力分开记录</span></div><div className="review-list">{(dueIds.length ? dueIds : practicedIds).map(id => { const item = lexemes.find(item => item.id === id)!; const state = getLexemeState(progress, id); return <div className="review-row" key={id}><span className="review-word">{item.text}</span><div><span>{courses.find(course => course.id === item.courseId)?.title}</span><div className="skill-tags">{SKILLS.filter(skill => state.skills[skill].attempts > 0).map(skill => <span key={skill} className={state.skills[skill].isDue ? 'due-tag' : ''}>{skillLabels[skill]} · {state.skills[skill].isDue ? '今天复习' : statusLabels[state.skills[skill].status]}</span>)}</div></div><a href={`#/course/${item.courseId}`} aria-label={`查看${item.text}所在课程`}><ChevronRight size={20} /></a></div>; })}</div></>}
+    {practicedIds.length > 0 && <><div className="section-heading"><h2>背包里的发现</h2><span className="subtle">{practicedIds.length} 项练习过 · 能力分开记录</span></div><div className="review-list">{(englishDueIds.length ? englishDueIds : practicedIds).map(id => { const item = lexemes.find(item => item.id === id)!; const state = getLexemeState(progress, id); return <div className="review-row" key={id}><span className="review-word">{item.text}</span><div><span>{courses.find(course => course.id === item.courseId)?.title}</span><div className="skill-tags">{SKILLS.filter(skill => state.skills[skill].attempts > 0).map(skill => <span key={skill} className={state.skills[skill].isDue ? 'due-tag' : ''}>{skillLabels[skill]} · {state.skills[skill].isDue ? '今天复习' : statusLabels[state.skills[skill].status]}</span>)}</div></div><a href={`#/course/${item.courseId}`} aria-label={`查看${item.text}所在课程`}><ChevronRight size={20} /></a></div>; })}</div></>}
   </>;
 }
 
-function TeacherPage({ limit, onGameFocus }: { limit: number; onGameFocus: (focused: boolean) => void }) {
-  const [courseId, setCourseId] = useState('cn-01');
+function TeacherPage({ limit, selectedId, onGameFocus }: { limit: number; selectedId?: string; onGameFocus: (focused: boolean) => void }) {
+  const [subject, setSubject] = useState<Subject>(selectedId === 'english' ? 'english' : 'chinese');
+  const [courseId, setCourseId] = useState(courses.find(item => item.subject === 'english' && item.kind === 'unit')!.id);
   const [mode, setMode] = useState<GameMode>('meaning');
   const [roundKey, setRoundKey] = useState(0);
-  const course = courses.find(course => course.id === courseId)!;
+  const course = courses.find(item => item.id === courseId)!;
   const items = getCourseLexemes(courseId);
   const availableModes = availableGameModes(courseId);
-  const focused = !!englishKind(courseId, mode);
+  const focused = subject === 'english' && !!englishKind(courseId, mode);
   useEffect(() => {
     onGameFocus(focused);
     return () => onGameFocus(false);
   }, [focused, onGameFocus]);
-  return <><div className="lesson-heading"><div><span className="eyebrow">A LITTLE WONDER FOR THE WHOLE CLASS</span><h1>把小岛，带进课堂。</h1><p>选一课，投屏提问。先思考，再一起揭晓。</p><div className="english-lab-teacher-links">{englishLabLessons.map(lesson => <a key={lesson.id} href={`#/english-lab/${lesson.id}/teacher`}>体验课 · {lesson.title} <ExternalLink size={15} /></a>)}</div></div><Presentation className="page-emblem" size={58} strokeWidth={1.2} /></div>
-    <section className="teacher-controls"><label>选择教材和课目<select value={courseId} onChange={event => { setCourseId(event.target.value); const first = availableGameModes(event.target.value)[0]; setMode(first || 'meaning'); setRoundKey(roundKey + 1); }}>{courses.map(course => <option value={course.id} key={course.id}>{course.subject === 'chinese' ? '语文' : '英语'} · {course.title}</option>)}</select></label><label>课堂玩法<select value={mode} onChange={event => { setMode(event.target.value as GameMode); setRoundKey(roundKey + 1); }}>{availableModes.map(mode => <option key={mode} value={mode}>{modeLabel(courseId, mode)}</option>)}</select></label><button className="secondary" onClick={() => setRoundKey(roundKey + 1)}><RotateCcw size={17} />换一组</button><button className="secondary" onClick={() => document.documentElement.requestFullscreen?.().catch(() => undefined)}><Maximize2 size={17} />全屏</button><button className="secondary" onClick={() => window.print()}><Printer size={17} />打印本课词单</button></section>
-    {!focused && <div className="cn-pilot-entry"><BookOpen size={24} /><div><strong>语文新样板 · 字音、辨字与纸笔核对</strong><p>两课可直接投屏；演示不保存孩子的记录。</p></div><a href="#/chinese-pilot/cn-01/home/teacher">第1课</a><a href="#/chinese-pilot/cn-04/home/teacher">第4课</a><a href="#/chinese-plan">全册清单</a></div>}
+  const subjectPicker = <nav className="teacher-subject-picker" aria-label="选择课堂科目"><button type="button" aria-pressed={subject === 'chinese'} onClick={() => setSubject('chinese')}><BookOpen size={18} />语文课件</button><button type="button" aria-pressed={subject === 'english'} onClick={() => setSubject('english')}><Compass size={18} />英语课堂</button><a href="#/parent">全册规划与教学资料 <ExternalLink size={15} /></a></nav>;
+  if (subject === 'chinese') return <div className="teacher-directory">{subjectPicker}<Suspense fallback={<div className="empty-state">正在打开语文选课目录…</div>}><ChineseForest teacher selectedId={selectedId} /></Suspense></div>;
+  return <>{subjectPicker}<div className="lesson-heading"><div><span className="eyebrow">A LITTLE WONDER FOR THE WHOLE CLASS</span><h1>把小岛，带进课堂。</h1><p>选一课，投屏提问。先思考，再一起揭晓。</p><div className="english-lab-teacher-links">{englishLabLessons.map(lesson => <a key={lesson.id} href={`#/english-lab/${lesson.id}/teacher`}>体验课 · {lesson.title} <ExternalLink size={15} /></a>)}</div></div><Presentation className="page-emblem" size={58} strokeWidth={1.2} /></div>
+    <section className="teacher-controls"><label>选择英语课目<select value={courseId} onChange={event => { setCourseId(event.target.value); const first = availableGameModes(event.target.value)[0]; setMode(first || 'meaning'); setRoundKey(roundKey + 1); }}>{courses.filter(item => item.subject === 'english').map(item => <option value={item.id} key={item.id}>{item.title}</option>)}</select></label><label>课堂玩法<select value={mode} onChange={event => { setMode(event.target.value as GameMode); setRoundKey(roundKey + 1); }}>{availableModes.map(item => <option key={item} value={item}>{modeLabel(courseId, item)}</option>)}</select></label><button className="secondary" onClick={() => setRoundKey(roundKey + 1)}><RotateCcw size={17} />换一组</button><button className="secondary" onClick={() => document.documentElement.requestFullscreen?.().catch(() => undefined)}><Maximize2 size={17} />全屏</button><button className="secondary" onClick={() => window.print()}><Printer size={17} />打印本课词单</button></section>
     <CourseRound key={`${courseId}-${mode}-${roundKey}`} course={course} mode={mode} limit={limit} teacher />
     <section className="print-sheet"><h2>{course.title} · 字词练习单</h2><p>姓名：________________　日期：________________</p>{[...new Set(items.map(item => item.kind))].map(kind => <div key={kind}><h3>{kindLabels[kind]}</h3><div className="print-words">{items.filter(item => item.kind === kind).map(item => <span key={item.id}>{item.text}<small>____________</small></span>)}</div></div>)}<small>词表来自同版公开预览，使用前请核对学校纸本；合成语音仅供跟读示范。</small></section>
-    <details className="content-details"><summary>本课词库与教学说明</summary><p>{course.subject === 'chinese' ? contentNotes.chinese : contentNotes.english}</p><p>{contentNotes.explanations}</p><a href={`#/course/${course.id}`}>查看本课全部词卡 →</a></details>
+    <details className="content-details"><summary>本课词库与教学说明</summary><p>{contentNotes.english}</p><p>{contentNotes.explanations}</p><a href={`#/course/${course.id}`}>查看本课全部词卡 →</a></details>
   </>;
 }
 
 function ParentPage({ progress, preferences, onPreferences, onImport, onNotice }: { progress: Progress; preferences: { courseId: string; limit: number }; onPreferences: (next: { courseId: string; limit: number }) => void; onImport: (next: Progress) => void; onNotice: (message: string) => void }) {
   const fileInput = useRef<HTMLInputElement>(null);
-  const [importCandidate, setImportCandidate] = useState<Progress | null>(null);
+  const importRequest = useRef(0);
+  const [importCandidate, setImportCandidate] = useState<LearningBackupCandidate | null>(null);
   const practicedIds = [...new Set(progress.attempts.map(item => item.lexemeId))];
   const reviewedMeaning = lexemes.filter(item => item.meaningVerified && item.verificationStatus !== 'pending_verification').length;
   async function readImport(file?: File) {
     if (!file) return;
+    const request = ++importRequest.current;
+    setImportCandidate(null);
     try {
-      if (file.size > 5_000_000) throw new Error('备份文件太大，请使用本工具导出的学习记录。');
-      const candidate = importProgress(await file.text(), allowedIds);
-      setImportCandidate(candidate);
-    } catch (error) { onNotice(error instanceof Error ? error.message : '无法读取这个备份，原记录未改变。'); }
-    if (fileInput.current) fileInput.current.value = '';
+      if (file.size > 10_000_000) throw new Error('备份文件太大，请使用本工具导出的学习记录。');
+      const candidate = parseLearningBackup(await file.text());
+      if (request === importRequest.current) setImportCandidate(candidate);
+    } catch (error) { if (request === importRequest.current) onNotice(error instanceof Error ? error.message : '无法读取这个备份，原记录未改变。'); }
+    if (request === importRequest.current && fileInput.current) fileInput.current.value = '';
+  }
+  function saveBackup() {
+    try { downloadText(`凡凡全记录备份-${localDateKey()}.json`, exportLearningBackup(createLearningBackup(progress))); }
+    catch (error) { onNotice(error instanceof Error ? error.message : '这次未能导出备份，请保留当前浏览器记录。'); }
+  }
+  function confirmImport() {
+    if (!importCandidate) return;
+    try { const restored = restoreLearningBackup(importCandidate, localStorage); onImport(restored); setImportCandidate(null); onNotice('学习记录已导入。'); }
+    catch (error) { onNotice(error instanceof Error ? error.message : '导入失败，请保留备份文件。'); }
   }
   return <>
     <div className="lesson-heading"><div><span className="eyebrow">GROW AT YOUR OWN PACE</span><h1>家长探险手册</h1><p>看见具体的进步，也给“还没想起来”留一点时间。</p></div><Users className="page-emblem" size={58} strokeWidth={1.2} /></div>
     <section className="parent-panel"><h2><Flag size={20} />安排今天的一小步</h2><div className="preferences"><label>跟随学校的当前课<select value={preferences.courseId} onChange={event => onPreferences({ ...preferences, courseId: event.target.value })}>{courses.filter(course => ['lesson', 'unit', 'alphabet'].includes(course.kind)).map(course => <option value={course.id} key={course.id}>{course.subject === 'chinese' ? '语文' : '英语'} · {course.title}</option>)}</select></label><label>每轮的题目上限<select value={preferences.limit} onChange={event => onPreferences({ ...preferences, limit: Number(event.target.value) })}>{[4, 6, 8].map(limit => <option key={limit} value={limit}>{limit} 题</option>)}</select></label></div><p className="small-note">默认不倒计时。词卡学习不计成绩；同一天重复答对不等于跨日记住。英文拼写可选，语音示范不自动评分。</p></section>
-    <section className="parent-panel"><h2><Download size={20} />保存这一路的发现</h2><p>学习记录保存在当前浏览器。清理浏览器或换设备前，先导出备份；在其他设备可手动导入。</p><div className="backup-actions"><button className="primary" onClick={() => downloadText(`凡凡字词学习记录-${localDateKey()}.json`, exportProgress(progress))}><Download size={17} />导出学习记录</button><button className="secondary" onClick={() => fileInput.current?.click()}><Upload size={17} />导入备份</button><input ref={fileInput} type="file" accept=".json,application/json" hidden onChange={event => void readImport(event.target.files?.[0])} /><span>{progress.attempts.length} 条尝试 · {practicedIds.length} 个字词</span></div>{importCandidate && <div className="import-confirm" role="alert"><p>已检查备份，包含 {importCandidate.attempts.length} 条尝试。确认导入会替换当前的 {progress.attempts.length} 条记录，请先导出原记录。</p><button className="primary" onClick={() => { onImport(importCandidate); setImportCandidate(null); onNotice('学习记录已导入。'); }}>确认替换记录</button><button className="secondary" onClick={() => setImportCandidate(null)}>取消</button></div>}</section>
-    <section className="parent-panel"><h2><Leaf size={20} />每一种能力，分别看见</h2><p>“本次通过”记录这一次的回答。“跨日记住”需要至少两个日期的无提示独立证据，其中有回忆、语境或书写；下一次遗忘只调整相关能力。手写自查算练习，独立书写需要大人确认。</p>{practicedIds.length ? <div className="table-wrap"><table><thead><tr><th>字词 / 课程</th><th>已经练习的能力</th><th>下次复习</th></tr></thead><tbody>{practicedIds.map(id => { const item = lexemes.find(item => item.id === id)!; const states = SKILLS.map(skill => ({ skill, state: getSkillState(progress, id, skill) })).filter(row => row.state.attempts); const dueDate = states.map(row => row.state.dueAt).filter(Boolean).sort()[0]; return <tr key={id}><td><strong>{item.text}</strong><small>{courses.find(course => course.id === item.courseId)?.title}</small></td><td>{states.map(({ skill, state }) => <span className="table-skill" key={skill}>{skillLabels[skill]}：{statusLabels[state.status]}<small>{state.independentDays}个日期有独立证据</small></span>)}</td><td>{dueDate ? new Date(dueDate).toLocaleDateString('zh-CN', { month: 'long', day: 'numeric' }) : '—'}</td></tr>; })}</tbody></table></div> : <p className="small-note">完成第一次闯关后，这里会显示具体字词；目前没有学习成绩。</p>}</section>
+    <section className="parent-panel"><h2><Download size={20} />保存这一路的发现</h2><p>全记录备份包含字词尝试、语文纸笔检查、旧样板、《山行》和浏览记录。清理浏览器或换设备前先导出，在其他设备可手动导入。旧版字词备份仍可使用。</p><div className="backup-actions"><button className="primary" onClick={saveBackup}><Download size={17} />导出学习记录</button><button className="secondary" onClick={() => fileInput.current?.click()}><Upload size={17} />导入备份</button><input ref={fileInput} type="file" accept=".json,application/json" hidden onChange={event => void readImport(event.target.files?.[0])} /><span>{progress.attempts.length} 条尝试 · {practicedIds.length} 个字词</span></div>{importCandidate && <div className="import-confirm" role="alert"><p>已检查备份，包含 {importCandidate.progress.attempts.length} 条字词尝试。{importCandidate.kind === 'bundle' ? '确认后替换字词、语文纸笔、旧样板、山行和浏览记录。' : '这是旧版字词备份，只替换字词记录，现有语文纸笔记录保留。'}请先导出当前全记录备份。</p><button className="primary" onClick={confirmImport}>确认替换记录</button><button className="secondary" onClick={() => setImportCandidate(null)}>取消</button></div>}</section>
+    <section className="parent-panel chinese-adult-resources"><h2><BookOpen size={20} />全册规划与教学资料</h2><div className="chinese-adult-links"><a href="#/chinese-book">逐课目标与教学安排 <ArrowRight size={16} /></a><a href="#/chinese-plan">全册字词与教材要求 <ArrowRight size={16} /></a><a href="#/teacher">打开老师课堂 <ArrowRight size={16} /></a><a href={`${import.meta.env.BASE_URL}plans/chinese-precision-master-plan.md`} download="语文全册规划.md">下载全册规划</a><a href={`${import.meta.env.BASE_URL}plans/chinese-precision-release.md`} download="语文课件验收台账.md">制作与验收台账</a></div></section>
+    <Suspense fallback={null}><ChineseLearningRecords progress={progress} mode="overview" /></Suspense>
+    <section className="parent-panel"><h2><Leaf size={20} />每一种能力，分别看见</h2><p>“本次通过”记录这一次的回答。“跨日记住”需要至少两个日期的无提示独立证据，其中有回忆、语境或书写；下一次遗忘只调整相关能力。手写自查算练习，独立书写需要大人确认。</p><p className="small-note">下表保留字词关卡的练习证据与原安排。语文纸稿复检后的当前待练内容，请查看上方语文记录与<a href="#/review/chinese">语文复习背包</a>。</p>{practicedIds.length ? <div className="table-wrap"><table><thead><tr><th>字词 / 课程</th><th>已经练习的能力</th><th>关卡复习日期</th></tr></thead><tbody>{practicedIds.map(id => { const item = lexemes.find(item => item.id === id)!; const states = SKILLS.map(skill => ({ skill, state: getSkillState(progress, id, skill) })).filter(row => row.state.attempts); const dueDate = states.map(row => row.state.dueAt).filter(Boolean).sort()[0]; return <tr key={id}><td><strong>{item.text}</strong><small>{courses.find(course => course.id === item.courseId)?.title}</small></td><td>{states.map(({ skill, state }) => <span className="table-skill" key={skill}>{skillLabels[skill]}：{statusLabels[state.status]}<small>{state.independentDays}个日期有独立证据</small></span>)}</td><td>{dueDate ? new Date(dueDate).toLocaleDateString('zh-CN', { month: 'long', day: 'numeric' }) : '—'}</td></tr>; })}</tbody></table></div> : <p className="small-note">完成第一次闯关后，这里会显示具体字词；目前没有学习成绩。</p>}</section>
     <section className="parent-panel content-audit"><h2><BookOpen size={20} />教材内容与待核对项</h2><div className="inventory-stats"><div><strong>276 / 250 / 250</strong><small>语文识字展示 / 写字 / 词语记录</small></div><div><strong>127 + 26</strong><small>英语单元词条 + 字母</small></div><div><strong>{reviewedMeaning}</strong><small>已有教学释义的记录（含重复类别）</small></div></div><p>{contentNotes.chinese}</p><p>{contentNotes.english}</p><p>{contentNotes.explanations}</p><p>{spellingPracticeNote}</p><div className="info-note">纸本已逐项核对：0 项。第18课“起来”、第22课“贞”以及多音字等保留原表并待复核；对应未审核题型关闭。语文园地1、2、6正文词项与英语两个Project任务待补全。词库完整收录公开书后表，不代表整本教材教学内容全部完成。</div><details><summary>查看词条来源、字段审核与待核对清单</summary><div className="table-wrap"><table><thead><tr><th>字词</th><th>课程 / 来源页</th><th>字段状态</th><th>说明</th></tr></thead><tbody>{lexemes.map(item => <tr key={item.id}><td>{item.text}<small>{kindLabels[item.kind]}</small></td><td>{courses.find(course => course.id === item.courseId)?.title}<small>{item.sourcePage} · {item.sourceEdition} / {item.sourcePrint}</small></td><td>{item.verificationStatus === 'pending_verification' ? '待核对' : item.verificationStatus === 'extension' ? '补充练习' : '公开词表已核读'}<small>释义{item.meaningVerified ? '可用' : '待核'} · 读音{item.readingVerified ? '已编辑' : '待核'}</small></td><td>{item.notes || '2026纸本印次仍待复核'}</td></tr>)}</tbody></table></div></details><div className="source-links"><a href="https://jc.pep.com.cn/" target="_blank" rel="noreferrer">人教教材目录 <ExternalLink size={14} /></a><a href="https://keben.app/book/0163" target="_blank" rel="noreferrer">英文词表核读来源 <ExternalLink size={14} /></a></div></section>
   </>;
 }

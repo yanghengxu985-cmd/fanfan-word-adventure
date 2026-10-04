@@ -5,6 +5,7 @@ import { lessonDesigns, studioSources, studioUnits } from '../data/chineseBookSt
 import { chineseBookCompanions } from '../data/chineseBookCompanions';
 import { getChinesePrecisionLesson } from '../data/chineseLessonPrecision';
 import { companionWorkshops } from '../data/chineseCompanionPrecision';
+import { chineseReturnHref } from '../lib/chineseLessonNavigation';
 import './chineseBookStudio.css';
 
 type Section = 'lessons' | 'companions';
@@ -33,7 +34,7 @@ export default function ChineseBookStudio({ selectedId }: { selectedId?: string 
 
   useEffect(() => {
     const previous = document.title;
-    document.title = '全册语文课堂 · 三年级上册';
+    document.title = '家长与老师资料 · 三年级上册';
     return () => { document.title = previous; };
   }, []);
 
@@ -64,8 +65,8 @@ export default function ChineseBookStudio({ selectedId }: { selectedId?: string 
 
   return <main className="book-studio">
     <header className="book-studio-head">
-      <a className="book-back" href="#/map/chinese"><ArrowLeft size={19} /><span>语文</span></a>
-      <div><span className="book-eyebrow">读懂，再记牢 · 三年级上册</span><h1>全册语文课堂</h1></div>
+      <a className="book-back" href={chineseReturnHref(selection)}><ArrowLeft size={19} /><span>语文森林</span></a>
+      <div><span className="book-eyebrow">读懂，再记牢 · 三年级上册</span><h1>家长与老师资料</h1></div>
       <a className="book-download" href={`${import.meta.env.BASE_URL}plans/chinese-book-plan.md`} download="语文全册学习安排.md"><Download size={18} /><span>下载安排</span></a>
     </header>
 

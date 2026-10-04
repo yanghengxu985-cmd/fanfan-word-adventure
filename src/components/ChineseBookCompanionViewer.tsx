@@ -7,6 +7,7 @@ import { getWorkshopFields } from '../data/chineseCompanionPrecision';
 import { getLessonWords, lessonCourseById, type LessonWord, type WordCategory } from '../data/chineseLessons';
 import { studioSources } from '../data/chineseBookStudio';
 import { createChineseLessonAudioPlayer, getLessonAudioEntry } from '../lib/chineseLessonAudio';
+import { chineseCompanionHref, chineseReturnHref, resolveChineseLessonMode, type ChineseLessonTab } from '../lib/chineseLessonNavigation';
 import './chineseBookCompanionViewer.css';
 
 type Tab = 'understand' | 'try' | 'paper';
@@ -29,15 +30,17 @@ function getWordBank(companion: BookCompanion, unit: number, category: WordCateg
   return { words: [...unique.values()], fromGarden };
 }
 
-export default function ChineseBookCompanionViewer({ companionId, teacher = false }: { companionId: string; teacher?: boolean }) {
+export default function ChineseBookCompanionViewer({ companionId, teacher = false, initialTab }: { companionId: string; teacher?: boolean; initialTab?: ChineseLessonTab }) {
   const companion = companionsById.get(companionId);
-  if (!companion || !chineseCompanionTasks[companionId]) return <main className="cnbc-missing"><h1>这个学习活动暂时没有找到</h1><a href="#/chinese-book">返回全册课堂</a></main>;
-  return <CompanionContent key={`${companionId}-${teacher}`} companion={companion} teacher={teacher} />;
+  if (!companion || !chineseCompanionTasks[companionId]) return <main className="cnbc-missing"><h1>这个学习活动暂时没有找到</h1><a href={chineseReturnHref(companionId, teacher)}>返回{teacher ? '老师课堂' : '语文森林'}</a></main>;
+  return <CompanionContent key={`${companionId}-${teacher}`} companion={companion} teacher={teacher} initialTab={initialTab} />;
 }
 
-function CompanionContent({ companion, teacher }: { companion: BookCompanion; teacher: boolean }) {
+function CompanionContent({ companion, teacher, initialTab }: { companion: BookCompanion; teacher: boolean; initialTab?: ChineseLessonTab }) {
   const task = chineseCompanionTasks[companion.id];
-  const [tab, setTab] = useState<Tab>('understand');
+  const lexical = companion.kind === 'garden' || companion.kind === 'review';
+  const initialMode = resolveChineseLessonMode<Tab>(initialTab, { read: 'understand', paper: 'paper', ...(lexical ? { words: 'try' as const } : {}) });
+  const [tab, setTab] = useState<Tab>(initialMode);
   const [order, setOrder] = useState(task.fields.map((_, index) => index));
   const [large, setLarge] = useState(false);
   const [paused, setPaused] = useState(false);
@@ -83,6 +86,7 @@ function CompanionContent({ companion, teacher }: { companion: BookCompanion; te
     setPlaying(true); player.current.play(item.id || '', item.text);
   }
   function changeTab(next: Tab) { stopAudio(); setTab(next); }
+  useEffect(() => { changeTab(initialMode); }, [initialMode, initialTab]);
   function changeCategory(next: WordCategory) { stopAudio(); setCategory(next); setWordIndex(0); }
   function changeUnit(unit: number) { stopAudio(); setReviewUnit(unit); setWordIndex(0); setPaperOffset(0); setPaperPhase('view'); setNeedsPractice([]); setChecks([]); setPaperDone(false); }
   function toggleCheck(index: number) { setChecks(current => current.includes(index) ? current.filter(item => item !== index) : [...current, index]); setPaperDone(false); }
@@ -114,12 +118,12 @@ function CompanionContent({ companion, teacher }: { companion: BookCompanion; te
 
   return <main className={`cnbc-viewer ${large ? 'is-large' : ''} ${paused ? 'is-paused' : ''}`} data-kind={companion.kind} data-tab={tab} data-teacher={teacher}>
     <header className="cnbc-header">
-      <a className="cnbc-back" href={`#/chinese-book/${companion.id}`}><ArrowLeft size={20} /><span>全册课堂</span></a>
+      <a className="cnbc-back" href={chineseReturnHref(companion.id, teacher)} aria-label={teacher ? '返回老师课堂' : '返回语文森林'}><ArrowLeft size={20} /><span>{teacher ? '老师课堂' : '语文森林'}</span></a>
       <div className="cnbc-heading"><span className="cnbc-eyebrow">三上语文 · 第{companion.unit}单元 · {kindLabels[companion.kind]}{companion.page ? ` · ${companion.page}页` : ''}</span><h1>{companion.title}</h1></div>
       <button className="cnbc-resource" ref={dialogTrigger} onClick={() => { stopAudio(); dialog.current?.showModal(); }}><BookOpen size={20} /><span>资料与指导</span></button>
     </header>
 
-    <div className="cnbc-toolbar"><nav className="cnbc-tabs" aria-label="学习活动">{tabs.map(({ id, label, icon: Icon }) => <button key={id} className={tab === id ? 'is-active' : ''} aria-pressed={tab === id} onClick={() => changeTab(id)}><Icon size={18} />{isLexical && id === 'try' ? '字词复习' : label}</button>)}</nav><div className="cnbc-display-tools"><button aria-label={large ? '恢复字号' : '放大字号'} aria-pressed={large} onClick={() => setLarge(!large)}>字{large ? '−' : '+'}</button>{teacher && <button aria-label={paused ? "恢复画面动效" : "暂停动效和声音"} aria-pressed={paused} onClick={() => { stopAudio(); setPaused(!paused); }}><Pause size={17} /></button>}<button aria-label="全屏展示" onClick={toggleFullscreen}><Maximize size={17} /></button><a href={`#/chinese-companion/${companion.id}${teacher ? '' : '/teacher'}`}>{teacher ? '家庭版' : '教师版'}</a></div></div>
+    <div className="cnbc-toolbar"><nav className="cnbc-tabs" aria-label="学习活动">{tabs.map(({ id, label, icon: Icon }) => <button key={id} className={tab === id ? 'is-active' : ''} aria-pressed={tab === id} onClick={() => changeTab(id)}><Icon size={18} />{isLexical && id === 'try' ? '字词复习' : label}</button>)}</nav><div className="cnbc-display-tools"><button aria-label={large ? '恢复字号' : '放大字号'} aria-pressed={large} onClick={() => setLarge(!large)}>字{large ? '−' : '+'}</button>{teacher && <button aria-label={paused ? "恢复画面动效" : "暂停动效和声音"} aria-pressed={paused} onClick={() => { stopAudio(); setPaused(!paused); }}><Pause size={17} /></button>}<button aria-label="全屏展示" onClick={toggleFullscreen}><Maximize size={17} /></button><a href={chineseCompanionHref(companion.id, !teacher)}>{teacher ? '家庭版' : '教师版'}</a></div></div>
 
     <section className={`cnbc-panel cnbc-panel-${tab}`} aria-label={tabs.find(item => item.id === tab)?.label}>
       <div className={`cnbc-tool-page ${tab !== 'understand' ? 'is-inactive' : ''}`} aria-hidden={tab !== 'understand'} inert={tab !== 'understand'}><ChineseCompanionWorkshop companion={companion} drafts={drafts} setDraft={(index, text) => { setDrafts(current => ({ ...current, [index]: text })); setPaperDone(false); }} order={order} setOrder={setOrder} onReview={kind => { changeCategory(kind); setTab('try'); }} /></div>

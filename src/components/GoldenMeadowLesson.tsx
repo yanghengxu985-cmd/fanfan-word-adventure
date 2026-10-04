@@ -5,15 +5,18 @@ import { getLessonWords, lessonCourseById } from '../data/chineseLessons';
 import { getGoldenMeadowFrame, GOLDEN_MEADOW_DURATION, GOLDEN_MEADOW_PRESETS } from '../lib/goldenMeadowMotion';
 import ChineseWordWorkbench, { type ChineseWordWorkbenchHandle } from './ChineseWordWorkbench';
 import GoldenMeadowScene from './GoldenMeadowScene';
+import { chineseReturnHref, resolveChineseLessonMode, type ChineseLessonTab } from '../lib/chineseLessonNavigation';
+import ChineseLessonPaperPanel from './ChineseLessonPaperPanel';
 import './kingfisherLesson.css';
 import './goldenMeadowLesson.css';
 
-type Mode = 'time' | 'flower' | 'words' | 'read';
+type Mode = 'paper' | 'time' | 'flower' | 'words' | 'read';
 const tabs: { id: Mode; label: string; neutralLabel: string; icon: typeof Leaf }[] = [
   { id: 'time', label: '看草地变化', neutralLabel: '看变化', icon: Sun },
   { id: 'flower', label: '近看蒲公英', neutralLabel: '近看花朵', icon: Flower2 },
   { id: 'words', label: '字词练写', neutralLabel: '字词练写', icon: Pencil },
   { id: 'read', label: '读懂观察', neutralLabel: '读懂方法', icon: BookOpen },
+  { id: 'paper', label: '纸笔检查', neutralLabel: '纸笔检查', icon: Pencil },
 ];
 const timeIcons = { morning: Sunrise, noon: Sun, evening: Sunset };
 const course = lessonCourseById.get('cn-15')!;
@@ -30,14 +33,20 @@ function useReducedMotion() {
   return reduced;
 }
 
-export default function GoldenMeadowLesson({ teacher = false }: { teacher?: boolean }) {
-  const [mode, setMode] = useState<Mode>('time');
+export default function GoldenMeadowLesson(props: { teacher?: boolean; initialTab?: ChineseLessonTab }) {
+  return <GoldenMeadowLessonContent key={props.teacher ? 'teacher' : 'student'} {...props} />;
+}
+
+function GoldenMeadowLessonContent({ teacher = false, initialTab }: { teacher?: boolean; initialTab?: ChineseLessonTab }) {
+  const initialMode = resolveChineseLessonMode<Mode>(initialTab, { read: 'time', words: 'words', paper: 'paper', practice: 'flower' });
+  const [mode, setMode] = useState<Mode>(initialMode);
   const [progress, setProgress] = useState(9);
   const [playing, setPlaying] = useState(false);
   const [playbackRun, setPlaybackRun] = useState(0);
   const [timeAnswer, setTimeAnswer] = useState(false);
   const [flowerOpenness, setFlowerOpenness] = useState(1);
   const [wordHidden, setWordHidden] = useState(false);
+  const [paperIndependent, setPaperIndependent] = useState(false);
   const [promptIndex, setPromptIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [teacherAnswers, setTeacherAnswers] = useState<Record<string, boolean>>({});
@@ -59,7 +68,7 @@ export default function GoldenMeadowLesson({ teacher = false }: { teacher?: bool
   const answerIndex = answers[prompt.id];
   const selectedAnswer = answerIndex === undefined ? undefined : prompt.choices[answerIndex];
   const shownAnswer = teacher && teacherAnswers[prompt.id] ? prompt.choices.find(item => item.correct) : selectedAnswer;
-  const hideLessonWords = mode === 'words' && wordHidden;
+  const hideLessonWords = mode === 'words' && wordHidden || mode === 'paper' && paperIndependent;
 
   function pause() {
     if (animationRef.current !== null) cancelAnimationFrame(animationRef.current);
@@ -79,6 +88,7 @@ export default function GoldenMeadowLesson({ teacher = false }: { teacher?: bool
   }
   function replay() { seek(0); setPlaybackRun(run => run + 1); setPlaying(true); }
   function changeMode(next: Mode) { stopMedia(); setWordHidden(false); setMode(next); }
+  useEffect(() => { changeMode(initialMode); }, [initialMode, initialTab]);
   function setFlower(value: number) { stopMedia(); setFlowerOpenness(Math.max(0, Math.min(1, value))); }
   function openResources() { stopMedia(); dialogRef.current?.showModal(); }
   function printLesson() { stopMedia(); window.print(); }
@@ -119,13 +129,13 @@ export default function GoldenMeadowLesson({ teacher = false }: { teacher?: bool
 
   return <main className="kf-lesson gm-lesson" data-mode={mode} data-teacher={teacher || undefined}>
     <header className="kf-head">
-      <a className="kf-back" href={teacher ? '#/teacher' : '#/chinese-book/cn-15'} aria-label={teacher ? '返回老师课堂' : '返回全册课堂'}><ArrowLeft size={21} /><span>语文课堂</span></a>
+      <a className="kf-back" href={chineseReturnHref('cn-15', teacher)} aria-label={teacher ? '返回老师课堂' : '返回语文森林'}><ArrowLeft size={21} /><span>{teacher ? '老师课堂' : '语文森林'}</span></a>
       <div className="kf-heading"><span className="kf-eyebrow">{hideLessonWords ? '本课练习手册' : '草地观察手册'} <span>三上 · 第15课{teacher ? ' · 教师投屏' : ''}</span></span><h1>{hideLessonWords ? '字词独立练习' : meadowLessonCopy.title}<span>{hideLessonWords ? '先自己想，再展开核对' : '一片草地，三次发现'}</span></h1></div>
       <button className="kf-resource" ref={resourceTrigger} onClick={openResources}><BookOpen size={19} /><span>资料与指导</span></button>
     </header>
     <nav className="kf-tabs" aria-label="本课学习内容">{tabs.map(({ id, label, neutralLabel, icon: Icon }, index) => <button key={id} className={mode === id ? 'is-active' : ''} aria-current={mode === id ? 'page' : undefined} onClick={() => changeMode(id)}><span className="kf-tab-number">0{index + 1}</span><Icon size={19} /><span>{hideLessonWords ? neutralLabel : label}</span></button>)}</nav>
 
-    <section className={`kf-panel gm-panel gm-panel-${mode} ${mode === 'words' ? 'kf-panel-words' : ''} ${mode === 'read' ? 'kf-panel-read' : ''}`} aria-label={hideLessonWords ? '字词独立练习' : tabs.find(item => item.id === mode)!.label}>
+    <section className={`kf-panel gm-panel gm-panel-${mode} ${mode === 'words' ? 'kf-panel-words' : mode === 'paper' ? 'kf-panel-paper' : ''} ${mode === 'read' ? 'kf-panel-read' : ''}`} aria-label={hideLessonWords ? '字词独立练习' : tabs.find(item => item.id === mode)!.label}>
       {mode === 'time' && <>
         <div className="kf-art gm-time-art">
           <div className="kf-art-heading"><span><Sun size={16} />同一片草地，留心不同时间</span><small>点时段，直接比较</small></div>
@@ -179,17 +189,18 @@ export default function GoldenMeadowLesson({ teacher = false }: { teacher?: bool
           {teacher && <button className="kf-teacher-answer kf-text-button" aria-expanded={!!teacherAnswers[prompt.id]} onClick={() => setTeacherAnswers(current => ({ ...current, [prompt.id]: !current[prompt.id] }))}>{teacherAnswers[prompt.id] ? <EyeOff size={18} /> : <Eye size={18} />}{teacherAnswers[prompt.id] ? '收起参考答案' : '展示参考答案'}</button>}
         </div>
       </>}
+      {mode === 'paper' && <ChineseLessonPaperPanel courseId="cn-15" teacher={teacher} onIndependentChange={setPaperIndependent} />}
     </section>
 
-    <footer className="kf-footer"><span><Leaf size={15} />{({ time: '点时段或拖动，比较同一片草地。', flower: '花瓣的张合，改变了远处看到的颜色。', words: '看清字形，遮住试写；对照纸稿，找出易错处。', read: '先写看见的，再用观察到的细节解释。' })[mode]}</span><span className="kf-footer-mark">{hideLessonWords ? '本课练习手册' : teacher ? '课堂演示' : '自然观察手册'} <i>15</i></span></footer>
+    <footer className="kf-footer"><span><Leaf size={15} />{initialTab === 'memory' && mode === 'time' ? '背默内容须按纸本与老师要求核对，先回到阅读。' : ({ paper: '具体错误留在纸稿上，下次再核对。', time: '点时段或拖动，比较同一片草地。', flower: '花瓣的张合，改变了远处看到的颜色。', words: '看清字形，遮住试写；对照纸稿，找出易错处。', read: '先写看见的，再用观察到的细节解释。' })[mode]}</span><span className="kf-footer-mark">{hideLessonWords ? '本课练习手册' : teacher ? '课堂演示' : '自然观察手册'} <i>15</i></span></footer>
 
     <dialog className="kf-dialog gm-dialog" ref={dialogRef} onClose={() => resourceTrigger.current?.focus()} onClick={event => { if (event.target === dialogRef.current) dialogRef.current.close(); }} aria-labelledby="gm-resource-title">
       <div className="kf-dialog-heading"><div><span className="kf-eyebrow">给陪伴学习的大人</span><h2 id="gm-resource-title">资料与课堂指导</h2></div><button className="kf-dialog-close" onClick={() => dialogRef.current?.close()} aria-label="关闭资料与指导"><X size={22} /></button></div>
-      <div className="kf-dialog-body"><p>{meadowLessonCopy.intro}</p><div className="kf-adult-guidance"><h3>课堂里可以这样用</h3><ol><li>三个时段可以直接点选，让孩子先说出什么时候、看到了什么颜色。</li><li>近看同一朵黄花，拖动花瓣张合，说清金色为什么显露或被包住。</li><li>把时段、草地颜色和花朵状态连起来，区分看到的现象与找到的原因。</li><li>字词随时选择。会认字练认读，会写字在纸上独立写后再核对。</li></ol><p>教师投屏只作演示；这一页不显示或保存个人学习记录。</p></div>
+      <div className="kf-dialog-body">{mode === 'paper' && paperIndependent ? <p>先独立尝试，展开纸稿核对区以后，再查阅教学资料。</p> : <><p>{meadowLessonCopy.intro}</p><div className="kf-adult-guidance"><h3>课堂里可以这样用</h3><ol><li>三个时段可以直接点选，让孩子先说出什么时候、看到了什么颜色。</li><li>近看同一朵黄花，拖动花瓣张合，说清金色为什么显露或被包住。</li><li>把时段、草地颜色和花朵状态连起来，区分看到的现象与找到的原因。</li><li>字词随时选择。会认字练认读，会写字在纸上独立写后再核对。</li></ol><p>教师投屏只作演示；这一页不显示或保存个人学习记录。</p></div>
         <a className="kf-teacher-link" href="#/chinese-lesson/cn-15/teacher" onClick={() => dialogRef.current?.close()}><BookOpen size={19} /><span>打开教师投屏</span><ArrowRight size={18} /></a><button className="kf-print-button" onClick={printLesson}><Printer size={19} />打印一页练习纸</button>
         <h3>内容来源</h3><div className="kf-sources">{meadowLessonCopy.sources.map(source => <a href={source.url} key={source.url} target="_blank" rel="noopener noreferrer"><span>{source.title}</span><ExternalLink size={17} /></a>)}</div>
         <div className="kf-source-note"><h3>教材核对与示意说明</h3><p>{meadowLessonRequirementNote}</p><p>张合演示对应同一生长期的黄色花朵，不把黄花变成茸毛球。时长为观察演示用，具体开花时刻并非植物的通用时间表。</p><p>观察提示、释义与练习为原创辅助；字词音频沿用现有合成练习示范，不调用设备朗读。练写通过纸稿找错，不生成“已掌握”记录。</p></div>
-      </div>
+      </>}</div>
     </dialog>
     <section className="kf-print gm-print" aria-hidden="true"><h1>《金色的草地》观察与练写</h1><p>姓名：____________　日期：____________</p><h2>一、说清楚三次发现</h2><table><thead><tr><th>时间</th><th>草地颜色</th><th>花朵状态</th></tr></thead><tbody>{meadowLessonCopy.observationTimes.map(item => <tr key={item.id}><th>{item.label}</th><td>________________</td><td>________________</td></tr>)}</tbody></table><h2>二、找到颜色变化的原因</h2><p>花瓣张开时，金色为什么更显眼？花瓣合拢时，又发生了什么？</p><div className="gm-print-lines">__________________________________________________<br />__________________________________________________</div><h2>三、自选字词，在纸上练写</h2><div className="kf-print-wordbank">{paperWords.map(item => <div key={item.id}><span>{item.pinyin}</span><p>{[...item.text].map(() => '□').join(' ')}</p></div>)}</div><p>核对后需要再练的字词：____________________________</p><small>{meadowLessonRequirementNote}</small></section>
   </main>;

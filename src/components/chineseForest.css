@@ -1,0 +1,73 @@
+.chinese-forest{--forest-ink:#294a39;--forest-green:#346648;--forest-ochre:#a77c34;--forest-line:#dfe5d5;color:var(--forest-ink);display:grid;gap:16px;min-width:0}
+.forest-heading{position:relative;display:flex;align-items:center;justify-content:space-between;min-height:92px;padding:0 8px}
+.forest-eyebrow{display:flex;align-items:center;gap:6px;color:#6f8167;font-size:11px;letter-spacing:.06em;line-height:1.5}
+.forest-heading h1{font-family:"STKaiti","KaiTi","Kaiti SC",serif;font-size:37px;font-weight:600;letter-spacing:.06em;line-height:1.25;margin:5px 0}
+.forest-heading p{font-size:12px;color:#78826e;line-height:1.6}
+.forest-branch{width:122px;height:91px;transform:rotate(-7deg);color:#668761;margin:0 20px 0 12px;flex-shrink:0}
+.forest-branch svg{width:100%;height:100%}
+.forest-shortcuts{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:12px}
+.forest-shortcuts>a{display:flex;align-items:center;gap:13px;min-height:66px;border:1px solid #dce4d1;border-radius:13px;padding:12px 17px;background:#eaf0e1}
+.forest-shortcuts .forest-review{background:#f3eddc;border-color:#e8ddc5;color:#75643d}
+.forest-shortcuts>a>div{min-width:0;flex:1}
+.forest-shortcuts strong{display:block;font-size:15px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;line-height:1.4}
+.forest-shortcuts small{display:block;color:#7d886f;font-size:11px;line-height:1.65}
+.forest-shortcuts a:hover{border-color:#8fa77e}
+.forest-units{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:6px}
+.forest-units button{position:relative;border:1px solid transparent;background:#efefe5;border-radius:9px;min-height:61px;padding:8px 4px;text-align:center;transition:background .15s,border-color .15s}
+.forest-units button span{display:block;font-size:10px;color:#849077;line-height:1.6}
+.forest-units button strong{display:block;font-size:12px;font-weight:550;letter-spacing:.015em;line-height:1.65}
+.forest-units button:hover{background:#e5ecd9}
+.forest-units button.is-active{border-color:#a4b596;background:#dfe9d1;color:#28553b}
+.forest-units button.is-active::after{content:"";position:absolute;width:20px;height:2px;background:#76915d;bottom:4px;left:calc(50% - 10px);border-radius:3px}
+.forest-directory{border:1px solid var(--forest-line);border-radius:16px;background:#fffdf6;padding:18px 19px 17px;box-shadow:0 5px 18px #334b2e05;min-width:0}
+.forest-directory-top{display:flex;align-items:center;justify-content:space-between;gap:16px;min-width:0}
+.forest-list-title h2{font-family:"STKaiti","KaiTi","Kaiti SC",serif;letter-spacing:.04em;font-size:24px;font-weight:550;line-height:1.45}
+.forest-search{display:flex;align-items:center;gap:8px;width:240px;max-width:53%;border:1px solid #e1e4d8;border-radius:9px;padding:0 11px;min-height:43px;background:#f8f8f0;color:#839178}
+.forest-search:focus-within{border-color:#829870}
+.forest-search input{width:100%;min-width:0;padding:9px 0;border:0;background:transparent;font-size:12px;color:var(--forest-ink);outline:none}
+.forest-search input::-webkit-search-cancel-button{display:none}
+.forest-search button{flex-shrink:0;display:grid;place-items:center;background:transparent;border:0;padding:3px;min-width:27px;min-height:32px;color:#77866b}
+.forest-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.forest-list-options{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:12px 0}
+.forest-section-tabs{display:flex;gap:6px;background:#f1f2e8;padding:4px;border-radius:10px}
+.forest-section-tabs button{display:flex;align-items:center;gap:6px;min-height:37px;padding:7px 11px;border:0;border-radius:7px;background:transparent;font-size:12px;white-space:nowrap;color:#7c8970}
+.forest-section-tabs button.is-active{color:#355b3e;background:#fffdf6;box-shadow:0 1px 4px #34452d0a}
+.forest-section-tabs button span{font-size:10px;opacity:.72}
+.forest-list-options>p{font-size:10px;color:#8c947f}
+.forest-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;min-width:0}
+.forest-directory-top+.forest-cards{margin-top:16px}
+.forest-card{display:flex;align-items:center;gap:12px;position:relative;padding:14px 13px;border:1px solid #e6e8dc;border-radius:11px;background:#fcfbf2;min-height:103px;transition:background .16s,border-color .16s;min-width:0}
+.forest-card:hover{background:#f2f5e8;border-color:#becbab}
+.forest-card.is-current{background:#eef4e4;border-color:#a8bd93}
+.forest-card--companion{background:#faf5e9;border-color:#e9e2d1}
+.forest-card-number{font-family:"STKaiti","KaiTi",serif;color:#94a67e;font-size:27px;width:35px;flex-shrink:0;text-align:center;line-height:1}
+.forest-card--companion .forest-card-number{color:#aa966b;display:grid;place-items:center}
+.forest-card-copy{min-width:0;flex:1}
+.forest-card-label{display:flex;align-items:center;gap:7px;min-height:15px;font-size:10px;color:#8a927d;line-height:1.3}
+.forest-card-label em{font-style:normal;white-space:nowrap;border-radius:4px;font-size:9px;padding:2px 4px;background:#dce9cc;color:#587b41}
+.forest-card h3{font-family:"STKaiti","KaiTi","Kaiti SC",serif;font-size:19px;font-weight:550;line-height:1.45;margin:3px 0;overflow-wrap:anywhere}
+.forest-card p{font-size:10px;color:#8a917b;line-height:1.5}
+.forest-card-arrow{color:#96a385;flex-shrink:0}
+.forest-record-tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:5px;line-height:1.25}
+.forest-record-tags span{font-size:9px;padding:2px 4px;background:#e8eddf;color:#7b886c;border-radius:4px}
+.forest-record-tags .is-due{background:#f3e6c5;color:#8d7239}
+.forest-result-pages{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:12px}
+.forest-result-pages button{border:1px solid #e0e6d3;display:flex;align-items:center;gap:4px;min-height:38px;padding:7px 11px;background:#f4f5ea;border-radius:7px;font-size:12px;color:#627850}
+.forest-result-pages>span{font-size:11px;color:#859277}
+.forest-no-result{min-height:205px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:15px;color:#879571}
+.forest-no-result p{font-size:13px;line-height:1.6;text-align:center}
+.forest-no-result button{display:flex;align-items:center;gap:7px;border:0;background:#e9efdc;padding:11px 14px;min-height:42px;border-radius:7px;font-size:12px}
+.forest-footer{display:flex;align-items:center;gap:15px;padding:0 6px;color:#8b927e;min-height:22px;font-size:10px}
+.forest-footer>a{display:flex;align-items:center;gap:5px;min-height:30px;color:#718165}
+.forest-footer>a:first-of-type{margin-left:auto}
+.chinese-forest--teacher{margin-top:18px;gap:12px}
+.chinese-forest--teacher .forest-heading{min-height:61px}
+.chinese-forest--teacher .forest-heading h1{font-size:27px}
+.chinese-forest--teacher .forest-heading p{font-size:11px}
+.chinese-forest--teacher .forest-heading .forest-eyebrow,.chinese-forest--teacher .forest-branch{display:none}
+.chinese-forest--teacher .forest-units button{min-height:52px}
+.chinese-forest--teacher .forest-card{min-height:94px;padding:11px 13px}
+@media(min-width:851px) and (max-height:780px){.chinese-forest{gap:9px}.forest-heading{min-height:71px}.forest-heading h1{font-size:29px;margin:2px 0}.forest-branch{height:67px}.forest-shortcuts>a{min-height:55px;padding:8px 14px}.forest-units button{min-height:52px;padding:5px 4px}.forest-directory{padding:12px 16px}.forest-list-title h2{font-size:22px;line-height:1.2}.forest-card{min-height:85px;padding:8px 12px}.forest-card h3{font-size:17px;line-height:1.3;margin:2px 0}.forest-list-options{margin:8px 0}.forest-footer,.forest-footer>a{min-height:26px}}
+@media(max-width:850px){.forest-units{grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}.forest-units button{min-height:53px}.forest-heading h1{font-size:33px}.forest-branch{width:93px}.forest-card{gap:9px;padding:12px 10px}.forest-card h3{font-size:18px}.forest-card-number{width:28px;font-size:23px}}
+@media(max-width:600px){.chinese-forest{gap:12px}.forest-heading{min-height:84px;padding:0 2px}.forest-heading h1{font-size:32px}.forest-heading p{max-width:260px;font-size:11px}.forest-branch{width:66px;height:65px;margin:0 4px}.forest-shortcuts{gap:8px;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)}.forest-shortcuts>a{min-height:70px;padding:10px;gap:8px}.forest-shortcuts>a>svg:first-child{width:18px}.forest-shortcuts>a>svg:last-child{display:none}.forest-shortcuts strong{font-size:13px}.forest-shortcuts small{font-size:10px}.forest-directory{padding:14px 12px}.forest-directory-top{gap:9px}.forest-list-title h2{font-size:22px}.forest-search{width:188px;max-width:57%;padding:0 8px}.forest-search input{font-size:11px}.forest-list-options>p{display:none}.forest-section-tabs button{padding:7px 9px}.forest-cards{gap:8px}.forest-card{gap:7px;min-height:111px;padding:10px 8px}.forest-card-number{width:20px;font-size:20px}.forest-card h3{font-size:16px}.forest-card-arrow{display:none}.forest-card p{font-size:9px}.forest-card-label{font-size:9px;gap:4px}.forest-card-label em{font-size:8px}.forest-footer{flex-wrap:wrap;gap:6px 13px}.forest-record-tags{gap:3px}.forest-record-tags span{font-size:8px}.chinese-forest--teacher .forest-card{min-height:99px}}
+@media(prefers-reduced-motion:reduce){.chinese-forest *{transition:none!important}}

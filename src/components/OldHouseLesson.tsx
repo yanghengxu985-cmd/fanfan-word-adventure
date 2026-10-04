@@ -11,16 +11,19 @@ import {
 } from '../lib/oldHousePrediction';
 import ChineseWordWorkbench, { type ChineseWordWorkbenchHandle } from './ChineseWordWorkbench';
 import OldHouseScene from './OldHouseScene';
+import { chineseReturnHref, resolveChineseLessonMode, type ChineseLessonTab } from '../lib/chineseLessonNavigation';
+import ChineseLessonPaperPanel from './ChineseLessonPaperPanel';
 import './kingfisherLesson.css';
 import './oldHouseLesson.css';
 
-type Mode = 'story' | 'predict' | 'words' | 'method';
+type Mode = 'story' | 'predict' | 'words' | 'method' | 'paper';
 type ChangeRecord = (record: OldHousePredictionRecord) => OldHousePredictionRecord;
 const tabs: { id: Mode; label: string; icon: typeof House }[] = [
   { id: 'story', label: '看故事线索', icon: House },
   { id: 'predict', label: '试着预测', icon: Lightbulb },
   { id: 'words', label: '字词练写', icon: Pencil },
   { id: 'method', label: '读懂预测', icon: BookOpen },
+  { id: 'paper', label: '纸笔检查', icon: Pencil },
 ];
 
 function useReducedMotion() {
@@ -77,11 +80,17 @@ function PredictionFolio({ predictionCase, record, onChange, onRetry, transfer =
   </div>;
 }
 
-export default function OldHouseLesson({ teacher = false }: { teacher?: boolean }) {
-  const [mode, setMode] = useState<Mode>('story');
+export default function OldHouseLesson(props: { teacher?: boolean; initialTab?: ChineseLessonTab }) {
+  return <OldHouseLessonContent key={props.teacher ? 'teacher' : 'student'} {...props} />;
+}
+
+function OldHouseLessonContent({ teacher = false, initialTab }: { teacher?: boolean; initialTab?: ChineseLessonTab }) {
+  const initialMode = resolveChineseLessonMode<Mode>(initialTab, { read: 'story', words: 'words', paper: 'paper', practice: 'predict' });
+  const [mode, setMode] = useState<Mode>(initialMode);
   const [storyId, setStoryId] = useState<OldHouseStoryStopId>('opening');
   const [predictionIndex, setPredictionIndex] = useState(0);
   const [wordHidden, setWordHidden] = useState(false);
+  const [paperIndependent, setPaperIndependent] = useState(false);
   const [records, setRecords] = useState<Record<string, OldHousePredictionRecord>>(() =>
     Object.fromEntries([...oldHousePredictionCases, oldHouseTransferCase].map(item => [item.id, createPredictionRecord()])));
   const workbenchRef = useRef<ChineseWordWorkbenchHandle>(null);
@@ -92,10 +101,11 @@ export default function OldHouseLesson({ teacher = false }: { teacher?: boolean 
   const storyRevealed = storyId !== 'opening' && records[storyId].revealed;
   const predictionCase = oldHousePredictionCases[predictionIndex];
   const predictionRecord = records[predictionCase.id];
-  const hideLessonWords = mode === 'words' && wordHidden;
+  const hideLessonWords = mode === 'words' && wordHidden || mode === 'paper' && paperIndependent;
 
   function stopAudio() { workbenchRef.current?.stopAudio(); }
   function changeMode(next: Mode) { stopAudio(); if (next !== mode) setWordHidden(false); setMode(next); }
+  useEffect(() => { changeMode(initialMode); }, [initialMode, initialTab]);
   function changeRecord(id: string, change: ChangeRecord) { setRecords(current => ({ ...current, [id]: change(current[id]) })); }
   function retry(id: string) { setRecords(current => ({ ...current, [id]: createPredictionRecord() })); }
   function openResources() { stopAudio(); dialogRef.current?.showModal(); }
@@ -122,13 +132,13 @@ export default function OldHouseLesson({ teacher = false }: { teacher?: boolean 
 
   return <main className="kf-lesson oh-lesson" data-mode={mode} data-teacher={teacher || undefined} data-reduced-motion={reducedMotion ? 'true' : 'false'}>
     <header className="kf-head oh-head">
-      <a className="kf-back" href={teacher ? '#/teacher' : '#/chinese-book/cn-08'} aria-label={teacher ? '返回老师课堂' : '返回全册课堂'}><ArrowLeft size={21} /><span>语文课堂</span></a>
+      <a className="kf-back" href={chineseReturnHref('cn-08', teacher)} aria-label={teacher ? '返回老师课堂' : '返回语文森林'}><ArrowLeft size={21} /><span>{teacher ? '老师课堂' : '语文森林'}</span></a>
       <div className="kf-heading"><span className="kf-eyebrow">{hideLessonWords ? '独立练习手册' : '边读边想 · 阅读手册'}<span>三上 · 第8课{teacher ? ' · 教师投屏' : ''}</span></span><h1>{hideLessonWords ? '字词独立练习' : oldHouseLessonCopy.title}{!hideLessonWords && <span>读到线索，就想一想</span>}</h1></div>
       <button className="kf-resource" ref={resourceTrigger} onClick={openResources}><BookOpen size={18} /><span>资料与指导</span></button>
     </header>
     <nav className="kf-tabs" aria-label="本课学习内容">{tabs.map(({ id, label, icon: Icon }, index) => <button key={id} className={mode === id ? 'is-active' : ''} aria-current={mode === id ? 'page' : undefined} onClick={() => changeMode(id)}><span className="kf-tab-number">0{index + 1}</span><Icon size={18} /><span>{label}</span></button>)}</nav>
 
-    <section className={`kf-panel oh-panel oh-panel-${mode} ${mode === 'words' ? 'kf-panel-words' : ''}`} aria-label={hideLessonWords ? '字词独立练习' : tabs.find(item => item.id === mode)!.label}>
+    <section className={`kf-panel oh-panel oh-panel-${mode} ${mode === 'words' ? 'kf-panel-words' : mode === 'paper' ? 'kf-panel-paper' : ''}`} aria-label={hideLessonWords ? '字词独立练习' : tabs.find(item => item.id === mode)!.label}>
       {mode === 'story' && <>
         <div className="kf-art oh-story-art"><div className="kf-art-heading"><span><House size={16} />走到老屋门前</span><small>画面只呈现当前这一处</small></div><div className="oh-scene-body"><OldHouseScene stage={storyId} revealed={storyRevealed} reducedMotion={reducedMotion} /></div><div className="oh-story-stops" role="group" aria-label="直接选择故事中的停读处">{oldHouseStoryStops.map((stop, index) => <button key={stop.id} aria-pressed={storyId === stop.id} className={storyId === stop.id ? 'is-active' : ''} onClick={() => setStoryId(stop.id)}><span>{index === 0 ? '序' : `0${index}`}</span><strong>{index === 0 ? '故事开始' : `${['第一处', '第二处', '第三处'][index - 1]}`}</strong></button>)}</div></div>
         <div className="oh-story-side" data-revealed={storyRevealed ? 'true' : 'false'}><div className="oh-page-heading"><span className="kf-eyebrow">{storyId === 'opening' ? '从题目和开头想起' : '停在这一处，先看已经读到的'}</span><h2>{storyId === 'opening' ? '老屋前，故事开始了' : story.title}</h2></div><p className="oh-known-summary">{story.knownSummary}</p><div className="oh-story-clue"><span><Search size={15} />留心这条线索</span><p>{story.evidenceSummary}</p></div>{storyRevealed ? <div className="oh-story-outcome" aria-live="polite"><span>接着读到的</span><p>{story.outcomeSummary}</p></div> : <p className="oh-story-question">{story.question}</p>}<div className="oh-story-actions"><button className="kf-primary" onClick={predictAtStory}><Lightbulb size={18} />试着预测<ArrowRight size={16} /></button>{storyId !== 'opening' && !storyRevealed && <button className="kf-text-button" onClick={() => changeRecord(storyId, revealPrediction)}><Eye size={17} />看看后文</button>}{storyRevealed && <span>回头说说：你用了哪些线索？</span>}</div></div>
@@ -145,9 +155,10 @@ export default function OldHouseLesson({ teacher = false }: { teacher?: boolean 
         <div className="oh-method-guide"><div className="oh-page-heading"><span className="kf-eyebrow">预测，是边读边想</span><h2>让猜想带着理由</h2></div><div className="oh-method-tips">{oldHouseMethodTips.map((tip, index) => <div key={tip.id}><span>0{index + 1}</span><div><h3>{tip.title}</h3><p>{tip.body}</p></div></div>)}</div><p className="oh-method-margin"><CornerDownRight size={18} />新内容带来新线索，想法也可以改变。</p></div>
         <div className="oh-transfer"><div className="oh-transfer-premise"><span>原创小情境 · {oldHouseTransferCase.title}</span><p>{oldHouseTransferCase.knownSummary}</p></div><PredictionFolio predictionCase={oldHouseTransferCase} record={records.transfer} onChange={change => changeRecord('transfer', change)} onRetry={() => retry('transfer')} transfer /></div>
       </>}
+      {mode === 'paper' && <ChineseLessonPaperPanel courseId="cn-08" teacher={teacher} onIndependentChange={setPaperIndependent} />}
     </section>
 
-    <footer className="kf-footer"><span><BookOpen size={15} />{hideLessonWords ? '先独立尝试，再展开核对。' : ({ story: '用读到的线索，说清你的猜想。', predict: '有依据的猜想，可以和作者安排不同。', words: '会认字练认读，会写字纸笔练习后再核对。', method: '找线索，想可能；读后文，再比较。' })[mode]}</span><span className="kf-footer-mark">{hideLessonWords ? '独立练习手册' : teacher ? '课堂演示' : '边读边想'}<i>08</i></span></footer>
+    <footer className="kf-footer"><span><BookOpen size={15} />{initialTab === 'memory' && mode === 'story' ? '背默内容须按纸本与老师要求核对，先回到阅读。' : hideLessonWords ? '先独立尝试，再展开核对。' : ({ paper: '具体错误留在纸稿上，下次再核对。', story: '用读到的线索，说清你的猜想。', predict: '有依据的猜想，可以和作者安排不同。', words: '会认字练认读，会写字纸笔练习后再核对。', method: '找线索，想可能；读后文，再比较。' })[mode]}</span><span className="kf-footer-mark">{hideLessonWords ? '独立练习手册' : teacher ? '课堂演示' : '边读边想'}<i>08</i></span></footer>
 
     <dialog className="kf-dialog oh-dialog" ref={dialogRef} onClose={() => resourceTrigger.current?.focus()} onClick={event => { if (event.target === dialogRef.current) dialogRef.current.close(); }} aria-labelledby="oh-resource-title"><div className="kf-dialog-heading"><div><span className="kf-eyebrow">给陪伴学习的大人</span><h2 id="oh-resource-title">{hideLessonWords ? '独立练习说明' : '资料与课堂指导'}</h2></div><button className="kf-dialog-close" onClick={() => dialogRef.current?.close()} aria-label="关闭资料与指导"><X size={22} /></button></div><div className="kf-dialog-body">{hideLessonWords ? <p>当前卡片已收起。先独立练习，展开后再查阅教学资料。</p> : <><p>{oldHouseLessonCopy.intro}</p><div className="kf-adult-guidance"><h3>课堂里可以这样用</h3><ol><li>停在已经读到的地方，用题目、情节或相关生活经验说理由。</li><li>孩子可以选择一种猜想，也可以先口头说。选择线索和查看后文都随时可用。</li><li>后文出现以后，保留原来的猜想，比较新内容带来的线索。不按猜中或猜错评分。</li><li>允许不同的合理猜想，追问“你为什么这样想”。字词认读和纸笔练写随时切换。</li></ol><p>当前页面用于课堂阅读和讨论，不生成个人成绩或“已掌握”记录。</p></div><a className="kf-teacher-link" href="#/chinese-lesson/cn-08/teacher" onClick={() => dialogRef.current?.close()}><BookOpen size={19} /><span>打开教师投屏</span><ArrowRight size={18} /></a><button className="kf-print-button" onClick={printLesson}><Printer size={19} />打印一页预测记录纸</button><h3>内容来源</h3><div className="kf-sources">{oldHouseLessonCopy.sources.map(source => <a href={source.url} key={source.url} target="_blank" rel="noopener noreferrer"><span>{source.title}</span><ExternalLink size={17} /></a>)}</div><div className="kf-source-note"><h3>教材核对与示意说明</h3><p>{oldHouseRequirementNote}</p><p>故事情节使用原创概述，配图辅助阅读，请结合完整课文。方法页的小情境由本项目原创，不作为教材原文或新增必会字词。</p><p>音频沿用现有合成练习示范。字词练写依靠纸稿核对，预测练习依靠理由和前后比较。</p></div></>}</div></dialog>
 

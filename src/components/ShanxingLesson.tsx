@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from 'react';
 import { ArrowLeft, ArrowRight, BookOpen, Check, CheckCircle2, ExternalLink, Eye, EyeOff, Feather, Leaf, Pause, Pencil, Printer, Volume2, X } from 'lucide-react';
 import { shanxing, shanxingChecks, shanxingSources, shanxingWords } from '../data/shanxingLesson';
 import { createChinesePilotAudioPlayer } from '../lib/chinesePilotAudio';
+import { chineseLessonHref, chineseReturnHref, resolveChineseLessonMode, type ChineseLessonTab } from '../lib/chineseLessonNavigation';
+import { notifyChineseRecordsChanged } from '../lib/chineseLearningRecords';
 import ShanxingScene from './ShanxingScene';
 import './shanxingLesson.css';
 
@@ -35,8 +37,13 @@ function PoemLines({ pinyin, selected, mask, onSelect }: { pinyin: boolean; sele
   </div>;
 }
 
-export default function ShanxingLesson() {
-  const [mode, setMode] = useState<Mode>('read');
+export default function ShanxingLesson(props: { teacher?: boolean; initialTab?: ChineseLessonTab }) {
+  return <ShanxingLessonContent key={props.teacher ? 'teacher' : 'student'} {...props} />;
+}
+
+function ShanxingLessonContent({ teacher = false, initialTab }: { teacher?: boolean; initialTab?: ChineseLessonTab }) {
+  const initialMode = resolveChineseLessonMode<Mode>(initialTab, { read: 'read', words: 'words', memory: 'recite', paper: 'write' });
+  const [mode, setMode] = useState<Mode>(initialMode);
   const [selected, setSelected] = useState(0);
   const [pinyin, setPinyin] = useState(false);
   const [mask, setMask] = useState<Mask>('clue');
@@ -45,7 +52,7 @@ export default function ShanxingLesson() {
   const [revealed, setRevealed] = useState(false);
   const [errors, setErrors] = useState<Set<string>>(new Set());
   const [adult, setAdult] = useState(false);
-  const [lastCheck, setLastCheck] = useState<PaperCheck | null>(loadPaperCheck);
+  const [lastCheck, setLastCheck] = useState<PaperCheck | null>(() => teacher ? null : loadPaperCheck());
   const [saved, setSaved] = useState(false);
   const [saveMessage, setSaveMessage] = useState('');
   const [audioStatus, setAudioStatus] = useState('');
@@ -57,9 +64,12 @@ export default function ShanxingLesson() {
 
   useEffect(() => {
     const oldTitle = document.title;
-    document.title = '山行 · 一课体验';
-    return () => { document.title = oldTitle; playback.current = null; player.current?.stop(); };
-  }, []);
+    document.title = `山行 · 诗画课堂${teacher ? ' · 教师投屏' : ''}`;
+    const suspend = () => { playback.current = null; player.current?.stop(); setPlaying(false); setAudioStatus(''); };
+    const hide = () => { if (document.hidden) suspend(); };
+    window.addEventListener('hashchange', suspend); window.addEventListener('pagehide', suspend); document.addEventListener('visibilitychange', hide);
+    return () => { document.title = oldTitle; playback.current = null; player.current?.stop(); window.removeEventListener('hashchange', suspend); window.removeEventListener('pagehide', suspend); document.removeEventListener('visibilitychange', hide); };
+  }, [teacher]);
 
   function stopAudio() { playback.current = null; player.current?.stop(); setPlaying(false); setAudioStatus(''); }
   function audioPlayer() {
@@ -83,14 +93,15 @@ export default function ShanxingLesson() {
   }
   function selectLine(index: number) { stopAudio(); setSelected(index); }
   function changeMode(next: Mode) { stopAudio(); if (next === 'write' && mode !== 'write') resetPaper(); setMode(next); }
+  useEffect(() => { changeMode(initialMode); }, [initialMode, initialTab]);
   function toggleError(id: string) {
     setSaved(false); setSaveMessage('');
     setErrors(current => { const next = new Set(current); if (next.has(id)) next.delete(id); else next.add(id); return next; });
   }
   function saveCheck() {
+    if (teacher || !revealed) return;
     const value: PaperCheck = { at: new Date().toISOString(), adult, errors: [...errors] };
-    setLastCheck(value); setSaved(true);
-    try { localStorage.setItem(paperKey, JSON.stringify(value)); setSaveMessage(adult ? '已保存大人核对的纸稿结果。' : '已保存本次自查；可以请大人再看看纸稿。'); }
+    try { localStorage.setItem(paperKey, JSON.stringify(value)); notifyChineseRecordsChanged(); setLastCheck(value); setSaved(true); setSaveMessage(adult ? '已保存大人核对的纸稿结果。' : '已保存本次自查；可以请大人再看看纸稿。'); }
     catch { setSaveMessage('本次检查已完成，但这个浏览器暂时不能保存记录。'); }
   }
   function resetPaper() { setRevealed(false); setErrors(new Set()); setAdult(false); setSaved(false); setSaveMessage(''); }
@@ -100,10 +111,10 @@ export default function ShanxingLesson() {
   const nextText = { read: '看看字词', words: '试着背一背', recite: '去纸上默写', write: '再看诗景' };
   const footerText = { read: '点一句诗，看看它写的画面。', words: '读准字音，再试着组一个词。', recite: '不用背译文，能说清意思就好。', write: '准备纸和笔，合上课本再写。' };
 
-  return <main className="shan-lesson" data-mode={mode}>
+  return <main className="shan-lesson" data-mode={mode} data-teacher={teacher || undefined}>
     <header className="shan-head">
-      <a className="shan-back" href="#/map/chinese" aria-label="返回语文课程"><ArrowLeft size={20} /><span>语文</span></a>
-      <div className="shan-heading"><span className="shan-eyebrow">诗画课堂 · 三上第4课</span><h1>山行 <span>唐 · 杜牧</span></h1></div>
+      <a className="shan-back" href={chineseReturnHref('cn-04', teacher)} aria-label={teacher ? '返回老师课堂' : '返回语文森林'}><ArrowLeft size={20} /><span>{teacher ? '老师课堂' : '语文森林'}</span></a>
+      <div className="shan-heading"><span className="shan-eyebrow">诗画课堂 · 三上第4课{teacher ? ' · 教师投屏' : ''}</span><h1>山行 <span>唐 · 杜牧</span></h1></div>
       <button className="shan-resource-button" ref={resourceTrigger} onClick={() => { stopAudio(); dialog.current?.showModal(); }}><BookOpen size={19} /><span>资料与指导</span></button>
     </header>
 
@@ -137,7 +148,7 @@ export default function ShanxingLesson() {
 
       {mode === 'write' && <div className="shan-paper-panel">
         {!revealed ? <><div className="shan-paper-title"><Feather size={24} /><div><h2>合上课本，写下《山行》</h2><p>四句诗都写出来，别忘了标点。</p></div></div><div className="shan-paper-rows" aria-hidden="true">{[0, 1, 2, 3].map(row => <div key={row}><span>{row + 1}</span>{Array.from({ length: 7 }, (_, i) => <i key={i} />)}<b>标点</b></div>)}</div><div className="shan-paper-bottom"><p>在纸上写，不用在屏幕上输入。</p><button className="shan-primary" onClick={() => setRevealed(true)}>写完了，核对 <Eye size={19} /></button></div>{lastCheck && <p className="shan-last-check">上次{lastCheck.adult ? '大人核对' : '自查'}：{new Date(lastCheck.at).toLocaleDateString('zh-CN')} · {lastCheck.errors.length ? '还有地方要再练' : '当次未标记错误'}</p>}</>
-          : <><div className="shan-paper-title"><CheckCircle2 size={24} /><div><h2>对照纸稿，逐字核对</h2><p>先找错在哪里，再补写一次。</p></div><button className="shan-text-button" onClick={resetPaper}>重新默写</button></div><div className="shan-paper-review"><div className="shan-answer-poem">{shanxing.lines.map(item => <p key={item.id}>{item.text}</p>)}<span>留意：生处、坐爱、石径斜、霜叶，以及标点。</span></div><div className="shan-paper-checklist"><strong>纸稿里有哪些需要再练？</strong>{[{ id: 'glyph', label: '有错别字' }, { id: 'missing', label: '有漏字或漏句' }, { id: 'punctuation', label: '标点要改' }].map(item => <label key={item.id}><input type="checkbox" checked={errors.has(item.id)} onChange={() => toggleError(item.id)} />{item.label}</label>)}<label className="shan-adult-check"><input type="checkbox" checked={adult} onChange={e => { setAdult(e.target.checked); setSaved(false); setSaveMessage(''); }} />大人已查看纸稿</label><button className="shan-primary" disabled={saved} onClick={saveCheck}>{saved ? '本次已保存' : '保存本次检查'} <Check size={18} /></button><p className="shan-save-message" role="status">{saveMessage || '看着答案补写后，明天合上原文再试一次。'}</p></div></div></>}
+          : <><div className="shan-paper-title"><CheckCircle2 size={24} /><div><h2>对照纸稿，逐字核对</h2><p>先找错在哪里，再补写一次。</p></div><button className="shan-text-button" onClick={resetPaper}>重新默写</button></div><div className="shan-paper-review"><div className="shan-answer-poem">{shanxing.lines.map(item => <p key={item.id}>{item.text}</p>)}<span>留意：生处、坐爱、石径斜、霜叶，以及标点。</span></div><div className="shan-paper-checklist"><strong>纸稿里有哪些需要再练？</strong>{[{ id: 'glyph', label: '有错别字' }, { id: 'missing', label: '有漏字或漏句' }, { id: 'punctuation', label: '标点要改' }].map(item => <label key={item.id}><input type="checkbox" checked={errors.has(item.id)} onChange={() => toggleError(item.id)} />{item.label}</label>)}{!teacher && <><label className="shan-adult-check"><input type="checkbox" checked={adult} onChange={e => { setAdult(e.target.checked); setSaved(false); setSaveMessage(''); }} />大人已查看纸稿</label><button className="shan-primary" disabled={saved} onClick={saveCheck}>{saved ? '本次已保存' : '保存本次检查'} <Check size={18} /></button></>}<p className="shan-save-message" role="status">{saveMessage || (teacher ? '投屏只作演示，不读取或保存个人学习记录。' : '看着答案补写后，明天合上原文再试一次。')}</p></div></div></>}
       </div>}
     </section>
 
@@ -146,9 +157,10 @@ export default function ShanxingLesson() {
     <dialog className="shan-dialog" ref={dialog} onClose={() => resourceTrigger.current?.focus()} onClick={event => { if (event.target === dialog.current) dialog.current.close(); }}>
       <div className="shan-dialog-header"><h2>这一课怎么用</h2><button onClick={() => dialog.current?.close()} aria-label="关闭资料与指导"><X size={21} /></button></div>
       <div className="shan-dialog-body"><p>先说清诗意，再读熟、背诵，最后在纸上独立默写。已经会的部分可以直接跳过。</p><div className="shan-parent-prompts"><strong>大人只需要问这三个问题</strong><ol><li>这是哪个季节？你从诗中哪里看出来？</li><li>为什么停车？什么比什么更红？</li><li>合上原文，四句诗和标点能写对吗？</li></ol><p>前两项意思说对即可，不要求背译文；纸笔检查保留自查与大人核对的区别。</p></div>
-        <button className="shan-print-button" onClick={() => window.print()}><Printer size={19} />打印一页练习纸</button>
+        <a className="shan-print-button" href={chineseLessonHref('shanxing', !teacher)} onClick={() => dialog.current?.close()}><BookOpen size={19} />{teacher ? '学生使用' : '教师投屏'}</a>
+        <button className="shan-print-button" onClick={() => { stopAudio(); window.print(); }}><Printer size={19} />打印一页练习纸</button>
         <h3>需要补听或看范写时</h3><div className="shan-source-list">{shanxingSources.map(source => <a key={source.url} href={source.url} target="_blank" rel="noopener noreferrer"><div><strong>{source.title}<ExternalLink size={15} /></strong><p>{source.description}</p></div><ArrowRight size={18} /></a>)}</div>
-        <div className="shan-source-note"><strong>内容依据</strong><p>教材：人教统编语文三年级上册，2025修订版；凡凡的纸本为2026印刷。原文、拼音和“背诵三首，默写《山行》”按同目录公开预览第14—15页核对，2026纸本内页仍待复核。</p><p>诗景、释义和练习为原创辅导整理；组词是辅导例子，不增加教材必写词。诗景中的房屋位置与车马是想象示意。课程与范写保留原站链接，未搬运其视频或课件。</p><p>中文朗读沿用现有合成练习音，不作为真人教师范读；记录只保存在当前浏览器，不计入原有游戏成绩。</p></div>
+        <div className="shan-source-note"><strong>内容依据</strong><p>教材：人教统编语文三年级上册，2025修订版；凡凡的纸本为2026印刷。原文、拼音和“背诵三首，默写《山行》”按同目录公开预览第14—15页核对，2026纸本内页仍待复核。</p><p>诗景、释义和练习为原创辅导整理；组词是辅导例子，不增加教材必写词。诗景中的房屋位置与车马是想象示意。课程与范写保留原站链接，未搬运其视频或课件。</p><p>中文朗读沿用现有合成练习音，不作为真人教师范读；学生主动保存的纸稿检查只保存在当前浏览器，不计入原有游戏成绩。教师投屏不读取或保存个人学习记录。</p></div>
       </div>
     </dialog>
 

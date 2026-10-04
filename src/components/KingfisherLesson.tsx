@@ -5,9 +5,11 @@ import { getLessonWords, lessonCourseById, type LessonWord, type WordCategory } 
 import { createChineseLessonAudioPlayer, getLessonAudioEntry } from '../lib/chineseLessonAudio';
 import { getKingfisherFrame, KINGFISHER_DURATION } from '../lib/kingfisherMotion';
 import KingfisherScene from './KingfisherScene';
+import { chineseReturnHref, resolveChineseLessonMode, type ChineseLessonTab } from '../lib/chineseLessonNavigation';
+import ChineseLessonPaperPanel from './ChineseLessonPaperPanel';
 import './kingfisherLesson.css';
 
-type Mode = 'observe' | 'catch' | 'words' | 'read';
+type Mode = 'paper' | 'observe' | 'catch' | 'words' | 'read';
 type BirdPart = 'feathers' | 'wings' | 'beak';
 type Verb = 'chong' | 'fei' | 'xian' | 'zhan' | 'tun';
 type SelectedWord = { category: WordCategory; id: string };
@@ -16,6 +18,7 @@ const tabs: { id: Mode; label: string; icon: typeof Leaf }[] = [
   { id: 'catch', label: '看它捕鱼', icon: Play },
   { id: 'words', label: '字词练写', icon: Pencil },
   { id: 'read', label: '读懂方法', icon: BookOpen },
+  { id: 'paper', label: '纸笔检查', icon: Pencil },
 ];
 const wordKinds: WordCategory[] = ['recognition', 'writing', 'words'];
 const categoryLabels: Record<WordCategory, string> = { recognition: '会认字', writing: '会写字', words: '课内词语' };
@@ -39,8 +42,13 @@ function useReducedMotion() {
   return reduced;
 }
 
-export default function KingfisherLesson({ teacher = false }: { teacher?: boolean }) {
-  const [mode, setMode] = useState<Mode>('observe');
+export default function KingfisherLesson(props: { teacher?: boolean; initialTab?: ChineseLessonTab }) {
+  return <KingfisherLessonContent key={props.teacher ? 'teacher' : 'student'} {...props} />;
+}
+
+function KingfisherLessonContent({ teacher = false, initialTab }: { teacher?: boolean; initialTab?: ChineseLessonTab }) {
+  const initialMode = resolveChineseLessonMode<Mode>(initialTab, { read: 'observe', words: 'words', paper: 'paper', practice: 'catch' });
+  const [mode, setMode] = useState<Mode>(initialMode);
   const [selectedPart, setSelectedPart] = useState<BirdPart>('feathers');
   const [partAnswer, setPartAnswer] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -51,6 +59,7 @@ export default function KingfisherLesson({ teacher = false }: { teacher?: boolea
   const [selectedWord, setSelectedWord] = useState<SelectedWord>({ category: 'writing', id: initialWord.id });
   const [focusedCharacter, setFocusedCharacter] = useState('翠');
   const [wordHidden, setWordHidden] = useState(false);
+  const [paperIndependent, setPaperIndependent] = useState(false);
   const [paperReview, setPaperReview] = useState(false);
   const [audioStatus, setAudioStatus] = useState('');
   const [audioPlaying, setAudioPlaying] = useState(false);
@@ -94,6 +103,7 @@ export default function KingfisherLesson({ teacher = false }: { teacher?: boolea
     setProgress(next);
   }
   function changeMode(next: Mode) { pause(); stopAudio(); setMode(next); }
+  useEffect(() => { changeMode(initialMode); }, [initialMode, initialTab]);
   function selectPart(next: BirdPart) { setSelectedPart(next); setPartAnswer(false); }
   function togglePlayback() {
     stopAudio();
@@ -158,13 +168,15 @@ export default function KingfisherLesson({ teacher = false }: { teacher?: boolea
     };
   }, []);
 
+  useEffect(() => { document.title = mode === 'paper' && paperIndependent ? '纸笔独立练习 · 三上第14课' : '搭船的鸟 · 河上观察手册'; }, [mode, paperIndependent]);
+
   return <main className="kf-lesson" data-mode={mode} data-teacher={teacher || undefined}>
     <header className="kf-head">
-      <a className="kf-back" href={teacher ? '#/teacher' : '#/chinese-book/cn-14'} aria-label={teacher ? '返回老师课堂' : '返回全册课堂'}><ArrowLeft size={21} /><span>语文课堂</span></a>
-      <div className="kf-heading"><span className="kf-eyebrow">河上观察手册 <span>三上 · 第14课{teacher ? ' · 教师投屏' : ''}</span></span><h1>{birdLessonCopy.title}<span>一位特别的乘客</span></h1></div>
+      <a className="kf-back" href={chineseReturnHref('cn-14', teacher)} aria-label={teacher ? '返回老师课堂' : '返回语文森林'}><ArrowLeft size={21} /><span>{teacher ? '老师课堂' : '语文森林'}</span></a>
+      <div className="kf-heading"><span className="kf-eyebrow">河上观察手册 <span>三上 · 第14课{teacher ? ' · 教师投屏' : ''}</span></span><h1>{mode === 'paper' && paperIndependent ? '纸笔独立练习' : birdLessonCopy.title}{!(mode === 'paper' && paperIndependent) && <span>一位特别的乘客</span>}</h1></div>
       <button className="kf-resource" ref={resourceTrigger} onClick={openResources}><BookOpen size={19} /><span>资料与指导</span></button>
     </header>
-    <nav className="kf-tabs" aria-label="本课学习内容">{tabs.map(({ id, label, icon: Icon }, index) => <button key={id} className={mode === id ? 'is-active' : ''} aria-current={mode === id ? 'page' : undefined} onClick={() => changeMode(id)}><span className="kf-tab-number">0{index + 1}</span><Icon size={19} /><span>{label}</span></button>)}</nav>
+    <nav className="kf-tabs" aria-label="本课学习内容">{tabs.map(({ id, label, icon: Icon }, index) => <button key={id} className={mode === id ? 'is-active' : ''} aria-current={mode === id ? 'page' : undefined} onClick={() => changeMode(id)}><span className="kf-tab-number">0{index + 1}</span><Icon size={19} /><span>{mode === 'paper' && paperIndependent ? ({ observe: '看图观察', catch: '看动作', words: '字词练写', read: '读懂方法', paper: '纸笔检查' })[id] : label}</span></button>)}</nav>
 
     <section className={`kf-panel kf-panel-${mode}`} aria-label={tabs.find(tab => tab.id === mode)!.label}>
       {mode === 'observe' && <>
@@ -217,10 +229,11 @@ export default function KingfisherLesson({ teacher = false }: { teacher?: boolea
         <div className="kf-art kf-method-art"><div className="kf-art-heading"><span><Feather size={16} />像作者一样留心看</span><small>细看 · 细想 · 请教</small></div><div className="kf-scene-body"><KingfisherScene mode={promptIndex === 1 ? 'catch' : 'observe'} progress={promptIndex === 1 ? 7 : 0} selectedPart={promptIndex === 0 ? 'feathers' : null} reducedMotion={reducedMotion} /></div><div className="kf-method-notes"><div><span>01</span><strong>看外形</strong><p>颜色、样子，写具体。</p></div><div><span>02</span><strong>看动作</strong><p>连续观察，用准动词。</p></div><div><span>03</span><strong>问名称</strong><p>不认识，还可以请教。</p></div></div></div>
         <div className="kf-reading kf-side"><div className="kf-section-heading"><span className="kf-eyebrow">从一只鸟，学会观察</span><h2>读懂作者的方法</h2></div><div className="kf-prompt-tabs" role="group" aria-label="直接选择阅读问题">{birdLessonCopy.readingPrompts.map((item, index) => <button key={item.id} className={promptIndex === index ? 'is-active' : ''} aria-pressed={promptIndex === index} onClick={() => setPromptIndex(index)}>问题 {index + 1}</button>)}</div><h3 className="kf-reading-question">{prompt.question}</h3><div className="kf-reading-choices">{prompt.choices.map((choice, index) => <button key={choice.text} className={`${answerIndex === index ? 'is-selected' : ''} ${(teacher && teacherAnswers[prompt.id] && choice.correct) || (answerIndex === index && choice.correct) ? 'is-correct' : ''} ${answerIndex === index && !choice.correct ? 'is-retry' : ''}`} aria-pressed={answerIndex === index} onClick={() => setAnswers(current => ({ ...current, [prompt.id]: index }))}><span>{String.fromCharCode(65 + index)}</span><p>{choice.text}</p>{((teacher && teacherAnswers[prompt.id] && choice.correct) || (answerIndex === index && choice.correct)) && <Check size={19} />}</button>)}</div><div className={`kf-reading-feedback ${shownAnswer ? 'has-answer' : ''}`} aria-live="polite">{shownAnswer ? <><strong>{shownAnswer.correct ? '这个理由说得清楚' : '再对照课文想一想'}</strong><p>{shownAnswer.explanation}</p></> : <><span>先自己说一说</span><p>选出想法，再说说你是从哪里看出来的。</p></>}</div>{teacher && <button className="kf-teacher-answer kf-text-button" aria-expanded={!!teacherAnswers[prompt.id]} onClick={() => setTeacherAnswers(current => ({ ...current, [prompt.id]: !current[prompt.id] }))}>{teacherAnswers[prompt.id] ? <EyeOff size={18} /> : <Eye size={18} />}{teacherAnswers[prompt.id] ? '收起参考答案' : '展示参考答案'}</button>}</div>
       </>}
+      {mode === 'paper' && <ChineseLessonPaperPanel courseId="cn-14" teacher={teacher} onIndependentChange={setPaperIndependent} />}
     </section>
-    <footer className="kf-footer"><span><Leaf size={15} />{({ observe: '留心身边的事物，就会有新的发现。', catch: '拖动或点动词，停在你想仔细看的地方。', words: '看清字形，遮住试写；对照纸稿，找出易错处。', read: '外形、动作和请教，让一次观察更完整。' })[mode]}</span><span className="kf-footer-mark">{teacher ? '课堂演示' : '河上观察手册'} <i>14</i></span></footer>
+    <footer className="kf-footer"><span><Leaf size={15} />{initialTab === 'memory' && mode === 'observe' ? '背默内容须按纸本与老师要求核对，先回到阅读。' : ({ paper: '具体错误留在纸稿上，下次再核对。', observe: '留心身边的事物，就会有新的发现。', catch: '拖动或点动词，停在你想仔细看的地方。', words: '看清字形，遮住试写；对照纸稿，找出易错处。', read: '外形、动作和请教，让一次观察更完整。' })[mode]}</span><span className="kf-footer-mark">{teacher ? '课堂演示' : '河上观察手册'} <i>14</i></span></footer>
 
-    <dialog className="kf-dialog" ref={dialogRef} onClose={() => resourceTrigger.current?.focus()} onClick={event => { if (event.target === dialogRef.current) dialogRef.current.close(); }} aria-labelledby="kf-resource-title"><div className="kf-dialog-heading"><div><span className="kf-eyebrow">给陪伴学习的大人</span><h2 id="kf-resource-title">资料与课堂指导</h2></div><button className="kf-dialog-close" onClick={() => dialogRef.current?.close()} aria-label="关闭资料与指导"><X size={22} /></button></div><div className="kf-dialog-body"><p>{birdLessonCopy.intro}</p><div className="kf-adult-guidance"><h3>课堂里可以这样用</h3><ol><li>点翠鸟的三个部位，让孩子把颜色和样子说具体。</li><li>播放捕鱼动作，停在“飞、衔”同时出现的地方，理解两个词写的是同一时刻的不同动作。</li><li>字词可以直接选择。纸上独立写后，再展开字形核对。</li><li>三道阅读题随时切换，让孩子说出课文中的依据。</li></ol><p>教师投屏只作演示；这一页不读取或保存个人学习记录。</p></div><a className="kf-teacher-link" href="#/chinese-lesson/cn-14/teacher" onClick={() => dialogRef.current?.close()}><BookOpen size={19} /><span>打开教师投屏</span><ArrowRight size={18} /></a><button className="kf-print-button" onClick={printLesson}><Printer size={19} />打印一页练习纸</button><h3>内容来源</h3><div className="kf-sources">{birdLessonCopy.sources.map(source => <a href={source.url} key={source.url} target="_blank" rel="noopener noreferrer"><span>{source.title}</span><ExternalLink size={17} /></a>)}</div><div className="kf-source-note"><h3>教材核对与示意说明</h3><p>{birdLessonRequirementNote}</p><p>观察提示、换词对比和练习由本页原创整理。画面辅助理解课文，动作时长为演示用；翠鸟的外形颜色与动作描述请回到课文核对。</p><p>本页使用现有合成练习音频，不调用设备朗读。纸笔核对用于找出需要再练的地方，不生成“已掌握”记录。</p></div></div></dialog>
+    <dialog className="kf-dialog" ref={dialogRef} onClose={() => resourceTrigger.current?.focus()} onClick={event => { if (event.target === dialogRef.current) dialogRef.current.close(); }} aria-labelledby="kf-resource-title"><div className="kf-dialog-heading"><div><span className="kf-eyebrow">给陪伴学习的大人</span><h2 id="kf-resource-title">资料与课堂指导</h2></div><button className="kf-dialog-close" onClick={() => dialogRef.current?.close()} aria-label="关闭资料与指导"><X size={22} /></button></div><div className="kf-dialog-body">{mode === 'paper' && paperIndependent ? <p>先独立尝试，展开纸稿核对区以后，再查阅教学资料。</p> : <><p>{birdLessonCopy.intro}</p><div className="kf-adult-guidance"><h3>课堂里可以这样用</h3><ol><li>点翠鸟的三个部位，让孩子把颜色和样子说具体。</li><li>播放捕鱼动作，停在“飞、衔”同时出现的地方，理解两个词写的是同一时刻的不同动作。</li><li>字词可以直接选择。纸上独立写后，再展开字形核对。</li><li>三道阅读题随时切换，让孩子说出课文中的依据。</li></ol><p>教师投屏只作演示；这一页不读取或保存个人学习记录。</p></div><a className="kf-teacher-link" href="#/chinese-lesson/cn-14/teacher" onClick={() => dialogRef.current?.close()}><BookOpen size={19} /><span>打开教师投屏</span><ArrowRight size={18} /></a><button className="kf-print-button" onClick={printLesson}><Printer size={19} />打印一页练习纸</button><h3>内容来源</h3><div className="kf-sources">{birdLessonCopy.sources.map(source => <a href={source.url} key={source.url} target="_blank" rel="noopener noreferrer"><span>{source.title}</span><ExternalLink size={17} /></a>)}</div><div className="kf-source-note"><h3>教材核对与示意说明</h3><p>{birdLessonRequirementNote}</p><p>观察提示、换词对比和练习由本页原创整理。画面辅助理解课文，动作时长为演示用；翠鸟的外形颜色与动作描述请回到课文核对。</p><p>本页使用现有合成练习音频，不调用设备朗读。纸笔核对用于找出需要再练的地方，不生成“已掌握”记录。</p></div></>}</div></dialog>
     <section className="kf-print" aria-hidden="true"><h1>《搭船的鸟》观察与练写</h1><p>姓名：____________　日期：____________</p><h2>一、把翠鸟说具体</h2><p>羽毛：____________　翅膀：____________　长嘴：____________</p><h2>二、边看动作，边说动词</h2><p>冲　飞　衔　站　吞</p><p>飞回船头时，翠鸟怎样带着小鱼？为什么“冲”比“慢慢走进”更合适？</p><div className="kf-print-lines">______________________________________________<br />______________________________________________</div><h2>三、在纸上独立练写</h2><div className="kf-print-wordbank">{wordBank.words.map(item => <div key={item.id}><span>{item.pinyin}</span><p>{[...item.text].map(() => '□').join(' ')}</p></div>)}</div><h2>四、对照纸稿再看一遍</h2><p>留意：礻与衤；翠字上部；蓝字下部；悄的忄；捕字右边的点。</p><p>需要再练的字词：__________________________________</p><small>{birdLessonRequirementNote}</small></section>
   </main>;
 }

@@ -3,6 +3,8 @@ import { ArrowLeft, ArrowRight, BookOpen, Download, ExternalLink, Feather, Leaf,
 import semesterPlan from '../data/chineseSemesterPlan.json';
 import { lessonDesigns, studioSources, studioUnits } from '../data/chineseBookStudio';
 import { chineseBookCompanions } from '../data/chineseBookCompanions';
+import { getChinesePrecisionLesson } from '../data/chineseLessonPrecision';
+import { companionWorkshops } from '../data/chineseCompanionPrecision';
 import './chineseBookStudio.css';
 
 type Section = 'lessons' | 'companions';
@@ -25,6 +27,8 @@ export default function ChineseBookStudio({ selectedId }: { selectedId?: string 
   const companion = section === 'companions' ? companions.find(item => item.id === selection) : undefined;
   const lexicalCourse = course || (companion?.kind === 'garden' ? semesterPlan.courses.find(item => item.kind === 'garden' && item.unitNumber === unitNumber) : undefined);
   const design = lessonDesigns.find(item => item.courseId === course?.id);
+  const precision = getChinesePrecisionLesson(course?.id || '');
+  const workshop = companion ? companionWorkshops[companion.id] : undefined;
   const isSkim = !!course?.lessonNumber && skimLessons.has(course.lessonNumber);
 
   useEffect(() => {
@@ -81,11 +85,12 @@ export default function ChineseBookStudio({ selectedId }: { selectedId?: string 
         <nav className="book-detail-tabs" aria-label="查看本课安排">{detailLabels.filter(item => lexicalCourse || item.id !== 'words').map(item => <button key={item.id} aria-pressed={detail === item.id} className={detail === item.id ? 'is-active' : ''} onClick={() => setDetail(item.id)}>{item.label}</button>)}</nav>
         <div className="book-detail-body">
           {detail === 'how' && <>
-            <div className="book-design-block"><span>这一课要读懂</span><p>{design?.focus || companion?.goal}</p></div>
-            <div className="book-design-block"><span>这一课的形式</span><p>{design?.form || companion?.form}</p></div>
+            <div className="book-design-block"><span>这一课要读懂</span><p>{precision?.goal || design?.focus || companion?.goal}</p></div>
+            <div className="book-design-block"><span>这一课的形式</span><p>{precision ? precision.tools.map(tool => `${tool.title}：${tool.instruction}`).join('；') : workshop ? `${workshop.title}：${workshop.instruction}` : design?.form || companion?.form}</p></div>
             {design && <div className="book-design-block"><span>练习重点</span><p>{design.practice}</p></div>}
             <p className="book-design-note">{design?.note || companion?.note}</p>
             <a className="book-primary" href={course ? `#/chinese-lesson/${course.id}` : `#/chinese-companion/${companion!.id}`}>打开本课课件 <ArrowRight size={18} /></a>
+            <a className="book-source" href={course ? `#/chinese-lesson/${course.id}/teacher` : `#/chinese-companion/${companion!.id}/teacher`}>教师投屏入口 <ArrowRight size={16} /></a>
             {course?.id === 'cn-04' && <a className="book-source" href="#/chinese-lesson/shanxing">《山行》诗画版 <ArrowRight size={16} /></a>}
           </>}
           {detail === 'words' && lexicalCourse && <>
@@ -111,6 +116,6 @@ export default function ChineseBookStudio({ selectedId }: { selectedId?: string 
       </section>
     </div>
 
-    <footer className="book-studio-footer"><p>按学校进度选课，已经会的部分直接跳过。</p><a href="#/chinese-plan">完整字词清单 <ArrowRight size={15} /></a></footer>
+    <footer className="book-studio-footer"><p>26课与23项配套的规划已审核；教材待核项目单独列明。</p><a href={`${import.meta.env.BASE_URL}plans/chinese-precision-master-plan.md`} download="语文全册精修规划.md"><Download size={15} />逐项精修规划</a><a href={`${import.meta.env.BASE_URL}plans/chinese-precision-release.md`} download="语文逐项验收台账.md"><Download size={15} />逐项验收台账</a><a href="#/chinese-plan">完整字词清单 <ArrowRight size={15} /></a></footer>
   </main>;
 }

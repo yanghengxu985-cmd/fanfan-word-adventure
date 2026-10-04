@@ -1,0 +1,168 @@
+.cnl-lesson .cpt-tool { height: 100%; min-height: 0; display: grid; grid-template-columns: minmax(0, 1.03fr) minmax(440px, 1fr); }
+.cnl-lesson .cpt-scene { display: flex; flex-direction: column; min-height: 0; border-right: 1px solid var(--cnl-line); background: #e6eadc; }
+.cnl-lesson .cpt-scene-head { height: 43px; min-height: 43px; padding: 0 18px; display: flex; align-items: center; gap: 9px; justify-content: space-between; background: #f1edde; border-bottom: 1px solid var(--cnl-line); }
+.cnl-lesson .cpt-scene-head > span { display: flex; align-items: center; gap: 7px; font-size: 13px; color: #68765c; }
+.cnl-lesson .cpt-scene-head > small { font-size: 10px; color: #989a84; white-space: nowrap; }
+.cnl-lesson .cpt-stage { min-height: 0; flex: 1; width: 100%; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; container-type: size; }
+.cnl-lesson .cpt-scene-frame { position: relative; width: min(100cqw, 150cqh); aspect-ratio: 3 / 2; max-height: 100%; overflow: hidden; }
+.cnl-lesson .cpt-image-layer { position: relative; width: 100%; height: 100%; overflow: hidden; }
+.cnl-lesson .cpt-illustration { position: relative; width: 100%; height: 100%; min-height: 0; }
+.cnl-lesson .cpt-illustration > img, .cnl-lesson .cpt-illustration > svg { display: block; width: 100%; height: 100%; object-fit: contain; }
+.cnl-lesson .cpt-illustration[data-weather='rain'] > img { filter: saturate(.7) brightness(.86); }
+.cnl-lesson .cpt-illustration[data-weather='rain']::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(#e0e7e055 20%, #d8e0db88 55%, transparent), repeating-linear-gradient(115deg, transparent 0 39px, #ebf0eb66 40px 41px, transparent 42px 69px); }
+.cnl-lesson .cpt-scene-caption { padding: 12px 18px; display: flex; align-items: flex-start; gap: 10px; border-top: 1px solid var(--cnl-line); background: #f2f0e3; }
+.cnl-lesson .cpt-scene-caption > span { width: 20px; height: 1px; margin-top: 10px; background: #9eaa84; flex: 0 0 auto; }
+.cnl-lesson .cpt-scene-caption > p { font-size: 14px; line-height: 1.8; color: #788060; }
+.cnl-lesson .cpt-hotspot-button { position: absolute; display: flex; align-items: center; gap: 6px; width: max-content; white-space: nowrap; transform: translate(-50%, -50%); padding: 5px 9px !important; min-height: 44px; border: 1px solid #bdb694 !important; border-radius: 25px; background: #fffae8e8 !important; color: #786647; box-shadow: 0 3px 12px #43533126; }
+.cnl-lesson .cpt-hotspot-button > span { width: 11px; height: 11px; border: 2px solid #a49a68; border-radius: 50%; }
+.cnl-lesson .cpt-hotspot-button > strong { font-size: 12px; font-weight: 500; }
+.cnl-lesson .cpt-hotspot-button.is-active { background: #ebefd9 !important; border-color: #7f9264 !important; }
+.cnl-lesson .cpt-hotspot-button.is-active > span { background: #839369; }
+.cnl-lesson .cpt-mark { position: absolute; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; gap: 7px; z-index: 2; pointer-events: none; }
+.cnl-lesson .cpt-mark > i { width: 40px; height: 40px; border: 2px solid #dcc589; border-radius: 50%; box-shadow: 0 0 0 8px #f4e5bd33; }
+.cnl-lesson .cpt-mark > strong { font-size: 12px; font-weight: 400; background: #fff9e7e8; padding: 4px 9px; border-radius: 5px; color: #807048; white-space: nowrap; }
+.cnl-lesson .cpt-mark-node > i { height: 13px; width: 13px; background: #baa071; border: 2px solid #fcf8e9; box-shadow: 0 0 0 3px #927a5133; }
+.cnl-lesson .cpt-mark-wave > i { width: 34px; height: 34px; border-width: 1px; box-shadow: 0 0 0 6px #f4e5bd44, 0 0 0 12px #f4e5bd22; }
+.cnl-lesson .cpt-route-line { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+.cnl-lesson .cpt-route-line path { fill: none; stroke: #e7ca83; stroke-width: .65; stroke-dasharray: 2 1; }
+.cnl-lesson .cpt-rain, .cnl-lesson .cpt-light { position: absolute; inset: 0; pointer-events: none; opacity: var(--cpt-amount); }
+.cnl-lesson .cpt-rain { background: repeating-linear-gradient(115deg, transparent 0 38px, #e6ede372 39px 40px, transparent 41px 64px); }
+.cnl-lesson .cpt-light { background: linear-gradient(115deg, #ffdf9355, transparent 70%); }
+.cnl-lesson .cpt-motion-cue { position: absolute; bottom: 20%; font-family: Georgia, serif; font-size: 50px; color: #f0d39a; text-shadow: 1px 1px 4px #5c6249; }
+.cnl-lesson .cpt-work { min-height: 0; display: flex; flex-direction: column; gap: 12px; padding: 23px 25px 18px; background: #fffaee; }
+.cnl-lesson .cpt-heading h2 { font-family: 'KaiTi', 'STKaiti', serif; font-weight: 500; font-size: 28px; line-height: 1.4; margin-top: 3px; color: #52634b; }
+.cnl-lesson .cpt-heading > p { margin-top: 7px; font-size: 14px; line-height: 1.8; color: #96947b; }
+.cnl-lesson .cpt-direct-options { display: flex; gap: 7px; flex-wrap: wrap; }
+.cnl-lesson .cpt-direct-options > button { min-height: 44px; flex: 1; border: 1px solid #d2d5be; border-radius: 6px; background: #f8f7e9; padding: 7px 9px !important; font-size: 14px; color: #8d9174; }
+.cnl-lesson .cpt-direct-options > button.is-active { background: #e8edd9; border-color: #a0ad84; color: #657c55; }
+.cnl-lesson .cpt-direct-options > button > small { font-family: Georgia, serif; margin-right: 8px; color: #acaa8c; font-size: 10px; }
+.cnl-lesson .cpt-scene > .cpt-direct-options { padding: 9px 12px; background: #eeeada; border-top: 1px solid var(--cnl-line); }
+.cnl-lesson .cpt-detail { padding: 16px 18px; border-left: 3px solid #b8b890; background: #f0f1e1; border-radius: 0 8px 8px 0; }
+.cnl-lesson .cpt-detail > span { font-size: 11px; color: #959d7a; }
+.cnl-lesson .cpt-detail > p { margin-top: 5px; font-size: 18px; line-height: 1.8; color: #6d7858; }
+.cnl-lesson .cpt-detail > small { display: block; font-size: 13px; line-height: 1.8; color: #96987a; margin-top: 8px; }
+.cnl-lesson .cpt-question { font-size: 15px; line-height: 1.8; color: #a0855b; }
+.cnl-lesson .cpt-margin-note { margin-top: auto; border-top: 1px solid #e3dcc7; padding-top: 10px; font-size: 11px; line-height: 1.7; color: #a2a287; }
+.cnl-lesson .cpt-parameter { padding: 11px 0; }
+.cnl-lesson .cpt-parameter > span { display: flex; justify-content: space-between; font-size: 13px; color: #8e9477; }
+.cnl-lesson .cpt-parameter small { font-variant-numeric: tabular-nums; color: #aa9d7d; }
+.cnl-lesson .cpt-parameter input, .cnl-lesson .cpt-sound-layers input { width: 100%; height: 44px; accent-color: #80956a; cursor: pointer; margin: 0; }
+.cnl-lesson .cpt-lens { position: relative; width: 100%; aspect-ratio: 2.5 / 1; overflow: hidden; background: #e6e9d8; border: 1px solid #d8d9be; border-radius: 9px; }
+.cnl-lesson .cpt-lens > div { position: absolute; }
+.cnl-lesson .cpt-lens > span { position: absolute; bottom: 9px; left: 12px; display: flex; gap: 5px; align-items: center; padding: 4px 7px; font-size: 11px; color: #8d8467; background: #fffbeaeb; border-radius: 4px; }
+.cnl-lesson .cpt-lens-empty { flex: 1; display: grid; align-content: center; justify-items: center; gap: 13px; border: 1px dashed #d2d5bc; border-radius: 9px; color: #a5ae8b; font-size: 14px; }
+.cnl-lesson .cpt-relations { position: relative; flex-shrink: 0; display: grid; grid-template-columns: 44% 44%; justify-content: space-between; gap: 14px; min-height: 210px; }
+.cnl-lesson .cpt-relations > svg { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.cnl-lesson .cpt-relations path { fill: none; stroke: #a3ae83; stroke-width: .6; }
+.cnl-lesson .cpt-relations > div { display: flex; flex-direction: column; justify-content: space-around; gap: 8px; }
+.cnl-lesson .cpt-relations button { display: flex; align-items: center; justify-content: space-between; gap: 6px; min-height: 54px; border: 1px solid #d8d6bd; border-radius: 7px; background: #faf6e9; padding: 10px !important; text-align: left; font-size: 14px; line-height: 1.65; color: #8a8163; }
+.cnl-lesson .cpt-relations button.is-active, .cnl-lesson .cpt-relations button.is-linked { border-color: #a1ad7c; background: #ecf0dd; color: #788557; }
+.cnl-lesson .cpt-check-row { display: flex; align-items: center; gap: 13px; }
+.cnl-lesson .cpt-check-row > small { flex: 1; font-size: 11px; line-height: 1.7; color: #a2a18a; }
+.cnl-lesson .cpt-feedback { font-size: 13px; line-height: 1.8; color: #8a9670; background: #f0f2e2; border-left: 2px solid #b6bf8d; padding: 10px 13px; border-radius: 0 6px 6px 0; }
+.cnl-lesson .cpt-route-slots { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.cnl-lesson .cpt-route-slots > button { display: flex; gap: 10px; align-items: center; text-align: left; min-height: 48px; border: 1px dashed #c8d0b2; background: #f4f6e8; border-radius: 6px; padding: 7px 10px !important; }
+.cnl-lesson .cpt-route-slots > button > span { font-family: Georgia, serif; color: #aaa080; font-size: 13px; }
+.cnl-lesson .cpt-route-slots > button > p { flex: 1; font-size: 14px; line-height: 1.6; color: #7d8861; }
+.cnl-lesson .cpt-route-bank { display: flex; flex-wrap: wrap; gap: 6px; }
+.cnl-lesson .cpt-route-bank > button { min-height: 44px; display: flex; align-items: center; gap: 6px; padding: 6px 10px !important; border: 1px solid #d6ceb4; background: #f7f0df; border-radius: 6px; font-size: 13px; color: #9d865d; }
+.cnl-lesson .cpt-route .cpt-margin-note { display: none; }
+.cnl-lesson .cpt-classical .cpt-margin-note { display: none; }
+.cnl-lesson .cpt-association .cpt-margin-note { display: none; }
+.cnl-lesson[data-kind='poem'] .cpt-association .cpt-relations { min-height: 160px; }
+.cnl-lesson .cpt-boundary { padding: 9px 15px; font-size: 10px; line-height: 1.75; color: #999779; }
+.cnl-lesson .cpt-guesses { display: grid; gap: 7px; }
+.cnl-lesson .cpt-guesses > button { display: flex; align-items: center; gap: 11px; min-height: 51px; text-align: left; border: 1px solid #dcd2b8; background: #faf4e6; padding: 9px 12px !important; border-radius: 6px; font-size: 15px; line-height: 1.6; color: #948365; }
+.cnl-lesson .cpt-guesses > button > span { flex: 0 0 22px; width: 22px; height: 22px; display: grid; place-items: center; border: 1px solid #d4c4a4; border-radius: 50%; font-family: Georgia, serif; font-size: 12px; }
+.cnl-lesson .cpt-guesses > button.is-active { border-color: #b09c74; background: #f0e6d1; color: #8b7048; }
+.cnl-lesson .cpt-evidence-label { font-size: 11px; color: #9ca083; }
+.cnl-lesson .cpt-evidence { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; }
+.cnl-lesson .cpt-evidence > button { min-height: 55px; padding: 8px 10px !important; border: 1px solid #d4d9bf; background: #f0f3e5; border-radius: 6px; font-size: 13px; line-height: 1.7; color: #8d9675; text-align: left; }
+.cnl-lesson .cpt-evidence > button.is-active { border-color: #9ea97a; background: #e7edd8; }
+.cnl-lesson .cpt-reveal-row { display: flex; align-items: center; gap: 15px; margin-top: auto; }
+.cnl-lesson .cpt-reveal-row > p { flex: 1; font-size: 11px; color: #a1997d; line-height: 1.7; }
+.cnl-lesson .cpt-prediction-result { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+.cnl-lesson .cpt-prediction-result > div { border: 1px solid #ddd3b9; border-radius: 8px; background: #f5edde; padding: 13px; }
+.cnl-lesson .cpt-prediction-result > div:last-child { background: #eef1df; border-color: #d6ddc0; }
+.cnl-lesson .cpt-prediction-result span { font-size: 11px; color: #a09374; }
+.cnl-lesson .cpt-prediction-result p { margin-top: 7px; font-size: 16px; line-height: 1.8; color: #897858; }
+.cnl-lesson .cpt-prediction-result small { display: block; margin-top: 8px; font-size: 11px; line-height: 1.8; color: #9f9479; }
+.cnl-lesson .cpt-sound-layers { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.cnl-lesson .cpt-sound-layers > div { display: grid; grid-template-columns: 1fr; padding: 7px 12px; background: #f1f3e4; border: 1px solid #d9ddc7; border-radius: 7px; }
+.cnl-lesson .cpt-sound-layers button { display: flex; align-items: center; gap: 9px; text-align: left; color: #a0a28b; }
+.cnl-lesson .cpt-sound-layers button.is-active { color: #6f845a; }
+.cnl-lesson .cpt-sound-layers strong { font-size: 16px; font-weight: 500; }
+.cnl-lesson .cpt-sound-layers label > span { font-size: 10px; color: #a2a388; }
+.cnl-lesson .cpt-sound .cpt-heading > .cnl-eyebrow, .cnl-lesson .cpt-sound .cpt-heading > p, .cnl-lesson .cpt-sound .cpt-margin-note { display: none; }
+.cnl-lesson .cpt-sound .cpt-boundary { padding: 0; }
+.cnl-lesson .cpt-sound-layers p { grid-column: 1 / -1; font-size: 12px; line-height: 1.7; color: #939d7c; }
+.cnl-lesson .cpt-wave { height: 26px; display: flex; gap: 3px; align-items: center; }
+.cnl-lesson .cpt-wave > i { width: 2px; background: currentColor; border-radius: 2px; }
+.cnl-lesson .cpt-classical-text { font-family: 'KaiTi', 'STKaiti', serif; line-height: 1.8; border: 1px solid #dcd4bb; border-radius: 7px; padding: 12px 10px; background: #f8f1e1; }
+.cnl-lesson .cpt-classical-text > span { display: inline-flex; align-items: center; }
+.cnl-lesson .cpt-classical-text strong { font-size: 23px; font-weight: 500; color: #86754e; }
+.cnl-lesson .cpt-classical-text button { min-width: 19px; min-height: 44px; padding: 0 !important; font-size: 18px; color: #ccb996; }
+.cnl-lesson .cpt-classical-text button.is-active { color: #9c633c; font-size: 26px; }
+.cnl-lesson .cpt-classical-views { display: flex; gap: 5px; }
+.cnl-lesson .cpt-classical-views > button { flex: 1; border: 1px solid #d5d6bc; border-radius: 6px; min-height: 44px; padding: 5px 7px !important; font-size: 12px; background: #f9f6e8; color: #9b9578; }
+.cnl-lesson .cpt-classical-views > button.is-active { background: #e8edd8; border-color: #a8b48a; color: #7d8c60; }
+.cnl-lesson .cpt-classical-original { font-family: 'KaiTi', 'STKaiti', serif; font-size: 25px; line-height: 1.7; color: #8c7950; padding: 9px 12px; background: #f7efdd; border-radius: 6px; }
+.cnl-lesson .cpt-reference-targets { display: flex; gap: 8px; }
+.cnl-lesson .cpt-reference-targets > button { flex: 1; min-height: 55px; border: 1px solid #d7d9bd; border-radius: 6px; background: #f1f3e4; padding: 9px 12px !important; display: flex; align-items: center; justify-content: space-between; gap: 10px; text-align: left; font-size: 16px; color: #929b76; }
+.cnl-lesson .cpt-reference-targets > button.is-active { background: #e5edd5; border-color: #9fab7c; color: #7a8c5a; }
+.cnl-lesson .cpt-classical-actions { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.cnl-lesson .cpt-classical-actions > button { min-height: 44px; text-align: left; font-size: 13px; line-height: 1.6; border: 1px solid #d4d9bf; border-radius: 6px; background: #f1f3e5; padding: 8px 10px !important; color: #8a9470; }
+.cnl-lesson .cpt-classical-actions > button.is-active { border-color: #9aa879; background: #e5edd4; }
+.cnl-lesson .cpt-detail > .cpt-classical-example { font-family: 'KaiTi', 'STKaiti', serif; font-size: 23px; }
+@media (max-width: 1100px) and (max-height: 820px) and (min-width: 760px) {
+  .cnl-lesson .cpt-work { padding: 17px 21px 13px; gap: 9px; }
+  .cnl-lesson .cpt-heading h2 { font-size: 25px; }
+  .cnl-lesson .cpt-heading > p { font-size: 12px; line-height: 1.7; }
+  .cnl-lesson .cpt-detail { padding: 12px 15px; }
+  .cnl-lesson .cpt-detail > p { font-size: 16px; }
+  .cnl-lesson .cpt-question { font-size: 13px; }
+  .cnl-lesson .cpt-scene-caption > p { font-size: 13px; }
+  .cnl-lesson .cpt-scene-caption { padding: 10px 15px; }
+  .cnl-lesson .cpt-relations { min-height: 190px; }
+  .cnl-lesson .cpt-relations button { font-size: 13px; padding: 8px !important; min-height: 46px; }
+  .cnl-lesson .cpt-route-slots > button { min-height: 44px; }
+  .cnl-lesson .cpt-route-bank > button { font-size: 12px; }
+  .cnl-lesson .cpt-feedback { font-size: 12px; padding: 8px 11px; }
+  .cnl-lesson .cpt-prediction-result p { font-size: 14px; }
+  .cnl-lesson .cpt-sound-layers { gap: 7px; }
+  .cnl-lesson .cpt-sound-layers > div { padding: 6px 11px; }
+  .cnl-lesson .cpt-sound-layers p { font-size: 11px; }
+  .cnl-lesson .cpt-classical-text strong { font-size: 21px; }
+}
+@media (max-width: 900px) and (min-height: 850px) {
+  .cnl-lesson .cpt-tool { grid-template-columns: 1fr; grid-template-rows: minmax(0, .8fr) minmax(0, 1.2fr); }
+  .cnl-lesson .cpt-scene { border-right: 0; border-bottom: 1px solid var(--cnl-line); }
+  .cnl-lesson .cpt-work { padding: 18px 25px 14px; gap: 10px; }
+  .cnl-lesson .cpt-heading h2 { font-size: 27px; }
+  .cnl-lesson .cpt-heading > p { font-size: 13px; }
+  .cnl-lesson .cpt-relations { min-height: 178px; }
+  .cnl-lesson .cpt-relations > div { gap: 6px; }
+  .cnl-lesson .cpt-relations button { font-size: 14px; min-height: 46px; }
+  .cnl-lesson .cpt-route-slots { grid-template-columns: 1fr 1fr; }
+  .cnl-lesson .cpt-route-bank > button { flex: 1; }
+  .cnl-lesson .cpt-lens { aspect-ratio: 4 / 1; }
+  .cnl-lesson .cpt-detail { padding: 10px 15px; }
+  .cnl-lesson .cpt-detail > p { font-size: 16px; }
+  .cnl-lesson .cpt-prediction-result p { font-size: 15px; }
+  .cnl-lesson .cpt-sound-layers { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .cnl-lesson .cpt-sound-layers > div { grid-template-columns: 1fr; }
+  .cnl-lesson .cpt-sound-layers label { margin-top: 4px; }
+  .cnl-lesson .cpt-sound-layers p { grid-column: 1; }
+  .cnl-lesson .cpt-classical-text strong { font-size: 26px; }
+}
+@media (max-width: 759px) {
+  .cnl-lesson .cpt-tool { grid-template-columns: 1fr; grid-template-rows: minmax(330px, .85fr) minmax(500px, 1.15fr); }
+  .cnl-lesson .cpt-scene { border-right: 0; border-bottom: 1px solid var(--cnl-line); }
+  .cnl-lesson .cpt-work { padding: 20px 18px; }
+  .cnl-lesson .cpt-prediction-result { grid-template-columns: 1fr; }
+  .cnl-lesson .cpt-heading h2 { font-size: 25px; }
+  .cnl-lesson .cpt-classical-text strong { font-size: 23px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cnl-lesson .cpt-tool *, .cnl-lesson .cpt-tool *::before, .cnl-lesson .cpt-tool *::after { animation: none !important; transition: none !important; }
+}

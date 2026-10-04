@@ -146,7 +146,7 @@ export default function App() {
   if (page === 'chinese-lesson' && segments[1] === 'cn-15') return <Suspense fallback={<div className="empty-state">正在打开《金色的草地》观察课堂…</div>}><GoldenMeadowLesson teacher={segments[2] === 'teacher'} /></Suspense>;
   if (page === 'chinese-lesson' && segments[1] === 'cn-08') return <Suspense fallback={<div className="empty-state">正在打开《总也倒不了的老屋》预测课堂…</div>}><OldHouseLesson teacher={segments[2] === 'teacher'} /></Suspense>;
   if (page === 'chinese-lesson') return <Suspense fallback={<div className="empty-state">正在打开语文课件…</div>}><ChineseLessonViewer courseId={segments[1] || ''} teacher={segments[2] === 'teacher'} /></Suspense>;
-  if (page === 'chinese-companion') return <Suspense fallback={<div className="empty-state">正在打开配套课件…</div>}><ChineseBookCompanionViewer companionId={segments[1] || ''} /></Suspense>;
+  if (page === 'chinese-companion') return <Suspense fallback={<div className="empty-state">正在打开配套课件…</div>}><ChineseBookCompanionViewer companionId={segments[1] || ''} teacher={segments[2] === 'teacher'} /></Suspense>;
   if (page === 'chinese-book') return <Suspense fallback={<div className="empty-state">正在打开全册学习安排…</div>}><ChineseBookStudio selectedId={segments[1]} /></Suspense>;
   return <div className={`app-shell${focusedGame ? ' game-focus' : ''}${focusedGame && page === 'teacher' ? ' teacher-game-focus' : ''}`}>
     <a href="#main" className="skip-link" onClick={event => { event.preventDefault(); document.getElementById('main')?.focus(); }}>跳到内容</a>

@@ -1,42 +1,50 @@
-import { useEffect, useRef, useState } from 'react';
-import { ArrowLeft, ArrowRight, BookOpen, Check, CheckCircle2, Eye, EyeOff, Leaf, Pause, Pencil, Printer, RotateCcw, Volume2, X, ExternalLink, Users } from 'lucide-react';
-import { getLessonWords, getLessonPaperWords, lessonCourseById, lessonMaterialById, type WordCategory } from '../data/chineseLessons';
+import { useEffect, useRef, useState, type CSSProperties } from 'react';
+import { ArrowLeft, ArrowRight, BookOpen, Check, Eye, EyeOff, ExternalLink, Leaf, Maximize, Minus, Pause, Pencil, Play, Plus, Printer, RotateCcw, Search, Users, Volume2, X } from 'lucide-react';
+import { getLessonPaperWords, lessonCourseById, lessonMaterialById } from '../data/chineseLessons';
 import { studioSources } from '../data/chineseBookStudio';
+import { getChinesePrecisionLesson } from '../data/chineseLessonPrecision';
+import { createPrecisionState, type PrecisionToolState } from '../lib/chineseLessonPrecision';
 import { createChineseLessonAudioPlayer, getLessonAudioEntry } from '../lib/chineseLessonAudio';
 import { readPaperChecks, savePaperCheck } from '../lib/chineseLessonPaper';
-import ChineseLessonArt from './ChineseLessonArt';
-import ChineseLessonActivity from './ChineseLessonActivity';
+import ChineseWordWorkbench, { type ChineseWordWorkbenchHandle } from './ChineseWordWorkbench';
+import ChinesePrecisionTool, { PrecisionIllustration } from './ChinesePrecisionTool';
+import './kingfisherLesson.css';
 import './chineseLessonViewer.css';
 
 type Mode = 'read' | 'words' | 'practice' | 'recite' | 'paper';
 type PaperType = 'words' | 'memory' | 'poem';
 type Mask = 'full' | 'clue' | 'hidden';
-const categoryLabels: Record<WordCategory, string> = { recognition: '会认字', writing: '会写字', words: '课内词语' };
 
 export default function ChineseLessonViewer({ courseId, teacher = false }: { courseId: string; teacher?: boolean }) {
-  const course = lessonCourseById.get(courseId);
-  const material = lessonMaterialById.get(courseId);
-  if (!course || !material) return <main className="cnl-missing"><h1>这一课暂时没有找到</h1><a href="#/chinese-book">返回全册课堂</a></main>;
+  if (!lessonCourseById.has(courseId) || !lessonMaterialById.has(courseId)) return <main className="cnl-missing"><h1>这一课暂时没有找到</h1><a href="#/chinese-book">返回全册课堂</a></main>;
   return <LessonContent key={`${courseId}-${teacher ? 'teacher' : 'student'}`} courseId={courseId} teacher={teacher} />;
 }
 
 function LessonContent({ courseId, teacher }: { courseId: string; teacher: boolean }) {
   const course = lessonCourseById.get(courseId)!;
   const material = lessonMaterialById.get(courseId)!;
+  const precision = getChinesePrecisionLesson(courseId);
   const poems = material.poems || [];
+  const paperWords = getLessonPaperWords(course);
+  const skim = !course.writing.length && !poems.length;
+  const prediction = material.activity.kind === 'predict';
   const [mode, setMode] = useState<Mode>('read');
   const [stepIndex, setStepIndex] = useState(0);
-  const [visited, setVisited] = useState(0);
   const [explanation, setExplanation] = useState(false);
   const [poemIndex, setPoemIndex] = useState(0);
   const [lineIndex, setLineIndex] = useState(0);
   const [pinyin, setPinyin] = useState(false);
   const [mask, setMask] = useState<Mask>('full');
-  const [category, setCategory] = useState<WordCategory>(course.writing.length ? 'writing' : 'recognition');
-  const [wordIndex, setWordIndex] = useState(0);
+  const [poemTool, setPoemTool] = useState(false);
+  const [toolIndex, setToolIndex] = useState(0);
+  const [toolStates, setToolStates] = useState<Record<string, PrecisionToolState>>({});
+  const [wordHidden, setWordHidden] = useState(false);
   const [audioStatus, setAudioStatus] = useState('');
   const [playing, setPlaying] = useState(false);
-  const paperWords = getLessonPaperWords(course);
+  const [textScale, setTextScale] = useState(1);
+  const [presentationPaused, setPresentationPaused] = useState(false);
+  const [stopSignal, setStopSignal] = useState(0);
+  const [presentationStatus, setPresentationStatus] = useState('');
   const [paperType, setPaperType] = useState<PaperType>(poems.length ? 'poem' : paperWords.length ? 'words' : 'memory');
   const [paperPage, setPaperPage] = useState(0);
   const [memoryHidden, setMemoryHidden] = useState(false);
@@ -49,105 +57,98 @@ function LessonContent({ courseId, teacher }: { courseId: string; teacher: boole
     if (teacher) return undefined;
     try { return readPaperChecks(localStorage).filter(item => item.courseId === courseId).at(-1); } catch { return undefined; }
   });
+  const lessonRoot = useRef<HTMLElement>(null);
   const dialog = useRef<HTMLDialogElement>(null);
   const dialogTrigger = useRef<HTMLButtonElement>(null);
+  const workbench = useRef<ChineseWordWorkbenchHandle>(null);
   const player = useRef<ReturnType<typeof createChineseLessonAudioPlayer> | null>(null);
   const audioQueue = useRef<{ id: string; text?: string }[]>([]);
   const poem = poems[poemIndex];
   const step = material.steps[stepIndex];
-  const words = getLessonWords(course, category);
-  const word = words[wordIndex];
-  const isPredict = material.activity.kind === 'predict';
-  const isSkim = !course.writing.length && !poems.length;
-  const categories = (['recognition', 'writing', 'words'] as const).filter(kind => course[kind].length > 0);
+  const tool = precision?.tools[toolIndex] ?? precision?.tools[0];
+  const toolState = tool ? toolStates[tool.id] ?? createPrecisionState(tool) : undefined;
   const paperBank = paperType === 'memory' ? course.writing.map(item => ({ id: item.lexemeId, text: item.text, pinyin: '' })) : paperWords;
   const paperItems = paperBank.slice(paperPage * 6, paperPage * 6 + 6);
   const paperPages = Math.ceil(paperBank.length / 6);
-  const modes: { id: Mode; label: string; icon: typeof Leaf }[] = poems.length
-    ? [{ id: 'read', label: '看懂诗', icon: Leaf }, { id: 'words', label: '字词', icon: BookOpen }, { id: 'recite', label: courseId === 'cn-04' ? '背下来' : '记诗句', icon: EyeOff }, { id: 'paper', label: '纸上写', icon: Pencil }]
-    : [{ id: 'read', label: '看懂课文', icon: Leaf }, { id: 'words', label: '字词', icon: BookOpen }, { id: 'practice', label: '读懂练习', icon: CheckCircle2 }, ...(!isSkim ? [{ id: 'paper' as const, label: '纸上写', icon: Pencil }] : [])];
-
-  function stopAudio() { audioQueue.current = []; player.current?.stop(); setPlaying(false); setAudioStatus(''); }
+  const targetPoemRequired = !!poem && courseId === 'cn-04' && poem.title === '山行' && course.dictation.status === 'preview_checked' && course.dictation.scope.some(title => title === '山行');
+  const independent = mode === 'words' && wordHidden || mode === 'paper' && !revealed && !skim;
+  const modes: { id: Mode; label: string; icon: typeof Leaf }[] = poems.length ? [
+    { id: 'read', label: '读懂诗意', icon: Leaf }, { id: 'recite', label: courseId === 'cn-04' ? '遮字背诵' : '选做记诗', icon: EyeOff },
+    { id: 'words', label: '字词练写', icon: BookOpen }, { id: 'paper', label: '纸笔自查', icon: Pencil },
+  ] : [
+    { id: 'read', label: prediction ? '看故事线索' : '读进课文', icon: BookOpen }, { id: 'practice', label: prediction ? '试着预测' : '阅读工具', icon: Search },
+    { id: 'words', label: skim ? '字词认读' : '字词练写', icon: Pencil }, { id: 'paper', label: skim ? '选做观察纸' : '纸笔自查', icon: Eye },
+  ];
+  function stopAudio() { audioQueue.current = []; player.current?.stop(); workbench.current?.stopAudio(); setPlaying(false); setAudioStatus(''); }
+  function stopAll() { stopAudio(); setStopSignal(value => value + 1); }
   function playQueue(clips: { id: string; text?: string }[]) {
-    stopAudio();
-    if (!clips.length) return;
+    stopAudio(); if (!clips.length) return;
     player.current ??= createChineseLessonAudioPlayer({ baseUrl: import.meta.env.BASE_URL, onStatus: setAudioStatus, onEvent: event => {
-      if (event === 'ended' && audioQueue.current.length) {
-        const next = audioQueue.current.shift()!; player.current?.play(next.id, next.text);
-      } else { audioQueue.current = []; setPlaying(false); }
+      if (event === 'ended' && audioQueue.current.length) { const next = audioQueue.current.shift()!; player.current?.play(next.id, next.text); }
+      else { audioQueue.current = []; setPlaying(false); }
     } });
     const [first, ...rest] = clips; audioQueue.current = rest; setPlaying(true); player.current.play(first.id, first.text);
   }
   function resetPaper() { stopAudio(); setRevealed(false); setMemoryHidden(false); setErrors([]); setAdult(false); setSaved(false); setSaveMessage(''); }
-  function changeMode(next: Mode) { stopAudio(); if (next === 'paper' && mode !== 'paper') resetPaper(); setMode(next); }
+  function changeMode(next: Mode) { stopAll(); if (next !== mode) setWordHidden(false); if (next === 'paper' && mode !== 'paper') resetPaper(); setMode(next); }
   function selectStep(index: number) { stopAudio(); setStepIndex(index); setExplanation(false); }
-  function selectPoem(index: number) { stopAudio(); setPoemIndex(index); setLineIndex(0); setMask('full'); resetPaper(); }
+  function selectPoem(index: number) { stopAll(); setPoemIndex(index); setToolIndex(index); setLineIndex(0); setMask('full'); resetPaper(); }
+  function chooseTool(index: number) { if (poems.length) selectPoem(index); else { stopAll(); setToolIndex(index); } }
+  function printLesson() { stopAll(); window.print(); }
+  async function toggleFullscreen() {
+    try { if (document.fullscreenElement) await document.exitFullscreen(); else if (lessonRoot.current?.requestFullscreen) await lessonRoot.current.requestFullscreen(); else setPresentationStatus('可使用浏览器的全屏或投屏功能。'); }
+    catch { setPresentationStatus('请使用浏览器的全屏或投屏功能。'); }
+  }
   function saveCheck() {
-    if (teacher || !revealed) return;
+    if (teacher || !revealed || skim) return;
     const targetIds = paperType === 'poem' ? [poem.id] : paperItems.map(item => item.id);
     const value = { courseId, at: new Date().toISOString(), type: paperType, targetIds, needsPractice: errors, adult };
-    try { savePaperCheck(localStorage, value); setLastCheck(value); setSaved(true); setSaveMessage(`${adult ? '大人核对' : '自查'}已保存；这是本次检查。`); }
-    catch { setSaveMessage('浏览器没能保存，请记下本次需要再练的内容。'); }
+    try { savePaperCheck(localStorage, value); setLastCheck(value); setSaved(true); setSaveMessage(`${adult ? '大人核对' : '自查'}已保存；只记录这次纸稿检查。`); }
+    catch { setSaveMessage('浏览器没能保存，可以把需要再练的内容记在纸上。'); }
   }
   function toggleError(id: string) { setErrors(current => current.includes(id) ? current.filter(item => item !== id) : [...current, id]); setSaved(false); }
   useEffect(() => {
-    const previous = document.title; document.title = `${course.title} · 三上语文课堂`;
-    return () => { audioQueue.current = []; player.current?.stop(); document.title = previous; };
-  }, [course.title]);
-
-  const targetPoemRequired = !!poem && course.dictation.scope.some(title => title === poem.title) && course.dictation.status === 'preview_checked';
-  const footerText: Record<Mode, string> = { read: isPredict ? '先说出猜想和依据，再读后文。' : '画面帮助理解，内容回课本核对。', words: '读准、组词；会写还要在纸上独立写。', practice: '说出依据，比只选对更重要。', recite: '先理解诗意，再逐渐遮住提示。', paper: '先独立写，再对照纸稿找错。' };
-  const next = modes[(modes.findIndex(item => item.id === mode) + 1) % modes.length];
+    const previous = document.title;
+    const suspend = () => { audioQueue.current = []; player.current?.stop(); workbench.current?.stopAudio(); setPlaying(false); setAudioStatus(''); setStopSignal(value => value + 1); };
+    const hide = () => { if (document.hidden) suspend(); };
+    window.addEventListener('hashchange', suspend); window.addEventListener('pagehide', suspend); document.addEventListener('visibilitychange', hide);
+    return () => { audioQueue.current = []; player.current?.stop(); workbench.current?.stopAudio(); window.removeEventListener('hashchange', suspend); window.removeEventListener('pagehide', suspend); document.removeEventListener('visibilitychange', hide); document.title = previous; };
+  }, []);
+  useEffect(() => { document.title = independent ? `独立练习 · 三上第${course.lessonNumber}课` : `${poem?.title || course.title} · 三上阅读手册`; }, [independent, course.title, course.lessonNumber, poem?.title]);
   const paperTargets = paperType === 'poem' ? [{ id: poem.id, text: poem.title }] : paperItems;
+  const firstStop = precision?.tools.find(item => item.kind === 'prediction');
+  const known = prediction && firstStop?.kind === 'prediction' ? firstStop.stops[0].known : step.summary;
+  const renderTool = () => tool && toolState ? <><div className="cnl-tool-body"><ChinesePrecisionTool key={tool.id} courseId={courseId} tool={tool} state={toolState} onChange={next => setToolStates(current => ({ ...current, [tool.id]: next }))} onBeforeAudio={stopAudio} stopSignal={stopSignal} /></div>{!poems.length && precision!.tools.length > 1 && <div className="cnl-tool-selector" role="group" aria-label="直接选择阅读工具">{precision!.tools.map((item, index) => <button key={item.id} className={index === toolIndex ? 'is-active' : ''} aria-pressed={index === toolIndex} onClick={() => chooseTool(index)}>{item.title}</button>)}</div>}</> : <div className="cnl-tool-pending"><BookOpen size={34} /><h2>带着问题回到课本</h2><p>{material.activity.instruction}</p></div>;
 
-  return <main className="cnl-lesson" data-mode={mode}>
-    <header className="cnl-head"><a className="cnl-back" href={`#/chinese-book/${courseId}`}><ArrowLeft size={20} /><span>全册课堂</span></a><div className="cnl-heading"><span className="cnl-eyebrow">三上语文 · 第{course.lessonNumber}课{teacher ? ' · 教师投屏' : ''}</span><h1>{poems.length ? '古诗三首' : course.title}</h1></div><button className="cnl-resource" ref={dialogTrigger} onClick={() => { stopAudio(); dialog.current?.showModal(); }}><BookOpen size={19} /><span>资料与指导</span></button></header>
-    {poems.length > 0 && <div className="cnl-poem-selector" role="group" aria-label="选择古诗">{poems.map((item, index) => <button key={item.id} aria-pressed={index === poemIndex} className={index === poemIndex ? 'is-active' : ''} onClick={() => selectPoem(index)}>{item.title}</button>)}{courseId === 'cn-04' && <a href="#/chinese-lesson/shanxing">《山行》诗画版 <ArrowRight size={14} /></a>}</div>}
-    <nav className="cnl-tabs" aria-label="这一课的学习内容">{modes.map(({ id, label, icon: Icon }) => <button key={id} aria-pressed={mode === id} className={mode === id ? 'is-active' : ''} onClick={() => changeMode(id)}><Icon size={18} />{label}</button>)}</nav>
-
-    <section className={`cnl-panel cnl-panel-${mode}`} aria-label={modes.find(item => item.id === mode)?.label}>
-      {(mode === 'read' || mode === 'recite') && <>
-        <div className="cnl-art"><div className="cnl-art-top"><Leaf size={16} />{poem ? `${poem.title} · 诗意画面` : step.label}<span>原创情境图</span></div><ChineseLessonArt courseId={courseId} step={poem ? lineIndex : stepIndex} variant={poem?.id} /><div className="cnl-art-bottom">{poem ? poem.lines[lineIndex].clue : step.prompt}</div>
-          {!poem && <div className="cnl-step-buttons" role="group" aria-label="选择课文画面">{material.steps.map((item, index) => (!isPredict || index <= visited) && <button key={index} aria-pressed={index === stepIndex} className={index === stepIndex ? 'is-active' : ''} onClick={() => selectStep(index)}>{isPredict ? `已读${index + 1}` : item.label}</button>)}</div>}
-        </div>
+  return <main ref={lessonRoot} className="kf-lesson cnl-lesson" style={{ '--cnl-text-scale': textScale } as CSSProperties} data-mode={mode} data-course={courseId} data-kind={precision?.type || 'scene'} data-skim={skim || undefined} data-independent={independent || undefined} data-teacher={teacher || undefined} data-paused={presentationPaused || undefined}>
+    <header className="kf-head cnl-head"><a className="kf-back" href={teacher ? '#/teacher' : `#/chinese-book/${courseId}`} aria-label="返回语文课堂"><ArrowLeft size={21} /><span>语文课堂</span></a><div className="kf-heading"><span className="kf-eyebrow">{independent ? '独立练习手册' : '把文字读成画面 · 阅读手册'}<span>三上 · 第{course.lessonNumber}课{teacher ? ' · 教师投屏' : ''}</span></span><h1>{independent ? mode === 'words' ? '字词独立练习' : '纸笔独立练习' : poems.length ? '古诗三首' : course.title}</h1></div>{teacher && <div className="cnl-teacher-controls"><button aria-label="减小正文" onClick={() => setTextScale(value => Math.max(.9, Math.round((value - .1) * 10) / 10))}><Minus size={15} /></button><span>{Math.round(textScale * 100)}%</span><button aria-label="放大正文" onClick={() => setTextScale(value => Math.min(1.1, Math.round((value + .1) * 10) / 10))}><Plus size={15} /></button><button aria-label={presentationPaused ? '恢复画面动效' : '暂停动效和声音'} aria-pressed={presentationPaused} onClick={() => { if (!presentationPaused) stopAll(); setPresentationPaused(!presentationPaused); }}>{presentationPaused ? <Play size={17} /> : <Pause size={17} />}</button><button aria-label="切换全屏" onClick={() => void toggleFullscreen()}><Maximize size={17} /></button></div>}<button className="kf-resource" ref={dialogTrigger} onClick={() => { stopAll(); dialog.current?.showModal(); }}><BookOpen size={18} /><span>资料与指导</span></button></header>
+    {poems.length > 0 && mode !== 'words' && <div className="cnl-poem-selector" role="group" aria-label="直接选择古诗">{poems.map((item, index) => <button key={item.id} aria-pressed={index === poemIndex} className={index === poemIndex ? 'is-active' : ''} onClick={() => selectPoem(index)}>{item.title}</button>)}{mode === 'read' && <button className={`cnl-poem-tool ${poemTool ? 'is-active' : ''}`} aria-pressed={poemTool} onClick={() => { stopAll(); setPoemTool(!poemTool); }}>{poemTool ? '回看诗句' : '诗意工具'}<Search size={14} /></button>}</div>}
+    <nav className="kf-tabs cnl-tabs" aria-label="直接选择本课学习内容">{modes.map(({ id, label, icon: Icon }, index) => <button key={id} aria-current={mode === id ? 'page' : undefined} className={mode === id ? 'is-active' : ''} onClick={() => changeMode(id)}><span className="kf-tab-number">0{index + 1}</span><Icon size={18} /><span>{label}</span></button>)}</nav>
+    <section className={`kf-panel cnl-panel cnl-panel-${mode} ${mode === 'read' && poemTool && poem ? 'cnl-tool-panel' : ''}`} aria-label={modes.find(item => item.id === mode)?.label}>
+      {mode === 'read' && poem && poemTool ? renderTool() : (mode === 'read' || mode === 'recite') && <>
+        <div className="cnl-art"><div className="cnl-art-top"><span><Leaf size={16} />{poem ? `${poem.title} · 诗意画面` : prediction ? '读到这里，先留一个问题' : step.label}</span><small>教学情境示意</small></div><div className="cnl-art-body"><PrecisionIllustration courseId={courseId} step={poem ? lineIndex : prediction ? 0 : stepIndex} variant={poem?.id} /></div><div className="cnl-art-bottom"><span /><p>{poem ? mode === 'recite' && mask === 'hidden' ? '看画面，试着回想诗句。' : poem.lines[lineIndex].clue : prediction ? '用已经读到的线索猜想，后文由你主动展开。' : step.prompt}</p></div>{!poem && !prediction && <div className="cnl-step-buttons" role="group" aria-label="直接选择课文情境">{material.steps.map((item, index) => <button key={index} aria-pressed={index === stepIndex} className={index === stepIndex ? 'is-active' : ''} onClick={() => selectStep(index)}><small>0{index + 1}</small>{item.label}</button>)}</div>}</div>
         <div className="cnl-read-body">
-          {poem ? <><div className="cnl-reading-top"><h2>{poem.title}<small>{poem.dynasty} · {poem.author}</small></h2>{mode === 'read' && <button className="cnl-text-button" aria-pressed={pinyin} onClick={() => setPinyin(!pinyin)}>拼音</button>}</div>
+          {poem ? <><div className="cnl-reading-top"><div><span className="cnl-eyebrow">{mode === 'recite' ? courseId === 'cn-20' ? '选做练习 · 教材必背范围待核' : '看画面想诗句，再展开核对' : '诗句、景物与心情一起读'}</span><h2>{poem.title}<small>{poem.dynasty} · {poem.author}</small></h2></div>{mode === 'read' && <button className="cnl-text-button" aria-pressed={pinyin} onClick={() => setPinyin(!pinyin)}>拼音</button>}</div>
             {mode === 'recite' && <div className="cnl-mask-controls" role="group" aria-label="背诵提示">{(['full', 'clue', 'hidden'] as const).map(value => <button key={value} aria-pressed={mask === value} className={mask === value ? 'is-active' : ''} onClick={() => { stopAudio(); setMask(value); }}>{({ full: '看全文', clue: '留线索', hidden: '只看画面' })[value]}</button>)}</div>}
-            <div className="cnl-poem-lines">{poem.lines.map((line, index) => <button key={index} aria-pressed={index === lineIndex} aria-label={mode === 'recite' && mask !== 'full' ? `第${index + 1}句的画面` : line.text} className={index === lineIndex ? 'is-active' : ''} onClick={() => { stopAudio(); setLineIndex(index); }}><span>{String(index + 1).padStart(2, '0')}</span>{mode === 'recite' && mask !== 'full' ? <strong>{mask === 'clue' ? line.clue : '·······'}</strong> : <strong>{pinyin && mode === 'read' ? [...line.text].map((character, charIndex) => /\p{Script=Han}/u.test(character) ? <ruby key={charIndex}>{character}<rt>{line.pinyin.split(/\s+/)[charIndex]}</rt></ruby> : character) : line.text}</strong>}</button>)}</div>
-            <div className="cnl-audio-tools"><button onClick={() => playing ? stopAudio() : playQueue(poem.lines.map((line, index) => ({ id: `${courseId}-poem-${poem.id}-${index}`, text: line.text })))}>{playing ? <Pause size={18} /> : <Volume2 size={18} />}{playing ? '停止' : '听全诗'}</button>{mode === 'read' && <button onClick={() => playQueue([{ id: `${courseId}-poem-${poem.id}-${lineIndex}`, text: poem.lines[lineIndex].text }])}><Volume2 size={17} />听这一句</button>}</div>
-            {mode === 'read' ? <div className="cnl-meaning"><span>这句诗写的是</span><p>{poem.lines[lineIndex].meaning}</p></div> : <p className="cnl-recite-note">先看画面背一遍，再展开全文核对。{courseId === 'cn-20' && '这是自选练习，教材必背范围待核。'}</p>}<p className="cnl-small" role="status">{audioStatus || poem.note}</p>
-          </> : <><span className="cnl-eyebrow">带着一个问题读</span><h2>{step.label}</h2><p className="cnl-read-summary">{step.summary}</p>
-            {material.classicalText?.[stepIndex] && <div className="cnl-classical"><span>文言原句</span><p>{material.classicalText[stepIndex].text}</p><small>{material.classicalText[stepIndex].meaning}</small></div>}
-            <div className="cnl-read-question"><span>想一想</span><p>{step.prompt}</p></div><button className="cnl-text-button cnl-explanation-toggle" aria-expanded={explanation} onClick={() => setExplanation(!explanation)}>{explanation ? '收起解释' : '说过了，看看解释'}{explanation ? <EyeOff size={16} /> : <Eye size={16} />}</button>{explanation && <p className="cnl-read-explanation">{step.explanation}</p>}
-            <div className="cnl-audio-tools"><button onClick={() => playing ? stopAudio() : playQueue([{ id: `${courseId}-explain-${stepIndex}` }])}>{playing ? <Pause size={18} /> : <Volume2 size={18} />}{playing ? '停止' : '听讲解'}</button><span>原创讲解，配合课本读</span></div><p className="cnl-small" role="status">{audioStatus}</p>
-            {isPredict && <div className="cnl-predict-next">{stepIndex < material.steps.length - 1 ? <button className="cnl-primary" onClick={() => { const nextIndex = stepIndex + 1; setVisited(Math.max(visited, nextIndex)); selectStep(nextIndex); }}>说出猜想了，读后文 <ArrowRight size={18} /></button> : <p>读后文后，想想哪些猜想需要调整。猜得不同也可以有依据。</p>}</div>}
-          </>}
+            <div className="cnl-poem-lines">{poem.lines.map((line, index) => <button key={index} aria-pressed={index === lineIndex} aria-label={mode === 'recite' && mask !== 'full' ? `第${index + 1}句的画面` : line.text} className={index === lineIndex ? 'is-active' : ''} onClick={() => { stopAudio(); setLineIndex(index); }}><span>0{index + 1}</span>{mode === 'recite' && mask !== 'full' ? <strong>{mask === 'clue' ? line.clue : '·······'}</strong> : <strong>{pinyin && mode === 'read' ? [...line.text].map((character, charIndex) => /\p{Script=Han}/u.test(character) ? <ruby key={charIndex}>{character}<rt>{line.pinyin.split(/\s+/)[charIndex]}</rt></ruby> : character) : line.text}</strong>}</button>)}</div>
+            {mode === 'read' ? <div className="cnl-meaning"><span>这句诗写的是</span><p>{poem.lines[lineIndex].meaning}</p></div> : <p className="cnl-recite-note">先试着背一遍，再展开核对。{courseId === 'cn-20' && '本课三首均为选做，教材必背范围待核。'}</p>}
+            <div className="cnl-audio-tools"><button className="cnl-text-button" onClick={() => playing ? stopAudio() : playQueue(poem.lines.map((line, index) => ({ id: `${courseId}-poem-${poem.id}-${index}`, text: line.text })))}>{playing ? <Pause size={18} /> : <Volume2 size={18} />}{playing ? '停止朗读' : '听全诗'}</button>{mode === 'read' && <button className="cnl-text-button" onClick={() => playQueue([{ id: `${courseId}-poem-${poem.id}-${lineIndex}`, text: poem.lines[lineIndex].text }])}><Volume2 size={17} />听这一句</button>}</div><p className="cnl-small" role="status">{audioStatus || (mode === 'recite' && mask === 'hidden' ? '试过以后，再展开诗句核对。背默范围见纸笔自查。' : poem.note)}</p>
+          </> : <><div className="cnl-page-heading"><span className="cnl-eyebrow">{prediction ? '只用现在已读到的情节' : precision?.goal || '带着一个问题读'}</span><h2>{prediction ? '故事从这里开始' : step.label}</h2></div><p className="cnl-read-summary">{known}</p>{material.classicalText?.[stepIndex] && <div className="cnl-classical"><span>文言原句 · 公版文字</span><p>{material.classicalText[stepIndex].text}</p></div>}<div className="cnl-read-question"><span>留心这一点</span><p>{prediction ? firstStop?.question || step.prompt : explanation ? step.explanation : step.prompt}</p></div>{!prediction && <button className="cnl-text-button cnl-explanation-toggle" aria-expanded={explanation} onClick={() => setExplanation(!explanation)}>{explanation ? '回看问题' : '说一说，再看看解释'}{explanation ? <EyeOff size={16} /> : <Eye size={16} />}</button>}<div className="cnl-read-actions">{!prediction && getLessonAudioEntry(`${courseId}-explain-${stepIndex}`) && <button className="cnl-text-button" onClick={() => playing ? stopAudio() : playQueue([{ id: `${courseId}-explain-${stepIndex}` }])}>{playing ? <Pause size={17} /> : <Volume2 size={17} />}{playing ? '停止讲解' : '听讲解'}</button>}<button className="cnl-primary" onClick={() => changeMode('practice')}>{prediction ? '试着预测' : '打开阅读工具'}<ArrowRight size={16} /></button></div><p className="cnl-small" role="status">{audioStatus || (prediction ? '不求猜中，重点是找到理由并读后比较。' : '讲解为原创归纳，配合手边课本阅读。')}</p></>}
         </div>
       </>}
-
-      {mode === 'words' && <div className="cnl-words-panel"><div className="cnl-word-library"><div className="cnl-word-categories" role="group" aria-label="字词类别">{categories.map(kind => <button key={kind} aria-pressed={category === kind} className={category === kind ? 'is-active' : ''} onClick={() => { stopAudio(); setCategory(kind); setWordIndex(0); }}>{categoryLabels[kind]}<span>{course[kind].length}</span></button>)}</div><div className="cnl-word-chips" role="group" aria-label="选择字词">{words.map((item, index) => <button key={item.id} aria-pressed={index === wordIndex} className={index === wordIndex ? 'is-active' : ''} onClick={() => { stopAudio(); setWordIndex(index); }}>{item.text}</button>)}</div><p className="cnl-small">点一个字或词，读一读、说说意思。</p></div>
-        {word && <div className="cnl-word-card"><span className="cnl-eyebrow">{categoryLabels[category]}</span><div className={`cnl-word-face ${word.text.length > 3 ? 'is-long' : ''}`}><span>{word.pinyin || '读音请对照课本'}</span><strong>{word.text}</strong></div>{word.meaning && <p className="cnl-word-meaning">{word.meaning}</p>}{word.context && <p className="cnl-word-context">{word.context}</p>}
-          {word.examples.length > 0 && category !== 'words' && <div className="cnl-grouping"><span>放在词语里读</span>{word.examples.map(item => <button key={item.text} onClick={() => item.id && getLessonAudioEntry(item.id, item.text) ? playQueue([{ id: item.id, text: item.text }]) : getLessonAudioEntry('', item.text) && playQueue([{ id: '', text: item.text }])}><strong>{item.text}</strong><small>{item.pinyin}</small>{getLessonAudioEntry(item.id || '', item.text) && <Volume2 size={14} />}</button>)}</div>}
-          {getLessonAudioEntry(word.id, word.text) && <button className="cnl-word-audio" onClick={() => playQueue([{ id: word.id, text: word.text }])}><Volume2 size={19} />听读音</button>}<p className="cnl-small" role="status">{audioStatus || (category === 'words' ? '读懂词义，再放回课文里的句子。' : '组词是辅导例子，会写还要合书后检查纸稿。')}</p>
-          <div className="cnl-word-task"><Pencil size={19} /><p>{category === 'recognition' ? '换到词语里再读一次，说说这个字的意思。' : category === 'writing' ? `在纸上独立写“${word.text}”，再组一个词。` : '合上字卡，试着说出词义，再用它说一句话。'}</p></div>
-        </div>}
-      </div>}
-
-      {mode === 'practice' && <ChineseLessonActivity activity={isPredict && visited < material.steps.length - 1 ? { kind: 'predict', title: '先作预测，再看后文', instruction: '从已经读到的文字里找一条依据，猜猜接下来可能怎样。', explanation: '先猜想，再回到课本继续阅读。' } : material.activity} choices={isPredict && visited < material.steps.length - 1 ? [] : material.choices} onPredict={() => changeMode('read')} />}
-
-      {mode === 'paper' && <div className="cnl-paper"><div className="cnl-paper-head"><div><span className="cnl-eyebrow">准备纸和笔</span><h2>{paperType === 'poem' ? `${targetPoemRequired ? '默写' : '自选默写'}《${poem.title}》` : paperType === 'memory' ? '记住字，再独立写' : '看拼音，在纸上写词语'}</h2></div><div className="cnl-paper-types">{paperWords.length > 0 && <button aria-pressed={paperType === 'words'} onClick={() => { setPaperType('words'); setPaperPage(0); resetPaper(); }}>拼音写词</button>}{course.writing.length > 0 && <button aria-pressed={paperType === 'memory'} onClick={() => { setPaperType('memory'); setPaperPage(0); resetPaper(); }}>记字再写</button>}{poem && <button aria-pressed={paperType === 'poem'} onClick={() => { setPaperType('poem'); resetPaper(); }}>写诗句</button>}</div></div>
-        {!revealed ? <>
-          {paperType === 'poem' ? <div className="cnl-poem-paper">{poem.lines.map((line, index) => <div key={index}><span>{index + 1}</span>{Array.from({ length: [...line.text].filter(char => /\p{Script=Han}/u.test(char)).length }, (_, index) => <i key={index} />)}<small>标点</small></div>)}</div> : <div className="cnl-paper-grid">{paperItems.map((item, index) => <div key={item.id}><span>{index + 1}</span>{paperType === 'words' ? <><p>{item.pinyin}</p><div>{[...item.text].map((_, index) => <i key={index} />)}</div><button className="cnl-paper-listen" aria-label={`听第${index + 1}个词`} onClick={() => playQueue([{ id: item.id, text: item.text }])}><Volume2 size={18} /></button></> : <><p className="cnl-memory-character">{memoryHidden ? '□' : item.text}</p><small>{memoryHidden ? '在纸上写出这个字' : '看清字形，再遮住写'}</small></>}</div>)}</div>}
-          <div className="cnl-paper-actions"><p>{paperType === 'poem' ? targetPoemRequired ? '合上课本，写全诗句和标点。' : '本项是自选检查，教材必默范围待核。' : paperType === 'memory' && !memoryHidden ? '准备好了，遮住字再写；这一步练独立记写。' : '在纸上独立写，再展开答案核对。'}</p>{paperType === 'memory' && !memoryHidden ? <button className="cnl-primary" onClick={() => { stopAudio(); setMemoryHidden(true); }}>遮住字，开始写 <EyeOff size={18} /></button> : <button className="cnl-primary" onClick={() => { stopAudio(); setRevealed(true); }}>写完了，核对 <Eye size={18} /></button>}</div>
-        </> : <div className="cnl-paper-review"><div><span className="cnl-eyebrow">对照自己的纸稿</span>{paperType === 'poem' ? <div className="cnl-paper-poem-answer">{poem.lines.map((line, index) => <p key={index}>{line.text}</p>)}</div> : <div className="cnl-paper-answers">{paperItems.map((item, index) => <p key={item.id}><span>{index + 1}</span><strong>{item.text}</strong><small>{item.pinyin}</small></p>)}</div>}<button className="cnl-text-button" onClick={resetPaper}><RotateCcw size={16} />重写这一组</button></div><div className="cnl-paper-checklist"><strong>哪些内容还要再练？</strong>{paperTargets.map(item => <label key={item.id}><input type="checkbox" checked={errors.includes(item.id)} onChange={() => toggleError(item.id)} />{paperType === 'poem' ? '有错字、漏字或标点问题' : item.text}</label>)}{!teacher && <><label className="cnl-adult-check"><input type="checkbox" checked={adult} onChange={event => { setAdult(event.target.checked); setSaved(false); }} />大人已查看纸稿</label><button className="cnl-primary" disabled={saved} onClick={saveCheck}>{saved ? '本次已保存' : '保存本次检查'} <Check size={18} /></button></>}<p className="cnl-small" role="status">{saveMessage || (teacher ? '投屏模式不保存个人学习记录。' : '自查和大人核对分开记录；选择正确不等于会写。')}</p></div></div>}
-        <div className="cnl-paper-bottom"><p className="cnl-small" role="status">{audioStatus || (lastCheck ? `上次${lastCheck.adult ? '大人核对' : '自查'}：${new Date(lastCheck.at).toLocaleDateString('zh-CN')} · ${lastCheck.needsPractice.length ? '有内容要再练' : '当次未标记错误'}` : '只把这次的具体错误记下来，明天换一组再试。')}</p>{paperType !== 'poem' && paperPages > 1 && <button className="cnl-text-button" onClick={() => { setPaperPage((paperPage + 1) % paperPages); resetPaper(); }}>换一组 {paperPage + 1}/{paperPages}<ArrowRight size={16} /></button>}</div>
+      {mode === 'practice' && renderTool()}
+      {mode === 'words' && <ChineseWordWorkbench ref={workbench} courseId={courseId} writingFocus={[]} recognitionFocus={[]} initialCharacter={course.writing[0]?.text || course.recognition[0]?.text} onHiddenChange={setWordHidden} />}
+      {mode === 'paper' && <div className={`cnl-paper ${skim ? 'cnl-paper-optional' : ''}`}>
+        <div className="cnl-paper-head"><div><span className="cnl-eyebrow">{skim ? '选做记录 · 不新增必写' : '取出纸笔，先尝试再核对'}</span><h2>{skim ? precision?.paperTask.title || '把阅读发现记在纸上' : paperType === 'poem' ? `${targetPoemRequired ? '教材必默' : '选做默写'} · ${poem.title}` : paperType === 'memory' ? '记住字，再独立写' : '看拼音，在纸上写词语'}</h2></div>{!skim && <div className="cnl-paper-types">{paperWords.length > 0 && <button aria-pressed={paperType === 'words'} onClick={() => { setPaperType('words'); setPaperPage(0); resetPaper(); }}>拼音写词</button>}{course.writing.length > 0 && <button aria-pressed={paperType === 'memory'} onClick={() => { setPaperType('memory'); setPaperPage(0); resetPaper(); }}>记字再写</button>}{poem && <button aria-pressed={paperType === 'poem'} onClick={() => { setPaperType('poem'); resetPaper(); }}>写诗句</button>}</div>}</div>
+        {skim ? <><p className="cnl-paper-optional-note">本课以认读和阅读交流为主。下面是原创选做记录，可以口头交流，也可以记在纸上。</p><div className="cnl-observation-paper">{(precision?.paperTask.prompts || material.teacherPrompts.slice(0, 3)).map((prompt, index) => <div key={prompt}><span>0{index + 1}</span><p>{prompt}</p><i /></div>)}</div><div className="cnl-paper-actions"><p>{precision?.paperTask.note || '不把选做记录列为教材必写任务。'}</p><button className="cnl-primary" onClick={printLesson}><Printer size={18} />打印观察纸</button></div></> : !revealed ? <>
+          {paperType === 'poem' ? <div className="cnl-poem-paper">{poem.lines.map((line, index) => <div key={index}><span>{index + 1}</span>{Array.from({ length: [...line.text].filter(char => /\p{Script=Han}/u.test(char)).length }, (_, index) => <i key={index} />)}<small>标点</small></div>)}</div> : <div className="cnl-paper-grid">{paperItems.map((item, index) => <div key={item.id}><span>{paperPage * 6 + index + 1}</span>{paperType === 'words' ? <><p>{item.pinyin}</p><div>{[...item.text].map((_, index) => <i key={index} />)}</div>{getLessonAudioEntry(item.id, item.text) && <button className="cnl-paper-listen" aria-label={`听第${index + 1}个词`} onClick={() => playQueue([{ id: item.id, text: item.text }])}><Volume2 size={18} /></button>}</> : <><p className="cnl-memory-character">{memoryHidden ? '□' : item.text}</p><small>{memoryHidden ? '在纸上写出这个字' : '看清字形，再遮住写'}</small></>}</div>)}</div>}
+          <div className="cnl-paper-actions"><p>{paperType === 'poem' ? targetPoemRequired ? '按公开预览课后要求默写《山行》，写全诗句和标点。' : '这是选做检查，不增加教材必默要求。2026纸本范围待核。' : paperType === 'memory' && !memoryHidden ? '先记字形，再遮住独立写。' : '在纸上尝试以后，再展开核对。'}</p>{paperType === 'memory' && !memoryHidden ? <button className="cnl-primary" onClick={() => { stopAudio(); setMemoryHidden(true); }}>遮住字，开始写<EyeOff size={17} /></button> : <button className="cnl-primary" onClick={() => { stopAudio(); setRevealed(true); }}>展开，核对纸稿<Eye size={17} /></button>}</div>
+        </> : <div className="cnl-paper-review"><div><span className="cnl-eyebrow">对照自己的纸稿</span>{paperType === 'poem' ? <div className="cnl-paper-poem-answer">{poem.lines.map((line, index) => <p key={index}>{line.text}</p>)}</div> : <div className="cnl-paper-answers">{paperItems.map((item, index) => <p key={item.id}><span>{paperPage * 6 + index + 1}</span><strong>{item.text}</strong><small>{item.pinyin}</small></p>)}</div>}<button className="cnl-text-button" onClick={resetPaper}><RotateCcw size={16} />重试这一组</button></div><div className="cnl-paper-checklist"><strong>哪些内容还要再练？</strong>{paperTargets.map(item => <label key={item.id}><input type="checkbox" checked={errors.includes(item.id)} onChange={() => toggleError(item.id)} />{paperType === 'poem' ? '有错字、漏字或标点问题' : item.text}</label>)}{!teacher && <><label className="cnl-adult-check"><input type="checkbox" checked={adult} onChange={event => { setAdult(event.target.checked); setSaved(false); }} />大人已查看纸稿</label><button className="cnl-primary" disabled={saved} onClick={saveCheck}>{saved ? '本次已保存' : '保存这次纸稿检查'}<Check size={17} /></button></>}<p className="cnl-small" role="status">{saveMessage || (teacher ? '投屏模式不读取或保存个人学习记录。' : '自查与大人核对分开记录，不产生掌握分数。')}</p></div></div>}
+        {!skim && <div className="cnl-paper-bottom"><p className="cnl-small" role="status">{audioStatus || (lastCheck ? `上次${lastCheck.adult ? '大人核对' : '自查'}：${new Date(lastCheck.at).toLocaleDateString('zh-CN')} · ${lastCheck.needsPractice.length ? '有内容要再练' : '当次未标记错误'}` : teacher ? '可以用纸稿共同讨论，投屏不写个人记录。' : '只记录这次的纸稿情况，下一次可以换一组。')}</p>{paperType !== 'poem' && paperPages > 1 && <div className="cnl-paper-pages">{Array.from({ length: paperPages }, (_, index) => <button key={index} className={paperPage === index ? 'is-active' : ''} aria-pressed={paperPage === index} onClick={() => { setPaperPage(index); resetPaper(); }}>第{index + 1}组</button>)}</div>}</div>}
       </div>}
     </section>
-
-    <footer className="cnl-footer"><p><Leaf size={17} />{footerText[mode]}</p><button className="cnl-primary" onClick={() => changeMode(next.id)}>{next.id === 'read' ? '回到课文' : `去${next.label}`}<ArrowRight size={18} /></button></footer>
-
-    <dialog className="cnl-dialog" ref={dialog} onClose={() => dialogTrigger.current?.focus()} onClick={event => { if (event.target === dialog.current) dialog.current.close(); }}><div className="cnl-dialog-head"><h2>这一课怎么用</h2><button aria-label="关闭资料与指导" onClick={() => dialog.current?.close()}><X size={20} /></button></div><div className="cnl-dialog-body"><p>{material.intro}</p><h3>大人可以这样问</h3><ol>{material.teacherPrompts.map(prompt => <li key={prompt}>{prompt}</li>)}</ol><div className="cnl-adult-tools"><button onClick={() => window.print()}><Printer size={18} />打印一页练习纸</button><a href={`#/chinese-lesson/${courseId}${teacher ? '' : '/teacher'}`}><Users size={18} />{teacher ? '学生使用' : '教师投屏'}</a></div><h3>教材要求</h3><p>背诵：{course.recitation.status === 'preview_checked' ? course.recitation.scope.join('、') : course.recitation.status === 'not_specified_in_preview' ? '同目录公开预览未指定；另看老师布置' : '具体范围待核对课后题，空清单不是没有要求'}。</p><p>语句默写：{course.dictation.status === 'preview_checked' ? course.dictation.scope.join('、') : course.dictation.status === 'not_specified_in_preview' ? '同目录公开预览未指定' : '具体范围待核，不默认整课默写'}。</p><h3>补看与范写</h3>{studioSources.map(source => <a className="cnl-source" key={source.url} href={source.url} target="_blank" rel="noopener noreferrer"><strong>{source.title}<ExternalLink size={14} /></strong><small>{source.note}</small></a>)}{material.sourceUrls.filter(url => !studioSources.some(source => source.url === url)).map((url, index) => <a className="cnl-source" key={url} href={url} target="_blank" rel="noopener noreferrer">本课内容核对资料 {index + 1}<ExternalLink size={14} /></a>)}<h3>内容说明</h3><p>{material.sourceNotes}</p><p>教材目录按2026纸本照片确认；字词、正文及大部分背默要求的2026纸本内页尚待逐项复核。现代课文的讲解是原创归纳，结合手边课本阅读；古诗与文言展示公版原文。插画为教学想象，不是史实照片。语音是合成练习示范，技术检查不等于教师逐段审听。记录只保存在当前浏览器。</p></div></dialog>
-
-    <section className="cnl-print" aria-hidden="true"><h1>第{course.lessonNumber}课 · {course.title}</h1><p>姓名：____________　日期：____________</p><h2>一、理解与说明</h2>{material.teacherPrompts.slice(0, 2).map(prompt => <p key={prompt}>{prompt}<br />____________________________________________________________</p>)}<h2>二、字词纸写</h2>{paperWords.length > 0 ? <div className="cnl-print-words">{paperWords.slice(paperPage * 6, paperPage * 6 + 6).map(item => <div key={item.id}><span>{item.pinyin}</span><p>{[...item.text].map(() => '□').join(' ')}</p></div>)}</div> : <p>本课{isSkim ? '以认读和理解为主，不新增必写。' : '会写字请按课本写字表选取；先记字形，遮住后独立写。'}</p>}{poem && <><h2>三、{targetPoemRequired ? '默写' : '自选默写'}《{poem.title}》</h2>{poem.lines.map((_, index) => <p key={index}>____________________________________________________________</p>)}</>}<h2>{poem ? '四' : '三'}、核对纸稿</h2><p>□ 字形　□ 漏字　□ 标点　□ 再练内容：________________________</p><small>按教材与老师要求核对，原创问题不等同于学校必考题；独立写过再核对，明天可以换一组复查。</small></section>
+    <footer className="kf-footer cnl-footer"><span><BookOpen size={15} />{presentationStatus || (independent ? '先自己尝试，再展开核对。' : ({ read: '画面帮助理解，文字回到纸本核对。', practice: prediction ? '有依据的猜想可以与后文不同。' : '把操作与文字联系起来，说明你的发现。', words: skim ? '会认字放进词语读，不新增必写。' : '认读、理解与纸笔独立写，随时切换。', recite: courseId === 'cn-20' ? '本课三首选做记忆，教材必背范围待核。' : '先理解，再背诵；展开后逐句核对。', paper: skim ? '原创选做记录，可以口头交流。' : '具体错误留在纸稿上，下次再核对。' })[mode])}</span><span className="kf-footer-mark">阅读手册<i>{String(course.lessonNumber).padStart(2, '0')}</i></span></footer>
+    <dialog className="kf-dialog cnl-dialog" ref={dialog} onClose={() => dialogTrigger.current?.focus()} onClick={event => { if (event.target === dialog.current) dialog.current.close(); }} aria-labelledby="cnl-resource-title"><div className="kf-dialog-heading"><div><span className="cnl-eyebrow">给陪伴学习的大人</span><h2 id="cnl-resource-title">{independent ? '独立练习说明' : '资料与课堂指导'}</h2></div><button className="kf-dialog-close" aria-label="关闭资料与指导" onClick={() => dialog.current?.close()}><X size={22} /></button></div><div className="kf-dialog-body">{independent ? <p>现在保留独立尝试的空间。展开卡片或纸稿核对区以后，再查阅教学资料。</p> : <><p>{precision?.goal || material.intro}</p><h3>课堂里可以这样用</h3><ol>{(precision?.teacherPrompts || material.teacherPrompts).map(prompt => <li key={prompt}>{prompt}</li>)}</ol><div className="cnl-adult-tools"><button onClick={printLesson}><Printer size={18} />打印一页练习纸</button><a href={`#/chinese-lesson/${courseId}${teacher ? '' : '/teacher'}`} onClick={() => { stopAll(); dialog.current?.close(); }}><Users size={18} />{teacher ? '学生使用' : '教师投屏'}</a>{courseId === 'cn-04' && <a href="#/chinese-lesson/shanxing" onClick={() => dialog.current?.close()}>《山行》诗画版<ArrowRight size={15} /></a>}</div><h3>教材要求与边界</h3><p>背诵：{course.recitation.status === 'preview_checked' ? course.recitation.scope.join('、') : course.recitation.status === 'not_specified_in_preview' ? '同目录公开预览未指定，另看老师布置' : '具体范围待核对纸本课后题，空清单不是没有要求'}。</p><p>语句默写：{course.dictation.status === 'preview_checked' ? course.dictation.scope.join('、') : course.dictation.status === 'not_specified_in_preview' ? '同目录公开预览未指定' : '具体范围待核，不默认整课默写'}。</p>{skim && <p>本课以认读和阅读交流为主；观察纸为原创选做，不新增必写任务。</p>}<h3>内容核对资料</h3>{studioSources.map(source => <a className="cnl-source" key={source.url} href={source.url} target="_blank" rel="noopener noreferrer"><strong>{source.title}<ExternalLink size={14} /></strong><small>{source.note}</small></a>)}{material.sourceUrls.filter(url => !studioSources.some(source => source.url === url)).map((url, index) => <a className="cnl-source" key={url} href={url} target="_blank" rel="noopener noreferrer">本课内容核对资料 {index + 1}<ExternalLink size={14} /></a>)}<h3>内容说明</h3><p>{precision?.sourceNote || material.sourceNotes}</p><p>2026教材目录已有纸本照片依据；字词、现代正文与大部分背默要求的纸本内页仍待复核。现代课文展示原创归纳；古诗、文言展示公版文字。情境图为教学示意，部分状态复用既有图。语音是合成练习示范，仍须教师审听。纸稿记录只在学生主动保存时写入当前浏览器；教师投屏不读取或保存个人记录。</p></>}</div></dialog>
+    <section className="cnl-print" aria-hidden="true"><h1>{mode === 'words' && wordHidden ? '独立练习记录' : `第${course.lessonNumber}课 · ${poem?.title || course.title}`}</h1><p>姓名：____________　日期：____________</p>{mode === 'words' && wordHidden ? <><h2>先独立尝试，再展开核对</h2>{[1, 2, 3, 4].map(index => <p key={index}>____________________________________________________________</p>)}</> : <><h2>一、{precision?.paperTask.title || '阅读发现与依据'}</h2>{(precision?.paperTask.prompts || material.teacherPrompts.slice(0, 2)).slice(0, 2).map(prompt => <p key={prompt}>{prompt}<br />____________________________________________________________</p>)}{!skim && <><h2>二、{paperType === 'poem' ? `${targetPoemRequired ? '教材必默' : '选做默写'} · ${poem.title}` : '本组字词纸写'}</h2>{paperType === 'poem' ? poem.lines.map((line, index) => <p className="cnl-print-poem-row" key={index}>{[...line.text].filter(char => /\p{Script=Han}/u.test(char)).map((_, i) => <i key={i} />)}<small>标点</small></p>) : paperWords.length ? <div className="cnl-print-words">{paperWords.slice(paperPage * 6, paperPage * 6 + 6).map(item => <div key={item.id}><span>{item.pinyin}</span><p>{[...item.text].map(() => '□').join(' ')}</p></div>)}</div> : <p>可从本课会写字中自选：________________。记住字形，合书写，再核对。</p>}</>}<h2>{skim ? '二' : '三'}、回看自己的记录</h2><p>□ 线索说清了　□ 字形　□ 漏字　□ 标点<br />下次还想核对：________________________________________</p><small>{precision?.paperTask.note || '原创纸笔任务可按课堂需要选择，教材要求以纸本与老师布置为准。'}{poem && !targetPoemRequired && '诗句默写是选做，不增加教材必默范围。'}</small></>}</section>
   </main>;
 }

@@ -69,6 +69,8 @@
 .cnl-lesson .cpt-route .cpt-margin-note { display: none; }
 .cnl-lesson .cpt-classical .cpt-margin-note { display: none; }
 .cnl-lesson .cpt-association .cpt-margin-note { display: none; }
+.cnl-lesson .cpt-association .cpt-heading > .cnl-eyebrow { display: none; }
+.cnl-lesson .cpt-prediction[data-revealed='true'] .cpt-margin-note { display: none; }
 .cnl-lesson[data-kind='poem'] .cpt-association .cpt-relations { min-height: 160px; }
 .cnl-lesson .cpt-boundary { padding: 9px 15px; font-size: 10px; line-height: 1.75; color: #999779; }
 .cnl-lesson .cpt-guesses { display: grid; gap: 7px; }

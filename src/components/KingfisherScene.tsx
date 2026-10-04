@@ -20,7 +20,9 @@ export type KingfisherSceneProps = {
 
 type SceneStyle = CSSProperties & Record<`--kf-${string}`, string | number>
 type PoseLayer = { pose: KingfisherPose; opacity: number }
-const imageBase = `${import.meta.env.BASE_URL}images/kingfisher/`
+// CSS consumes these variables from a stylesheet in assets/. Resolve the
+// public asset URLs against the document first so Pages subpaths remain valid.
+const imageBase = new URL(`${import.meta.env.BASE_URL}images/kingfisher/`, document.baseURI).href
 
 const smooth = (value: number) => {
   const t = Math.min(1, Math.max(0, value))

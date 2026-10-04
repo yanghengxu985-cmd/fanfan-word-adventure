@@ -78,3 +78,5 @@ Use case: scientific-educational. Generate one NEW transparent animation frame. 
 | 发布地址、发布结果与发布后检查 | 目标：[搭船的鸟](https://yanghengxu985-cmd.github.io/fanfan-word-adventure/#/chinese-lesson/cn-14)，[教师投屏](https://yanghengxu985-cmd.github.io/fanfan-word-adventure/#/chinese-lesson/cn-14/teacher)。最终发布状态以 GitHub Actions 和公开网址检查结果为准。 |
 
 本地截图位于未提交的 `output/playwright/kingfisher-v2-final-observe.png`、`kingfisher-v2-final-reading.png` 和 `kingfisher-v2-final-portrait.png`；浏览器检查脚本同目录保存。当前仅重做这一课，其他课件仍使用各自现有版本。
+
+发布检查发现并修正 CSS 变量中的相对图片地址会相对于 `assets/` 样式目录解析的问题；场景图片统一先根据 `document.baseURI` 解析为绝对地址，再用于 HTML 和 CSS，以保留 GitHub Pages 项目子路径。修正后重新执行 175 项测试和正式构建，均通过；公开网址上的三张图片与 MP3 仍需等待该次部署后逐一检查。

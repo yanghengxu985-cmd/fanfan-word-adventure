@@ -72,4 +72,3 @@ export function makeEnglishActivityRound(courseId: string, kind: EnglishActivity
     return { ...activity, choices, acceptedChoiceIds: choices.filter(choice => accepted.has(choice.id)).map(choice => choice.id) };
   });
 }
-

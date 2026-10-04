@@ -1,0 +1,1079 @@
+{
+  "schemaVersion": 1,
+  "voice": "en-GB-SoniaNeural",
+  "rate": "-12%",
+  "locale": "en-GB",
+  "entries": {
+    "en-01-word-01": {
+      "file": "audio/english/953cabc9f87f6b99f500e548.mp3",
+      "text": "hello",
+      "spokenText": "hello",
+      "durationSeconds": 1.056,
+      "bytes": 17324
+    },
+    "en-01-word-02": {
+      "file": "audio/english/6285727ed82a809ca9d3f22f.mp3",
+      "text": "hi",
+      "spokenText": "hi",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "en-01-word-03": {
+      "file": "audio/english/b9b1629468430fd0c45b9f03.mp3",
+      "text": "I",
+      "spokenText": "I",
+      "durationSeconds": 0.888,
+      "bytes": 14636
+    },
+    "en-01-word-04": {
+      "file": "audio/english/dc42b2bee85046fc2cf9ff1d.mp3",
+      "text": "am",
+      "spokenText": "am",
+      "durationSeconds": 0.792,
+      "bytes": 13100
+    },
+    "en-01-word-05": {
+      "file": "audio/english/f754ac47ae8f1b9c61dac262.mp3",
+      "text": "a",
+      "spokenText": "a",
+      "durationSeconds": 0.864,
+      "bytes": 14252
+    },
+    "en-01-word-06": {
+      "file": "audio/english/648cf21a6545bd4519009098.mp3",
+      "text": "cat",
+      "spokenText": "cat",
+      "durationSeconds": 0.984,
+      "bytes": 16172
+    },
+    "en-01-word-07": {
+      "file": "audio/english/dbbddd8d072e9b8a6abee8ea.mp3",
+      "text": "Miss",
+      "spokenText": "Miss",
+      "durationSeconds": 0.984,
+      "bytes": 16172
+    },
+    "en-01-word-08": {
+      "file": "audio/english/38169f1f807e7a08c3147063.mp3",
+      "text": "class",
+      "spokenText": "class",
+      "durationSeconds": 1.056,
+      "bytes": 17324
+    },
+    "en-01-word-09": {
+      "file": "audio/english/68539b9c778b3e9b9b106e96.mp3",
+      "text": "goodbye",
+      "spokenText": "goodbye",
+      "durationSeconds": 1.152,
+      "bytes": 18860
+    },
+    "en-01-word-10": {
+      "file": "audio/english/9d75914976e37ca49b9f8ced.mp3",
+      "text": "bye",
+      "spokenText": "bye",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-01-word-11": {
+      "file": "audio/english/bc30a73d058a19d5105ba5b7.mp3",
+      "text": "Good morning.",
+      "spokenText": "Good morning.",
+      "durationSeconds": 1.272,
+      "bytes": 20780
+    },
+    "en-01-word-12": {
+      "file": "audio/english/397e1fa3d386434c25bdcbfa.mp3",
+      "text": "Good afternoon.",
+      "spokenText": "Good afternoon.",
+      "durationSeconds": 1.536,
+      "bytes": 25004
+    },
+    "en-01-word-13": {
+      "file": "audio/english/05dbbaead8de255ccf085835.mp3",
+      "text": "ah",
+      "spokenText": "ah",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-02-word-01": {
+      "file": "audio/english/3a6a41917abb527cc2f3ea98.mp3",
+      "text": "what",
+      "spokenText": "what",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "en-02-word-02": {
+      "file": "audio/english/be63d845b60544ffe1e00ff6.mp3",
+      "text": "is",
+      "spokenText": "is",
+      "durationSeconds": 0.888,
+      "bytes": 14636
+    },
+    "en-02-word-03": {
+      "file": "audio/english/497ca6299245960be752ce0f.mp3",
+      "text": "your",
+      "spokenText": "your",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-02-word-04": {
+      "file": "audio/english/6ea2984dd2e61f9808852c4a.mp3",
+      "text": "name",
+      "spokenText": "name",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "en-02-word-05": {
+      "file": "audio/english/dcdfc6efa259cd52fca086b0.mp3",
+      "text": "my",
+      "spokenText": "my",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-02-word-06": {
+      "file": "audio/english/739ca8a123783b3ebe53080a.mp3",
+      "text": "too",
+      "spokenText": "too",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-02-word-07": {
+      "file": "audio/english/194c442b9223f31ea447519c.mp3",
+      "text": "boy",
+      "spokenText": "boy",
+      "durationSeconds": 0.936,
+      "bytes": 15404
+    },
+    "en-02-word-08": {
+      "file": "audio/english/69dcd7b93ee061a2edc1bbcc.mp3",
+      "text": "and",
+      "spokenText": "and",
+      "durationSeconds": 0.936,
+      "bytes": 15404
+    },
+    "en-02-word-09": {
+      "file": "audio/english/17b50ed0142b032b0da6b8df.mp3",
+      "text": "girl",
+      "spokenText": "girl",
+      "durationSeconds": 0.936,
+      "bytes": 15404
+    },
+    "en-02-word-10": {
+      "file": "audio/english/4c6a25f09d5287270ccef572.mp3",
+      "text": "Mr",
+      "spokenText": "Mister",
+      "durationSeconds": 1.128,
+      "bytes": 18476
+    },
+    "en-02-word-11": {
+      "file": "audio/english/f1d36d9a02e2024801c15e4e.mp3",
+      "text": "Nice to meet you!",
+      "spokenText": "Nice to meet you!",
+      "durationSeconds": 1.656,
+      "bytes": 26924
+    },
+    "en-03-word-01": {
+      "file": "audio/english/ee84259376fc14d438cb3c03.mp3",
+      "text": "are",
+      "spokenText": "are",
+      "durationSeconds": 0.864,
+      "bytes": 14252
+    },
+    "en-03-word-02": {
+      "file": "audio/english/b608509b022a72dff3fa0b14.mp3",
+      "text": "you",
+      "spokenText": "you",
+      "durationSeconds": 0.888,
+      "bytes": 14636
+    },
+    "en-03-word-03": {
+      "file": "audio/english/c0ce534f2032e04017135517.mp3",
+      "text": "no",
+      "spokenText": "no",
+      "durationSeconds": 0.936,
+      "bytes": 15404
+    },
+    "en-03-word-04": {
+      "file": "audio/english/54bd3f874f640418137883e2.mp3",
+      "text": "not",
+      "spokenText": "not",
+      "durationSeconds": 0.984,
+      "bytes": 16172
+    },
+    "en-03-word-05": {
+      "file": "audio/english/a62d45d36a481f761b5aaaa8.mp3",
+      "text": "yes",
+      "spokenText": "yes",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "en-03-word-06": {
+      "file": "audio/english/94a99fac4442cb9b43afccb6.mp3",
+      "text": "but",
+      "spokenText": "but",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-03-word-07": {
+      "file": "audio/english/438e735b8744169b5d782450.mp3",
+      "text": "sorry",
+      "spokenText": "sorry",
+      "durationSeconds": 1.08,
+      "bytes": 17708
+    },
+    "en-03-word-08": {
+      "file": "audio/english/74f4e57b4606c1defb225e03.mp3",
+      "text": "we",
+      "spokenText": "we",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-03-word-09": {
+      "file": "audio/english/38169f1f807e7a08c3147063.mp3",
+      "text": "class",
+      "spokenText": "class",
+      "durationSeconds": 1.056,
+      "bytes": 17324
+    },
+    "en-03-word-10": {
+      "file": "audio/english/a964e371564d8fe13e245d09.mp3",
+      "text": "in",
+      "spokenText": "in",
+      "durationSeconds": 0.84,
+      "bytes": 13868
+    },
+    "en-03-word-11": {
+      "file": "audio/english/95c4049edf9783dfc698bf25.mp3",
+      "text": "with",
+      "spokenText": "with",
+      "durationSeconds": 0.936,
+      "bytes": 15404
+    },
+    "en-03-word-12": {
+      "file": "audio/english/5aa80072c426263f404b89eb.mp3",
+      "text": "right",
+      "spokenText": "right",
+      "durationSeconds": 1.008,
+      "bytes": 16556
+    },
+    "en-03-word-13": {
+      "file": "audio/english/cb385328b0359932d479de4d.mp3",
+      "text": "Here I am!",
+      "spokenText": "Here I am!",
+      "durationSeconds": 1.248,
+      "bytes": 20396
+    },
+    "en-03-word-14": {
+      "file": "audio/english/4103b7ddf08c26e56e86c4a4.mp3",
+      "text": "ha",
+      "spokenText": "ha",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-03-word-15": {
+      "file": "audio/english/a30dbccb354613f003fc8b6a.mp3",
+      "text": "oh",
+      "spokenText": "oh",
+      "durationSeconds": 0.888,
+      "bytes": 14636
+    },
+    "en-03-word-16": {
+      "file": "audio/english/d911c99ed46941a63fae1236.mp3",
+      "text": "twin",
+      "spokenText": "twin",
+      "durationSeconds": 0.936,
+      "bytes": 15404
+    },
+    "en-03-word-17": {
+      "file": "audio/english/f56ff06d2a2c3fc8cda7b64b.mp3",
+      "text": "excuse me",
+      "spokenText": "excuse me",
+      "durationSeconds": 1.416,
+      "bytes": 23084
+    },
+    "en-04-word-01": {
+      "file": "audio/english/3644cbcffb66da3bc04ea9f7.mp3",
+      "text": "this",
+      "spokenText": "this",
+      "durationSeconds": 0.936,
+      "bytes": 15404
+    },
+    "en-04-word-02": {
+      "file": "audio/english/24ad9e07598ae051f8117056.mp3",
+      "text": "friend",
+      "spokenText": "friend",
+      "durationSeconds": 1.128,
+      "bytes": 18476
+    },
+    "en-04-word-03": {
+      "file": "audio/english/bd72980d32c73a59b42f60bb.mp3",
+      "text": "she",
+      "spokenText": "she",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-04-word-04": {
+      "file": "audio/english/7de3a10169054501e096c09a.mp3",
+      "text": "he",
+      "spokenText": "he",
+      "durationSeconds": 0.864,
+      "bytes": 14252
+    },
+    "en-04-word-05": {
+      "file": "audio/english/c93a18c915f5d42d685a299e.mp3",
+      "text": "it",
+      "spokenText": "it",
+      "durationSeconds": 0.84,
+      "bytes": 13868
+    },
+    "en-04-word-06": {
+      "file": "audio/english/39057e4fd56c9b06b3db88eb.mp3",
+      "text": "good",
+      "spokenText": "good",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-04-word-07": {
+      "file": "audio/english/f991660ac9d00dbb80622cf5.mp3",
+      "text": "have",
+      "spokenText": "have",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "en-04-word-08": {
+      "file": "audio/english/a8096d690d6355bcab027c55.mp3",
+      "text": "many",
+      "spokenText": "many",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "en-04-word-09": {
+      "file": "audio/english/75f6a3e67a8bf729d3685125.mp3",
+      "text": "Thank you.",
+      "spokenText": "Thank you.",
+      "durationSeconds": 1.2,
+      "bytes": 19628
+    },
+    "en-05-word-01": {
+      "file": "audio/english/932bfa88bf75f7ec5aee52ab.mp3",
+      "text": "mother",
+      "spokenText": "mother",
+      "durationSeconds": 1.008,
+      "bytes": 16556
+    },
+    "en-05-word-02": {
+      "file": "audio/english/b4ab9dad17da24be44e15252.mp3",
+      "text": "father",
+      "spokenText": "father",
+      "durationSeconds": 1.104,
+      "bytes": 18092
+    },
+    "en-05-word-03": {
+      "file": "audio/english/55e20d86f94724c7661fc9fa.mp3",
+      "text": "dad",
+      "spokenText": "dad",
+      "durationSeconds": 0.936,
+      "bytes": 15404
+    },
+    "en-05-word-04": {
+      "file": "audio/english/89750fb1ff5367ce87230f5f.mp3",
+      "text": "mum",
+      "spokenText": "mum",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-05-word-05": {
+      "file": "audio/english/bf00f77000cc3b0418649007.mp3",
+      "text": "brother",
+      "spokenText": "brother",
+      "durationSeconds": 0.984,
+      "bytes": 16172
+    },
+    "en-05-word-06": {
+      "file": "audio/english/9d36ad2b1a243bc4ec20e495.mp3",
+      "text": "baby",
+      "spokenText": "baby",
+      "durationSeconds": 1.008,
+      "bytes": 16556
+    },
+    "en-05-word-07": {
+      "file": "audio/english/a1d0949918a2c9230802332f.mp3",
+      "text": "sister",
+      "spokenText": "sister",
+      "durationSeconds": 1.152,
+      "bytes": 18860
+    },
+    "en-05-word-08": {
+      "file": "audio/english/70c6fb95c017be1c82d69d2d.mp3",
+      "text": "look",
+      "spokenText": "look",
+      "durationSeconds": 0.936,
+      "bytes": 15404
+    },
+    "en-05-word-09": {
+      "file": "audio/english/3b2c0a641b2fd889df5a766f.mp3",
+      "text": "the",
+      "spokenText": "the",
+      "durationSeconds": 0.84,
+      "bytes": 13868
+    },
+    "en-05-word-10": {
+      "file": "audio/english/fe22d408c647c161b5c898cc.mp3",
+      "text": "who",
+      "spokenText": "who",
+      "durationSeconds": 0.888,
+      "bytes": 14636
+    },
+    "en-05-word-11": {
+      "file": "audio/english/1b77df4984cc7e012ab9aea1.mp3",
+      "text": "great",
+      "spokenText": "great",
+      "durationSeconds": 1.008,
+      "bytes": 16556
+    },
+    "en-05-word-12": {
+      "file": "audio/english/910c8089edff5c64efa1dcac.mp3",
+      "text": "come",
+      "spokenText": "come",
+      "durationSeconds": 0.888,
+      "bytes": 14636
+    },
+    "en-05-word-13": {
+      "file": "audio/english/840fc46623086c1b3aaafc36.mp3",
+      "text": "meet",
+      "spokenText": "meet",
+      "durationSeconds": 0.984,
+      "bytes": 16172
+    },
+    "en-05-word-14": {
+      "file": "audio/english/3f877564177896c8ba3f6812.mp3",
+      "text": "family",
+      "spokenText": "family",
+      "durationSeconds": 1.152,
+      "bytes": 18860
+    },
+    "en-05-word-15": {
+      "file": "audio/english/fe637609e97fa38d0937246b.mp3",
+      "text": "say",
+      "spokenText": "say",
+      "durationSeconds": 0.984,
+      "bytes": 16172
+    },
+    "en-05-word-16": {
+      "file": "audio/english/10ffa438c81124cacbb5edff.mp3",
+      "text": "Good evening.",
+      "spokenText": "Good evening.",
+      "durationSeconds": 1.296,
+      "bytes": 21164
+    },
+    "en-05-word-17": {
+      "file": "audio/english/865a1481ef379b1eb562a48f.mp3",
+      "text": "quick",
+      "spokenText": "quick",
+      "durationSeconds": 0.984,
+      "bytes": 16172
+    },
+    "en-05-word-18": {
+      "file": "audio/english/1a6f86479a3f0316c6a6554d.mp3",
+      "text": "pond",
+      "spokenText": "pond",
+      "durationSeconds": 1.032,
+      "bytes": 16940
+    },
+    "en-06-word-01": {
+      "file": "audio/english/f5bca42fc945d8cea7af0ed7.mp3",
+      "text": "grandfather",
+      "spokenText": "grandfather",
+      "durationSeconds": 1.44,
+      "bytes": 23468
+    },
+    "en-06-word-02": {
+      "file": "audio/english/08a93c3fa981183d07dd15c7.mp3",
+      "text": "uncle",
+      "spokenText": "uncle",
+      "durationSeconds": 1.056,
+      "bytes": 17324
+    },
+    "en-06-word-03": {
+      "file": "audio/english/9821c06edc7d5ee661735570.mp3",
+      "text": "aunt",
+      "spokenText": "aunt",
+      "durationSeconds": 0.984,
+      "bytes": 16172
+    },
+    "en-06-word-04": {
+      "file": "audio/english/b15911c0a6949aa147600a5e.mp3",
+      "text": "grandmother",
+      "spokenText": "grandmother",
+      "durationSeconds": 1.392,
+      "bytes": 22700
+    },
+    "en-06-word-05": {
+      "file": "audio/english/5aa6434e8ae70ddfeb71c34b.mp3",
+      "text": "cousin",
+      "spokenText": "cousin",
+      "durationSeconds": 1.008,
+      "bytes": 16556
+    },
+    "en-06-word-06": {
+      "file": "audio/english/ab8b0e0b3dbc9667c06955af.mp3",
+      "text": "cool",
+      "spokenText": "cool",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-06-word-07": {
+      "file": "audio/english/b24aac03a38de603a1fdd9b3.mp3",
+      "text": "me",
+      "spokenText": "me",
+      "durationSeconds": 0.864,
+      "bytes": 14252
+    },
+    "en-06-word-08": {
+      "file": "audio/english/96ca289f0d5533a131861ea2.mp3",
+      "text": "big",
+      "spokenText": "big",
+      "durationSeconds": 0.888,
+      "bytes": 14636
+    },
+    "en-06-word-09": {
+      "file": "audio/english/c93a18c915f5d42d685a299e.mp3",
+      "text": "it",
+      "spokenText": "it",
+      "durationSeconds": 0.84,
+      "bytes": 13868
+    },
+    "en-06-word-10": {
+      "file": "audio/english/ebaa413727ba94be794a93b2.mp3",
+      "text": "happy",
+      "spokenText": "happy",
+      "durationSeconds": 1.008,
+      "bytes": 16556
+    },
+    "en-06-word-11": {
+      "file": "audio/english/d16e88deca5b8ba12532db46.mp3",
+      "text": "love",
+      "spokenText": "love",
+      "durationSeconds": 1.008,
+      "bytes": 16556
+    },
+    "en-06-word-12": {
+      "file": "audio/english/e8654a271a9be9f9fdf5974d.mp3",
+      "text": "wow",
+      "spokenText": "wow",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "en-07-word-01": {
+      "file": "audio/english/d9db859e9aa9ec33fb237ecc.mp3",
+      "text": "one",
+      "spokenText": "one",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-07-word-02": {
+      "file": "audio/english/14db528105fbde51f0baa16e.mp3",
+      "text": "two",
+      "spokenText": "two",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-07-word-03": {
+      "file": "audio/english/12c557aa318d2bd8a0b0be3c.mp3",
+      "text": "three",
+      "spokenText": "three",
+      "durationSeconds": 0.984,
+      "bytes": 16172
+    },
+    "en-07-word-04": {
+      "file": "audio/english/d5cdc14e302303c05f647675.mp3",
+      "text": "four",
+      "spokenText": "four",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "en-07-word-05": {
+      "file": "audio/english/2e021c7d64784b4573bc3614.mp3",
+      "text": "five",
+      "spokenText": "five",
+      "durationSeconds": 1.104,
+      "bytes": 18092
+    },
+    "en-07-word-06": {
+      "file": "audio/english/4a6a738e73933f6652fc46d8.mp3",
+      "text": "six",
+      "spokenText": "six",
+      "durationSeconds": 1.104,
+      "bytes": 18092
+    },
+    "en-07-word-07": {
+      "file": "audio/english/70f4a7cfe465cabe8b3cfa50.mp3",
+      "text": "seven",
+      "spokenText": "seven",
+      "durationSeconds": 1.056,
+      "bytes": 17324
+    },
+    "en-07-word-08": {
+      "file": "audio/english/18ae34df7e20e7defd3ad907.mp3",
+      "text": "eight",
+      "spokenText": "eight",
+      "durationSeconds": 0.936,
+      "bytes": 15404
+    },
+    "en-07-word-09": {
+      "file": "audio/english/c0c5dbee74731e4c264de772.mp3",
+      "text": "nine",
+      "spokenText": "nine",
+      "durationSeconds": 1.008,
+      "bytes": 16556
+    },
+    "en-07-word-10": {
+      "file": "audio/english/39e6c8afccf172a3aece22b4.mp3",
+      "text": "ten",
+      "spokenText": "ten",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-07-word-11": {
+      "file": "audio/english/32fee1e627cd5fbf7c7a08d7.mp3",
+      "text": "now",
+      "spokenText": "now",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "en-07-word-12": {
+      "file": "audio/english/eedfb8b2ce7e367ba1f96374.mp3",
+      "text": "want",
+      "spokenText": "want",
+      "durationSeconds": 1.032,
+      "bytes": 16940
+    },
+    "en-07-word-13": {
+      "file": "audio/english/0d2d3ab21ad284d0818cfc23.mp3",
+      "text": "car",
+      "spokenText": "car",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "en-07-word-14": {
+      "file": "audio/english/aa3faafca15c7cd174eec60f.mp3",
+      "text": "book",
+      "spokenText": "book",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-07-word-15": {
+      "file": "audio/english/c9ba3eecb099a9e8cc6d9639.mp3",
+      "text": "ball",
+      "spokenText": "ball",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-07-word-16": {
+      "file": "audio/english/6aaaa69ce754edd7ce499dc7.mp3",
+      "text": "cake",
+      "spokenText": "cake",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "en-07-word-17": {
+      "file": "audio/english/c126029dac2ae1221eb63d05.mp3",
+      "text": "some",
+      "spokenText": "some",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "en-07-word-18": {
+      "file": "audio/english/f6af907569d88a6e7ff6b5df.mp3",
+      "text": "toy",
+      "spokenText": "toy",
+      "durationSeconds": 0.936,
+      "bytes": 15404
+    },
+    "en-07-word-19": {
+      "file": "audio/english/4a4e581f58de430a484a71eb.mp3",
+      "text": "for",
+      "spokenText": "for",
+      "durationSeconds": 0.984,
+      "bytes": 16172
+    },
+    "en-07-word-20": {
+      "file": "audio/english/0b39e1dd630d74ca98d485c3.mp3",
+      "text": "OK",
+      "spokenText": "OK",
+      "durationSeconds": 1.056,
+      "bytes": 17324
+    },
+    "en-07-word-21": {
+      "file": "audio/english/87bd053c3dbcf40497e23151.mp3",
+      "text": "please",
+      "spokenText": "please",
+      "durationSeconds": 1.032,
+      "bytes": 16940
+    },
+    "en-07-word-22": {
+      "file": "audio/english/3d2ed756cb82bf878a170c9f.mp3",
+      "text": "here",
+      "spokenText": "here",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-07-word-23": {
+      "file": "audio/english/d16e88deca5b8ba12532db46.mp3",
+      "text": "love",
+      "spokenText": "love",
+      "durationSeconds": 1.008,
+      "bytes": 16556
+    },
+    "en-07-word-24": {
+      "file": "audio/english/b6b2a40d61c12f4dfa6eb835.mp3",
+      "text": "thanks",
+      "spokenText": "thanks",
+      "durationSeconds": 1.128,
+      "bytes": 18476
+    },
+    "en-07-word-25": {
+      "file": "audio/english/da058a68f70d54837e91e911.mp3",
+      "text": "Happy Birthday!",
+      "spokenText": "Happy Birthday!",
+      "durationSeconds": 1.584,
+      "bytes": 25772
+    },
+    "en-07-word-26": {
+      "file": "audio/english/95572a1faa2d72d7479bcb98.mp3",
+      "text": "How lovely!",
+      "spokenText": "How lovely!",
+      "durationSeconds": 1.296,
+      "bytes": 21164
+    },
+    "en-07-word-27": {
+      "file": "audio/english/82e527b4222cb5f6e3aea46d.mp3",
+      "text": "Can I help you?",
+      "spokenText": "Can I help you?",
+      "durationSeconds": 1.56,
+      "bytes": 25388
+    },
+    "en-07-word-28": {
+      "file": "audio/english/df9dfd4936f50ce51fa00bf4.mp3",
+      "text": "Yes, please.",
+      "spokenText": "Yes, please.",
+      "durationSeconds": 1.848,
+      "bytes": 29996
+    },
+    "en-07-word-29": {
+      "file": "audio/english/81f74782aafcf88fd9e68694.mp3",
+      "text": "How old are you?",
+      "spokenText": "How old are you?",
+      "durationSeconds": 1.56,
+      "bytes": 25388
+    },
+    "en-07-word-30": {
+      "file": "audio/english/46f50a8c3aa663e10597cffe.mp3",
+      "text": "Here you are.",
+      "spokenText": "Here you are.",
+      "durationSeconds": 1.296,
+      "bytes": 21164
+    },
+    "en-07-word-31": {
+      "file": "audio/english/b8eb8ca7d73f988eea96d373.mp3",
+      "text": "You're welcome.",
+      "spokenText": "You're welcome.",
+      "durationSeconds": 1.344,
+      "bytes": 21932
+    },
+    "en-08-word-01": {
+      "file": "audio/english/8625500a5a51eebc9b2cbb75.mp3",
+      "text": "can",
+      "spokenText": "can",
+      "durationSeconds": 0.888,
+      "bytes": 14636
+    },
+    "en-08-word-02": {
+      "file": "audio/english/c33c17f61a04990841676e33.mp3",
+      "text": "do",
+      "spokenText": "do",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-08-word-03": {
+      "file": "audio/english/4a4e581f58de430a484a71eb.mp3",
+      "text": "for",
+      "spokenText": "for",
+      "durationSeconds": 0.984,
+      "bytes": 16172
+    },
+    "en-08-word-04": {
+      "file": "audio/english/2b093a902189777b018f1fec.mp3",
+      "text": "clean",
+      "spokenText": "clean",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "en-08-word-05": {
+      "file": "audio/english/b2b5da83619c19f68d4cbfa5.mp3",
+      "text": "table",
+      "spokenText": "table",
+      "durationSeconds": 1.032,
+      "bytes": 16940
+    },
+    "en-08-word-06": {
+      "file": "audio/english/1406f9589d152da85635fdf6.mp3",
+      "text": "draw",
+      "spokenText": "draw",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "en-08-word-07": {
+      "file": "audio/english/6be588cd0ed89961c99884c1.mp3",
+      "text": "sing",
+      "spokenText": "sing",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "en-08-word-08": {
+      "file": "audio/english/4864c20493254b566b4b79dd.mp3",
+      "text": "dance",
+      "spokenText": "dance",
+      "durationSeconds": 1.104,
+      "bytes": 18092
+    },
+    "en-08-word-09": {
+      "file": "audio/english/de30016e1fa49a8110b2f870.mp3",
+      "text": "picture",
+      "spokenText": "picture",
+      "durationSeconds": 1.104,
+      "bytes": 18092
+    },
+    "en-08-word-10": {
+      "file": "audio/english/6a715796f1ba484417a8d3dc.mp3",
+      "text": "child",
+      "spokenText": "child",
+      "durationSeconds": 1.128,
+      "bytes": 18476
+    },
+    "en-08-word-11": {
+      "file": "audio/english/1103addc500d9b3c117cc643.mp3",
+      "text": "take pictures",
+      "spokenText": "take pictures",
+      "durationSeconds": 1.56,
+      "bytes": 25388
+    },
+    "en-08-word-12": {
+      "file": "audio/english/0d4fa4739eeb67506af64ccd.mp3",
+      "text": "Are you OK?",
+      "spokenText": "Are you OK?",
+      "durationSeconds": 1.416,
+      "bytes": 23084
+    },
+    "en-08-word-13": {
+      "file": "audio/english/87841d5a4504a64e1e135679.mp3",
+      "text": "dizzy",
+      "spokenText": "dizzy",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "en-08-word-14": {
+      "file": "audio/english/789dedb8fc558afe67f32bd7.mp3",
+      "text": "er",
+      "spokenText": "er",
+      "durationSeconds": 0.888,
+      "bytes": 14636
+    },
+    "en-08-word-15": {
+      "file": "audio/english/44bc8782fa3d54a26a538731.mp3",
+      "text": "fox",
+      "spokenText": "fox",
+      "durationSeconds": 1.152,
+      "bytes": 18860
+    },
+    "en-08-word-16": {
+      "file": "audio/english/74376ccf1dcd9d84dc92f18c.mp3",
+      "text": "thing",
+      "spokenText": "thing",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "en-alphabet-a": {
+      "file": "audio/english/7c3b3f77fa5b877963181b7d.mp3",
+      "text": "Aa",
+      "spokenText": "A",
+      "durationSeconds": 0.864,
+      "bytes": 14252
+    },
+    "en-alphabet-b": {
+      "file": "audio/english/75d85c295b1e9ae7783abd83.mp3",
+      "text": "Bb",
+      "spokenText": "B",
+      "durationSeconds": 0.888,
+      "bytes": 14636
+    },
+    "en-alphabet-c": {
+      "file": "audio/english/a1c186f96bf0df218d407d2a.mp3",
+      "text": "Cc",
+      "spokenText": "C",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "en-alphabet-d": {
+      "file": "audio/english/bc873d777aa862a9afc0feba.mp3",
+      "text": "Dd",
+      "spokenText": "D",
+      "durationSeconds": 0.888,
+      "bytes": 14636
+    },
+    "en-alphabet-e": {
+      "file": "audio/english/56a3b13e7259eadb0ae8f73a.mp3",
+      "text": "Ee",
+      "spokenText": "E",
+      "durationSeconds": 0.864,
+      "bytes": 14252
+    },
+    "en-alphabet-f": {
+      "file": "audio/english/9021205814e6675b6f14db22.mp3",
+      "text": "Ff",
+      "spokenText": "F",
+      "durationSeconds": 0.888,
+      "bytes": 14636
+    },
+    "en-alphabet-g": {
+      "file": "audio/english/c4e95a8f78d6333d0050584f.mp3",
+      "text": "Gg",
+      "spokenText": "G",
+      "durationSeconds": 0.888,
+      "bytes": 14636
+    },
+    "en-alphabet-h": {
+      "file": "audio/english/fa8c8251c61ce16f8d9b9f05.mp3",
+      "text": "Hh",
+      "spokenText": "H",
+      "durationSeconds": 0.936,
+      "bytes": 15404
+    },
+    "en-alphabet-i": {
+      "file": "audio/english/b9b1629468430fd0c45b9f03.mp3",
+      "text": "Ii",
+      "spokenText": "I",
+      "durationSeconds": 0.888,
+      "bytes": 14636
+    },
+    "en-alphabet-j": {
+      "file": "audio/english/8832b3044e69076128a5f1a6.mp3",
+      "text": "Jj",
+      "spokenText": "J",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-alphabet-k": {
+      "file": "audio/english/03fcb42c5e6a035a3fccb962.mp3",
+      "text": "Kk",
+      "spokenText": "K",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-alphabet-l": {
+      "file": "audio/english/a6a4d9c78e9ceee3c54545fb.mp3",
+      "text": "Ll",
+      "spokenText": "L",
+      "durationSeconds": 0.84,
+      "bytes": 13868
+    },
+    "en-alphabet-m": {
+      "file": "audio/english/17ae2d2f1aa655e40adb403d.mp3",
+      "text": "Mm",
+      "spokenText": "M",
+      "durationSeconds": 0.84,
+      "bytes": 13868
+    },
+    "en-alphabet-n": {
+      "file": "audio/english/746c82ddfd096868120ee442.mp3",
+      "text": "Nn",
+      "spokenText": "N",
+      "durationSeconds": 0.84,
+      "bytes": 13868
+    },
+    "en-alphabet-o": {
+      "file": "audio/english/595351cfde0279c82d5e21e2.mp3",
+      "text": "Oo",
+      "spokenText": "O",
+      "durationSeconds": 0.888,
+      "bytes": 14636
+    },
+    "en-alphabet-p": {
+      "file": "audio/english/1102dca7eb5ef1b284fd4328.mp3",
+      "text": "Pp",
+      "spokenText": "P",
+      "durationSeconds": 0.864,
+      "bytes": 14252
+    },
+    "en-alphabet-q": {
+      "file": "audio/english/d3beedd3047d13a957c837a9.mp3",
+      "text": "Qq",
+      "spokenText": "Q",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-alphabet-r": {
+      "file": "audio/english/1be328541ada5406c62d2bc5.mp3",
+      "text": "Rr",
+      "spokenText": "R",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-alphabet-s": {
+      "file": "audio/english/eadd1dea9da04c4fb8049182.mp3",
+      "text": "Ss",
+      "spokenText": "S",
+      "durationSeconds": 0.888,
+      "bytes": 14636
+    },
+    "en-alphabet-t": {
+      "file": "audio/english/09b8d4164f71060f38f59996.mp3",
+      "text": "Tt",
+      "spokenText": "T",
+      "durationSeconds": 0.888,
+      "bytes": 14636
+    },
+    "en-alphabet-u": {
+      "file": "audio/english/e314f6d4c79fa13d4e90179d.mp3",
+      "text": "Uu",
+      "spokenText": "U",
+      "durationSeconds": 0.888,
+      "bytes": 14636
+    },
+    "en-alphabet-v": {
+      "file": "audio/english/7d29e50e5dce380bd9e38c0b.mp3",
+      "text": "Vv",
+      "spokenText": "V",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-alphabet-w": {
+      "file": "audio/english/4b662b1cfab7efe19d9886d5.mp3",
+      "text": "Ww",
+      "spokenText": "double you",
+      "durationSeconds": 1.224,
+      "bytes": 20012
+    },
+    "en-alphabet-x": {
+      "file": "audio/english/69d6a7698832b2351815d845.mp3",
+      "text": "Xx",
+      "spokenText": "X",
+      "durationSeconds": 0.984,
+      "bytes": 16172
+    },
+    "en-alphabet-y": {
+      "file": "audio/english/94db169704556d1b6075078f.mp3",
+      "text": "Yy",
+      "spokenText": "Y",
+      "durationSeconds": 0.984,
+      "bytes": 16172
+    },
+    "en-alphabet-z": {
+      "file": "audio/english/aa36bd64a000cc36f060ccf0.mp3",
+      "text": "Zz",
+      "spokenText": "zed",
+      "durationSeconds": 0.984,
+      "bytes": 16172
+    }
+  }
+}

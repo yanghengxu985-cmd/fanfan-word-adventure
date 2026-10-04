@@ -1,0 +1,2274 @@
+{
+  "schemaVersion": 1,
+  "voice": "en-GB-SoniaNeural",
+  "rate": "-12%",
+  "locale": "en-GB",
+  "source": "Microsoft Edge online neural TTS via edge-tts 7.2.8",
+  "humanRecorded": false,
+  "paperTextbookAudio": false,
+  "pipelineVersion": "sonia-slow-normalized-v1",
+  "normalization": {
+    "targetLUFS": -18,
+    "truePeakLimitDB": -2,
+    "sampleRate": 24000
+  },
+  "entries": {
+    "en-01-word-01": {
+      "file": "audio/english/953cabc9f87f6b99f500e548.mp3",
+      "text": "hello",
+      "spokenText": "hello",
+      "durationSeconds": 1.056,
+      "bytes": 17324
+    },
+    "en-01-word-02": {
+      "file": "audio/english/6285727ed82a809ca9d3f22f.mp3",
+      "text": "hi",
+      "spokenText": "hi",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "en-01-word-03": {
+      "file": "audio/english/b9b1629468430fd0c45b9f03.mp3",
+      "text": "I",
+      "spokenText": "I",
+      "durationSeconds": 0.888,
+      "bytes": 14636
+    },
+    "en-01-word-04": {
+      "file": "audio/english/dc42b2bee85046fc2cf9ff1d.mp3",
+      "text": "am",
+      "spokenText": "am",
+      "durationSeconds": 0.792,
+      "bytes": 13100
+    },
+    "en-01-word-05": {
+      "file": "audio/english/f754ac47ae8f1b9c61dac262.mp3",
+      "text": "a",
+      "spokenText": "a",
+      "durationSeconds": 0.864,
+      "bytes": 14252
+    },
+    "en-01-word-06": {
+      "file": "audio/english/648cf21a6545bd4519009098.mp3",
+      "text": "cat",
+      "spokenText": "cat",
+      "durationSeconds": 0.984,
+      "bytes": 16172
+    },
+    "en-01-word-07": {
+      "file": "audio/english/dbbddd8d072e9b8a6abee8ea.mp3",
+      "text": "Miss",
+      "spokenText": "Miss",
+      "durationSeconds": 0.984,
+      "bytes": 16172
+    },
+    "en-01-word-08": {
+      "file": "audio/english/38169f1f807e7a08c3147063.mp3",
+      "text": "class",
+      "spokenText": "class",
+      "durationSeconds": 1.056,
+      "bytes": 17324
+    },
+    "en-01-word-09": {
+      "file": "audio/english/68539b9c778b3e9b9b106e96.mp3",
+      "text": "goodbye",
+      "spokenText": "goodbye",
+      "durationSeconds": 1.152,
+      "bytes": 18860
+    },
+    "en-01-word-10": {
+      "file": "audio/english/9d75914976e37ca49b9f8ced.mp3",
+      "text": "bye",
+      "spokenText": "bye",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-01-word-11": {
+      "file": "audio/english/bc30a73d058a19d5105ba5b7.mp3",
+      "text": "Good morning.",
+      "spokenText": "Good morning.",
+      "durationSeconds": 1.272,
+      "bytes": 20780
+    },
+    "en-01-word-12": {
+      "file": "audio/english/397e1fa3d386434c25bdcbfa.mp3",
+      "text": "Good afternoon.",
+      "spokenText": "Good afternoon.",
+      "durationSeconds": 1.536,
+      "bytes": 25004
+    },
+    "en-01-word-13": {
+      "file": "audio/english/05dbbaead8de255ccf085835.mp3",
+      "text": "ah",
+      "spokenText": "ah",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-02-word-01": {
+      "file": "audio/english/3a6a41917abb527cc2f3ea98.mp3",
+      "text": "what",
+      "spokenText": "what",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "en-02-word-02": {
+      "file": "audio/english/be63d845b60544ffe1e00ff6.mp3",
+      "text": "is",
+      "spokenText": "is",
+      "durationSeconds": 0.888,
+      "bytes": 14636
+    },
+    "en-02-word-03": {
+      "file": "audio/english/497ca6299245960be752ce0f.mp3",
+      "text": "your",
+      "spokenText": "your",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-02-word-04": {
+      "file": "audio/english/6ea2984dd2e61f9808852c4a.mp3",
+      "text": "name",
+      "spokenText": "name",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "en-02-word-05": {
+      "file": "audio/english/dcdfc6efa259cd52fca086b0.mp3",
+      "text": "my",
+      "spokenText": "my",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-02-word-06": {
+      "file": "audio/english/739ca8a123783b3ebe53080a.mp3",
+      "text": "too",
+      "spokenText": "too",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-02-word-07": {
+      "file": "audio/english/194c442b9223f31ea447519c.mp3",
+      "text": "boy",
+      "spokenText": "boy",
+      "durationSeconds": 0.936,
+      "bytes": 15404
+    },
+    "en-02-word-08": {
+      "file": "audio/english/69dcd7b93ee061a2edc1bbcc.mp3",
+      "text": "and",
+      "spokenText": "and",
+      "durationSeconds": 0.936,
+      "bytes": 15404
+    },
+    "en-02-word-09": {
+      "file": "audio/english/17b50ed0142b032b0da6b8df.mp3",
+      "text": "girl",
+      "spokenText": "girl",
+      "durationSeconds": 0.936,
+      "bytes": 15404
+    },
+    "en-02-word-10": {
+      "file": "audio/english/4c6a25f09d5287270ccef572.mp3",
+      "text": "Mr",
+      "spokenText": "Mister",
+      "durationSeconds": 1.128,
+      "bytes": 18476
+    },
+    "en-02-word-11": {
+      "file": "audio/english/f1d36d9a02e2024801c15e4e.mp3",
+      "text": "Nice to meet you!",
+      "spokenText": "Nice to meet you!",
+      "durationSeconds": 1.656,
+      "bytes": 26924
+    },
+    "en-03-word-01": {
+      "file": "audio/english/ee84259376fc14d438cb3c03.mp3",
+      "text": "are",
+      "spokenText": "are",
+      "durationSeconds": 0.864,
+      "bytes": 14252
+    },
+    "en-03-word-02": {
+      "file": "audio/english/b608509b022a72dff3fa0b14.mp3",
+      "text": "you",
+      "spokenText": "you",
+      "durationSeconds": 0.888,
+      "bytes": 14636
+    },
+    "en-03-word-03": {
+      "file": "audio/english/c0ce534f2032e04017135517.mp3",
+      "text": "no",
+      "spokenText": "no",
+      "durationSeconds": 0.936,
+      "bytes": 15404
+    },
+    "en-03-word-04": {
+      "file": "audio/english/54bd3f874f640418137883e2.mp3",
+      "text": "not",
+      "spokenText": "not",
+      "durationSeconds": 0.984,
+      "bytes": 16172
+    },
+    "en-03-word-05": {
+      "file": "audio/english/a62d45d36a481f761b5aaaa8.mp3",
+      "text": "yes",
+      "spokenText": "yes",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "en-03-word-06": {
+      "file": "audio/english/94a99fac4442cb9b43afccb6.mp3",
+      "text": "but",
+      "spokenText": "but",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-03-word-07": {
+      "file": "audio/english/438e735b8744169b5d782450.mp3",
+      "text": "sorry",
+      "spokenText": "sorry",
+      "durationSeconds": 1.08,
+      "bytes": 17708
+    },
+    "en-03-word-08": {
+      "file": "audio/english/74f4e57b4606c1defb225e03.mp3",
+      "text": "we",
+      "spokenText": "we",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-03-word-09": {
+      "file": "audio/english/38169f1f807e7a08c3147063.mp3",
+      "text": "class",
+      "spokenText": "class",
+      "durationSeconds": 1.056,
+      "bytes": 17324
+    },
+    "en-03-word-10": {
+      "file": "audio/english/a964e371564d8fe13e245d09.mp3",
+      "text": "in",
+      "spokenText": "in",
+      "durationSeconds": 0.84,
+      "bytes": 13868
+    },
+    "en-03-word-11": {
+      "file": "audio/english/95c4049edf9783dfc698bf25.mp3",
+      "text": "with",
+      "spokenText": "with",
+      "durationSeconds": 0.936,
+      "bytes": 15404
+    },
+    "en-03-word-12": {
+      "file": "audio/english/5aa80072c426263f404b89eb.mp3",
+      "text": "right",
+      "spokenText": "right",
+      "durationSeconds": 1.008,
+      "bytes": 16556
+    },
+    "en-03-word-13": {
+      "file": "audio/english/cb385328b0359932d479de4d.mp3",
+      "text": "Here I am!",
+      "spokenText": "Here I am!",
+      "durationSeconds": 1.248,
+      "bytes": 20396
+    },
+    "en-03-word-14": {
+      "file": "audio/english/4103b7ddf08c26e56e86c4a4.mp3",
+      "text": "ha",
+      "spokenText": "ha",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-03-word-15": {
+      "file": "audio/english/a30dbccb354613f003fc8b6a.mp3",
+      "text": "oh",
+      "spokenText": "oh",
+      "durationSeconds": 0.888,
+      "bytes": 14636
+    },
+    "en-03-word-16": {
+      "file": "audio/english/d911c99ed46941a63fae1236.mp3",
+      "text": "twin",
+      "spokenText": "twin",
+      "durationSeconds": 0.936,
+      "bytes": 15404
+    },
+    "en-03-word-17": {
+      "file": "audio/english/f56ff06d2a2c3fc8cda7b64b.mp3",
+      "text": "excuse me",
+      "spokenText": "excuse me",
+      "durationSeconds": 1.416,
+      "bytes": 23084
+    },
+    "en-04-word-01": {
+      "file": "audio/english/3644cbcffb66da3bc04ea9f7.mp3",
+      "text": "this",
+      "spokenText": "this",
+      "durationSeconds": 0.936,
+      "bytes": 15404
+    },
+    "en-04-word-02": {
+      "file": "audio/english/24ad9e07598ae051f8117056.mp3",
+      "text": "friend",
+      "spokenText": "friend",
+      "durationSeconds": 1.128,
+      "bytes": 18476
+    },
+    "en-04-word-03": {
+      "file": "audio/english/bd72980d32c73a59b42f60bb.mp3",
+      "text": "she",
+      "spokenText": "she",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-04-word-04": {
+      "file": "audio/english/7de3a10169054501e096c09a.mp3",
+      "text": "he",
+      "spokenText": "he",
+      "durationSeconds": 0.864,
+      "bytes": 14252
+    },
+    "en-04-word-05": {
+      "file": "audio/english/c93a18c915f5d42d685a299e.mp3",
+      "text": "it",
+      "spokenText": "it",
+      "durationSeconds": 0.84,
+      "bytes": 13868
+    },
+    "en-04-word-06": {
+      "file": "audio/english/39057e4fd56c9b06b3db88eb.mp3",
+      "text": "good",
+      "spokenText": "good",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-04-word-07": {
+      "file": "audio/english/f991660ac9d00dbb80622cf5.mp3",
+      "text": "have",
+      "spokenText": "have",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "en-04-word-08": {
+      "file": "audio/english/a8096d690d6355bcab027c55.mp3",
+      "text": "many",
+      "spokenText": "many",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "en-04-word-09": {
+      "file": "audio/english/75f6a3e67a8bf729d3685125.mp3",
+      "text": "Thank you.",
+      "spokenText": "Thank you.",
+      "durationSeconds": 1.2,
+      "bytes": 19628
+    },
+    "en-05-word-01": {
+      "file": "audio/english/932bfa88bf75f7ec5aee52ab.mp3",
+      "text": "mother",
+      "spokenText": "mother",
+      "durationSeconds": 1.008,
+      "bytes": 16556
+    },
+    "en-05-word-02": {
+      "file": "audio/english/b4ab9dad17da24be44e15252.mp3",
+      "text": "father",
+      "spokenText": "father",
+      "durationSeconds": 1.104,
+      "bytes": 18092
+    },
+    "en-05-word-03": {
+      "file": "audio/english/55e20d86f94724c7661fc9fa.mp3",
+      "text": "dad",
+      "spokenText": "dad",
+      "durationSeconds": 0.936,
+      "bytes": 15404
+    },
+    "en-05-word-04": {
+      "file": "audio/english/89750fb1ff5367ce87230f5f.mp3",
+      "text": "mum",
+      "spokenText": "mum",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-05-word-05": {
+      "file": "audio/english/bf00f77000cc3b0418649007.mp3",
+      "text": "brother",
+      "spokenText": "brother",
+      "durationSeconds": 0.984,
+      "bytes": 16172
+    },
+    "en-05-word-06": {
+      "file": "audio/english/9d36ad2b1a243bc4ec20e495.mp3",
+      "text": "baby",
+      "spokenText": "baby",
+      "durationSeconds": 1.008,
+      "bytes": 16556
+    },
+    "en-05-word-07": {
+      "file": "audio/english/a1d0949918a2c9230802332f.mp3",
+      "text": "sister",
+      "spokenText": "sister",
+      "durationSeconds": 1.152,
+      "bytes": 18860
+    },
+    "en-05-word-08": {
+      "file": "audio/english/70c6fb95c017be1c82d69d2d.mp3",
+      "text": "look",
+      "spokenText": "look",
+      "durationSeconds": 0.936,
+      "bytes": 15404
+    },
+    "en-05-word-09": {
+      "file": "audio/english/3b2c0a641b2fd889df5a766f.mp3",
+      "text": "the",
+      "spokenText": "the",
+      "durationSeconds": 0.84,
+      "bytes": 13868
+    },
+    "en-05-word-10": {
+      "file": "audio/english/fe22d408c647c161b5c898cc.mp3",
+      "text": "who",
+      "spokenText": "who",
+      "durationSeconds": 0.888,
+      "bytes": 14636
+    },
+    "en-05-word-11": {
+      "file": "audio/english/1b77df4984cc7e012ab9aea1.mp3",
+      "text": "great",
+      "spokenText": "great",
+      "durationSeconds": 1.008,
+      "bytes": 16556
+    },
+    "en-05-word-12": {
+      "file": "audio/english/910c8089edff5c64efa1dcac.mp3",
+      "text": "come",
+      "spokenText": "come",
+      "durationSeconds": 0.888,
+      "bytes": 14636
+    },
+    "en-05-word-13": {
+      "file": "audio/english/840fc46623086c1b3aaafc36.mp3",
+      "text": "meet",
+      "spokenText": "meet",
+      "durationSeconds": 0.984,
+      "bytes": 16172
+    },
+    "en-05-word-14": {
+      "file": "audio/english/3f877564177896c8ba3f6812.mp3",
+      "text": "family",
+      "spokenText": "family",
+      "durationSeconds": 1.152,
+      "bytes": 18860
+    },
+    "en-05-word-15": {
+      "file": "audio/english/fe637609e97fa38d0937246b.mp3",
+      "text": "say",
+      "spokenText": "say",
+      "durationSeconds": 0.984,
+      "bytes": 16172
+    },
+    "en-05-word-16": {
+      "file": "audio/english/10ffa438c81124cacbb5edff.mp3",
+      "text": "Good evening.",
+      "spokenText": "Good evening.",
+      "durationSeconds": 1.296,
+      "bytes": 21164
+    },
+    "en-05-word-17": {
+      "file": "audio/english/865a1481ef379b1eb562a48f.mp3",
+      "text": "quick",
+      "spokenText": "quick",
+      "durationSeconds": 0.984,
+      "bytes": 16172
+    },
+    "en-05-word-18": {
+      "file": "audio/english/1a6f86479a3f0316c6a6554d.mp3",
+      "text": "pond",
+      "spokenText": "pond",
+      "durationSeconds": 1.032,
+      "bytes": 16940
+    },
+    "en-06-word-01": {
+      "file": "audio/english/f5bca42fc945d8cea7af0ed7.mp3",
+      "text": "grandfather",
+      "spokenText": "grandfather",
+      "durationSeconds": 1.44,
+      "bytes": 23468
+    },
+    "en-06-word-02": {
+      "file": "audio/english/08a93c3fa981183d07dd15c7.mp3",
+      "text": "uncle",
+      "spokenText": "uncle",
+      "durationSeconds": 1.056,
+      "bytes": 17324
+    },
+    "en-06-word-03": {
+      "file": "audio/english/9821c06edc7d5ee661735570.mp3",
+      "text": "aunt",
+      "spokenText": "aunt",
+      "durationSeconds": 0.984,
+      "bytes": 16172
+    },
+    "en-06-word-04": {
+      "file": "audio/english/b15911c0a6949aa147600a5e.mp3",
+      "text": "grandmother",
+      "spokenText": "grandmother",
+      "durationSeconds": 1.392,
+      "bytes": 22700
+    },
+    "en-06-word-05": {
+      "file": "audio/english/5aa6434e8ae70ddfeb71c34b.mp3",
+      "text": "cousin",
+      "spokenText": "cousin",
+      "durationSeconds": 1.008,
+      "bytes": 16556
+    },
+    "en-06-word-06": {
+      "file": "audio/english/ab8b0e0b3dbc9667c06955af.mp3",
+      "text": "cool",
+      "spokenText": "cool",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-06-word-07": {
+      "file": "audio/english/b24aac03a38de603a1fdd9b3.mp3",
+      "text": "me",
+      "spokenText": "me",
+      "durationSeconds": 0.864,
+      "bytes": 14252
+    },
+    "en-06-word-08": {
+      "file": "audio/english/96ca289f0d5533a131861ea2.mp3",
+      "text": "big",
+      "spokenText": "big",
+      "durationSeconds": 0.888,
+      "bytes": 14636
+    },
+    "en-06-word-09": {
+      "file": "audio/english/c93a18c915f5d42d685a299e.mp3",
+      "text": "it",
+      "spokenText": "it",
+      "durationSeconds": 0.84,
+      "bytes": 13868
+    },
+    "en-06-word-10": {
+      "file": "audio/english/ebaa413727ba94be794a93b2.mp3",
+      "text": "happy",
+      "spokenText": "happy",
+      "durationSeconds": 1.008,
+      "bytes": 16556
+    },
+    "en-06-word-11": {
+      "file": "audio/english/d16e88deca5b8ba12532db46.mp3",
+      "text": "love",
+      "spokenText": "love",
+      "durationSeconds": 1.008,
+      "bytes": 16556
+    },
+    "en-06-word-12": {
+      "file": "audio/english/e8654a271a9be9f9fdf5974d.mp3",
+      "text": "wow",
+      "spokenText": "wow",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "en-07-word-01": {
+      "file": "audio/english/d9db859e9aa9ec33fb237ecc.mp3",
+      "text": "one",
+      "spokenText": "one",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-07-word-02": {
+      "file": "audio/english/14db528105fbde51f0baa16e.mp3",
+      "text": "two",
+      "spokenText": "two",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-07-word-03": {
+      "file": "audio/english/12c557aa318d2bd8a0b0be3c.mp3",
+      "text": "three",
+      "spokenText": "three",
+      "durationSeconds": 0.984,
+      "bytes": 16172
+    },
+    "en-07-word-04": {
+      "file": "audio/english/d5cdc14e302303c05f647675.mp3",
+      "text": "four",
+      "spokenText": "four",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "en-07-word-05": {
+      "file": "audio/english/2e021c7d64784b4573bc3614.mp3",
+      "text": "five",
+      "spokenText": "five",
+      "durationSeconds": 1.104,
+      "bytes": 18092
+    },
+    "en-07-word-06": {
+      "file": "audio/english/4a6a738e73933f6652fc46d8.mp3",
+      "text": "six",
+      "spokenText": "six",
+      "durationSeconds": 1.104,
+      "bytes": 18092
+    },
+    "en-07-word-07": {
+      "file": "audio/english/70f4a7cfe465cabe8b3cfa50.mp3",
+      "text": "seven",
+      "spokenText": "seven",
+      "durationSeconds": 1.056,
+      "bytes": 17324
+    },
+    "en-07-word-08": {
+      "file": "audio/english/18ae34df7e20e7defd3ad907.mp3",
+      "text": "eight",
+      "spokenText": "eight",
+      "durationSeconds": 0.936,
+      "bytes": 15404
+    },
+    "en-07-word-09": {
+      "file": "audio/english/c0c5dbee74731e4c264de772.mp3",
+      "text": "nine",
+      "spokenText": "nine",
+      "durationSeconds": 1.008,
+      "bytes": 16556
+    },
+    "en-07-word-10": {
+      "file": "audio/english/39e6c8afccf172a3aece22b4.mp3",
+      "text": "ten",
+      "spokenText": "ten",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-07-word-11": {
+      "file": "audio/english/32fee1e627cd5fbf7c7a08d7.mp3",
+      "text": "now",
+      "spokenText": "now",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "en-07-word-12": {
+      "file": "audio/english/eedfb8b2ce7e367ba1f96374.mp3",
+      "text": "want",
+      "spokenText": "want",
+      "durationSeconds": 1.032,
+      "bytes": 16940
+    },
+    "en-07-word-13": {
+      "file": "audio/english/0d2d3ab21ad284d0818cfc23.mp3",
+      "text": "car",
+      "spokenText": "car",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "en-07-word-14": {
+      "file": "audio/english/aa3faafca15c7cd174eec60f.mp3",
+      "text": "book",
+      "spokenText": "book",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-07-word-15": {
+      "file": "audio/english/c9ba3eecb099a9e8cc6d9639.mp3",
+      "text": "ball",
+      "spokenText": "ball",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-07-word-16": {
+      "file": "audio/english/6aaaa69ce754edd7ce499dc7.mp3",
+      "text": "cake",
+      "spokenText": "cake",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "en-07-word-17": {
+      "file": "audio/english/c126029dac2ae1221eb63d05.mp3",
+      "text": "some",
+      "spokenText": "some",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "en-07-word-18": {
+      "file": "audio/english/f6af907569d88a6e7ff6b5df.mp3",
+      "text": "toy",
+      "spokenText": "toy",
+      "durationSeconds": 0.936,
+      "bytes": 15404
+    },
+    "en-07-word-19": {
+      "file": "audio/english/4a4e581f58de430a484a71eb.mp3",
+      "text": "for",
+      "spokenText": "for",
+      "durationSeconds": 0.984,
+      "bytes": 16172
+    },
+    "en-07-word-20": {
+      "file": "audio/english/0b39e1dd630d74ca98d485c3.mp3",
+      "text": "OK",
+      "spokenText": "OK",
+      "durationSeconds": 1.056,
+      "bytes": 17324
+    },
+    "en-07-word-21": {
+      "file": "audio/english/87bd053c3dbcf40497e23151.mp3",
+      "text": "please",
+      "spokenText": "please",
+      "durationSeconds": 1.032,
+      "bytes": 16940
+    },
+    "en-07-word-22": {
+      "file": "audio/english/3d2ed756cb82bf878a170c9f.mp3",
+      "text": "here",
+      "spokenText": "here",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-07-word-23": {
+      "file": "audio/english/d16e88deca5b8ba12532db46.mp3",
+      "text": "love",
+      "spokenText": "love",
+      "durationSeconds": 1.008,
+      "bytes": 16556
+    },
+    "en-07-word-24": {
+      "file": "audio/english/b6b2a40d61c12f4dfa6eb835.mp3",
+      "text": "thanks",
+      "spokenText": "thanks",
+      "durationSeconds": 1.128,
+      "bytes": 18476
+    },
+    "en-07-word-25": {
+      "file": "audio/english/da058a68f70d54837e91e911.mp3",
+      "text": "Happy Birthday!",
+      "spokenText": "Happy Birthday!",
+      "durationSeconds": 1.584,
+      "bytes": 25772
+    },
+    "en-07-word-26": {
+      "file": "audio/english/95572a1faa2d72d7479bcb98.mp3",
+      "text": "How lovely!",
+      "spokenText": "How lovely!",
+      "durationSeconds": 1.296,
+      "bytes": 21164
+    },
+    "en-07-word-27": {
+      "file": "audio/english/82e527b4222cb5f6e3aea46d.mp3",
+      "text": "Can I help you?",
+      "spokenText": "Can I help you?",
+      "durationSeconds": 1.56,
+      "bytes": 25388
+    },
+    "en-07-word-28": {
+      "file": "audio/english/df9dfd4936f50ce51fa00bf4.mp3",
+      "text": "Yes, please.",
+      "spokenText": "Yes, please.",
+      "durationSeconds": 1.848,
+      "bytes": 29996
+    },
+    "en-07-word-29": {
+      "file": "audio/english/81f74782aafcf88fd9e68694.mp3",
+      "text": "How old are you?",
+      "spokenText": "How old are you?",
+      "durationSeconds": 1.56,
+      "bytes": 25388
+    },
+    "en-07-word-30": {
+      "file": "audio/english/46f50a8c3aa663e10597cffe.mp3",
+      "text": "Here you are.",
+      "spokenText": "Here you are.",
+      "durationSeconds": 1.296,
+      "bytes": 21164
+    },
+    "en-07-word-31": {
+      "file": "audio/english/b8eb8ca7d73f988eea96d373.mp3",
+      "text": "You're welcome.",
+      "spokenText": "You're welcome.",
+      "durationSeconds": 1.344,
+      "bytes": 21932
+    },
+    "en-08-word-01": {
+      "file": "audio/english/8625500a5a51eebc9b2cbb75.mp3",
+      "text": "can",
+      "spokenText": "can",
+      "durationSeconds": 0.888,
+      "bytes": 14636
+    },
+    "en-08-word-02": {
+      "file": "audio/english/c33c17f61a04990841676e33.mp3",
+      "text": "do",
+      "spokenText": "do",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-08-word-03": {
+      "file": "audio/english/4a4e581f58de430a484a71eb.mp3",
+      "text": "for",
+      "spokenText": "for",
+      "durationSeconds": 0.984,
+      "bytes": 16172
+    },
+    "en-08-word-04": {
+      "file": "audio/english/2b093a902189777b018f1fec.mp3",
+      "text": "clean",
+      "spokenText": "clean",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "en-08-word-05": {
+      "file": "audio/english/b2b5da83619c19f68d4cbfa5.mp3",
+      "text": "table",
+      "spokenText": "table",
+      "durationSeconds": 1.032,
+      "bytes": 16940
+    },
+    "en-08-word-06": {
+      "file": "audio/english/1406f9589d152da85635fdf6.mp3",
+      "text": "draw",
+      "spokenText": "draw",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "en-08-word-07": {
+      "file": "audio/english/6be588cd0ed89961c99884c1.mp3",
+      "text": "sing",
+      "spokenText": "sing",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "en-08-word-08": {
+      "file": "audio/english/4864c20493254b566b4b79dd.mp3",
+      "text": "dance",
+      "spokenText": "dance",
+      "durationSeconds": 1.104,
+      "bytes": 18092
+    },
+    "en-08-word-09": {
+      "file": "audio/english/de30016e1fa49a8110b2f870.mp3",
+      "text": "picture",
+      "spokenText": "picture",
+      "durationSeconds": 1.104,
+      "bytes": 18092
+    },
+    "en-08-word-10": {
+      "file": "audio/english/6a715796f1ba484417a8d3dc.mp3",
+      "text": "child",
+      "spokenText": "child",
+      "durationSeconds": 1.128,
+      "bytes": 18476
+    },
+    "en-08-word-11": {
+      "file": "audio/english/1103addc500d9b3c117cc643.mp3",
+      "text": "take pictures",
+      "spokenText": "take pictures",
+      "durationSeconds": 1.56,
+      "bytes": 25388
+    },
+    "en-08-word-12": {
+      "file": "audio/english/0d4fa4739eeb67506af64ccd.mp3",
+      "text": "Are you OK?",
+      "spokenText": "Are you OK?",
+      "durationSeconds": 1.416,
+      "bytes": 23084
+    },
+    "en-08-word-13": {
+      "file": "audio/english/87841d5a4504a64e1e135679.mp3",
+      "text": "dizzy",
+      "spokenText": "dizzy",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "en-08-word-14": {
+      "file": "audio/english/789dedb8fc558afe67f32bd7.mp3",
+      "text": "er",
+      "spokenText": "er",
+      "durationSeconds": 0.888,
+      "bytes": 14636
+    },
+    "en-08-word-15": {
+      "file": "audio/english/44bc8782fa3d54a26a538731.mp3",
+      "text": "fox",
+      "spokenText": "fox",
+      "durationSeconds": 1.152,
+      "bytes": 18860
+    },
+    "en-08-word-16": {
+      "file": "audio/english/74376ccf1dcd9d84dc92f18c.mp3",
+      "text": "thing",
+      "spokenText": "thing",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "en-alphabet-a": {
+      "file": "audio/english/7c3b3f77fa5b877963181b7d.mp3",
+      "text": "Aa",
+      "spokenText": "A",
+      "durationSeconds": 0.864,
+      "bytes": 14252
+    },
+    "en-alphabet-b": {
+      "file": "audio/english/75d85c295b1e9ae7783abd83.mp3",
+      "text": "Bb",
+      "spokenText": "B",
+      "durationSeconds": 0.888,
+      "bytes": 14636
+    },
+    "en-alphabet-c": {
+      "file": "audio/english/a1c186f96bf0df218d407d2a.mp3",
+      "text": "Cc",
+      "spokenText": "C",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "en-alphabet-d": {
+      "file": "audio/english/bc873d777aa862a9afc0feba.mp3",
+      "text": "Dd",
+      "spokenText": "D",
+      "durationSeconds": 0.888,
+      "bytes": 14636
+    },
+    "en-alphabet-e": {
+      "file": "audio/english/56a3b13e7259eadb0ae8f73a.mp3",
+      "text": "Ee",
+      "spokenText": "E",
+      "durationSeconds": 0.864,
+      "bytes": 14252
+    },
+    "en-alphabet-f": {
+      "file": "audio/english/9021205814e6675b6f14db22.mp3",
+      "text": "Ff",
+      "spokenText": "F",
+      "durationSeconds": 0.888,
+      "bytes": 14636
+    },
+    "en-alphabet-g": {
+      "file": "audio/english/c4e95a8f78d6333d0050584f.mp3",
+      "text": "Gg",
+      "spokenText": "G",
+      "durationSeconds": 0.888,
+      "bytes": 14636
+    },
+    "en-alphabet-h": {
+      "file": "audio/english/fa8c8251c61ce16f8d9b9f05.mp3",
+      "text": "Hh",
+      "spokenText": "H",
+      "durationSeconds": 0.936,
+      "bytes": 15404
+    },
+    "en-alphabet-i": {
+      "file": "audio/english/b9b1629468430fd0c45b9f03.mp3",
+      "text": "Ii",
+      "spokenText": "I",
+      "durationSeconds": 0.888,
+      "bytes": 14636
+    },
+    "en-alphabet-j": {
+      "file": "audio/english/8832b3044e69076128a5f1a6.mp3",
+      "text": "Jj",
+      "spokenText": "J",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-alphabet-k": {
+      "file": "audio/english/03fcb42c5e6a035a3fccb962.mp3",
+      "text": "Kk",
+      "spokenText": "K",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-alphabet-l": {
+      "file": "audio/english/a6a4d9c78e9ceee3c54545fb.mp3",
+      "text": "Ll",
+      "spokenText": "L",
+      "durationSeconds": 0.84,
+      "bytes": 13868
+    },
+    "en-alphabet-m": {
+      "file": "audio/english/17ae2d2f1aa655e40adb403d.mp3",
+      "text": "Mm",
+      "spokenText": "M",
+      "durationSeconds": 0.84,
+      "bytes": 13868
+    },
+    "en-alphabet-n": {
+      "file": "audio/english/746c82ddfd096868120ee442.mp3",
+      "text": "Nn",
+      "spokenText": "N",
+      "durationSeconds": 0.84,
+      "bytes": 13868
+    },
+    "en-alphabet-o": {
+      "file": "audio/english/595351cfde0279c82d5e21e2.mp3",
+      "text": "Oo",
+      "spokenText": "O",
+      "durationSeconds": 0.888,
+      "bytes": 14636
+    },
+    "en-alphabet-p": {
+      "file": "audio/english/1102dca7eb5ef1b284fd4328.mp3",
+      "text": "Pp",
+      "spokenText": "P",
+      "durationSeconds": 0.864,
+      "bytes": 14252
+    },
+    "en-alphabet-q": {
+      "file": "audio/english/d3beedd3047d13a957c837a9.mp3",
+      "text": "Qq",
+      "spokenText": "Q",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-alphabet-r": {
+      "file": "audio/english/1be328541ada5406c62d2bc5.mp3",
+      "text": "Rr",
+      "spokenText": "R",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-alphabet-s": {
+      "file": "audio/english/eadd1dea9da04c4fb8049182.mp3",
+      "text": "Ss",
+      "spokenText": "S",
+      "durationSeconds": 0.888,
+      "bytes": 14636
+    },
+    "en-alphabet-t": {
+      "file": "audio/english/09b8d4164f71060f38f59996.mp3",
+      "text": "Tt",
+      "spokenText": "T",
+      "durationSeconds": 0.888,
+      "bytes": 14636
+    },
+    "en-alphabet-u": {
+      "file": "audio/english/e314f6d4c79fa13d4e90179d.mp3",
+      "text": "Uu",
+      "spokenText": "U",
+      "durationSeconds": 0.888,
+      "bytes": 14636
+    },
+    "en-alphabet-v": {
+      "file": "audio/english/7d29e50e5dce380bd9e38c0b.mp3",
+      "text": "Vv",
+      "spokenText": "V",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "en-alphabet-w": {
+      "file": "audio/english/4b662b1cfab7efe19d9886d5.mp3",
+      "text": "Ww",
+      "spokenText": "double you",
+      "durationSeconds": 1.224,
+      "bytes": 20012
+    },
+    "en-alphabet-x": {
+      "file": "audio/english/69d6a7698832b2351815d845.mp3",
+      "text": "Xx",
+      "spokenText": "X",
+      "durationSeconds": 0.984,
+      "bytes": 16172
+    },
+    "en-alphabet-y": {
+      "file": "audio/english/94db169704556d1b6075078f.mp3",
+      "text": "Yy",
+      "spokenText": "Y",
+      "durationSeconds": 0.984,
+      "bytes": 16172
+    },
+    "en-alphabet-z": {
+      "file": "audio/english/aa36bd64a000cc36f060ccf0.mp3",
+      "text": "Zz",
+      "spokenText": "zed",
+      "durationSeconds": 0.984,
+      "bytes": 16172
+    }
+  },
+  "files": {
+    "audio/english/953cabc9f87f6b99f500e548.mp3": {
+      "durationSeconds": 1.056,
+      "bytes": 17324,
+      "sampleRate": 24000,
+      "peakDBFS": -6.14,
+      "rmsDBFS": -19.68,
+      "sha256": "8e988b7849b8a58c332efc8e32012a5162b7091866f0c2eb703623cd9b057197"
+    },
+    "audio/english/6285727ed82a809ca9d3f22f.mp3": {
+      "durationSeconds": 0.96,
+      "bytes": 15788,
+      "sampleRate": 24000,
+      "peakDBFS": -3.12,
+      "rmsDBFS": -20.06,
+      "sha256": "54198d8eb859d34e50b17969187cf3148a5d07509e09eb2788eb139e40a857b4"
+    },
+    "audio/english/b9b1629468430fd0c45b9f03.mp3": {
+      "durationSeconds": 0.888,
+      "bytes": 14636,
+      "sampleRate": 24000,
+      "peakDBFS": -4.47,
+      "rmsDBFS": -20.08,
+      "sha256": "757b6f21034c4b79a5634985d737d5bf8b5d277de9a39c183c84ca0eb2245a31"
+    },
+    "audio/english/dc42b2bee85046fc2cf9ff1d.mp3": {
+      "durationSeconds": 0.792,
+      "bytes": 13100,
+      "sampleRate": 24000,
+      "peakDBFS": -4.18,
+      "rmsDBFS": -19.06,
+      "sha256": "85c84d12cb8fcfa48a3170879f13380eb63ae9482579fd0e828970e69b07213c"
+    },
+    "audio/english/f754ac47ae8f1b9c61dac262.mp3": {
+      "durationSeconds": 0.864,
+      "bytes": 14252,
+      "sampleRate": 24000,
+      "peakDBFS": -2.83,
+      "rmsDBFS": -19.95,
+      "sha256": "a0140e3fed27a17fdf23bf6c4a006e213cffac0416dbe0eda286c7eda8e5a4cf"
+    },
+    "audio/english/648cf21a6545bd4519009098.mp3": {
+      "durationSeconds": 0.984,
+      "bytes": 16172,
+      "sampleRate": 24000,
+      "peakDBFS": -3.77,
+      "rmsDBFS": -21.25,
+      "sha256": "0e1749ca013fffcd80ba922c0347b3c043e8a05fb90a049eedc20ea73684d850"
+    },
+    "audio/english/dbbddd8d072e9b8a6abee8ea.mp3": {
+      "durationSeconds": 0.984,
+      "bytes": 16172,
+      "sampleRate": 24000,
+      "peakDBFS": -5.17,
+      "rmsDBFS": -19.96,
+      "sha256": "6c562ffe3ad68e4ded4275fa77427d874a60294dc257d37f0415b9a25c78054b"
+    },
+    "audio/english/38169f1f807e7a08c3147063.mp3": {
+      "durationSeconds": 1.056,
+      "bytes": 17324,
+      "sampleRate": 24000,
+      "peakDBFS": -4.53,
+      "rmsDBFS": -19.62,
+      "sha256": "0198f159078357de85a5b6091cb4d2b38f797b7fc3d8275c559cc37980dce894"
+    },
+    "audio/english/68539b9c778b3e9b9b106e96.mp3": {
+      "durationSeconds": 1.152,
+      "bytes": 18860,
+      "sampleRate": 24000,
+      "peakDBFS": -3.7,
+      "rmsDBFS": -19.08,
+      "sha256": "6d26b47be984aefcff4d9552d46fc6732d9befa2d2709d7389d98fb58ea3390e"
+    },
+    "audio/english/9d75914976e37ca49b9f8ced.mp3": {
+      "durationSeconds": 0.912,
+      "bytes": 15020,
+      "sampleRate": 24000,
+      "peakDBFS": -2.51,
+      "rmsDBFS": -19.65,
+      "sha256": "4b3a8f711947f0f030e4817862b2e3df778eb8650d1f06a9f94aad27d659f407"
+    },
+    "audio/english/bc30a73d058a19d5105ba5b7.mp3": {
+      "durationSeconds": 1.272,
+      "bytes": 20780,
+      "sampleRate": 24000,
+      "peakDBFS": -7.51,
+      "rmsDBFS": -19.12,
+      "sha256": "199189a6e531d0a5791333b8d6fe5d0d8a6c9fb03ded4ad3d0bfe4cac4ef8728"
+    },
+    "audio/english/397e1fa3d386434c25bdcbfa.mp3": {
+      "durationSeconds": 1.536,
+      "bytes": 25004,
+      "sampleRate": 24000,
+      "peakDBFS": -6.42,
+      "rmsDBFS": -18.58,
+      "sha256": "c9d0586c6e121b247112b8dc03d932e7ab5782a526f34d231a9173b554b9f54c"
+    },
+    "audio/english/05dbbaead8de255ccf085835.mp3": {
+      "durationSeconds": 0.912,
+      "bytes": 15020,
+      "sampleRate": 24000,
+      "peakDBFS": -4.47,
+      "rmsDBFS": -20.29,
+      "sha256": "ee4ba7ace2ffd91c10945f4db49cc7c0eabb6ffc02c039070741867a0a0095d0"
+    },
+    "audio/english/3a6a41917abb527cc2f3ea98.mp3": {
+      "durationSeconds": 0.96,
+      "bytes": 15788,
+      "sampleRate": 24000,
+      "peakDBFS": -3.28,
+      "rmsDBFS": -20.1,
+      "sha256": "67fff21a02e7cfcdb27af8cc58ac1c27b19c7b9d3e3c697181381ebae41a6d96"
+    },
+    "audio/english/be63d845b60544ffe1e00ff6.mp3": {
+      "durationSeconds": 0.888,
+      "bytes": 14636,
+      "sampleRate": 24000,
+      "peakDBFS": -2.98,
+      "rmsDBFS": -18.82,
+      "sha256": "74bbce077a64922515e6aaa72ae5f66962f8ce0030ec25ef1b3646708af31515"
+    },
+    "audio/english/497ca6299245960be752ce0f.mp3": {
+      "durationSeconds": 0.912,
+      "bytes": 15020,
+      "sampleRate": 24000,
+      "peakDBFS": -6.25,
+      "rmsDBFS": -20.12,
+      "sha256": "8374cef36da3697519e42510c2d2fc3d16e1ca41a2f4cf339d4beb6b16996fde"
+    },
+    "audio/english/6ea2984dd2e61f9808852c4a.mp3": {
+      "durationSeconds": 0.96,
+      "bytes": 15788,
+      "sampleRate": 24000,
+      "peakDBFS": -7.61,
+      "rmsDBFS": -19.55,
+      "sha256": "ad14ac6de3ebdfbe72fb4b7c602faf2eae6ce6cc42b9d9ca4dc68735f835f90b"
+    },
+    "audio/english/dcdfc6efa259cd52fca086b0.mp3": {
+      "durationSeconds": 0.912,
+      "bytes": 15020,
+      "sampleRate": 24000,
+      "peakDBFS": -4.59,
+      "rmsDBFS": -19.12,
+      "sha256": "ae32784ac2c1f0752bfea432d6a6145944739e4dc15e2187f57bf440c2d49bcf"
+    },
+    "audio/english/739ca8a123783b3ebe53080a.mp3": {
+      "durationSeconds": 0.912,
+      "bytes": 15020,
+      "sampleRate": 24000,
+      "peakDBFS": -5.51,
+      "rmsDBFS": -19.61,
+      "sha256": "d0cef9e09dbfba4e507d481511926d403341b4431df6930fda86445ad6245759"
+    },
+    "audio/english/194c442b9223f31ea447519c.mp3": {
+      "durationSeconds": 0.936,
+      "bytes": 15404,
+      "sampleRate": 24000,
+      "peakDBFS": -3.48,
+      "rmsDBFS": -19.19,
+      "sha256": "0a3630c89b150718b0eb89d1e4df7e0dc1360610ea7533e15517416532fe17c7"
+    },
+    "audio/english/69dcd7b93ee061a2edc1bbcc.mp3": {
+      "durationSeconds": 0.936,
+      "bytes": 15404,
+      "sampleRate": 24000,
+      "peakDBFS": -2.51,
+      "rmsDBFS": -19.31,
+      "sha256": "1f20ffcafb95c67e2dd024f2c8c5039838b2e5d11284de8ebc4110cb4090a989"
+    },
+    "audio/english/17b50ed0142b032b0da6b8df.mp3": {
+      "durationSeconds": 0.936,
+      "bytes": 15404,
+      "sampleRate": 24000,
+      "peakDBFS": -3.57,
+      "rmsDBFS": -19.27,
+      "sha256": "38fd32e88cd16a405ea58bb60493de721ab9c3d1590dbb4c3888da3d63437f93"
+    },
+    "audio/english/4c6a25f09d5287270ccef572.mp3": {
+      "durationSeconds": 1.128,
+      "bytes": 18476,
+      "sampleRate": 24000,
+      "peakDBFS": -5.64,
+      "rmsDBFS": -19.39,
+      "sha256": "e62d672f13fa6e28eb94a112aea579a1d60279496a81e242db63df50d098ac79"
+    },
+    "audio/english/f1d36d9a02e2024801c15e4e.mp3": {
+      "durationSeconds": 1.656,
+      "bytes": 26924,
+      "sampleRate": 24000,
+      "peakDBFS": -7.31,
+      "rmsDBFS": -18.88,
+      "sha256": "36df18038beb4ee83a7c4b31acd36d834309ad5367bd8ad54f91210c18ba1657"
+    },
+    "audio/english/ee84259376fc14d438cb3c03.mp3": {
+      "durationSeconds": 0.864,
+      "bytes": 14252,
+      "sampleRate": 24000,
+      "peakDBFS": -4.52,
+      "rmsDBFS": -20.03,
+      "sha256": "6ea8118042808a9860a73ae7d6799f7af37d817220ab48363b50165e5da27fea"
+    },
+    "audio/english/b608509b022a72dff3fa0b14.mp3": {
+      "durationSeconds": 0.888,
+      "bytes": 14636,
+      "sampleRate": 24000,
+      "peakDBFS": -6.34,
+      "rmsDBFS": -19.16,
+      "sha256": "f1433ef5e4dfc52566dbd9d9b09206ae96c594e9a6aefa246089b4b883d40f0a"
+    },
+    "audio/english/c0ce534f2032e04017135517.mp3": {
+      "durationSeconds": 0.936,
+      "bytes": 15404,
+      "sampleRate": 24000,
+      "peakDBFS": -6.69,
+      "rmsDBFS": -19.94,
+      "sha256": "a52b4f2abdec34491595222e0815b46f9fc08caa7d4d11f730e6b6a1ed1792e6"
+    },
+    "audio/english/54bd3f874f640418137883e2.mp3": {
+      "durationSeconds": 0.984,
+      "bytes": 16172,
+      "sampleRate": 24000,
+      "peakDBFS": -4.85,
+      "rmsDBFS": -19.88,
+      "sha256": "935628d8f63e7881c5dedad7fc632fc4e1546619effc06f347ffd2360e01c25d"
+    },
+    "audio/english/a62d45d36a481f761b5aaaa8.mp3": {
+      "durationSeconds": 0.96,
+      "bytes": 15788,
+      "sampleRate": 24000,
+      "peakDBFS": -2.69,
+      "rmsDBFS": -19.55,
+      "sha256": "dacb074230582e3dcff21e07336d2f82d49286103a1e9ca39388be6474f25daa"
+    },
+    "audio/english/94a99fac4442cb9b43afccb6.mp3": {
+      "durationSeconds": 0.912,
+      "bytes": 15020,
+      "sampleRate": 24000,
+      "peakDBFS": -2.45,
+      "rmsDBFS": -21.74,
+      "sha256": "0d3df2450abee3d5535057450ded741796075917d8391484000cbc4a487c4585"
+    },
+    "audio/english/438e735b8744169b5d782450.mp3": {
+      "durationSeconds": 1.08,
+      "bytes": 17708,
+      "sampleRate": 24000,
+      "peakDBFS": -4.7,
+      "rmsDBFS": -20.4,
+      "sha256": "2df850c9c6f56b41bd98fac8f36cd5ac9e5eb96bddb8f32f9ad044ed82a2d499"
+    },
+    "audio/english/74f4e57b4606c1defb225e03.mp3": {
+      "durationSeconds": 0.912,
+      "bytes": 15020,
+      "sampleRate": 24000,
+      "peakDBFS": -5.07,
+      "rmsDBFS": -19.25,
+      "sha256": "127d87603469fc246fe0df32fc23e69696d347aec49544f2815836d220743a20"
+    },
+    "audio/english/a964e371564d8fe13e245d09.mp3": {
+      "durationSeconds": 0.84,
+      "bytes": 13868,
+      "sampleRate": 24000,
+      "peakDBFS": -4.69,
+      "rmsDBFS": -19.17,
+      "sha256": "3797414625d9b965c4f1b958be8d3a06641146eb4d5b3d60e5d6c0d5fa6228b3"
+    },
+    "audio/english/95c4049edf9783dfc698bf25.mp3": {
+      "durationSeconds": 0.936,
+      "bytes": 15404,
+      "sampleRate": 24000,
+      "peakDBFS": -5.17,
+      "rmsDBFS": -20.02,
+      "sha256": "54ec6bcdb0d7d7ee8da7f7c4b84fb936e8b08f8062a51bda48e3994f3f3d3d08"
+    },
+    "audio/english/5aa80072c426263f404b89eb.mp3": {
+      "durationSeconds": 1.008,
+      "bytes": 16556,
+      "sampleRate": 24000,
+      "peakDBFS": -3.54,
+      "rmsDBFS": -20.45,
+      "sha256": "6026c1064b3c8b30e21e792de58e9b46069a4166630e932fe1e99db9e821743f"
+    },
+    "audio/english/cb385328b0359932d479de4d.mp3": {
+      "durationSeconds": 1.248,
+      "bytes": 20396,
+      "sampleRate": 24000,
+      "peakDBFS": -4.75,
+      "rmsDBFS": -18.94,
+      "sha256": "88874e2ad96b7302c2334b6113b60a6a6298209c443c5dc96985613d9d98a986"
+    },
+    "audio/english/4103b7ddf08c26e56e86c4a4.mp3": {
+      "durationSeconds": 0.912,
+      "bytes": 15020,
+      "sampleRate": 24000,
+      "peakDBFS": -3.63,
+      "rmsDBFS": -19.81,
+      "sha256": "7a0c9de0c82a0e9faadb8fdb6659c47bc9e8e02114d4bf548e7022f459b4c919"
+    },
+    "audio/english/a30dbccb354613f003fc8b6a.mp3": {
+      "durationSeconds": 0.888,
+      "bytes": 14636,
+      "sampleRate": 24000,
+      "peakDBFS": -3.95,
+      "rmsDBFS": -19.99,
+      "sha256": "da3330ba2b8a30b1da4c6d2f7172572c389f4896a7e278f1e3fd244070b19061"
+    },
+    "audio/english/d911c99ed46941a63fae1236.mp3": {
+      "durationSeconds": 0.936,
+      "bytes": 15404,
+      "sampleRate": 24000,
+      "peakDBFS": -5.26,
+      "rmsDBFS": -19.83,
+      "sha256": "5017f1d0de972af8931801c9dfbb2b5d425dfda3b6fd133be26ffb0cb719d296"
+    },
+    "audio/english/f56ff06d2a2c3fc8cda7b64b.mp3": {
+      "durationSeconds": 1.416,
+      "bytes": 23084,
+      "sampleRate": 24000,
+      "peakDBFS": -7.04,
+      "rmsDBFS": -19.63,
+      "sha256": "5eefa41337b00f18d35e3bb0c92f867e84ed5fb70c2779648fa3fddf43198c01"
+    },
+    "audio/english/3644cbcffb66da3bc04ea9f7.mp3": {
+      "durationSeconds": 0.936,
+      "bytes": 15404,
+      "sampleRate": 24000,
+      "peakDBFS": -2.83,
+      "rmsDBFS": -19.11,
+      "sha256": "ba7001936e6386bad9cbc53d2c1ddeabb5bc42e7ebd09df46da7c57922adafbf"
+    },
+    "audio/english/24ad9e07598ae051f8117056.mp3": {
+      "durationSeconds": 1.128,
+      "bytes": 18476,
+      "sampleRate": 24000,
+      "peakDBFS": -3.71,
+      "rmsDBFS": -20.24,
+      "sha256": "a1bc3e1a2afa3466273f3ced81b917037bd9c911693804268132685266085179"
+    },
+    "audio/english/bd72980d32c73a59b42f60bb.mp3": {
+      "durationSeconds": 0.912,
+      "bytes": 15020,
+      "sampleRate": 24000,
+      "peakDBFS": -5.44,
+      "rmsDBFS": -20.17,
+      "sha256": "5bcf74804293cf48bf0f899a91ffee88a489152fa5f82587ab6e1b89c1e4b3f0"
+    },
+    "audio/english/7de3a10169054501e096c09a.mp3": {
+      "durationSeconds": 0.864,
+      "bytes": 14252,
+      "sampleRate": 24000,
+      "peakDBFS": -6.72,
+      "rmsDBFS": -19.86,
+      "sha256": "fee93d5aeaada9aa4a01ecf1b26441cdeed0fb3637462e7b8f2cd6d838e9e3ee"
+    },
+    "audio/english/c93a18c915f5d42d685a299e.mp3": {
+      "durationSeconds": 0.84,
+      "bytes": 13868,
+      "sampleRate": 24000,
+      "peakDBFS": -3.72,
+      "rmsDBFS": -20.17,
+      "sha256": "a9c1d481487aad47a267afb34c26861003bc9a3b4e7c63a2c1b974baf89048c6"
+    },
+    "audio/english/39057e4fd56c9b06b3db88eb.mp3": {
+      "durationSeconds": 0.912,
+      "bytes": 15020,
+      "sampleRate": 24000,
+      "peakDBFS": -5.15,
+      "rmsDBFS": -19.94,
+      "sha256": "d3740d3a7d399e12ec13619da9d043878a46c5ebc847a4518a572d9d805beb26"
+    },
+    "audio/english/f991660ac9d00dbb80622cf5.mp3": {
+      "durationSeconds": 0.96,
+      "bytes": 15788,
+      "sampleRate": 24000,
+      "peakDBFS": -3.12,
+      "rmsDBFS": -20.17,
+      "sha256": "920e2935227c91790c304b870ff1c9477e3deedbfe0fd928118f24791a438318"
+    },
+    "audio/english/a8096d690d6355bcab027c55.mp3": {
+      "durationSeconds": 0.96,
+      "bytes": 15788,
+      "sampleRate": 24000,
+      "peakDBFS": -7.58,
+      "rmsDBFS": -19.43,
+      "sha256": "5471eea22b1e287ee88f755e37d57e3a8d4efa149e40cbfe59c696923d4dd2d9"
+    },
+    "audio/english/75f6a3e67a8bf729d3685125.mp3": {
+      "durationSeconds": 1.2,
+      "bytes": 19628,
+      "sampleRate": 24000,
+      "peakDBFS": -4.47,
+      "rmsDBFS": -18.81,
+      "sha256": "d86122b4d23d87f378c8dd4644ee0911dc6752327091c3d0bdcd83c8ddaaa765"
+    },
+    "audio/english/932bfa88bf75f7ec5aee52ab.mp3": {
+      "durationSeconds": 1.008,
+      "bytes": 16556,
+      "sampleRate": 24000,
+      "peakDBFS": -5.83,
+      "rmsDBFS": -19.29,
+      "sha256": "ba428d1dc33ba615086ed5dd1138c335d145ce54aedeb14fbd4e894745e70d5a"
+    },
+    "audio/english/b4ab9dad17da24be44e15252.mp3": {
+      "durationSeconds": 1.104,
+      "bytes": 18092,
+      "sampleRate": 24000,
+      "peakDBFS": -3.53,
+      "rmsDBFS": -19.47,
+      "sha256": "72aa0e0995b1864047039d05b29a124929db8ccb06a7a5361ea2ef1c3fc522fb"
+    },
+    "audio/english/55e20d86f94724c7661fc9fa.mp3": {
+      "durationSeconds": 0.936,
+      "bytes": 15404,
+      "sampleRate": 24000,
+      "peakDBFS": -2.57,
+      "rmsDBFS": -20.72,
+      "sha256": "2362fc09413fc3b0cfcea5dfc2f6fb3d47045bb76ae43b92e744f957cf427497"
+    },
+    "audio/english/89750fb1ff5367ce87230f5f.mp3": {
+      "durationSeconds": 0.912,
+      "bytes": 15020,
+      "sampleRate": 24000,
+      "peakDBFS": -6.49,
+      "rmsDBFS": -19.86,
+      "sha256": "fe9846dd77a6076f429a57611a04c8fc785119e650c1e5a5722c081fdb1a5225"
+    },
+    "audio/english/bf00f77000cc3b0418649007.mp3": {
+      "durationSeconds": 0.984,
+      "bytes": 16172,
+      "sampleRate": 24000,
+      "peakDBFS": -4.2,
+      "rmsDBFS": -19.54,
+      "sha256": "04f581595da0bdb95e801c031e84bb8c47f3f902ef2ef0e81640c83a65005359"
+    },
+    "audio/english/9d36ad2b1a243bc4ec20e495.mp3": {
+      "durationSeconds": 1.008,
+      "bytes": 16556,
+      "sampleRate": 24000,
+      "peakDBFS": -3.79,
+      "rmsDBFS": -18.76,
+      "sha256": "a9a2abc196c4ec1f0efda23921ffcc50a503c3f00f9f7df686fceba79f105034"
+    },
+    "audio/english/a1d0949918a2c9230802332f.mp3": {
+      "durationSeconds": 1.152,
+      "bytes": 18860,
+      "sampleRate": 24000,
+      "peakDBFS": -4.55,
+      "rmsDBFS": -20.79,
+      "sha256": "67836f74bf7d187c761ba8a9be89c2e2624cb789cd474691583e59319876e889"
+    },
+    "audio/english/70c6fb95c017be1c82d69d2d.mp3": {
+      "durationSeconds": 0.936,
+      "bytes": 15404,
+      "sampleRate": 24000,
+      "peakDBFS": -3.22,
+      "rmsDBFS": -19.93,
+      "sha256": "9d28b7e1e2cae74f393cc69c1203d85b46ba5f8c94c5591430edf224ec85be84"
+    },
+    "audio/english/3b2c0a641b2fd889df5a766f.mp3": {
+      "durationSeconds": 0.84,
+      "bytes": 13868,
+      "sampleRate": 24000,
+      "peakDBFS": -4.91,
+      "rmsDBFS": -19.68,
+      "sha256": "9af9d712c5c8d38fb5cc2d02e48b8c58784f614065ce9b98606738b42ca547bd"
+    },
+    "audio/english/fe22d408c647c161b5c898cc.mp3": {
+      "durationSeconds": 0.888,
+      "bytes": 14636,
+      "sampleRate": 24000,
+      "peakDBFS": -5.41,
+      "rmsDBFS": -19.15,
+      "sha256": "49a2da35a9cdb2c4fa4dc3f15871b13aaa629cc47e5ea6316b2af20d6eb6a8ec"
+    },
+    "audio/english/1b77df4984cc7e012ab9aea1.mp3": {
+      "durationSeconds": 1.008,
+      "bytes": 16556,
+      "sampleRate": 24000,
+      "peakDBFS": -5.03,
+      "rmsDBFS": -20.6,
+      "sha256": "55644fb16a4d43737bff1d6f3792fe2cf82d52e5d689dabd975b9308f8965cb4"
+    },
+    "audio/english/910c8089edff5c64efa1dcac.mp3": {
+      "durationSeconds": 0.888,
+      "bytes": 14636,
+      "sampleRate": 24000,
+      "peakDBFS": -3.09,
+      "rmsDBFS": -19.42,
+      "sha256": "9531313a2e3c1f890769d8a46aaf9b17473dc78eeb8492fa2c8b443e0eef4f09"
+    },
+    "audio/english/840fc46623086c1b3aaafc36.mp3": {
+      "durationSeconds": 0.984,
+      "bytes": 16172,
+      "sampleRate": 24000,
+      "peakDBFS": -5.82,
+      "rmsDBFS": -19.84,
+      "sha256": "c08fe9d1c556fea7b8d885b7ce585461798e4b8f8f52721a59e1d108eef56a15"
+    },
+    "audio/english/3f877564177896c8ba3f6812.mp3": {
+      "durationSeconds": 1.152,
+      "bytes": 18860,
+      "sampleRate": 24000,
+      "peakDBFS": -6.9,
+      "rmsDBFS": -19.5,
+      "sha256": "7d2b2f339823c19c19929cdce56837aab5209564153ea303f4ecaa97630af0ff"
+    },
+    "audio/english/fe637609e97fa38d0937246b.mp3": {
+      "durationSeconds": 0.984,
+      "bytes": 16172,
+      "sampleRate": 24000,
+      "peakDBFS": -4.93,
+      "rmsDBFS": -21.03,
+      "sha256": "585c8c62139d92843f9bb09650140485280d32a922550f8e952d9433d3f9d4fb"
+    },
+    "audio/english/10ffa438c81124cacbb5edff.mp3": {
+      "durationSeconds": 1.296,
+      "bytes": 21164,
+      "sampleRate": 24000,
+      "peakDBFS": -5.76,
+      "rmsDBFS": -18.91,
+      "sha256": "67659188317092529c398980966daf0607b254c48a276d314a5215ccbc269fcc"
+    },
+    "audio/english/865a1481ef379b1eb562a48f.mp3": {
+      "durationSeconds": 0.984,
+      "bytes": 16172,
+      "sampleRate": 24000,
+      "peakDBFS": -3.64,
+      "rmsDBFS": -20.65,
+      "sha256": "a0e7394f0b64c45dc5ea46943e68aff83802d74e4688526a94d0709d0c0d1321"
+    },
+    "audio/english/1a6f86479a3f0316c6a6554d.mp3": {
+      "durationSeconds": 1.032,
+      "bytes": 16940,
+      "sampleRate": 24000,
+      "peakDBFS": -5.48,
+      "rmsDBFS": -20.05,
+      "sha256": "9e80be98440ee1f26cbb9e32b3b305e380c5e5943d72a4f390aa9c0d492f990e"
+    },
+    "audio/english/f5bca42fc945d8cea7af0ed7.mp3": {
+      "durationSeconds": 1.44,
+      "bytes": 23468,
+      "sampleRate": 24000,
+      "peakDBFS": -5.6,
+      "rmsDBFS": -18.84,
+      "sha256": "fd137114525cb6fbb9a728bc4062def420aaf68096a885f58f2eadddc10fef9e"
+    },
+    "audio/english/08a93c3fa981183d07dd15c7.mp3": {
+      "durationSeconds": 1.056,
+      "bytes": 17324,
+      "sampleRate": 24000,
+      "peakDBFS": -5.83,
+      "rmsDBFS": -19.02,
+      "sha256": "71641bd728d60629f80313897b54169b4306b063681c3354abbfb2a96000156f"
+    },
+    "audio/english/9821c06edc7d5ee661735570.mp3": {
+      "durationSeconds": 0.984,
+      "bytes": 16172,
+      "sampleRate": 24000,
+      "peakDBFS": -5.66,
+      "rmsDBFS": -20.22,
+      "sha256": "3f629f8d31cb5e54284f3460c27a2f3e45c8ecd79c90c246bbc9bca8268f22c5"
+    },
+    "audio/english/b15911c0a6949aa147600a5e.mp3": {
+      "durationSeconds": 1.392,
+      "bytes": 22700,
+      "sampleRate": 24000,
+      "peakDBFS": -6.62,
+      "rmsDBFS": -19.14,
+      "sha256": "7872abe315dc43bb5b7019eb9db98caab7d9e84b89e98807c194ada3cef8993b"
+    },
+    "audio/english/5aa6434e8ae70ddfeb71c34b.mp3": {
+      "durationSeconds": 1.008,
+      "bytes": 16556,
+      "sampleRate": 24000,
+      "peakDBFS": -5.04,
+      "rmsDBFS": -20.31,
+      "sha256": "ae731b9e7b6c2e0b17569a84ea8dc4ec0e1cb90e8d161a4f961deadf09b0117e"
+    },
+    "audio/english/ab8b0e0b3dbc9667c06955af.mp3": {
+      "durationSeconds": 0.912,
+      "bytes": 15020,
+      "sampleRate": 24000,
+      "peakDBFS": -5.69,
+      "rmsDBFS": -19.58,
+      "sha256": "7cefc54ea00ea29f959d3edbe47475aefaaec64dbc23cc92ca2c5b943103c205"
+    },
+    "audio/english/b24aac03a38de603a1fdd9b3.mp3": {
+      "durationSeconds": 0.864,
+      "bytes": 14252,
+      "sampleRate": 24000,
+      "peakDBFS": -7.07,
+      "rmsDBFS": -19.62,
+      "sha256": "398aa666223a5f64717ddb23df823e76f7bbd55aab688978527f39e143bf8942"
+    },
+    "audio/english/96ca289f0d5533a131861ea2.mp3": {
+      "durationSeconds": 0.888,
+      "bytes": 14636,
+      "sampleRate": 24000,
+      "peakDBFS": -4.71,
+      "rmsDBFS": -19.51,
+      "sha256": "139d210d90967c4cea1dda52201af29cbbb6b640be96275e56650346ec6a5f4a"
+    },
+    "audio/english/ebaa413727ba94be794a93b2.mp3": {
+      "durationSeconds": 1.008,
+      "bytes": 16556,
+      "sampleRate": 24000,
+      "peakDBFS": -2.45,
+      "rmsDBFS": -19.66,
+      "sha256": "72a53bf85c4dba471ff376b9b1416339ba99fc0547829d833fb589d921ed4a9f"
+    },
+    "audio/english/d16e88deca5b8ba12532db46.mp3": {
+      "durationSeconds": 1.008,
+      "bytes": 16556,
+      "sampleRate": 24000,
+      "peakDBFS": -3.45,
+      "rmsDBFS": -19.67,
+      "sha256": "4735e4f0dd7956df3afe671485d6dc8cd3a092ead4e595de00184f9de4dc9b81"
+    },
+    "audio/english/e8654a271a9be9f9fdf5974d.mp3": {
+      "durationSeconds": 0.96,
+      "bytes": 15788,
+      "sampleRate": 24000,
+      "peakDBFS": -4.8,
+      "rmsDBFS": -19.75,
+      "sha256": "fd1c0fffa51d8b74149f272bb4c3cda866d9300f08896833fb800d61e0cf9d31"
+    },
+    "audio/english/d9db859e9aa9ec33fb237ecc.mp3": {
+      "durationSeconds": 0.912,
+      "bytes": 15020,
+      "sampleRate": 24000,
+      "peakDBFS": -3.7,
+      "rmsDBFS": -19.15,
+      "sha256": "ef2cd1aecc2a3fceea3d9062441c666026a9e894c064ad5ef6d5717a91b02de2"
+    },
+    "audio/english/14db528105fbde51f0baa16e.mp3": {
+      "durationSeconds": 0.912,
+      "bytes": 15020,
+      "sampleRate": 24000,
+      "peakDBFS": -5.67,
+      "rmsDBFS": -19.57,
+      "sha256": "3d7838d63596ead96a9aa50c700ff1dcacfea6cee31add74f7f290f83ddfd946"
+    },
+    "audio/english/12c557aa318d2bd8a0b0be3c.mp3": {
+      "durationSeconds": 0.984,
+      "bytes": 16172,
+      "sampleRate": 24000,
+      "peakDBFS": -5.28,
+      "rmsDBFS": -20.2,
+      "sha256": "5bc6f005a86e78095a0826ebaa83eb60c5c1b7f901b94d04ba25185c55852348"
+    },
+    "audio/english/d5cdc14e302303c05f647675.mp3": {
+      "durationSeconds": 0.96,
+      "bytes": 15788,
+      "sampleRate": 24000,
+      "peakDBFS": -4.59,
+      "rmsDBFS": -20.18,
+      "sha256": "e9b3e8cd4ba1b2f2eb34c752cee59ccd44ead94a366c582bd51d756151f7c092"
+    },
+    "audio/english/2e021c7d64784b4573bc3614.mp3": {
+      "durationSeconds": 1.104,
+      "bytes": 18092,
+      "sampleRate": 24000,
+      "peakDBFS": -2.47,
+      "rmsDBFS": -20.52,
+      "sha256": "a5e2e8613cc4f413aa016609d5be855a20fd4822ae95b5adfa42a73ffe0fca14"
+    },
+    "audio/english/4a6a738e73933f6652fc46d8.mp3": {
+      "durationSeconds": 1.104,
+      "bytes": 18092,
+      "sampleRate": 24000,
+      "peakDBFS": -2.49,
+      "rmsDBFS": -21.36,
+      "sha256": "58bee7469aac72295863bdc4df14683fee22b18181dace9f5d15e159f546d01e"
+    },
+    "audio/english/70f4a7cfe465cabe8b3cfa50.mp3": {
+      "durationSeconds": 1.056,
+      "bytes": 17324,
+      "sampleRate": 24000,
+      "peakDBFS": -4.81,
+      "rmsDBFS": -20.38,
+      "sha256": "e08ca81cbe4df49e0541b181e2abcc7a10408b6150eea0eb2cc6f1e81f2c62f2"
+    },
+    "audio/english/18ae34df7e20e7defd3ad907.mp3": {
+      "durationSeconds": 0.936,
+      "bytes": 15404,
+      "sampleRate": 24000,
+      "peakDBFS": -3.68,
+      "rmsDBFS": -19.98,
+      "sha256": "9674422320fb3174fb714c4d2847e6ede73020d8f5500302aa71f37b371e945e"
+    },
+    "audio/english/c0c5dbee74731e4c264de772.mp3": {
+      "durationSeconds": 1.008,
+      "bytes": 16556,
+      "sampleRate": 24000,
+      "peakDBFS": -6.84,
+      "rmsDBFS": -19.0,
+      "sha256": "23a1123c659b99b3a7fa62f0b1449efafb3f3d4ae7cf4f711f29313c27098b32"
+    },
+    "audio/english/39e6c8afccf172a3aece22b4.mp3": {
+      "durationSeconds": 0.912,
+      "bytes": 15020,
+      "sampleRate": 24000,
+      "peakDBFS": -4.81,
+      "rmsDBFS": -19.81,
+      "sha256": "228e668709173b1e065aee8aca5d653670b9f05eb7788ec41cd6e93ac6f6a39a"
+    },
+    "audio/english/32fee1e627cd5fbf7c7a08d7.mp3": {
+      "durationSeconds": 0.96,
+      "bytes": 15788,
+      "sampleRate": 24000,
+      "peakDBFS": -5.65,
+      "rmsDBFS": -19.47,
+      "sha256": "9aa015d28be2aff5e46c95f067e07bc2a21228894d50fc4032d3ca2861ad3212"
+    },
+    "audio/english/eedfb8b2ce7e367ba1f96374.mp3": {
+      "durationSeconds": 1.032,
+      "bytes": 16940,
+      "sampleRate": 24000,
+      "peakDBFS": -5.21,
+      "rmsDBFS": -20.69,
+      "sha256": "2852272f2524041d81177a991ff07e1bc6a0eaf2d6dde85775cc9cb1c5ab957e"
+    },
+    "audio/english/0d2d3ab21ad284d0818cfc23.mp3": {
+      "durationSeconds": 0.96,
+      "bytes": 15788,
+      "sampleRate": 24000,
+      "peakDBFS": -3.46,
+      "rmsDBFS": -20.28,
+      "sha256": "061874596d03fa231a4ca8cdc449f98f2fce6d3be08dbd5e80c38c8f80a3d019"
+    },
+    "audio/english/aa3faafca15c7cd174eec60f.mp3": {
+      "durationSeconds": 0.912,
+      "bytes": 15020,
+      "sampleRate": 24000,
+      "peakDBFS": -4.34,
+      "rmsDBFS": -20.62,
+      "sha256": "522032ba50c064e82bcf1b946de35f9ff466ee49a3de355304db73102ba841f6"
+    },
+    "audio/english/c9ba3eecb099a9e8cc6d9639.mp3": {
+      "durationSeconds": 0.912,
+      "bytes": 15020,
+      "sampleRate": 24000,
+      "peakDBFS": -7.47,
+      "rmsDBFS": -19.96,
+      "sha256": "a83d8db801ec29e85c9253b22df3e0bc7995e7c98edefa4585f9b6040e97aae2"
+    },
+    "audio/english/6aaaa69ce754edd7ce499dc7.mp3": {
+      "durationSeconds": 0.96,
+      "bytes": 15788,
+      "sampleRate": 24000,
+      "peakDBFS": -4.46,
+      "rmsDBFS": -20.87,
+      "sha256": "459579c62ab79aced11ab63dbfff8090ba027d700419c9fb674415dc5a7d05b5"
+    },
+    "audio/english/c126029dac2ae1221eb63d05.mp3": {
+      "durationSeconds": 0.96,
+      "bytes": 15788,
+      "sampleRate": 24000,
+      "peakDBFS": -4.11,
+      "rmsDBFS": -20.62,
+      "sha256": "46def3f569169ffcffe5cc91225e8216ff48704efa1d632e721b4e5c60caf0dd"
+    },
+    "audio/english/f6af907569d88a6e7ff6b5df.mp3": {
+      "durationSeconds": 0.936,
+      "bytes": 15404,
+      "sampleRate": 24000,
+      "peakDBFS": -5.03,
+      "rmsDBFS": -19.7,
+      "sha256": "ce979d54d8fc87b16540bc5879c91b3bd305e8b75557b6cae40251bf86b499b0"
+    },
+    "audio/english/4a4e581f58de430a484a71eb.mp3": {
+      "durationSeconds": 0.984,
+      "bytes": 16172,
+      "sampleRate": 24000,
+      "peakDBFS": -4.4,
+      "rmsDBFS": -20.3,
+      "sha256": "75e244e98b5cb2192daaef16c6a041673fb09749b6b4d1b5f50dc1853e84af9b"
+    },
+    "audio/english/0b39e1dd630d74ca98d485c3.mp3": {
+      "durationSeconds": 1.056,
+      "bytes": 17324,
+      "sampleRate": 24000,
+      "peakDBFS": -4.34,
+      "rmsDBFS": -19.16,
+      "sha256": "f33ae45f4ac7ef57a1d7f81ab84b71d829e71cc11acf6acdb6349a6ae2f44536"
+    },
+    "audio/english/87bd053c3dbcf40497e23151.mp3": {
+      "durationSeconds": 1.032,
+      "bytes": 16940,
+      "sampleRate": 24000,
+      "peakDBFS": -4.85,
+      "rmsDBFS": -20.02,
+      "sha256": "85f630c33aa7d3e241037744dacda5f6c755327aeaa4e32f54161c2b619c728e"
+    },
+    "audio/english/3d2ed756cb82bf878a170c9f.mp3": {
+      "durationSeconds": 0.912,
+      "bytes": 15020,
+      "sampleRate": 24000,
+      "peakDBFS": -3.73,
+      "rmsDBFS": -20.27,
+      "sha256": "381b922990c552155395b9737e5be3e1c68804958063abf36b28c737b89182c5"
+    },
+    "audio/english/b6b2a40d61c12f4dfa6eb835.mp3": {
+      "durationSeconds": 1.128,
+      "bytes": 18476,
+      "sampleRate": 24000,
+      "peakDBFS": -2.46,
+      "rmsDBFS": -19.92,
+      "sha256": "ad78a2a68500ba10e72e0b91e28ffb2f333ac8662bb1aec7117c20fb2969d93a"
+    },
+    "audio/english/da058a68f70d54837e91e911.mp3": {
+      "durationSeconds": 1.584,
+      "bytes": 25772,
+      "sampleRate": 24000,
+      "peakDBFS": -3.94,
+      "rmsDBFS": -18.95,
+      "sha256": "44d9dff4bff8a5779cfd9700cc876937cc204fc6f48e781ba9d7c64fb7487914"
+    },
+    "audio/english/95572a1faa2d72d7479bcb98.mp3": {
+      "durationSeconds": 1.296,
+      "bytes": 21164,
+      "sampleRate": 24000,
+      "peakDBFS": -5.28,
+      "rmsDBFS": -19.34,
+      "sha256": "2ffe018ee932dbbfa8b30e95cf07055551afe31e44d41619e2c078390aca53d8"
+    },
+    "audio/english/82e527b4222cb5f6e3aea46d.mp3": {
+      "durationSeconds": 1.56,
+      "bytes": 25388,
+      "sampleRate": 24000,
+      "peakDBFS": -6.03,
+      "rmsDBFS": -18.9,
+      "sha256": "9f93d7b74a814e665dce33f5064eccf583644bf43eeb573ffccc5d73e8e88f05"
+    },
+    "audio/english/df9dfd4936f50ce51fa00bf4.mp3": {
+      "durationSeconds": 1.848,
+      "bytes": 29996,
+      "sampleRate": 24000,
+      "peakDBFS": -2.48,
+      "rmsDBFS": -19.32,
+      "sha256": "1b9e616de01b76822fb748b5e307216e1299301c1717b13cafef3c1c8ff0c23d"
+    },
+    "audio/english/81f74782aafcf88fd9e68694.mp3": {
+      "durationSeconds": 1.56,
+      "bytes": 25388,
+      "sampleRate": 24000,
+      "peakDBFS": -5.56,
+      "rmsDBFS": -18.92,
+      "sha256": "78f84225990477df9f6e3e02c4d1626ed4143a16c8f713477734f8a93742d2ee"
+    },
+    "audio/english/46f50a8c3aa663e10597cffe.mp3": {
+      "durationSeconds": 1.296,
+      "bytes": 21164,
+      "sampleRate": 24000,
+      "peakDBFS": -8.51,
+      "rmsDBFS": -19.28,
+      "sha256": "7292e4b702018f7d81a7fece75081a01e4df2e44d69a4f0ce691eb56bab7bca3"
+    },
+    "audio/english/b8eb8ca7d73f988eea96d373.mp3": {
+      "durationSeconds": 1.344,
+      "bytes": 21932,
+      "sampleRate": 24000,
+      "peakDBFS": -4.57,
+      "rmsDBFS": -18.81,
+      "sha256": "f40b50bf82453fdb8c887bce6eab14ad2d582bdba9369f8bffcf33871d94ff57"
+    },
+    "audio/english/8625500a5a51eebc9b2cbb75.mp3": {
+      "durationSeconds": 0.888,
+      "bytes": 14636,
+      "sampleRate": 24000,
+      "peakDBFS": -4.19,
+      "rmsDBFS": -19.7,
+      "sha256": "c684f9399e859748bfc258fd0fd38f399609c097cdb8db8b4b8543a19f128a8e"
+    },
+    "audio/english/c33c17f61a04990841676e33.mp3": {
+      "durationSeconds": 0.912,
+      "bytes": 15020,
+      "sampleRate": 24000,
+      "peakDBFS": -5.83,
+      "rmsDBFS": -19.21,
+      "sha256": "43e85a73150ec343d003eaa53dc3774b54680cfa823f441eb6ca4429d1fb1ee8"
+    },
+    "audio/english/2b093a902189777b018f1fec.mp3": {
+      "durationSeconds": 0.96,
+      "bytes": 15788,
+      "sampleRate": 24000,
+      "peakDBFS": -5.94,
+      "rmsDBFS": -19.84,
+      "sha256": "f69b6bb69e71505303de6e1348d4243af24f628098bba500c925fb735ae62ab8"
+    },
+    "audio/english/b2b5da83619c19f68d4cbfa5.mp3": {
+      "durationSeconds": 1.032,
+      "bytes": 16940,
+      "sampleRate": 24000,
+      "peakDBFS": -5.28,
+      "rmsDBFS": -19.44,
+      "sha256": "fed4d1499c8074e55875b2b9f90ec368e090a6baea53c90a98aa4e80ea6bc6f2"
+    },
+    "audio/english/1406f9589d152da85635fdf6.mp3": {
+      "durationSeconds": 0.96,
+      "bytes": 15788,
+      "sampleRate": 24000,
+      "peakDBFS": -5.63,
+      "rmsDBFS": -19.78,
+      "sha256": "c5e423890b5161625be8713fa29516e68ccefb8ced249bf443a920df8e13833a"
+    },
+    "audio/english/6be588cd0ed89961c99884c1.mp3": {
+      "durationSeconds": 0.96,
+      "bytes": 15788,
+      "sampleRate": 24000,
+      "peakDBFS": -4.94,
+      "rmsDBFS": -20.58,
+      "sha256": "33e13d1d0d7df507f6fa76a274479fa526cbc8735143da2759e31d243149511a"
+    },
+    "audio/english/4864c20493254b566b4b79dd.mp3": {
+      "durationSeconds": 1.104,
+      "bytes": 18092,
+      "sampleRate": 24000,
+      "peakDBFS": -2.48,
+      "rmsDBFS": -18.99,
+      "sha256": "b1e8dffca9e7b56c859a519fbcc7d81ba303b2ffeaf03108ea5b9b320fe39bb2"
+    },
+    "audio/english/de30016e1fa49a8110b2f870.mp3": {
+      "durationSeconds": 1.104,
+      "bytes": 18092,
+      "sampleRate": 24000,
+      "peakDBFS": -3.38,
+      "rmsDBFS": -19.66,
+      "sha256": "ab164f1b2fe04cea99314f7d180486d95e606d3843fabcb89f8ab2381026884e"
+    },
+    "audio/english/6a715796f1ba484417a8d3dc.mp3": {
+      "durationSeconds": 1.128,
+      "bytes": 18476,
+      "sampleRate": 24000,
+      "peakDBFS": -4.61,
+      "rmsDBFS": -20.34,
+      "sha256": "329b589db7fdbc1135cb47ceae66da836e78c13a83cff14219cad734d248fb65"
+    },
+    "audio/english/1103addc500d9b3c117cc643.mp3": {
+      "durationSeconds": 1.56,
+      "bytes": 25388,
+      "sampleRate": 24000,
+      "peakDBFS": -2.45,
+      "rmsDBFS": -19.56,
+      "sha256": "722b937c6f9cb950a5e6536597b8c3df03369299aa889fb286ee0264c19b4ef4"
+    },
+    "audio/english/0d4fa4739eeb67506af64ccd.mp3": {
+      "durationSeconds": 1.416,
+      "bytes": 23084,
+      "sampleRate": 24000,
+      "peakDBFS": -6.64,
+      "rmsDBFS": -18.68,
+      "sha256": "12ec1331a88f00cbca7c59e94104915c246294ade9f79797fd1c4e824853bba6"
+    },
+    "audio/english/87841d5a4504a64e1e135679.mp3": {
+      "durationSeconds": 0.96,
+      "bytes": 15788,
+      "sampleRate": 24000,
+      "peakDBFS": -7.07,
+      "rmsDBFS": -20.11,
+      "sha256": "c84ee9a394328540f41c31c1c45cdd632c5097de3d445136e5dd86ee7b15ef2f"
+    },
+    "audio/english/789dedb8fc558afe67f32bd7.mp3": {
+      "durationSeconds": 0.888,
+      "bytes": 14636,
+      "sampleRate": 24000,
+      "peakDBFS": -4.53,
+      "rmsDBFS": -19.95,
+      "sha256": "cbf4656361bd64b47bf1055737ac6607dd093e8fc858e38fcf08be846391b541"
+    },
+    "audio/english/44bc8782fa3d54a26a538731.mp3": {
+      "durationSeconds": 1.152,
+      "bytes": 18860,
+      "sampleRate": 24000,
+      "peakDBFS": -2.54,
+      "rmsDBFS": -21.46,
+      "sha256": "11928a44f5f39219c880b2650155b229f65805fe15e3148c4c93ea532b79ba41"
+    },
+    "audio/english/74376ccf1dcd9d84dc92f18c.mp3": {
+      "durationSeconds": 0.96,
+      "bytes": 15788,
+      "sampleRate": 24000,
+      "peakDBFS": -4.78,
+      "rmsDBFS": -19.98,
+      "sha256": "6b355205daedf947da514f7240c5ace2aa351247ebbca308290f1cdde210e873"
+    },
+    "audio/english/7c3b3f77fa5b877963181b7d.mp3": {
+      "durationSeconds": 0.864,
+      "bytes": 14252,
+      "sampleRate": 24000,
+      "peakDBFS": -2.71,
+      "rmsDBFS": -19.96,
+      "sha256": "da08d862e2b14dbf0654e3d534616588c8ccae2035c2821965e243462188575c"
+    },
+    "audio/english/75d85c295b1e9ae7783abd83.mp3": {
+      "durationSeconds": 0.888,
+      "bytes": 14636,
+      "sampleRate": 24000,
+      "peakDBFS": -4.46,
+      "rmsDBFS": -19.46,
+      "sha256": "4aac3cdb8029b98acaaee78fa6527ee32a7fb43725379dfb6a514eb674c52c7e"
+    },
+    "audio/english/a1c186f96bf0df218d407d2a.mp3": {
+      "durationSeconds": 0.96,
+      "bytes": 15788,
+      "sampleRate": 24000,
+      "peakDBFS": -7.13,
+      "rmsDBFS": -20.63,
+      "sha256": "c48eb137906a013d96b03c7c74b4e19449897f4dad91ef72e57f75312805c9d1"
+    },
+    "audio/english/bc873d777aa862a9afc0feba.mp3": {
+      "durationSeconds": 0.888,
+      "bytes": 14636,
+      "sampleRate": 24000,
+      "peakDBFS": -6.78,
+      "rmsDBFS": -19.83,
+      "sha256": "6b483e22bf209edbf965267f31b2ada0ad71525f0f12f4d6504e96e9465d1859"
+    },
+    "audio/english/56a3b13e7259eadb0ae8f73a.mp3": {
+      "durationSeconds": 0.864,
+      "bytes": 14252,
+      "sampleRate": 24000,
+      "peakDBFS": -6.79,
+      "rmsDBFS": -19.35,
+      "sha256": "2ea45e6e1b3507bdf89be15ba429de9bb6a65abd76969dcb93d44f694ba6987f"
+    },
+    "audio/english/9021205814e6675b6f14db22.mp3": {
+      "durationSeconds": 0.888,
+      "bytes": 14636,
+      "sampleRate": 24000,
+      "peakDBFS": -3.34,
+      "rmsDBFS": -20.71,
+      "sha256": "edb366f58928eb31123b0393f5cc3861c23d7b14b66876764f6db60dcd296a9e"
+    },
+    "audio/english/c4e95a8f78d6333d0050584f.mp3": {
+      "durationSeconds": 0.888,
+      "bytes": 14636,
+      "sampleRate": 24000,
+      "peakDBFS": -6.35,
+      "rmsDBFS": -20.2,
+      "sha256": "a12d209abe4769c0b7ba049953da47b064be106d6e2bd91e9a3258db63e93b5a"
+    },
+    "audio/english/fa8c8251c61ce16f8d9b9f05.mp3": {
+      "durationSeconds": 0.936,
+      "bytes": 15404,
+      "sampleRate": 24000,
+      "peakDBFS": -3.4,
+      "rmsDBFS": -19.81,
+      "sha256": "c5e64c78048f499a79e4a3f78d5afc7d84b170c9fba06be3159c42b31fdebe71"
+    },
+    "audio/english/8832b3044e69076128a5f1a6.mp3": {
+      "durationSeconds": 0.912,
+      "bytes": 15020,
+      "sampleRate": 24000,
+      "peakDBFS": -4.46,
+      "rmsDBFS": -19.48,
+      "sha256": "5d2513d60de69f6780ba839ff71f2fe61c66d630fc0d8b5859cd54c5269dea62"
+    },
+    "audio/english/03fcb42c5e6a035a3fccb962.mp3": {
+      "durationSeconds": 0.912,
+      "bytes": 15020,
+      "sampleRate": 24000,
+      "peakDBFS": -3.8,
+      "rmsDBFS": -19.84,
+      "sha256": "44c1b3bd61c994242cbdc29870ddb3aa93a2ce9bbe5def201ea5e5fbbc421920"
+    },
+    "audio/english/a6a4d9c78e9ceee3c54545fb.mp3": {
+      "durationSeconds": 0.84,
+      "bytes": 13868,
+      "sampleRate": 24000,
+      "peakDBFS": -3.45,
+      "rmsDBFS": -19.49,
+      "sha256": "678fe145ff1545be883ddf59b76e76adfbd664bbe9769838a079514499f4b160"
+    },
+    "audio/english/17ae2d2f1aa655e40adb403d.mp3": {
+      "durationSeconds": 0.84,
+      "bytes": 13868,
+      "sampleRate": 24000,
+      "peakDBFS": -4.41,
+      "rmsDBFS": -19.28,
+      "sha256": "4ebf68fdef06418079aa6e680f94f079189cf7a5a8e38e7aada72715d9d6af93"
+    },
+    "audio/english/746c82ddfd096868120ee442.mp3": {
+      "durationSeconds": 0.84,
+      "bytes": 13868,
+      "sampleRate": 24000,
+      "peakDBFS": -4.41,
+      "rmsDBFS": -19.48,
+      "sha256": "6f5f23a98c1f93cc0180cfbd0932e6bce4445b63e74823e23a530fc14167ff61"
+    },
+    "audio/english/595351cfde0279c82d5e21e2.mp3": {
+      "durationSeconds": 0.888,
+      "bytes": 14636,
+      "sampleRate": 24000,
+      "peakDBFS": -3.3,
+      "rmsDBFS": -19.12,
+      "sha256": "2ee765cdbf397b06f60444f0689ee54b7fc9c1cc4db5e9634f9764dc6e0f2c4c"
+    },
+    "audio/english/1102dca7eb5ef1b284fd4328.mp3": {
+      "durationSeconds": 0.864,
+      "bytes": 14252,
+      "sampleRate": 24000,
+      "peakDBFS": -6.02,
+      "rmsDBFS": -20.02,
+      "sha256": "7827c3436afce71d1ab3dc6b7ee24c791f03f21eae5a8987963fa13fe31c939c"
+    },
+    "audio/english/d3beedd3047d13a957c837a9.mp3": {
+      "durationSeconds": 0.912,
+      "bytes": 15020,
+      "sampleRate": 24000,
+      "peakDBFS": -7.15,
+      "rmsDBFS": -19.82,
+      "sha256": "bbc82d69aaa854b41ff62d933280d58044547ef07c4bef464806e78e9dae0df2"
+    },
+    "audio/english/1be328541ada5406c62d2bc5.mp3": {
+      "durationSeconds": 0.912,
+      "bytes": 15020,
+      "sampleRate": 24000,
+      "peakDBFS": -5.2,
+      "rmsDBFS": -20.33,
+      "sha256": "89e7fb997d93ebc9188110f86f2349559589711cfb9a12104bd8d641854e2c19"
+    },
+    "audio/english/eadd1dea9da04c4fb8049182.mp3": {
+      "durationSeconds": 0.888,
+      "bytes": 14636,
+      "sampleRate": 24000,
+      "peakDBFS": -3.28,
+      "rmsDBFS": -19.72,
+      "sha256": "47d2b22ccb49378097761574fd355c1248b70b855f1a80f998453fd77c95c167"
+    },
+    "audio/english/09b8d4164f71060f38f59996.mp3": {
+      "durationSeconds": 0.888,
+      "bytes": 14636,
+      "sampleRate": 24000,
+      "peakDBFS": -5.83,
+      "rmsDBFS": -19.47,
+      "sha256": "ad1bc987ddbae358afc650dd941a5899d5d3b9d5cc93ee442bb77fc64b5a077f"
+    },
+    "audio/english/e314f6d4c79fa13d4e90179d.mp3": {
+      "durationSeconds": 0.888,
+      "bytes": 14636,
+      "sampleRate": 24000,
+      "peakDBFS": -7.23,
+      "rmsDBFS": -19.97,
+      "sha256": "6b490f833b762329218baea5ef9a8fdebfbdac7312ca73d44f748cc9c4a412dd"
+    },
+    "audio/english/7d29e50e5dce380bd9e38c0b.mp3": {
+      "durationSeconds": 0.912,
+      "bytes": 15020,
+      "sampleRate": 24000,
+      "peakDBFS": -5.47,
+      "rmsDBFS": -19.37,
+      "sha256": "6f9d2afea6954a7c32a21be5728ce98bf06602627c368ebfad96e0e66529a6ce"
+    },
+    "audio/english/4b662b1cfab7efe19d9886d5.mp3": {
+      "durationSeconds": 1.224,
+      "bytes": 20012,
+      "sampleRate": 24000,
+      "peakDBFS": -5.39,
+      "rmsDBFS": -18.54,
+      "sha256": "70f6660aeb15acc27e2d4df975f59baeb7a6eddd10a6ae5ab3343815157f3986"
+    },
+    "audio/english/69d6a7698832b2351815d845.mp3": {
+      "durationSeconds": 0.984,
+      "bytes": 16172,
+      "sampleRate": 24000,
+      "peakDBFS": -2.65,
+      "rmsDBFS": -20.47,
+      "sha256": "a4a02037650f22ef501d7dc8d8e19e9ea258322be3a2c336af5876f8d390d4e8"
+    },
+    "audio/english/94db169704556d1b6075078f.mp3": {
+      "durationSeconds": 0.984,
+      "bytes": 16172,
+      "sampleRate": 24000,
+      "peakDBFS": -3.87,
+      "rmsDBFS": -19.75,
+      "sha256": "9a25b2ed47a2347f1d78438f8d6c9e8feb295b395a8c7f73e690f506c6ed3f23"
+    },
+    "audio/english/aa36bd64a000cc36f060ccf0.mp3": {
+      "durationSeconds": 0.984,
+      "bytes": 16172,
+      "sampleRate": 24000,
+      "peakDBFS": -3.05,
+      "rmsDBFS": -20.46,
+      "sha256": "ee9c9dea599e900100ff4a58fa33c17b916f4aae498a5471680016f4515e7b00"
+    }
+  }
+}

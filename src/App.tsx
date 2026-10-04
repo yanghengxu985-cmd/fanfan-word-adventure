@@ -4,6 +4,7 @@ import Island from './components/Island';
 import { courses, lexemes, getCourseLexemes, contentNotes, type Course, type Lexeme, type Subject } from './data/curriculum';
 import { createProgressStore, recordAttempt, getSkillState, getLexemeState, getDueReviews, importProgress, exportProgress, localDateKey, SKILLS, type Progress, type Skill, type AttemptInput } from './lib/progress';
 import { makeRound, makeReviewRound, checkAnswer, spellingPracticeNote, type Question } from './lib/questions';
+import { createEnglishAudioPlayer, getEnglishAudioEntry } from './lib/englishAudio';
 
 const allowedIds = new Set(lexemes.map(item => item.id));
 const progressStore = createProgressStore(allowedIds);
@@ -31,22 +32,38 @@ function downloadText(filename: string, text: string, mime = 'application/json')
 }
 function useSpeech() {
   const [message, setMessage] = useState('');
-  const supported = typeof window !== 'undefined' && 'speechSynthesis' in window;
-  useEffect(() => () => { if (supported) window.speechSynthesis.cancel(); }, [supported]);
-  function speak(item: Lexeme) {
-    if (!supported) { setMessage('这台设备暂时不能朗读，可以请大人读一读。'); return; }
-    window.speechSynthesis.cancel();
-    const contextualText = item.subject === 'chinese' && ['recognition_character', 'writing_character'].includes(item.kind) ? item.example || item.text : item.text;
-    const speech = new SpeechSynthesisUtterance(contextualText);
-    speech.lang = item.subject === 'english' ? 'en-GB' : 'zh-CN'; speech.rate = .82;
-    const voice = window.speechSynthesis.getVoices().find(voice => voice.lang.toLowerCase().replace('_', '-').startsWith(speech.lang.toLowerCase()));
-    if (voice) speech.voice = voice;
-    speech.onerror = () => setMessage('这次没有听到示范，重试或请大人读一读；学习记录不会受影响。');
-    speech.onend = () => setMessage('示范由设备朗读，可以对照课本再读一遍。');
-    setMessage('正在播放设备朗读示范…');
-    window.speechSynthesis.speak(speech);
+  const englishPlayer = useRef<ReturnType<typeof createEnglishAudioPlayer> | null>(null);
+  const speechVersion = useRef(0);
+  const deviceSpeech = typeof window !== 'undefined' ? window.speechSynthesis : undefined;
+  function stopPlayback() {
+    speechVersion.current += 1;
+    englishPlayer.current?.stop();
+    deviceSpeech?.cancel();
   }
-  return { speak, message, supported };
+  function stop() { stopPlayback(); setMessage(''); }
+  useEffect(() => () => { stopPlayback(); }, []);
+  function speak(item: Lexeme) {
+    stopPlayback();
+    if (!item.readingVerified || item.audioStatus === 'unavailable') { setMessage('这个字词的读音还在核对，请先跟着课本读。'); return; }
+    if (item.subject === 'english') {
+      englishPlayer.current ??= createEnglishAudioPlayer({ baseUrl: import.meta.env.BASE_URL, onStatus: setMessage });
+      englishPlayer.current.play(item.id);
+      return;
+    }
+    if (!deviceSpeech) { setMessage('这台设备暂时不能朗读，可以请大人读一读。'); return; }
+    const version = speechVersion.current;
+    const contextualText = ['recognition_character', 'writing_character'].includes(item.kind) ? item.example || item.text : item.text;
+    const speech = new SpeechSynthesisUtterance(contextualText);
+    speech.lang = 'zh-CN'; speech.rate = .82;
+    const voice = deviceSpeech.getVoices().find(voice => voice.lang.toLowerCase().replace('_', '-').startsWith(speech.lang.toLowerCase()));
+    if (voice) speech.voice = voice;
+    speech.onerror = () => { if (version === speechVersion.current) setMessage('这次没有听到示范，重试或请大人读一读；学习记录不会受影响。'); };
+    speech.onend = () => { if (version === speechVersion.current) setMessage('示范由设备朗读，可以对照课本再读一遍。'); };
+    setMessage('正在播放设备朗读示范…');
+    deviceSpeech.speak(speech);
+  }
+  function canSpeak(item: Lexeme) { return item.readingVerified && item.audioStatus !== 'unavailable' && (item.subject !== 'english' || !!getEnglishAudioEntry(item.id)); }
+  return { speak, stop, message, canSpeak };
 }
 function ProgressPill({ progress, item }: { progress: Progress; item: Lexeme }) {
   const state = getLexemeState(progress, item.id);
@@ -123,7 +140,7 @@ export default function App() {
           <div className="gentle-note"><Lightbulb size={19} /><p><strong>今天的小提醒</strong>　先自己想一想，再看答案。能在明天想起来，也是一种进步。</p></div>
         </>}
         {page === 'map' && <SemesterMap subject={segments[1] === 'english' ? 'english' : 'chinese'} progress={progress} />}
-        {page === 'course' && selectedCourse && <CoursePage course={selectedCourse} progress={progress} onSetCurrent={() => { savePreferences({ ...preferences, courseId: selectedCourse.id }); setNotice('已经设为今天的学习课。'); }} onNotice={setNotice} />}
+        {page === 'course' && selectedCourse && <CoursePage key={selectedCourse.id} course={selectedCourse} progress={progress} onSetCurrent={() => { savePreferences({ ...preferences, courseId: selectedCourse.id }); setNotice('已经设为今天的学习课。'); }} onNotice={setNotice} />}
         {page === 'play' && selectedCourse && <Round key={route} course={selectedCourse} mode={modes.includes(segments[2] as GameMode) ? segments[2] as GameMode : 'meaning'} limit={preferences.limit} onAttempt={onAttempt} />}
         {page === 'review' && <ReviewPage progress={progress} dueIds={dueIds} limit={preferences.limit} onAttempt={onAttempt} />}
         {page === 'teacher' && <TeacherPage limit={preferences.limit} />}
@@ -157,7 +174,7 @@ function SemesterMap({ subject, progress }: { subject: Subject; progress: Progre
 function CoursePage({ course, progress, onSetCurrent, onNotice }: { course: Course; progress: Progress; onSetCurrent: () => void; onNotice: (text: string) => void }) {
   const [filter, setFilter] = useState('all');
   const [search, setSearch] = useState('');
-  const { speak, message } = useSpeech();
+  const { speak, message, canSpeak } = useSpeech();
   const items = getCourseLexemes(course.id);
   const categories = [...new Set(items.map(item => item.kind))];
   const filtered = items.filter(item => (filter === 'all' || filter === item.kind || filter === 'optional' && item.optional) && `${item.text} ${item.pinyin || ''} ${item.meaning}`.toLowerCase().includes(search.toLowerCase()));
@@ -171,8 +188,9 @@ function CoursePage({ course, progress, onSetCurrent, onNotice }: { course: Cour
     {!availableModes.length && <div className="info-note">本课先跟着教材认读。字词的读音与解释确认后，会开放相应小关卡。</div>}
     <div className="section-heading"><div><span className="eyebrow">MEET YOUR NEW FRIENDS</span><h2>这一课的字词卡 <small>{items.length}</small></h2></div><button className="text-button" onClick={async () => { try { await navigator.clipboard.writeText(window.location.href); onNotice('这一课的链接已复制。本地链接在这台电脑开着时可用。'); } catch { onNotice('复制失败，可以直接复制浏览器地址栏。'); } }}>分享本课 <ExternalLink size={15} /></button></div>
     <div className="word-tools"><div className="filter-tabs"><button className={filter === 'all' ? 'selected' : ''} onClick={() => setFilter('all')}>全部</button>{categories.map(kind => <button key={kind} className={filter === kind ? 'selected' : ''} onClick={() => setFilter(kind)}>{kindLabels[kind]}</button>)}{items.some(item => item.optional) && <button className={filter === 'optional' ? 'selected' : ''} onClick={() => setFilter('optional')}>选学</button>}</div><label className="search-box"><Search size={16} /><input value={search} onChange={event => setSearch(event.target.value)} placeholder="找一个字词…" aria-label="搜索本课字词" /></label></div>
+    {course.subject === 'english' && <div className="speech-note"><Volume2 size={14} /> 英式女声 · 清晰慢读 · 点小喇叭听，再跟着读一遍</div>}
     {message && <div className="speech-note" role="status">{message}</div>}
-    <div className="word-grid">{filtered.map(item => <article key={item.id} className="word-card"><div className="word-card-top"><span>{kindLabels[item.kind]}{item.optional && ' · 选学'}</span><button disabled={!item.readingVerified || item.audioStatus === 'unavailable'} className="sound-button" aria-label={`朗读${item.text}`} onClick={() => speak(item)}><Volume2 size={19} /></button></div><span className="pinyin">{item.pinyin || (item.subject === 'english' ? 'READ & SAY' : '跟着课本读一读')}</span><h3 className={item.text.length > 12 ? 'long-word' : ''}>{item.text}</h3><p className="word-meaning">{item.meaning || '和老师一起，找到它在课文里的意思。'}</p>{item.example && <p className="word-example">{item.example}</p>}<div className="word-card-bottom"><ProgressPill progress={progress} item={item} /><span>{item.writingRequirement === 'required' ? '会写字表' : item.subject === 'english' ? '拼写可自选' : '读一读'}</span></div></article>)}</div>
+    <div className="word-grid">{filtered.map(item => <article key={item.id} className="word-card"><div className="word-card-top"><span>{kindLabels[item.kind]}{item.optional && ' · 选学'}</span><button disabled={!canSpeak(item)} className="sound-button" aria-label={`朗读${item.text}`} onClick={() => speak(item)}><Volume2 size={19} /></button></div><span className="pinyin">{item.pinyin || (item.subject === 'english' ? 'READ & SAY' : '跟着课本读一读')}</span><h3 className={item.text.length > 12 ? 'long-word' : ''}>{item.text}</h3><p className="word-meaning">{item.meaning || '和老师一起，找到它在课文里的意思。'}</p>{item.example && <p className="word-example">{item.example}</p>}<div className="word-card-bottom"><ProgressPill progress={progress} item={item} /><span>{item.writingRequirement === 'required' ? '会写字表' : item.subject === 'english' ? '拼写可自选' : '读一读'}</span></div></article>)}</div>
     {!filtered.length && <EmptyState title={items.length ? '没有符合条件的字词' : '这里还要翻一翻课本'} text={items.length ? '换一种分类或搜索试试。' : '这部分正文词项还未整理完成。其他课的字词已经可以学习。'} />}
   </>;
 }
@@ -187,7 +205,7 @@ function Round({ course, mode, limit, onAttempt, teacher = false, preferredIds, 
   const [paused, setPaused] = useState(false);
   const [results, setResults] = useState<{ correct: boolean; assisted: boolean }[]>([]);
   const [confirmer, setConfirmer] = useState<'self' | 'parent'>('self');
-  const { speak, message } = useSpeech();
+  const { speak, stop, message, canSpeak } = useSpeech();
   const question = questions[index];
   const inputRef = useRef<HTMLInputElement>(null);
   function submit(answer: string, selfCorrect?: boolean, assisted = false) {
@@ -198,12 +216,12 @@ function Round({ course, mode, limit, onAttempt, teacher = false, preferredIds, 
     setFeedback(nextFeedback); setResults([...results, nextFeedback]);
     onAttempt?.({ lexemeId: question.lexemeId, skill: question.skill, mode: question.mode, correct, assisted: helped, confirmedBy: question.selfCheck ? confirmer : 'auto', sourceEvidence: `${question.id}:${question.selfCheck ? `${confirmer}-checked-before-reveal` : 'original-question'}` });
   }
-  function next() { setIndex(index + 1); setFeedback(null); setRevealed(false); setHinted(false); setInput(''); setPaused(false); setConfirmer('self'); }
+  function next() { stop(); setIndex(index + 1); setFeedback(null); setRevealed(false); setHinted(false); setInput(''); setPaused(false); setConfirmer('self'); }
   if (!questions.length) return <EmptyState title="这条挑战小路还在准备" text="先看本课的字词卡，或选择另一种玩法吧。" action={<a href={course ? `#/course/${course.id}` : '#/review'} className="primary">查看字词 <ArrowRight size={18} /></a>} />;
   if (!question) return <div className="round-finish"><div className="finish-seal"><Flag size={48} /></div><span className="eyebrow">ONE LITTLE ADVENTURE, DONE</span><h1>{teacher ? '这一组课堂活动结束了' : '今天又发现了一点点！'}</h1><p>{teacher ? '教师演示没有写入个人学习记录。' : `完成 ${results.length} 次尝试，其中 ${results.filter(item => item.correct && !item.assisted).length} 次无提示完成。`}<br />{teacher ? '可以选另一课继续演示。' : '明天再想一想，让字词记得更牢。'}</p>{onExit ? <button className="primary" onClick={onExit}>回到复习背包 <ArrowRight size={18} /></button> : <a className="primary" href={course ? `#/course/${course.id}` : '#/review'}>回到{course ? '这一课' : '复习背包'} <ArrowRight size={18} /></a>}</div>;
   const item = lexemes.find(item => item.id === question.lexemeId)!;
   return <section className={`round ${teacher ? 'teacher-round' : ''}`}>
-    <div className="round-top">{onExit ? <button className="text-button" onClick={onExit}><ArrowLeft size={16} />暂时离开</button> : <a className="back-link" href={course ? `#/course/${course.id}` : '#/review'}><ArrowLeft size={16} />{teacher ? '查看本课词卡' : '暂时离开'}</a>}<span>{teacher ? '课堂演示 · 不记录个人成绩' : modeLabels[mode]} · {index + 1} / {questions.length}</span><button className="icon-button" onClick={() => setPaused(!paused)} aria-label={paused ? '继续练习' : '暂停练习'}>{paused ? <Play size={18} /> : <Pause size={18} />}</button></div>
+    <div className="round-top">{onExit ? <button className="text-button" onClick={onExit}><ArrowLeft size={16} />暂时离开</button> : <a className="back-link" href={course ? `#/course/${course.id}` : '#/review'}><ArrowLeft size={16} />{teacher ? '查看本课词卡' : '暂时离开'}</a>}<span>{teacher ? '课堂演示 · 不记录个人成绩' : modeLabels[mode]} · {index + 1} / {questions.length}</span><button className="icon-button" onClick={() => { stop(); setPaused(!paused); }} aria-label={paused ? '继续练习' : '暂停练习'}>{paused ? <Play size={18} /> : <Pause size={18} />}</button></div>
     <div className="round-progress" aria-label={`已完成${index}题，共${questions.length}题`}><span style={{ width: `${index / questions.length * 100}%` }} /></div>
     {paused ? <EmptyState title="小岛帮你把这一页留着" text="休息一会儿，准备好了再继续。" action={<button className="primary" onClick={() => setPaused(false)}><Play size={18} />继续冒险</button>} /> : <>
       <div className="question-content"><span className="question-badge"><Sparkles size={16} />{skillLabels[question.skill]}</span><h1>{question.prompt}</h1>{question.clue && <p className="question-clue">{question.clue}</p>}{question.skill === 'writing' && <div className="info-note">先在纸上写出来，再揭晓核对。大人确认的书写会单独记录。</div>}
@@ -211,7 +229,7 @@ function Round({ course, mode, limit, onAttempt, teacher = false, preferredIds, 
       </div>
       {!teacher && !feedback && !revealed && <div className="question-tools"><button className="text-button" onClick={() => setHinted(true)}><Lightbulb size={17} />需要一点提示</button>{hinted && <span className="hint-answer">可以再学一遍：{question.answer} · 这题只算练习</span>}</div>}
       {!teacher && feedback && <div className={`feedback ${feedback.correct ? 'success' : 'retry'}`} role="status"><span className="feedback-icon">{feedback.correct ? <Check size={24} /> : <RotateCcw size={23} />}</span><div><h3>{feedback.correct ? feedback.assisted ? '借着提示，也有新的发现' : '这一次，你想到了！' : '这次先记下来，下一次再试'}</h3><p>{question.explanation}</p>{question.skill === 'writing' && confirmer === 'self' && <small>这次记为自查练习；独立书写证据需要大人确认。</small>}</div><button className="primary" onClick={next}>{index === questions.length - 1 ? '完成这次冒险' : '下一题'} <ArrowRight size={17} /></button></div>}
-      {revealed && item.readingVerified && <div className="audio-practice"><button className="text-button" onClick={() => speak(item)}><Volume2 size={17} />听示范，跟着读</button>{message && <small role="status">{message}</small>}</div>}
+      {revealed && canSpeak(item) && <div className="audio-practice"><button className="text-button" onClick={() => speak(item)}><Volume2 size={17} />听示范，跟着读</button>{item.subject === 'english' && <small>英式女声 · 清晰慢读</small>}{message && <small role="status">{message}</small>}</div>}
     </>}
   </section>;
 }
@@ -242,7 +260,7 @@ function TeacherPage({ limit }: { limit: number }) {
   return <><div className="lesson-heading"><div><span className="eyebrow">A LITTLE WONDER FOR THE WHOLE CLASS</span><h1>把小岛，带进课堂。</h1><p>选一课，投屏提问。先思考，再一起揭晓。</p></div><Presentation className="page-emblem" size={58} strokeWidth={1.2} /></div>
     <section className="teacher-controls"><label>选择教材和课目<select value={courseId} onChange={event => { setCourseId(event.target.value); const first = modes.find(mode => makeRound(event.target.value, mode, 1).length); setMode(first || 'meaning'); setRoundKey(roundKey + 1); }}>{courses.map(course => <option value={course.id} key={course.id}>{course.subject === 'chinese' ? '语文' : '英语'} · {course.title}</option>)}</select></label><label>课堂玩法<select value={mode} onChange={event => { setMode(event.target.value as GameMode); setRoundKey(roundKey + 1); }}>{availableModes.map(mode => <option key={mode} value={mode}>{modeLabels[mode]}</option>)}</select></label><button className="secondary" onClick={() => setRoundKey(roundKey + 1)}><RotateCcw size={17} />换一组</button><button className="secondary" onClick={() => document.documentElement.requestFullscreen?.().catch(() => undefined)}><Maximize2 size={17} />全屏</button><button className="secondary" onClick={() => window.print()}><Printer size={17} />打印本课词单</button></section>
     <Round key={`${courseId}-${mode}-${roundKey}`} course={course} mode={mode} limit={limit} teacher />
-    <section className="print-sheet"><h2>{course.title} · 字词练习单</h2><p>姓名：________________　日期：________________</p>{[...new Set(items.map(item => item.kind))].map(kind => <div key={kind}><h3>{kindLabels[kind]}</h3><div className="print-words">{items.filter(item => item.kind === kind).map(item => <span key={item.id}>{item.text}<small>____________</small></span>)}</div></div>)}<small>词表来自同版公开预览，使用前请核对学校纸本；设备朗读仅供示范。</small></section>
+    <section className="print-sheet"><h2>{course.title} · 字词练习单</h2><p>姓名：________________　日期：________________</p>{[...new Set(items.map(item => item.kind))].map(kind => <div key={kind}><h3>{kindLabels[kind]}</h3><div className="print-words">{items.filter(item => item.kind === kind).map(item => <span key={item.id}>{item.text}<small>____________</small></span>)}</div></div>)}<small>词表来自同版公开预览，使用前请核对学校纸本；合成语音仅供跟读示范。</small></section>
     <details className="content-details"><summary>本课词库与教学说明</summary><p>{course.subject === 'chinese' ? contentNotes.chinese : contentNotes.english}</p><p>{contentNotes.explanations}</p><a href={`#/course/${course.id}`}>查看本课全部词卡 →</a></details>
   </>;
 }

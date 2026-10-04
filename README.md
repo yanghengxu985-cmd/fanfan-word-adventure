@@ -4,13 +4,13 @@
 
 ## 立即体验
 
-在线地址：[字词冒险岛](https://yanghengxu985-cmd.github.io/fanfan-word-adventure/)。仓库的首次 Pages 部署成功后可用；之后更新 `main` 会自动测试、构建并发布。
+在线地址：[字词冒险岛](https://yanghengxu985-cmd.github.io/fanfan-word-adventure/)。更新 `main` 会自动测试、构建并发布。
 
 - [语文第1课](https://yanghengxu985-cmd.github.io/fanfan-word-adventure/#/course/cn-01)
 - [英语Unit 1](https://yanghengxu985-cmd.github.io/fanfan-word-adventure/#/course/en-01)
 - [老师投屏入口](https://yanghengxu985-cmd.github.io/fanfan-word-adventure/#/teacher)
 
-网页由 GitHub Pages 托管，使用者不需要安装开发工具，你的电脑关机也不影响已发布网站。可以把对应课程的链接发给老师，在学校网络实际检查加载与设备朗读效果。
+网页由 GitHub Pages 托管，使用者不需要安装开发工具，你的电脑关机也不影响已发布网站。可以把对应课程的链接发给老师，在学校网络实际检查加载与声音播放效果。
 
 ## 本地开发
 
@@ -34,7 +34,15 @@ npm.cmd run dev
 3. 老师投屏：选择课目和玩法，先提问，再揭晓答案；可以全屏或打印本课词单，演示不保存个人成绩。
 4. 家长手册：选择当前课和每轮4/6/8题，查看具体能力和复习日期，导入或导出学习备份。
 
-“纸上写一写”目前是**拼音与释义提示的独立书写**，不是经过审听音频的听写。每题大人确认独立勾选；孩子自查只算练习。英语和中文口头回忆、开放句子填空采用揭晓后自查，避免把合理的不同表达判错。设备朗读只供跟读示范，汉字按例句播放以减少孤立多音字误读；未验证读音的条目关闭声音按钮。
+“纸上写一写”目前是**拼音与释义提示的独立书写**，不是经过审听音频的听写。每题大人确认独立勾选；孩子自查只算练习。英语和中文口头回忆、开放句子填空采用揭晓后自查，避免把合理的不同表达判错。汉字仍由设备按例句朗读以减少孤立多音字误读；未验证读音的条目关闭声音按钮。
+
+## 英语声音
+
+英语采用已选定的英式女声 `en-GB-SoniaNeural`，在合成时使用 `-12%` 的清晰慢读速度。127条单元词语/表达（含选学）和26组字母都有固定MP3，同词共享音频。手机、电脑和老师投屏都播放同一份文件，无需安装英文系统声音。
+
+点击小喇叭才加载当前词的声音，不会打开网页就下载整套音频。再次点击从头播放；切词、换课、换题或暂停时停止上一段。播放失败会提示重试。音频是AI合成的跟读示范，已经检查可解码、时长和音量，仍需教师审听发音；不冒充教材原音，也不自动评听力或口语。
+
+音频随GitHub Pages一起托管，访问游戏不需要TTS API密钥。生成记录、字母和缩写处理、离线校验及重新生成方式见 [英语音频说明](docs/ENGLISH_AUDIO.md)。
 
 ## 内容覆盖与边界
 
@@ -70,13 +78,13 @@ npm.cmd run build
 npm.cmd run preview
 ```
 
-构建输出到 `dist/`，可部署为静态网站。直接双击 `dist/index.html` 不能作为完整部署。尚未提供PWA/可安装离线包；设备语音是否离线可用也未验证，文字玩法不依赖语音、账户或AI API。
+构建输出到 `dist/`，可部署为静态网站。直接双击 `dist/index.html` 不能作为完整部署。尚未提供PWA/可安装离线包；网页首次加载和未缓存的英语MP3需要网络，文字玩法不依赖语音、账户或AI API。
 
 内容文件：`src/data/inventory.json`、`src/data/curriculum.ts`。题目门槛与可复现题序：`src/lib/questions.ts`。进度、复习和备份校验：`src/lib/progress.ts`。`research/build_game_inventory.py` 和 `research/game_editorial_data.py` 可以重新构建数据，`research/validate_game_inventory.py` 校验来源和计数。教材版本、完整词表和后续范围见 [开发任务](docs/PROJECT_BRIEF.md)。
 
 ## GitHub Pages 自动发布
 
-仓库使用公开源码和 GitHub Pages；发布流程见 `.github/workflows/deploy.yml`。首次在仓库 `Settings → Pages → Build and deployment → Source` 选择 `GitHub Actions`。工作流使用 Node 24，依次安装锁定依赖、运行37项测试、构建 `dist/` 并部署；测试或构建失败不会发布新版本。
+仓库使用公开源码和 GitHub Pages；发布流程见 `.github/workflows/deploy.yml`。首次在仓库 `Settings → Pages → Build and deployment → Source` 选择 `GitHub Actions`。工作流使用 Node 24，依次安装锁定依赖、运行自动测试、构建 `dist/` 并部署；测试或构建失败不会发布新版本。
 
 推送 `main` 或在 `Actions` 手动运行即可发布。可以在工作流的 `Deploy website` 查看结果和网址。`base: './'` 配合hash路由支持仓库子路径；更换仓库名时也要更新本说明中的网址。
 

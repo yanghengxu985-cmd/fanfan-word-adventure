@@ -115,7 +115,7 @@ async (page) => {
     const manifest = await manifestResponse.json();
     assert(manifest.voice === 'en-GB-SoniaNeural' && manifest.rate === '-12%' && manifest.locale === 'en-GB',
       '情景与听力使用已经选定的英式女声和清晰慢读');
-    assert(Object.keys(manifest.entries).length === 48, '48 条活动录音完整存在且独立于词卡清单');
+    assert(Object.keys(manifest.entries).length === 52, '48 条原活动录音和 4 条体验课录音完整存在，且独立于词卡清单');
     for (const [id, task] of Object.entries(tasks)) {
       assert(manifest.entries[task.promptAudioId]?.text === task.promptText
         && manifest.entries[task.modelAudioId]?.text === task.modelText, id + ' 的提示与示范录音对应实际脚本');

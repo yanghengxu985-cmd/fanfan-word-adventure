@@ -1,0 +1,185 @@
+.english-learning-lab {
+  --ell-ink:#315c4e;--ell-green:#286c57;--ell-cream:#fffaf0;--ell-line:#dce4d1;--ell-gold:#d1a350;
+  display:grid;grid-template-rows:auto minmax(0,1fr) auto;gap:14px;
+  width:100%;height:100%;min-height:0;min-width:0;max-width:1160px;margin:0 auto;
+  color:var(--ell-ink);font-family:Georgia,"Times New Roman",serif;font-size:18px;line-height:1.45;
+}
+.english-learning-lab h1,.english-learning-lab h2,.english-learning-lab p {margin:0;}
+.english-learning-lab button,.english-learning-lab a {touch-action:manipulation;}
+.english-learning-lab button {min-width:44px;min-height:44px;cursor:pointer;}
+.english-learning-lab button:focus-visible,.ell-lesson-card:focus-visible {outline:3px solid #c79339;outline-offset:3px;}
+.english-learning-lab button:disabled {cursor:default;opacity:.5;}
+.ell-button {display:inline-flex;align-items:center;justify-content:center;gap:8px;font:600 16px/1.35 Georgia,"Times New Roman",serif;border:1px solid var(--ell-line);border-radius:12px;padding:11px 13px;color:var(--ell-ink);background:#fffdf4;white-space:nowrap;}
+.ell-button>svg {flex-shrink:0;}
+.ell-primary {background:var(--ell-green);border-color:#245c4a;color:#fffcec;box-shadow:0 3px 0 #194d3d;}
+.ell-primary:hover:not(:disabled) {background:#357b63;}
+.ell-header {display:flex;align-items:center;justify-content:space-between;gap:14px;min-width:0;min-height:74px;}
+.ell-header-tools {display:flex;gap:8px;flex-shrink:0;}
+.ell-back {flex-shrink:0;}
+.ell-route {min-width:0;display:grid;gap:7px;}
+.ell-phase-track {display:flex;align-items:center;gap:9px;}
+.ell-phase-track>span {font-size:16px;line-height:1.35;color:#7a8b73;padding:6px 10px;border-radius:9px;background:#eeefe2;border:1px solid transparent;}
+.ell-phase-track>span.is-current {background:#efdbac;border-color:#d9bc77;color:#776029;font-weight:700;}
+.ell-lesson-title {display:flex;align-items:center;gap:12px;font-size:16px;color:#72876c;}
+.ell-lesson-title>span {white-space:nowrap;}
+.ell-eyebrow {display:block;font:600 16px/1.35 Georgia,"Times New Roman",serif;letter-spacing:.4px;color:#7c8a69;}
+.ell-menu-heading {min-width:0;}
+.ell-menu-heading h1 {font-size:clamp(22px,2.4vw,31px);line-height:1.3;margin-top:5px;}
+.ell-lesson-menu {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;min-height:0;min-width:0;}
+.ell-lesson-card {display:grid;grid-template-rows:minmax(0,1fr) auto;min-height:0;min-width:0;text-decoration:none;color:inherit;border:1px solid #dce3cb;border-radius:24px;background:#fffdf3;padding:18px;box-shadow:0 4px 0 #e6ead8;transition:background .18s,border-color .18s;}
+.ell-lesson-card:hover {border-color:#a8bb93;background:#f6f7e9;}
+.ell-cover {min-height:0;min-width:0;display:grid;place-items:center;}
+.ell-cover .english-lab-scene {max-height:100%;max-width:330px;}
+.ell-lesson-caption {padding-top:12px;}
+.ell-lesson-caption h2 {font-size:clamp(22px,2.2vw,29px);line-height:1.3;margin:7px 0;overflow-wrap:anywhere;text-wrap:pretty;}
+.ell-lesson-caption p {font-size:16px;line-height:1.5;color:#819373;}
+.ell-open {display:flex;align-items:center;justify-content:space-between;gap:9px;font-size:18px;font-weight:600;color:#3e735b;border-top:1px dashed #d8dfc8;padding-top:13px;margin-top:16px;min-height:44px;}
+.ell-learn-layout {display:grid;grid-template-columns:minmax(0,1.3fr) minmax(260px,.7fr);align-items:stretch;gap:20px;min-height:0;min-width:0;}
+.ell-demo-scene {min-height:0;min-width:0;display:grid;place-items:center;background:#f1f1df;border:1px solid #e0e3ce;border-radius:27px;padding:18px;}
+.ell-demo-scene .english-lab-scene {max-width:610px;max-height:100%;}
+.ell-demo-copy {min-width:0;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:18px;padding:22px 12px;}
+.ell-demo-copy h1 {font-size:clamp(28px,3.2vw,46px);line-height:1.35;font-weight:600;text-wrap:pretty;overflow-wrap:anywhere;}
+.ell-demo-copy>p {font-size:20px;line-height:1.5;color:#788e70;}
+.ell-listen {font-size:19px;min-height:52px!important;min-width:160px;}
+.ell-question-layout {display:grid;grid-template-columns:minmax(260px,.75fr) minmax(0,1.25fr);gap:18px;min-height:0;min-width:0;}
+.ell-task-panel {min-height:0;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;background:#f1f1df;border:1px solid #e0e3ce;border-radius:24px;padding:18px 16px;text-align:center;}
+.ell-task-copy {min-width:0;}
+.ell-task-copy h1 {font-size:clamp(24px,2.6vw,32px);font-weight:600;line-height:1.3;margin-top:8px;}
+.ell-task-icon {color:#93ab88;flex-shrink:0;}
+.ell-context-scene {height:clamp(115px,19dvh,180px);width:100%;max-width:310px;min-height:0;}
+.ell-context-text {font-size:18px;line-height:1.4;color:#708a66;margin:10px 0 0!important;}
+.ell-task-copy>.ell-answer-text {font-size:25px;line-height:1.35;font-weight:600;color:#587b4d;margin:10px 0 0;}
+.ell-listen-row {display:flex;gap:8px;align-items:center;justify-content:center;flex-wrap:wrap;margin-top:17px;}
+.ell-instruction {width:46px;min-height:46px;padding:11px;}
+.ell-options {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;min-height:0;min-width:0;}
+.ell-option {position:relative;display:grid;grid-template-rows:minmax(0,1fr) auto auto;gap:10px;min-height:0;min-width:0;background:#fffdf3;border:2px solid #dfe5cf;border-radius:24px;box-shadow:0 3px 0 #e8ecdc;padding:24px 13px 15px;}
+.ell-option-number {position:absolute;top:11px;left:11px;display:grid;place-items:center;width:29px;height:29px;border-radius:9px;background:#edf1df;font-size:18px;color:#82916c;}
+.ell-option-scene {min-height:0;min-width:0;display:grid;place-items:center;}
+.ell-option-scene .english-lab-scene {max-width:350px;max-height:100%;}
+.ell-option-spacer {min-height:0;}
+.ell-guided-answer {color:#577b4d;text-align:center;font-size:21px;font-weight:600;line-height:1.35;overflow-wrap:anywhere;}
+.ell-choose {background:#eaf0df;border-color:#bfd0ac;color:#446e4c;box-shadow:0 2px 0 #d7dfc8;width:100%;min-height:48px!important;font-size:17px;padding:11px 7px;gap:7px;}
+.ell-choose:hover:not(:disabled) {background:#dce9cd;}
+.ell-option.has-hint {background:#eff5e5;border-color:#98b384;box-shadow:0 0 0 3px #d6e5c6;}
+.ell-option.is-correct {background:#eff5e5;border-color:#83ad90;}
+.ell-option.is-try-again {background:#fff6e6;border-color:#cbb079;}
+.ell-dock {display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:84px;min-width:0;border:1px solid #dce3cb;border-radius:18px;background:#fbfaf0;box-shadow:0 3px 0 #eceedd;padding:13px 16px;}
+.ell-dock-copy {display:flex;align-items:center;gap:11px;min-width:0;}
+.ell-dock-copy>svg {color:#8da17c;flex-shrink:0;}
+.ell-dock-copy>div {min-width:0;}
+.ell-dock-copy p {font-size:18px;font-weight:600;line-height:1.35;overflow-wrap:anywhere;}
+.ell-audio-status {display:block;color:#7c8e72;font-size:16px;line-height:1.35;margin-top:4px;overflow-wrap:anywhere;}
+.ell-audio-status.is-error {color:#936740;}
+.ell-dock-actions {display:flex;gap:9px;align-items:center;flex-shrink:0;}
+.ell-next {min-width:104px;min-height:49px!important;font-size:18px;}
+.ell-help,.ell-retry {min-height:46px!important;}
+.ell-rest {min-width:0;min-height:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:#f1f1df;border:1px solid #e0e3ce;border-radius:24px;padding:24px;text-align:center;}
+.ell-rest>svg {color:#8fa780;}
+.ell-rest h1,.ell-rest h2 {font-size:30px;line-height:1.3;}
+.ell-rest p {font-size:18px;color:#79906e;}
+.ell-finished {display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:16px;border:1px solid #dce3cb;border-radius:25px;background:#f4f3e4;padding:24px;}
+.ell-finish-art {height:210px;width:min(340px,100%);min-height:0;}
+.ell-finished h1 {font-size:34px;line-height:1.3;}
+.ell-finished>p {font-size:20px;line-height:1.45;}
+.ell-finished .ell-teacher-note {font-size:16px;color:#7c8e72;}
+.ell-help-dialog {color:var(--ell-ink);font-family:Georgia,"Times New Roman",serif;background:#fffdf2;border:1px solid #dce3cd;border-radius:23px;padding:0;width:min(600px,calc(100vw - 32px));max-height:calc(100dvh - 32px);box-shadow:0 20px 70px #25443735;}
+.ell-help-dialog[open] {display:grid;grid-template-rows:auto minmax(0,1fr) auto;}
+.ell-help-dialog::backdrop {background:#213d325e;}
+.ell-help-dialog>header {display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 20px;border-bottom:1px solid #e3e7d5;}
+.ell-help-dialog h2 {font-size:27px;line-height:1.35;}
+.ell-help-close {flex-shrink:0;}
+.ell-help-content {min-height:0;min-width:0;padding:23px;overflow:auto;overscroll-behavior:contain;}
+.ell-help-translation {font-family:"Songti SC","Noto Serif CJK SC",serif;font-size:18px;line-height:1.75;color:#758467;margin-top:13px!important;}
+.ell-help-answer {font-size:29px;line-height:1.4;color:#4f7549;margin:20px 0 16px!important;overflow-wrap:anywhere;}
+.ell-help-note {font-size:17px;line-height:1.4;color:#7a8c70;margin-top:16px!important;}
+.ell-help-dialog>footer {font-size:16px;line-height:1.4;color:#7c8e72;padding:14px 20px;background:#f2f4e8;border-top:1px solid #e3e7d5;}
+@media(orientation:portrait) {
+  .ell-learn-layout {grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto;gap:16px;}
+  .ell-demo-copy {align-items:center;text-align:center;gap:12px;padding:6px 12px;}
+  .ell-demo-copy h1 {font-size:35px;}
+  .ell-question-layout {grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(0,1fr);gap:16px;}
+  .ell-task-panel {flex-direction:row;gap:22px;padding:18px 24px;}
+  .ell-task-copy {text-align:left;}
+  .ell-task-copy h1 {font-size:28px;}
+  .ell-task-copy h1 br {display:none;}
+  .ell-context-scene {width:240px;height:173px;flex-shrink:0;}
+  .ell-listen-row {justify-content:flex-start;margin-top:12px;}
+  .ell-task-panel:not(:has(.ell-context-scene)) .ell-task-icon {width:70px;height:70px;}
+  .ell-lesson-menu {grid-template-columns:minmax(0,1fr);grid-template-rows:repeat(3,minmax(0,1fr));gap:14px;}
+  .ell-lesson-card {grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);grid-template-rows:minmax(0,1fr);gap:16px;padding:14px 18px;}
+  .ell-lesson-caption {padding:0;align-self:center;}
+  .ell-lesson-caption h2 {font-size:27px;}
+  .ell-open {margin-top:10px;padding-top:8px;}
+}
+@media(orientation:landscape) and (max-height:700px) {
+  .english-learning-lab {gap:10px;}
+  .ell-header {min-height:68px;}
+  .ell-task-panel {padding:14px;gap:10px;}
+  .ell-context-scene {height:125px;}
+  .ell-task-copy h1 {font-size:24px;}
+  .ell-task-copy>.ell-answer-text {font-size:22px;margin-top:8px;}
+  .ell-listen-row {margin-top:12px;}
+  .ell-listen {min-height:48px!important;font-size:18px;}
+  .ell-dock {min-height:77px;padding:10px 14px;}
+  .ell-demo-copy {gap:14px;padding:14px 10px;}
+  .ell-demo-copy h1 {font-size:31px;}
+  .ell-lesson-card {padding:14px;}
+  .ell-lesson-caption h2 {font-size:24px;}
+}
+@media(max-width:650px) {
+  .english-learning-lab {gap:10px;font-size:17px;}
+  .ell-header {gap:8px;flex-wrap:wrap;min-height:0;}
+  .ell-header .ell-route,.ell-menu-heading {order:3;flex-basis:100%;display:flex;align-items:center;justify-content:space-between;gap:8px;}
+  .ell-menu-heading .ell-eyebrow {display:none;}
+  .ell-menu-heading h1 {font-size:23px;margin:0;}
+  .ell-header-tools {margin-left:auto;gap:7px;}
+  .ell-button {padding:10px;gap:6px;}
+  .ell-guide>span,.ell-pause>span {display:none;}
+  .ell-phase-track {gap:5px;}
+  .ell-phase-track>span {font-size:16px;padding:5px 7px;}
+  .ell-lesson-title {display:block;font-size:16px;}
+  .ell-lesson-title>span {display:block;}
+  .ell-route>.ell-lesson-title {display:none;}
+  .ell-task-panel {gap:12px;padding:13px;}
+  .ell-task-copy h1 {font-size:22px;}
+  .ell-task-copy h1 br {display:block;}
+  .ell-context-scene {width:110px;height:125px;}
+  .ell-context-text {font-size:16px;margin-top:6px!important;}
+  .ell-task-copy>.ell-answer-text {font-size:19px;margin-top:6px;}
+  .ell-listen-row {gap:6px;margin-top:10px;}
+  .ell-listen {font-size:17px;min-width:0;min-height:46px!important;padding:10px;}
+  .ell-listen>svg {width:20px;}
+  .ell-instruction {width:44px;padding:10px;}
+  .ell-options {gap:10px;}
+  .ell-option {padding:18px 8px 10px;border-radius:18px;gap:8px;}
+  .ell-option-number {top:7px;left:7px;width:24px;height:24px;font-size:16px;}
+  .ell-guided-answer {font-size:18px;}
+  .ell-choose {font-size:16px;gap:5px;min-height:44px!important;}
+  .ell-dock {display:grid;grid-template-columns:minmax(0,1fr);gap:9px;padding:11px 13px;min-height:0;}
+  .ell-dock-copy p {font-size:17px;}
+  .ell-audio-status {font-size:16px;}
+  .ell-dock-actions {justify-content:flex-end;width:100%;gap:8px;}
+  .ell-next {min-height:46px!important;flex:1;font-size:17px;}
+  .ell-help>span {display:none;}
+  .ell-retry {padding:10px;}
+  .ell-retry>span {display:none;}
+  .ell-demo-copy h1 {font-size:27px;}
+  .ell-demo-copy>p {font-size:18px;}
+  .ell-demo-copy {gap:10px;padding:0 8px;}
+  .ell-demo-scene {padding:10px;border-radius:20px;}
+  .ell-lesson-card {padding:10px 12px;gap:10px;border-radius:20px;}
+  .ell-lesson-caption h2 {font-size:22px;}
+  .ell-lesson-caption .ell-eyebrow {display:none;}
+  .ell-lesson-caption p {font-size:16px;}
+  .ell-open {margin-top:7px;padding-top:6px;font-size:17px;}
+  .ell-finish-art {height:160px;}
+  .ell-finished h1 {font-size:28px;}
+  .ell-finished>p {font-size:18px;}
+  .ell-help-dialog>header {padding:14px 16px;}
+  .ell-help-content {padding:20px 17px;}
+  .ell-help-answer {font-size:25px;}
+  .ell-help-translation {font-size:17px;}
+  .ell-help-dialog>footer {padding:13px 17px;}
+}
+@media(prefers-reduced-motion:reduce) {.english-learning-lab * {transition:none!important;}}
+@media print {.english-learning-lab {display:none!important;}}

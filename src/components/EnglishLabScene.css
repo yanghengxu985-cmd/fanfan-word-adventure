@@ -1,0 +1,30 @@
+.english-lab-scene {display:block;width:100%;height:100%;max-width:100%;object-fit:contain;overflow:visible;}
+.english-lab-scene .els-meeting-lin,.english-lab-scene .els-meeting-lan,.english-lab-scene .els-departing-lan {transform-box:view-box;transform-origin:0 0;}
+.english-lab-scene .els-wave-arm {transform-box:fill-box;transform-origin:bottom right;}
+.english-lab-scene .els-cat-breathe {transform-box:fill-box;transform-origin:center bottom;}
+.english-lab-scene .els-cat-tail {transform-box:fill-box;transform-origin:bottom left;}
+.english-lab-scene .els-speaking .els-smile {visibility:hidden;}
+.english-lab-scene.els-has-motion .els-meeting-lin {animation:els-walk-in-left 1.5s ease-in-out infinite;}
+.english-lab-scene.els-has-motion .els-meeting-lan {animation:els-walk-in-right 1.5s ease-in-out infinite;}
+.english-lab-scene.els-has-motion .els-meeting-bubble {animation:els-meeting-bubble 1.5s ease-in-out infinite;}
+.english-lab-scene.els-has-motion .els-departing-lan {animation:els-walk-away 1.5s ease-in-out infinite;}
+.english-lab-scene.els-has-motion .els-wave-arm {animation:els-wave 1.1s ease-in-out infinite alternate;}
+.english-lab-scene.els-has-motion .els-cat-breathe {animation:els-breathe 2.4s ease-in-out infinite alternate;}
+.english-lab-scene.els-has-motion .els-cat-tail {animation:els-tail 1.9s ease-in-out infinite alternate;}
+.english-lab-scene.els-has-motion .els-speaking-mouth {animation:els-mouth .46s ease-in-out infinite alternate;transform-box:fill-box;transform-origin:center;}
+.english-lab-scene.els-has-motion .els-conversation-bubble {animation:els-bubble 1.15s ease-in-out infinite alternate;}
+.english-lab-scene.els-has-motion .els-speaker-badge {animation:els-speaker 1.15s ease-in-out infinite alternate;}
+.english-lab-scene.els-has-motion .els-focused-card>rect {animation:els-focus 1.3s ease-in-out infinite alternate;}
+.english-lab-scene.els-paused * {animation-play-state:paused!important;}
+@keyframes els-walk-in-left {0% {transform:translate(-75px,0);opacity:0;}8% {opacity:1;}40%,94% {transform:translate(0,0);opacity:1;}100% {transform:translate(0,0);opacity:0;}}
+@keyframes els-walk-in-right {0% {transform:translate(75px,0);opacity:0;}8% {opacity:1;}40%,94% {transform:translate(0,0);opacity:1;}100% {transform:translate(0,0);opacity:0;}}
+@keyframes els-meeting-bubble {0%,28% {opacity:0;}42%,94% {opacity:1;}100% {opacity:0;}}
+@keyframes els-walk-away {0% {transform:translate(-135px,0);opacity:0;}8% {opacity:1;}64%,94% {transform:translate(0,0);opacity:1;}100% {transform:translate(0,0);opacity:0;}}
+@keyframes els-wave {from {transform:rotate(-5deg);}to {transform:rotate(9deg);}}
+@keyframes els-breathe {from {transform:scaleY(.985);}to {transform:scaleY(1.015);}}
+@keyframes els-tail {from {transform:rotate(-5deg);}to {transform:rotate(7deg);}}
+@keyframes els-mouth {from {transform:scaleY(.45);}to {transform:scaleY(1);}}
+@keyframes els-bubble {from {opacity:.78;}to {opacity:1;}}
+@keyframes els-speaker {from {opacity:.82;}to {opacity:1;}}
+@keyframes els-focus {from {fill:#fff0ba;stroke:#b98e3e;}to {fill:#ffe29b;stroke:#a87c2d;}}
+@media(prefers-reduced-motion:reduce) {.english-lab-scene * {animation:none!important;transition:none!important;}.english-lab-scene .els-meeting-lin,.english-lab-scene .els-meeting-lan,.english-lab-scene .els-departing-lan {transform:none!important;opacity:1!important;}.english-lab-scene .els-meeting-bubble {opacity:1!important;}}

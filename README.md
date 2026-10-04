@@ -8,6 +8,7 @@
 
 - [语文第1课](https://yanghengxu985-cmd.github.io/fanfan-word-adventure/#/course/cn-01)
 - [英语Unit 1](https://yanghengxu985-cmd.github.io/fanfan-word-adventure/#/course/en-01)
+- [英语情景体验课：cat、见面与告别、my / your](https://yanghengxu985-cmd.github.io/fanfan-word-adventure/#/english-lab)
 - [老师投屏入口](https://yanghengxu985-cmd.github.io/fanfan-word-adventure/#/teacher)
 
 网页由 GitHub Pages 托管，使用者不需要安装开发工具，你的电脑关机也不影响已发布网站。可以把对应课程的链接发给老师，在学校网络实际检查加载与声音播放效果。
@@ -55,6 +56,8 @@ npm.cmd run dev
 词义宝箱保留原样，Unit 3–8继续使用现有玩法。这次是前两个单元的互动改进，尚未覆盖全学期新活动，也不代表所有教材词语与考点已加入情境任务。活动是配合教材词汇设计的原创练习；详细范围、记录规则和教师用法见 [英语情境与听辨活动](docs/ENGLISH_ACTIVITIES.md)。
 
 ## 内容覆盖与边界
+
+英语体验课提供三个独立样例：先学习图、声音与英文的对应，再带提示练习，然后隐藏目标词听音选择，最后换图、换地点或换说话人。页面用短英文指令，点 Help 才出现中文解释；检查抬头与图片不直接写答案。my / your 根据当前说话人判断，交换人物位置验证理解。每题首次作答记为 listening，带提示与答前 Help 标记为辅助练习；复习背包可以返回同一体验课。老师入口在课链接后加 `/teacher`，不记录个人成绩。这是三个体验样例，尚未扩展全学期。详细流程和验证规则见 [英语体验课说明](docs/ENGLISH_LEARNING_LAB.md)。
 
 | 来源类别 | 库存记录 |
 | --- | ---: |

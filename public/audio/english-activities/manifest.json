@@ -396,6 +396,38 @@
       "spokenText": "Name.",
       "durationSeconds": 0.96,
       "bytes": 15788
+    },
+    "lab-guide": {
+      "id": "lab-guide",
+      "file": "audio/english-activities/ff8233b5aaec58b175e1c299.mp3",
+      "text": "Listen. Look. Choose. You can listen again.",
+      "spokenText": "Listen. Look. Choose. You can listen again.",
+      "durationSeconds": 4.992,
+      "bytes": 80300
+    },
+    "lab-listen-choose": {
+      "id": "lab-listen-choose",
+      "file": "audio/english-activities/abf892ec47939dab78cf52bc.mp3",
+      "text": "Listen and choose.",
+      "spokenText": "Listen and choose.",
+      "durationSeconds": 1.8,
+      "bytes": 29228
+    },
+    "lab-my-name": {
+      "id": "lab-my-name",
+      "file": "audio/english-activities/b34314aaab2dfd89e6ebd009.mp3",
+      "text": "My name.",
+      "spokenText": "My name.",
+      "durationSeconds": 1.224,
+      "bytes": 20012
+    },
+    "lab-your-name": {
+      "id": "lab-your-name",
+      "file": "audio/english-activities/a4f03f18ff52856c17c9aeea.mp3",
+      "text": "Your name.",
+      "spokenText": "Your name.",
+      "durationSeconds": 1.224,
+      "bytes": 20012
     }
   },
   "files": {
@@ -782,6 +814,38 @@
       "peakDBFS": -7.89,
       "rmsDBFS": -19.56,
       "sha256": "3fcd7e55d827334f389d4e68d95ea93b34cd0a3d8eaf37e2b89fa8271a8a778e"
+    },
+    "audio/english-activities/ff8233b5aaec58b175e1c299.mp3": {
+      "durationSeconds": 4.992,
+      "bytes": 80300,
+      "sampleRate": 24000,
+      "peakDBFS": -2.45,
+      "rmsDBFS": -17.49,
+      "sha256": "1e3b20bdff0afef4cf912371aeb00b84ab6545651f9fcdbdff89b955610ad1f1"
+    },
+    "audio/english-activities/abf892ec47939dab78cf52bc.mp3": {
+      "durationSeconds": 1.8,
+      "bytes": 29228,
+      "sampleRate": 24000,
+      "peakDBFS": -7.3,
+      "rmsDBFS": -19.32,
+      "sha256": "4a102b1af549cc6b851a1a2c9082b87170396371b9c202a9a4b3e723a2c995f4"
+    },
+    "audio/english-activities/b34314aaab2dfd89e6ebd009.mp3": {
+      "durationSeconds": 1.224,
+      "bytes": 20012,
+      "sampleRate": 24000,
+      "peakDBFS": -9.13,
+      "rmsDBFS": -19.39,
+      "sha256": "291597a7ea6a9e6ca494a03d90d19d5ef413ea580d8f41ec6631f6f911c85494"
+    },
+    "audio/english-activities/a4f03f18ff52856c17c9aeea.mp3": {
+      "durationSeconds": 1.224,
+      "bytes": 20012,
+      "sampleRate": 24000,
+      "peakDBFS": -9.01,
+      "rmsDBFS": -19.52,
+      "sha256": "c371cd0f4d9882fd45cb45725c3bfa6a5b0568cf35f47905a46b9d982b1546d8"
     }
   }
 }

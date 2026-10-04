@@ -6,6 +6,8 @@ import { createProgressStore, recordAttempt, getSkillState, getLexemeState, getD
 import { makeRound, makeReviewRound, checkAnswer, spellingPracticeNote, type Question } from './lib/questions';
 import { createEnglishAudioPlayer, getEnglishAudioEntry } from './lib/englishAudio';
 import EnglishAdventure from './components/EnglishAdventure';
+import EnglishLearningLab from './components/EnglishLearningLab';
+import { englishLabLessons, getLabLessonForLexeme, type LabLessonId } from './data/englishLearningLab';
 import { hasEnglishActivities, hasEnglishActivityReview, makeEnglishActivityRound, type EnglishActivityKind } from './data/englishActivities';
 
 const allowedIds = new Set(lexemes.map(item => item.id));
@@ -103,9 +105,9 @@ export default function App() {
   const todayAttempts = progress.attempts.filter(item => item.localDate === today);
   const activeCourse = courses.find(course => course.id === preferences.courseId) || courses[0];
   const selectedCourse = courses.find(course => course.id === segments[1]);
-  const focusedGame = page === 'play' && selectedCourse
+  const focusedGame = page === 'english-lab' || (page === 'play' && selectedCourse
     ? !!englishKind(selectedCourse.id, (segments[2] || 'meaning') as GameMode)
-    : (page === 'teacher' || page === 'review') && auxiliaryGameFocus;
+    : (page === 'teacher' || page === 'review') && auxiliaryGameFocus);
 
   function savePreferences(next: typeof preferences) {
     setPreferences(next);
@@ -163,12 +165,13 @@ export default function App() {
           <div className="gentle-note"><Lightbulb size={19} /><p><strong>今天的小提醒</strong>　先自己想一想，再看答案。能在明天想起来，也是一种进步。</p></div>
         </>}
         {page === 'map' && <SemesterMap subject={segments[1] === 'english' ? 'english' : 'chinese'} progress={progress} />}
+        {page === 'english-lab' && <EnglishLearningLab key={route} lessonId={segments[1]} teacher={segments[2] === 'teacher'} onAttempt={onAttempt} onExit={segments[2] === 'teacher' ? () => navigate('/teacher') : undefined} />}
         {page === 'course' && selectedCourse && <CoursePage key={selectedCourse.id} course={selectedCourse} progress={progress} onSetCurrent={() => { savePreferences({ ...preferences, courseId: selectedCourse.id }); setNotice('已经设为今天的学习课。'); }} onNotice={setNotice} />}
         {page === 'play' && selectedCourse && <CourseRound key={route} course={selectedCourse} mode={modes.includes(segments[2] as GameMode) ? segments[2] as GameMode : 'meaning'} limit={preferences.limit} onAttempt={onAttempt} />}
         {page === 'review' && <ReviewPage progress={progress} dueIds={dueIds} limit={preferences.limit} onAttempt={onAttempt} onGameFocus={setAuxiliaryGameFocus} />}
         {page === 'teacher' && <TeacherPage limit={preferences.limit} onGameFocus={setAuxiliaryGameFocus} />}
         {page === 'parent' && <ParentPage progress={progress} preferences={preferences} onPreferences={savePreferences} onImport={saveProgress} onNotice={setNotice} />}
-        {((page === 'course' || page === 'play') && !selectedCourse || !['home', 'map', 'course', 'play', 'review', 'teacher', 'parent'].includes(page)) && <EmptyState title="这条小路暂时没有找到" text="回到地图，重新选择一课吧。" action={<a className="primary" href="#/">返回小岛 <Home size={18} /></a>} />}
+        {((page === 'course' || page === 'play') && !selectedCourse || !['home', 'map', 'course', 'play', 'review', 'teacher', 'parent', 'english-lab'].includes(page)) && <EmptyState title="这条小路暂时没有找到" text="回到地图，重新选择一课吧。" action={<a className="primary" href="#/">返回小岛 <Home size={18} /></a>} />}
       </main>
       <footer className="page-footer"><BookOpen size={14} /> 每次发现一点点。<a href="#/teacher">老师投屏</a><span>学习记录保存在当前浏览器 · <a href="#/parent">备份与内容说明</a></span></footer>
     </div>
@@ -183,6 +186,7 @@ function SemesterMap({ subject, progress }: { subject: Subject; progress: Progre
   const subjectCourses = courses.filter(course => course.subject === subject && (!search || `${course.title} ${getCourseLexemes(course.id).map(item => item.text).join(' ')}`.toLowerCase().includes(search.toLowerCase())));
   const units = [...new Set(subjectCourses.map(course => course.unitNumber))];
   return <>
+    {subject === 'english' && <a className="english-lab-entry" href="#/english-lab"><span className="icon-box green"><Volume2 size={25} /></span><div><strong>英语体验课 · 看情景，听示范</strong><p>先学，再练，再换情景：猫、见面与告别、my / your</p></div><ArrowRight size={22} /></a>}
     <div className={`map-header ${subject}`}><div><span className="eyebrow">YOUR SEMESTER MAP</span><h1>{subject === 'chinese' ? '语文森林' : '英语港湾'}</h1><p>{subject === 'chinese' ? '沿着八条小路，发现汉字、词语和课文的意思。' : '认识朋友，介绍家人。每个单元都是一个新场景。'}</p></div><span className="map-emblem">{subject === 'chinese' ? '字' : 'Aa'}</span></div>
     <div className="map-tools"><span><Flag size={17} /> {subject === 'chinese' ? '26课 · 8个单元' : '8单元 · 2个主题 · 26字母'}</span><label className="search-box"><Search size={17} /><input value={search} onChange={event => setSearch(event.target.value)} placeholder="找课文，或一个字词…" aria-label="搜索课文或字词" /></label></div>
     {!subjectCourses.length && <EmptyState title="还没找到这个字词" text="试试课文名，或者换一个词搜索。" />}
@@ -267,7 +271,8 @@ function Round({ course, mode, limit, onAttempt, teacher = false, preferredIds, 
 function ReviewPage({ progress, dueIds, limit, onAttempt, onGameFocus }: { progress: Progress; dueIds: string[]; limit: number; onAttempt: (input: AttemptInput) => void; onGameFocus: (focused: boolean) => void }) {
   const [playing, setPlaying] = useState(false);
   const [englishReview, setEnglishReview] = useState<{ courseId: string; kind: EnglishActivityKind; ids: string[] } | null>(null);
-  const focused = !!englishReview;
+  const [labReview, setLabReview] = useState<{ lessonId: LabLessonId; ids: string[] } | null>(null);
+  const focused = !!englishReview || !!labReview;
   useEffect(() => {
     onGameFocus(focused);
     return () => onGameFocus(false);
@@ -276,9 +281,15 @@ function ReviewPage({ progress, dueIds, limit, onAttempt, onGameFocus }: { progr
   const [reviewSnapshot, setReviewSnapshot] = useState<{ ids: string[]; targets: { lexemeId: string; skill: Skill }[] }>({ ids: [], targets: [] });
   const targets = (dueIds.length ? getDueReviews(progress).filter(target => dueIds.includes(target.lexemeId))
     : practicedIds.flatMap(id => SKILLS.filter(skill => getSkillState(progress, id, skill).attempts > 0).map(skill => ({ lexemeId: id, skill })))).filter(reviewAvailable);
+  const labIds = new Set(progress.attempts.filter(attempt => attempt.skill === 'listening' && attempt.sourceEvidence.startsWith('english-lab:')).map(attempt => attempt.lexemeId));
+  const labTargets = targets.filter(target => target.skill === 'listening' && labIds.has(target.lexemeId) && getLabLessonForLexeme(target.lexemeId));
+  const labGroups = englishLabLessons.flatMap(lesson => {
+    const ids = labTargets.filter(target => getLabLessonForLexeme(target.lexemeId)?.id === lesson.id).map(target => target.lexemeId);
+    return ids.length ? [{ lessonId: lesson.id, ids }] : [];
+  });
   const classicTargets = targets.filter(target => !hasEnglishActivityReview(target.lexemeId, target.skill));
   const englishGroups = new globalThis.Map<string, { courseId: string; kind: EnglishActivityKind; ids: string[] }>();
-  for (const target of targets.filter(target => hasEnglishActivityReview(target.lexemeId, target.skill))) {
+  for (const target of targets.filter(target => hasEnglishActivityReview(target.lexemeId, target.skill) && !labTargets.includes(target))) {
     const item = lexemes.find(item => item.id === target.lexemeId)!;
     const kind = target.skill === 'listening' ? 'listening' : 'scene';
     const key = item.courseId + ':' + kind;
@@ -288,16 +299,19 @@ function ReviewPage({ progress, dueIds, limit, onAttempt, onGameFocus }: { progr
   }
   function startReview() {
     if (!classicTargets.length) {
-      setEnglishReview([...englishGroups.values()][0] ?? null);
+      if (labGroups.length) setLabReview(labGroups[0]);
+      else setEnglishReview([...englishGroups.values()][0] ?? null);
       return;
     }
     setReviewSnapshot({ ids: [...new Set(classicTargets.map(target => target.lexemeId))], targets: classicTargets });
     setPlaying(true);
   }
+  if (labReview) return <EnglishLearningLab key={labReview.lessonId} lessonId={labReview.lessonId} reviewLexemeIds={labReview.ids} onAttempt={onAttempt} onExit={() => setLabReview(null)} />;
   if (englishReview) return <EnglishAdventure key={englishReview.courseId + englishReview.kind} course={courses.find(course => course.id === englishReview.courseId)!}
     kind={englishReview.kind} limit={limit} preferredLexemeIds={englishReview.ids} onAttempt={onAttempt} onExit={() => setEnglishReview(null)} />;
   if (playing) return <><button className="text-button" onClick={() => setPlaying(false)}><ArrowLeft size={16} />返回复习背包</button><Round key="review-round" mode="recall" limit={limit} preferredIds={reviewSnapshot.ids} reviewTargets={reviewSnapshot.targets} onAttempt={onAttempt} onExit={() => setPlaying(false)} /></>;
   return <><div className="lesson-heading"><div><span className="eyebrow">OLD FRIENDS, NEW DISCOVERIES</span><h1>复习背包</h1><p>按练过的能力，再和熟悉的字词见一面。</p></div><Backpack className="page-emblem" size={58} strokeWidth={1.2} /></div>
+    {labGroups.length > 0 && <section aria-label="英语体验课复习"><div className="section-heading"><h2>换个情景，再听一听</h2><span className="subtle">继续练听懂，不直接计作独立回忆</span></div><div className="lesson-actions">{labGroups.map(group => <button className="mode-card recall" key={group.lessonId} onClick={() => setLabReview(group)}><span><Volume2 size={22} /></span><h3>{englishLabLessons.find(lesson => lesson.id === group.lessonId)?.title}</h3><p>{group.ids.length} 个字词 · 英文情景体验课</p><ArrowRight size={16} /></button>)}</div></section>}
     {dueIds.length ? <div className="review-banner"><div><h2>{dueIds.length} 个字词，今天到了见面的日子</h2><p>选一条练习小路，完成后就可以休息。</p></div><button className="primary" onClick={startReview}>开始复习 <ArrowRight size={18} /></button></div>
       : <EmptyState title={practicedIds.length ? '今天暂时没有到期的字词' : '背包里还没有字词'} text={practicedIds.length ? '明天再回来看看。也可以主动复习学过的字词。' : '从课本地图选一课，完成第一次小冒险吧。'} action={targets.length ? <button className="secondary" onClick={startReview}>提前练一练 <RotateCcw size={16} /></button> : <a className="primary" href="#/map/english">去英语港湾 <ArrowRight size={16} /></a>} />}
     {englishGroups.size > 0 && <section aria-label="英语新玩法复习"><div className="section-heading"><h2>再玩一小关</h2><span className="subtle">听懂和接话，分别练习</span></div><div className="lesson-actions">{[...englishGroups.entries()].map(([key, group]) => <button className={'mode-card ' + (group.kind === 'scene' ? 'context' : 'recall')} key={key} onClick={() => setEnglishReview(group)}><span><Volume2 size={22} /></span><h3>{group.kind === 'scene' ? '情景接话' : '听音寻宝'}</h3><p>{courses.find(course => course.id === group.courseId)?.subtitle} · {group.ids.length} 个字词</p><ArrowRight size={16} /></button>)}</div></section>}
@@ -317,7 +331,7 @@ function TeacherPage({ limit, onGameFocus }: { limit: number; onGameFocus: (focu
     onGameFocus(focused);
     return () => onGameFocus(false);
   }, [focused, onGameFocus]);
-  return <><div className="lesson-heading"><div><span className="eyebrow">A LITTLE WONDER FOR THE WHOLE CLASS</span><h1>把小岛，带进课堂。</h1><p>选一课，投屏提问。先思考，再一起揭晓。</p></div><Presentation className="page-emblem" size={58} strokeWidth={1.2} /></div>
+  return <><div className="lesson-heading"><div><span className="eyebrow">A LITTLE WONDER FOR THE WHOLE CLASS</span><h1>把小岛，带进课堂。</h1><p>选一课，投屏提问。先思考，再一起揭晓。</p><div className="english-lab-teacher-links">{englishLabLessons.map(lesson => <a key={lesson.id} href={`#/english-lab/${lesson.id}/teacher`}>体验课 · {lesson.title} <ExternalLink size={15} /></a>)}</div></div><Presentation className="page-emblem" size={58} strokeWidth={1.2} /></div>
     <section className="teacher-controls"><label>选择教材和课目<select value={courseId} onChange={event => { setCourseId(event.target.value); const first = availableGameModes(event.target.value)[0]; setMode(first || 'meaning'); setRoundKey(roundKey + 1); }}>{courses.map(course => <option value={course.id} key={course.id}>{course.subject === 'chinese' ? '语文' : '英语'} · {course.title}</option>)}</select></label><label>课堂玩法<select value={mode} onChange={event => { setMode(event.target.value as GameMode); setRoundKey(roundKey + 1); }}>{availableModes.map(mode => <option key={mode} value={mode}>{modeLabel(courseId, mode)}</option>)}</select></label><button className="secondary" onClick={() => setRoundKey(roundKey + 1)}><RotateCcw size={17} />换一组</button><button className="secondary" onClick={() => document.documentElement.requestFullscreen?.().catch(() => undefined)}><Maximize2 size={17} />全屏</button><button className="secondary" onClick={() => window.print()}><Printer size={17} />打印本课词单</button></section>
     <CourseRound key={`${courseId}-${mode}-${roundKey}`} course={course} mode={mode} limit={limit} teacher />
     <section className="print-sheet"><h2>{course.title} · 字词练习单</h2><p>姓名：________________　日期：________________</p>{[...new Set(items.map(item => item.kind))].map(kind => <div key={kind}><h3>{kindLabels[kind]}</h3><div className="print-words">{items.filter(item => item.kind === kind).map(item => <span key={item.id}>{item.text}<small>____________</small></span>)}</div></div>)}<small>词表来自同版公开预览，使用前请核对学校纸本；合成语音仅供跟读示范。</small></section>

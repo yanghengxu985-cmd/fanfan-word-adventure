@@ -387,6 +387,38 @@
       "spokenText": "Name.",
       "durationSeconds": 0.96,
       "bytes": 15788
+    },
+    "lab-guide": {
+      "id": "lab-guide",
+      "file": "audio/english-activities/ff8233b5aaec58b175e1c299.mp3",
+      "text": "Listen. Look. Choose. You can listen again.",
+      "spokenText": "Listen. Look. Choose. You can listen again.",
+      "durationSeconds": 4.992,
+      "bytes": 80300
+    },
+    "lab-listen-choose": {
+      "id": "lab-listen-choose",
+      "file": "audio/english-activities/abf892ec47939dab78cf52bc.mp3",
+      "text": "Listen and choose.",
+      "spokenText": "Listen and choose.",
+      "durationSeconds": 1.8,
+      "bytes": 29228
+    },
+    "lab-my-name": {
+      "id": "lab-my-name",
+      "file": "audio/english-activities/b34314aaab2dfd89e6ebd009.mp3",
+      "text": "My name.",
+      "spokenText": "My name.",
+      "durationSeconds": 1.224,
+      "bytes": 20012
+    },
+    "lab-your-name": {
+      "id": "lab-your-name",
+      "file": "audio/english-activities/a4f03f18ff52856c17c9aeea.mp3",
+      "text": "Your name.",
+      "spokenText": "Your name.",
+      "durationSeconds": 1.224,
+      "bytes": 20012
     }
   }
 }

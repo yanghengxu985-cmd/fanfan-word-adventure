@@ -4,8 +4,10 @@ import { fileURLToPath } from 'node:url';
 import test from 'node:test';
 import audioManifest from '../../public/audio/english/manifest.json';
 import runtimeManifest from '../data/englishAudioManifest.json';
+import activityRuntimeManifest from '../data/englishActivityAudioManifest.json';
+import activityClips from '../data/englishActivityClips.json';
 import { lexemes } from '../data/curriculum';
-import { createEnglishAudioPlayer, getEnglishAudioEntry, type EnglishAudioElement } from './englishAudio';
+import { createEnglishAudioPlayer, getEnglishActivityAudioEntry, getEnglishAudioEntry, type EnglishAudioElement } from './englishAudio';
 
 class FakeAudio implements EnglishAudioElement {
   preload: HTMLMediaElement['preload'] = 'auto';
@@ -17,8 +19,9 @@ class FakeAudio implements EnglishAudioElement {
   pauseCalls = 0;
   loadCalls = 0;
   removedAttributes: string[] = [];
+  resolvePlay!: () => void;
   rejectPlay!: (reason?: unknown) => void;
-  started = new Promise<void>((_resolve, reject) => { this.rejectPlay = reject; });
+  started = new Promise<void>((resolve, reject) => { this.resolvePlay = resolve; this.rejectPlay = reject; });
   constructor(readonly url: string) {}
   play() { this.playCalls++; return this.started; }
   pause() { this.pauseCalls++; }
@@ -34,16 +37,18 @@ const settle = () => new Promise<void>(resolve => setImmediate(resolve));
 function fixture(baseUrl = '/fanfan-word-adventure/') {
   const clips: FakeAudio[] = [];
   const messages: string[] = [];
+  const events: Array<{ event: 'started' | 'ended' | 'error'; id: string }> = [];
   const player = createEnglishAudioPlayer({
     baseUrl,
     onStatus: message => messages.push(message),
+    onEvent: (event, id) => events.push({ event, id }),
     createAudio: url => {
       const clip = new FakeAudio(url);
       clips.push(clip);
       return clip;
     },
   });
-  return { ...player, clips, messages };
+  return { ...player, clips, messages, events };
 }
 
 test('all 153 English records have real MP3 files matching the chosen voice and tempo', () => {
@@ -213,5 +218,153 @@ test('a browser without a usable Audio constructor gets a readable failure', () 
   });
   assert.doesNotThrow(() => player.play(firstId));
   assert.deepEqual(messages, ['声音暂时没加载出来，请再点一次。']);
+  player.stop();
+});
+
+test('playback events start after the play promise succeeds and end only on the media ended event', async () => {
+  const player = fixture();
+  player.play(firstId);
+  const clip = player.clips[0];
+  assert.deepEqual(player.events, []);
+  clip.resolvePlay();
+  assert.deepEqual(player.events, []);
+  await settle();
+  assert.deepEqual(player.events, [{ event: 'started', id: firstId }]);
+  clip.resolvePlay();
+  await settle();
+  assert.equal(player.events.length, 1);
+  const ended = clip.onended;
+  ended?.(new Event('ended'));
+  assert.deepEqual(player.events, [{ event: 'started', id: firstId }, { event: 'ended', id: firstId }]);
+  ended?.(new Event('ended'));
+  assert.equal(player.events.length, 2);
+});
+
+test('a switched or stopped clip cannot emit late started, ended or error events', async () => {
+  const player = fixture();
+  player.play(firstId);
+  const previous = player.clips[0];
+  const lateEnded = previous.onended;
+  const lateError = previous.onerror;
+  player.play(nextId);
+  previous.resolvePlay();
+  lateEnded?.(new Event('ended'));
+  lateError?.(new Event('error'));
+  await settle();
+  assert.deepEqual(player.events, []);
+  const current = player.clips[1];
+  const nextLateEnded = current.onended;
+  const nextLateError = current.onerror;
+  player.stop();
+  current.rejectPlay(new Error('stopped'));
+  nextLateEnded?.(new Event('ended'));
+  nextLateError?.(new Event('error'));
+  await settle();
+  assert.deepEqual(player.events, []);
+});
+
+test('the same clip ID can be replayed with fresh media and distinct successful playback events', async () => {
+  const player = fixture();
+  player.play(firstId);
+  player.clips[0].resolvePlay();
+  await settle();
+  player.play(firstId);
+  assert.equal(player.clips.length, 2);
+  assert.equal(player.clips[0].pauseCalls, 1);
+  assert.equal(player.clips[1].url, player.clips[0].url);
+  player.clips[1].resolvePlay();
+  await settle();
+  player.clips[1].onended?.(new Event('ended'));
+  assert.deepEqual(player.events, [
+    { event: 'started', id: firstId },
+    { event: 'started', id: firstId },
+    { event: 'ended', id: firstId },
+  ]);
+});
+
+test('absent or malformed assets, construction failures and rejected play all emit one error', async () => {
+  const missing = fixture();
+  missing.play('missing-activity');
+  assert.deepEqual(missing.events, [{ event: 'error', id: 'missing-activity' }]);
+  const entry = getEnglishAudioEntry(firstId)!;
+  const spokenText = entry.spokenText;
+  try {
+    entry.spokenText = '';
+    const malformed = fixture();
+    malformed.play(firstId);
+    assert.equal(malformed.clips.length, 0);
+    assert.deepEqual(malformed.events, [{ event: 'error', id: firstId }]);
+  } finally {
+    entry.spokenText = spokenText;
+  }
+  const events: Array<[string, string]> = [];
+  const unavailable = createEnglishAudioPlayer({
+    baseUrl: '/', onStatus: () => {}, onEvent: (event, id) => events.push([event, id]),
+    createAudio: () => { throw new Error('unavailable'); },
+  });
+  unavailable.play(firstId);
+  assert.deepEqual(events, [['error', firstId]]);
+  const failed = fixture();
+  failed.play(firstId);
+  const lateError = failed.clips[0].onerror;
+  failed.clips[0].rejectPlay(new Error('autoplay denied'));
+  await settle();
+  lateError?.(new Event('error'));
+  assert.deepEqual(failed.events, [{ event: 'error', id: firstId }]);
+});
+
+test('stopping from a status callback suppresses subsequent playback event callbacks', async () => {
+  let stop = () => {};
+  const events: string[] = [];
+  const clip = new FakeAudio('/test.mp3');
+  const player = createEnglishAudioPlayer({
+    baseUrl: '/',
+    onStatus: message => { if (message === '再跟着读一遍吧。') stop(); },
+    onEvent: event => events.push(event),
+    createAudio: () => clip,
+  });
+  stop = player.stop;
+  player.play(firstId);
+  clip.resolvePlay();
+  await settle();
+  assert.deepEqual(events, ['started']);
+  clip.onended?.(new Event('ended'));
+  assert.deepEqual(events, ['started']);
+});
+
+test('activity recordings are bundled separately and play from their own Pages asset directory', () => {
+  const activityIds = Object.keys(activityRuntimeManifest.entries);
+  assert.ok(activityIds.length > 0, 'activity recordings have not been generated');
+  assert.equal(activityRuntimeManifest.schemaVersion, 1);
+  assert.equal(activityRuntimeManifest.voice, 'en-GB-SoniaNeural');
+  assert.equal(activityRuntimeManifest.rate, '-12%');
+  assert.equal(activityRuntimeManifest.locale, 'en-GB');
+  assert.deepEqual(activityIds.sort(), Object.keys(activityClips).sort());
+  const publicManifest = JSON.parse(readFileSync(fileURLToPath(new URL('../../public/audio/english-activities/manifest.json', import.meta.url)), 'utf8'));
+  for (const key of ['schemaVersion', 'voice', 'rate', 'locale', 'entries'] as const) {
+    assert.deepEqual(activityRuntimeManifest[key], publicManifest[key], `activity bundle out of sync: ${key}`);
+  }
+  for (const id of activityIds) {
+    assert.equal(getEnglishAudioEntry(id), undefined, `activity ${id} leaked into the textbook word map`);
+    const entry = getEnglishActivityAudioEntry(id);
+    assert.ok(entry);
+    assert.equal(entry.text, (activityClips as Record<string, string>)[id]);
+    assert.ok(entry.spokenText.trim());
+    assert.ok(!/[\u3400-\u9fff]/.test(entry.spokenText));
+    assert.match(entry.file, /^audio\/english-activities\/[A-Za-z0-9_-]+\.mp3$/);
+    const bytes = readFileSync(fileURLToPath(new URL(`../../public/${entry.file}`, import.meta.url)));
+    assert.equal(bytes.length, entry.bytes, id);
+    assert.ok(bytes.length > 500);
+    assert.ok(entry.durationSeconds > 0);
+    const hasId3 = bytes.subarray(0, 3).toString('ascii') === 'ID3';
+    const hasMpegHeader = bytes[0] === 0xff && (bytes[1] & 0xe0) === 0xe0;
+    assert.ok(hasId3 || hasMpegHeader, `not an MP3: ${id}`);
+  }
+  assert.equal(getEnglishActivityAudioEntry('constructor'), undefined);
+  const id = activityIds[0];
+  const player = fixture();
+  player.play(id);
+  assert.equal(player.clips[0].url, `/fanfan-word-adventure/${getEnglishActivityAudioEntry(id)!.file}`);
+  assert.equal(player.clips[0].playCalls, 1);
   player.stop();
 });

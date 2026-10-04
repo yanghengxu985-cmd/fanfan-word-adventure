@@ -171,7 +171,7 @@ async (page) => {
   assert((await audioState(retryIndex)).duration > 0, '恢复请求后同一词卡可重新播放');
   assert(await progress() === beforePlayback, '朗读成功、切换和加载失败均不写入学习结果');
 
-  await go('/play/en-01/recall');
+  await go('/play/en-03/recall');
   await page.getByRole('button', { name: '我完成了，核对答案', exact: true }).click();
   const listen = () => page.getByRole('button', { name: '听示范，跟着读', exact: true });
   const roundAudioIndex = await clickAudio(listen());

@@ -1,0 +1,905 @@
+[
+  {
+    "id": "en01-scene-hello",
+    "courseId": "en-01",
+    "kind": "scene",
+    "lexemeId": "en-01-word-01",
+    "scene": "上午在公园刚碰见朋友，他先向你打招呼。你也跟他打个招呼吧。",
+    "picture": "hello",
+    "promptText": "Hello!",
+    "promptAudioId": "activity-001",
+    "choices": [
+      {
+        "id": "en01-scene-hello-choice-1",
+        "text": "Hi!",
+        "picture": "hello",
+        "description": "见面打招呼",
+        "audioId": "activity-002"
+      },
+      {
+        "id": "en01-scene-hello-choice-2",
+        "text": "Goodbye!",
+        "picture": "goodbye",
+        "description": "告别离开",
+        "audioId": "activity-003"
+      },
+      {
+        "id": "en01-scene-hello-choice-3",
+        "text": "Hello!",
+        "picture": "hello",
+        "description": "见面问好",
+        "audioId": "activity-001"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en01-scene-hello-choice-1",
+      "en01-scene-hello-choice-3"
+    ],
+    "explanation": "Hello 和 Hi 都可以用来见面打招呼。两种回答都算合适。",
+    "modelText": "Hi!",
+    "modelAudioId": "activity-002",
+    "dialogueAudioId": "activity-004",
+    "oralCue": "假装你刚碰见朋友，用 Hello 或 Hi 打个招呼。"
+  },
+  {
+    "id": "en01-scene-morning",
+    "courseId": "en-01",
+    "kind": "scene",
+    "lexemeId": "en-01-word-11",
+    "scene": "早上来到教室，林老师向全班问好。你怎么向老师问早？",
+    "picture": "morning",
+    "promptText": "Good morning, class!",
+    "promptAudioId": "activity-005",
+    "choices": [
+      {
+        "id": "en01-scene-morning-choice-1",
+        "text": "Good morning, Miss Lin!",
+        "picture": "teacher-woman",
+        "description": "向女老师问早",
+        "audioId": "activity-006"
+      },
+      {
+        "id": "en01-scene-morning-choice-2",
+        "text": "Good afternoon, Miss Lin!",
+        "picture": "afternoon",
+        "description": "下午问好",
+        "audioId": "activity-007"
+      },
+      {
+        "id": "en01-scene-morning-choice-3",
+        "text": "Goodbye, Miss Lin!",
+        "picture": "goodbye",
+        "description": "告别老师",
+        "audioId": "activity-008"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en01-scene-morning-choice-1"
+    ],
+    "explanation": "早上的问好用 Good morning。Miss Lin 是对林老师的称呼，class 是全班同学。",
+    "modelText": "Good morning, Miss Lin!",
+    "modelAudioId": "activity-006",
+    "dialogueAudioId": "activity-009",
+    "oralCue": "假装你早上见到林老师，向她问好。"
+  },
+  {
+    "id": "en01-scene-afternoon",
+    "courseId": "en-01",
+    "kind": "scene",
+    "lexemeId": "en-01-word-12",
+    "scene": "下午回到学校，朋友向你问好。你也向他问下午好。",
+    "picture": "afternoon",
+    "promptText": "Good afternoon!",
+    "promptAudioId": "activity-010",
+    "choices": [
+      {
+        "id": "en01-scene-afternoon-choice-1",
+        "text": "Good afternoon!",
+        "picture": "afternoon",
+        "description": "下午问好",
+        "audioId": "activity-010"
+      },
+      {
+        "id": "en01-scene-afternoon-choice-2",
+        "text": "Good morning!",
+        "picture": "morning",
+        "description": "早上问好",
+        "audioId": "activity-011"
+      },
+      {
+        "id": "en01-scene-afternoon-choice-3",
+        "text": "Goodbye!",
+        "picture": "goodbye",
+        "description": "告别离开",
+        "audioId": "activity-003"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en01-scene-afternoon-choice-1"
+    ],
+    "explanation": "下午问好可以说 Good afternoon。",
+    "modelText": "Good afternoon!",
+    "modelAudioId": "activity-010",
+    "dialogueAudioId": "activity-012",
+    "oralCue": "下午见到朋友时，你会怎样问好？"
+  },
+  {
+    "id": "en01-scene-goodbye",
+    "courseId": "en-01",
+    "kind": "scene",
+    "lexemeId": "en-01-word-09",
+    "scene": "朋友要回家了，他向你告别。你也跟他说再见。",
+    "picture": "goodbye",
+    "promptText": "Goodbye!",
+    "promptAudioId": "activity-003",
+    "choices": [
+      {
+        "id": "en01-scene-goodbye-choice-1",
+        "text": "Bye!",
+        "picture": "goodbye",
+        "description": "挥手告别",
+        "audioId": "activity-013"
+      },
+      {
+        "id": "en01-scene-goodbye-choice-2",
+        "text": "Hello!",
+        "picture": "hello",
+        "description": "见面问好",
+        "audioId": "activity-001"
+      },
+      {
+        "id": "en01-scene-goodbye-choice-3",
+        "text": "Goodbye!",
+        "picture": "goodbye",
+        "description": "道别",
+        "audioId": "activity-003"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en01-scene-goodbye-choice-1",
+      "en01-scene-goodbye-choice-3"
+    ],
+    "explanation": "Goodbye 和 Bye 都可以用来告别，两种回答都合适。",
+    "modelText": "Bye!",
+    "modelAudioId": "activity-013",
+    "dialogueAudioId": "activity-014",
+    "oralCue": "假装你要和朋友分开，用 Bye 或 Goodbye 告别。"
+  },
+  {
+    "id": "en01-scene-self",
+    "courseId": "en-01",
+    "kind": "scene",
+    "lexemeId": "en-01-word-03",
+    "scene": "Lin 指着自己介绍名字。你是 Lan，轮到你介绍自己了。",
+    "picture": "self",
+    "promptText": "I am Lin.",
+    "promptAudioId": "activity-015",
+    "choices": [
+      {
+        "id": "en01-scene-self-choice-1",
+        "text": "I am Lan.",
+        "picture": "self",
+        "description": "介绍自己叫 Lan",
+        "audioId": "activity-016"
+      },
+      {
+        "id": "en01-scene-self-choice-2",
+        "text": "I am Lin.",
+        "picture": "name",
+        "description": "介绍名字 Lin",
+        "audioId": "activity-015"
+      },
+      {
+        "id": "en01-scene-self-choice-3",
+        "text": "I am a cat.",
+        "picture": "cat",
+        "description": "说自己是一只猫",
+        "audioId": "activity-017"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en01-scene-self-choice-1"
+    ],
+    "explanation": "I 指说话的人自己。你扮演 Lan，所以可以说 I am Lan。",
+    "modelText": "I am Lan.",
+    "modelAudioId": "activity-016",
+    "dialogueAudioId": "activity-018",
+    "oralCue": "指着自己，用 I am 加上你的名字介绍自己。"
+  },
+  {
+    "id": "en01-scene-class",
+    "courseId": "en-01",
+    "kind": "scene",
+    "lexemeId": "en-01-word-08",
+    "scene": "新来的林老师在教室门口向全班打招呼。同学们也向老师问好。",
+    "picture": "class",
+    "promptText": "Hello, class!",
+    "promptAudioId": "activity-019",
+    "choices": [
+      {
+        "id": "en01-scene-class-choice-1",
+        "text": "Hello, Miss Lin!",
+        "picture": "teacher-woman",
+        "description": "向老师打招呼",
+        "audioId": "activity-020"
+      },
+      {
+        "id": "en01-scene-class-choice-2",
+        "text": "Goodbye, Miss Lin!",
+        "picture": "goodbye",
+        "description": "告别老师",
+        "audioId": "activity-008"
+      },
+      {
+        "id": "en01-scene-class-choice-3",
+        "text": "Hi, Miss Lin!",
+        "picture": "teacher-woman",
+        "description": "向老师问好",
+        "audioId": "activity-021"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en01-scene-class-choice-1",
+      "en01-scene-class-choice-3"
+    ],
+    "explanation": "class 在这里是老师称呼全班同学。Hello 和 Hi 都是合适的见面问候。",
+    "modelText": "Hello, Miss Lin!",
+    "modelAudioId": "activity-020",
+    "dialogueAudioId": "activity-022",
+    "oralCue": "假装你是教室里的同学，向林老师打招呼。"
+  },
+  {
+    "id": "en02-scene-name",
+    "courseId": "en-02",
+    "kind": "scene",
+    "lexemeId": "en-02-word-04",
+    "scene": "新同学问你的名字。你的角色叫 Lan，告诉他你叫什么。",
+    "picture": "name-question",
+    "promptText": "What's your name?",
+    "promptAudioId": "activity-023",
+    "choices": [
+      {
+        "id": "en02-scene-name-choice-1",
+        "text": "My name is Lan.",
+        "picture": "my",
+        "description": "说自己的名字叫 Lan",
+        "audioId": "activity-024"
+      },
+      {
+        "id": "en02-scene-name-choice-2",
+        "text": "My name is Lin.",
+        "picture": "name",
+        "description": "介绍名字 Lin",
+        "audioId": "activity-025"
+      },
+      {
+        "id": "en02-scene-name-choice-3",
+        "text": "Goodbye!",
+        "picture": "goodbye",
+        "description": "告别",
+        "audioId": "activity-003"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en02-scene-name-choice-1"
+    ],
+    "explanation": "问名字可以说 What’s your name? 回答时 my 表示“我的”。这里你扮演 Lan。",
+    "modelText": "My name is Lan.",
+    "modelAudioId": "activity-024",
+    "dialogueAudioId": "activity-026",
+    "oralCue": "不用看选项，用 My name is 加上你自己的名字回答。"
+  },
+  {
+    "id": "en02-scene-your",
+    "courseId": "en-02",
+    "kind": "scene",
+    "lexemeId": "en-02-word-03",
+    "scene": "你是 Lan，面前的 Lin 问你叫什么名字。your 指正在听他说话的你。",
+    "picture": "your",
+    "promptText": "Hello! What's your name?",
+    "promptAudioId": "activity-027",
+    "choices": [
+      {
+        "id": "en02-scene-your-choice-1",
+        "text": "My name is Lan.",
+        "picture": "my",
+        "description": "介绍你的名字 Lan",
+        "audioId": "activity-024"
+      },
+      {
+        "id": "en02-scene-your-choice-2",
+        "text": "My name is Lin.",
+        "picture": "name",
+        "description": "介绍名字 Lin",
+        "audioId": "activity-025"
+      },
+      {
+        "id": "en02-scene-your-choice-3",
+        "text": "Bye!",
+        "picture": "goodbye",
+        "description": "告别",
+        "audioId": "activity-013"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en02-scene-your-choice-1"
+    ],
+    "explanation": "对方问 your name，你回答 my name。your 指对方的，my 指自己的。",
+    "modelText": "My name is Lan.",
+    "modelAudioId": "activity-024",
+    "dialogueAudioId": "activity-028",
+    "oralCue": "和面前的朋友练习问名字：What’s your name?"
+  },
+  {
+    "id": "en02-scene-my",
+    "courseId": "en-02",
+    "kind": "scene",
+    "lexemeId": "en-02-word-05",
+    "scene": "Lin 介绍了他的名字。你是 Lan，现在轮到你介绍自己了。",
+    "picture": "my",
+    "promptText": "My name is Lin.",
+    "promptAudioId": "activity-025",
+    "choices": [
+      {
+        "id": "en02-scene-my-choice-1",
+        "text": "My name is Lan.",
+        "picture": "my",
+        "description": "介绍自己叫 Lan",
+        "audioId": "activity-024"
+      },
+      {
+        "id": "en02-scene-my-choice-2",
+        "text": "My name is Lin.",
+        "picture": "name",
+        "description": "介绍名字 Lin",
+        "audioId": "activity-025"
+      },
+      {
+        "id": "en02-scene-my-choice-3",
+        "text": "Goodbye!",
+        "picture": "goodbye",
+        "description": "告别离开",
+        "audioId": "activity-003"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en02-scene-my-choice-1"
+    ],
+    "explanation": "每个人说 my 时，都指他自己。Lin 的名字是 Lin，你扮演的角色叫 Lan。",
+    "modelText": "My name is Lan.",
+    "modelAudioId": "activity-024",
+    "dialogueAudioId": "activity-029",
+    "oralCue": "指着自己，用 My name is 介绍自己的名字。"
+  },
+  {
+    "id": "en02-scene-nice",
+    "courseId": "en-02",
+    "kind": "scene",
+    "lexemeId": "en-02-word-11",
+    "scene": "第一次认识新朋友，他说很高兴认识你。你也表示很高兴认识他。",
+    "picture": "hello",
+    "promptText": "Nice to meet you!",
+    "promptAudioId": "activity-030",
+    "choices": [
+      {
+        "id": "en02-scene-nice-choice-1",
+        "text": "Nice to meet you too!",
+        "picture": "hello",
+        "description": "也很高兴认识对方",
+        "audioId": "activity-031"
+      },
+      {
+        "id": "en02-scene-nice-choice-2",
+        "text": "Goodbye!",
+        "picture": "goodbye",
+        "description": "告别",
+        "audioId": "activity-003"
+      },
+      {
+        "id": "en02-scene-nice-choice-3",
+        "text": "Bye!",
+        "picture": "goodbye",
+        "description": "简短告别",
+        "audioId": "activity-013"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en02-scene-nice-choice-1"
+    ],
+    "explanation": "too 在这里表示“也”。Nice to meet you too 是回应初次见面问候的一种说法。",
+    "modelText": "Nice to meet you too!",
+    "modelAudioId": "activity-031",
+    "dialogueAudioId": "activity-032",
+    "oralCue": "第一次认识朋友，试着说 Nice to meet you。"
+  },
+  {
+    "id": "en02-scene-mr",
+    "courseId": "en-02",
+    "kind": "scene",
+    "lexemeId": "en-02-word-10",
+    "scene": "早上林老师在教室里向全班问好。他是一位男老师，请用 Mr Lin 向他问早。",
+    "picture": "teacher-man",
+    "promptText": "Good morning, class!",
+    "promptAudioId": "activity-005",
+    "choices": [
+      {
+        "id": "en02-scene-mr-choice-1",
+        "text": "Good morning, Mr Lin!",
+        "picture": "teacher-man",
+        "description": "向男老师问早",
+        "audioId": "activity-033"
+      },
+      {
+        "id": "en02-scene-mr-choice-2",
+        "text": "Good afternoon, Mr Lin!",
+        "picture": "afternoon",
+        "description": "下午向男老师问好",
+        "audioId": "activity-034"
+      },
+      {
+        "id": "en02-scene-mr-choice-3",
+        "text": "Goodbye, Mr Lin!",
+        "picture": "goodbye",
+        "description": "告别男老师",
+        "audioId": "activity-035"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en02-scene-mr-choice-1"
+    ],
+    "explanation": "称呼男老师可以用 Mr 加姓氏，Mr 读作 Mister。这里可以说 Good morning, Mr Lin。",
+    "modelText": "Good morning, Mr Lin!",
+    "modelAudioId": "activity-033",
+    "dialogueAudioId": "activity-036",
+    "oralCue": "向画面里的男老师说 Good morning, Mr Lin。"
+  },
+  {
+    "id": "en02-scene-girl",
+    "courseId": "en-02",
+    "kind": "scene",
+    "lexemeId": "en-02-word-09",
+    "scene": "Lin 是男孩，他介绍了自己。你扮演女孩 Lan，轮到你介绍自己的名字和身份。",
+    "picture": "girl",
+    "promptText": "I am Lin. I am a boy.",
+    "promptAudioId": "activity-037",
+    "choices": [
+      {
+        "id": "en02-scene-girl-choice-1",
+        "text": "I am Lan. I am a girl.",
+        "picture": "girl",
+        "description": "Lan 介绍自己是女孩",
+        "audioId": "activity-038"
+      },
+      {
+        "id": "en02-scene-girl-choice-2",
+        "text": "I am Lan. I am a boy.",
+        "picture": "boy",
+        "description": "Lan 介绍自己是男孩",
+        "audioId": "activity-039"
+      },
+      {
+        "id": "en02-scene-girl-choice-3",
+        "text": "Goodbye!",
+        "picture": "goodbye",
+        "description": "告别",
+        "audioId": "activity-003"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en02-scene-girl-choice-1"
+    ],
+    "explanation": "girl 表示女孩，boy 表示男孩。这里的角色 Lan 是女孩。",
+    "modelText": "I am Lan. I am a girl.",
+    "modelAudioId": "activity-038",
+    "dialogueAudioId": "activity-040",
+    "oralCue": "假装你是画面里的 Lan，介绍自己的名字。"
+  },
+  {
+    "id": "en01-listen-hello",
+    "courseId": "en-01",
+    "kind": "listening",
+    "lexemeId": "en-01-word-01",
+    "scene": "先听声音，再找对应的图片。",
+    "picture": "hello",
+    "promptText": "Hello!",
+    "promptAudioId": "activity-001",
+    "choices": [
+      {
+        "id": "en01-listen-hello-choice-1",
+        "picture": "hello",
+        "description": "两个小朋友刚见面，互相挥手问好"
+      },
+      {
+        "id": "en01-listen-hello-choice-2",
+        "picture": "goodbye",
+        "description": "小朋友背上书包，挥手离开"
+      },
+      {
+        "id": "en01-listen-hello-choice-3",
+        "picture": "cat",
+        "description": "一只猫"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en01-listen-hello-choice-1"
+    ],
+    "explanation": "Hello 表示见面问好；离开时的告别通常说 Goodbye 或 Bye。",
+    "modelText": "Hello!",
+    "modelAudioId": "activity-001",
+    "oralCue": "对着画面里刚见面的朋友说 Hello。"
+  },
+  {
+    "id": "en01-listen-goodbye",
+    "courseId": "en-01",
+    "kind": "listening",
+    "lexemeId": "en-01-word-09",
+    "scene": "先听声音，再找对应的图片。",
+    "picture": "goodbye",
+    "promptText": "Goodbye!",
+    "promptAudioId": "activity-003",
+    "choices": [
+      {
+        "id": "en01-listen-goodbye-choice-1",
+        "picture": "goodbye",
+        "description": "小朋友背上书包，挥手离开"
+      },
+      {
+        "id": "en01-listen-goodbye-choice-2",
+        "picture": "hello",
+        "description": "两个小朋友刚碰见，面对面问好"
+      },
+      {
+        "id": "en01-listen-goodbye-choice-3",
+        "picture": "cat",
+        "description": "一只猫"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en01-listen-goodbye-choice-1"
+    ],
+    "explanation": "Goodbye 是分别时的再见。Bye 也可以用来告别。",
+    "modelText": "Goodbye!",
+    "modelAudioId": "activity-003",
+    "oralCue": "对着离开的朋友说 Goodbye 或 Bye。"
+  },
+  {
+    "id": "en01-listen-morning",
+    "courseId": "en-01",
+    "kind": "listening",
+    "lexemeId": "en-01-word-11",
+    "scene": "先听声音，再找对应的图片。",
+    "picture": "morning",
+    "promptText": "Good morning!",
+    "promptAudioId": "activity-011",
+    "choices": [
+      {
+        "id": "en01-listen-morning-choice-1",
+        "picture": "morning",
+        "description": "早上太阳刚升起来，钟表显示八点"
+      },
+      {
+        "id": "en01-listen-morning-choice-2",
+        "picture": "afternoon",
+        "description": "下午太阳高挂，钟表显示三点"
+      },
+      {
+        "id": "en01-listen-morning-choice-3",
+        "picture": "goodbye",
+        "description": "小朋友挥手离开"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en01-listen-morning-choice-1"
+    ],
+    "explanation": "morning 表示上午；早上向人问好可以说 Good morning。",
+    "modelText": "Good morning!",
+    "modelAudioId": "activity-011",
+    "oralCue": "想象现在是早上，向朋友问好。"
+  },
+  {
+    "id": "en01-listen-afternoon",
+    "courseId": "en-01",
+    "kind": "listening",
+    "lexemeId": "en-01-word-12",
+    "scene": "先听声音，再找对应的图片。",
+    "picture": "afternoon",
+    "promptText": "Good afternoon!",
+    "promptAudioId": "activity-010",
+    "choices": [
+      {
+        "id": "en01-listen-afternoon-choice-1",
+        "picture": "afternoon",
+        "description": "下午太阳高挂，钟表显示三点"
+      },
+      {
+        "id": "en01-listen-afternoon-choice-2",
+        "picture": "morning",
+        "description": "早上太阳刚升起，钟表显示八点"
+      },
+      {
+        "id": "en01-listen-afternoon-choice-3",
+        "picture": "cat",
+        "description": "一只猫"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en01-listen-afternoon-choice-1"
+    ],
+    "explanation": "afternoon 表示下午；下午向人问好可以说 Good afternoon。",
+    "modelText": "Good afternoon!",
+    "modelAudioId": "activity-010",
+    "oralCue": "想象现在是下午，向朋友问好。"
+  },
+  {
+    "id": "en01-listen-cat",
+    "courseId": "en-01",
+    "kind": "listening",
+    "lexemeId": "en-01-word-06",
+    "scene": "先听声音，再找对应的图片。",
+    "picture": "cat",
+    "promptText": "A cat.",
+    "promptAudioId": "activity-041",
+    "choices": [
+      {
+        "id": "en01-listen-cat-choice-1",
+        "picture": "cat",
+        "description": "一只猫"
+      },
+      {
+        "id": "en01-listen-cat-choice-2",
+        "picture": "boy",
+        "description": "一个男孩"
+      },
+      {
+        "id": "en01-listen-cat-choice-3",
+        "picture": "girl",
+        "description": "一个女孩"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en01-listen-cat-choice-1"
+    ],
+    "explanation": "cat 是猫。A cat 是“一只猫”。",
+    "modelText": "A cat.",
+    "modelAudioId": "activity-041",
+    "oralCue": "看到画面里的猫，试着说 A cat。"
+  },
+  {
+    "id": "en01-listen-i",
+    "courseId": "en-01",
+    "kind": "listening",
+    "lexemeId": "en-01-word-03",
+    "scene": "先听声音，再找对应的图片。",
+    "picture": "self",
+    "promptText": "I.",
+    "promptAudioId": "activity-042",
+    "choices": [
+      {
+        "id": "en01-listen-i-choice-1",
+        "picture": "self",
+        "description": "正在说话的小朋友指着自己"
+      },
+      {
+        "id": "en01-listen-i-choice-2",
+        "picture": "your",
+        "description": "正在说话的小朋友指着面前的另一个人"
+      },
+      {
+        "id": "en01-listen-i-choice-3",
+        "picture": "cat",
+        "description": "一只猫"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en01-listen-i-choice-1"
+    ],
+    "explanation": "I 是说话的人指自己时用的词。图片里要找正在说话、指着自己的小朋友。",
+    "modelText": "I.",
+    "modelAudioId": "activity-042",
+    "oralCue": "指着自己，试着用 I am 介绍自己。"
+  },
+  {
+    "id": "en02-listen-my",
+    "courseId": "en-02",
+    "kind": "listening",
+    "lexemeId": "en-02-word-05",
+    "scene": "先听声音，再找对应的图片。",
+    "picture": "my",
+    "promptText": "My.",
+    "promptAudioId": "activity-043",
+    "choices": [
+      {
+        "id": "en02-listen-my-choice-1",
+        "picture": "my",
+        "description": "说话的小朋友指着自己的书包"
+      },
+      {
+        "id": "en02-listen-my-choice-2",
+        "picture": "your",
+        "description": "说话的小朋友指着面前另一个人的书包"
+      },
+      {
+        "id": "en02-listen-my-choice-3",
+        "picture": "cat",
+        "description": "一只猫"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en02-listen-my-choice-1"
+    ],
+    "explanation": "my 表示“我的”。要找说话的人指自己物品的画面。",
+    "modelText": "My.",
+    "modelAudioId": "activity-043",
+    "oralCue": "指着自己的书包，试着说 my。"
+  },
+  {
+    "id": "en02-listen-your",
+    "courseId": "en-02",
+    "kind": "listening",
+    "lexemeId": "en-02-word-03",
+    "scene": "先听声音，再找对应的图片。",
+    "picture": "your",
+    "promptText": "Your.",
+    "promptAudioId": "activity-044",
+    "choices": [
+      {
+        "id": "en02-listen-your-choice-1",
+        "picture": "your",
+        "description": "说话的小朋友指着面前另一个人的书包"
+      },
+      {
+        "id": "en02-listen-your-choice-2",
+        "picture": "my",
+        "description": "说话的小朋友指着自己的书包"
+      },
+      {
+        "id": "en02-listen-your-choice-3",
+        "picture": "cat",
+        "description": "一只猫"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en02-listen-your-choice-1"
+    ],
+    "explanation": "your 表示“你的”。要找说话的人指对方面前物品的画面。",
+    "modelText": "Your.",
+    "modelAudioId": "activity-044",
+    "oralCue": "看着朋友，指着他的书包，试着说 your。"
+  },
+  {
+    "id": "en02-listen-boy",
+    "courseId": "en-02",
+    "kind": "listening",
+    "lexemeId": "en-02-word-07",
+    "scene": "先听声音，再找对应的图片。",
+    "picture": "boy",
+    "promptText": "A boy.",
+    "promptAudioId": "activity-045",
+    "choices": [
+      {
+        "id": "en02-listen-boy-choice-1",
+        "picture": "boy",
+        "description": "一个男孩"
+      },
+      {
+        "id": "en02-listen-boy-choice-2",
+        "picture": "cat",
+        "description": "一只猫"
+      },
+      {
+        "id": "en02-listen-boy-choice-3",
+        "picture": "teacher-man",
+        "description": "一位男老师"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en02-listen-boy-choice-1"
+    ],
+    "explanation": "boy 是男孩。男老师也是男性，但不是这里的“男孩”。",
+    "modelText": "A boy.",
+    "modelAudioId": "activity-045",
+    "oralCue": "看着画面里的男孩，试着说 A boy。"
+  },
+  {
+    "id": "en02-listen-girl",
+    "courseId": "en-02",
+    "kind": "listening",
+    "lexemeId": "en-02-word-09",
+    "scene": "先听声音，再找对应的图片。",
+    "picture": "girl",
+    "promptText": "A girl.",
+    "promptAudioId": "activity-046",
+    "choices": [
+      {
+        "id": "en02-listen-girl-choice-1",
+        "picture": "girl",
+        "description": "一个女孩"
+      },
+      {
+        "id": "en02-listen-girl-choice-2",
+        "picture": "cat",
+        "description": "一只猫"
+      },
+      {
+        "id": "en02-listen-girl-choice-3",
+        "picture": "teacher-woman",
+        "description": "一位女老师"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en02-listen-girl-choice-1"
+    ],
+    "explanation": "girl 是女孩。女老师是成人，这里要找女孩。",
+    "modelText": "A girl.",
+    "modelAudioId": "activity-046",
+    "oralCue": "看着画面里的女孩，试着说 A girl。"
+  },
+  {
+    "id": "en02-listen-mr",
+    "courseId": "en-02",
+    "kind": "listening",
+    "lexemeId": "en-02-word-10",
+    "scene": "先听声音，再找对应的图片。",
+    "picture": "teacher-man",
+    "promptText": "Mr Lin.",
+    "promptAudioId": "activity-047",
+    "choices": [
+      {
+        "id": "en02-listen-mr-choice-1",
+        "picture": "teacher-man",
+        "description": "一位男老师，姓林"
+      },
+      {
+        "id": "en02-listen-mr-choice-2",
+        "picture": "teacher-woman",
+        "description": "一位女老师，姓林"
+      },
+      {
+        "id": "en02-listen-mr-choice-3",
+        "picture": "cat",
+        "description": "一只猫"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en02-listen-mr-choice-1"
+    ],
+    "explanation": "Mr Lin 是对林先生或林老师的称呼，Mr 读作 Mister。",
+    "modelText": "Mr Lin.",
+    "modelAudioId": "activity-047",
+    "oralCue": "看着画面里的男老师，试着称呼他 Mr Lin。"
+  },
+  {
+    "id": "en02-listen-name",
+    "courseId": "en-02",
+    "kind": "listening",
+    "lexemeId": "en-02-word-04",
+    "scene": "先听声音，再找对应的图片。",
+    "picture": "name",
+    "promptText": "Name.",
+    "promptAudioId": "activity-048",
+    "choices": [
+      {
+        "id": "en02-listen-name-choice-1",
+        "picture": "name",
+        "description": "写着 Lan 的姓名牌"
+      },
+      {
+        "id": "en02-listen-name-choice-2",
+        "picture": "cat",
+        "description": "一只猫"
+      },
+      {
+        "id": "en02-listen-name-choice-3",
+        "picture": "morning",
+        "description": "早晨的太阳和八点的钟表"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en02-listen-name-choice-1"
+    ],
+    "explanation": "name 表示名字。姓名牌上的 Lan 是一个名字。",
+    "modelText": "Name.",
+    "modelAudioId": "activity-048",
+    "oralCue": "用 My name is 加上你自己的名字说一句话。"
+  }
+]

@@ -1,0 +1,787 @@
+{
+  "schemaVersion": 1,
+  "voice": "en-GB-SoniaNeural",
+  "rate": "-12%",
+  "locale": "en-GB",
+  "source": "Microsoft Edge online neural TTS via edge-tts 7.2.8",
+  "humanRecorded": false,
+  "paperTextbookAudio": false,
+  "pipelineVersion": "sonia-slow-activity-v1",
+  "normalization": {
+    "targetLUFS": -18,
+    "truePeakLimitDB": -2,
+    "sampleRate": 24000
+  },
+  "entries": {
+    "activity-001": {
+      "id": "activity-001",
+      "file": "audio/english-activities/bfbed12cc12c46a028154db8.mp3",
+      "text": "Hello!",
+      "spokenText": "Hello!",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "activity-002": {
+      "id": "activity-002",
+      "file": "audio/english-activities/f3d03c6e3b066da4704bfab2.mp3",
+      "text": "Hi!",
+      "spokenText": "Hi!",
+      "durationSeconds": 0.864,
+      "bytes": 14252
+    },
+    "activity-003": {
+      "id": "activity-003",
+      "file": "audio/english-activities/b1364b821f8efb237d1efa7e.mp3",
+      "text": "Goodbye!",
+      "spokenText": "Goodbye!",
+      "durationSeconds": 1.056,
+      "bytes": 17324
+    },
+    "activity-004": {
+      "id": "activity-004",
+      "file": "audio/english-activities/4ea303610a22b68f96b7b3f1.mp3",
+      "text": "Hello! Hi!",
+      "spokenText": "Hello! Hi!",
+      "durationSeconds": 1.824,
+      "bytes": 29612
+    },
+    "activity-005": {
+      "id": "activity-005",
+      "file": "audio/english-activities/e4bb52b84661b869982367ab.mp3",
+      "text": "Good morning, class!",
+      "spokenText": "Good morning, class!",
+      "durationSeconds": 2.136,
+      "bytes": 34604
+    },
+    "activity-006": {
+      "id": "activity-006",
+      "file": "audio/english-activities/ca7e28a5054ec3f4e0d6b820.mp3",
+      "text": "Good morning, Miss Lin!",
+      "spokenText": "Good morning, Miss Lin!",
+      "durationSeconds": 2.184,
+      "bytes": 35372
+    },
+    "activity-007": {
+      "id": "activity-007",
+      "file": "audio/english-activities/e4b0d48e11164681c3a7a027.mp3",
+      "text": "Good afternoon, Miss Lin!",
+      "spokenText": "Good afternoon, Miss Lin!",
+      "durationSeconds": 2.424,
+      "bytes": 39212
+    },
+    "activity-008": {
+      "id": "activity-008",
+      "file": "audio/english-activities/2ad98fb8809aa89d0801eec1.mp3",
+      "text": "Goodbye, Miss Lin!",
+      "spokenText": "Goodbye, Miss Lin!",
+      "durationSeconds": 2.016,
+      "bytes": 32684
+    },
+    "activity-009": {
+      "id": "activity-009",
+      "file": "audio/english-activities/4494317b6bed81c1f50c6620.mp3",
+      "text": "Good morning, class! Good morning, Miss Lin!",
+      "spokenText": "Good morning, class! Good morning, Miss Lin!",
+      "durationSeconds": 4.344,
+      "bytes": 69932
+    },
+    "activity-010": {
+      "id": "activity-010",
+      "file": "audio/english-activities/2985a4c2ed1545d7ef2fd67c.mp3",
+      "text": "Good afternoon!",
+      "spokenText": "Good afternoon!",
+      "durationSeconds": 1.512,
+      "bytes": 24620
+    },
+    "activity-011": {
+      "id": "activity-011",
+      "file": "audio/english-activities/0e55b0ec04e89fb2ac56c89d.mp3",
+      "text": "Good morning!",
+      "spokenText": "Good morning!",
+      "durationSeconds": 1.248,
+      "bytes": 20396
+    },
+    "activity-012": {
+      "id": "activity-012",
+      "file": "audio/english-activities/38c05b3fea5cbe6aedd6a611.mp3",
+      "text": "Good afternoon! Good afternoon!",
+      "spokenText": "Good afternoon! Good afternoon!",
+      "durationSeconds": 2.952,
+      "bytes": 47660
+    },
+    "activity-013": {
+      "id": "activity-013",
+      "file": "audio/english-activities/2cba71cf3bcc62d2d84027aa.mp3",
+      "text": "Bye!",
+      "spokenText": "Bye!",
+      "durationSeconds": 0.816,
+      "bytes": 13484
+    },
+    "activity-014": {
+      "id": "activity-014",
+      "file": "audio/english-activities/4d181055287044c4811a354a.mp3",
+      "text": "Goodbye! Bye!",
+      "spokenText": "Goodbye! Bye!",
+      "durationSeconds": 1.872,
+      "bytes": 30380
+    },
+    "activity-015": {
+      "id": "activity-015",
+      "file": "audio/english-activities/030500f0db21391a9ad33158.mp3",
+      "text": "I am Lin.",
+      "spokenText": "I am Lin.",
+      "durationSeconds": 1.248,
+      "bytes": 20396
+    },
+    "activity-016": {
+      "id": "activity-016",
+      "file": "audio/english-activities/d2af2bd207bca9a25510e80c.mp3",
+      "text": "I am Lan.",
+      "spokenText": "I am Lan.",
+      "durationSeconds": 1.296,
+      "bytes": 21164
+    },
+    "activity-017": {
+      "id": "activity-017",
+      "file": "audio/english-activities/b3e69b2c0bbdfbd3cc84ebcf.mp3",
+      "text": "I am a cat.",
+      "spokenText": "I am a cat.",
+      "durationSeconds": 1.44,
+      "bytes": 23468
+    },
+    "activity-018": {
+      "id": "activity-018",
+      "file": "audio/english-activities/a25ecf69b558863f5eac52fc.mp3",
+      "text": "I am Lin. I am Lan.",
+      "spokenText": "I am Lin. I am Lan.",
+      "durationSeconds": 2.592,
+      "bytes": 41900
+    },
+    "activity-019": {
+      "id": "activity-019",
+      "file": "audio/english-activities/70e8bb198396be6d092fe032.mp3",
+      "text": "Hello, class!",
+      "spokenText": "Hello, class!",
+      "durationSeconds": 1.872,
+      "bytes": 30380
+    },
+    "activity-020": {
+      "id": "activity-020",
+      "file": "audio/english-activities/c471a82315c98aac4526a79c.mp3",
+      "text": "Hello, Miss Lin!",
+      "spokenText": "Hello, Miss Lin!",
+      "durationSeconds": 1.944,
+      "bytes": 31532
+    },
+    "activity-021": {
+      "id": "activity-021",
+      "file": "audio/english-activities/3104c669d21c9eb642c4fa20.mp3",
+      "text": "Hi, Miss Lin!",
+      "spokenText": "Hi, Miss Lin!",
+      "durationSeconds": 1.944,
+      "bytes": 31532
+    },
+    "activity-022": {
+      "id": "activity-022",
+      "file": "audio/english-activities/580cfb818212de71449ae905.mp3",
+      "text": "Hello, class! Hello, Miss Lin!",
+      "spokenText": "Hello, class! Hello, Miss Lin!",
+      "durationSeconds": 3.768,
+      "bytes": 60716
+    },
+    "activity-023": {
+      "id": "activity-023",
+      "file": "audio/english-activities/0d4bf5a853d57d97a3c2d541.mp3",
+      "text": "What's your name?",
+      "spokenText": "What's your name?",
+      "durationSeconds": 1.512,
+      "bytes": 24620
+    },
+    "activity-024": {
+      "id": "activity-024",
+      "file": "audio/english-activities/36264c0ae5351b01547e6d2b.mp3",
+      "text": "My name is Lan.",
+      "spokenText": "My name is Lan.",
+      "durationSeconds": 1.728,
+      "bytes": 28076
+    },
+    "activity-025": {
+      "id": "activity-025",
+      "file": "audio/english-activities/690b1104102c4dd23bff7162.mp3",
+      "text": "My name is Lin.",
+      "spokenText": "My name is Lin.",
+      "durationSeconds": 1.704,
+      "bytes": 27692
+    },
+    "activity-026": {
+      "id": "activity-026",
+      "file": "audio/english-activities/9b852080f7c04a26155bd658.mp3",
+      "text": "What's your name? My name is Lan.",
+      "spokenText": "What's your name? My name is Lan.",
+      "durationSeconds": 3.216,
+      "bytes": 51884
+    },
+    "activity-027": {
+      "id": "activity-027",
+      "file": "audio/english-activities/39e76be51a0078fc7dabb85e.mp3",
+      "text": "Hello! What's your name?",
+      "spokenText": "Hello! What's your name?",
+      "durationSeconds": 2.472,
+      "bytes": 39980
+    },
+    "activity-028": {
+      "id": "activity-028",
+      "file": "audio/english-activities/3b68dc1021694e23ee32d431.mp3",
+      "text": "Hello! What's your name? My name is Lan.",
+      "spokenText": "Hello! What's your name? My name is Lan.",
+      "durationSeconds": 4.2,
+      "bytes": 67628
+    },
+    "activity-029": {
+      "id": "activity-029",
+      "file": "audio/english-activities/bdcab5a974f124a1658d29a0.mp3",
+      "text": "My name is Lin. My name is Lan.",
+      "spokenText": "My name is Lin. My name is Lan.",
+      "durationSeconds": 3.456,
+      "bytes": 55724
+    },
+    "activity-030": {
+      "id": "activity-030",
+      "file": "audio/english-activities/0760800a622ff962669810fa.mp3",
+      "text": "Nice to meet you!",
+      "spokenText": "Nice to meet you!",
+      "durationSeconds": 1.656,
+      "bytes": 26924
+    },
+    "activity-031": {
+      "id": "activity-031",
+      "file": "audio/english-activities/9baded420d1beebc16d001bf.mp3",
+      "text": "Nice to meet you too!",
+      "spokenText": "Nice to meet you too!",
+      "durationSeconds": 1.872,
+      "bytes": 30380
+    },
+    "activity-032": {
+      "id": "activity-032",
+      "file": "audio/english-activities/73dc83203095fef03f6b0111.mp3",
+      "text": "Nice to meet you! Nice to meet you too!",
+      "spokenText": "Nice to meet you! Nice to meet you too!",
+      "durationSeconds": 3.48,
+      "bytes": 56108
+    },
+    "activity-033": {
+      "id": "activity-033",
+      "file": "audio/english-activities/22552a1db6831d74804819a2.mp3",
+      "text": "Good morning, Mr Lin!",
+      "spokenText": "Good morning, Mister Lin!",
+      "durationSeconds": 2.328,
+      "bytes": 37676
+    },
+    "activity-034": {
+      "id": "activity-034",
+      "file": "audio/english-activities/95e873aeca1cd4a15f4d59b0.mp3",
+      "text": "Good afternoon, Mr Lin!",
+      "spokenText": "Good afternoon, Mister Lin!",
+      "durationSeconds": 2.544,
+      "bytes": 41132
+    },
+    "activity-035": {
+      "id": "activity-035",
+      "file": "audio/english-activities/47b8b20799fa20ee727bd9d3.mp3",
+      "text": "Goodbye, Mr Lin!",
+      "spokenText": "Goodbye, Mister Lin!",
+      "durationSeconds": 2.208,
+      "bytes": 35756
+    },
+    "activity-036": {
+      "id": "activity-036",
+      "file": "audio/english-activities/fcb118bb533e59f00e524fae.mp3",
+      "text": "Good morning, class! Good morning, Mr Lin!",
+      "spokenText": "Good morning, class! Good morning, Mister Lin!",
+      "durationSeconds": 4.416,
+      "bytes": 71084
+    },
+    "activity-037": {
+      "id": "activity-037",
+      "file": "audio/english-activities/d5239f788b2b2e217a3ef5be.mp3",
+      "text": "I am Lin. I am a boy.",
+      "spokenText": "I am Lin. I am a boy.",
+      "durationSeconds": 2.688,
+      "bytes": 43436
+    },
+    "activity-038": {
+      "id": "activity-038",
+      "file": "audio/english-activities/510a24f7980044678538ed25.mp3",
+      "text": "I am Lan. I am a girl.",
+      "spokenText": "I am Lan. I am a girl.",
+      "durationSeconds": 2.76,
+      "bytes": 44588
+    },
+    "activity-039": {
+      "id": "activity-039",
+      "file": "audio/english-activities/5518a219bfac670468294723.mp3",
+      "text": "I am Lan. I am a boy.",
+      "spokenText": "I am Lan. I am a boy.",
+      "durationSeconds": 2.76,
+      "bytes": 44588
+    },
+    "activity-040": {
+      "id": "activity-040",
+      "file": "audio/english-activities/6eac080c6784d7b7a31415bd.mp3",
+      "text": "I am Lin. I am a boy. I am Lan. I am a girl.",
+      "spokenText": "I am Lin. I am a boy. I am Lan. I am a girl.",
+      "durationSeconds": 5.472,
+      "bytes": 87980
+    },
+    "activity-041": {
+      "id": "activity-041",
+      "file": "audio/english-activities/6a2c2bf3c1ba8a7ebacd9696.mp3",
+      "text": "A cat.",
+      "spokenText": "A cat.",
+      "durationSeconds": 1.128,
+      "bytes": 18476
+    },
+    "activity-042": {
+      "id": "activity-042",
+      "file": "audio/english-activities/c9cb9f04182560529219ddea.mp3",
+      "text": "I.",
+      "spokenText": "I.",
+      "durationSeconds": 0.888,
+      "bytes": 14636
+    },
+    "activity-043": {
+      "id": "activity-043",
+      "file": "audio/english-activities/8a0f5860ccb9713fc5cd2b70.mp3",
+      "text": "My.",
+      "spokenText": "My.",
+      "durationSeconds": 0.936,
+      "bytes": 15404
+    },
+    "activity-044": {
+      "id": "activity-044",
+      "file": "audio/english-activities/8e441ee6b111908bfcfb7f6b.mp3",
+      "text": "Your.",
+      "spokenText": "Your.",
+      "durationSeconds": 0.888,
+      "bytes": 14636
+    },
+    "activity-045": {
+      "id": "activity-045",
+      "file": "audio/english-activities/239ed8c423475df0246949c9.mp3",
+      "text": "A boy.",
+      "spokenText": "A boy.",
+      "durationSeconds": 1.104,
+      "bytes": 18092
+    },
+    "activity-046": {
+      "id": "activity-046",
+      "file": "audio/english-activities/9527b912060933042e1ad96d.mp3",
+      "text": "A girl.",
+      "spokenText": "A girl.",
+      "durationSeconds": 1.104,
+      "bytes": 18092
+    },
+    "activity-047": {
+      "id": "activity-047",
+      "file": "audio/english-activities/83e537b34225c7085b4890cd.mp3",
+      "text": "Mr Lin.",
+      "spokenText": "Mister Lin.",
+      "durationSeconds": 1.416,
+      "bytes": 23084
+    },
+    "activity-048": {
+      "id": "activity-048",
+      "file": "audio/english-activities/2104f7f4890cca7929e6e76e.mp3",
+      "text": "Name.",
+      "spokenText": "Name.",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    }
+  },
+  "files": {
+    "audio/english-activities/bfbed12cc12c46a028154db8.mp3": {
+      "durationSeconds": 0.96,
+      "bytes": 15788,
+      "sampleRate": 24000,
+      "peakDBFS": -5.3,
+      "rmsDBFS": -19.91,
+      "sha256": "101b8cc5df7eb12811c85278044e19da1e3c25d1be8a35d31e99119a47a6e989"
+    },
+    "audio/english-activities/f3d03c6e3b066da4704bfab2.mp3": {
+      "durationSeconds": 0.864,
+      "bytes": 14252,
+      "sampleRate": 24000,
+      "peakDBFS": -2.44,
+      "rmsDBFS": -19.41,
+      "sha256": "78b8ae7a8ee8c4abf92e1ad2a6ba7ba63c0e31d8aeaceaa4a91ffda9f4379631"
+    },
+    "audio/english-activities/b1364b821f8efb237d1efa7e.mp3": {
+      "durationSeconds": 1.056,
+      "bytes": 17324,
+      "sampleRate": 24000,
+      "peakDBFS": -4.61,
+      "rmsDBFS": -19.06,
+      "sha256": "010648e9db809f9cf4c185ad3fbfaa2e3dafa1e9bbbe03df7dfdf0bf6123289c"
+    },
+    "audio/english-activities/4ea303610a22b68f96b7b3f1.mp3": {
+      "durationSeconds": 1.824,
+      "bytes": 29612,
+      "sampleRate": 24000,
+      "peakDBFS": -4.28,
+      "rmsDBFS": -19.88,
+      "sha256": "6ec3be5a6f9464e9e1da6ccd94efe065123feeb0fbf23fb1f9b4acf95bae0331"
+    },
+    "audio/english-activities/e4bb52b84661b869982367ab.mp3": {
+      "durationSeconds": 2.136,
+      "bytes": 34604,
+      "sampleRate": 24000,
+      "peakDBFS": -5.68,
+      "rmsDBFS": -18.78,
+      "sha256": "f6508fbb74b3b1390c08837294bf3579ec712a3380527d3f3dc7fd84c47d8e80"
+    },
+    "audio/english-activities/ca7e28a5054ec3f4e0d6b820.mp3": {
+      "durationSeconds": 2.184,
+      "bytes": 35372,
+      "sampleRate": 24000,
+      "peakDBFS": -6.1,
+      "rmsDBFS": -19.05,
+      "sha256": "4c6fde283c15eaebc19eaed914e7a8142a0f7de03ea84764f014a4998f2349d5"
+    },
+    "audio/english-activities/e4b0d48e11164681c3a7a027.mp3": {
+      "durationSeconds": 2.424,
+      "bytes": 39212,
+      "sampleRate": 24000,
+      "peakDBFS": -4.43,
+      "rmsDBFS": -18.49,
+      "sha256": "d48c0b146b5b3f89433072e15d4ef85b52b3bc8ac7b74f636692dcf828056b17"
+    },
+    "audio/english-activities/2ad98fb8809aa89d0801eec1.mp3": {
+      "durationSeconds": 2.016,
+      "bytes": 32684,
+      "sampleRate": 24000,
+      "peakDBFS": -3.6,
+      "rmsDBFS": -18.79,
+      "sha256": "6ebceada7d4a3658035cca554c2de297feedd6ab82eb02c976b209bb466da75a"
+    },
+    "audio/english-activities/4494317b6bed81c1f50c6620.mp3": {
+      "durationSeconds": 4.344,
+      "bytes": 69932,
+      "sampleRate": 24000,
+      "peakDBFS": -4.94,
+      "rmsDBFS": -18.34,
+      "sha256": "2aef8b82356669992e006fe4e042db89f5412fb372f5795f771eae6736acb8a3"
+    },
+    "audio/english-activities/2985a4c2ed1545d7ef2fd67c.mp3": {
+      "durationSeconds": 1.512,
+      "bytes": 24620,
+      "sampleRate": 24000,
+      "peakDBFS": -6.57,
+      "rmsDBFS": -18.53,
+      "sha256": "1e201d681d5cdf741ad42fabf41d809697fda418604ed6f0ef26b129ecda41ef"
+    },
+    "audio/english-activities/0e55b0ec04e89fb2ac56c89d.mp3": {
+      "durationSeconds": 1.248,
+      "bytes": 20396,
+      "sampleRate": 24000,
+      "peakDBFS": -7.98,
+      "rmsDBFS": -19.56,
+      "sha256": "6e9ab674879d05d59e1b5a0090e306b495fbf7122348ddfe348b3a9bb856e307"
+    },
+    "audio/english-activities/38c05b3fea5cbe6aedd6a611.mp3": {
+      "durationSeconds": 2.952,
+      "bytes": 47660,
+      "sampleRate": 24000,
+      "peakDBFS": -6.19,
+      "rmsDBFS": -18.46,
+      "sha256": "79a7a42f57fcb286677b10efcd47c7cf72c30ba632c3257abb4139d814b59b71"
+    },
+    "audio/english-activities/2cba71cf3bcc62d2d84027aa.mp3": {
+      "durationSeconds": 0.816,
+      "bytes": 13484,
+      "sampleRate": 24000,
+      "peakDBFS": -3.83,
+      "rmsDBFS": -19.28,
+      "sha256": "1efb611eae2367a59a13a0c42cd5ed7e92dc73039eccac879a70ea24f3b1aa9a"
+    },
+    "audio/english-activities/4d181055287044c4811a354a.mp3": {
+      "durationSeconds": 1.872,
+      "bytes": 30380,
+      "sampleRate": 24000,
+      "peakDBFS": -2.96,
+      "rmsDBFS": -18.63,
+      "sha256": "fa88251a54b3e6dc3459d1dea3c75e38456660dc7422892622179b48930b9944"
+    },
+    "audio/english-activities/030500f0db21391a9ad33158.mp3": {
+      "durationSeconds": 1.248,
+      "bytes": 20396,
+      "sampleRate": 24000,
+      "peakDBFS": -7.88,
+      "rmsDBFS": -19.14,
+      "sha256": "cd68ffeba02d44dc9d4c3b2183eaf5aba3ee11ca92a56086109b8e71b159ea3a"
+    },
+    "audio/english-activities/d2af2bd207bca9a25510e80c.mp3": {
+      "durationSeconds": 1.296,
+      "bytes": 21164,
+      "sampleRate": 24000,
+      "peakDBFS": -7.34,
+      "rmsDBFS": -19.27,
+      "sha256": "7a251c2fba973c32fb93502a5db9f8e196f4ba069c7062e287462f63800ad354"
+    },
+    "audio/english-activities/b3e69b2c0bbdfbd3cc84ebcf.mp3": {
+      "durationSeconds": 1.44,
+      "bytes": 23468,
+      "sampleRate": 24000,
+      "peakDBFS": -7.19,
+      "rmsDBFS": -19.74,
+      "sha256": "a39f5d52adb0e8849f449373b9c356cc9234043850a1e984dbe40c6b5d2f6417"
+    },
+    "audio/english-activities/a25ecf69b558863f5eac52fc.mp3": {
+      "durationSeconds": 2.592,
+      "bytes": 41900,
+      "sampleRate": 24000,
+      "peakDBFS": -7.09,
+      "rmsDBFS": -18.99,
+      "sha256": "7c65ff45baeeadfba195a31909dd841cc32801239586cb22fb6821c628e56f1e"
+    },
+    "audio/english-activities/70e8bb198396be6d092fe032.mp3": {
+      "durationSeconds": 1.872,
+      "bytes": 30380,
+      "sampleRate": 24000,
+      "peakDBFS": -4.55,
+      "rmsDBFS": -18.77,
+      "sha256": "9cf78ab583771679678c4ef56d9cadbcd45221aba771dc79ccf5ec9dd28fd906"
+    },
+    "audio/english-activities/c471a82315c98aac4526a79c.mp3": {
+      "durationSeconds": 1.944,
+      "bytes": 31532,
+      "sampleRate": 24000,
+      "peakDBFS": -4.95,
+      "rmsDBFS": -18.8,
+      "sha256": "bacc57634fc9da397a3bd38bc0e5207a05c0b15fcc177efe9655dbddf47ab0c1"
+    },
+    "audio/english-activities/3104c669d21c9eb642c4fa20.mp3": {
+      "durationSeconds": 1.944,
+      "bytes": 31532,
+      "sampleRate": 24000,
+      "peakDBFS": -3.74,
+      "rmsDBFS": -18.87,
+      "sha256": "9353cb9d02c21fbe906bb7ca8afe65b88812cc6400c30e8622428476e272105c"
+    },
+    "audio/english-activities/580cfb818212de71449ae905.mp3": {
+      "durationSeconds": 3.768,
+      "bytes": 60716,
+      "sampleRate": 24000,
+      "peakDBFS": -4.22,
+      "rmsDBFS": -18.38,
+      "sha256": "c35662c27784e2105c17622dafbe0934cf8d669418e8c99cff49be5bd632d5dd"
+    },
+    "audio/english-activities/0d4bf5a853d57d97a3c2d541.mp3": {
+      "durationSeconds": 1.512,
+      "bytes": 24620,
+      "sampleRate": 24000,
+      "peakDBFS": -7.66,
+      "rmsDBFS": -19.44,
+      "sha256": "6f2e3becdd65d83d299dba0ae2c080fe669b2d94f048ab00c1f9a6359d520e3e"
+    },
+    "audio/english-activities/36264c0ae5351b01547e6d2b.mp3": {
+      "durationSeconds": 1.728,
+      "bytes": 28076,
+      "sampleRate": 24000,
+      "peakDBFS": -7.92,
+      "rmsDBFS": -18.85,
+      "sha256": "26c58e5c519a60d78c8ec962f1fabbd4924c6fe398e9baeeaf885762073b0786"
+    },
+    "audio/english-activities/690b1104102c4dd23bff7162.mp3": {
+      "durationSeconds": 1.704,
+      "bytes": 27692,
+      "sampleRate": 24000,
+      "peakDBFS": -7.93,
+      "rmsDBFS": -18.79,
+      "sha256": "3364b95f0076f6e07c1526472eedaf5fddc8f2d7fcaee7aef5b7e2b7323f7a3c"
+    },
+    "audio/english-activities/9b852080f7c04a26155bd658.mp3": {
+      "durationSeconds": 3.216,
+      "bytes": 51884,
+      "sampleRate": 24000,
+      "peakDBFS": -6.25,
+      "rmsDBFS": -18.12,
+      "sha256": "8a2b01e44f75d8f1a74dfc27f9fcf27c386b7aba55381ecbc6d7e659a70b771d"
+    },
+    "audio/english-activities/39e76be51a0078fc7dabb85e.mp3": {
+      "durationSeconds": 2.472,
+      "bytes": 39980,
+      "sampleRate": 24000,
+      "peakDBFS": -7.02,
+      "rmsDBFS": -19.39,
+      "sha256": "a0d6ac6030da04ad3c633c5fd76b86bf877ac32ba9bc987db8dcd8ab137c799b"
+    },
+    "audio/english-activities/3b68dc1021694e23ee32d431.mp3": {
+      "durationSeconds": 4.2,
+      "bytes": 67628,
+      "sampleRate": 24000,
+      "peakDBFS": -5.41,
+      "rmsDBFS": -18.43,
+      "sha256": "b3e678646edaf32bd768f9be20077bc58fd6acef886f9cd156fefcbc44d76dbf"
+    },
+    "audio/english-activities/bdcab5a974f124a1658d29a0.mp3": {
+      "durationSeconds": 3.456,
+      "bytes": 55724,
+      "sampleRate": 24000,
+      "peakDBFS": -7.08,
+      "rmsDBFS": -18.21,
+      "sha256": "ff56480d5fdad062a5a424c459a33343f813211cd41d8f7292ab0b05dc5d3d4c"
+    },
+    "audio/english-activities/0760800a622ff962669810fa.mp3": {
+      "durationSeconds": 1.656,
+      "bytes": 26924,
+      "sampleRate": 24000,
+      "peakDBFS": -7.31,
+      "rmsDBFS": -18.88,
+      "sha256": "36df18038beb4ee83a7c4b31acd36d834309ad5367bd8ad54f91210c18ba1657"
+    },
+    "audio/english-activities/9baded420d1beebc16d001bf.mp3": {
+      "durationSeconds": 1.872,
+      "bytes": 30380,
+      "sampleRate": 24000,
+      "peakDBFS": -7.04,
+      "rmsDBFS": -18.83,
+      "sha256": "8b96a9209e52bfb4dcf8d4db1e2d16d30ca5bf7dc80df1f836f49aae967a21c8"
+    },
+    "audio/english-activities/73dc83203095fef03f6b0111.mp3": {
+      "durationSeconds": 3.48,
+      "bytes": 56108,
+      "sampleRate": 24000,
+      "peakDBFS": -6.83,
+      "rmsDBFS": -18.5,
+      "sha256": "4ed2a1f57bd089ca43aa1f04e2b3c60a680f9f4f2482273ba93212394c15aabe"
+    },
+    "audio/english-activities/22552a1db6831d74804819a2.mp3": {
+      "durationSeconds": 2.328,
+      "bytes": 37676,
+      "sampleRate": 24000,
+      "peakDBFS": -6.5,
+      "rmsDBFS": -18.47,
+      "sha256": "d99052b931ec4ecfe3008c1f8f3bd96438e3a212fbdae3aeee6c1f52207cabbe"
+    },
+    "audio/english-activities/95e873aeca1cd4a15f4d59b0.mp3": {
+      "durationSeconds": 2.544,
+      "bytes": 41132,
+      "sampleRate": 24000,
+      "peakDBFS": -5.87,
+      "rmsDBFS": -18.45,
+      "sha256": "ca5d33e301972591e0c5efd5ee33d06512b3118a8168e3f629321bbb6977e0a4"
+    },
+    "audio/english-activities/47b8b20799fa20ee727bd9d3.mp3": {
+      "durationSeconds": 2.208,
+      "bytes": 35756,
+      "sampleRate": 24000,
+      "peakDBFS": -3.2,
+      "rmsDBFS": -18.31,
+      "sha256": "a8b9b9910843e48492812c4a5948b0d3d03f75b2b4ef8bfb2d7af8017378e8d6"
+    },
+    "audio/english-activities/fcb118bb533e59f00e524fae.mp3": {
+      "durationSeconds": 4.416,
+      "bytes": 71084,
+      "sampleRate": 24000,
+      "peakDBFS": -4.71,
+      "rmsDBFS": -18.31,
+      "sha256": "4ce10833ab82d225f28cdfd439c3d405fa6ed502e3610294f10fa6246e929c28"
+    },
+    "audio/english-activities/d5239f788b2b2e217a3ef5be.mp3": {
+      "durationSeconds": 2.688,
+      "bytes": 43436,
+      "sampleRate": 24000,
+      "peakDBFS": -5.95,
+      "rmsDBFS": -19.25,
+      "sha256": "b1900b8c4e61c888fc57d20012c625a4cb017ecefecaf7ef4ca9ed6819179545"
+    },
+    "audio/english-activities/510a24f7980044678538ed25.mp3": {
+      "durationSeconds": 2.76,
+      "bytes": 44588,
+      "sampleRate": 24000,
+      "peakDBFS": -6.42,
+      "rmsDBFS": -19.12,
+      "sha256": "730e318066d7cdc657f7b2bd7c93ab17f8dd96fdcf59cf59f39b623accc226d9"
+    },
+    "audio/english-activities/5518a219bfac670468294723.mp3": {
+      "durationSeconds": 2.76,
+      "bytes": 44588,
+      "sampleRate": 24000,
+      "peakDBFS": -5.64,
+      "rmsDBFS": -19.11,
+      "sha256": "191ecff911cc78b9d53f8a892c1c6f25e2679aac9e1bb1274a517ee653bd3b65"
+    },
+    "audio/english-activities/6eac080c6784d7b7a31415bd.mp3": {
+      "durationSeconds": 5.472,
+      "bytes": 87980,
+      "sampleRate": 24000,
+      "peakDBFS": -4.44,
+      "rmsDBFS": -18.56,
+      "sha256": "5de8a28c75373df6fe4cae9ab4084a4486aa4902571688caa079d18a77564ed5"
+    },
+    "audio/english-activities/6a2c2bf3c1ba8a7ebacd9696.mp3": {
+      "durationSeconds": 1.128,
+      "bytes": 18476,
+      "sampleRate": 24000,
+      "peakDBFS": -2.56,
+      "rmsDBFS": -20.62,
+      "sha256": "b177b9aa075a6d721c8ea5d5e0b6579e7344512c65ded734e1b760a6650b6a43"
+    },
+    "audio/english-activities/c9cb9f04182560529219ddea.mp3": {
+      "durationSeconds": 0.888,
+      "bytes": 14636,
+      "sampleRate": 24000,
+      "peakDBFS": -4.47,
+      "rmsDBFS": -20.08,
+      "sha256": "757b6f21034c4b79a5634985d737d5bf8b5d277de9a39c183c84ca0eb2245a31"
+    },
+    "audio/english-activities/8a0f5860ccb9713fc5cd2b70.mp3": {
+      "durationSeconds": 0.936,
+      "bytes": 15404,
+      "sampleRate": 24000,
+      "peakDBFS": -3.7,
+      "rmsDBFS": -19.13,
+      "sha256": "7503b60a607f1822fc32261f6dca81c348423da8aa69f8ca7938a81857cd23ff"
+    },
+    "audio/english-activities/8e441ee6b111908bfcfb7f6b.mp3": {
+      "durationSeconds": 0.888,
+      "bytes": 14636,
+      "sampleRate": 24000,
+      "peakDBFS": -5.7,
+      "rmsDBFS": -19.86,
+      "sha256": "8029a38ebddea9014fdbdc62354c1da9a1a509de0c89bc46c50b47f55c5c21ab"
+    },
+    "audio/english-activities/239ed8c423475df0246949c9.mp3": {
+      "durationSeconds": 1.104,
+      "bytes": 18092,
+      "sampleRate": 24000,
+      "peakDBFS": -3.85,
+      "rmsDBFS": -19.47,
+      "sha256": "5193fda40d8474e1fb19f1ebede24b20ef9ff0f9aa17a0a389e8f93ea031210d"
+    },
+    "audio/english-activities/9527b912060933042e1ad96d.mp3": {
+      "durationSeconds": 1.104,
+      "bytes": 18092,
+      "sampleRate": 24000,
+      "peakDBFS": -5.89,
+      "rmsDBFS": -19.69,
+      "sha256": "c1cc9e2edc51d32e205d1721664999313707c232cf3ef7e3df373694465c02bd"
+    },
+    "audio/english-activities/83e537b34225c7085b4890cd.mp3": {
+      "durationSeconds": 1.416,
+      "bytes": 23084,
+      "sampleRate": 24000,
+      "peakDBFS": -5.7,
+      "rmsDBFS": -18.99,
+      "sha256": "d419546229f2635c82d86d3b84e43a4b3117136cb2c996302e064cb63d47f1a1"
+    },
+    "audio/english-activities/2104f7f4890cca7929e6e76e.mp3": {
+      "durationSeconds": 0.96,
+      "bytes": 15788,
+      "sampleRate": 24000,
+      "peakDBFS": -7.89,
+      "rmsDBFS": -19.56,
+      "sha256": "3fcd7e55d827334f389d4e68d95ea93b34cd0a3d8eaf37e2b89fa8271a8a778e"
+    }
+  }
+}

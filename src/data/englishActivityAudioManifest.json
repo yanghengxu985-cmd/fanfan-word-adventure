@@ -1,0 +1,392 @@
+{
+  "schemaVersion": 1,
+  "voice": "en-GB-SoniaNeural",
+  "rate": "-12%",
+  "locale": "en-GB",
+  "entries": {
+    "activity-001": {
+      "id": "activity-001",
+      "file": "audio/english-activities/bfbed12cc12c46a028154db8.mp3",
+      "text": "Hello!",
+      "spokenText": "Hello!",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "activity-002": {
+      "id": "activity-002",
+      "file": "audio/english-activities/f3d03c6e3b066da4704bfab2.mp3",
+      "text": "Hi!",
+      "spokenText": "Hi!",
+      "durationSeconds": 0.864,
+      "bytes": 14252
+    },
+    "activity-003": {
+      "id": "activity-003",
+      "file": "audio/english-activities/b1364b821f8efb237d1efa7e.mp3",
+      "text": "Goodbye!",
+      "spokenText": "Goodbye!",
+      "durationSeconds": 1.056,
+      "bytes": 17324
+    },
+    "activity-004": {
+      "id": "activity-004",
+      "file": "audio/english-activities/4ea303610a22b68f96b7b3f1.mp3",
+      "text": "Hello! Hi!",
+      "spokenText": "Hello! Hi!",
+      "durationSeconds": 1.824,
+      "bytes": 29612
+    },
+    "activity-005": {
+      "id": "activity-005",
+      "file": "audio/english-activities/e4bb52b84661b869982367ab.mp3",
+      "text": "Good morning, class!",
+      "spokenText": "Good morning, class!",
+      "durationSeconds": 2.136,
+      "bytes": 34604
+    },
+    "activity-006": {
+      "id": "activity-006",
+      "file": "audio/english-activities/ca7e28a5054ec3f4e0d6b820.mp3",
+      "text": "Good morning, Miss Lin!",
+      "spokenText": "Good morning, Miss Lin!",
+      "durationSeconds": 2.184,
+      "bytes": 35372
+    },
+    "activity-007": {
+      "id": "activity-007",
+      "file": "audio/english-activities/e4b0d48e11164681c3a7a027.mp3",
+      "text": "Good afternoon, Miss Lin!",
+      "spokenText": "Good afternoon, Miss Lin!",
+      "durationSeconds": 2.424,
+      "bytes": 39212
+    },
+    "activity-008": {
+      "id": "activity-008",
+      "file": "audio/english-activities/2ad98fb8809aa89d0801eec1.mp3",
+      "text": "Goodbye, Miss Lin!",
+      "spokenText": "Goodbye, Miss Lin!",
+      "durationSeconds": 2.016,
+      "bytes": 32684
+    },
+    "activity-009": {
+      "id": "activity-009",
+      "file": "audio/english-activities/4494317b6bed81c1f50c6620.mp3",
+      "text": "Good morning, class! Good morning, Miss Lin!",
+      "spokenText": "Good morning, class! Good morning, Miss Lin!",
+      "durationSeconds": 4.344,
+      "bytes": 69932
+    },
+    "activity-010": {
+      "id": "activity-010",
+      "file": "audio/english-activities/2985a4c2ed1545d7ef2fd67c.mp3",
+      "text": "Good afternoon!",
+      "spokenText": "Good afternoon!",
+      "durationSeconds": 1.512,
+      "bytes": 24620
+    },
+    "activity-011": {
+      "id": "activity-011",
+      "file": "audio/english-activities/0e55b0ec04e89fb2ac56c89d.mp3",
+      "text": "Good morning!",
+      "spokenText": "Good morning!",
+      "durationSeconds": 1.248,
+      "bytes": 20396
+    },
+    "activity-012": {
+      "id": "activity-012",
+      "file": "audio/english-activities/38c05b3fea5cbe6aedd6a611.mp3",
+      "text": "Good afternoon! Good afternoon!",
+      "spokenText": "Good afternoon! Good afternoon!",
+      "durationSeconds": 2.952,
+      "bytes": 47660
+    },
+    "activity-013": {
+      "id": "activity-013",
+      "file": "audio/english-activities/2cba71cf3bcc62d2d84027aa.mp3",
+      "text": "Bye!",
+      "spokenText": "Bye!",
+      "durationSeconds": 0.816,
+      "bytes": 13484
+    },
+    "activity-014": {
+      "id": "activity-014",
+      "file": "audio/english-activities/4d181055287044c4811a354a.mp3",
+      "text": "Goodbye! Bye!",
+      "spokenText": "Goodbye! Bye!",
+      "durationSeconds": 1.872,
+      "bytes": 30380
+    },
+    "activity-015": {
+      "id": "activity-015",
+      "file": "audio/english-activities/030500f0db21391a9ad33158.mp3",
+      "text": "I am Lin.",
+      "spokenText": "I am Lin.",
+      "durationSeconds": 1.248,
+      "bytes": 20396
+    },
+    "activity-016": {
+      "id": "activity-016",
+      "file": "audio/english-activities/d2af2bd207bca9a25510e80c.mp3",
+      "text": "I am Lan.",
+      "spokenText": "I am Lan.",
+      "durationSeconds": 1.296,
+      "bytes": 21164
+    },
+    "activity-017": {
+      "id": "activity-017",
+      "file": "audio/english-activities/b3e69b2c0bbdfbd3cc84ebcf.mp3",
+      "text": "I am a cat.",
+      "spokenText": "I am a cat.",
+      "durationSeconds": 1.44,
+      "bytes": 23468
+    },
+    "activity-018": {
+      "id": "activity-018",
+      "file": "audio/english-activities/a25ecf69b558863f5eac52fc.mp3",
+      "text": "I am Lin. I am Lan.",
+      "spokenText": "I am Lin. I am Lan.",
+      "durationSeconds": 2.592,
+      "bytes": 41900
+    },
+    "activity-019": {
+      "id": "activity-019",
+      "file": "audio/english-activities/70e8bb198396be6d092fe032.mp3",
+      "text": "Hello, class!",
+      "spokenText": "Hello, class!",
+      "durationSeconds": 1.872,
+      "bytes": 30380
+    },
+    "activity-020": {
+      "id": "activity-020",
+      "file": "audio/english-activities/c471a82315c98aac4526a79c.mp3",
+      "text": "Hello, Miss Lin!",
+      "spokenText": "Hello, Miss Lin!",
+      "durationSeconds": 1.944,
+      "bytes": 31532
+    },
+    "activity-021": {
+      "id": "activity-021",
+      "file": "audio/english-activities/3104c669d21c9eb642c4fa20.mp3",
+      "text": "Hi, Miss Lin!",
+      "spokenText": "Hi, Miss Lin!",
+      "durationSeconds": 1.944,
+      "bytes": 31532
+    },
+    "activity-022": {
+      "id": "activity-022",
+      "file": "audio/english-activities/580cfb818212de71449ae905.mp3",
+      "text": "Hello, class! Hello, Miss Lin!",
+      "spokenText": "Hello, class! Hello, Miss Lin!",
+      "durationSeconds": 3.768,
+      "bytes": 60716
+    },
+    "activity-023": {
+      "id": "activity-023",
+      "file": "audio/english-activities/0d4bf5a853d57d97a3c2d541.mp3",
+      "text": "What's your name?",
+      "spokenText": "What's your name?",
+      "durationSeconds": 1.512,
+      "bytes": 24620
+    },
+    "activity-024": {
+      "id": "activity-024",
+      "file": "audio/english-activities/36264c0ae5351b01547e6d2b.mp3",
+      "text": "My name is Lan.",
+      "spokenText": "My name is Lan.",
+      "durationSeconds": 1.728,
+      "bytes": 28076
+    },
+    "activity-025": {
+      "id": "activity-025",
+      "file": "audio/english-activities/690b1104102c4dd23bff7162.mp3",
+      "text": "My name is Lin.",
+      "spokenText": "My name is Lin.",
+      "durationSeconds": 1.704,
+      "bytes": 27692
+    },
+    "activity-026": {
+      "id": "activity-026",
+      "file": "audio/english-activities/9b852080f7c04a26155bd658.mp3",
+      "text": "What's your name? My name is Lan.",
+      "spokenText": "What's your name? My name is Lan.",
+      "durationSeconds": 3.216,
+      "bytes": 51884
+    },
+    "activity-027": {
+      "id": "activity-027",
+      "file": "audio/english-activities/39e76be51a0078fc7dabb85e.mp3",
+      "text": "Hello! What's your name?",
+      "spokenText": "Hello! What's your name?",
+      "durationSeconds": 2.472,
+      "bytes": 39980
+    },
+    "activity-028": {
+      "id": "activity-028",
+      "file": "audio/english-activities/3b68dc1021694e23ee32d431.mp3",
+      "text": "Hello! What's your name? My name is Lan.",
+      "spokenText": "Hello! What's your name? My name is Lan.",
+      "durationSeconds": 4.2,
+      "bytes": 67628
+    },
+    "activity-029": {
+      "id": "activity-029",
+      "file": "audio/english-activities/bdcab5a974f124a1658d29a0.mp3",
+      "text": "My name is Lin. My name is Lan.",
+      "spokenText": "My name is Lin. My name is Lan.",
+      "durationSeconds": 3.456,
+      "bytes": 55724
+    },
+    "activity-030": {
+      "id": "activity-030",
+      "file": "audio/english-activities/0760800a622ff962669810fa.mp3",
+      "text": "Nice to meet you!",
+      "spokenText": "Nice to meet you!",
+      "durationSeconds": 1.656,
+      "bytes": 26924
+    },
+    "activity-031": {
+      "id": "activity-031",
+      "file": "audio/english-activities/9baded420d1beebc16d001bf.mp3",
+      "text": "Nice to meet you too!",
+      "spokenText": "Nice to meet you too!",
+      "durationSeconds": 1.872,
+      "bytes": 30380
+    },
+    "activity-032": {
+      "id": "activity-032",
+      "file": "audio/english-activities/73dc83203095fef03f6b0111.mp3",
+      "text": "Nice to meet you! Nice to meet you too!",
+      "spokenText": "Nice to meet you! Nice to meet you too!",
+      "durationSeconds": 3.48,
+      "bytes": 56108
+    },
+    "activity-033": {
+      "id": "activity-033",
+      "file": "audio/english-activities/22552a1db6831d74804819a2.mp3",
+      "text": "Good morning, Mr Lin!",
+      "spokenText": "Good morning, Mister Lin!",
+      "durationSeconds": 2.328,
+      "bytes": 37676
+    },
+    "activity-034": {
+      "id": "activity-034",
+      "file": "audio/english-activities/95e873aeca1cd4a15f4d59b0.mp3",
+      "text": "Good afternoon, Mr Lin!",
+      "spokenText": "Good afternoon, Mister Lin!",
+      "durationSeconds": 2.544,
+      "bytes": 41132
+    },
+    "activity-035": {
+      "id": "activity-035",
+      "file": "audio/english-activities/47b8b20799fa20ee727bd9d3.mp3",
+      "text": "Goodbye, Mr Lin!",
+      "spokenText": "Goodbye, Mister Lin!",
+      "durationSeconds": 2.208,
+      "bytes": 35756
+    },
+    "activity-036": {
+      "id": "activity-036",
+      "file": "audio/english-activities/fcb118bb533e59f00e524fae.mp3",
+      "text": "Good morning, class! Good morning, Mr Lin!",
+      "spokenText": "Good morning, class! Good morning, Mister Lin!",
+      "durationSeconds": 4.416,
+      "bytes": 71084
+    },
+    "activity-037": {
+      "id": "activity-037",
+      "file": "audio/english-activities/d5239f788b2b2e217a3ef5be.mp3",
+      "text": "I am Lin. I am a boy.",
+      "spokenText": "I am Lin. I am a boy.",
+      "durationSeconds": 2.688,
+      "bytes": 43436
+    },
+    "activity-038": {
+      "id": "activity-038",
+      "file": "audio/english-activities/510a24f7980044678538ed25.mp3",
+      "text": "I am Lan. I am a girl.",
+      "spokenText": "I am Lan. I am a girl.",
+      "durationSeconds": 2.76,
+      "bytes": 44588
+    },
+    "activity-039": {
+      "id": "activity-039",
+      "file": "audio/english-activities/5518a219bfac670468294723.mp3",
+      "text": "I am Lan. I am a boy.",
+      "spokenText": "I am Lan. I am a boy.",
+      "durationSeconds": 2.76,
+      "bytes": 44588
+    },
+    "activity-040": {
+      "id": "activity-040",
+      "file": "audio/english-activities/6eac080c6784d7b7a31415bd.mp3",
+      "text": "I am Lin. I am a boy. I am Lan. I am a girl.",
+      "spokenText": "I am Lin. I am a boy. I am Lan. I am a girl.",
+      "durationSeconds": 5.472,
+      "bytes": 87980
+    },
+    "activity-041": {
+      "id": "activity-041",
+      "file": "audio/english-activities/6a2c2bf3c1ba8a7ebacd9696.mp3",
+      "text": "A cat.",
+      "spokenText": "A cat.",
+      "durationSeconds": 1.128,
+      "bytes": 18476
+    },
+    "activity-042": {
+      "id": "activity-042",
+      "file": "audio/english-activities/c9cb9f04182560529219ddea.mp3",
+      "text": "I.",
+      "spokenText": "I.",
+      "durationSeconds": 0.888,
+      "bytes": 14636
+    },
+    "activity-043": {
+      "id": "activity-043",
+      "file": "audio/english-activities/8a0f5860ccb9713fc5cd2b70.mp3",
+      "text": "My.",
+      "spokenText": "My.",
+      "durationSeconds": 0.936,
+      "bytes": 15404
+    },
+    "activity-044": {
+      "id": "activity-044",
+      "file": "audio/english-activities/8e441ee6b111908bfcfb7f6b.mp3",
+      "text": "Your.",
+      "spokenText": "Your.",
+      "durationSeconds": 0.888,
+      "bytes": 14636
+    },
+    "activity-045": {
+      "id": "activity-045",
+      "file": "audio/english-activities/239ed8c423475df0246949c9.mp3",
+      "text": "A boy.",
+      "spokenText": "A boy.",
+      "durationSeconds": 1.104,
+      "bytes": 18092
+    },
+    "activity-046": {
+      "id": "activity-046",
+      "file": "audio/english-activities/9527b912060933042e1ad96d.mp3",
+      "text": "A girl.",
+      "spokenText": "A girl.",
+      "durationSeconds": 1.104,
+      "bytes": 18092
+    },
+    "activity-047": {
+      "id": "activity-047",
+      "file": "audio/english-activities/83e537b34225c7085b4890cd.mp3",
+      "text": "Mr Lin.",
+      "spokenText": "Mister Lin.",
+      "durationSeconds": 1.416,
+      "bytes": 23084
+    },
+    "activity-048": {
+      "id": "activity-048",
+      "file": "audio/english-activities/2104f7f4890cca7929e6e76e.mp3",
+      "text": "Name.",
+      "spokenText": "Name.",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    }
+  }
+}

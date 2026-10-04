@@ -1,7 +1,9 @@
 // Execute with playwright-cli run-code in a separate QA browser session.
 // Only that session's local test data is replaced; no normal-browser data is read.
 async (page) => {
-  const base = 'http://127.0.0.1:5173/';
+  const initialUrl = new URL(page.url());
+  initialUrl.hash = '';
+  const base = initialUrl.href;
   const checks = [];
   const errors = [];
   const key = 'fanfan-word-adventure:progress:v1';
@@ -27,7 +29,7 @@ async (page) => {
   await page.getByRole('button', { name: '需要一点提示' }).click();
   await page.locator('.answer').first().click();
   assert((await records()).at(-1).assisted === true, '使用提示只累计练习证据');
-  await go('/play/en-01/recall');
+  await go('/play/en-03/recall');
   assert(await page.locator('.typed-answer').count() === 0, '英文回忆是口头自查，不暗中要求拼写');
   await page.getByRole('button', { name: '我完成了，核对答案' }).click();
   await page.getByRole('button', { name: '我自己想对了' }).click();

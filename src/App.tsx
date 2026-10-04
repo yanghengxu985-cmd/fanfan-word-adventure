@@ -14,6 +14,8 @@ const ChinesePilot = lazy(() => import('./components/ChinesePilot'));
 const ChineseSemesterPlan = lazy(() => import('./components/ChineseSemesterPlan'));
 const ShanxingLesson = lazy(() => import('./components/ShanxingLesson'));
 const ChineseBookStudio = lazy(() => import('./components/ChineseBookStudio'));
+const ChineseLessonViewer = lazy(() => import('./components/ChineseLessonViewer'));
+const ChineseBookCompanionViewer = lazy(() => import('./components/ChineseBookCompanionViewer'));
 
 const allowedIds = new Set(lexemes.map(item => item.id));
 const progressStore = createProgressStore(allowedIds);
@@ -137,6 +139,8 @@ export default function App() {
   ];
   const activeKey = page === 'map' ? `map-${segments[1]}` : page;
   if (page === 'chinese-lesson' && segments[1] === 'shanxing') return <Suspense fallback={<div className="empty-state">正在打开《山行》一课体验…</div>}><ShanxingLesson /></Suspense>;
+  if (page === 'chinese-lesson') return <Suspense fallback={<div className="empty-state">正在打开语文课件…</div>}><ChineseLessonViewer courseId={segments[1] || ''} teacher={segments[2] === 'teacher'} /></Suspense>;
+  if (page === 'chinese-companion') return <Suspense fallback={<div className="empty-state">正在打开配套课件…</div>}><ChineseBookCompanionViewer companionId={segments[1] || ''} /></Suspense>;
   if (page === 'chinese-book') return <Suspense fallback={<div className="empty-state">正在打开全册学习安排…</div>}><ChineseBookStudio selectedId={segments[1]} /></Suspense>;
   return <div className={`app-shell${focusedGame ? ' game-focus' : ''}${focusedGame && page === 'teacher' ? ' teacher-game-focus' : ''}`}>
     <a href="#main" className="skip-link" onClick={event => { event.preventDefault(); document.getElementById('main')?.focus(); }}>跳到内容</a>

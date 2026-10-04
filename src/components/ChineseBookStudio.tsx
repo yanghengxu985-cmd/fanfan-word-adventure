@@ -29,7 +29,7 @@ export default function ChineseBookStudio({ selectedId }: { selectedId?: string 
 
   useEffect(() => {
     const previous = document.title;
-    document.title = '全册学习安排 · 三年级上册语文';
+    document.title = '全册语文课堂 · 三年级上册';
     return () => { document.title = previous; };
   }, []);
 
@@ -61,7 +61,7 @@ export default function ChineseBookStudio({ selectedId }: { selectedId?: string 
   return <main className="book-studio">
     <header className="book-studio-head">
       <a className="book-back" href="#/map/chinese"><ArrowLeft size={19} /><span>语文</span></a>
-      <div><span className="book-eyebrow">读懂，再记牢 · 三年级上册</span><h1>全册学习安排</h1></div>
+      <div><span className="book-eyebrow">读懂，再记牢 · 三年级上册</span><h1>全册语文课堂</h1></div>
       <a className="book-download" href={`${import.meta.env.BASE_URL}plans/chinese-book-plan.md`} download="语文全册学习安排.md"><Download size={18} /><span>下载安排</span></a>
     </header>
 
@@ -72,7 +72,7 @@ export default function ChineseBookStudio({ selectedId }: { selectedId?: string 
     <div className="book-workspace">
       <aside className="book-index" aria-label="本单元内容">
         <div className="book-index-tabs"><button aria-pressed={section === 'lessons'} className={section === 'lessons' ? 'is-active' : ''} onClick={() => selectSection('lessons')}>课文 <span>{lessons.length}</span></button><button aria-pressed={section === 'companions'} className={section === 'companions' ? 'is-active' : ''} onClick={() => selectSection('companions')}>配套学习 <span>{companions.length}</span></button></div>
-        <div className="book-cards">{section === 'lessons' ? lessons.map(item => <button key={item.id} aria-pressed={item.id === selection} className={`book-card ${item.id === selection ? 'is-active' : ''}`} onClick={() => selectItem(item.id)}><span className="book-card-number">{String(item.lessonNumber).padStart(2, '0')}</span><div><strong>{[4, 20].includes(item.lessonNumber!) ? '古诗三首' : item.title}{skimLessons.has(item.lessonNumber!) && <em>略读</em>}</strong><small>{item.startPage}页 · {item.id === 'cn-04' ? '《山行》可体验' : '已安排 · 课件待制作'}</small></div><ArrowRight size={16} /></button>) : companions.map(item => <button key={item.id} aria-pressed={item.id === selection} className={`book-card book-companion-card ${item.id === selection ? 'is-active' : ''}`} onClick={() => selectItem(item.id)}><span className="book-card-number"><Feather size={20} /></span><div><strong>{item.title}</strong><small>{kindLabels[item.kind]}{item.page && ` · ${item.page}页`}</small></div><ArrowRight size={16} /></button>)}</div>
+        <div className="book-cards">{section === 'lessons' ? lessons.map(item => <button key={item.id} aria-pressed={item.id === selection} className={`book-card ${item.id === selection ? 'is-active' : ''}`} onClick={() => selectItem(item.id)}><span className="book-card-number">{String(item.lessonNumber).padStart(2, '0')}</span><div><strong>{[4, 20].includes(item.lessonNumber!) ? '古诗三首' : item.title}{skimLessons.has(item.lessonNumber!) && <em>略读</em>}</strong><small>{item.startPage}页 · 逐课课件</small></div><ArrowRight size={16} /></button>) : companions.map(item => <button key={item.id} aria-pressed={item.id === selection} className={`book-card book-companion-card ${item.id === selection ? 'is-active' : ''}`} onClick={() => selectItem(item.id)}><span className="book-card-number"><Feather size={20} /></span><div><strong>{item.title}</strong><small>{kindLabels[item.kind]}{item.page && ` · ${item.page}页`} · 可打开</small></div><ArrowRight size={16} /></button>)}</div>
         <div className="book-index-note"><BookOpen size={18} /><p>26课 · 8篇习作 · 4次口语交际<br />7个园地，另含阅读与复习。</p></div>
       </aside>
 
@@ -82,10 +82,11 @@ export default function ChineseBookStudio({ selectedId }: { selectedId?: string 
         <div className="book-detail-body">
           {detail === 'how' && <>
             <div className="book-design-block"><span>这一课要读懂</span><p>{design?.focus || companion?.goal}</p></div>
-            <div className="book-design-block"><span>准备怎样呈现</span><p>{design?.form || companion?.form}</p></div>
+            <div className="book-design-block"><span>这一课的形式</span><p>{design?.form || companion?.form}</p></div>
             {design && <div className="book-design-block"><span>练习重点</span><p>{design.practice}</p></div>}
             <p className="book-design-note">{design?.note || companion?.note}</p>
-            {course?.id === 'cn-04' && <a className="book-primary" href="#/chinese-lesson/shanxing">打开《山行》体验 <ArrowRight size={18} /></a>}
+            <a className="book-primary" href={course ? `#/chinese-lesson/${course.id}` : `#/chinese-companion/${companion!.id}`}>打开本课课件 <ArrowRight size={18} /></a>
+            {course?.id === 'cn-04' && <a className="book-source" href="#/chinese-lesson/shanxing">《山行》诗画版 <ArrowRight size={16} /></a>}
           </>}
           {detail === 'words' && lexicalCourse && <>
             <div className="book-word-counts"><span>会认字 <b>{lexicalCourse.recognition.length}</b></span><span>会写字 <b>{lexicalCourse.writing.length}</b></span><span>课内词语 <b>{lexicalCourse.words.length}</b></span></div>

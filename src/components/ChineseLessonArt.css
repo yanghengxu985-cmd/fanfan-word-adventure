@@ -1,0 +1,48 @@
+.chinese-lesson-art {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  background: #f5edda;
+  border-radius: inherit;
+  isolation: isolate;
+}
+
+.cn-art-stage {
+  animation: cn-art-appear 360ms ease-out both;
+}
+
+.cn-art-halo {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: cn-art-attention 3.4s ease-in-out infinite;
+}
+
+.cn-art-wind {
+  stroke-dasharray: 130 12;
+  animation: cn-art-breeze 5s linear infinite;
+}
+
+@keyframes cn-art-appear {
+  from { opacity: .3; }
+  to { opacity: 1; }
+}
+
+@keyframes cn-art-attention {
+  0%, 100% { opacity: .6; }
+  50% { opacity: 1; }
+}
+
+@keyframes cn-art-breeze {
+  to { stroke-dashoffset: -142; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chinese-lesson-art *,
+  .chinese-lesson-art *::before,
+  .chinese-lesson-art *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

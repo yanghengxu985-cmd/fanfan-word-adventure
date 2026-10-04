@@ -1,0 +1,359 @@
+.kf-lesson.oh-lesson {
+  --kf-paper: #f4eee3;
+  --kf-white: #fffaf0;
+  --kf-ink: #4d493c;
+  --kf-green: #68765b;
+  --kf-muted: #8d8b77;
+  --kf-rust: #a76547;
+  --kf-line: #ddd4c2;
+  --kf-gold: #be9969;
+  padding: 18px 26px 13px;
+  gap: 12px;
+  background-color: var(--kf-paper);
+  background-image: radial-gradient(#8464430d .7px, transparent .7px);
+}
+.oh-lesson .kf-heading h1 { color: #76563f; font-size: 35px; letter-spacing: .025em; }
+.oh-lesson .kf-heading h1 > span { color: #9b8d75; font-size: 12px; }
+.oh-lesson .kf-heading > .kf-eyebrow { color: #a36d4d; }
+.oh-lesson .kf-tabs { background: #e9e2d5; border-color: #ddd2bf; }
+.oh-lesson .kf-tabs > button.is-active { color: #8e5f43; background: #fff8eb; box-shadow: 0 2px 6px #7756380d, inset 0 -2px 0 #b58b65; }
+.oh-lesson .oh-panel { grid-template-columns: minmax(0, 1.35fr) minmax(320px, 1fr); border-color: #d8cfbc; }
+.oh-lesson .kf-art { background: #dfe6d4; border-color: #d8d2bc; }
+.oh-lesson .kf-art-heading { background: #f2ecdd; border-color: #dcd6c1; color: #79664e; }
+.oh-lesson .oh-scene-body { position: relative; width: 100%; flex: 1; min-height: 0; overflow: hidden; display: flex; align-items: center; justify-content: center; container-type: size; }
+.oh-lesson .oh-scene-body > .oh-scene { width: min(100cqw, 150cqh); height: auto; aspect-ratio: 3 / 2; min-height: 0; max-width: 100%; max-height: 100%; border-radius: 0; }
+.oh-lesson .oh-story-stops { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; padding: 11px 14px; border-top: 1px solid #d4d5be; background: #eee9da; }
+.oh-lesson .oh-story-stops > button { display: flex; align-items: center; justify-content: center; gap: 9px; padding: 9px 4px !important; border-radius: 6px; color: #8d9179; border: 1px solid transparent; }
+.oh-lesson .oh-story-stops > button > span { font-family: Georgia, serif; font-size: 11px; color: #aaa089; }
+.oh-lesson .oh-story-stops > button > strong { font-family: 'STKaiti', 'KaiTi', serif; font-weight: 500; font-size: 19px; }
+.oh-lesson .oh-story-stops > button.is-active { background: #fff7e9; border-color: #cbb898; color: #996442; }
+.oh-lesson .oh-story-side { display: flex; flex-direction: column; gap: 16px; padding: 24px; background: #fff9ec; }
+.oh-lesson .oh-page-heading h2, .oh-lesson .oh-folio-heading h2 { font-family: 'STKaiti', 'KaiTi', serif; font-weight: 500; color: #775a42; font-size: 29px; line-height: 1.4; }
+.oh-lesson .oh-known-summary { font-size: 21px; line-height: 1.8; color: #59543f; }
+.oh-lesson .oh-story-clue { padding: 14px 16px; border-left: 3px solid #b9b891; background: #edf0df; border-radius: 0 7px 7px 0; }
+.oh-lesson .oh-story-clue > span { display: flex; align-items: center; gap: 7px; color: #84916d; font-size: 12px; }
+.oh-lesson .oh-story-clue > p { margin-top: 6px; font-size: 17px; line-height: 1.7; color: #6e7759; }
+.oh-lesson .oh-story-question { font-size: 17px; color: #9b7557; line-height: 1.7; }
+.oh-lesson .oh-story-outcome { border-top: 1px solid #e0d6bf; padding-top: 13px; }
+.oh-lesson .oh-story-outcome > span { font-size: 11px; color: #a78e6b; }
+.oh-lesson .oh-story-outcome > p { font-size: 18px; line-height: 1.7; color: #786747; margin-top: 5px; }
+.oh-lesson .oh-story-actions { margin-top: auto; display: flex; align-items: center; gap: 13px; flex-wrap: wrap; }
+.oh-lesson .oh-story-actions > span { font-size: 12px; line-height: 1.7; color: #9c9279; }
+.oh-lesson .kf-primary { background: #8e6848 !important; box-shadow: inset 0 -2px 0 #6f4c34; }
+.oh-lesson .kf-primary:hover { background: #a27a55 !important; }
+.oh-lesson .oh-panel-predict { grid-template-columns: minmax(0, .92fr) minmax(450px, 1.3fr); }
+.oh-lesson .oh-known-card { position: relative; z-index: 2; padding: 14px 19px; background: #f4edde; border-top: 1px solid #dcd2bb; }
+.oh-lesson .oh-known-card > span { font-size: 11px; letter-spacing: .08em; color: #a18a68; }
+.oh-lesson .oh-known-card > p { font-size: 17px; line-height: 1.7; color: #74664e; margin-top: 5px; }
+.oh-lesson .oh-case-nav { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; padding: 9px 14px; border-top: 1px solid #ddd6c2; background: #ebe6d8; }
+.oh-lesson .oh-case-nav > button { min-height: 46px; display: flex; align-items: center; justify-content: center; gap: 10px; border: 1px solid #d8cfb9; border-radius: 6px; color: #928670; background: #fff9e9; font-size: 15px; }
+.oh-lesson .oh-case-nav > button > span { font-family: Georgia, serif; font-size: 10px; color: #b4a080; }
+.oh-lesson .oh-case-nav > button.is-active { color: #9a643e; border-color: #bd966b; background: #f4e7d3; }
+.oh-lesson .oh-folio { display: flex; flex-direction: column; gap: 12px; padding: 22px 25px 18px; background: #fffaef; min-height: 0; }
+.oh-lesson .oh-folio-heading > .kf-eyebrow { color: #a48d70; }
+.oh-lesson .oh-folio-heading h2 { font-size: 26px; }
+.oh-lesson .oh-guesses { display: flex; flex-direction: column; gap: 7px; }
+.oh-lesson .oh-guesses > button { display: flex; align-items: center; gap: 11px; min-height: 55px; padding: 8px 12px !important; text-align: left; border: 1px solid #dfd4bf; border-radius: 7px; background: #faf4e7; }
+.oh-lesson .oh-guesses > button > span { flex: 0 0 23px; width: 23px; height: 23px; display: grid; place-items: center; font-family: Georgia, serif; font-size: 12px; color: #ac9070; border: 1px solid #d8c6a6; border-radius: 50%; }
+.oh-lesson .oh-guesses > button > p { flex: 1; font-size: 16px; line-height: 1.65; color: #76694e; }
+.oh-lesson .oh-guesses > button > i { flex: 0 0 8px; width: 8px; height: 8px; border: 1px solid #d1c6aa; border-radius: 50%; }
+.oh-lesson .oh-guesses > button.is-selected { background: #f1e7d4; border-color: #b9986a; }
+.oh-lesson .oh-guesses > button.is-selected > i { background: #aa7d50; border-color: #aa7d50; }
+.oh-lesson .oh-evidence-heading { display: flex; align-items: center; gap: 6px; color: #899073; font-size: 12px; }
+.oh-lesson .oh-evidence-heading > small { margin-left: auto; font-size: 10px; color: #a5a089; }
+.oh-lesson .oh-evidence-options { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; }
+.oh-lesson .oh-evidence-options > button { min-height: 76px; padding: 8px 10px !important; border: 1px solid #d7ddc6; border-radius: 6px; background: #f1f3e7; text-align: left; }
+.oh-lesson .oh-evidence-options > button > span { display: block; font-size: 10px; color: #96a17f; margin-bottom: 3px; }
+.oh-lesson .oh-evidence-options > button > p { font-size: 13px; line-height: 1.7; color: #798469; }
+.oh-lesson .oh-evidence-options > button.is-selected { border-color: #8b9e71; background: #e7edd9; }
+.oh-lesson .oh-before-read { display: flex; align-items: center; gap: 15px; margin-top: auto; padding-top: 9px; border-top: 1px solid #e2d9c4; }
+.oh-lesson .oh-before-read > p { font-size: 12px; line-height: 1.7; color: #a18f74; flex: 1; }
+.oh-lesson .oh-reveal { flex: 0 0 auto; min-height: 44px; }
+.oh-lesson .oh-comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.oh-lesson .oh-comparison > div { padding: 13px 14px; border: 1px solid #ddd2b9; border-radius: 8px; background: #f6edde; }
+.oh-lesson .oh-comparison > .oh-after { background: #ecf0df; border-color: #d5dec1; }
+.oh-lesson .oh-comparison > div > span { display: flex; align-items: center; gap: 6px; font-size: 11px; color: #a18a69; }
+.oh-lesson .oh-comparison > .oh-after > span { color: #899777; }
+.oh-lesson .oh-comparison > div > p { font-size: 16px; line-height: 1.75; margin-top: 7px; color: #79674a; }
+.oh-lesson .oh-comparison > .oh-after > p { color: #6f7c58; }
+.oh-lesson .oh-comparison > div > small { display: block; font-size: 12px; line-height: 1.7; margin-top: 9px; color: #a49276; }
+.oh-lesson .oh-comparison-note { border-left: 3px solid #b0b68c; padding: 10px 14px; border-radius: 0 7px 7px 0; background: #f0f1e2; }
+.oh-lesson .oh-comparison-note > strong { color: #7f8969; font-size: 13px; font-weight: 550; }
+.oh-lesson .oh-comparison-note > p { font-size: 14px; line-height: 1.75; color: #91967d; margin-top: 4px; }
+.oh-lesson .oh-compare-detail { font-size: 13px; line-height: 1.8; color: #a09276; }
+.oh-lesson .oh-reflection { display: flex; align-items: center; gap: 8px; margin-top: auto; }
+.oh-lesson .oh-reflection > span { font-size: 12px; color: #9a8b72; margin-right: auto; }
+.oh-lesson .oh-reflection > button { min-height: 44px; padding: 7px 12px !important; border: 1px solid #d7ceb6; border-radius: 6px; color: #918468; font-size: 13px; background: #fcf6e9; }
+.oh-lesson .oh-reflection > button.is-selected { border-color: #a7936c; color: #8e6e44; background: #f0e6d1; }
+.oh-lesson .oh-after-read { display: flex; align-items: center; gap: 12px; padding-top: 4px; border-top: 1px dashed #ded3b9; }
+.oh-lesson .oh-after-read > span { flex: 1; font-size: 11px; color: #9a957d; line-height: 1.7; }
+.oh-lesson .oh-after-read > .kf-text-button { font-size: 12px; gap: 7px; white-space: nowrap; color: #9a7955; }
+.oh-lesson .oh-panel-words { grid-template-columns: minmax(360px, 1.06fr) minmax(0, 1.5fr); }
+.oh-lesson .kf-word-library { background: #eef0df; border-color: #d7dcc4; padding: 18px 21px; gap: 11px; }
+.oh-lesson .kf-word-library .kf-section-heading h2 { font-size: 25px; }
+.oh-lesson .kf-word-chips { grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 4px; }
+.oh-lesson .kf-word-chips > button { min-height: 44px; font-size: 24px; }
+.oh-lesson .kf-word-chips > button.is-active { background: #7c8460; border-color: #7c8460; }
+.oh-lesson .kf-word-group-words .kf-word-chips { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.oh-lesson .kf-word-group-words .kf-word-chips > button { font-size: 15px; }
+.oh-lesson .kf-word-group-label { margin-bottom: 5px; }
+.oh-lesson .kf-word-workbench { background: #fffaf0; padding: 19px 25px 16px; gap: 9px; }
+.oh-lesson .kf-word-display { min-height: 123px; }
+.oh-lesson .kf-word-display > strong { color: #765e42; }
+.oh-lesson .kf-word-workbench.is-vocabulary { gap: 7px; }
+.oh-lesson .is-vocabulary .kf-word-display { min-height: 108px; }
+.oh-lesson .is-vocabulary .kf-word-display > strong { font-size: 66px; }
+.oh-lesson .is-vocabulary .kf-word-display.is-long > strong { font-size: 54px; }
+.oh-lesson .is-vocabulary .kf-word-display.is-four-character > strong { font-size: 46px; }
+.oh-lesson .is-vocabulary .kf-writing-guidance { gap: 7px; }
+.oh-lesson .is-vocabulary .kf-character-structure > strong { font-size: 17px; }
+.oh-lesson .is-vocabulary .kf-writing-attention > p { font-size: 16px; }
+.oh-lesson .kf-vocabulary-context { color: #9a8c72; font-size: 14px; line-height: 1.75; }
+.oh-lesson .kf-vocabulary-context > span { color: #ac9876; font-size: 10px; margin-right: 7px; }
+.oh-lesson .kf-vocabulary-writing-note { display: none; }
+.oh-lesson .kf-writing-attention { background: #f0e8d9; }
+.oh-lesson .kf-paper-review { background: #edf0df; }
+.oh-lesson .oh-panel-method { grid-template-columns: minmax(0, .87fr) minmax(450px, 1.13fr); }
+.oh-lesson .oh-method-guide { padding: 26px; background: #eee9d9; border-right: 1px solid #d6d1b9; display: flex; flex-direction: column; gap: 20px; }
+.oh-lesson .oh-method-tips { display: flex; flex-direction: column; gap: 19px; }
+.oh-lesson .oh-method-tips > div { display: flex; gap: 15px; }
+.oh-lesson .oh-method-tips > div > span { color: #b69a74; font-family: Georgia, serif; font-size: 24px; line-height: 1.5; }
+.oh-lesson .oh-method-tips h3 { font-family: 'STKaiti', 'KaiTi', serif; font-size: 23px; font-weight: 500; color: #826649; line-height: 1.45; }
+.oh-lesson .oh-method-tips p { margin-top: 5px; font-size: 16px; line-height: 1.85; color: #90886e; }
+.oh-lesson .oh-method-margin { display: flex; gap: 8px; margin-top: auto; border-top: 1px solid #d9d0b7; padding-top: 14px; font-size: 12px; line-height: 1.7; color: #a3987b; }
+.oh-lesson .oh-method-margin > svg { flex: 0 0 auto; }
+.oh-lesson .oh-transfer { display: flex; flex-direction: column; min-height: 0; }
+.oh-lesson .oh-transfer-premise { padding: 17px 23px 14px; background: #f4edde; border-bottom: 1px solid #dfd3ba; }
+.oh-lesson .oh-transfer-premise > span { color: #aa8a63; font-size: 11px; letter-spacing: .04em; }
+.oh-lesson .oh-transfer-premise > p { margin-top: 5px; font-size: 16px; line-height: 1.7; color: #7c6c50; }
+.oh-lesson .oh-folio-transfer { flex: 1; padding-top: 13px; gap: 9px; }
+.oh-lesson .oh-folio-transfer .oh-folio-heading h2 { font-size: 23px; }
+.oh-lesson .oh-folio-transfer .oh-folio-heading > .kf-eyebrow { display: none; }
+.oh-lesson .oh-folio-transfer .oh-guesses > button { min-height: 49px; }
+.oh-lesson .oh-folio-transfer .oh-guesses > button > p { font-size: 15px; }
+.oh-lesson .oh-folio-transfer .oh-evidence-options > button { min-height: 66px; padding: 6px 8px !important; }
+.oh-lesson .oh-folio-transfer .oh-evidence-options > button > p { font-size: 12px; }
+.oh-lesson .oh-folio-transfer .oh-comparison > div > p { font-size: 15px; }
+.oh-lesson .oh-folio-transfer .oh-comparison-note > p { font-size: 13px; }
+.oh-lesson .kf-dialog { background: #fffaf0; }
+.oh-lesson .kf-dialog-heading { background: #f2ead9; }
+.oh-lesson .kf-adult-guidance { background: #eef0e1; }
+.oh-lesson .kf-footer-mark { color: #a18b70; }
+.oh-lesson .oh-print table { width: 100%; border-collapse: collapse; margin: 7mm 0; table-layout: fixed; }
+.oh-lesson .oh-print th, .oh-lesson .oh-print td { border: 1px solid #999; padding: 3mm; }
+.oh-lesson .oh-print thead th { font-size: 11px; text-align: center; font-weight: 500; }
+.oh-lesson .oh-print th:first-child { width: 14mm; }
+.oh-lesson .oh-print tbody th { font-size: 12px; font-weight: 500; }
+.oh-lesson .oh-print tbody td { height: 37mm; }
+.oh-lesson .oh-print > small { display: block; line-height: 1.7; font-size: 10px; margin-top: 4mm; }
+.oh-lesson .oh-print-blank > p { line-height: 3; }
+
+@media (min-width: 1200px) and (min-height: 800px) {
+  .kf-lesson.oh-lesson { padding: 26px 37px 19px; gap: 17px; }
+  .oh-lesson .kf-heading h1 { font-size: 40px; }
+  .oh-lesson .oh-story-side { padding: 29px; gap: 22px; }
+  .oh-lesson .oh-known-summary { font-size: 23px; }
+  .oh-lesson .oh-folio { padding: 27px 32px 23px; gap: 16px; }
+  .oh-lesson .oh-guesses > button { min-height: 63px; }
+  .oh-lesson .oh-guesses > button > p { font-size: 18px; }
+  .oh-lesson .oh-evidence-options > button { min-height: 91px; }
+  .oh-lesson .oh-evidence-options > button > p { font-size: 15px; }
+  .oh-lesson .oh-method-guide { padding: 32px; gap: 26px; }
+  .oh-lesson .oh-method-tips { gap: 26px; }
+  .oh-lesson .oh-method-tips p { font-size: 18px; }
+}
+@media (max-width: 1100px) and (min-width: 760px) and (max-height: 820px) {
+  .kf-lesson.oh-lesson { padding: 14px 20px 10px; gap: 10px; }
+  .oh-lesson .kf-head { min-height: 60px; gap: 15px; }
+  .oh-lesson .kf-heading h1 { font-size: 32px; }
+  .oh-lesson .kf-heading h1 > span { display: none; }
+  .oh-lesson .kf-tabs > button { min-height: 46px; font-size: 15px; }
+  .oh-lesson .kf-tab-number { display: none; }
+  .oh-lesson .kf-art-heading { padding: 0 15px; height: 40px; min-height: 40px; }
+  .oh-lesson .kf-art-heading > span { font-size: 12px; }
+  .oh-lesson .kf-art-heading > small { font-size: 9px; }
+  .oh-lesson .oh-story-side { padding: 19px 21px; gap: 12px; }
+  .oh-lesson .oh-known-summary { font-size: 19px; line-height: 1.75; }
+  .oh-lesson .oh-story-clue { padding: 11px 13px; }
+  .oh-lesson .oh-story-clue > p, .oh-lesson .oh-story-outcome > p { font-size: 16px; line-height: 1.65; }
+  .oh-lesson .oh-story-question { font-size: 15px; }
+  .oh-lesson .oh-page-heading h2 { font-size: 25px; }
+  .oh-lesson .oh-story-stops { padding: 8px 10px; gap: 4px; }
+  .oh-lesson .oh-story-stops > button > strong { font-size: 17px; }
+  .oh-lesson .oh-panel-predict { grid-template-columns: minmax(0, .83fr) minmax(470px, 1.17fr); }
+  .oh-lesson .oh-known-card { padding: 11px 15px; }
+  .oh-lesson .oh-known-card > p { font-size: 15px; line-height: 1.6; }
+  .oh-lesson .oh-folio { padding: 16px 19px 13px; gap: 9px; }
+  .oh-lesson .oh-folio-heading h2 { font-size: 25px; }
+  .oh-lesson .oh-guesses > button { min-height: 51px; padding: 7px 10px !important; }
+  .oh-lesson .oh-guesses > button > p { font-size: 15px; line-height: 1.6; }
+  .oh-lesson .oh-evidence-options > button { min-height: 74px; padding: 7px 8px !important; }
+  .oh-lesson .oh-evidence-options > button > p { font-size: 12px; }
+  .oh-lesson .oh-comparison > div { padding: 10px 11px; }
+  .oh-lesson .oh-comparison > div > p { font-size: 15px; line-height: 1.65; }
+  .oh-lesson .oh-comparison > div > small { font-size: 11px; line-height: 1.65; }
+  .oh-lesson .oh-comparison-note { padding: 8px 11px; }
+  .oh-lesson .oh-comparison-note > p { font-size: 13px; line-height: 1.65; }
+  .oh-lesson .oh-compare-detail { font-size: 12px; line-height: 1.7; }
+  .oh-lesson .oh-panel-words { grid-template-columns: minmax(365px, .98fr) minmax(0, 1.45fr); }
+  .oh-lesson .kf-word-library { padding: 15px 18px; gap: 8px; }
+  .oh-lesson .kf-word-library .kf-section-heading h2 { font-size: 23px; }
+  .oh-lesson .kf-word-group-label > h3 { font-size: 12px; }
+  .oh-lesson .kf-word-group-label { margin-bottom: 4px; }
+  .oh-lesson .kf-word-chips > button { font-size: 23px; }
+  .oh-lesson .kf-word-group-words .kf-word-chips > button { font-size: 14px; }
+  .oh-lesson .kf-library-note { font-size: 10px; }
+  .oh-lesson .kf-word-workbench { padding: 16px 21px 12px; gap: 8px; }
+  .oh-lesson .kf-word-display { min-height: 106px; }
+  .oh-lesson .kf-word-display > strong { font-size: 78px; }
+  .oh-lesson .kf-writing-guidance { gap: 7px; }
+  .oh-lesson .kf-writing-attention { padding: 9px 11px; }
+  .oh-lesson .kf-writing-attention > p { font-size: 16px; line-height: 1.65; }
+  .oh-lesson .kf-distinguish { font-size: 14px; line-height: 1.65; }
+  .oh-lesson .kf-character-structure > strong { font-size: 16px; }
+  .oh-lesson .kf-example-words > strong { font-size: 17px; }
+  .oh-lesson .kf-paper-actions { gap: 10px; }
+  .oh-lesson .kf-paper-actions > p { font-size: 11px; }
+  .oh-lesson .is-vocabulary .kf-word-display { min-height: 94px; }
+  .oh-lesson .is-vocabulary .kf-word-display > strong { font-size: 57px; }
+  .oh-lesson .is-vocabulary .kf-word-display.is-four-character > strong { font-size: 42px; }
+  .oh-lesson .is-vocabulary .kf-writing-attention > p { font-size: 15px; }
+  .oh-lesson .kf-vocabulary-context { font-size: 13px; line-height: 1.65; }
+  .oh-lesson .oh-panel-method { grid-template-columns: minmax(0, .83fr) minmax(480px, 1.17fr); }
+  .oh-lesson .oh-method-guide { padding: 20px; gap: 15px; }
+  .oh-lesson .oh-method-tips { gap: 15px; }
+  .oh-lesson .oh-method-tips h3 { font-size: 22px; }
+  .oh-lesson .oh-method-tips p { font-size: 14px; line-height: 1.75; }
+  .oh-lesson .oh-method-margin { font-size: 11px; }
+  .oh-lesson .oh-transfer-premise { padding: 12px 18px 10px; }
+  .oh-lesson .oh-transfer-premise > p { font-size: 14px; }
+  .oh-lesson .oh-folio-transfer { padding-top: 10px; gap: 7px; }
+  .oh-lesson .oh-folio-transfer .oh-guesses > button { min-height: 45px; }
+  .oh-lesson .oh-folio-transfer .oh-guesses > button > p { font-size: 14px; }
+  .oh-lesson .oh-folio-transfer .oh-evidence-options > button { min-height: 60px; }
+  .oh-lesson .oh-folio-transfer .oh-evidence-options > button > p { font-size: 11px; }
+}
+@media (max-width: 900px) and (min-height: 850px) {
+  .kf-lesson.oh-lesson { padding: 18px 21px 14px; gap: 12px; }
+  .oh-lesson .kf-head { min-height: 61px; gap: 13px; }
+  .oh-lesson .kf-back > span, .oh-lesson .kf-heading h1 > span, .oh-lesson .kf-tab-number { display: none; }
+  .oh-lesson .kf-heading h1 { font-size: 31px; }
+  .oh-lesson .kf-tabs > button { font-size: 15px; gap: 7px; }
+  .oh-lesson .oh-panel { grid-template-columns: 1fr; grid-template-rows: minmax(0, 1.02fr) minmax(0, .98fr); }
+  .oh-lesson .kf-art { border-right: 0; border-bottom: 1px solid #d8d1bd; }
+  .oh-lesson .oh-story-art .kf-art-heading { min-height: 40px; height: 40px; }
+  .oh-lesson .oh-story-side { padding: 18px 25px; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto minmax(0, 1fr) auto; gap: 10px 24px; }
+  .oh-lesson .oh-story-side .oh-page-heading { grid-column: 1; grid-row: 1; }
+  .oh-lesson .oh-story-side .oh-known-summary { grid-column: 1; grid-row: 2; font-size: 18px; line-height: 1.7; }
+  .oh-lesson .oh-story-side .oh-story-clue { grid-column: 2; grid-row: 1 / 3; align-self: start; padding: 13px; }
+  .oh-lesson .oh-story-side .oh-story-question { grid-column: 2; grid-row: 3; font-size: 14px; }
+  .oh-lesson .oh-story-side .oh-story-actions { grid-column: 1; grid-row: 3; }
+  .oh-lesson .oh-story-side .oh-story-outcome { grid-column: 2; grid-row: 2 / 4; align-self: end; padding-top: 11px; }
+  .oh-lesson .oh-story-side[data-revealed='true'] .oh-story-clue { grid-row: 1; padding: 0; border: 0; background: transparent; }
+  .oh-lesson .oh-story-side[data-revealed='true'] .oh-story-clue > p { display: none; }
+  .oh-lesson .oh-page-heading h2 { font-size: 25px; }
+  .oh-lesson .oh-panel-predict { grid-template-rows: minmax(0, .73fr) minmax(0, 1.27fr); }
+  .oh-lesson .oh-prediction-context { display: grid; grid-template-columns: 1fr .9fr; grid-template-rows: 38px minmax(0, 1fr) 55px; }
+  .oh-lesson .oh-prediction-context > .kf-art-heading { grid-column: 1 / 3; height: 38px; min-height: 38px; }
+  .oh-lesson .oh-prediction-context > .oh-scene-body { grid-column: 1; grid-row: 2; }
+  .oh-lesson .oh-prediction-context > .oh-known-card { grid-column: 2; grid-row: 2; border-top: 0; border-left: 1px solid #ded5bd; display: flex; flex-direction: column; justify-content: center; padding: 16px 20px; }
+  .oh-lesson .oh-known-card > p { font-size: 16px; line-height: 1.8; }
+  .oh-lesson .oh-prediction-context > .oh-case-nav { grid-column: 1 / 3; grid-row: 3; padding: 5px 12px; }
+  .oh-lesson .oh-case-nav > button { min-height: 44px; }
+  .oh-lesson .oh-folio { padding: 17px 24px 13px; gap: 10px; }
+  .oh-lesson .oh-folio-heading h2 { font-size: 26px; }
+  .oh-lesson .oh-guesses > button { min-height: 51px; }
+  .oh-lesson .oh-evidence-options > button { min-height: 67px; }
+  .oh-lesson .oh-comparison > div { padding: 11px 14px; }
+  .oh-lesson .oh-comparison > div > p { font-size: 15px; }
+  .oh-lesson .oh-comparison-note { padding: 9px 13px; }
+  .oh-lesson .oh-comparison-note > p { font-size: 13px; }
+  .oh-lesson .oh-compare-detail { font-size: 12px; }
+  .oh-lesson .oh-panel-words { grid-template-columns: minmax(295px, .93fr) minmax(0, 1.07fr); grid-template-rows: minmax(0, 1fr); }
+  .oh-lesson .kf-word-library { padding: 23px 16px; gap: 17px; }
+  .oh-lesson .kf-word-chips { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 5px; }
+  .oh-lesson .kf-word-group-words .kf-word-chips { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .oh-lesson .kf-word-group-words .kf-word-chips > button { font-size: 15px; }
+  .oh-lesson .kf-word-workbench { padding: 23px 20px 17px; gap: 13px; }
+  .oh-lesson .kf-word-workbench-top { flex-wrap: wrap; gap: 3px; }
+  .oh-lesson .kf-word-display { min-height: 153px; }
+  .oh-lesson .kf-word-display > strong { font-size: 85px; }
+  .oh-lesson .kf-paper-actions { flex-direction: column; align-items: stretch; gap: 9px; }
+  .oh-lesson .kf-paper-actions > p { text-align: center; }
+  .oh-lesson .kf-example-words { flex-direction: column; gap: 5px; }
+  .oh-lesson .kf-writing-attention > p { font-size: 17px; }
+  .oh-lesson .is-vocabulary .kf-word-display { min-height: 127px; }
+  .oh-lesson .is-vocabulary .kf-word-display.is-four-character > strong { font-size: 41px; }
+  .oh-lesson .is-vocabulary .kf-writing-attention > p { font-size: 16px; }
+  .oh-lesson .kf-vocabulary-context { font-size: 14px; }
+  .oh-lesson .oh-panel-method { grid-template-rows: minmax(0, .67fr) minmax(0, 1.33fr); }
+  .oh-lesson .oh-method-guide { padding: 17px 23px; gap: 13px; border-right: 0; border-bottom: 1px solid #d7cfb9; }
+  .oh-lesson .oh-method-tips { display: grid; grid-template-columns: repeat(3, 1fr); gap: 17px; }
+  .oh-lesson .oh-method-tips > div { display: block; }
+  .oh-lesson .oh-method-tips > div > span { font-size: 12px; }
+  .oh-lesson .oh-method-tips h3 { font-size: 20px; }
+  .oh-lesson .oh-method-tips p { font-size: 13px; line-height: 1.8; }
+  .oh-lesson .oh-method-margin { display: none; }
+  .oh-lesson .oh-transfer-premise { padding: 11px 23px 8px; }
+  .oh-lesson .oh-transfer-premise > p { font-size: 15px; }
+  .oh-lesson .oh-folio-transfer { padding-top: 10px; gap: 8px; }
+  .oh-lesson .oh-folio-transfer .oh-guesses > button { min-height: 46px; }
+  .oh-lesson .oh-folio-transfer .oh-evidence-options > button { min-height: 59px; }
+}
+@media (max-width: 759px) {
+  .kf-lesson.oh-lesson { padding: 12px; gap: 10px; height: auto; min-height: 100dvh; overflow: visible; grid-template-rows: auto auto minmax(720px, 1fr) auto; }
+  .oh-lesson .kf-head { min-height: 55px; gap: 9px; }
+  .oh-lesson .kf-back > span, .oh-lesson .kf-heading h1 > span, .oh-lesson .kf-heading > .kf-eyebrow > span, .oh-lesson .kf-resource > span, .oh-lesson .kf-tab-number { display: none; }
+  .oh-lesson .kf-heading h1 { font-size: clamp(23px, 5.5vw, 31px); }
+  .oh-lesson .kf-heading > .kf-eyebrow { font-size: 10px; }
+  .oh-lesson .kf-resource { min-width: 44px; padding: 8px !important; }
+  .oh-lesson .kf-tabs { padding: 3px; gap: 3px; }
+  .oh-lesson .kf-tabs > button { min-height: 46px; gap: 4px; font-size: 12px; }
+  .oh-lesson .kf-tabs > button > svg { width: 14px; }
+  .oh-lesson .oh-panel { grid-template-columns: 1fr; grid-template-rows: minmax(300px, .8fr) minmax(0, 1.2fr); }
+  .oh-lesson .kf-art { border-right: 0; border-bottom: 1px solid #dbd0ba; }
+  .oh-lesson .kf-art-heading { padding: 0 13px; height: 39px; min-height: 39px; }
+  .oh-lesson .kf-art-heading > span { font-size: 12px; }
+  .oh-lesson .kf-art-heading > small { font-size: 9px; }
+  .oh-lesson .oh-story-side { padding: 19px; gap: 12px; }
+  .oh-lesson .oh-known-summary { font-size: 19px; }
+  .oh-lesson .oh-page-heading h2 { font-size: 26px; }
+  .oh-lesson .oh-panel-predict { grid-template-rows: minmax(370px, .95fr) minmax(480px, 1.05fr); }
+  .oh-lesson .oh-folio { padding: 19px 17px 16px; gap: 11px; }
+  .oh-lesson .oh-folio-heading h2 { font-size: 25px; }
+  .oh-lesson .oh-evidence-heading > small { display: none; }
+  .oh-lesson .oh-evidence-options { gap: 5px; }
+  .oh-lesson .oh-evidence-options > button { padding: 7px !important; }
+  .oh-lesson .oh-evidence-options > button > p { font-size: 12px; }
+  .oh-lesson .oh-comparison { grid-template-columns: 1fr; }
+  .oh-lesson .oh-comparison > div { padding: 11px 13px; }
+  .oh-lesson .oh-compare-detail { font-size: 12px; }
+  .oh-lesson .oh-reflection { flex-wrap: wrap; }
+  .oh-lesson .oh-reflection > span { flex: 0 0 100%; }
+  .oh-lesson .oh-panel-words { grid-template-rows: auto minmax(490px, 1fr); }
+  .oh-lesson .kf-word-library { padding: 18px; gap: 14px; border-right: 0; border-bottom: 1px solid #d7dcc3; }
+  .oh-lesson .kf-word-chips { grid-template-columns: repeat(8, minmax(0, 1fr)); }
+  .oh-lesson .kf-word-group-words .kf-word-chips { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .oh-lesson .kf-word-workbench { padding: 21px; }
+  .oh-lesson .oh-panel-method { grid-template-rows: auto minmax(540px, 1fr); }
+  .oh-lesson .oh-method-guide { padding: 20px; gap: 16px; border-right: 0; border-bottom: 1px solid #d8cfb7; }
+  .oh-lesson .oh-method-tips { gap: 14px; }
+  .oh-lesson .oh-method-tips h3 { font-size: 22px; }
+  .oh-lesson .oh-method-tips p { font-size: 15px; }
+  .oh-lesson .oh-transfer-premise { padding: 15px 18px 12px; }
+  .oh-lesson .kf-footer { position: sticky; bottom: 0; padding: 7px 0; background: #f4eee3ed; backdrop-filter: blur(8px); z-index: 4; }
+  .oh-lesson .kf-footer > span:first-child { font-size: 10px; }
+  .oh-lesson .kf-footer-mark { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .oh-lesson *, .oh-lesson *::before, .oh-lesson *::after { animation: none !important; transition: none !important; }
+}
+@media print {
+  .kf-lesson.oh-lesson { height: auto; padding: 0; display: block; overflow: visible; background: #fff; color: #111; }
+  .oh-lesson > :not(.oh-print) { display: none !important; }
+  .oh-lesson .oh-print { display: block; padding: 0; page: old-house-worksheet; }
+  .oh-lesson .oh-print h1 { font-size: 22px; margin-bottom: 5mm; }
+  .oh-lesson .oh-print h2 { font-size: 15px; margin-top: 6mm; }
+  .oh-lesson .oh-print > p { font-size: 12px; line-height: 1.9; }
+}
+@page old-house-worksheet { size: A4; margin: 12mm; }

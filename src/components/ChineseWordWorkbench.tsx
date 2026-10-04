@@ -85,7 +85,7 @@ const WorkbenchContent = forwardRef<ChineseWordWorkbenchHandle, ChineseWordWorkb
           </div>
         </div>)}
         <p className="kf-library-note">会认，放进词语读；会写，还要在纸上独立写。</p>
-      </> : <div className="kf-covered-library"><EyeOff size={33} /><span className="kf-eyebrow">字词卡已合上</span><h2>先自己试一试</h2><p>回想刚才选中的字或词。{availableAudio ? '需要提示时，可以听读音。' : '想不起来时，可以返回看字。'}准备好以后，再展开核对。</p><button className="kf-text-button" onClick={() => reveal(false)}><Eye size={18} />返回看字</button></div>}
+      </> : <div className="kf-covered-library"><EyeOff size={33} /><span className="kf-eyebrow">字词卡已合上</span><h2>先自己试一试</h2><p>回想刚才选中的字或词。{availableAudio ? '需要提示时，可以听读音。' : '想不起来时，可以返回看字。'}试过以后，再展开核对。</p><button className="kf-text-button" onClick={() => reveal(false)}><Eye size={18} />返回看字</button></div>}
     </div>
     <div className={`kf-word-workbench ${selected.category === 'words' ? 'is-vocabulary' : ''}`}>
       <div className="kf-word-workbench-top"><span className="kf-eyebrow">{categoryLabels[selected.category]} · {selected.category === 'words' ? '自选练写' : writingAllowed ? hidden ? '凭记忆，在纸上写' : '看清字形，再自己写' : hidden ? '合上字卡，自己读' : '放进词语，读准字音'}</span>{availableAudio && <button className="kf-audio-button" onClick={playWord}>{audioPlaying ? <Pause size={18} /> : <Volume2 size={18} />}{audioPlaying ? '停止' : '听读音'}</button>}</div>
@@ -119,7 +119,7 @@ const WorkbenchContent = forwardRef<ChineseWordWorkbenchHandle, ChineseWordWorkb
       </div>
       {review && <div className="kf-paper-review" role="status"><Check size={20} /><p>请看自己的纸稿：{writing?.attention || '字形写全了吗？有没有漏掉笔画？'}<span>发现不一样的地方，在旁边改写一次。</span></p></div>}
       <div className="kf-paper-actions"><p>{hidden ? '先自己想，再核对。' : selected.category === 'words' ? '可自选在纸上写这个词语。' : writingAllowed ? '准备纸和笔，遮住以后独立写。' : '遮住字卡，在词语里读一次。'}</p><button className="kf-primary" onClick={() => { if (hidden) reveal(true); else { stopAudio(); setHidden(true); setReview(false); } }}>{hidden ? <><Eye size={18} />{writingAllowed ? '展开，核对纸稿' : '展开字卡，核对'}</> : <><EyeOff size={18} />遮住，自己试</>}</button></div>
-      <p className="kf-audio-status" role="status">{audioStatus || (availableAudio ? '合成朗读示范 · 听一遍，再自己读。' : selected.category === 'words' ? '读准字音，说清意思；也可自选纸笔练写。' : writingAllowed ? '和课本对照，读准字音，再独立写。' : '和课本对照，把字放进词语里读。')}</p>
+      <p className="kf-audio-status" role="status">{audioStatus || (hidden ? availableAudio ? '可按需听读音，再自己尝试。' : '先独立尝试，再展开核对。' : availableAudio ? '合成朗读示范 · 听一遍，再自己读。' : selected.category === 'words' ? '读准字音，说清意思；也可自选纸笔练写。' : writingAllowed ? '和课本对照，读准字音，再独立写。' : '和课本对照，把字放进词语里读。')}</p>
     </div>
   </>;
 });

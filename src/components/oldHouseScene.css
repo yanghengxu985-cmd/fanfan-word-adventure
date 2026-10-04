@@ -1,0 +1,182 @@
+.oh-scene {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 1rem;
+  background: #d8d5b7;
+  color: #566248;
+}
+
+.oh-scene .oh-scene__landscape {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  user-select: none;
+}
+
+.oh-scene .oh-scene__rain {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgb(89 112 125 / 15%), rgb(205 214 197 / 3%) 65%);
+}
+
+.oh-scene .oh-scene__rain > i {
+  position: absolute;
+  top: -8%;
+  width: 1px;
+  height: 5%;
+  border-radius: 100%;
+  background: rgb(246 250 247 / 68%);
+  box-shadow: 0 0 0 1px rgb(132 150 148 / 10%);
+  transform: rotate(12deg);
+  animation: oh-rain-fall 2.8s linear infinite;
+}
+
+.oh-scene .oh-scene__visitor {
+  position: absolute;
+  right: 13%;
+  bottom: 20%;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  gap: 0.25rem;
+  width: clamp(82px, 23%, 178px);
+  color: #80583c;
+}
+
+.oh-scene .oh-scene__visitor-source {
+  display: block;
+  width: 100%;
+  min-width: 0;
+}
+
+.oh-scene .oh-scene__visitor-picture {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 5px rgb(75 52 34 / 16%));
+  user-select: none;
+}
+
+.oh-scene .oh-scene__visitor--hen {
+  color: #9d6846;
+}
+
+.oh-scene .oh-scene__visitor--spider {
+  width: clamp(100px, 25%, 148px);
+  color: #6a5d48;
+}
+
+.oh-scene .oh-scene__visitor--spider .oh-scene__visitor-source {
+  padding: 0.25rem;
+  border: 1px solid rgb(218 202 160 / 75%);
+  border-radius: 50%;
+  background: rgb(255 250 233 / 94%);
+}
+
+.oh-scene .oh-scene__visitor-label {
+  min-width: 3.2em;
+  padding: 0.15em 0.75em;
+  border: 1px solid rgb(218 202 160 / 75%);
+  border-radius: 0.25rem;
+  background: rgb(255 250 233 / 94%);
+  color: #765d45;
+  font-family: 'STKaiti', 'KaiTi', 'Kaiti SC', serif;
+  font-size: clamp(0.85rem, 1.8vw, 1.35rem);
+  line-height: 1.4;
+  text-align: center;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+.oh-scene .oh-scene__bookmark {
+  position: absolute;
+  z-index: 3;
+  top: 4%;
+  right: 3%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  padding: 0.4rem 0.75rem;
+  border-left: 2px solid #a39163;
+  border-radius: 0 0.2rem 0.2rem 0;
+  background: rgb(248 245 227 / 92%);
+  color: #526445;
+}
+
+.oh-scene .oh-scene__bookmark > span {
+  font-size: clamp(0.62rem, 1vw, 0.75rem);
+  letter-spacing: 0.15em;
+  color: #85876d;
+}
+
+.oh-scene .oh-scene__bookmark > strong {
+  font-family: 'STKaiti', 'KaiTi', 'Kaiti SC', serif;
+  font-size: clamp(0.85rem, 1.6vw, 1.1rem);
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.oh-scene--spider .oh-scene__bookmark {
+  left: 3%;
+  right: auto;
+}
+
+.oh-scene .oh-scene__caption {
+  position: absolute;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  left: 3%;
+  right: 3%;
+  bottom: 3.5%;
+  width: fit-content;
+  max-width: 94%;
+  margin: 0;
+  padding: 0.35rem 0.65rem;
+  border-radius: 0.3rem;
+  background: rgb(250 246 224 / 94%);
+  color: #526044;
+  font-family: 'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', 'SimSun', serif;
+  font-size: clamp(0.66rem, 1.2vw, 0.92rem);
+  line-height: 1.65;
+  letter-spacing: 0.02em;
+}
+
+.oh-scene .oh-scene__caption-rule {
+  width: 1.1rem;
+  height: 1px;
+  flex: 0 0 1.1rem;
+  background: #a38b51;
+}
+
+.oh-scene[data-reduced-motion='true'] .oh-scene__rain > i {
+  animation: none;
+  top: 18%;
+}
+
+@keyframes oh-rain-fall {
+  from { transform: translateY(-5px) rotate(12deg); opacity: 0; }
+  20% { opacity: 0.75; }
+  to { transform: translateY(380px) rotate(12deg); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .oh-scene .oh-scene__rain > i { animation: none; top: 18%; }
+}
+
+@media (max-width: 620px) {
+  .oh-scene .oh-scene__visitor { right: 11%; bottom: 21%; }
+  .oh-scene .oh-scene__bookmark { padding: 0.25rem 0.5rem; }
+  .oh-scene .oh-scene__caption { gap: 0.3rem; padding: 0.24rem 0.4rem; }
+  .oh-scene .oh-scene__caption-rule { flex-basis: 0.75rem; width: 0.75rem; }
+}

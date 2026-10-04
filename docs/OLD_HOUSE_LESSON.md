@@ -70,6 +70,6 @@ Use case: illustration-story. Asset type: single character cutout for a Chinese 
 - 配图尺寸、文件大小及透明通道已核对，故事、预测、字词、方法页及打印页已逐一查看截图。蜘蛛采用放大观察图，避免在树林底图中难以辨认。
 - 最终配图与布局追加37项浏览器检查通过，覆盖三个模拟视口中的访客图片加载、名称不折行、画面边界和操作点击。
 
-尚未进行本次公开发布；上线后还需确认GitHub Actions结果与实际课程网址。
+2026年10月4日，课件实现提交`94027e2`已通过[GitHub Actions测试、构建与部署](https://github.com/yanghengxu985-cmd/fanfan-word-adventure/actions/runs/37202496472)。公开网址追加20项检查通过，包括三类访客图片、跳过作答直接阅读、保留原预测、字词范围、语音播放、遮字、横竖屏操作及教师投屏；没有页面脚本错误或失败资源。
 
-目标链接：[本课](https://yanghengxu985-cmd.github.io/fanfan-word-adventure/#/chinese-lesson/cn-08)、[教师投屏](https://yanghengxu985-cmd.github.io/fanfan-word-adventure/#/chinese-lesson/cn-08/teacher)。公开发布以GitHub Actions结果及实际网址校验为准。
+已核验链接：[本课](https://yanghengxu985-cmd.github.io/fanfan-word-adventure/#/chinese-lesson/cn-08)、[教师投屏](https://yanghengxu985-cmd.github.io/fanfan-word-adventure/#/chinese-lesson/cn-08/teacher)。完整纸本核对状态仍按上文保留。

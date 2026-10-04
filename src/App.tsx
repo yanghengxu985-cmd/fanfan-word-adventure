@@ -12,6 +12,7 @@ import { hasEnglishActivities, hasEnglishActivityReview, makeEnglishActivityRoun
 
 const ChinesePilot = lazy(() => import('./components/ChinesePilot'));
 const ChineseSemesterPlan = lazy(() => import('./components/ChineseSemesterPlan'));
+const ShanxingLesson = lazy(() => import('./components/ShanxingLesson'));
 
 const allowedIds = new Set(lexemes.map(item => item.id));
 const progressStore = createProgressStore(allowedIds);
@@ -134,6 +135,7 @@ export default function App() {
     { path: '/review', key: 'review', icon: Backpack, label: '复习背包' },
   ];
   const activeKey = page === 'map' ? `map-${segments[1]}` : page;
+  if (page === 'chinese-lesson' && segments[1] === 'shanxing') return <Suspense fallback={<div className="empty-state">正在打开《山行》一课体验…</div>}><ShanxingLesson /></Suspense>;
   return <div className={`app-shell${focusedGame ? ' game-focus' : ''}${focusedGame && page === 'teacher' ? ' teacher-game-focus' : ''}`}>
     <a href="#main" className="skip-link" onClick={event => { event.preventDefault(); document.getElementById('main')?.focus(); }}>跳到内容</a>
     <aside className="sidebar">
@@ -191,7 +193,7 @@ function SemesterMap({ subject, progress }: { subject: Subject; progress: Progre
   const subjectCourses = courses.filter(course => course.subject === subject && (!search || `${course.title} ${getCourseLexemes(course.id).map(item => item.text).join(' ')}`.toLowerCase().includes(search.toLowerCase())));
   const units = [...new Set(subjectCourses.map(course => course.unitNumber))];
   return <>
-    {subject === 'chinese' && <div className="cn-pilot-entry"><BookOpen size={25} /><div><strong>新语文练习 · 字音、辨字、纸写与古诗背默</strong><p>先试第1、4课样板，也可以查看完整的全学期字词清单。</p></div><a href="#/chinese-pilot/cn-01">第1课</a><a href="#/chinese-pilot/cn-04">第4课</a><a href="#/chinese-plan">全册清单 <ArrowRight size={16} /></a></div>}
+    {subject === 'chinese' && <div className="cn-pilot-entry"><BookOpen size={25} /><div><strong>新语文练习 · 字音、辨字、纸写与古诗背默</strong><p>先试第1、4课样板，也可以查看完整的全学期字词清单。</p></div><a href="#/chinese-lesson/shanxing">《山行》一课体验</a><a href="#/chinese-pilot/cn-01">第1课</a><a href="#/chinese-pilot/cn-04">第4课</a><a href="#/chinese-plan">全册清单 <ArrowRight size={16} /></a></div>}
     {subject === 'english' && <a className="english-lab-entry" href="#/english-lab"><span className="icon-box green"><Volume2 size={25} /></span><div><strong>英语体验课 · 看情景，听示范</strong><p>先学，再练，再换情景：猫、见面与告别、my / your</p></div><ArrowRight size={22} /></a>}
     <div className={`map-header ${subject}`}><div><span className="eyebrow">YOUR SEMESTER MAP</span><h1>{subject === 'chinese' ? '语文森林' : '英语港湾'}</h1><p>{subject === 'chinese' ? '沿着八条小路，发现汉字、词语和课文的意思。' : '认识朋友，介绍家人。每个单元都是一个新场景。'}</p></div><span className="map-emblem">{subject === 'chinese' ? '字' : 'Aa'}</span></div>
     <div className="map-tools"><span><Flag size={17} /> {subject === 'chinese' ? '26课 · 8个单元' : '8单元 · 2个主题 · 26字母'}</span><label className="search-box"><Search size={17} /><input value={search} onChange={event => setSearch(event.target.value)} placeholder="找课文，或一个字词…" aria-label="搜索课文或字词" /></label></div>

@@ -1,0 +1,12 @@
+.chinese-story-scene { display: block; width: 100%; height: 100%; font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "SimSun", serif; }
+.chinese-story-scene .css-label { font-size: 22px; font-weight: 650; letter-spacing: .6px; }
+.chinese-story-scene .css-label-small { font-size: 20px; font-weight: 550; letter-spacing: .2px; }
+.chinese-story-scene .css-person, .chinese-story-scene .css-moving-observer { transition: transform .65s ease; }
+.chinese-story-scene .css-flower-sway { transform-box: fill-box; transform-origin: 50% 100%; animation: css-flower-sway 3.8s ease-in-out infinite alternate; }
+.chinese-story-scene .css-rain-drops { animation: css-rain-drops 1.8s ease-in-out infinite alternate; }
+.chinese-story-scene .css-voice-waves { animation: css-voice-waves 1.8s ease-in-out infinite alternate; }
+.chinese-story-scene[data-paused] *, .chinese-story-scene[data-paused] { animation-play-state: paused !important; }
+@keyframes css-flower-sway { from { rotate: -2deg; } to { rotate: 2deg; } }
+@keyframes css-rain-drops { from { opacity: .35; } to { opacity: .85; } }
+@keyframes css-voice-waves { from { opacity: .28; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .chinese-story-scene * { animation: none !important; transition: none !important; } }

@@ -1,0 +1,10 @@
+.chinese-poem-scene { display: block; width: 100%; height: 100%; }
+.chinese-poem-scene text { paint-order: stroke; stroke: #fff9e9; stroke-width: 2px; stroke-linejoin: round; }
+.poem-leaf-motion { animation: poem-leaf-sway 4s ease-in-out infinite alternate; transform-box: fill-box; transform-origin: center; }
+.poem-water-glitter { animation: poem-water-glitter 3s ease-in-out infinite alternate; }
+.poem-rain-motion { animation: poem-rain-fall 2.8s linear infinite; }
+.chinese-poem-scene[data-paused] *, [data-paused='true'] .chinese-poem-scene * { animation-play-state: paused !important; }
+@keyframes poem-leaf-sway { to { transform: translate(9px, 13px) rotate(5deg); } }
+@keyframes poem-water-glitter { to { opacity: .5; } }
+@keyframes poem-rain-fall { to { transform: translate(-4px, 12px); } }
+@media (prefers-reduced-motion: reduce) { .chinese-poem-scene * { animation: none !important; } }

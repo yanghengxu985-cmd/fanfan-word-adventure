@@ -305,4 +305,6 @@
   .cnl-lesson .cnl-print-poem-row i { display: block; border: 1px solid #999; width: 9mm; height: 9mm; }
   .cnl-lesson .cnl-print-poem-row small { font-size: 10px; margin-left: 3mm; }
 }
+/* A picture-only memory check must also conceal labels drawn inside the illustration. */
+.cnl-lesson[data-memory-mask='hidden'] .cnl-art-body svg text { display: none; }
 @page chinese-precision-sheet { size: A4; margin: 12mm; }

@@ -12,7 +12,7 @@ export type PrecisionToolState = {
   breaks: Record<string, number[]>;
 };
 export type PrecisionToolView = {
-  artStep: number; artVariant?: string; caption: string;
+  artStep: number; artVariant?: string; sceneKey: string; caption: string;
   marks: PrecisionMark[];
   lens?: { x: number; y: number; zoom: number };
   effect?: { type: 'distance' | 'speed' | 'light' | 'rain' | 'colour'; value: number };
@@ -122,37 +122,37 @@ export function toggleClassicalBreak(tool: PrecisionTool, state: PrecisionToolSt
 export function getPrecisionView(tool: PrecisionTool, state: PrecisionToolState): PrecisionToolView {
   if (tool.kind === 'compare') {
     const option = tool.options.find(item => item.id === state.optionId) ?? tool.options[0];
-    return { artStep: option.artStep, artVariant: option.artVariant, caption: option.caption, marks: option.marks ?? [],
+    return { artStep: option.artStep, artVariant: option.artVariant, sceneKey: option.id, caption: option.caption, marks: option.marks ?? [],
       effect: tool.parameter ? { type: tool.parameter.effect, value: (bounded(state.parameter, tool.parameter.min, tool.parameter.max) - tool.parameter.min) / (tool.parameter.max - tool.parameter.min) } : undefined };
   }
   if (tool.kind === 'hotspot') {
     const spot = tool.spots.find(item => item.id === state.spotId);
-    return { artStep: tool.artStep, artVariant: tool.artVariant, caption: spot ? `${spot.label}：${spot.clue}` : '点一处细节，再回到纸本找相应描写。',
+    return { artStep: tool.artStep, artVariant: tool.artVariant, sceneKey: spot?.id ?? 'overview', caption: spot ? `${spot.label}：${spot.clue}` : '点一处细节，再回到纸本找相应描写。',
       marks: spot ? [{ id: spot.id, label: spot.label, x: spot.x, y: spot.y, shape: 'spot' }] : [], lens: spot ? { x: spot.x, y: spot.y, zoom: spot.zoom } : undefined };
   }
   if (tool.kind === 'association') {
     const source = tool.sources.find(item => item.id === state.sourceId) ?? tool.sources[0];
-    return { artStep: source.artStep ?? tool.artStep, artVariant: tool.artVariant, caption: source.text, marks: [] };
+    return { artStep: source.artStep ?? tool.artStep, artVariant: tool.artVariant, sceneKey: source.id, caption: source.text, marks: [] };
   }
   if (tool.kind === 'route') {
     const node = tool.nodes.find(item => item.id === state.order.at(-1));
-    return { artStep: node?.artStep ?? 0, caption: node ? node.meaning : tool.routeNote,
+    return { artStep: node?.artStep ?? 0, sceneKey: node?.id ?? 'overview', caption: node ? node.meaning : tool.routeNote,
       marks: state.order.map((id, index) => ({ id, label: tool.nodes.find(item => item.id === id)!.label, x: 12 + index * (76 / Math.max(1, tool.nodes.length - 1)), y: 78, shape: 'node' })) };
   }
   if (tool.kind === 'prediction') {
     const stop = currentStop(tool, state);
     const record = getPrecisionPredictionRecord(tool, state);
-    return { artStep: stop.artStep, caption: stop.known, marks: [], outcome: record.revealed ? stop.outcome ?? stop.outcomeNote : undefined };
+    return { artStep: stop.artStep, sceneKey: `${stop.id}${record.revealed ? '--revealed' : ''}`, caption: stop.known, marks: [], outcome: record.revealed ? stop.outcome ?? stop.outcomeNote : undefined };
   }
   if (tool.kind === 'sound') {
     const active = tool.layers.filter(layer => (state.gains[layer.id] ?? 0) > 0);
     const loudest = [...active].sort((a, b) => state.gains[b.id] - state.gains[a.id])[0];
-    return { artStep: loudest?.artStep ?? 0, caption: active.length ? active.map(layer => layer.label).join(' · ') : '声源暂时收起，想想景物中少了什么。',
+    return { artStep: loudest?.artStep ?? 0, sceneKey: 'soundscape', caption: active.length ? active.map(layer => layer.label).join(' · ') : '声源暂时收起，想想景物中少了什么。',
       marks: active.map(layer => ({ id: layer.id, label: layer.label, x: layer.x, y: layer.y, shape: 'wave' })),
       activeLayers: active.map(layer => ({ id: layer.id, label: layer.label, gain: state.gains[layer.id], pattern: layer.pattern, x: layer.x, y: layer.y })) };
   }
   const line = tool.lines.find(item => item.id === state.lineId) ?? tool.lines[0];
-  return { artStep: line.artStep, caption: line.meaning, marks: [] };
+  return { artStep: line.artStep, sceneKey: line.id, caption: line.meaning, marks: [] };
 }
 
 export function assessPrecisionTool(tool: PrecisionTool, state: PrecisionToolState): PrecisionAssessment {

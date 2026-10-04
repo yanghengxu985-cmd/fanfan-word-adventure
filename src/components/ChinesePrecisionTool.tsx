@@ -8,22 +8,24 @@ import {
   toggleClassicalBreak, togglePrecisionEvidence, type PrecisionToolState,
 } from '../lib/chineseLessonPrecision';
 import ChineseLessonArt from './ChineseLessonArt';
+import ChineseSemanticScene, { supportsSemanticScene, type SemanticSceneProps } from './chineseScenes/ChineseSemanticScene';
 import './chinesePrecisionTool.css';
 
 // Vite tracks files as they arrive during authoring; absent assets use the existing illustration.
 const bitmaps = import.meta.glob('/public/images/chinese-precision/*.webp', { eager: true, query: '?url', import: 'default' });
 
-export function PrecisionIllustration({ courseId, step = 0, variant, overview = false }: {
-  courseId: string; step?: number; variant?: string; overview?: boolean;
+export function PrecisionIllustration({ courseId, step = 0, variant, overview = false, sceneKey, parameter, gains, paused }: Omit<SemanticSceneProps, 'step'> & {
+  step?: number; overview?: boolean;
 }) {
   const name = variant || courseId;
   const [failed, setFailed] = useState(false);
   useEffect(() => { setFailed(false); }, [name]);
   const available = Object.hasOwn(bitmaps, `/public/images/chinese-precision/${name}.webp`);
-  const bitmap = available && !failed && (overview || step === 0 || Boolean(variant));
+  const semantic = supportsSemanticScene(courseId) && !overview && (Boolean(sceneKey) || step > 0 || courseId === 'cn-18' || courseId === 'cn-22' || courseId === 'cn-23');
+  const bitmap = available && !failed && !semantic;
   const base = new URL(`${import.meta.env.BASE_URL}images/chinese-precision/`, document.baseURI).href;
-  return <div className="cpt-illustration" data-art-source={bitmap ? 'bitmap' : 'existing-scene'} data-weather={bitmap && variant === 'yinhushang' && step === 1 ? 'rain' : undefined}>
-    {bitmap ? <img src={`${base}${name}.webp`} alt="本课阅读情境示意，文字内容请对照课本" onError={() => setFailed(true)} /> : <ChineseLessonArt courseId={courseId} step={step} variant={variant} />}
+  return <div className="cpt-illustration" data-art-source={semantic ? 'semantic-scene' : bitmap ? 'bitmap' : 'existing-scene'}>
+    {semantic ? <ChineseSemanticScene courseId={courseId} step={step} variant={variant} sceneKey={sceneKey} parameter={parameter} gains={gains} paused={paused} /> : bitmap ? <img src={`${base}${name}.webp`} alt="本课阅读情境示意，文字内容请对照课本" onError={() => setFailed(true)} /> : <ChineseLessonArt courseId={courseId} step={step} variant={variant} />}
   </div>;
 }
 
@@ -56,6 +58,7 @@ export default function ChinesePrecisionTool({ courseId, tool, state, onChange, 
   const view = getPrecisionView(tool, state);
   const assessment = assessPrecisionTool(tool, state);
   const [checked, setChecked] = useState(false);
+  const [actionScene, setActionScene] = useState<string>();
   const [classicalMode, setClassicalMode] = useState<'pause' | 'action' | 'reference'>('pause');
   const [referenceId, setReferenceId] = useState<string>();
   const [soundLayerId, setSoundLayerId] = useState<string>();
@@ -108,25 +111,40 @@ export default function ChinesePrecisionTool({ courseId, tool, state, onChange, 
   const reference = tool.kind === 'classical' ? tool.refs?.find(item => item.id === referenceId) ?? tool.refs?.[0] : undefined;
   const referenceTarget = reference?.targets.find(item => item.id === state.links[reference.id]);
   const soundLayer = tool.kind === 'sound' ? tool.layers.find(item => item.id === soundLayerId) ?? tool.layers[0] : undefined;
+  const semantic = supportsSemanticScene(courseId) && (tool.kind !== 'hotspot' || (courseId === 'cn-22' && Boolean(selectedSpot)));
+  const actionFrames = tool.kind === 'classical' && line?.id === 'break'
+    ? [{ id: 'hold-stone', label: '持石' }, { id: 'strike-jar', label: '击瓮' }, { id: 'crack-jar', label: '破之' }]
+    : tool.kind === 'classical' && line?.id === 'saved'
+      ? [{ id: 'flowing-water', label: '水迸' }, { id: 'saved', label: '儿得活' }] : [];
+  const currentAction = actionFrames.find(frame => frame.id === actionScene)?.id ?? actionFrames[0]?.id;
+  const sceneKey = classicalMode === 'reference' && referenceTarget
+    ? `ref-${referenceTarget.id}` : currentAction ?? view.sceneKey;
+  const experienceFrames = courseId === 'cn-24' && tool.kind === 'association'
+    ? (view.sceneKey.startsWith('experiment')
+      ? [{ id: 'experiment-difficulty', label: '困难' }, { id: 'experiment-hard', label: '行动' }, { id: 'experiment-result', label: '结果' }]
+      : [{ id: 'study-difficulty', label: '困难' }, { id: 'study-hard', label: '行动' }, { id: 'study-result', label: '结果' }]) : [];
+  const currentExperience = experienceFrames.find(frame => frame.id === actionScene)?.id;
   const visualStyle = {
     '--cpt-amount': view.effect?.value ?? 0,
-    transform: view.effect?.type === 'distance' ? `scale(${1.35 - (view.effect.value * .35)})` : undefined,
+    transform: !semantic && view.effect?.type === 'distance' ? `scale(${1.35 - (view.effect.value * .35)})` : undefined,
   } as CSSProperties;
 
   return <div className={`cpt-tool cpt-${tool.kind}`} data-revealed={record?.revealed || undefined} data-classical-view={tool.kind === 'classical' ? classicalMode : undefined}>
     <div className="cpt-scene">
       <div className="cpt-scene-head"><span><Search size={16} />{tool.kind === 'prediction' ? '只看已经读到的' : tool.title}</span><small>教学情境示意</small></div>
       <div className="cpt-stage">
-        <div className="cpt-scene-frame" style={view.effect?.type === 'distance' ? visualStyle : undefined}>
-        <div className={`cpt-image-layer cpt-effect-${view.effect?.type ?? 'none'}`} style={view.effect?.type === 'distance' ? undefined : visualStyle}><PrecisionIllustration courseId={courseId} step={classicalMode === 'reference' && referenceTarget ? referenceTarget.artStep : view.artStep} variant={view.artVariant} overview={tool.kind === 'hotspot'} /></div>
-        {view.effect?.type === 'rain' && <div className="cpt-rain" style={visualStyle} aria-hidden="true" />}
-        {view.effect?.type === 'light' && <div className="cpt-light" style={visualStyle} aria-hidden="true" />}
-        {tool.kind === 'hotspot' ? tool.spots.map(spot => <button key={spot.id} className={`cpt-hotspot-button ${state.spotId === spot.id ? 'is-active' : ''}`} style={{ left: `clamp(${27 + spot.label.length * 6}px, ${spot.x}%, calc(100% - ${27 + spot.label.length * 6}px))`, top: `clamp(22px, ${spot.y}%, calc(100% - 22px))` }} aria-label={`近看${spot.label}`} aria-pressed={state.spotId === spot.id} onClick={() => change(selectPrecisionOption(tool, state, spot.id))}><span /><strong>{spot.label}</strong></button>) : view.marks.map(mark => <span key={mark.id} className={`cpt-mark cpt-mark-${mark.shape}`} style={{ left: `${mark.x}%`, top: `${mark.y}%` }}><i /><strong>{mark.label}</strong></span>)}
-        {tool.kind === 'route' && state.order.length > 1 && <svg className="cpt-route-line" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d={`M ${view.marks.map(mark => `${mark.x},${mark.y}`).join(' L ')}`} /></svg>}
-        {view.effect?.type === 'speed' && <span className="cpt-motion-cue" style={{ left: `${15 + view.effect.value * 65}%` }} aria-hidden="true">→</span>}
+        <div className="cpt-scene-frame" style={!semantic && view.effect?.type === 'distance' ? visualStyle : undefined}>
+        <div className={`cpt-image-layer cpt-effect-${semantic ? 'none' : view.effect?.type ?? 'none'}`} style={semantic || view.effect?.type === 'distance' ? undefined : visualStyle}><PrecisionIllustration courseId={courseId} step={classicalMode === 'reference' && referenceTarget ? referenceTarget.artStep : view.artStep} variant={view.artVariant} overview={tool.kind === 'hotspot' && !semantic} sceneKey={currentExperience ?? sceneKey} parameter={view.effect?.value} gains={tool.kind === 'sound' ? state.gains : undefined} /></div>
+        {!semantic && view.effect?.type === 'rain' && <div className="cpt-rain" style={visualStyle} aria-hidden="true" />}
+        {!semantic && view.effect?.type === 'light' && <div className="cpt-light" style={visualStyle} aria-hidden="true" />}
+        {tool.kind === 'hotspot' && !semantic ? tool.spots.map(spot => <button key={spot.id} className={`cpt-hotspot-button ${state.spotId === spot.id ? 'is-active' : ''}`} style={{ left: `clamp(${27 + spot.label.length * 6}px, ${spot.x}%, calc(100% - ${27 + spot.label.length * 6}px))`, top: `clamp(22px, ${spot.y}%, calc(100% - 22px))` }} aria-label={`近看${spot.label}`} aria-pressed={state.spotId === spot.id} onClick={() => change(selectPrecisionOption(tool, state, spot.id))}><span /><strong>{spot.label}</strong></button>) : !semantic && view.marks.map(mark => <span key={mark.id} className={`cpt-mark cpt-mark-${mark.shape}`} style={{ left: `${mark.x}%`, top: `${mark.y}%` }}><i /><strong>{mark.label}</strong></span>)}
+        {!semantic && tool.kind === 'route' && state.order.length > 1 && <svg className="cpt-route-line" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d={`M ${view.marks.map(mark => `${mark.x},${mark.y}`).join(' L ')}`} /></svg>}
+        {!semantic && view.effect?.type === 'speed' && <span className="cpt-motion-cue" style={{ left: `${15 + view.effect.value * 65}%` }} aria-hidden="true">→</span>}
         </div>
       </div>
       <div className="cpt-scene-caption"><span /><p>{soundLayer ? `${soundLayer.label}：${soundLayer.clue}` : view.caption}</p></div>
+      {classicalMode !== 'reference' && actionFrames.length > 0 && <div className="cpt-direct-options cpt-scene-actions" role="group" aria-label="直接观察当前句的动作过程">{actionFrames.map(frame => <button key={frame.id} className={currentAction === frame.id ? 'is-active' : ''} aria-pressed={currentAction === frame.id} onClick={() => setActionScene(frame.id)}>{frame.label}</button>)}</div>}
+      {experienceFrames.length > 0 && <div className="cpt-direct-options cpt-scene-actions" role="group" aria-label="直接比较困难、行动和结果">{experienceFrames.map(frame => <button key={frame.id} className={(currentExperience ?? view.sceneKey) === frame.id ? 'is-active' : ''} aria-pressed={(currentExperience ?? view.sceneKey) === frame.id} onClick={() => setActionScene(frame.id)}>{frame.label}</button>)}</div>}
       {tool.kind === 'prediction' && <div className="cpt-direct-options">{tool.stops.map((item, i) => <button key={item.id} className={state.stopId === item.id ? 'is-active' : ''} aria-pressed={state.stopId === item.id} onClick={() => change(selectPrecisionStop(tool, state, item.id))}><small>0{i + 1}</small>{item.title}</button>)}</div>}
       {tool.kind === 'route' && <p className="cpt-boundary">{tool.routeNote}</p>}
     </div>
@@ -140,11 +158,11 @@ export default function ChinesePrecisionTool({ courseId, tool, state, onChange, 
       </>}
       {tool.kind === 'hotspot' && <>
         <div className="cpt-direct-options">{tool.spots.map(item => <button key={item.id} className={state.spotId === item.id ? 'is-active' : ''} aria-pressed={state.spotId === item.id} onClick={() => change(selectPrecisionOption(tool, state, item.id))}>{item.label}</button>)}</div>
-        {selectedSpot ? <><PrecisionLens courseId={courseId} step={tool.artStep} variant={tool.artVariant} spot={selectedSpot} /><div className="cpt-detail"><span>把细节读回文字</span><p>{selectedSpot.meaning}</p></div></> : <div className="cpt-lens-empty"><Search size={34} /><p>点图中一处，再近看它的细节。</p></div>}
+        {selectedSpot ? <>{courseId !== 'cn-22' && <PrecisionLens courseId={courseId} step={tool.artStep} variant={tool.artVariant} spot={selectedSpot} />}<div className="cpt-detail"><span>把细节读回文字</span><p>{selectedSpot.meaning}</p></div></> : <div className="cpt-lens-empty"><Search size={34} /><p>点图中一处，再近看它的细节。</p></div>}
         <p className="cpt-question">{tool.question}</p>
       </>}
       {tool.kind === 'association' && <>
-        <div className="cpt-relations"><svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-label="你连接的词句关系">{tool.sources.map((source, i) => { const target = tool.targets.findIndex(item => item.id === state.links[source.id]); return target < 0 ? null : <path key={source.id} d={`M 44,${(i + .5) * 100 / tool.sources.length} C 53,${(i + .5) * 100 / tool.sources.length} 47,${(target + .5) * 100 / tool.targets.length} 56,${(target + .5) * 100 / tool.targets.length}`} />; })}</svg><div>{tool.sources.map(source => <button key={source.id} className={state.sourceId === source.id ? 'is-active' : ''} aria-pressed={state.sourceId === source.id} onClick={() => change(selectPrecisionOption(tool, state, source.id))}>{source.text}{state.links[source.id] && <Link2 size={14} />}</button>)}</div><div>{tool.targets.map(target => <button key={target.id} className={state.sourceId && state.links[state.sourceId] === target.id ? 'is-linked' : ''} onClick={() => state.sourceId && change(linkPrecisionPair(tool, state, state.sourceId, target.id))}>{target.text}</button>)}</div></div>
+        <div className="cpt-relations"><svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-label="你连接的词句关系">{tool.sources.map((source, i) => { const target = tool.targets.findIndex(item => item.id === state.links[source.id]); return target < 0 ? null : <path key={source.id} d={`M 44,${(i + .5) * 100 / tool.sources.length} C 53,${(i + .5) * 100 / tool.sources.length} 47,${(target + .5) * 100 / tool.targets.length} 56,${(target + .5) * 100 / tool.targets.length}`} />; })}</svg><div>{tool.sources.map(source => <button key={source.id} className={state.sourceId === source.id ? 'is-active' : ''} aria-pressed={state.sourceId === source.id} onClick={() => { setActionScene(undefined); change(selectPrecisionOption(tool, state, source.id)); }}>{source.text}{state.links[source.id] && <Link2 size={14} />}</button>)}</div><div>{tool.targets.map(target => <button key={target.id} className={state.sourceId && state.links[state.sourceId] === target.id ? 'is-linked' : ''} onClick={() => state.sourceId && change(linkPrecisionPair(tool, state, state.sourceId, target.id))}>{target.text}</button>)}</div></div>
         <p className="cpt-question">{tool.question}</p><div className="cpt-check-row"><button className="cnl-text-button" onClick={() => setChecked(!checked)}><Eye size={17} />{checked ? '收起联系' : '看看联系'}</button><small>先点左边，再点与它有关的右边。</small></div>{checked && <p className="cpt-feedback" role="status">{assessment.feedback}{tool.relations.filter(relation => state.links[relation.sourceId] === relation.targetId).slice(0, 1).map(relation => ` ${relation.explanation}`)}</p>}
       </>}
       {tool.kind === 'route' && <>

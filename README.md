@@ -8,7 +8,9 @@
 
 - [语文第1课](https://yanghengxu985-cmd.github.io/fanfan-word-adventure/#/course/cn-01)
 - [《山行》一课体验：诗景、字词、背诵与纸笔默写](https://yanghengxu985-cmd.github.io/fanfan-word-adventure/#/chinese-lesson/shanxing)
-- [全册语文课堂：26课与23项配套学习](https://yanghengxu985-cmd.github.io/fanfan-word-adventure/#/chinese-book)。26课分别提供原创情境插图、4步讲解、字词和理解练习，6首诗有逐句诗景、朗读及遮字背诵；会写字用纸笔核对。配套含习作、口语、7个园地、读书吧、例文及复习。每课可独立打开，也可进入教师投屏。完整安排见 [逐课安排](docs/CHINESE_BOOK_STUDIO_PLAN.md)。现代课文配合纸本使用；2026纸本正文与大部分背默范围仍待核对，教材与词语表来源边界见页面资料说明。
+- [《搭船的鸟》精修课：外形观察、连续捕鱼与字词练写](https://yanghengxu985-cmd.github.io/fanfan-word-adventure/#/chinese-lesson/cn-14)，[制作与验收](docs/KINGFISHER_LESSON_V2.md)。
+- [《金色的草地》精修课：三个时段、同株花朵张合与字词练写](https://yanghengxu985-cmd.github.io/fanfan-word-adventure/#/chinese-lesson/cn-15)，[教师投屏](https://yanghengxu985-cmd.github.io/fanfan-word-adventure/#/chinese-lesson/cn-15/teacher)，[制作与验收](docs/GOLDEN_MEADOW_LESSON.md)。精修课直接切换页面；字词通过纸笔独立核对，点击不生成掌握记录。
+- [全册语文课堂：26课与23项配套学习](https://yanghengxu985-cmd.github.io/fanfan-word-adventure/#/chinese-book)。全册已有基础课件，含原创情境插图、讲解、字词和理解练习；《搭船的鸟》《金色的草地》已另做可操作的精修课，其他课仍使用现有版本。6首诗有逐句诗景、朗读及遮字背诵；会写字用纸笔核对。配套含习作、口语、7个园地、读书吧、例文及复习。每课可独立打开，也可进入教师投屏。完整安排见 [逐课安排](docs/CHINESE_BOOK_STUDIO_PLAN.md)。现代课文配合纸本使用；2026纸本正文与大部分背默范围仍待核对，教材与词语表来源边界见页面资料说明。
 - [语文全学期逐课规划与字词表](https://yanghengxu985-cmd.github.io/fanfan-word-adventure/#/chinese-plan)
 - [语文第1课新样板：字音、辨字、纸写](https://yanghengxu985-cmd.github.io/fanfan-word-adventure/#/chinese-pilot/cn-01)
 - [语文第4课新样板：古诗背诵与默写](https://yanghengxu985-cmd.github.io/fanfan-word-adventure/#/chinese-pilot/cn-04)

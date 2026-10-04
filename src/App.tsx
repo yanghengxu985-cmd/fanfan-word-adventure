@@ -14,6 +14,7 @@ const ChinesePilot = lazy(() => import('./components/ChinesePilot'));
 const ChineseSemesterPlan = lazy(() => import('./components/ChineseSemesterPlan'));
 const ShanxingLesson = lazy(() => import('./components/ShanxingLesson'));
 const KingfisherLesson = lazy(() => import('./components/KingfisherLesson'));
+const GoldenMeadowLesson = lazy(() => import('./components/GoldenMeadowLesson'));
 const ChineseBookStudio = lazy(() => import('./components/ChineseBookStudio'));
 const ChineseLessonViewer = lazy(() => import('./components/ChineseLessonViewer'));
 const ChineseBookCompanionViewer = lazy(() => import('./components/ChineseBookCompanionViewer'));
@@ -141,6 +142,7 @@ export default function App() {
   const activeKey = page === 'map' ? `map-${segments[1]}` : page;
   if (page === 'chinese-lesson' && segments[1] === 'shanxing') return <Suspense fallback={<div className="empty-state">正在打开《山行》一课体验…</div>}><ShanxingLesson /></Suspense>;
   if (page === 'chinese-lesson' && segments[1] === 'cn-14') return <Suspense fallback={<div className="empty-state">正在打开《搭船的鸟》观察课堂…</div>}><KingfisherLesson teacher={segments[2] === 'teacher'} /></Suspense>;
+  if (page === 'chinese-lesson' && segments[1] === 'cn-15') return <Suspense fallback={<div className="empty-state">正在打开《金色的草地》观察课堂…</div>}><GoldenMeadowLesson teacher={segments[2] === 'teacher'} /></Suspense>;
   if (page === 'chinese-lesson') return <Suspense fallback={<div className="empty-state">正在打开语文课件…</div>}><ChineseLessonViewer courseId={segments[1] || ''} teacher={segments[2] === 'teacher'} /></Suspense>;
   if (page === 'chinese-companion') return <Suspense fallback={<div className="empty-state">正在打开配套课件…</div>}><ChineseBookCompanionViewer companionId={segments[1] || ''} /></Suspense>;
   if (page === 'chinese-book') return <Suspense fallback={<div className="empty-state">正在打开全册学习安排…</div>}><ChineseBookStudio selectedId={segments[1]} /></Suspense>;

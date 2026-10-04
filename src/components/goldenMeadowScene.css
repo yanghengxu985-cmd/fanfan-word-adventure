@@ -1,0 +1,194 @@
+.gm-scene {
+  --gm-root-x: 50%;
+  --gm-root-y: 92%;
+  --gm-open-offset-x: 0%;
+  --gm-open-offset-y: 0%;
+  --gm-closed-offset-x: 0%;
+  --gm-closed-offset-y: 0%;
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 1rem;
+  background: #97b16c;
+}
+
+.gm-scene__landscape,
+.gm-scene__field {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.gm-scene__landscape {
+  object-fit: contain;
+  user-select: none;
+}
+
+.gm-scene__field {
+  z-index: 2;
+  pointer-events: none;
+}
+
+.gm-scene__plant {
+  position: absolute;
+  left: var(--gm-plant-x, 50%);
+  top: var(--gm-plant-y, 90%);
+  width: var(--gm-plant-size, 100%);
+  aspect-ratio: 1;
+  transform: translate(calc(-1 * var(--gm-root-x)), calc(-1 * var(--gm-root-y)));
+  transform-origin: var(--gm-root-x) var(--gm-root-y);
+  pointer-events: none;
+}
+
+.gm-scene__plant-body,
+.gm-scene__flower {
+  position: absolute;
+  inset: 0;
+}
+
+.gm-scene__plant-body {
+  transform: rotate(var(--gm-plant-angle, 0deg)) scaleX(var(--gm-plant-facing, 1));
+  transform-origin: var(--gm-root-x) var(--gm-root-y);
+}
+
+.gm-scene__flower {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+.gm-scene__flower--closed {
+  background-image: var(--gm-closed-image);
+  opacity: calc(1 - var(--gm-openness));
+  transform: translate(var(--gm-closed-offset-x), var(--gm-closed-offset-y));
+}
+
+.gm-scene__flower--open {
+  background-image: var(--gm-open-image);
+  opacity: var(--gm-openness);
+  transform: translate(var(--gm-open-offset-x), var(--gm-open-offset-y));
+}
+
+.gm-scene__detail {
+  position: absolute;
+  top: 4.5%;
+  right: 3%;
+  z-index: 3;
+  width: 24%;
+  aspect-ratio: 0.87;
+  overflow: hidden;
+  border: 1px solid rgb(255 250 224 / 75%);
+  border-radius: 0.65rem;
+  background: rgb(254 250 229 / 93%);
+  box-shadow: 0 4px 16px rgb(51 70 34 / 14%);
+}
+
+.gm-scene__detail-title,
+.gm-scene__detail-state {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-family: 'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', 'SimSun', serif;
+  line-height: 1.5;
+  color: #49693e;
+}
+
+.gm-scene__detail-title {
+  top: 6%;
+  font-size: clamp(0.65rem, 1.2vw, 0.9rem);
+  letter-spacing: 0.1em;
+}
+
+.gm-scene__detail-state {
+  bottom: 5%;
+  font-size: clamp(0.6rem, 1.1vw, 0.8rem);
+}
+
+.gm-scene__plant--detail {
+  --gm-plant-x: 50%;
+  --gm-plant-y: 84%;
+  --gm-plant-size: 91%;
+}
+
+.gm-scene__specimen {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: radial-gradient(ellipse at 50% 49%, rgb(248 247 217 / 92%) 0%, rgb(244 247 220 / 72%) 38%, rgb(237 243 213 / 29%) 66%, transparent 95%);
+}
+
+.gm-scene__plant--specimen {
+  --gm-plant-x: 50%;
+  --gm-plant-y: 90%;
+  --gm-plant-size: 60%;
+  filter: drop-shadow(0 5px 6px rgb(42 69 31 / 12%));
+}
+
+.gm-scene__caption {
+  position: absolute;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  left: 3%;
+  bottom: 3.5%;
+  max-width: 94%;
+  margin: 0;
+  padding: 0.35rem 0.65rem;
+  border-radius: 0.3rem;
+  background: rgb(249 247 224 / 88%);
+  color: #355735;
+  font-family: 'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', 'SimSun', serif;
+  font-size: clamp(0.67rem, 1.2vw, 0.92rem);
+  letter-spacing: 0.04em;
+  line-height: 1.6;
+}
+
+.gm-scene__caption-rule {
+  width: 1.3rem;
+  height: 1px;
+  flex: 0 0 1.3rem;
+  background: #9a873e;
+}
+
+.gm-scene__sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 620px) {
+  .gm-scene__detail {
+    width: 27%;
+  }
+
+  .gm-scene__detail-title {
+    font-size: 0.64rem;
+  }
+
+  .gm-scene__detail-state {
+    font-size: 0.59rem;
+  }
+
+  .gm-scene__caption {
+    gap: 0.35rem;
+    padding: 0.24rem 0.4rem;
+    font-size: 0.67rem;
+  }
+
+  .gm-scene__caption-rule {
+    width: 0.8rem;
+    flex-basis: 0.8rem;
+  }
+}

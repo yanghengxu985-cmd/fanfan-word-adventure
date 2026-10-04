@@ -8,6 +8,7 @@
 
 - [语文第1课](https://yanghengxu985-cmd.github.io/fanfan-word-adventure/#/course/cn-01)
 - [《山行》一课体验：诗景、字词、背诵与纸笔默写](https://yanghengxu985-cmd.github.io/fanfan-word-adventure/#/chinese-lesson/shanxing)
+- [按《山行》方式安排全书：26课与配套学习](https://yanghengxu985-cmd.github.io/fanfan-word-adventure/#/chinese-book)。全册方案见 [逐课安排](docs/CHINESE_BOOK_STUDIO_PLAN.md)；目前《山行》课件可体验，其他课件按安排逐项制作。
 - [语文全学期逐课规划与字词表](https://yanghengxu985-cmd.github.io/fanfan-word-adventure/#/chinese-plan)
 - [语文第1课新样板：字音、辨字、纸写](https://yanghengxu985-cmd.github.io/fanfan-word-adventure/#/chinese-pilot/cn-01)
 - [语文第4课新样板：古诗背诵与默写](https://yanghengxu985-cmd.github.io/fanfan-word-adventure/#/chinese-pilot/cn-04)

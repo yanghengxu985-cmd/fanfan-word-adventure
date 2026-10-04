@@ -109,7 +109,7 @@ export const englishLabLessons: LabLesson[] = [
     ],
     questions: [nameQuestion('my-practice', 'guided', 'my', 'Lin'), nameQuestion('your-practice', 'guided', 'your', 'Lin'),
       nameQuestion('my-check', 'check', 'my', 'Lan'), nameQuestion('your-check', 'check', 'your', 'Lan'),
-      nameQuestion('your-switch', 'transfer', 'your', 'Lin', true), nameQuestion('my-switch', 'transfer', 'my', 'Lan', true)],
+      nameQuestion('your-switch', 'transfer', 'your', 'Lan', true), nameQuestion('my-switch', 'transfer', 'my', 'Lan', true)],
   },
 ];
 

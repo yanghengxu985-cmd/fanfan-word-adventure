@@ -37,7 +37,7 @@ async (page) => {
         ['lan-your-learn', 'activity-023', "What's your name?", 'conversation']],
       questions: [name('my-practice', 'guided', 'my', 'Lin'), name('your-practice', 'guided', 'your', 'Lin'),
         name('my-check', 'check', 'my', 'Lan'), name('your-check', 'check', 'your', 'Lan'),
-        name('your-switch', 'transfer', 'your', 'Lin', true), name('my-switch', 'transfer', 'my', 'Lan', true)],
+        name('your-switch', 'transfer', 'your', 'Lan', true), name('my-switch', 'transfer', 'my', 'Lan', true)],
     },
   };
   const clipText = { 'lab-guide': 'Listen. Look. Choose. You can listen again.',

@@ -7,7 +7,7 @@ async (page) => {
   const keys = {
     'cat-practice-1':'cat-ginger','cat-practice-2':'cat-grey','cat-check-1':'cat-ginger','cat-check-2':'cat-grey','cat-switch-1':'cat-black','cat-switch-2':'cat-black',
     'hello-practice':'hello-school','goodbye-practice':'goodbye-school','hello-check':'hello-park','goodbye-check':'goodbye-park','goodbye-switch':'goodbye-library','hello-switch':'hello-library',
-    'my-practice':'name-lin','your-practice':'name-lan','my-check':'name-lan','your-check':'name-lin','your-switch':'name-lan','my-switch':'name-lan',
+    'my-practice':'name-lin','your-practice':'name-lan','my-check':'name-lan','your-check':'name-lin','your-switch':'name-lin','my-switch':'name-lan',
   };
   const samples = [], errors = [], checks = [];
   const assert = (value,message) => { if(!value)throw new Error(message);checks.push(message); };

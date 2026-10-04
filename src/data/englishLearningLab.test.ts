@@ -61,6 +61,17 @@ test('transfer uses a new animal image and a new greeting location rather than o
   }
 });
 
+test('switched-name checks cannot be passed by always choosing the same person', () => {
+  const lesson = getEnglishLabLesson('my-your')!;
+  const switchQuestions = lesson.questions.filter(question => question.phase === 'transfer');
+  assert.equal(switchQuestions.length, 2);
+  assert.equal(switchQuestions[0].contextVisual?.speaker, switchQuestions[1].contextVisual?.speaker);
+  assert.ok(switchQuestions.every(question => question.contextVisual?.swapped));
+  assert.notEqual(switchQuestions[0].correctOptionId, switchQuestions[1].correctOptionId);
+  assert.equal(lesson.questions.filter(question => question.correctOptionId === 'name-lin').length, 3);
+  assert.equal(lesson.questions.filter(question => question.correctOptionId === 'name-lan').length, 3);
+});
+
 test('review selects only the requested listening targets and option shuffles do not mutate teaching content', () => {
   const lesson = getEnglishLabLesson('my-your')!;
   const original = structuredClone(lesson);

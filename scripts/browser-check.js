@@ -29,7 +29,9 @@ async (page) => {
   await page.getByRole('button', { name: '需要一点提示' }).click();
   await page.locator('.answer').first().click();
   assert((await records()).at(-1).assisted === true, '使用提示只累计练习证据');
-  await go('/play/en-03/recall');
+  // Unit routes now use picture listening; the existing project vocabulary
+  // collection still exposes the original oral-recall self-check mode.
+  await go('/play/en-project-1/recall');
   assert(await page.locator('.typed-answer').count() === 0, '英文回忆是口头自查，不暗中要求拼写');
   await page.getByRole('button', { name: '我完成了，核对答案' }).click();
   await page.getByRole('button', { name: '我自己想对了' }).click();

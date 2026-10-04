@@ -1,4 +1,5 @@
 import { useId } from 'react';
+import EnglishExtensionPicture, { isEnglishExtensionPicture } from './EnglishExtensionPicture';
 
 export type PictureKey = string;
 
@@ -44,6 +45,7 @@ function Clock({ afternoon }: { afternoon: boolean }) {
 /** Original SVG story pictures. No English answer word is painted into a listening option. */
 export default function EnglishPicture({ picture, description = '英语故事插图', decorative = false, className = '', nameLabel = 'Lan' }: Props) {
   const titleId = useId();
+  if (isEnglishExtensionPicture(picture)) return <EnglishExtensionPicture picture={picture} description={description} decorative={decorative} className={className} />;
   let drawing;
   if (picture === 'cat') {
     drawing = <g><ellipse cx="94" cy="119" rx="47" ry="7" fill="#dbe3ce" /><path d="M113 96q40-37 36-8q-3 12-23 16" fill="none" stroke="#ca9670" strokeWidth="12" strokeLinecap="round" /><ellipse cx="86" cy="96" rx="36" ry="29" fill="#dca77c" /><path d="M62 51L58 25L80 39m26 12l7-26l-23 14" fill="#dca77c" stroke="#bb805e" strokeWidth="2" /><path d="M64 46L63 33L74 41m28 5l6-13l-13 8" fill="#edc8ad" /><ellipse cx="86" cy="63" rx="31" ry="28" fill="#e4b38b" /><path d="M74 62h1m21 0h1" stroke="#514738" strokeWidth="4" strokeLinecap="round" /><path d="M82 72l4 4l4-4z" fill="#a96757" /><path d="M86 76v5m0-1q-8 6-12 0m12 0q8 6 12 0M62 70l-18-4m18 11l-19 2m67-9l18-4m-18 11l19 2" fill="none" stroke="#9a7558" strokeWidth="1.7" strokeLinecap="round" /><path d="M67 113v9m29-9v9" stroke="#ca9670" strokeWidth="10" strokeLinecap="round" /></g>;

@@ -419,6 +419,1390 @@
       "spokenText": "Your name.",
       "durationSeconds": 1.224,
       "bytes": 20012
+    },
+    "u03-yes-reply-1": {
+      "id": "u03-yes-reply-1",
+      "file": "audio/english-activities/2e0810e73507fc135197159b.mp3",
+      "text": "Yes, I am.",
+      "spokenText": "Yes, I am.",
+      "durationSeconds": 1.68,
+      "bytes": 27308
+    },
+    "u03-yes-reply-2": {
+      "id": "u03-yes-reply-2",
+      "file": "audio/english-activities/c1e74fe626e87736bd1632fe.mp3",
+      "text": "No, I am not.",
+      "spokenText": "No, I am not.",
+      "durationSeconds": 1.968,
+      "bytes": 31916
+    },
+    "u03-yes-reply-3": {
+      "id": "u03-yes-reply-3",
+      "file": "audio/english-activities/40359ccc5803e12a06a727c1.mp3",
+      "text": "Yes, I am Lin.",
+      "spokenText": "Yes, I am Lin.",
+      "durationSeconds": 1.92,
+      "bytes": 31148
+    },
+    "u03-yes-prompt": {
+      "id": "u03-yes-prompt",
+      "file": "audio/english-activities/b510e393c9f4e691a8cf2d35.mp3",
+      "text": "Are you Lin?",
+      "spokenText": "Are you Lin?",
+      "durationSeconds": 1.272,
+      "bytes": 20780
+    },
+    "u03-yes-dialogue": {
+      "id": "u03-yes-dialogue",
+      "file": "audio/english-activities/1f417dd688812f71ec74a0d0.mp3",
+      "text": "Are you Lin? Yes, I am.",
+      "spokenText": "Are you Lin? Yes, I am.",
+      "durationSeconds": 3.048,
+      "bytes": 49196
+    },
+    "u03-no-reply-1": {
+      "id": "u03-no-reply-1",
+      "file": "audio/english-activities/789243dcd35ff5a582b23c1b.mp3",
+      "text": "No, I am not. I am Lan.",
+      "spokenText": "No, I am not. I am Lan.",
+      "durationSeconds": 3.312,
+      "bytes": 53420
+    },
+    "u03-no-reply-3": {
+      "id": "u03-no-reply-3",
+      "file": "audio/english-activities/8b8bbf2affe7454f313c0b61.mp3",
+      "text": "No, I am not Lin. I am Lan.",
+      "spokenText": "No, I am not Lin. I am Lan.",
+      "durationSeconds": 3.552,
+      "bytes": 57260
+    },
+    "u03-no-dialogue": {
+      "id": "u03-no-dialogue",
+      "file": "audio/english-activities/83bcf60cd7979bdfcea55232.mp3",
+      "text": "Are you Lin? No, I am not. I am Lan.",
+      "spokenText": "Are you Lin? No, I am not. I am Lan.",
+      "durationSeconds": 4.632,
+      "bytes": 74540
+    },
+    "u03-not-reply-1": {
+      "id": "u03-not-reply-1",
+      "file": "audio/english-activities/a8195609513cd31615437487.mp3",
+      "text": "Good morning. But I am not Lin. I am Lan.",
+      "spokenText": "Good morning. But I am not Lin. I am Lan.",
+      "durationSeconds": 4.392,
+      "bytes": 70700
+    },
+    "u03-not-reply-2": {
+      "id": "u03-not-reply-2",
+      "file": "audio/english-activities/d995819c0e4409978dfc783a.mp3",
+      "text": "Good morning. I am Lin.",
+      "spokenText": "Good morning. I am Lin.",
+      "durationSeconds": 2.544,
+      "bytes": 41132
+    },
+    "u03-not-reply-3": {
+      "id": "u03-not-reply-3",
+      "file": "audio/english-activities/f9ff8be782abf8cfde525044.mp3",
+      "text": "Good morning. I am not Lin. I am Lan.",
+      "spokenText": "Good morning. I am not Lin. I am Lan.",
+      "durationSeconds": 4.2,
+      "bytes": 67628
+    },
+    "u03-not-prompt": {
+      "id": "u03-not-prompt",
+      "file": "audio/english-activities/f643cfda36aa2e1a67f5ce9b.mp3",
+      "text": "Good morning, Lin!",
+      "spokenText": "Good morning, Lin!",
+      "durationSeconds": 1.92,
+      "bytes": 31148
+    },
+    "u03-not-dialogue": {
+      "id": "u03-not-dialogue",
+      "file": "audio/english-activities/ec16d7abc8e91799a660c8a1.mp3",
+      "text": "Good morning, Lin! Good morning. But I am not Lin. I am Lan.",
+      "spokenText": "Good morning, Lin! Good morning. But I am not Lin. I am Lan.",
+      "durationSeconds": 6.192,
+      "bytes": 99500
+    },
+    "u03-here-reply-1": {
+      "id": "u03-here-reply-1",
+      "file": "audio/english-activities/1329582f19b777be192556c3.mp3",
+      "text": "Here I am!",
+      "spokenText": "Here I am!",
+      "durationSeconds": 1.248,
+      "bytes": 20396
+    },
+    "u03-here-prompt": {
+      "id": "u03-here-prompt",
+      "file": "audio/english-activities/224ccf5ed7fcb005f5119c98.mp3",
+      "text": "Lin!",
+      "spokenText": "Lin!",
+      "durationSeconds": 0.84,
+      "bytes": 13868
+    },
+    "u03-here-dialogue": {
+      "id": "u03-here-dialogue",
+      "file": "audio/english-activities/4c6098176e7668f0e9379260.mp3",
+      "text": "Lin! Here I am!",
+      "spokenText": "Lin! Here I am!",
+      "durationSeconds": 2.088,
+      "bytes": 33836
+    },
+    "u03-class-reply-1": {
+      "id": "u03-class-reply-1",
+      "file": "audio/english-activities/72b99ecb5cb2da72812ca8a2.mp3",
+      "text": "I am in Class 2.",
+      "spokenText": "I am in Class 2.",
+      "durationSeconds": 1.824,
+      "bytes": 29612
+    },
+    "u03-class-reply-2": {
+      "id": "u03-class-reply-2",
+      "file": "audio/english-activities/2d0d2049e81b546b12cc2283.mp3",
+      "text": "I am in Class 1.",
+      "spokenText": "I am in Class 1.",
+      "durationSeconds": 1.848,
+      "bytes": 29996
+    },
+    "u03-class-prompt": {
+      "id": "u03-class-prompt",
+      "file": "audio/english-activities/3394c3f0b21a415fa0e8dac6.mp3",
+      "text": "What class are you in?",
+      "spokenText": "What class are you in?",
+      "durationSeconds": 1.872,
+      "bytes": 30380
+    },
+    "u03-class-dialogue": {
+      "id": "u03-class-dialogue",
+      "file": "audio/english-activities/d18970fad6a61a77cb033524.mp3",
+      "text": "What class are you in? I am in Class 2.",
+      "spokenText": "What class are you in? I am in Class 2.",
+      "durationSeconds": 3.744,
+      "bytes": 60332
+    },
+    "u03-sorry-reply-1": {
+      "id": "u03-sorry-reply-1",
+      "file": "audio/english-activities/ded036dcd8d5e7be421e633f.mp3",
+      "text": "I am sorry.",
+      "spokenText": "I am sorry.",
+      "durationSeconds": 1.416,
+      "bytes": 23084
+    },
+    "u03-sorry-reply-3": {
+      "id": "u03-sorry-reply-3",
+      "file": "audio/english-activities/3ecbaac774d120fe16505846.mp3",
+      "text": "Sorry!",
+      "spokenText": "Sorry!",
+      "durationSeconds": 1.032,
+      "bytes": 16940
+    },
+    "u03-sorry-prompt": {
+      "id": "u03-sorry-prompt",
+      "file": "audio/english-activities/d0c1ab0f41ea7dc01280b038.mp3",
+      "text": "Oh!",
+      "spokenText": "Oh!",
+      "durationSeconds": 0.792,
+      "bytes": 13100
+    },
+    "u03-sorry-dialogue": {
+      "id": "u03-sorry-dialogue",
+      "file": "audio/english-activities/52c12f8248fbcc90133629a5.mp3",
+      "text": "Oh! I am sorry.",
+      "spokenText": "Oh! I am sorry.",
+      "durationSeconds": 2.184,
+      "bytes": 35372
+    },
+    "u03-listen-yes": {
+      "id": "u03-listen-yes",
+      "file": "audio/english-activities/6bd5717b8d3bdf38a577c288.mp3",
+      "text": "yes",
+      "spokenText": "yes",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "u03-listen-no": {
+      "id": "u03-listen-no",
+      "file": "audio/english-activities/2197f28bca9d52e8046e3595.mp3",
+      "text": "no",
+      "spokenText": "no",
+      "durationSeconds": 0.936,
+      "bytes": 15404
+    },
+    "u03-listen-we": {
+      "id": "u03-listen-we",
+      "file": "audio/english-activities/f306d53508902294ab0a2268.mp3",
+      "text": "we",
+      "spokenText": "we",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "u03-listen-in": {
+      "id": "u03-listen-in",
+      "file": "audio/english-activities/efb65315e2d19aebb5e39700.mp3",
+      "text": "in",
+      "spokenText": "in",
+      "durationSeconds": 0.84,
+      "bytes": 13868
+    },
+    "u03-listen-with": {
+      "id": "u03-listen-with",
+      "file": "audio/english-activities/a0270492509344aa931e1722.mp3",
+      "text": "with",
+      "spokenText": "with",
+      "durationSeconds": 0.936,
+      "bytes": 15404
+    },
+    "u04-friend-reply-1": {
+      "id": "u04-friend-reply-1",
+      "file": "audio/english-activities/1a55576d833962d16ff401dc.mp3",
+      "text": "This is Lan. She is my friend.",
+      "spokenText": "This is Lan. She is my friend.",
+      "durationSeconds": 3.24,
+      "bytes": 52268
+    },
+    "u04-friend-reply-2": {
+      "id": "u04-friend-reply-2",
+      "file": "audio/english-activities/50e3640fb4fd61f7406003e6.mp3",
+      "text": "This is Lin. He is my friend.",
+      "spokenText": "This is Lin. He is my friend.",
+      "durationSeconds": 3.12,
+      "bytes": 50348
+    },
+    "u04-friend-reply-3": {
+      "id": "u04-friend-reply-3",
+      "file": "audio/english-activities/647b88dba7090df5c2b090b1.mp3",
+      "text": "This is my friend Lan.",
+      "spokenText": "This is my friend Lan.",
+      "durationSeconds": 2.088,
+      "bytes": 33836
+    },
+    "u04-friend-prompt": {
+      "id": "u04-friend-prompt",
+      "file": "audio/english-activities/6aea25f6ac68af7d9264ffa8.mp3",
+      "text": "Who is this?",
+      "spokenText": "Who is this?",
+      "durationSeconds": 1.44,
+      "bytes": 23468
+    },
+    "u04-friend-dialogue": {
+      "id": "u04-friend-dialogue",
+      "file": "audio/english-activities/cda513f84346b538831b0dd2.mp3",
+      "text": "Who is this? This is Lan. She is my friend.",
+      "spokenText": "Who is this? This is Lan. She is my friend.",
+      "durationSeconds": 4.68,
+      "bytes": 75308
+    },
+    "u04-she-reply-1": {
+      "id": "u04-she-reply-1",
+      "file": "audio/english-activities/49fd2c64ced103538404a3fa.mp3",
+      "text": "She is Lan. She is my friend.",
+      "spokenText": "She is Lan. She is my friend.",
+      "durationSeconds": 3.24,
+      "bytes": 52268
+    },
+    "u04-she-reply-2": {
+      "id": "u04-she-reply-2",
+      "file": "audio/english-activities/301272ff496185868f593f6d.mp3",
+      "text": "He is Lin. He is my friend.",
+      "spokenText": "He is Lin. He is my friend.",
+      "durationSeconds": 3.0,
+      "bytes": 48428
+    },
+    "u04-she-reply-3": {
+      "id": "u04-she-reply-3",
+      "file": "audio/english-activities/939e6206601807fff961a23a.mp3",
+      "text": "It is a cat.",
+      "spokenText": "It is a cat.",
+      "durationSeconds": 1.44,
+      "bytes": 23468
+    },
+    "u04-she-prompt": {
+      "id": "u04-she-prompt",
+      "file": "audio/english-activities/e92288c8daddc380382deaeb.mp3",
+      "text": "Who is she?",
+      "spokenText": "Who is she?",
+      "durationSeconds": 1.32,
+      "bytes": 21548
+    },
+    "u04-she-dialogue": {
+      "id": "u04-she-dialogue",
+      "file": "audio/english-activities/706c4ce356428f6845cf49da.mp3",
+      "text": "Who is she? She is Lan. She is my friend.",
+      "spokenText": "Who is she? She is Lan. She is my friend.",
+      "durationSeconds": 4.584,
+      "bytes": 73772
+    },
+    "u04-he-prompt": {
+      "id": "u04-he-prompt",
+      "file": "audio/english-activities/3aea58d7b7f02f7aa5d2b75f.mp3",
+      "text": "Who is he?",
+      "spokenText": "Who is he?",
+      "durationSeconds": 1.296,
+      "bytes": 21164
+    },
+    "u04-he-dialogue": {
+      "id": "u04-he-dialogue",
+      "file": "audio/english-activities/1a42bfbcdd7af11bae3f1cd5.mp3",
+      "text": "Who is he? He is Lin. He is my friend.",
+      "spokenText": "Who is he? He is Lin. He is my friend.",
+      "durationSeconds": 4.368,
+      "bytes": 70316
+    },
+    "u04-it-reply-2": {
+      "id": "u04-it-reply-2",
+      "file": "audio/english-activities/ed88cf3600f41fa6a0df6542.mp3",
+      "text": "He is Lin.",
+      "spokenText": "He is Lin.",
+      "durationSeconds": 1.296,
+      "bytes": 21164
+    },
+    "u04-it-reply-3": {
+      "id": "u04-it-reply-3",
+      "file": "audio/english-activities/79badecda306764378b65c18.mp3",
+      "text": "She is Lan.",
+      "spokenText": "She is Lan.",
+      "durationSeconds": 1.464,
+      "bytes": 23852
+    },
+    "u04-it-prompt": {
+      "id": "u04-it-prompt",
+      "file": "audio/english-activities/656a6d02850cbd29bc45d04e.mp3",
+      "text": "What is this?",
+      "spokenText": "What is this?",
+      "durationSeconds": 1.464,
+      "bytes": 23852
+    },
+    "u04-it-dialogue": {
+      "id": "u04-it-dialogue",
+      "file": "audio/english-activities/8dfff4e6e35861b092498428.mp3",
+      "text": "What is this? It is a cat.",
+      "spokenText": "What is this? It is a cat.",
+      "durationSeconds": 2.976,
+      "bytes": 48044
+    },
+    "u04-thanks-reply-1": {
+      "id": "u04-thanks-reply-1",
+      "file": "audio/english-activities/2e54cda8127872b07b4d845d.mp3",
+      "text": "Thank you.",
+      "spokenText": "Thank you.",
+      "durationSeconds": 1.2,
+      "bytes": 19628
+    },
+    "u04-thanks-reply-3": {
+      "id": "u04-thanks-reply-3",
+      "file": "audio/english-activities/09be1ebee473dfa1ed1401d7.mp3",
+      "text": "Thanks!",
+      "spokenText": "Thanks!",
+      "durationSeconds": 1.032,
+      "bytes": 16940
+    },
+    "u04-thanks-prompt": {
+      "id": "u04-thanks-prompt",
+      "file": "audio/english-activities/9c7d1ada24cb96616f305246.mp3",
+      "text": "It is good!",
+      "spokenText": "It is good!",
+      "durationSeconds": 1.32,
+      "bytes": 21548
+    },
+    "u04-thanks-dialogue": {
+      "id": "u04-thanks-dialogue",
+      "file": "audio/english-activities/76c6fb8e72ec14d56a1025db.mp3",
+      "text": "It is good! Thank you.",
+      "spokenText": "It is good! Thank you.",
+      "durationSeconds": 2.496,
+      "bytes": 40364
+    },
+    "u04-have-reply-1": {
+      "id": "u04-have-reply-1",
+      "file": "audio/english-activities/d065d526b819187a98c78acb.mp3",
+      "text": "I have a book.",
+      "spokenText": "I have a book.",
+      "durationSeconds": 1.488,
+      "bytes": 24236
+    },
+    "u04-have-reply-2": {
+      "id": "u04-have-reply-2",
+      "file": "audio/english-activities/e2880a1a6b0b478ecd4477ca.mp3",
+      "text": "I have a ball.",
+      "spokenText": "I have a ball.",
+      "durationSeconds": 1.464,
+      "bytes": 23852
+    },
+    "u04-have-reply-3": {
+      "id": "u04-have-reply-3",
+      "file": "audio/english-activities/8bd175fb780fa7396cd392ae.mp3",
+      "text": "I have a cat.",
+      "spokenText": "I have a cat.",
+      "durationSeconds": 1.488,
+      "bytes": 24236
+    },
+    "u04-have-dialogue": {
+      "id": "u04-have-dialogue",
+      "file": "audio/english-activities/e2e2de79f7cedc05257bda83.mp3",
+      "text": "What is this? I have a book.",
+      "spokenText": "What is this? I have a book.",
+      "durationSeconds": 2.976,
+      "bytes": 48044
+    },
+    "u04-listen-friend": {
+      "id": "u04-listen-friend",
+      "file": "audio/english-activities/f8795f2a7825b29828993243.mp3",
+      "text": "My friend.",
+      "spokenText": "My friend.",
+      "durationSeconds": 1.344,
+      "bytes": 21932
+    },
+    "u04-listen-she": {
+      "id": "u04-listen-she",
+      "file": "audio/english-activities/035bcd011161c576cd41e68f.mp3",
+      "text": "she",
+      "spokenText": "she",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "u04-listen-he": {
+      "id": "u04-listen-he",
+      "file": "audio/english-activities/d54ea4676c7b6ee9059463a4.mp3",
+      "text": "he",
+      "spokenText": "he",
+      "durationSeconds": 0.864,
+      "bytes": 14252
+    },
+    "u04-listen-it": {
+      "id": "u04-listen-it",
+      "file": "audio/english-activities/7cd53a1d8ea955aaffcaa351.mp3",
+      "text": "it",
+      "spokenText": "it",
+      "durationSeconds": 0.84,
+      "bytes": 13868
+    },
+    "u04-listen-many": {
+      "id": "u04-listen-many",
+      "file": "audio/english-activities/3b353d18c30df8cec572a819.mp3",
+      "text": "Many books.",
+      "spokenText": "Many books.",
+      "durationSeconds": 1.464,
+      "bytes": 23852
+    },
+    "u05-mother-reply-1": {
+      "id": "u05-mother-reply-1",
+      "file": "audio/english-activities/447277c550ac7d73f225d83d.mp3",
+      "text": "She is my mother.",
+      "spokenText": "She is my mother.",
+      "durationSeconds": 1.632,
+      "bytes": 26540
+    },
+    "u05-mother-reply-2": {
+      "id": "u05-mother-reply-2",
+      "file": "audio/english-activities/81f042b25f9025227e1344ed.mp3",
+      "text": "She is my sister.",
+      "spokenText": "She is my sister.",
+      "durationSeconds": 1.776,
+      "bytes": 28844
+    },
+    "u05-mother-reply-3": {
+      "id": "u05-mother-reply-3",
+      "file": "audio/english-activities/8997b828ea64a878c1bf45a3.mp3",
+      "text": "She is my mum.",
+      "spokenText": "She is my mum.",
+      "durationSeconds": 1.608,
+      "bytes": 26156
+    },
+    "u05-mother-dialogue": {
+      "id": "u05-mother-dialogue",
+      "file": "audio/english-activities/c11926d5c8284c62c8f473da.mp3",
+      "text": "Who is she? She is my mother.",
+      "spokenText": "Who is she? She is my mother.",
+      "durationSeconds": 3.0,
+      "bytes": 48428
+    },
+    "u05-father-reply-1": {
+      "id": "u05-father-reply-1",
+      "file": "audio/english-activities/74224c78673d7d022700baac.mp3",
+      "text": "He is my father.",
+      "spokenText": "He is my father.",
+      "durationSeconds": 1.632,
+      "bytes": 26540
+    },
+    "u05-father-reply-2": {
+      "id": "u05-father-reply-2",
+      "file": "audio/english-activities/b07130e81088ed9101994efe.mp3",
+      "text": "He is my brother.",
+      "spokenText": "He is my brother.",
+      "durationSeconds": 1.608,
+      "bytes": 26156
+    },
+    "u05-father-reply-3": {
+      "id": "u05-father-reply-3",
+      "file": "audio/english-activities/4defe6d5119d5488523642df.mp3",
+      "text": "He is my dad.",
+      "spokenText": "He is my dad.",
+      "durationSeconds": 1.56,
+      "bytes": 25388
+    },
+    "u05-father-dialogue": {
+      "id": "u05-father-dialogue",
+      "file": "audio/english-activities/58014b325bab3b28b919095b.mp3",
+      "text": "Who is he? He is my father.",
+      "spokenText": "Who is he? He is my father.",
+      "durationSeconds": 3.024,
+      "bytes": 48812
+    },
+    "u05-brother-dialogue": {
+      "id": "u05-brother-dialogue",
+      "file": "audio/english-activities/14a181d33149698babb8f15c.mp3",
+      "text": "Who is he? He is my brother.",
+      "spokenText": "Who is he? He is my brother.",
+      "durationSeconds": 3.0,
+      "bytes": 48428
+    },
+    "u05-sister-dialogue": {
+      "id": "u05-sister-dialogue",
+      "file": "audio/english-activities/3eb1fa003c94569e0dca843f.mp3",
+      "text": "Who is she? She is my sister.",
+      "spokenText": "Who is she? She is my sister.",
+      "durationSeconds": 3.144,
+      "bytes": 50732
+    },
+    "u05-evening-reply-1": {
+      "id": "u05-evening-reply-1",
+      "file": "audio/english-activities/b4719c49e543fa8d00b749ae.mp3",
+      "text": "Good evening!",
+      "spokenText": "Good evening!",
+      "durationSeconds": 1.224,
+      "bytes": 20012
+    },
+    "u05-evening-dialogue": {
+      "id": "u05-evening-dialogue",
+      "file": "audio/english-activities/c02d8d65204698726dc76b3c.mp3",
+      "text": "Good evening! Good evening!",
+      "spokenText": "Good evening! Good evening!",
+      "durationSeconds": 2.472,
+      "bytes": 39980
+    },
+    "u05-family-reply-1": {
+      "id": "u05-family-reply-1",
+      "file": "audio/english-activities/0aa2ccefa58e673dafd0b7f8.mp3",
+      "text": "This is my family.",
+      "spokenText": "This is my family.",
+      "durationSeconds": 1.776,
+      "bytes": 28844
+    },
+    "u05-family-reply-2": {
+      "id": "u05-family-reply-2",
+      "file": "audio/english-activities/e6590923c1daec9625a827e4.mp3",
+      "text": "This is my friend.",
+      "spokenText": "This is my friend.",
+      "durationSeconds": 1.752,
+      "bytes": 28460
+    },
+    "u05-family-reply-3": {
+      "id": "u05-family-reply-3",
+      "file": "audio/english-activities/97628c413d9320559321b58d.mp3",
+      "text": "This is my cat.",
+      "spokenText": "This is my cat.",
+      "durationSeconds": 1.68,
+      "bytes": 27308
+    },
+    "u05-family-prompt": {
+      "id": "u05-family-prompt",
+      "file": "audio/english-activities/9bd744a0de28fa6c12703aa3.mp3",
+      "text": "Hello, Lin!",
+      "spokenText": "Hello, Lin!",
+      "durationSeconds": 1.704,
+      "bytes": 27692
+    },
+    "u05-family-dialogue": {
+      "id": "u05-family-dialogue",
+      "file": "audio/english-activities/203c8dd0969ade6987577cca.mp3",
+      "text": "Hello, Lin! This is my family.",
+      "spokenText": "Hello, Lin! This is my family.",
+      "durationSeconds": 3.36,
+      "bytes": 54188
+    },
+    "u05-listen-mother": {
+      "id": "u05-listen-mother",
+      "file": "audio/english-activities/adaeabe362bb19e656dea597.mp3",
+      "text": "mother",
+      "spokenText": "mother",
+      "durationSeconds": 1.008,
+      "bytes": 16556
+    },
+    "u05-listen-father": {
+      "id": "u05-listen-father",
+      "file": "audio/english-activities/35d3692ea1e2107c31072a66.mp3",
+      "text": "father",
+      "spokenText": "father",
+      "durationSeconds": 1.104,
+      "bytes": 18092
+    },
+    "u05-listen-brother": {
+      "id": "u05-listen-brother",
+      "file": "audio/english-activities/9e0d50da71a58a7e0448f70d.mp3",
+      "text": "brother",
+      "spokenText": "brother",
+      "durationSeconds": 0.984,
+      "bytes": 16172
+    },
+    "u05-listen-sister": {
+      "id": "u05-listen-sister",
+      "file": "audio/english-activities/0b3d79da3c6c3499070f5adb.mp3",
+      "text": "sister",
+      "spokenText": "sister",
+      "durationSeconds": 1.152,
+      "bytes": 18860
+    },
+    "u05-listen-baby": {
+      "id": "u05-listen-baby",
+      "file": "audio/english-activities/5a300e26858e7476176d5ede.mp3",
+      "text": "baby",
+      "spokenText": "baby",
+      "durationSeconds": 1.008,
+      "bytes": 16556
+    },
+    "u05-listen-family": {
+      "id": "u05-listen-family",
+      "file": "audio/english-activities/83decc0bf7ac30387ed3e76a.mp3",
+      "text": "family",
+      "spokenText": "family",
+      "durationSeconds": 1.152,
+      "bytes": 18860
+    },
+    "u06-grandfather-reply-1": {
+      "id": "u06-grandfather-reply-1",
+      "file": "audio/english-activities/e177326bc9c10e06096688d7.mp3",
+      "text": "Yes, he is. He is my grandfather.",
+      "spokenText": "Yes, he is. He is my grandfather.",
+      "durationSeconds": 3.84,
+      "bytes": 61868
+    },
+    "u06-grandfather-reply-2": {
+      "id": "u06-grandfather-reply-2",
+      "file": "audio/english-activities/e451905ae8bfbb04918aae43.mp3",
+      "text": "No. He is my uncle.",
+      "spokenText": "No. He is my uncle.",
+      "durationSeconds": 2.616,
+      "bytes": 42284
+    },
+    "u06-grandfather-reply-3": {
+      "id": "u06-grandfather-reply-3",
+      "file": "audio/english-activities/dbafcd1dd3bb1b19bf5b2de7.mp3",
+      "text": "Yes, he is my grandpa.",
+      "spokenText": "Yes, he is my grandpa.",
+      "durationSeconds": 2.472,
+      "bytes": 39980
+    },
+    "u06-grandfather-prompt": {
+      "id": "u06-grandfather-prompt",
+      "file": "audio/english-activities/eaa68d95b069ad44535a0e77.mp3",
+      "text": "Is he your grandpa?",
+      "spokenText": "Is he your grandpa?",
+      "durationSeconds": 1.8,
+      "bytes": 29228
+    },
+    "u06-grandfather-dialogue": {
+      "id": "u06-grandfather-dialogue",
+      "file": "audio/english-activities/ee58c1c4825c2759950d1d9d.mp3",
+      "text": "Is he your grandpa? Yes, he is. He is my grandfather.",
+      "spokenText": "Is he your grandpa? Yes, he is. He is my grandfather.",
+      "durationSeconds": 5.592,
+      "bytes": 89900
+    },
+    "u06-grandmother-reply-1": {
+      "id": "u06-grandmother-reply-1",
+      "file": "audio/english-activities/4b25f2aac2f2d9dd890ef09f.mp3",
+      "text": "Yes, she is. She is my grandmother.",
+      "spokenText": "Yes, she is. She is my grandmother.",
+      "durationSeconds": 3.936,
+      "bytes": 63404
+    },
+    "u06-grandmother-reply-2": {
+      "id": "u06-grandmother-reply-2",
+      "file": "audio/english-activities/26255f05f5f093f65ae6c56d.mp3",
+      "text": "No. She is my aunt.",
+      "spokenText": "No. She is my aunt.",
+      "durationSeconds": 2.568,
+      "bytes": 41516
+    },
+    "u06-grandmother-reply-3": {
+      "id": "u06-grandmother-reply-3",
+      "file": "audio/english-activities/c3ddf8036bb47f0c160ff0ee.mp3",
+      "text": "Yes, she is my grandma.",
+      "spokenText": "Yes, she is my grandma.",
+      "durationSeconds": 2.472,
+      "bytes": 39980
+    },
+    "u06-grandmother-prompt": {
+      "id": "u06-grandmother-prompt",
+      "file": "audio/english-activities/960d2890b34fa2599e7f5e77.mp3",
+      "text": "Is she your grandma?",
+      "spokenText": "Is she your grandma?",
+      "durationSeconds": 1.824,
+      "bytes": 29612
+    },
+    "u06-grandmother-dialogue": {
+      "id": "u06-grandmother-dialogue",
+      "file": "audio/english-activities/02795bcefd0396dec0b0dc03.mp3",
+      "text": "Is she your grandma? Yes, she is. She is my grandmother.",
+      "spokenText": "Is she your grandma? Yes, she is. She is my grandmother.",
+      "durationSeconds": 5.712,
+      "bytes": 91820
+    },
+    "u06-uncle-reply-1": {
+      "id": "u06-uncle-reply-1",
+      "file": "audio/english-activities/15f067ceebd49b73e363c2a6.mp3",
+      "text": "He is my uncle.",
+      "spokenText": "He is my uncle.",
+      "durationSeconds": 1.608,
+      "bytes": 26156
+    },
+    "u06-uncle-reply-2": {
+      "id": "u06-uncle-reply-2",
+      "file": "audio/english-activities/49de45bc6a00070630310af6.mp3",
+      "text": "He is my grandfather.",
+      "spokenText": "He is my grandfather.",
+      "durationSeconds": 1.968,
+      "bytes": 31916
+    },
+    "u06-uncle-dialogue": {
+      "id": "u06-uncle-dialogue",
+      "file": "audio/english-activities/322972a298e9f601b1321c1a.mp3",
+      "text": "Who is he? He is my uncle.",
+      "spokenText": "Who is he? He is my uncle.",
+      "durationSeconds": 3.024,
+      "bytes": 48812
+    },
+    "u06-aunt-reply-1": {
+      "id": "u06-aunt-reply-1",
+      "file": "audio/english-activities/fbc91a593da6631d07084d9a.mp3",
+      "text": "She is my aunt.",
+      "spokenText": "She is my aunt.",
+      "durationSeconds": 1.608,
+      "bytes": 26156
+    },
+    "u06-aunt-reply-2": {
+      "id": "u06-aunt-reply-2",
+      "file": "audio/english-activities/d877968e5b7e0a64dc88571a.mp3",
+      "text": "She is my grandmother.",
+      "spokenText": "She is my grandmother.",
+      "durationSeconds": 2.04,
+      "bytes": 33068
+    },
+    "u06-aunt-dialogue": {
+      "id": "u06-aunt-dialogue",
+      "file": "audio/english-activities/3ac1f57ad8ccacaf1c27add9.mp3",
+      "text": "Who is she? She is my aunt.",
+      "spokenText": "Who is she? She is my aunt.",
+      "durationSeconds": 2.976,
+      "bytes": 48044
+    },
+    "u06-cousin-dialogue": {
+      "id": "u06-cousin-dialogue",
+      "file": "audio/english-activities/a83be02903f4b7732123d2d2.mp3",
+      "text": "Who is she? She is my cousin.",
+      "spokenText": "Who is she? She is my cousin.",
+      "durationSeconds": 3.024,
+      "bytes": 48812
+    },
+    "u06-me-reply-1": {
+      "id": "u06-me-reply-1",
+      "file": "audio/english-activities/a31501112d0c2374c21411e2.mp3",
+      "text": "No. This is me. My name is Lin.",
+      "spokenText": "No. This is me. My name is Lin.",
+      "durationSeconds": 4.032,
+      "bytes": 64940
+    },
+    "u06-me-reply-2": {
+      "id": "u06-me-reply-2",
+      "file": "audio/english-activities/f3b5094c3c3b2e5a48c113b1.mp3",
+      "text": "Yes. This is Lan.",
+      "spokenText": "Yes. This is Lan.",
+      "durationSeconds": 2.448,
+      "bytes": 39596
+    },
+    "u06-me-reply-3": {
+      "id": "u06-me-reply-3",
+      "file": "audio/english-activities/a1456934675a64b122f9497b.mp3",
+      "text": "No. This is me. I am Lin.",
+      "spokenText": "No. This is me. I am Lin.",
+      "durationSeconds": 3.552,
+      "bytes": 57260
+    },
+    "u06-me-prompt": {
+      "id": "u06-me-prompt",
+      "file": "audio/english-activities/273dff2e1a46ac3da3c1f09a.mp3",
+      "text": "Is this Lan?",
+      "spokenText": "Is this Lan?",
+      "durationSeconds": 1.416,
+      "bytes": 23084
+    },
+    "u06-me-dialogue": {
+      "id": "u06-me-dialogue",
+      "file": "audio/english-activities/e3e535388d643af8e9bed911.mp3",
+      "text": "Is this Lan? No. This is me. My name is Lin.",
+      "spokenText": "Is this Lan? No. This is me. My name is Lin.",
+      "durationSeconds": 5.496,
+      "bytes": 88364
+    },
+    "u06-listen-grandfather": {
+      "id": "u06-listen-grandfather",
+      "file": "audio/english-activities/e140458a1494f8d7e896f5c0.mp3",
+      "text": "grandfather",
+      "spokenText": "grandfather",
+      "durationSeconds": 1.44,
+      "bytes": 23468
+    },
+    "u06-listen-grandmother": {
+      "id": "u06-listen-grandmother",
+      "file": "audio/english-activities/59bcd3c26bc952b9e4e7cdc9.mp3",
+      "text": "grandmother",
+      "spokenText": "grandmother",
+      "durationSeconds": 1.392,
+      "bytes": 22700
+    },
+    "u06-listen-uncle": {
+      "id": "u06-listen-uncle",
+      "file": "audio/english-activities/7248fc971f24fa9ca6b67de6.mp3",
+      "text": "uncle",
+      "spokenText": "uncle",
+      "durationSeconds": 1.056,
+      "bytes": 17324
+    },
+    "u06-listen-aunt": {
+      "id": "u06-listen-aunt",
+      "file": "audio/english-activities/362780c64b298ad800fc2770.mp3",
+      "text": "aunt",
+      "spokenText": "aunt",
+      "durationSeconds": 0.984,
+      "bytes": 16172
+    },
+    "u06-listen-cousin": {
+      "id": "u06-listen-cousin",
+      "file": "audio/english-activities/5922d310147c6304b14cfca9.mp3",
+      "text": "cousin",
+      "spokenText": "cousin",
+      "durationSeconds": 1.008,
+      "bytes": 16556
+    },
+    "u06-listen-me": {
+      "id": "u06-listen-me",
+      "file": "audio/english-activities/efd41fc9620e0d0d13bf592d.mp3",
+      "text": "me",
+      "spokenText": "me",
+      "durationSeconds": 0.864,
+      "bytes": 14252
+    },
+    "u07-birthday-reply-1": {
+      "id": "u07-birthday-reply-1",
+      "file": "audio/english-activities/507f2fbd4dfd5cc78d54303d.mp3",
+      "text": "Thank you!",
+      "spokenText": "Thank you!",
+      "durationSeconds": 1.104,
+      "bytes": 18092
+    },
+    "u07-birthday-prompt": {
+      "id": "u07-birthday-prompt",
+      "file": "audio/english-activities/42917c5dda2a4332d6e7d1bc.mp3",
+      "text": "Happy birthday!",
+      "spokenText": "Happy birthday!",
+      "durationSeconds": 1.584,
+      "bytes": 25772
+    },
+    "u07-birthday-dialogue": {
+      "id": "u07-birthday-dialogue",
+      "file": "audio/english-activities/e8217459ec9dc8c30f0a7330.mp3",
+      "text": "Happy birthday! Thank you!",
+      "spokenText": "Happy birthday! Thank you!",
+      "durationSeconds": 2.736,
+      "bytes": 44204
+    },
+    "u07-age-reply-1": {
+      "id": "u07-age-reply-1",
+      "file": "audio/english-activities/1f20baf434c41aada9327e94.mp3",
+      "text": "I am eight.",
+      "spokenText": "I am eight.",
+      "durationSeconds": 1.296,
+      "bytes": 21164
+    },
+    "u07-age-reply-2": {
+      "id": "u07-age-reply-2",
+      "file": "audio/english-activities/9ca072aece298202324287a4.mp3",
+      "text": "I am seven.",
+      "spokenText": "I am seven.",
+      "durationSeconds": 1.44,
+      "bytes": 23468
+    },
+    "u07-age-reply-3": {
+      "id": "u07-age-reply-3",
+      "file": "audio/english-activities/c7fec5203e67d5cfc6eafc73.mp3",
+      "text": "Eight.",
+      "spokenText": "Eight.",
+      "durationSeconds": 0.936,
+      "bytes": 15404
+    },
+    "u07-age-prompt": {
+      "id": "u07-age-prompt",
+      "file": "audio/english-activities/4b504e4b22b2f7b58d97f047.mp3",
+      "text": "How old are you?",
+      "spokenText": "How old are you?",
+      "durationSeconds": 1.56,
+      "bytes": 25388
+    },
+    "u07-age-dialogue": {
+      "id": "u07-age-dialogue",
+      "file": "audio/english-activities/2c5617cdea68ef38e6b0dd45.mp3",
+      "text": "How old are you? I am eight.",
+      "spokenText": "How old are you? I am eight.",
+      "durationSeconds": 2.88,
+      "bytes": 46508
+    },
+    "u07-want-reply-1": {
+      "id": "u07-want-reply-1",
+      "file": "audio/english-activities/9c44ed9d8b81bfaf7d60cb6a.mp3",
+      "text": "I want a book, please.",
+      "spokenText": "I want a book, please.",
+      "durationSeconds": 2.304,
+      "bytes": 37292
+    },
+    "u07-want-reply-2": {
+      "id": "u07-want-reply-2",
+      "file": "audio/english-activities/cde821f8c7177700f7cf2a3f.mp3",
+      "text": "I want a ball, please.",
+      "spokenText": "I want a ball, please.",
+      "durationSeconds": 2.328,
+      "bytes": 37676
+    },
+    "u07-want-reply-3": {
+      "id": "u07-want-reply-3",
+      "file": "audio/english-activities/61895061c0023606d3da0acf.mp3",
+      "text": "A book, please.",
+      "spokenText": "A book, please.",
+      "durationSeconds": 1.872,
+      "bytes": 30380
+    },
+    "u07-want-dialogue": {
+      "id": "u07-want-dialogue",
+      "file": "audio/english-activities/49beb2886ec92c3d64aeede0.mp3",
+      "text": "Hello! I want a book, please.",
+      "spokenText": "Hello! I want a book, please.",
+      "durationSeconds": 3.24,
+      "bytes": 52268
+    },
+    "u07-help-reply-1": {
+      "id": "u07-help-reply-1",
+      "file": "audio/english-activities/0094be824edd8b7b4eb1d196.mp3",
+      "text": "Yes, please.",
+      "spokenText": "Yes, please.",
+      "durationSeconds": 1.848,
+      "bytes": 29996
+    },
+    "u07-help-reply-3": {
+      "id": "u07-help-reply-3",
+      "file": "audio/english-activities/a5109f45f13f947d19dc805d.mp3",
+      "text": "No, thank you.",
+      "spokenText": "No, thank you.",
+      "durationSeconds": 1.776,
+      "bytes": 28844
+    },
+    "u07-help-prompt": {
+      "id": "u07-help-prompt",
+      "file": "audio/english-activities/48f1db5d7975152e258cf1c4.mp3",
+      "text": "Can I help you?",
+      "spokenText": "Can I help you?",
+      "durationSeconds": 1.56,
+      "bytes": 25388
+    },
+    "u07-help-dialogue": {
+      "id": "u07-help-dialogue",
+      "file": "audio/english-activities/cc5c7b01feed5e43b790e8e2.mp3",
+      "text": "Can I help you? Yes, please.",
+      "spokenText": "Can I help you? Yes, please.",
+      "durationSeconds": 3.432,
+      "bytes": 55340
+    },
+    "u07-gift-reply-1": {
+      "id": "u07-gift-reply-1",
+      "file": "audio/english-activities/62b19b78c6b799dbc6c511bd.mp3",
+      "text": "Here you are.",
+      "spokenText": "Here you are.",
+      "durationSeconds": 1.296,
+      "bytes": 21164
+    },
+    "u07-gift-dialogue": {
+      "id": "u07-gift-dialogue",
+      "file": "audio/english-activities/58348167dd110ffe1522941a.mp3",
+      "text": "Hello! Here you are.",
+      "spokenText": "Hello! Here you are.",
+      "durationSeconds": 2.256,
+      "bytes": 36524
+    },
+    "u07-welcome-reply-1": {
+      "id": "u07-welcome-reply-1",
+      "file": "audio/english-activities/e9f74a57df8f9a541a41926a.mp3",
+      "text": "You are welcome.",
+      "spokenText": "You are welcome.",
+      "durationSeconds": 1.464,
+      "bytes": 23852
+    },
+    "u07-welcome-reply-3": {
+      "id": "u07-welcome-reply-3",
+      "file": "audio/english-activities/d8c01863551cd81377cfb0ae.mp3",
+      "text": "You're welcome.",
+      "spokenText": "You're welcome.",
+      "durationSeconds": 1.344,
+      "bytes": 21932
+    },
+    "u07-welcome-dialogue": {
+      "id": "u07-welcome-dialogue",
+      "file": "audio/english-activities/244443ad890e479560fa0970.mp3",
+      "text": "Thank you! You are welcome.",
+      "spokenText": "Thank you! You are welcome.",
+      "durationSeconds": 2.592,
+      "bytes": 41900
+    },
+    "u07-listen-number-1": {
+      "id": "u07-listen-number-1",
+      "file": "audio/english-activities/0d4c3974503edf6b4c0ca547.mp3",
+      "text": "one",
+      "spokenText": "one",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "u07-listen-number-2": {
+      "id": "u07-listen-number-2",
+      "file": "audio/english-activities/a369f5175066604b7e223808.mp3",
+      "text": "two",
+      "spokenText": "two",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "u07-listen-number-3": {
+      "id": "u07-listen-number-3",
+      "file": "audio/english-activities/a08ef2ceedd356da87b25ecd.mp3",
+      "text": "three",
+      "spokenText": "three",
+      "durationSeconds": 0.984,
+      "bytes": 16172
+    },
+    "u07-listen-number-4": {
+      "id": "u07-listen-number-4",
+      "file": "audio/english-activities/7a8d57832b1cbdef80a2b19d.mp3",
+      "text": "four",
+      "spokenText": "four",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "u07-listen-number-5": {
+      "id": "u07-listen-number-5",
+      "file": "audio/english-activities/51b149c59be895dd9c343cb7.mp3",
+      "text": "five",
+      "spokenText": "five",
+      "durationSeconds": 1.104,
+      "bytes": 18092
+    },
+    "u07-listen-number-6": {
+      "id": "u07-listen-number-6",
+      "file": "audio/english-activities/22bd500c74177341fce7c2b4.mp3",
+      "text": "six",
+      "spokenText": "six",
+      "durationSeconds": 1.104,
+      "bytes": 18092
+    },
+    "u07-listen-number-7": {
+      "id": "u07-listen-number-7",
+      "file": "audio/english-activities/6bd6233872c56e7428a7fc68.mp3",
+      "text": "seven",
+      "spokenText": "seven",
+      "durationSeconds": 1.056,
+      "bytes": 17324
+    },
+    "u07-listen-number-8": {
+      "id": "u07-listen-number-8",
+      "file": "audio/english-activities/eb7b7a34524790206cd2bfad.mp3",
+      "text": "eight",
+      "spokenText": "eight",
+      "durationSeconds": 0.936,
+      "bytes": 15404
+    },
+    "u07-listen-number-9": {
+      "id": "u07-listen-number-9",
+      "file": "audio/english-activities/610531a691811eadfd632d5e.mp3",
+      "text": "nine",
+      "spokenText": "nine",
+      "durationSeconds": 1.008,
+      "bytes": 16556
+    },
+    "u07-listen-number-10": {
+      "id": "u07-listen-number-10",
+      "file": "audio/english-activities/1cbd71ef1a380cd955ffa6f5.mp3",
+      "text": "ten",
+      "spokenText": "ten",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "u07-listen-car": {
+      "id": "u07-listen-car",
+      "file": "audio/english-activities/a99ceecd7327907ac9c812f6.mp3",
+      "text": "car",
+      "spokenText": "car",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "u07-listen-book": {
+      "id": "u07-listen-book",
+      "file": "audio/english-activities/c4bdeb87fa5766f6ae421735.mp3",
+      "text": "book",
+      "spokenText": "book",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "u07-listen-ball": {
+      "id": "u07-listen-ball",
+      "file": "audio/english-activities/2ba06a87de701d03f93627ca.mp3",
+      "text": "ball",
+      "spokenText": "ball",
+      "durationSeconds": 0.912,
+      "bytes": 15020
+    },
+    "u07-listen-cake": {
+      "id": "u07-listen-cake",
+      "file": "audio/english-activities/19a2c73db7b33891d5e4bf3a.mp3",
+      "text": "cake",
+      "spokenText": "cake",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "u08-clean-reply-1": {
+      "id": "u08-clean-reply-1",
+      "file": "audio/english-activities/9a61789832b0171a80f4224b.mp3",
+      "text": "I can clean the table for you.",
+      "spokenText": "I can clean the table for you.",
+      "durationSeconds": 2.4,
+      "bytes": 38828
+    },
+    "u08-clean-reply-2": {
+      "id": "u08-clean-reply-2",
+      "file": "audio/english-activities/7e0412f7ea002cc7a49a3697.mp3",
+      "text": "I can draw a picture for you.",
+      "spokenText": "I can draw a picture for you.",
+      "durationSeconds": 2.328,
+      "bytes": 37676
+    },
+    "u08-clean-reply-3": {
+      "id": "u08-clean-reply-3",
+      "file": "audio/english-activities/ae139776c971f93f1987c4da.mp3",
+      "text": "I can sing for you.",
+      "spokenText": "I can sing for you.",
+      "durationSeconds": 1.776,
+      "bytes": 28844
+    },
+    "u08-clean-prompt": {
+      "id": "u08-clean-prompt",
+      "file": "audio/english-activities/d4200ba6f682057e49972f30.mp3",
+      "text": "Can you clean the table?",
+      "spokenText": "Can you clean the table?",
+      "durationSeconds": 1.944,
+      "bytes": 31532
+    },
+    "u08-clean-dialogue": {
+      "id": "u08-clean-dialogue",
+      "file": "audio/english-activities/f168d99a5e065e05a83b5ec2.mp3",
+      "text": "Can you clean the table? I can clean the table for you.",
+      "spokenText": "Can you clean the table? I can clean the table for you.",
+      "durationSeconds": 4.368,
+      "bytes": 70316
+    },
+    "u08-draw-reply-3": {
+      "id": "u08-draw-reply-3",
+      "file": "audio/english-activities/b8a0a908b69fd015d12bdfaf.mp3",
+      "text": "I can take pictures for you.",
+      "spokenText": "I can take pictures for you.",
+      "durationSeconds": 2.208,
+      "bytes": 35756
+    },
+    "u08-draw-prompt": {
+      "id": "u08-draw-prompt",
+      "file": "audio/english-activities/70a34978725a904b09fcafca.mp3",
+      "text": "Can you draw a picture?",
+      "spokenText": "Can you draw a picture?",
+      "durationSeconds": 1.968,
+      "bytes": 31916
+    },
+    "u08-draw-dialogue": {
+      "id": "u08-draw-dialogue",
+      "file": "audio/english-activities/8141810d672eb1bcb0cc9e9a.mp3",
+      "text": "Can you draw a picture? I can draw a picture for you.",
+      "spokenText": "Can you draw a picture? I can draw a picture for you.",
+      "durationSeconds": 4.32,
+      "bytes": 69548
+    },
+    "u08-sing-reply-1": {
+      "id": "u08-sing-reply-1",
+      "file": "audio/english-activities/2e1e46932490d810527abd19.mp3",
+      "text": "I can sing.",
+      "spokenText": "I can sing.",
+      "durationSeconds": 1.392,
+      "bytes": 22700
+    },
+    "u08-sing-reply-2": {
+      "id": "u08-sing-reply-2",
+      "file": "audio/english-activities/c20fea53c1529b891d0e0174.mp3",
+      "text": "I can dance.",
+      "spokenText": "I can dance.",
+      "durationSeconds": 1.512,
+      "bytes": 24620
+    },
+    "u08-sing-reply-3": {
+      "id": "u08-sing-reply-3",
+      "file": "audio/english-activities/0689700bfcb003ceba81ee90.mp3",
+      "text": "Yes, I can sing for you.",
+      "spokenText": "Yes, I can sing for you.",
+      "durationSeconds": 2.424,
+      "bytes": 39212
+    },
+    "u08-sing-prompt": {
+      "id": "u08-sing-prompt",
+      "file": "audio/english-activities/d79461527f447841d7c74cd0.mp3",
+      "text": "Can you sing?",
+      "spokenText": "Can you sing?",
+      "durationSeconds": 1.392,
+      "bytes": 22700
+    },
+    "u08-sing-dialogue": {
+      "id": "u08-sing-dialogue",
+      "file": "audio/english-activities/618c5d65b97e30262954ea18.mp3",
+      "text": "Can you sing? I can sing.",
+      "spokenText": "Can you sing? I can sing.",
+      "durationSeconds": 2.808,
+      "bytes": 45356
+    },
+    "u08-dance-reply-3": {
+      "id": "u08-dance-reply-3",
+      "file": "audio/english-activities/fb9b1d92f910882e0b7c69e7.mp3",
+      "text": "Yes, I can dance for you.",
+      "spokenText": "Yes, I can dance for you.",
+      "durationSeconds": 2.448,
+      "bytes": 39596
+    },
+    "u08-dance-prompt": {
+      "id": "u08-dance-prompt",
+      "file": "audio/english-activities/c7755405e4249b215f04817c.mp3",
+      "text": "Can you dance?",
+      "spokenText": "Can you dance?",
+      "durationSeconds": 1.536,
+      "bytes": 25004
+    },
+    "u08-dance-dialogue": {
+      "id": "u08-dance-dialogue",
+      "file": "audio/english-activities/6dcd9c65e75b4ff1dec44952.mp3",
+      "text": "Can you dance? I can dance.",
+      "spokenText": "Can you dance? I can dance.",
+      "durationSeconds": 3.12,
+      "bytes": 50348
+    },
+    "u08-photo-prompt": {
+      "id": "u08-photo-prompt",
+      "file": "audio/english-activities/382b1841ff94b016c61eda0c.mp3",
+      "text": "Can you take pictures?",
+      "spokenText": "Can you take pictures?",
+      "durationSeconds": 1.92,
+      "bytes": 31148
+    },
+    "u08-photo-dialogue": {
+      "id": "u08-photo-dialogue",
+      "file": "audio/english-activities/50f406a86d36fa614929641c.mp3",
+      "text": "Can you take pictures? I can take pictures for you.",
+      "spokenText": "Can you take pictures? I can take pictures for you.",
+      "durationSeconds": 4.248,
+      "bytes": 68396
+    },
+    "u08-ok-reply-1": {
+      "id": "u08-ok-reply-1",
+      "file": "audio/english-activities/73ee17556367191d4f8fc00d.mp3",
+      "text": "I am OK. Thank you.",
+      "spokenText": "I am OK. Thank you.",
+      "durationSeconds": 2.664,
+      "bytes": 43052
+    },
+    "u08-ok-reply-3": {
+      "id": "u08-ok-reply-3",
+      "file": "audio/english-activities/a49a0ff44951b3882664e749.mp3",
+      "text": "I am OK. Thanks!",
+      "spokenText": "I am OK. Thanks!",
+      "durationSeconds": 2.52,
+      "bytes": 40748
+    },
+    "u08-ok-prompt": {
+      "id": "u08-ok-prompt",
+      "file": "audio/english-activities/c61e935b93d873c0955cf61e.mp3",
+      "text": "Are you OK?",
+      "spokenText": "Are you OK?",
+      "durationSeconds": 1.416,
+      "bytes": 23084
+    },
+    "u08-ok-dialogue": {
+      "id": "u08-ok-dialogue",
+      "file": "audio/english-activities/b861a69227a01eb40405f220.mp3",
+      "text": "Are you OK? I am OK. Thank you.",
+      "spokenText": "Are you OK? I am OK. Thank you.",
+      "durationSeconds": 4.056,
+      "bytes": 65324
+    },
+    "u08-listen-clean": {
+      "id": "u08-listen-clean",
+      "file": "audio/english-activities/5c4714521433bd9e1be72f7f.mp3",
+      "text": "clean",
+      "spokenText": "clean",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "u08-listen-draw": {
+      "id": "u08-listen-draw",
+      "file": "audio/english-activities/dff765c3065d50ff8335a850.mp3",
+      "text": "draw",
+      "spokenText": "draw",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "u08-listen-sing": {
+      "id": "u08-listen-sing",
+      "file": "audio/english-activities/1edd5a4556235be9fded9c59.mp3",
+      "text": "sing",
+      "spokenText": "sing",
+      "durationSeconds": 0.96,
+      "bytes": 15788
+    },
+    "u08-listen-dance": {
+      "id": "u08-listen-dance",
+      "file": "audio/english-activities/95a1ef28c0a5daa33f9545f3.mp3",
+      "text": "dance",
+      "spokenText": "dance",
+      "durationSeconds": 1.104,
+      "bytes": 18092
+    },
+    "u08-listen-photo": {
+      "id": "u08-listen-photo",
+      "file": "audio/english-activities/10a05863bba0434332130017.mp3",
+      "text": "take pictures",
+      "spokenText": "take pictures",
+      "durationSeconds": 1.56,
+      "bytes": 25388
+    },
+    "u08-listen-table": {
+      "id": "u08-listen-table",
+      "file": "audio/english-activities/eb15b4d73ba51df4e06c1e6e.mp3",
+      "text": "table",
+      "spokenText": "table",
+      "durationSeconds": 1.032,
+      "bytes": 16940
+    },
+    "u06-cousin-reply-1": {
+      "id": "u06-cousin-reply-1",
+      "file": "audio/english-activities/2dbd847aa631d7d4349cbd67.mp3",
+      "text": "She is my cousin.",
+      "spokenText": "She is my cousin.",
+      "durationSeconds": 1.68,
+      "bytes": 27308
     }
   }
 }

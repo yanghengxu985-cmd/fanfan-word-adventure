@@ -901,5 +901,2995 @@
     "modelText": "Name.",
     "modelAudioId": "activity-048",
     "oralCue": "用 My name is 加上你自己的名字说一句话。"
+  },
+  {
+    "id": "en03-scene-yes",
+    "courseId": "en-03",
+    "kind": "scene",
+    "lexemeId": "en-03-word-05",
+    "scene": "你扮演 Lin。朋友想确认你的名字，问你是不是 Lin。请确认自己的身份。",
+    "picture": "identity-lin",
+    "promptText": "Are you Lin?",
+    "promptAudioId": "u03-yes-prompt",
+    "choices": [
+      {
+        "id": "en03-scene-yes-choice-1",
+        "text": "Yes, I am.",
+        "picture": "answer-yes",
+        "description": "确认自己就是 Lin",
+        "audioId": "u03-yes-reply-1"
+      },
+      {
+        "id": "en03-scene-yes-choice-2",
+        "text": "No, I am not.",
+        "picture": "answer-no",
+        "description": "否认自己是 Lin",
+        "audioId": "u03-yes-reply-2"
+      },
+      {
+        "id": "en03-scene-yes-choice-3",
+        "text": "Yes, I am Lin.",
+        "picture": "identity-lin",
+        "description": "确认名字是 Lin",
+        "audioId": "u03-yes-reply-3"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en03-scene-yes-choice-1",
+      "en03-scene-yes-choice-3"
+    ],
+    "explanation": "你扮演的角色确实是 Lin。Yes, I am 和 Yes, I am Lin 都能确认身份。",
+    "modelText": "Yes, I am.",
+    "modelAudioId": "u03-yes-reply-1",
+    "dialogueAudioId": "u03-yes-dialogue",
+    "oralCue": "朋友问 Are you Lin? 时，练习肯定回答。"
+  },
+  {
+    "id": "en03-scene-no",
+    "courseId": "en-03",
+    "kind": "scene",
+    "lexemeId": "en-03-word-03",
+    "scene": "你扮演 Lan。朋友把你当成 Lin，问你是不是 Lin。请否认并说出正确名字。",
+    "picture": "identity-lan",
+    "promptText": "Are you Lin?",
+    "promptAudioId": "u03-yes-prompt",
+    "choices": [
+      {
+        "id": "en03-scene-no-choice-1",
+        "text": "No, I am not. I am Lan.",
+        "picture": "identity-lan",
+        "description": "否认并介绍自己叫 Lan",
+        "audioId": "u03-no-reply-1"
+      },
+      {
+        "id": "en03-scene-no-choice-2",
+        "text": "Yes, I am Lin.",
+        "picture": "identity-lin",
+        "description": "说自己是 Lin",
+        "audioId": "u03-yes-reply-3"
+      },
+      {
+        "id": "en03-scene-no-choice-3",
+        "text": "No, I am not Lin. I am Lan.",
+        "picture": "answer-no",
+        "description": "说自己不是 Lin，而是 Lan",
+        "audioId": "u03-no-reply-3"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en03-scene-no-choice-1",
+      "en03-scene-no-choice-3"
+    ],
+    "explanation": "Lan 不是 Lin。两种 No 开头的回答都说明自己不是 Lin，并给出正确名字。",
+    "modelText": "No, I am not. I am Lan.",
+    "modelAudioId": "u03-no-reply-1",
+    "dialogueAudioId": "u03-no-dialogue",
+    "oralCue": "先说 No, I am not，再用 I am 介绍自己的名字。"
+  },
+  {
+    "id": "en03-scene-not",
+    "courseId": "en-03",
+    "kind": "scene",
+    "lexemeId": "en-03-word-04",
+    "scene": "你扮演 Lan。朋友问早时把你叫成 Lin。你也问早，并纠正他叫错的名字。",
+    "picture": "identity-lan",
+    "promptText": "Good morning, Lin!",
+    "promptAudioId": "u03-not-prompt",
+    "choices": [
+      {
+        "id": "en03-scene-not-choice-1",
+        "text": "Good morning. But I am not Lin. I am Lan.",
+        "picture": "identity-lan",
+        "description": "问早并说明自己不是 Lin",
+        "audioId": "u03-not-reply-1"
+      },
+      {
+        "id": "en03-scene-not-choice-2",
+        "text": "Good morning. I am Lin.",
+        "picture": "identity-lin",
+        "description": "问早并说自己叫 Lin",
+        "audioId": "u03-not-reply-2"
+      },
+      {
+        "id": "en03-scene-not-choice-3",
+        "text": "Good morning. I am not Lin. I am Lan.",
+        "picture": "answer-no",
+        "description": "问早并纠正自己的名字",
+        "audioId": "u03-not-reply-3"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en03-scene-not-choice-1",
+      "en03-scene-not-choice-3"
+    ],
+    "explanation": "not 用来否定。But I am not Lin 和 I am not Lin 都可以纠正叫错的名字。",
+    "modelText": "Good morning. But I am not Lin. I am Lan.",
+    "modelAudioId": "u03-not-reply-1",
+    "dialogueAudioId": "u03-not-dialogue",
+    "oralCue": "朋友叫错名字时，试着用 I am not 加名字纠正。"
+  },
+  {
+    "id": "en03-scene-here",
+    "courseId": "en-03",
+    "kind": "scene",
+    "lexemeId": "en-03-word-13",
+    "scene": "老师在找 Lin，叫了一声他的名字。你扮演 Lin，举手告诉老师“我在这里”。",
+    "picture": "here-i-am",
+    "promptText": "Lin!",
+    "promptAudioId": "u03-here-prompt",
+    "choices": [
+      {
+        "id": "en03-scene-here-choice-1",
+        "text": "Here I am!",
+        "picture": "here-i-am",
+        "description": "举手说自己在这里",
+        "audioId": "u03-here-reply-1"
+      },
+      {
+        "id": "en03-scene-here-choice-2",
+        "text": "I am Lan.",
+        "picture": "identity-lan",
+        "description": "说自己叫 Lan",
+        "audioId": "activity-016"
+      },
+      {
+        "id": "en03-scene-here-choice-3",
+        "text": "Goodbye!",
+        "picture": "goodbye",
+        "description": "向老师告别",
+        "audioId": "activity-003"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en03-scene-here-choice-1"
+    ],
+    "explanation": "有人找你时，可以举手说 Here I am!，告诉对方你在这里。",
+    "modelText": "Here I am!",
+    "modelAudioId": "u03-here-reply-1",
+    "dialogueAudioId": "u03-here-dialogue",
+    "oralCue": "假装老师叫到你的名字，举手说 Here I am!"
+  },
+  {
+    "id": "en03-scene-class",
+    "courseId": "en-03",
+    "kind": "scene",
+    "lexemeId": "en-03-word-09",
+    "scene": "你扮演 Lin，是2班的学生。朋友问你在哪个班，请告诉他你在2班。",
+    "picture": "class-team",
+    "promptText": "What class are you in?",
+    "promptAudioId": "u03-class-prompt",
+    "choices": [
+      {
+        "id": "en03-scene-class-choice-1",
+        "text": "I am in Class 2.",
+        "picture": "class-team",
+        "description": "说自己在2班",
+        "audioId": "u03-class-reply-1"
+      },
+      {
+        "id": "en03-scene-class-choice-2",
+        "text": "I am in Class 1.",
+        "picture": "class-team-1",
+        "description": "说自己在1班",
+        "audioId": "u03-class-reply-2"
+      },
+      {
+        "id": "en03-scene-class-choice-3",
+        "text": "I am Lan.",
+        "picture": "identity-lan",
+        "description": "介绍名字叫 Lan",
+        "audioId": "activity-016"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en03-scene-class-choice-1"
+    ],
+    "explanation": "这里的 class 表示班级。背景说 Lin 在2班，所以回答 I am in Class 2。",
+    "modelText": "I am in Class 2.",
+    "modelAudioId": "u03-class-reply-1",
+    "dialogueAudioId": "u03-class-dialogue",
+    "oralCue": "把 Class 2 换成你自己的班级，说说你在哪个班。"
+  },
+  {
+    "id": "en03-scene-sorry",
+    "courseId": "en-03",
+    "kind": "scene",
+    "lexemeId": "en-03-word-07",
+    "scene": "走路时你不小心轻轻碰到了朋友。他惊讶地说“哦”。请向他道歉。",
+    "picture": "sorry",
+    "promptText": "Oh!",
+    "promptAudioId": "u03-sorry-prompt",
+    "choices": [
+      {
+        "id": "en03-scene-sorry-choice-1",
+        "text": "I am sorry.",
+        "picture": "sorry",
+        "description": "为不小心碰到朋友道歉",
+        "audioId": "u03-sorry-reply-1"
+      },
+      {
+        "id": "en03-scene-sorry-choice-2",
+        "text": "Goodbye!",
+        "picture": "goodbye",
+        "description": "向朋友告别",
+        "audioId": "activity-003"
+      },
+      {
+        "id": "en03-scene-sorry-choice-3",
+        "text": "Sorry!",
+        "picture": "sorry",
+        "description": "简短地说对不起",
+        "audioId": "u03-sorry-reply-3"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en03-scene-sorry-choice-1",
+      "en03-scene-sorry-choice-3"
+    ],
+    "explanation": "不小心碰到别人时，I am sorry 和 Sorry 都可以表示道歉。",
+    "modelText": "I am sorry.",
+    "modelAudioId": "u03-sorry-reply-1",
+    "dialogueAudioId": "u03-sorry-dialogue",
+    "oralCue": "不小心碰到别人时，轻声说 Sorry 或 I am sorry。"
+  },
+  {
+    "id": "en03-listen-yes",
+    "courseId": "en-03",
+    "kind": "listening",
+    "lexemeId": "en-03-word-05",
+    "scene": "先听声音，再找意思相符的图片。",
+    "picture": "answer-yes",
+    "promptText": "yes",
+    "promptAudioId": "u03-listen-yes",
+    "choices": [
+      {
+        "id": "en03-listen-yes-choice-1",
+        "picture": "answer-yes",
+        "description": "点头表示“是、对”"
+      },
+      {
+        "id": "en03-listen-yes-choice-2",
+        "picture": "answer-no",
+        "description": "摇头表示“不是”"
+      },
+      {
+        "id": "en03-listen-yes-choice-3",
+        "picture": "sorry",
+        "description": "为碰到朋友道歉"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en03-listen-yes-choice-1"
+    ],
+    "explanation": "yes 表示肯定：是、对。",
+    "modelText": "yes",
+    "modelAudioId": "u03-listen-yes",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en03-listen-no",
+    "courseId": "en-03",
+    "kind": "listening",
+    "lexemeId": "en-03-word-03",
+    "scene": "先听声音，再找意思相符的图片。",
+    "picture": "answer-no",
+    "promptText": "no",
+    "promptAudioId": "u03-listen-no",
+    "choices": [
+      {
+        "id": "en03-listen-no-choice-1",
+        "picture": "answer-no",
+        "description": "摇头表示“不、不是”"
+      },
+      {
+        "id": "en03-listen-no-choice-2",
+        "picture": "answer-yes",
+        "description": "点头表示“是、对”"
+      },
+      {
+        "id": "en03-listen-no-choice-3",
+        "picture": "hello",
+        "description": "刚见面时问好"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en03-listen-no-choice-1"
+    ],
+    "explanation": "no 表示否定：不、不是。",
+    "modelText": "no",
+    "modelAudioId": "u03-listen-no",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en03-listen-here",
+    "courseId": "en-03",
+    "kind": "listening",
+    "lexemeId": "en-03-word-13",
+    "scene": "先听声音，再找意思相符的图片。",
+    "picture": "here-i-am",
+    "promptText": "Here I am!",
+    "promptAudioId": "u03-here-reply-1",
+    "choices": [
+      {
+        "id": "en03-listen-here-choice-1",
+        "picture": "here-i-am",
+        "description": "被叫到名字的小朋友举手报到"
+      },
+      {
+        "id": "en03-listen-here-choice-2",
+        "picture": "goodbye",
+        "description": "背着书包离开"
+      },
+      {
+        "id": "en03-listen-here-choice-3",
+        "picture": "sorry",
+        "description": "为碰到朋友道歉"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en03-listen-here-choice-1"
+    ],
+    "explanation": "Here I am! 可以回应找你或叫你名字的人。",
+    "modelText": "Here I am!",
+    "modelAudioId": "u03-here-reply-1",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en03-listen-we",
+    "courseId": "en-03",
+    "kind": "listening",
+    "lexemeId": "en-03-word-08",
+    "scene": "Lin 正和 Lan 站在一起。听声音，找他说的是一个人还是一组人。",
+    "picture": "we",
+    "promptText": "we",
+    "promptAudioId": "u03-listen-we",
+    "choices": [
+      {
+        "id": "en03-listen-we-choice-1",
+        "picture": "we",
+        "description": "说话的 Lin 和旁边的 Lan：我们"
+      },
+      {
+        "id": "en03-listen-we-choice-2",
+        "picture": "alone",
+        "description": "只有一个小朋友独自站着"
+      },
+      {
+        "id": "en03-listen-we-choice-3",
+        "picture": "cat",
+        "description": "一只猫"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en03-listen-we-choice-1"
+    ],
+    "explanation": "we 指说话的人自己和另外的人，是“我们”。",
+    "modelText": "we",
+    "modelAudioId": "u03-listen-we",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en03-listen-in",
+    "courseId": "en-03",
+    "kind": "listening",
+    "lexemeId": "en-03-word-10",
+    "scene": "先听声音，再找意思相符的图片。",
+    "picture": "inside",
+    "promptText": "in",
+    "promptAudioId": "u03-listen-in",
+    "choices": [
+      {
+        "id": "en03-listen-in-choice-1",
+        "picture": "inside",
+        "description": "猫在篮子里面"
+      },
+      {
+        "id": "en03-listen-in-choice-2",
+        "picture": "outside",
+        "description": "同一只猫在篮子外面"
+      },
+      {
+        "id": "en03-listen-in-choice-3",
+        "picture": "boy",
+        "description": "一个小男孩"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en03-listen-in-choice-1"
+    ],
+    "explanation": "in 在这个画面里表示“在里面”。",
+    "modelText": "in",
+    "modelAudioId": "u03-listen-in",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en03-listen-with",
+    "courseId": "en-03",
+    "kind": "listening",
+    "lexemeId": "en-03-word-11",
+    "scene": "先听声音，再找意思相符的图片。",
+    "picture": "together",
+    "promptText": "with",
+    "promptAudioId": "u03-listen-with",
+    "choices": [
+      {
+        "id": "en03-listen-with-choice-1",
+        "picture": "together",
+        "description": "Lin 和朋友一起站着"
+      },
+      {
+        "id": "en03-listen-with-choice-2",
+        "picture": "alone",
+        "description": "Lin 一个人独自站着"
+      },
+      {
+        "id": "en03-listen-with-choice-3",
+        "picture": "cat",
+        "description": "一只猫"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en03-listen-with-choice-1"
+    ],
+    "explanation": "with 在这个画面里表示“和朋友一起”。",
+    "modelText": "with",
+    "modelAudioId": "u03-listen-with",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en04-scene-friend",
+    "courseId": "en-04",
+    "kind": "scene",
+    "lexemeId": "en-04-word-02",
+    "scene": "你扮演 Lin。旁边的女孩 Lan 是你的朋友。老师问这是谁，请向老师介绍这位朋友。",
+    "picture": "friend",
+    "promptText": "Who is this?",
+    "promptAudioId": "u04-friend-prompt",
+    "choices": [
+      {
+        "id": "en04-scene-friend-choice-1",
+        "text": "This is Lan. She is my friend.",
+        "picture": "friend",
+        "description": "介绍朋友 Lan",
+        "audioId": "u04-friend-reply-1"
+      },
+      {
+        "id": "en04-scene-friend-choice-2",
+        "text": "This is Lin. He is my friend.",
+        "picture": "boy",
+        "description": "介绍另一个名字 Lin",
+        "audioId": "u04-friend-reply-2"
+      },
+      {
+        "id": "en04-scene-friend-choice-3",
+        "text": "This is my friend Lan.",
+        "picture": "friend",
+        "description": "说这是自己的朋友 Lan",
+        "audioId": "u04-friend-reply-3"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en04-scene-friend-choice-1",
+      "en04-scene-friend-choice-3"
+    ],
+    "explanation": "两种正确回答都介绍了朋友 Lan。friend 表示朋友，this is 可以用来介绍近处的人。",
+    "modelText": "This is Lan. She is my friend.",
+    "modelAudioId": "u04-friend-reply-1",
+    "dialogueAudioId": "u04-friend-dialogue",
+    "oralCue": "用 This is my friend 加名字，介绍一位自己的朋友。"
+  },
+  {
+    "id": "en04-scene-she",
+    "courseId": "en-04",
+    "kind": "scene",
+    "lexemeId": "en-04-word-03",
+    "scene": "你扮演 Lin，正在介绍朋友 Lan。背景告诉你 Lan 是女孩，请回答她是谁。",
+    "picture": "girl",
+    "promptText": "Who is she?",
+    "promptAudioId": "u04-she-prompt",
+    "choices": [
+      {
+        "id": "en04-scene-she-choice-1",
+        "text": "She is Lan. She is my friend.",
+        "picture": "girl",
+        "description": "用 she 介绍女孩 Lan",
+        "audioId": "u04-she-reply-1"
+      },
+      {
+        "id": "en04-scene-she-choice-2",
+        "text": "He is Lin. He is my friend.",
+        "picture": "boy",
+        "description": "用 he 介绍男孩 Lin",
+        "audioId": "u04-she-reply-2"
+      },
+      {
+        "id": "en04-scene-she-choice-3",
+        "text": "It is a cat.",
+        "picture": "cat",
+        "description": "介绍一只猫",
+        "audioId": "u04-she-reply-3"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en04-scene-she-choice-1"
+    ],
+    "explanation": "背景中的 Lan 是女孩。she 指她，不指介绍人的左右位置。",
+    "modelText": "She is Lan. She is my friend.",
+    "modelAudioId": "u04-she-reply-1",
+    "dialogueAudioId": "u04-she-dialogue",
+    "oralCue": "介绍这位女孩时，试着用 She is 加名字。"
+  },
+  {
+    "id": "en04-scene-he",
+    "courseId": "en-04",
+    "kind": "scene",
+    "lexemeId": "en-04-word-04",
+    "scene": "你扮演 Lan，正在介绍朋友 Lin。背景告诉你 Lin 是男孩，请回答他是谁。",
+    "picture": "boy",
+    "promptText": "Who is he?",
+    "promptAudioId": "u04-he-prompt",
+    "choices": [
+      {
+        "id": "en04-scene-he-choice-1",
+        "text": "He is Lin. He is my friend.",
+        "picture": "boy",
+        "description": "用 he 介绍男孩 Lin",
+        "audioId": "u04-she-reply-2"
+      },
+      {
+        "id": "en04-scene-he-choice-2",
+        "text": "She is Lan. She is my friend.",
+        "picture": "girl",
+        "description": "用 she 介绍女孩 Lan",
+        "audioId": "u04-she-reply-1"
+      },
+      {
+        "id": "en04-scene-he-choice-3",
+        "text": "It is a cat.",
+        "picture": "cat",
+        "description": "介绍一只猫",
+        "audioId": "u04-she-reply-3"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en04-scene-he-choice-1"
+    ],
+    "explanation": "背景中的 Lin 是男孩。he 指他；角色身份由故事说明，不靠衣服颜色猜。",
+    "modelText": "He is Lin. He is my friend.",
+    "modelAudioId": "u04-she-reply-2",
+    "dialogueAudioId": "u04-he-dialogue",
+    "oralCue": "介绍这位男孩时，试着用 He is 加名字。"
+  },
+  {
+    "id": "en04-scene-it",
+    "courseId": "en-04",
+    "kind": "scene",
+    "lexemeId": "en-04-word-05",
+    "scene": "你和朋友看见一只没有介绍名字的小猫。朋友问这是什么，请告诉他是一只猫。",
+    "picture": "cat",
+    "promptText": "What is this?",
+    "promptAudioId": "u04-it-prompt",
+    "choices": [
+      {
+        "id": "en04-scene-it-choice-1",
+        "text": "It is a cat.",
+        "picture": "cat",
+        "description": "说这是一只猫",
+        "audioId": "u04-she-reply-3"
+      },
+      {
+        "id": "en04-scene-it-choice-2",
+        "text": "He is Lin.",
+        "picture": "boy",
+        "description": "介绍男孩 Lin",
+        "audioId": "u04-it-reply-2"
+      },
+      {
+        "id": "en04-scene-it-choice-3",
+        "text": "She is Lan.",
+        "picture": "girl",
+        "description": "介绍女孩 Lan",
+        "audioId": "u04-it-reply-3"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en04-scene-it-choice-1"
+    ],
+    "explanation": "这里在说一只没有介绍名字的小猫，可以用 It is a cat。it 在本题是“它”；熟悉宠物时也可能用 he 或 she。",
+    "modelText": "It is a cat.",
+    "modelAudioId": "u04-she-reply-3",
+    "dialogueAudioId": "u04-it-dialogue",
+    "oralCue": "看着这只小猫，跟读 It is a cat。"
+  },
+  {
+    "id": "en04-scene-thanks",
+    "courseId": "en-04",
+    "kind": "scene",
+    "lexemeId": "en-04-word-09",
+    "scene": "朋友看见你的作品，夸它做得好。你是作品的制作者，请谢谢他的夸奖。",
+    "picture": "picture",
+    "promptText": "It is good!",
+    "promptAudioId": "u04-thanks-prompt",
+    "choices": [
+      {
+        "id": "en04-scene-thanks-choice-1",
+        "text": "Thank you.",
+        "picture": "thanks",
+        "description": "感谢对方的夸奖",
+        "audioId": "u04-thanks-reply-1"
+      },
+      {
+        "id": "en04-scene-thanks-choice-2",
+        "text": "Goodbye!",
+        "picture": "goodbye",
+        "description": "向对方告别",
+        "audioId": "activity-003"
+      },
+      {
+        "id": "en04-scene-thanks-choice-3",
+        "text": "Thanks!",
+        "picture": "thanks",
+        "description": "简短地谢谢对方",
+        "audioId": "u04-thanks-reply-3"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en04-scene-thanks-choice-1",
+      "en04-scene-thanks-choice-3"
+    ],
+    "explanation": "接受夸奖时可以说 Thank you 或 Thanks，两种回答都表示感谢。",
+    "modelText": "Thank you.",
+    "modelAudioId": "u04-thanks-reply-1",
+    "dialogueAudioId": "u04-thanks-dialogue",
+    "oralCue": "朋友夸你的作品时，微笑说 Thank you。"
+  },
+  {
+    "id": "en04-scene-have",
+    "courseId": "en-04",
+    "kind": "scene",
+    "lexemeId": "en-04-word-07",
+    "scene": "你扮演 Lin，手里拿着一本属于自己的书。朋友问这是什么，请用“我有”介绍这本书。",
+    "picture": "have",
+    "promptText": "What is this?",
+    "promptAudioId": "u04-it-prompt",
+    "choices": [
+      {
+        "id": "en04-scene-have-choice-1",
+        "text": "I have a book.",
+        "picture": "have",
+        "description": "说自己有一本书",
+        "audioId": "u04-have-reply-1"
+      },
+      {
+        "id": "en04-scene-have-choice-2",
+        "text": "I have a ball.",
+        "picture": "ball",
+        "description": "说自己有一个球",
+        "audioId": "u04-have-reply-2"
+      },
+      {
+        "id": "en04-scene-have-choice-3",
+        "text": "I have a cat.",
+        "picture": "cat",
+        "description": "说自己有一只猫",
+        "audioId": "u04-have-reply-3"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en04-scene-have-choice-1"
+    ],
+    "explanation": "have 表示有、持有。你拿着的是一本书，所以可以说 I have a book。",
+    "modelText": "I have a book.",
+    "modelAudioId": "u04-have-reply-1",
+    "dialogueAudioId": "u04-have-dialogue",
+    "oralCue": "拿起自己的一件物品，用 I have a 加物品名说一句话。"
+  },
+  {
+    "id": "en04-listen-friend",
+    "courseId": "en-04",
+    "kind": "listening",
+    "lexemeId": "en-04-word-02",
+    "scene": "先听声音，再找意思相符的图片。",
+    "picture": "friend",
+    "promptText": "My friend.",
+    "promptAudioId": "u04-listen-friend",
+    "choices": [
+      {
+        "id": "en04-listen-friend-choice-1",
+        "picture": "friend",
+        "description": "Lin 正在介绍他的朋友 Lan"
+      },
+      {
+        "id": "en04-listen-friend-choice-2",
+        "picture": "alone",
+        "description": "Lin 独自一人"
+      },
+      {
+        "id": "en04-listen-friend-choice-3",
+        "picture": "cat",
+        "description": "一只猫"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en04-listen-friend-choice-1"
+    ],
+    "explanation": "friend 是朋友。本题是从图中辨认朋友的场景，不单独证明能主动介绍朋友。",
+    "modelText": "My friend.",
+    "modelAudioId": "u04-listen-friend",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en04-listen-she",
+    "courseId": "en-04",
+    "kind": "listening",
+    "lexemeId": "en-04-word-03",
+    "scene": "Lin 是男孩，Lan 是女孩，还有一只猫。听声音，找指的是谁。",
+    "picture": "girl",
+    "promptText": "she",
+    "promptAudioId": "u04-listen-she",
+    "choices": [
+      {
+        "id": "en04-listen-she-choice-1",
+        "picture": "girl",
+        "description": "已介绍为女孩的 Lan：她"
+      },
+      {
+        "id": "en04-listen-she-choice-2",
+        "picture": "boy",
+        "description": "已介绍为男孩的 Lin：他"
+      },
+      {
+        "id": "en04-listen-she-choice-3",
+        "picture": "cat",
+        "description": "没有介绍名字的猫：它"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en04-listen-she-choice-1"
+    ],
+    "explanation": "she 指背景中已介绍为女孩的 Lan。",
+    "modelText": "she",
+    "modelAudioId": "u04-listen-she",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en04-listen-he",
+    "courseId": "en-04",
+    "kind": "listening",
+    "lexemeId": "en-04-word-04",
+    "scene": "Lin 是男孩，Lan 是女孩，还有一只猫。听声音，找指的是谁。",
+    "picture": "boy",
+    "promptText": "he",
+    "promptAudioId": "u04-listen-he",
+    "choices": [
+      {
+        "id": "en04-listen-he-choice-1",
+        "picture": "boy",
+        "description": "已介绍为男孩的 Lin：他"
+      },
+      {
+        "id": "en04-listen-he-choice-2",
+        "picture": "girl",
+        "description": "已介绍为女孩的 Lan：她"
+      },
+      {
+        "id": "en04-listen-he-choice-3",
+        "picture": "cat",
+        "description": "没有介绍名字的猫：它"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en04-listen-he-choice-1"
+    ],
+    "explanation": "he 指背景中已介绍为男孩的 Lin。",
+    "modelText": "he",
+    "modelAudioId": "u04-listen-he",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en04-listen-it",
+    "courseId": "en-04",
+    "kind": "listening",
+    "lexemeId": "en-04-word-05",
+    "scene": "Lin 是男孩，Lan 是女孩，还有一只没有介绍名字的猫。听声音，找指的是谁。",
+    "picture": "cat",
+    "promptText": "it",
+    "promptAudioId": "u04-listen-it",
+    "choices": [
+      {
+        "id": "en04-listen-it-choice-1",
+        "picture": "cat",
+        "description": "没有介绍名字的猫：它"
+      },
+      {
+        "id": "en04-listen-it-choice-2",
+        "picture": "boy",
+        "description": "已介绍为男孩的 Lin：他"
+      },
+      {
+        "id": "en04-listen-it-choice-3",
+        "picture": "girl",
+        "description": "已介绍为女孩的 Lan：她"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en04-listen-it-choice-1"
+    ],
+    "explanation": "本题用 it 指这只没有介绍名字的猫；不要把所有动物都规定只能用 it。",
+    "modelText": "it",
+    "modelAudioId": "u04-listen-it",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en04-listen-many",
+    "courseId": "en-04",
+    "kind": "listening",
+    "lexemeId": "en-04-word-08",
+    "scene": "先听声音，再找意思相符的图片。",
+    "picture": "many",
+    "promptText": "Many books.",
+    "promptAudioId": "u04-listen-many",
+    "choices": [
+      {
+        "id": "en04-listen-many-choice-1",
+        "picture": "many",
+        "description": "许多本书放在一起"
+      },
+      {
+        "id": "en04-listen-many-choice-2",
+        "picture": "book",
+        "description": "只有一本书"
+      },
+      {
+        "id": "en04-listen-many-choice-3",
+        "picture": "ball",
+        "description": "一个球"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en04-listen-many-choice-1"
+    ],
+    "explanation": "many 表示许多。books 是 book 的复数形式，本题只做听图匹配。",
+    "modelText": "Many books.",
+    "modelAudioId": "u04-listen-many",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en04-listen-have",
+    "courseId": "en-04",
+    "kind": "listening",
+    "lexemeId": "en-04-word-07",
+    "scene": "先听声音，再找意思相符的图片。",
+    "picture": "have",
+    "promptText": "I have a book.",
+    "promptAudioId": "u04-have-reply-1",
+    "choices": [
+      {
+        "id": "en04-listen-have-choice-1",
+        "picture": "have",
+        "description": "Lin 手里拿着属于自己的书"
+      },
+      {
+        "id": "en04-listen-have-choice-2",
+        "picture": "boy",
+        "description": "Lin 空着手"
+      },
+      {
+        "id": "en04-listen-have-choice-3",
+        "picture": "cat",
+        "description": "一只猫"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en04-listen-have-choice-1"
+    ],
+    "explanation": "整句 I have a book 表示“我有一本书”。本题的选择证据不等于单独掌握 have。",
+    "modelText": "I have a book.",
+    "modelAudioId": "u04-have-reply-1",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en05-scene-mother",
+    "courseId": "en-05",
+    "kind": "scene",
+    "lexemeId": "en-05-word-01",
+    "scene": "你扮演 Lin，正在介绍自己的家庭关系图。高亮的是你的妈妈，朋友问她是谁。",
+    "picture": "family-mother",
+    "promptText": "Who is she?",
+    "promptAudioId": "u04-she-prompt",
+    "choices": [
+      {
+        "id": "en05-scene-mother-choice-1",
+        "text": "She is my mother.",
+        "picture": "family-mother",
+        "description": "介绍她是自己的妈妈",
+        "audioId": "u05-mother-reply-1"
+      },
+      {
+        "id": "en05-scene-mother-choice-2",
+        "text": "She is my sister.",
+        "picture": "family-sister",
+        "description": "介绍她是自己的姐妹",
+        "audioId": "u05-mother-reply-2"
+      },
+      {
+        "id": "en05-scene-mother-choice-3",
+        "text": "She is my mum.",
+        "picture": "family-mother",
+        "description": "用 mum 介绍妈妈",
+        "audioId": "u05-mother-reply-3"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en05-scene-mother-choice-1",
+      "en05-scene-mother-choice-3"
+    ],
+    "explanation": "在以 Lin 为中心的关系图里，高亮的是妈妈。mother 和 mum 都能称呼妈妈。",
+    "modelText": "She is my mother.",
+    "modelAudioId": "u05-mother-reply-1",
+    "dialogueAudioId": "u05-mother-dialogue",
+    "oralCue": "用 She is my mother 或 She is my mum 介绍自己的妈妈。"
+  },
+  {
+    "id": "en05-scene-father",
+    "courseId": "en-05",
+    "kind": "scene",
+    "lexemeId": "en-05-word-02",
+    "scene": "你扮演 Lin，正在介绍自己的家庭关系图。高亮的是你的爸爸，朋友问他是谁。",
+    "picture": "family-father",
+    "promptText": "Who is he?",
+    "promptAudioId": "u04-he-prompt",
+    "choices": [
+      {
+        "id": "en05-scene-father-choice-1",
+        "text": "He is my father.",
+        "picture": "family-father",
+        "description": "介绍他是自己的爸爸",
+        "audioId": "u05-father-reply-1"
+      },
+      {
+        "id": "en05-scene-father-choice-2",
+        "text": "He is my brother.",
+        "picture": "family-brother",
+        "description": "介绍他是自己的兄弟",
+        "audioId": "u05-father-reply-2"
+      },
+      {
+        "id": "en05-scene-father-choice-3",
+        "text": "He is my dad.",
+        "picture": "family-father",
+        "description": "用 dad 介绍爸爸",
+        "audioId": "u05-father-reply-3"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en05-scene-father-choice-1",
+      "en05-scene-father-choice-3"
+    ],
+    "explanation": "关系图中的高亮人物是 Lin 的爸爸。father 和 dad 都是爸爸的称呼。",
+    "modelText": "He is my father.",
+    "modelAudioId": "u05-father-reply-1",
+    "dialogueAudioId": "u05-father-dialogue",
+    "oralCue": "用 He is my father 或 He is my dad 介绍自己的爸爸。"
+  },
+  {
+    "id": "en05-scene-brother",
+    "courseId": "en-05",
+    "kind": "scene",
+    "lexemeId": "en-05-word-05",
+    "scene": "你扮演 Lin。关系图高亮的是和你有相同父母的男孩，也就是你的兄弟。请回答朋友。",
+    "picture": "family-brother",
+    "promptText": "Who is he?",
+    "promptAudioId": "u04-he-prompt",
+    "choices": [
+      {
+        "id": "en05-scene-brother-choice-1",
+        "text": "He is my brother.",
+        "picture": "family-brother",
+        "description": "介绍自己的兄弟",
+        "audioId": "u05-father-reply-2"
+      },
+      {
+        "id": "en05-scene-brother-choice-2",
+        "text": "He is my father.",
+        "picture": "family-father",
+        "description": "介绍自己的爸爸",
+        "audioId": "u05-father-reply-1"
+      },
+      {
+        "id": "en05-scene-brother-choice-3",
+        "text": "She is my sister.",
+        "picture": "family-sister",
+        "description": "介绍自己的姐妹",
+        "audioId": "u05-mother-reply-2"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en05-scene-brother-choice-1"
+    ],
+    "explanation": "brother 可以指哥哥或弟弟；这张图通过与 Lin 共用的父母连线确定关系，不靠年龄猜。",
+    "modelText": "He is my brother.",
+    "modelAudioId": "u05-father-reply-2",
+    "dialogueAudioId": "u05-brother-dialogue",
+    "oralCue": "看着关系图，用 He is my brother 介绍高亮的男孩。"
+  },
+  {
+    "id": "en05-scene-sister",
+    "courseId": "en-05",
+    "kind": "scene",
+    "lexemeId": "en-05-word-07",
+    "scene": "你扮演 Lin。关系图高亮的是和你有相同父母的女孩，也就是你的姐妹。请回答朋友。",
+    "picture": "family-sister",
+    "promptText": "Who is she?",
+    "promptAudioId": "u04-she-prompt",
+    "choices": [
+      {
+        "id": "en05-scene-sister-choice-1",
+        "text": "She is my sister.",
+        "picture": "family-sister",
+        "description": "介绍自己的姐妹",
+        "audioId": "u05-mother-reply-2"
+      },
+      {
+        "id": "en05-scene-sister-choice-2",
+        "text": "She is my mother.",
+        "picture": "family-mother",
+        "description": "介绍自己的妈妈",
+        "audioId": "u05-mother-reply-1"
+      },
+      {
+        "id": "en05-scene-sister-choice-3",
+        "text": "He is my brother.",
+        "picture": "family-brother",
+        "description": "介绍自己的兄弟",
+        "audioId": "u05-father-reply-2"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en05-scene-sister-choice-1"
+    ],
+    "explanation": "sister 可以指姐姐或妹妹。高亮女孩和 Lin 有共同父母，所以是 Lin 的姐妹。",
+    "modelText": "She is my sister.",
+    "modelAudioId": "u05-mother-reply-2",
+    "dialogueAudioId": "u05-sister-dialogue",
+    "oralCue": "看着关系图，用 She is my sister 介绍高亮的女孩。"
+  },
+  {
+    "id": "en05-scene-evening",
+    "courseId": "en-05",
+    "kind": "scene",
+    "lexemeId": "en-05-word-16",
+    "scene": "晚上七点，朋友刚来到你家并向你问好。你也向刚见面的朋友问晚上好。",
+    "picture": "evening",
+    "promptText": "Good evening!",
+    "promptAudioId": "u05-evening-reply-1",
+    "choices": [
+      {
+        "id": "en05-scene-evening-choice-1",
+        "text": "Good evening!",
+        "picture": "evening",
+        "description": "晚上见面问好",
+        "audioId": "u05-evening-reply-1"
+      },
+      {
+        "id": "en05-scene-evening-choice-2",
+        "text": "Good morning!",
+        "picture": "morning",
+        "description": "早上见面问好",
+        "audioId": "activity-011"
+      },
+      {
+        "id": "en05-scene-evening-choice-3",
+        "text": "Good afternoon!",
+        "picture": "afternoon",
+        "description": "下午见面问好",
+        "audioId": "activity-010"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en05-scene-evening-choice-1"
+    ],
+    "explanation": "晚上见面可以说 Good evening。图中的19:00和月亮帮助分清时段。",
+    "modelText": "Good evening!",
+    "modelAudioId": "u05-evening-reply-1",
+    "dialogueAudioId": "u05-evening-dialogue",
+    "oralCue": "晚上见到家人或朋友时，试着说 Good evening。"
+  },
+  {
+    "id": "en05-scene-family",
+    "courseId": "en-05",
+    "kind": "scene",
+    "lexemeId": "en-05-word-14",
+    "scene": "你扮演 Lin，带朋友看自己的家庭关系图。请用“这是我的家人”介绍整组家人。",
+    "picture": "family-all",
+    "promptText": "Hello, Lin!",
+    "promptAudioId": "u05-family-prompt",
+    "choices": [
+      {
+        "id": "en05-scene-family-choice-1",
+        "text": "This is my family.",
+        "picture": "family-all",
+        "description": "介绍整组家人",
+        "audioId": "u05-family-reply-1"
+      },
+      {
+        "id": "en05-scene-family-choice-2",
+        "text": "This is my friend.",
+        "picture": "friend",
+        "description": "只介绍一位朋友",
+        "audioId": "u05-family-reply-2"
+      },
+      {
+        "id": "en05-scene-family-choice-3",
+        "text": "This is my cat.",
+        "picture": "cat",
+        "description": "只介绍一只猫",
+        "audioId": "u05-family-reply-3"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en05-scene-family-choice-1"
+    ],
+    "explanation": "family 指家庭、家人。高亮整组人物时，用 This is my family 来介绍家人。",
+    "modelText": "This is my family.",
+    "modelAudioId": "u05-family-reply-1",
+    "dialogueAudioId": "u05-family-dialogue",
+    "oralCue": "指着全家照片，用 This is my family 介绍家人。"
+  },
+  {
+    "id": "en05-listen-mother",
+    "courseId": "en-05",
+    "kind": "listening",
+    "lexemeId": "en-05-word-01",
+    "scene": "Lin 正在介绍自己的家庭关系图。听声音，找高亮的家人；Lin 是每张图里的同一个参照人物。",
+    "picture": "family-mother",
+    "promptText": "mother",
+    "promptAudioId": "u05-listen-mother",
+    "choices": [
+      {
+        "id": "en05-listen-mother-choice-1",
+        "picture": "family-mother",
+        "description": "Lin 的妈妈"
+      },
+      {
+        "id": "en05-listen-mother-choice-2",
+        "picture": "family-father",
+        "description": "Lin 的爸爸"
+      },
+      {
+        "id": "en05-listen-mother-choice-3",
+        "picture": "family-sister",
+        "description": "Lin 的姐妹"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en05-listen-mother-choice-1"
+    ],
+    "explanation": "这张关系图以 Lin 为中心，按父母与子女的连线认家人；听到的词与高亮人物或整组家人对应。",
+    "modelText": "mother",
+    "modelAudioId": "u05-listen-mother",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en05-listen-father",
+    "courseId": "en-05",
+    "kind": "listening",
+    "lexemeId": "en-05-word-02",
+    "scene": "Lin 正在介绍自己的家庭关系图。听声音，找高亮的家人；Lin 是每张图里的同一个参照人物。",
+    "picture": "family-father",
+    "promptText": "father",
+    "promptAudioId": "u05-listen-father",
+    "choices": [
+      {
+        "id": "en05-listen-father-choice-1",
+        "picture": "family-father",
+        "description": "Lin 的爸爸"
+      },
+      {
+        "id": "en05-listen-father-choice-2",
+        "picture": "family-mother",
+        "description": "Lin 的妈妈"
+      },
+      {
+        "id": "en05-listen-father-choice-3",
+        "picture": "family-brother",
+        "description": "Lin 的兄弟"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en05-listen-father-choice-1"
+    ],
+    "explanation": "这张关系图以 Lin 为中心，按父母与子女的连线认家人；听到的词与高亮人物或整组家人对应。",
+    "modelText": "father",
+    "modelAudioId": "u05-listen-father",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en05-listen-brother",
+    "courseId": "en-05",
+    "kind": "listening",
+    "lexemeId": "en-05-word-05",
+    "scene": "Lin 正在介绍自己的家庭关系图。听声音，找高亮的家人；Lin 是每张图里的同一个参照人物。",
+    "picture": "family-brother",
+    "promptText": "brother",
+    "promptAudioId": "u05-listen-brother",
+    "choices": [
+      {
+        "id": "en05-listen-brother-choice-1",
+        "picture": "family-brother",
+        "description": "和 Lin 有相同父母的兄弟"
+      },
+      {
+        "id": "en05-listen-brother-choice-2",
+        "picture": "family-father",
+        "description": "Lin 的爸爸"
+      },
+      {
+        "id": "en05-listen-brother-choice-3",
+        "picture": "family-sister",
+        "description": "Lin 的姐妹"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en05-listen-brother-choice-1"
+    ],
+    "explanation": "这张关系图以 Lin 为中心，按父母与子女的连线认家人；听到的词与高亮人物或整组家人对应。",
+    "modelText": "brother",
+    "modelAudioId": "u05-listen-brother",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en05-listen-sister",
+    "courseId": "en-05",
+    "kind": "listening",
+    "lexemeId": "en-05-word-07",
+    "scene": "Lin 正在介绍自己的家庭关系图。听声音，找高亮的家人；Lin 是每张图里的同一个参照人物。",
+    "picture": "family-sister",
+    "promptText": "sister",
+    "promptAudioId": "u05-listen-sister",
+    "choices": [
+      {
+        "id": "en05-listen-sister-choice-1",
+        "picture": "family-sister",
+        "description": "和 Lin 有相同父母的姐妹"
+      },
+      {
+        "id": "en05-listen-sister-choice-2",
+        "picture": "family-mother",
+        "description": "Lin 的妈妈"
+      },
+      {
+        "id": "en05-listen-sister-choice-3",
+        "picture": "family-brother",
+        "description": "Lin 的兄弟"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en05-listen-sister-choice-1"
+    ],
+    "explanation": "这张关系图以 Lin 为中心，按父母与子女的连线认家人；听到的词与高亮人物或整组家人对应。",
+    "modelText": "sister",
+    "modelAudioId": "u05-listen-sister",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en05-listen-baby",
+    "courseId": "en-05",
+    "kind": "listening",
+    "lexemeId": "en-05-word-06",
+    "scene": "Lin 正在介绍自己的家庭关系图。听声音，找高亮的家人；Lin 是每张图里的同一个参照人物。",
+    "picture": "family-baby",
+    "promptText": "baby",
+    "promptAudioId": "u05-listen-baby",
+    "choices": [
+      {
+        "id": "en05-listen-baby-choice-1",
+        "picture": "family-baby",
+        "description": "关系图中襁褓里的小宝宝"
+      },
+      {
+        "id": "en05-listen-baby-choice-2",
+        "picture": "family-brother",
+        "description": "已经能站立的兄弟"
+      },
+      {
+        "id": "en05-listen-baby-choice-3",
+        "picture": "family-father",
+        "description": "Lin 的爸爸"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en05-listen-baby-choice-1"
+    ],
+    "explanation": "这张关系图以 Lin 为中心，按父母与子女的连线认家人；听到的词与高亮人物或整组家人对应。",
+    "modelText": "baby",
+    "modelAudioId": "u05-listen-baby",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en05-listen-family",
+    "courseId": "en-05",
+    "kind": "listening",
+    "lexemeId": "en-05-word-14",
+    "scene": "Lin 正在介绍自己的家庭关系图。听声音，找高亮的家人；Lin 是每张图里的同一个参照人物。",
+    "picture": "family-all",
+    "promptText": "family",
+    "promptAudioId": "u05-listen-family",
+    "choices": [
+      {
+        "id": "en05-listen-family-choice-1",
+        "picture": "family-all",
+        "description": "以 Lin 为中心的整组家人"
+      },
+      {
+        "id": "en05-listen-family-choice-2",
+        "picture": "friend",
+        "description": "Lin 的一位朋友"
+      },
+      {
+        "id": "en05-listen-family-choice-3",
+        "picture": "cat",
+        "description": "一只猫"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en05-listen-family-choice-1"
+    ],
+    "explanation": "这张关系图以 Lin 为中心，按父母与子女的连线认家人；听到的词与高亮人物或整组家人对应。",
+    "modelText": "family",
+    "modelAudioId": "u05-listen-family",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en06-scene-grandfather",
+    "courseId": "en-06",
+    "kind": "scene",
+    "lexemeId": "en-06-word-01",
+    "scene": "你扮演 Lin，正在介绍自己的家庭关系图。高亮的是你爸爸的爸爸，也就是爷爷。请确认朋友的问话。",
+    "picture": "family-grandfather",
+    "promptText": "Is he your grandpa?",
+    "promptAudioId": "u06-grandfather-prompt",
+    "choices": [
+      {
+        "id": "en06-scene-grandfather-choice-1",
+        "text": "Yes, he is. He is my grandfather.",
+        "picture": "family-grandfather",
+        "description": "确认他是自己的祖父",
+        "audioId": "u06-grandfather-reply-1"
+      },
+      {
+        "id": "en06-scene-grandfather-choice-2",
+        "text": "No. He is my uncle.",
+        "picture": "family-uncle",
+        "description": "否认并说他是叔伯舅等亲属",
+        "audioId": "u06-grandfather-reply-2"
+      },
+      {
+        "id": "en06-scene-grandfather-choice-3",
+        "text": "Yes, he is my grandpa.",
+        "picture": "family-grandfather",
+        "description": "用 grandpa 确认爷爷的关系",
+        "audioId": "u06-grandfather-reply-3"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en06-scene-grandfather-choice-1",
+      "en06-scene-grandfather-choice-3"
+    ],
+    "explanation": "grandfather 和 grandpa 都能称呼祖父或外祖父。本题连线明确是 Lin 爸爸的爸爸，不能只按老人外表判断。",
+    "modelText": "Yes, he is. He is my grandfather.",
+    "modelAudioId": "u06-grandfather-reply-1",
+    "dialogueAudioId": "u06-grandfather-dialogue",
+    "oralCue": "对着关系图，用 He is my grandpa 或 He is my grandfather 介绍祖辈。"
+  },
+  {
+    "id": "en06-scene-grandmother",
+    "courseId": "en-06",
+    "kind": "scene",
+    "lexemeId": "en-06-word-04",
+    "scene": "你扮演 Lin，正在介绍自己的家庭关系图。高亮的是你爸爸的妈妈，也就是奶奶。请确认朋友的问话。",
+    "picture": "family-grandmother",
+    "promptText": "Is she your grandma?",
+    "promptAudioId": "u06-grandmother-prompt",
+    "choices": [
+      {
+        "id": "en06-scene-grandmother-choice-1",
+        "text": "Yes, she is. She is my grandmother.",
+        "picture": "family-grandmother",
+        "description": "确认她是自己的祖母",
+        "audioId": "u06-grandmother-reply-1"
+      },
+      {
+        "id": "en06-scene-grandmother-choice-2",
+        "text": "No. She is my aunt.",
+        "picture": "family-aunt",
+        "description": "否认并说她是姑姨等亲属",
+        "audioId": "u06-grandmother-reply-2"
+      },
+      {
+        "id": "en06-scene-grandmother-choice-3",
+        "text": "Yes, she is my grandma.",
+        "picture": "family-grandmother",
+        "description": "用 grandma 确认奶奶的关系",
+        "audioId": "u06-grandmother-reply-3"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en06-scene-grandmother-choice-1",
+      "en06-scene-grandmother-choice-3"
+    ],
+    "explanation": "grandmother 和 grandma 都能称呼祖母或外祖母。本题关系由父母与子女连线说明。",
+    "modelText": "Yes, she is. She is my grandmother.",
+    "modelAudioId": "u06-grandmother-reply-1",
+    "dialogueAudioId": "u06-grandmother-dialogue",
+    "oralCue": "对着关系图，用 She is my grandma 或 She is my grandmother 介绍祖辈。"
+  },
+  {
+    "id": "en06-scene-uncle",
+    "courseId": "en-06",
+    "kind": "scene",
+    "lexemeId": "en-06-word-02",
+    "scene": "你扮演 Lin，正在介绍自己的关系图。高亮男士是你爸爸的兄弟，请告诉朋友他是谁。",
+    "picture": "family-uncle",
+    "promptText": "Who is he?",
+    "promptAudioId": "u04-he-prompt",
+    "choices": [
+      {
+        "id": "en06-scene-uncle-choice-1",
+        "text": "He is my uncle.",
+        "picture": "family-uncle",
+        "description": "介绍爸爸的兄弟",
+        "audioId": "u06-uncle-reply-1"
+      },
+      {
+        "id": "en06-scene-uncle-choice-2",
+        "text": "He is my grandfather.",
+        "picture": "family-grandfather",
+        "description": "介绍爸爸的爸爸",
+        "audioId": "u06-uncle-reply-2"
+      },
+      {
+        "id": "en06-scene-uncle-choice-3",
+        "text": "He is my father.",
+        "picture": "family-father",
+        "description": "介绍自己的爸爸",
+        "audioId": "u05-father-reply-1"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en06-scene-uncle-choice-1"
+    ],
+    "explanation": "爸爸的兄弟可以称 uncle。这个词也可用于舅父等亲属，不能一律只译为叔叔。",
+    "modelText": "He is my uncle.",
+    "modelAudioId": "u06-uncle-reply-1",
+    "dialogueAudioId": "u06-uncle-dialogue",
+    "oralCue": "沿着家庭关系线，练习说 He is my uncle。"
+  },
+  {
+    "id": "en06-scene-aunt",
+    "courseId": "en-06",
+    "kind": "scene",
+    "lexemeId": "en-06-word-03",
+    "scene": "你扮演 Lin，正在介绍自己的关系图。高亮女士是你爸爸兄弟的妻子，请告诉朋友她是谁。",
+    "picture": "family-aunt",
+    "promptText": "Who is she?",
+    "promptAudioId": "u04-she-prompt",
+    "choices": [
+      {
+        "id": "en06-scene-aunt-choice-1",
+        "text": "She is my aunt.",
+        "picture": "family-aunt",
+        "description": "介绍爸爸兄弟的妻子",
+        "audioId": "u06-aunt-reply-1"
+      },
+      {
+        "id": "en06-scene-aunt-choice-2",
+        "text": "She is my grandmother.",
+        "picture": "family-grandmother",
+        "description": "介绍爸爸的妈妈",
+        "audioId": "u06-aunt-reply-2"
+      },
+      {
+        "id": "en06-scene-aunt-choice-3",
+        "text": "She is my mother.",
+        "picture": "family-mother",
+        "description": "介绍自己的妈妈",
+        "audioId": "u05-mother-reply-1"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en06-scene-aunt-choice-1"
+    ],
+    "explanation": "爸爸兄弟的妻子也可以称 aunt。本题通过伴侣线说明是婶婶或伯母；aunt 还可指姑母、姨母等亲属。",
+    "modelText": "She is my aunt.",
+    "modelAudioId": "u06-aunt-reply-1",
+    "dialogueAudioId": "u06-aunt-dialogue",
+    "oralCue": "沿着家庭关系线，练习说 She is my aunt。"
+  },
+  {
+    "id": "en06-scene-cousin",
+    "courseId": "en-06",
+    "kind": "scene",
+    "lexemeId": "en-06-word-05",
+    "scene": "你扮演 Lin，正在介绍自己的关系图。高亮女孩是你爸爸兄弟的孩子，请告诉朋友这是什么亲属关系。",
+    "picture": "family-cousin",
+    "promptText": "Who is she?",
+    "promptAudioId": "u04-she-prompt",
+    "choices": [
+      {
+        "id": "en06-scene-cousin-choice-1",
+        "text": "She is my cousin.",
+        "picture": "family-cousin",
+        "description": "介绍爸爸兄弟的孩子",
+        "audioId": "u06-cousin-reply-1"
+      },
+      {
+        "id": "en06-scene-cousin-choice-2",
+        "text": "She is my sister.",
+        "picture": "family-sister",
+        "description": "介绍与自己有相同父母的姐妹",
+        "audioId": "u05-mother-reply-2"
+      },
+      {
+        "id": "en06-scene-cousin-choice-3",
+        "text": "She is my aunt.",
+        "picture": "family-aunt",
+        "description": "介绍爸爸兄弟的妻子",
+        "audioId": "u06-aunt-reply-1"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en06-scene-cousin-choice-1"
+    ],
+    "explanation": "cousin 可以指堂兄弟姐妹或表兄弟姐妹，不限定男孩。本题特别说明高亮的是女孩，所以用 she。",
+    "modelText": "She is my cousin.",
+    "modelAudioId": "u06-cousin-reply-1",
+    "dialogueAudioId": "u06-cousin-dialogue",
+    "oralCue": "沿着关系线，介绍高亮的同辈亲属：She is my cousin。"
+  },
+  {
+    "id": "en06-scene-me",
+    "courseId": "en-06",
+    "kind": "scene",
+    "lexemeId": "en-06-word-07",
+    "scene": "你扮演 Lin。朋友拿着写有 Lin 的姓名照片，却问是不是 Lan。请纠正名字，并说这就是你自己。",
+    "picture": "identity-lin",
+    "promptText": "Is this Lan?",
+    "promptAudioId": "u06-me-prompt",
+    "choices": [
+      {
+        "id": "en06-scene-me-choice-1",
+        "text": "No. This is me. My name is Lin.",
+        "picture": "identity-lin",
+        "description": "说照片上的 Lin 就是自己",
+        "audioId": "u06-me-reply-1"
+      },
+      {
+        "id": "en06-scene-me-choice-2",
+        "text": "Yes. This is Lan.",
+        "picture": "identity-lan",
+        "description": "说照片上的人是 Lan",
+        "audioId": "u06-me-reply-2"
+      },
+      {
+        "id": "en06-scene-me-choice-3",
+        "text": "No. This is me. I am Lin.",
+        "picture": "identity-lin",
+        "description": "纠正名字并介绍自己是 Lin",
+        "audioId": "u06-me-reply-3"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en06-scene-me-choice-1",
+      "en06-scene-me-choice-3"
+    ],
+    "explanation": "me 在 This is me 中表示“我”。两种正确回答都把照片中的 Lin 和说话的自己对应起来。",
+    "modelText": "No. This is me. My name is Lin.",
+    "modelAudioId": "u06-me-reply-1",
+    "dialogueAudioId": "u06-me-dialogue",
+    "oralCue": "指着自己的照片，试着说 This is me。"
+  },
+  {
+    "id": "en06-listen-grandfather",
+    "courseId": "en-06",
+    "kind": "listening",
+    "lexemeId": "en-06-word-01",
+    "scene": "Lin 正在介绍自己的家庭关系图。每张图都以 Lin 为中心，听声音后找关系相符的高亮人物。",
+    "picture": "family-grandfather",
+    "promptText": "grandfather",
+    "promptAudioId": "u06-listen-grandfather",
+    "choices": [
+      {
+        "id": "en06-listen-grandfather-choice-1",
+        "picture": "family-grandfather",
+        "description": "Lin 的爸爸的爸爸"
+      },
+      {
+        "id": "en06-listen-grandfather-choice-2",
+        "picture": "family-uncle",
+        "description": "Lin 的爸爸的兄弟"
+      },
+      {
+        "id": "en06-listen-grandfather-choice-3",
+        "picture": "family-grandmother",
+        "description": "Lin 的爸爸的妈妈"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en06-listen-grandfather-choice-1"
+    ],
+    "explanation": "以 Lin 为参照，沿父母与子女连线确认高亮亲属；不要按年龄、性别或衣服猜关系。",
+    "modelText": "grandfather",
+    "modelAudioId": "u06-listen-grandfather",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en06-listen-grandmother",
+    "courseId": "en-06",
+    "kind": "listening",
+    "lexemeId": "en-06-word-04",
+    "scene": "Lin 正在介绍自己的家庭关系图。每张图都以 Lin 为中心，听声音后找关系相符的高亮人物。",
+    "picture": "family-grandmother",
+    "promptText": "grandmother",
+    "promptAudioId": "u06-listen-grandmother",
+    "choices": [
+      {
+        "id": "en06-listen-grandmother-choice-1",
+        "picture": "family-grandmother",
+        "description": "Lin 的爸爸的妈妈"
+      },
+      {
+        "id": "en06-listen-grandmother-choice-2",
+        "picture": "family-aunt",
+        "description": "Lin 的爸爸兄弟的妻子"
+      },
+      {
+        "id": "en06-listen-grandmother-choice-3",
+        "picture": "family-grandfather",
+        "description": "Lin 的爸爸的爸爸"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en06-listen-grandmother-choice-1"
+    ],
+    "explanation": "以 Lin 为参照，沿父母与子女连线确认高亮亲属；不要按年龄、性别或衣服猜关系。",
+    "modelText": "grandmother",
+    "modelAudioId": "u06-listen-grandmother",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en06-listen-uncle",
+    "courseId": "en-06",
+    "kind": "listening",
+    "lexemeId": "en-06-word-02",
+    "scene": "Lin 正在介绍自己的家庭关系图。每张图都以 Lin 为中心，听声音后找关系相符的高亮人物。",
+    "picture": "family-uncle",
+    "promptText": "uncle",
+    "promptAudioId": "u06-listen-uncle",
+    "choices": [
+      {
+        "id": "en06-listen-uncle-choice-1",
+        "picture": "family-uncle",
+        "description": "Lin 的爸爸的兄弟"
+      },
+      {
+        "id": "en06-listen-uncle-choice-2",
+        "picture": "family-father",
+        "description": "Lin 的爸爸"
+      },
+      {
+        "id": "en06-listen-uncle-choice-3",
+        "picture": "family-grandfather",
+        "description": "Lin 的爸爸的爸爸"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en06-listen-uncle-choice-1"
+    ],
+    "explanation": "以 Lin 为参照，沿父母与子女连线确认高亮亲属；不要按年龄、性别或衣服猜关系。",
+    "modelText": "uncle",
+    "modelAudioId": "u06-listen-uncle",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en06-listen-aunt",
+    "courseId": "en-06",
+    "kind": "listening",
+    "lexemeId": "en-06-word-03",
+    "scene": "Lin 正在介绍自己的家庭关系图。每张图都以 Lin 为中心，听声音后找关系相符的高亮人物。",
+    "picture": "family-aunt",
+    "promptText": "aunt",
+    "promptAudioId": "u06-listen-aunt",
+    "choices": [
+      {
+        "id": "en06-listen-aunt-choice-1",
+        "picture": "family-aunt",
+        "description": "Lin 的爸爸兄弟的妻子"
+      },
+      {
+        "id": "en06-listen-aunt-choice-2",
+        "picture": "family-mother",
+        "description": "Lin 的妈妈"
+      },
+      {
+        "id": "en06-listen-aunt-choice-3",
+        "picture": "family-grandmother",
+        "description": "Lin 的爸爸的妈妈"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en06-listen-aunt-choice-1"
+    ],
+    "explanation": "以 Lin 为参照，沿父母与子女连线确认高亮亲属；不要按年龄、性别或衣服猜关系。",
+    "modelText": "aunt",
+    "modelAudioId": "u06-listen-aunt",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en06-listen-cousin",
+    "courseId": "en-06",
+    "kind": "listening",
+    "lexemeId": "en-06-word-05",
+    "scene": "Lin 正在介绍自己的家庭关系图。每张图都以 Lin 为中心，听声音后找关系相符的高亮人物。",
+    "picture": "family-cousin",
+    "promptText": "cousin",
+    "promptAudioId": "u06-listen-cousin",
+    "choices": [
+      {
+        "id": "en06-listen-cousin-choice-1",
+        "picture": "family-cousin",
+        "description": "Lin 的爸爸兄弟的孩子"
+      },
+      {
+        "id": "en06-listen-cousin-choice-2",
+        "picture": "family-brother",
+        "description": "与 Lin 有相同父母的兄弟"
+      },
+      {
+        "id": "en06-listen-cousin-choice-3",
+        "picture": "family-uncle",
+        "description": "Lin 的爸爸的兄弟"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en06-listen-cousin-choice-1"
+    ],
+    "explanation": "以 Lin 为参照，沿父母与子女连线确认高亮亲属；不要按年龄、性别或衣服猜关系。",
+    "modelText": "cousin",
+    "modelAudioId": "u06-listen-cousin",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en06-listen-me",
+    "courseId": "en-06",
+    "kind": "listening",
+    "lexemeId": "en-06-word-07",
+    "scene": "Lin 正在对 Lan 说话。听声音，找他说的是哪张姓名照片。",
+    "picture": "identity-lin",
+    "promptText": "me",
+    "promptAudioId": "u06-listen-me",
+    "choices": [
+      {
+        "id": "en06-listen-me-choice-1",
+        "picture": "identity-lin",
+        "description": "说话者 Lin 自己的姓名照片"
+      },
+      {
+        "id": "en06-listen-me-choice-2",
+        "picture": "identity-lan",
+        "description": "听话者 Lan 的姓名照片"
+      },
+      {
+        "id": "en06-listen-me-choice-3",
+        "picture": "cat",
+        "description": "一只猫"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en06-listen-me-choice-1"
+    ],
+    "explanation": "本题已说明 Lin 正在说话，me 指说话的 Lin 自己；不是听话的 Lan，也不固定指左边的人。",
+    "modelText": "me",
+    "modelAudioId": "u06-listen-me",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en07-scene-birthday",
+    "courseId": "en-07",
+    "kind": "scene",
+    "lexemeId": "en-07-word-25",
+    "scene": "今天是你的生日。朋友向你送上生日祝福，请谢谢他的祝福。",
+    "picture": "birthday",
+    "promptText": "Happy birthday!",
+    "promptAudioId": "u07-birthday-prompt",
+    "choices": [
+      {
+        "id": "en07-scene-birthday-choice-1",
+        "text": "Thank you!",
+        "picture": "thanks",
+        "description": "感谢朋友的生日祝福",
+        "audioId": "u07-birthday-reply-1"
+      },
+      {
+        "id": "en07-scene-birthday-choice-2",
+        "text": "Goodbye!",
+        "picture": "goodbye",
+        "description": "告别朋友",
+        "audioId": "activity-003"
+      },
+      {
+        "id": "en07-scene-birthday-choice-3",
+        "text": "Thanks!",
+        "picture": "thanks",
+        "description": "简短地感谢生日祝福",
+        "audioId": "u04-thanks-reply-3"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en07-scene-birthday-choice-1",
+      "en07-scene-birthday-choice-3"
+    ],
+    "explanation": "别人祝你生日快乐时，Thank you 和 Thanks 都是合适的感谢。",
+    "modelText": "Thank you!",
+    "modelAudioId": "u07-birthday-reply-1",
+    "dialogueAudioId": "u07-birthday-dialogue",
+    "oralCue": "朋友说 Happy birthday! 时，用 Thank you 或 Thanks 回应。"
+  },
+  {
+    "id": "en07-scene-age",
+    "courseId": "en-07",
+    "kind": "scene",
+    "lexemeId": "en-07-word-29",
+    "scene": "你扮演 Lin，今天正好八岁。朋友问你几岁，请告诉他你的年龄是八岁。",
+    "picture": "number-8",
+    "promptText": "How old are you?",
+    "promptAudioId": "u07-age-prompt",
+    "choices": [
+      {
+        "id": "en07-scene-age-choice-1",
+        "text": "I am eight.",
+        "picture": "number-8",
+        "description": "说自己八岁",
+        "audioId": "u07-age-reply-1"
+      },
+      {
+        "id": "en07-scene-age-choice-2",
+        "text": "I am seven.",
+        "picture": "number-7",
+        "description": "说自己七岁",
+        "audioId": "u07-age-reply-2"
+      },
+      {
+        "id": "en07-scene-age-choice-3",
+        "text": "Eight.",
+        "picture": "number-8",
+        "description": "用数字八简短回答年龄",
+        "audioId": "u07-age-reply-3"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en07-scene-age-choice-1",
+      "en07-scene-age-choice-3"
+    ],
+    "explanation": "背景中的 Lin 是八岁，I am eight 和 Eight 都可以回答年龄。年龄不等于生日蛋糕上装饰物的数量。",
+    "modelText": "I am eight.",
+    "modelAudioId": "u07-age-reply-1",
+    "dialogueAudioId": "u07-age-dialogue",
+    "oralCue": "把 eight 换成自己的年龄，回答 How old are you?"
+  },
+  {
+    "id": "en07-scene-want",
+    "courseId": "en-07",
+    "kind": "scene",
+    "lexemeId": "en-07-word-12",
+    "scene": "你想买的是一本书，店员向你问好。请礼貌地告诉店员你想要一本书。",
+    "picture": "book",
+    "promptText": "Hello!",
+    "promptAudioId": "activity-001",
+    "choices": [
+      {
+        "id": "en07-scene-want-choice-1",
+        "text": "I want a book, please.",
+        "picture": "book",
+        "description": "礼貌地说想要一本书",
+        "audioId": "u07-want-reply-1"
+      },
+      {
+        "id": "en07-scene-want-choice-2",
+        "text": "I want a ball, please.",
+        "picture": "ball",
+        "description": "说想要一个球",
+        "audioId": "u07-want-reply-2"
+      },
+      {
+        "id": "en07-scene-want-choice-3",
+        "text": "A book, please.",
+        "picture": "book",
+        "description": "简短地说请给一本书",
+        "audioId": "u07-want-reply-3"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en07-scene-want-choice-1",
+      "en07-scene-want-choice-3"
+    ],
+    "explanation": "want 表示想要，please 可以让请求更礼貌。两种正确回答都在要一本书。",
+    "modelText": "I want a book, please.",
+    "modelAudioId": "u07-want-reply-1",
+    "dialogueAudioId": "u07-want-dialogue",
+    "oralCue": "看着你想要的礼物，用 I want a 加物品名和 please 说一句话。"
+  },
+  {
+    "id": "en07-scene-help",
+    "courseId": "en-07",
+    "kind": "scene",
+    "lexemeId": "en-07-word-28",
+    "scene": "你正准备搬一个纸箱，需要朋友帮忙。朋友问能不能帮助你，请接受他的帮助。",
+    "picture": "help",
+    "promptText": "Can I help you?",
+    "promptAudioId": "u07-help-prompt",
+    "choices": [
+      {
+        "id": "en07-scene-help-choice-1",
+        "text": "Yes, please.",
+        "picture": "help",
+        "description": "接受朋友主动提供的帮助",
+        "audioId": "u07-help-reply-1"
+      },
+      {
+        "id": "en07-scene-help-choice-2",
+        "text": "Goodbye!",
+        "picture": "goodbye",
+        "description": "向朋友告别",
+        "audioId": "activity-003"
+      },
+      {
+        "id": "en07-scene-help-choice-3",
+        "text": "No, thank you.",
+        "picture": "alone",
+        "description": "礼貌地谢绝帮助",
+        "audioId": "u07-help-reply-3"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en07-scene-help-choice-1"
+    ],
+    "explanation": "本题说明你确实需要帮助，所以用 Yes, please 接受。若实际不需要帮助，No, thank you 也很礼貌。",
+    "modelText": "Yes, please.",
+    "modelAudioId": "u07-help-reply-1",
+    "dialogueAudioId": "u07-help-dialogue",
+    "oralCue": "朋友问 Can I help you?，需要帮助时回答 Yes, please。"
+  },
+  {
+    "id": "en07-scene-gift",
+    "courseId": "en-07",
+    "kind": "scene",
+    "lexemeId": "en-07-word-30",
+    "scene": "你是送礼物的人，正把礼物递给朋友。朋友向你问好，请边递礼物边说“给你”。",
+    "picture": "gift",
+    "promptText": "Hello!",
+    "promptAudioId": "activity-001",
+    "choices": [
+      {
+        "id": "en07-scene-gift-choice-1",
+        "text": "Here you are.",
+        "picture": "gift",
+        "description": "送礼物的人递出礼物",
+        "audioId": "u07-gift-reply-1"
+      },
+      {
+        "id": "en07-scene-gift-choice-2",
+        "text": "Thank you.",
+        "picture": "thanks",
+        "description": "收到礼物的人表示感谢",
+        "audioId": "u04-thanks-reply-1"
+      },
+      {
+        "id": "en07-scene-gift-choice-3",
+        "text": "Goodbye!",
+        "picture": "goodbye",
+        "description": "转身告别",
+        "audioId": "activity-003"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en07-scene-gift-choice-1"
+    ],
+    "explanation": "Here you are 常由递东西的人说。Thank you 通常是收到东西的人表达感谢，本题把送礼物的角色说清楚了。",
+    "modelText": "Here you are.",
+    "modelAudioId": "u07-gift-reply-1",
+    "dialogueAudioId": "u07-gift-dialogue",
+    "oralCue": "假装递出礼物，试着说 Here you are。"
+  },
+  {
+    "id": "en07-scene-welcome",
+    "courseId": "en-07",
+    "kind": "scene",
+    "lexemeId": "en-07-word-31",
+    "scene": "你刚给朋友递了书本，朋友向你道谢。你是递书本的人，请回应他的感谢，说“不客气”。",
+    "picture": "welcome",
+    "promptText": "Thank you!",
+    "promptAudioId": "u07-birthday-reply-1",
+    "choices": [
+      {
+        "id": "en07-scene-welcome-choice-1",
+        "text": "You are welcome.",
+        "picture": "welcome",
+        "description": "递书本的人回应感谢",
+        "audioId": "u07-welcome-reply-1"
+      },
+      {
+        "id": "en07-scene-welcome-choice-2",
+        "text": "Goodbye!",
+        "picture": "goodbye",
+        "description": "向朋友告别",
+        "audioId": "activity-003"
+      },
+      {
+        "id": "en07-scene-welcome-choice-3",
+        "text": "You're welcome.",
+        "picture": "welcome",
+        "description": "用缩略式回应不客气",
+        "audioId": "u07-welcome-reply-3"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en07-scene-welcome-choice-1",
+      "en07-scene-welcome-choice-3"
+    ],
+    "explanation": "You're welcome 和 You are welcome 都可以回应感谢。你此时是刚帮助朋友递书本的人。",
+    "modelText": "You are welcome.",
+    "modelAudioId": "u07-welcome-reply-1",
+    "dialogueAudioId": "u07-welcome-dialogue",
+    "oralCue": "朋友向你说 Thank you 时，练习回答 You are welcome。"
+  },
+  {
+    "id": "en07-listen-number-1",
+    "courseId": "en-07",
+    "kind": "listening",
+    "lexemeId": "en-07-word-01",
+    "scene": "听清一个数字，找写着同一数字和相同数量圆点的图片。",
+    "picture": "number-1",
+    "promptText": "one",
+    "promptAudioId": "u07-listen-number-1",
+    "choices": [
+      {
+        "id": "en07-listen-number-1-choice-1",
+        "picture": "number-1",
+        "description": "数字1和1个清楚分开的圆点"
+      },
+      {
+        "id": "en07-listen-number-1-choice-2",
+        "picture": "number-2",
+        "description": "数字2和2个圆点"
+      },
+      {
+        "id": "en07-listen-number-1-choice-3",
+        "picture": "number-6",
+        "description": "数字6和6个圆点"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en07-listen-number-1-choice-1"
+    ],
+    "explanation": "one 对应数字1。这里直接听数字找数量，不依赖从一顺着背到十。",
+    "modelText": "one",
+    "modelAudioId": "u07-listen-number-1",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en07-listen-number-2",
+    "courseId": "en-07",
+    "kind": "listening",
+    "lexemeId": "en-07-word-02",
+    "scene": "听清一个数字，找写着同一数字和相同数量圆点的图片。",
+    "picture": "number-2",
+    "promptText": "two",
+    "promptAudioId": "u07-listen-number-2",
+    "choices": [
+      {
+        "id": "en07-listen-number-2-choice-1",
+        "picture": "number-2",
+        "description": "数字2和2个清楚分开的圆点"
+      },
+      {
+        "id": "en07-listen-number-2-choice-2",
+        "picture": "number-3",
+        "description": "数字3和3个圆点"
+      },
+      {
+        "id": "en07-listen-number-2-choice-3",
+        "picture": "number-7",
+        "description": "数字7和7个圆点"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en07-listen-number-2-choice-1"
+    ],
+    "explanation": "two 对应数字2。这里直接听数字找数量，不依赖从一顺着背到十。",
+    "modelText": "two",
+    "modelAudioId": "u07-listen-number-2",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en07-listen-number-3",
+    "courseId": "en-07",
+    "kind": "listening",
+    "lexemeId": "en-07-word-03",
+    "scene": "听清一个数字，找写着同一数字和相同数量圆点的图片。",
+    "picture": "number-3",
+    "promptText": "three",
+    "promptAudioId": "u07-listen-number-3",
+    "choices": [
+      {
+        "id": "en07-listen-number-3-choice-1",
+        "picture": "number-3",
+        "description": "数字3和3个清楚分开的圆点"
+      },
+      {
+        "id": "en07-listen-number-3-choice-2",
+        "picture": "number-4",
+        "description": "数字4和4个圆点"
+      },
+      {
+        "id": "en07-listen-number-3-choice-3",
+        "picture": "number-8",
+        "description": "数字8和8个圆点"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en07-listen-number-3-choice-1"
+    ],
+    "explanation": "three 对应数字3。这里直接听数字找数量，不依赖从一顺着背到十。",
+    "modelText": "three",
+    "modelAudioId": "u07-listen-number-3",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en07-listen-number-4",
+    "courseId": "en-07",
+    "kind": "listening",
+    "lexemeId": "en-07-word-04",
+    "scene": "听清一个数字，找写着同一数字和相同数量圆点的图片。",
+    "picture": "number-4",
+    "promptText": "four",
+    "promptAudioId": "u07-listen-number-4",
+    "choices": [
+      {
+        "id": "en07-listen-number-4-choice-1",
+        "picture": "number-4",
+        "description": "数字4和4个清楚分开的圆点"
+      },
+      {
+        "id": "en07-listen-number-4-choice-2",
+        "picture": "number-5",
+        "description": "数字5和5个圆点"
+      },
+      {
+        "id": "en07-listen-number-4-choice-3",
+        "picture": "number-9",
+        "description": "数字9和9个圆点"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en07-listen-number-4-choice-1"
+    ],
+    "explanation": "four 对应数字4。这里直接听数字找数量，不依赖从一顺着背到十。",
+    "modelText": "four",
+    "modelAudioId": "u07-listen-number-4",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en07-listen-number-5",
+    "courseId": "en-07",
+    "kind": "listening",
+    "lexemeId": "en-07-word-05",
+    "scene": "听清一个数字，找写着同一数字和相同数量圆点的图片。",
+    "picture": "number-5",
+    "promptText": "five",
+    "promptAudioId": "u07-listen-number-5",
+    "choices": [
+      {
+        "id": "en07-listen-number-5-choice-1",
+        "picture": "number-5",
+        "description": "数字5和5个清楚分开的圆点"
+      },
+      {
+        "id": "en07-listen-number-5-choice-2",
+        "picture": "number-6",
+        "description": "数字6和6个圆点"
+      },
+      {
+        "id": "en07-listen-number-5-choice-3",
+        "picture": "number-10",
+        "description": "数字10和10个圆点"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en07-listen-number-5-choice-1"
+    ],
+    "explanation": "five 对应数字5。这里直接听数字找数量，不依赖从一顺着背到十。",
+    "modelText": "five",
+    "modelAudioId": "u07-listen-number-5",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en07-listen-number-6",
+    "courseId": "en-07",
+    "kind": "listening",
+    "lexemeId": "en-07-word-06",
+    "scene": "听清一个数字，找写着同一数字和相同数量圆点的图片。",
+    "picture": "number-6",
+    "promptText": "six",
+    "promptAudioId": "u07-listen-number-6",
+    "choices": [
+      {
+        "id": "en07-listen-number-6-choice-1",
+        "picture": "number-6",
+        "description": "数字6和6个清楚分开的圆点"
+      },
+      {
+        "id": "en07-listen-number-6-choice-2",
+        "picture": "number-7",
+        "description": "数字7和7个圆点"
+      },
+      {
+        "id": "en07-listen-number-6-choice-3",
+        "picture": "number-1",
+        "description": "数字1和1个圆点"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en07-listen-number-6-choice-1"
+    ],
+    "explanation": "six 对应数字6。这里直接听数字找数量，不依赖从一顺着背到十。",
+    "modelText": "six",
+    "modelAudioId": "u07-listen-number-6",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en07-listen-number-7",
+    "courseId": "en-07",
+    "kind": "listening",
+    "lexemeId": "en-07-word-07",
+    "scene": "听清一个数字，找写着同一数字和相同数量圆点的图片。",
+    "picture": "number-7",
+    "promptText": "seven",
+    "promptAudioId": "u07-listen-number-7",
+    "choices": [
+      {
+        "id": "en07-listen-number-7-choice-1",
+        "picture": "number-7",
+        "description": "数字7和7个清楚分开的圆点"
+      },
+      {
+        "id": "en07-listen-number-7-choice-2",
+        "picture": "number-8",
+        "description": "数字8和8个圆点"
+      },
+      {
+        "id": "en07-listen-number-7-choice-3",
+        "picture": "number-2",
+        "description": "数字2和2个圆点"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en07-listen-number-7-choice-1"
+    ],
+    "explanation": "seven 对应数字7。这里直接听数字找数量，不依赖从一顺着背到十。",
+    "modelText": "seven",
+    "modelAudioId": "u07-listen-number-7",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en07-listen-number-8",
+    "courseId": "en-07",
+    "kind": "listening",
+    "lexemeId": "en-07-word-08",
+    "scene": "听清一个数字，找写着同一数字和相同数量圆点的图片。",
+    "picture": "number-8",
+    "promptText": "eight",
+    "promptAudioId": "u07-listen-number-8",
+    "choices": [
+      {
+        "id": "en07-listen-number-8-choice-1",
+        "picture": "number-8",
+        "description": "数字8和8个清楚分开的圆点"
+      },
+      {
+        "id": "en07-listen-number-8-choice-2",
+        "picture": "number-9",
+        "description": "数字9和9个圆点"
+      },
+      {
+        "id": "en07-listen-number-8-choice-3",
+        "picture": "number-3",
+        "description": "数字3和3个圆点"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en07-listen-number-8-choice-1"
+    ],
+    "explanation": "eight 对应数字8。这里直接听数字找数量，不依赖从一顺着背到十。",
+    "modelText": "eight",
+    "modelAudioId": "u07-listen-number-8",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en07-listen-number-9",
+    "courseId": "en-07",
+    "kind": "listening",
+    "lexemeId": "en-07-word-09",
+    "scene": "听清一个数字，找写着同一数字和相同数量圆点的图片。",
+    "picture": "number-9",
+    "promptText": "nine",
+    "promptAudioId": "u07-listen-number-9",
+    "choices": [
+      {
+        "id": "en07-listen-number-9-choice-1",
+        "picture": "number-9",
+        "description": "数字9和9个清楚分开的圆点"
+      },
+      {
+        "id": "en07-listen-number-9-choice-2",
+        "picture": "number-10",
+        "description": "数字10和10个圆点"
+      },
+      {
+        "id": "en07-listen-number-9-choice-3",
+        "picture": "number-4",
+        "description": "数字4和4个圆点"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en07-listen-number-9-choice-1"
+    ],
+    "explanation": "nine 对应数字9。这里直接听数字找数量，不依赖从一顺着背到十。",
+    "modelText": "nine",
+    "modelAudioId": "u07-listen-number-9",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en07-listen-number-10",
+    "courseId": "en-07",
+    "kind": "listening",
+    "lexemeId": "en-07-word-10",
+    "scene": "听清一个数字，找写着同一数字和相同数量圆点的图片。",
+    "picture": "number-10",
+    "promptText": "ten",
+    "promptAudioId": "u07-listen-number-10",
+    "choices": [
+      {
+        "id": "en07-listen-number-10-choice-1",
+        "picture": "number-10",
+        "description": "数字10和10个清楚分开的圆点"
+      },
+      {
+        "id": "en07-listen-number-10-choice-2",
+        "picture": "number-1",
+        "description": "数字1和1个圆点"
+      },
+      {
+        "id": "en07-listen-number-10-choice-3",
+        "picture": "number-5",
+        "description": "数字5和5个圆点"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en07-listen-number-10-choice-1"
+    ],
+    "explanation": "ten 对应数字10。这里直接听数字找数量，不依赖从一顺着背到十。",
+    "modelText": "ten",
+    "modelAudioId": "u07-listen-number-10",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en07-listen-car",
+    "courseId": "en-07",
+    "kind": "listening",
+    "lexemeId": "en-07-word-13",
+    "scene": "先听声音，再找意思相符的图片。",
+    "picture": "car",
+    "promptText": "car",
+    "promptAudioId": "u07-listen-car",
+    "choices": [
+      {
+        "id": "en07-listen-car-choice-1",
+        "picture": "car",
+        "description": "一辆玩具小汽车"
+      },
+      {
+        "id": "en07-listen-car-choice-2",
+        "picture": "book",
+        "description": "一本书"
+      },
+      {
+        "id": "en07-listen-car-choice-3",
+        "picture": "ball",
+        "description": "一个球"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en07-listen-car-choice-1"
+    ],
+    "explanation": "听声音，把物品名称和图片相对应。",
+    "modelText": "car",
+    "modelAudioId": "u07-listen-car",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en07-listen-book",
+    "courseId": "en-07",
+    "kind": "listening",
+    "lexemeId": "en-07-word-14",
+    "scene": "先听声音，再找意思相符的图片。",
+    "picture": "book",
+    "promptText": "book",
+    "promptAudioId": "u07-listen-book",
+    "choices": [
+      {
+        "id": "en07-listen-book-choice-1",
+        "picture": "book",
+        "description": "一本书"
+      },
+      {
+        "id": "en07-listen-book-choice-2",
+        "picture": "ball",
+        "description": "一个球"
+      },
+      {
+        "id": "en07-listen-book-choice-3",
+        "picture": "cake",
+        "description": "一块蛋糕"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en07-listen-book-choice-1"
+    ],
+    "explanation": "听声音，把物品名称和图片相对应。",
+    "modelText": "book",
+    "modelAudioId": "u07-listen-book",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en07-listen-ball",
+    "courseId": "en-07",
+    "kind": "listening",
+    "lexemeId": "en-07-word-15",
+    "scene": "先听声音，再找意思相符的图片。",
+    "picture": "ball",
+    "promptText": "ball",
+    "promptAudioId": "u07-listen-ball",
+    "choices": [
+      {
+        "id": "en07-listen-ball-choice-1",
+        "picture": "ball",
+        "description": "一个球"
+      },
+      {
+        "id": "en07-listen-ball-choice-2",
+        "picture": "car",
+        "description": "一辆玩具小汽车"
+      },
+      {
+        "id": "en07-listen-ball-choice-3",
+        "picture": "cake",
+        "description": "一块蛋糕"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en07-listen-ball-choice-1"
+    ],
+    "explanation": "听声音，把物品名称和图片相对应。",
+    "modelText": "ball",
+    "modelAudioId": "u07-listen-ball",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en07-listen-cake",
+    "courseId": "en-07",
+    "kind": "listening",
+    "lexemeId": "en-07-word-16",
+    "scene": "先听声音，再找意思相符的图片。",
+    "picture": "cake",
+    "promptText": "cake",
+    "promptAudioId": "u07-listen-cake",
+    "choices": [
+      {
+        "id": "en07-listen-cake-choice-1",
+        "picture": "cake",
+        "description": "一块蛋糕"
+      },
+      {
+        "id": "en07-listen-cake-choice-2",
+        "picture": "book",
+        "description": "一本书"
+      },
+      {
+        "id": "en07-listen-cake-choice-3",
+        "picture": "car",
+        "description": "一辆玩具小汽车"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en07-listen-cake-choice-1"
+    ],
+    "explanation": "听声音，把物品名称和图片相对应。",
+    "modelText": "cake",
+    "modelAudioId": "u07-listen-cake",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en08-scene-clean",
+    "courseId": "en-08",
+    "kind": "scene",
+    "lexemeId": "en-08-word-04",
+    "scene": "桌上有需要擦掉的污渍。妈妈请你帮忙擦桌子，请说明你可以为她做这件事。",
+    "picture": "action-clean",
+    "promptText": "Can you clean the table?",
+    "promptAudioId": "u08-clean-prompt",
+    "choices": [
+      {
+        "id": "en08-scene-clean-choice-1",
+        "text": "I can clean the table for you.",
+        "picture": "action-clean",
+        "description": "说可以帮忙擦桌子",
+        "audioId": "u08-clean-reply-1"
+      },
+      {
+        "id": "en08-scene-clean-choice-2",
+        "text": "I can draw a picture for you.",
+        "picture": "action-draw",
+        "description": "说可以帮忙画画",
+        "audioId": "u08-clean-reply-2"
+      },
+      {
+        "id": "en08-scene-clean-choice-3",
+        "text": "I can sing for you.",
+        "picture": "action-sing",
+        "description": "说可以唱歌",
+        "audioId": "u08-clean-reply-3"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en08-scene-clean-choice-1"
+    ],
+    "explanation": "clean the table 表示把桌子擦干净。can 后直接接 clean；for you 说明为对方做这件事。",
+    "modelText": "I can clean the table for you.",
+    "modelAudioId": "u08-clean-reply-1",
+    "dialogueAudioId": "u08-clean-dialogue",
+    "oralCue": "假装拿着抹布帮忙擦桌子，用 I can clean the table for you 说一句话。"
+  },
+  {
+    "id": "en08-scene-draw",
+    "courseId": "en-08",
+    "kind": "scene",
+    "lexemeId": "en-08-word-06",
+    "scene": "家人想要一幅你画的画，请你帮忙画。请告诉他你能为他画一幅画。",
+    "picture": "action-draw",
+    "promptText": "Can you draw a picture?",
+    "promptAudioId": "u08-draw-prompt",
+    "choices": [
+      {
+        "id": "en08-scene-draw-choice-1",
+        "text": "I can draw a picture for you.",
+        "picture": "action-draw",
+        "description": "说可以画一幅画",
+        "audioId": "u08-clean-reply-2"
+      },
+      {
+        "id": "en08-scene-draw-choice-2",
+        "text": "I can clean the table for you.",
+        "picture": "action-clean",
+        "description": "说可以擦桌子",
+        "audioId": "u08-clean-reply-1"
+      },
+      {
+        "id": "en08-scene-draw-choice-3",
+        "text": "I can take pictures for you.",
+        "picture": "action-photo",
+        "description": "说可以用相机拍照",
+        "audioId": "u08-draw-reply-3"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en08-scene-draw-choice-1"
+    ],
+    "explanation": "draw a picture 是画画，take pictures 是拍照；画笔和相机帮助分清这两种动作。",
+    "modelText": "I can draw a picture for you.",
+    "modelAudioId": "u08-clean-reply-2",
+    "dialogueAudioId": "u08-draw-dialogue",
+    "oralCue": "拿起画笔，试着说 I can draw a picture。"
+  },
+  {
+    "id": "en08-scene-sing",
+    "courseId": "en-08",
+    "kind": "scene",
+    "lexemeId": "en-08-word-07",
+    "scene": "家人希望听你唱歌，并问你会不会唱。请告诉他你可以唱歌。",
+    "picture": "action-sing",
+    "promptText": "Can you sing?",
+    "promptAudioId": "u08-sing-prompt",
+    "choices": [
+      {
+        "id": "en08-scene-sing-choice-1",
+        "text": "I can sing.",
+        "picture": "action-sing",
+        "description": "说自己会唱歌",
+        "audioId": "u08-sing-reply-1"
+      },
+      {
+        "id": "en08-scene-sing-choice-2",
+        "text": "I can dance.",
+        "picture": "action-dance",
+        "description": "说自己会跳舞",
+        "audioId": "u08-sing-reply-2"
+      },
+      {
+        "id": "en08-scene-sing-choice-3",
+        "text": "Yes, I can sing for you.",
+        "picture": "action-sing",
+        "description": "说愿意为对方唱歌",
+        "audioId": "u08-sing-reply-3"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en08-scene-sing-choice-1",
+      "en08-scene-sing-choice-3"
+    ],
+    "explanation": "sing 表示唱歌。两种正确回答都说自己可以唱；不把唱歌和跳舞混为一个动作。",
+    "modelText": "I can sing.",
+    "modelAudioId": "u08-sing-reply-1",
+    "dialogueAudioId": "u08-sing-dialogue",
+    "oralCue": "试着说 I can sing，再唱一句你喜欢的歌。"
+  },
+  {
+    "id": "en08-scene-dance",
+    "courseId": "en-08",
+    "kind": "scene",
+    "lexemeId": "en-08-word-08",
+    "scene": "家人希望看你跳舞，并问你会不会跳。请告诉他你可以跳舞。",
+    "picture": "action-dance",
+    "promptText": "Can you dance?",
+    "promptAudioId": "u08-dance-prompt",
+    "choices": [
+      {
+        "id": "en08-scene-dance-choice-1",
+        "text": "I can dance.",
+        "picture": "action-dance",
+        "description": "说自己会跳舞",
+        "audioId": "u08-sing-reply-2"
+      },
+      {
+        "id": "en08-scene-dance-choice-2",
+        "text": "I can sing.",
+        "picture": "action-sing",
+        "description": "说自己会唱歌",
+        "audioId": "u08-sing-reply-1"
+      },
+      {
+        "id": "en08-scene-dance-choice-3",
+        "text": "Yes, I can dance for you.",
+        "picture": "action-dance",
+        "description": "说愿意为对方跳舞",
+        "audioId": "u08-dance-reply-3"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en08-scene-dance-choice-1",
+      "en08-scene-dance-choice-3"
+    ],
+    "explanation": "dance 表示跳舞。can 后接 dance，不需要增加别的词尾。",
+    "modelText": "I can dance.",
+    "modelAudioId": "u08-sing-reply-2",
+    "dialogueAudioId": "u08-dance-dialogue",
+    "oralCue": "做一个简单的舞蹈动作，试着说 I can dance。"
+  },
+  {
+    "id": "en08-scene-photo",
+    "courseId": "en-08",
+    "kind": "scene",
+    "lexemeId": "en-08-word-11",
+    "scene": "家人已经站好，想请你用相机为他们拍照。请告诉他们你能帮忙拍照。",
+    "picture": "action-photo",
+    "promptText": "Can you take pictures?",
+    "promptAudioId": "u08-photo-prompt",
+    "choices": [
+      {
+        "id": "en08-scene-photo-choice-1",
+        "text": "I can take pictures for you.",
+        "picture": "action-photo",
+        "description": "说可以用相机为家人拍照",
+        "audioId": "u08-draw-reply-3"
+      },
+      {
+        "id": "en08-scene-photo-choice-2",
+        "text": "I can draw a picture for you.",
+        "picture": "action-draw",
+        "description": "说可以用画笔画画",
+        "audioId": "u08-clean-reply-2"
+      },
+      {
+        "id": "en08-scene-photo-choice-3",
+        "text": "I can clean the table for you.",
+        "picture": "action-clean",
+        "description": "说可以擦桌子",
+        "audioId": "u08-clean-reply-1"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en08-scene-photo-choice-1"
+    ],
+    "explanation": "take pictures 是拍照，用相机记录画面；draw a picture 是用画笔画画。",
+    "modelText": "I can take pictures for you.",
+    "modelAudioId": "u08-draw-reply-3",
+    "dialogueAudioId": "u08-photo-dialogue",
+    "oralCue": "假装拿相机给家人拍照，试着说 I can take pictures for you。"
+  },
+  {
+    "id": "en08-scene-ok",
+    "courseId": "en-08",
+    "kind": "scene",
+    "lexemeId": "en-08-word-12",
+    "scene": "你刚绊了一下，但已经站稳，没有受伤。朋友关心你有没有事，请告诉他你没事并谢谢他的关心。",
+    "picture": "ok",
+    "promptText": "Are you OK?",
+    "promptAudioId": "u08-ok-prompt",
+    "choices": [
+      {
+        "id": "en08-scene-ok-choice-1",
+        "text": "I am OK. Thank you.",
+        "picture": "ok",
+        "description": "说自己没事并感谢关心",
+        "audioId": "u08-ok-reply-1"
+      },
+      {
+        "id": "en08-scene-ok-choice-2",
+        "text": "Goodbye!",
+        "picture": "goodbye",
+        "description": "向朋友告别",
+        "audioId": "activity-003"
+      },
+      {
+        "id": "en08-scene-ok-choice-3",
+        "text": "I am OK. Thanks!",
+        "picture": "ok",
+        "description": "说自己没事并简短感谢",
+        "audioId": "u08-ok-reply-3"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en08-scene-ok-choice-1",
+      "en08-scene-ok-choice-3"
+    ],
+    "explanation": "Are you OK? 用来关心对方。本题说明你没事，I am OK 加 Thank you 或 Thanks 都是合适回应。",
+    "modelText": "I am OK. Thank you.",
+    "modelAudioId": "u08-ok-reply-1",
+    "dialogueAudioId": "u08-ok-dialogue",
+    "oralCue": "朋友关心地问 Are you OK? 时，按自己的真实情况回答。"
+  },
+  {
+    "id": "en08-listen-clean",
+    "courseId": "en-08",
+    "kind": "listening",
+    "lexemeId": "en-08-word-04",
+    "scene": "先听声音，再找意思相符的图片。",
+    "picture": "action-clean",
+    "promptText": "clean",
+    "promptAudioId": "u08-listen-clean",
+    "choices": [
+      {
+        "id": "en08-listen-clean-choice-1",
+        "picture": "action-clean",
+        "description": "拿抹布擦桌子"
+      },
+      {
+        "id": "en08-listen-clean-choice-2",
+        "picture": "action-draw",
+        "description": "拿画笔画画"
+      },
+      {
+        "id": "en08-listen-clean-choice-3",
+        "picture": "action-photo",
+        "description": "拿相机拍照"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en08-listen-clean-choice-1"
+    ],
+    "explanation": "根据画面中的动作和道具听图匹配；唱歌、跳舞、画画和拍照是不同的动作。",
+    "modelText": "clean",
+    "modelAudioId": "u08-listen-clean",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en08-listen-draw",
+    "courseId": "en-08",
+    "kind": "listening",
+    "lexemeId": "en-08-word-06",
+    "scene": "先听声音，再找意思相符的图片。",
+    "picture": "action-draw",
+    "promptText": "draw",
+    "promptAudioId": "u08-listen-draw",
+    "choices": [
+      {
+        "id": "en08-listen-draw-choice-1",
+        "picture": "action-draw",
+        "description": "拿画笔在纸上画画"
+      },
+      {
+        "id": "en08-listen-draw-choice-2",
+        "picture": "action-photo",
+        "description": "拿相机拍照"
+      },
+      {
+        "id": "en08-listen-draw-choice-3",
+        "picture": "action-clean",
+        "description": "拿抹布擦桌子"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en08-listen-draw-choice-1"
+    ],
+    "explanation": "根据画面中的动作和道具听图匹配；唱歌、跳舞、画画和拍照是不同的动作。",
+    "modelText": "draw",
+    "modelAudioId": "u08-listen-draw",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en08-listen-sing",
+    "courseId": "en-08",
+    "kind": "listening",
+    "lexemeId": "en-08-word-07",
+    "scene": "先听声音，再找意思相符的图片。",
+    "picture": "action-sing",
+    "promptText": "sing",
+    "promptAudioId": "u08-listen-sing",
+    "choices": [
+      {
+        "id": "en08-listen-sing-choice-1",
+        "picture": "action-sing",
+        "description": "张嘴唱歌，身边有音符"
+      },
+      {
+        "id": "en08-listen-sing-choice-2",
+        "picture": "action-dance",
+        "description": "迈步摆臂跳舞"
+      },
+      {
+        "id": "en08-listen-sing-choice-3",
+        "picture": "action-draw",
+        "description": "拿画笔画画"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en08-listen-sing-choice-1"
+    ],
+    "explanation": "根据画面中的动作和道具听图匹配；唱歌、跳舞、画画和拍照是不同的动作。",
+    "modelText": "sing",
+    "modelAudioId": "u08-listen-sing",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en08-listen-dance",
+    "courseId": "en-08",
+    "kind": "listening",
+    "lexemeId": "en-08-word-08",
+    "scene": "先听声音，再找意思相符的图片。",
+    "picture": "action-dance",
+    "promptText": "dance",
+    "promptAudioId": "u08-listen-dance",
+    "choices": [
+      {
+        "id": "en08-listen-dance-choice-1",
+        "picture": "action-dance",
+        "description": "迈步摆臂跳舞"
+      },
+      {
+        "id": "en08-listen-dance-choice-2",
+        "picture": "action-sing",
+        "description": "张嘴唱歌"
+      },
+      {
+        "id": "en08-listen-dance-choice-3",
+        "picture": "action-photo",
+        "description": "拿相机拍照"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en08-listen-dance-choice-1"
+    ],
+    "explanation": "根据画面中的动作和道具听图匹配；唱歌、跳舞、画画和拍照是不同的动作。",
+    "modelText": "dance",
+    "modelAudioId": "u08-listen-dance",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en08-listen-photo",
+    "courseId": "en-08",
+    "kind": "listening",
+    "lexemeId": "en-08-word-11",
+    "scene": "先听声音，再找意思相符的图片。",
+    "picture": "action-photo",
+    "promptText": "take pictures",
+    "promptAudioId": "u08-listen-photo",
+    "choices": [
+      {
+        "id": "en08-listen-photo-choice-1",
+        "picture": "action-photo",
+        "description": "用相机为家人拍照"
+      },
+      {
+        "id": "en08-listen-photo-choice-2",
+        "picture": "action-draw",
+        "description": "用画笔画一幅画"
+      },
+      {
+        "id": "en08-listen-photo-choice-3",
+        "picture": "action-sing",
+        "description": "张嘴唱歌"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en08-listen-photo-choice-1"
+    ],
+    "explanation": "根据画面中的动作和道具听图匹配；唱歌、跳舞、画画和拍照是不同的动作。",
+    "modelText": "take pictures",
+    "modelAudioId": "u08-listen-photo",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
+  },
+  {
+    "id": "en08-listen-table",
+    "courseId": "en-08",
+    "kind": "listening",
+    "lexemeId": "en-08-word-05",
+    "scene": "先听声音，再找意思相符的图片。",
+    "picture": "table",
+    "promptText": "table",
+    "promptAudioId": "u08-listen-table",
+    "choices": [
+      {
+        "id": "en08-listen-table-choice-1",
+        "picture": "table",
+        "description": "一张没有人物或画具的桌子"
+      },
+      {
+        "id": "en08-listen-table-choice-2",
+        "picture": "picture",
+        "description": "一幅装在画框里的图画"
+      },
+      {
+        "id": "en08-listen-table-choice-3",
+        "picture": "child",
+        "description": "一个小朋友"
+      }
+    ],
+    "acceptedChoiceIds": [
+      "en08-listen-table-choice-1"
+    ],
+    "explanation": "table 表示桌子。本题从三幅具体物品或人物图中找桌子。",
+    "modelText": "table",
+    "modelAudioId": "u08-listen-table",
+    "oralCue": "看着这幅图片，再跟着示范说一遍。自己说就好，不打分。"
   }
 ]

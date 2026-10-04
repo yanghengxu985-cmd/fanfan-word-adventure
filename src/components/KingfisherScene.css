@@ -1,0 +1,252 @@
+.kf-scene {
+  --kf-anchor-x: 50%;
+  --kf-anchor-y: 86%;
+  --kf-bird-width: 20%;
+  --kf-bird-offset-x: 0%;
+  --kf-bird-offset-y: 0%;
+  --kf-flight-down-x: 0%;
+  --kf-flight-down-y: 18%;
+  --kf-flight-down-scale: 1;
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  margin: 0;
+  overflow: hidden;
+  background: #e2e7d3;
+  border-radius: 1.1rem;
+  box-shadow: inset 0 0 0 1px rgb(62 84 63 / 15%);
+}
+
+.kf-scene__landscape,
+.kf-scene__shade {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.kf-scene__landscape {
+  object-fit: contain;
+  user-select: none;
+}
+
+.kf-scene__shade {
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent 70%, rgb(25 49 47 / 25%));
+}
+
+.kf-scene__bird-anchor {
+  position: absolute;
+  left: calc(var(--kf-bird-x) + var(--kf-bird-offset-x));
+  top: calc(var(--kf-bird-y) + var(--kf-bird-offset-y));
+  width: var(--kf-bird-width);
+  aspect-ratio: 1;
+  transform: translate(calc(-1 * var(--kf-anchor-x)), calc(-1 * var(--kf-anchor-y)));
+  transform-origin: var(--kf-anchor-x) var(--kf-anchor-y);
+  opacity: var(--kf-bird-opacity);
+  z-index: 3;
+}
+
+.kf-scene__bird {
+  position: absolute;
+  inset: 0;
+  transform: rotate(var(--kf-bird-rotation)) scale(var(--kf-bird-scale));
+  transform-origin: var(--kf-anchor-x) var(--kf-anchor-y);
+  filter: drop-shadow(0 3px 2px rgb(16 50 43 / 14%));
+  pointer-events: none;
+}
+
+.kf-scene__pose {
+  position: absolute;
+  inset: 0;
+  background-image: var(--kf-atlas-image);
+  background-size: 300% 200%;
+  background-repeat: no-repeat;
+  transform: scaleX(var(--kf-bird-facing));
+  transform-origin: 50% 50%;
+}
+
+.kf-scene__pose--wing-down {
+  background-image: var(--kf-flight-down-image);
+  background-size: 100% 100%;
+  background-position: center;
+  transform: scaleX(var(--kf-bird-facing)) translate(var(--kf-flight-down-x), var(--kf-flight-down-y)) scale(var(--kf-flight-down-scale));
+}
+
+.kf-scene__water {
+  position: absolute;
+  left: var(--kf-water-x);
+  top: var(--kf-water-y);
+  width: 10%;
+  aspect-ratio: 3.8;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.kf-scene__ripple {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 1.5px solid rgb(248 255 239 / 90%);
+  border-radius: 50%;
+  box-shadow: 0 1px 0 rgb(63 119 108 / 30%);
+}
+
+.kf-scene__ripple--emerge {
+  border-color: rgb(246 254 240 / 95%);
+}
+
+.kf-scene__caption {
+  position: absolute;
+  left: 1.4rem;
+  bottom: 1.3rem;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  max-width: calc(100% - 2.8rem);
+  color: #fffcf0;
+  font-family: 'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', 'SimSun', serif;
+  font-size: clamp(0.77rem, 1.3vw, 1rem);
+  letter-spacing: 0.06em;
+  line-height: 1.6;
+  text-shadow: 0 1px 6px rgb(20 47 43 / 55%);
+}
+
+.kf-scene__caption-rule {
+  flex: 0 0 1.6rem;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.85;
+}
+
+.kf-scene--observe {
+  --kf-bird-width: 56%;
+}
+
+.kf-scene--observe .kf-scene__landscape {
+  filter: saturate(0.8);
+}
+
+.kf-scene--observe .kf-scene__shade {
+  background: linear-gradient(180deg, rgb(247 248 233 / 5%) 15%, rgb(241 245 224 / 28%) 55%, rgb(25 49 47 / 34%));
+}
+
+.kf-scene--observe .kf-scene__bird {
+  filter: drop-shadow(0 8px 9px rgb(32 66 55 / 17%));
+}
+
+.kf-scene__parts {
+  position: absolute;
+  inset: 0;
+}
+
+.kf-scene__part {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  transform: translate(-50%, -50%);
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #183e37;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.kf-scene__part-dot {
+  width: 11px;
+  height: 11px;
+  border: 2px solid #fbf5dd;
+  border-radius: 50%;
+  background: #b29340;
+  box-shadow: 0 0 0 3px rgb(249 243 218 / 28%), 0 1px 5px rgb(34 54 44 / 34%);
+}
+
+.kf-scene__part-label {
+  position: absolute;
+  left: calc(50% + 13px);
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0.26rem 0.6rem;
+  border: 1px solid rgb(94 108 72 / 29%);
+  border-radius: 0.35rem;
+  background: rgb(255 252 236 / 93%);
+  box-shadow: 0 2px 8px rgb(27 54 42 / 10%);
+  font-family: 'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', 'SimSun', serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 1.45;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+.kf-scene__part--wings .kf-scene__part-label {
+  left: auto;
+  right: calc(50% + 13px);
+}
+
+.kf-scene__part:hover .kf-scene__part-dot,
+.kf-scene__part[aria-pressed='true'] .kf-scene__part-dot {
+  background: #fff4bd;
+  box-shadow: 0 0 0 5px rgb(226 191 86 / 30%), 0 1px 5px rgb(34 54 44 / 35%);
+}
+
+.kf-scene__part[aria-pressed='true'] .kf-scene__part-label {
+  color: #fff9e9;
+  border-color: #28564a;
+  background: #28564a;
+}
+
+.kf-scene__part:focus-visible {
+  outline: 3px solid #fff9df;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 5px #3d6558;
+}
+
+.kf-scene__sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 620px) {
+  .kf-scene {
+    --kf-bird-width: 24%;
+    border-radius: 0.8rem;
+  }
+
+  .kf-scene--observe {
+    --kf-bird-width: 62%;
+  }
+
+  .kf-scene__caption {
+    left: 0.8rem;
+    bottom: 0.6rem;
+    max-width: calc(100% - 1.6rem);
+    gap: 0.4rem;
+    font-size: 0.73rem;
+  }
+
+  .kf-scene__caption-rule {
+    flex-basis: 1rem;
+  }
+
+  .kf-scene__part-label {
+    padding: 0.18rem 0.35rem;
+    font-size: 0.72rem;
+  }
+}

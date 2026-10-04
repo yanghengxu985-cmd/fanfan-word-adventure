@@ -1,0 +1,874 @@
+{
+  "schemaVersion": 1,
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "rate": "-8%",
+  "locale": "zh-CN",
+  "source": "Microsoft Edge online neural TTS via edge-tts 7.2.8",
+  "humanRecorded": false,
+  "paperTextbookAudio": false,
+  "pipelineVersion": "xiaoxiao-mandarin-pilot-v1",
+  "normalization": {
+    "targetLUFS": -18,
+    "truePeakLimitDB": -2,
+    "sampleRate": 24000
+  },
+  "entries": {
+    "cn-01-clip-01": {
+      "text": "绒毛",
+      "pinyin": "róng máo",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页109",
+      "sourceKind": "editorial_extension",
+      "id": "cn-01-clip-01",
+      "spokenText": "绒毛",
+      "file": "audio/chinese-pilot/7d59075f23d65cc5c67e37ea.mp3",
+      "durationSeconds": 1.032,
+      "bytes": 16940
+    },
+    "cn-01-clip-02": {
+      "text": "昂首",
+      "pinyin": "áng shǒu",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页109",
+      "sourceKind": "editorial_extension",
+      "id": "cn-01-clip-02",
+      "spokenText": "昂首",
+      "file": "audio/chinese-pilot/7061430067e7cc71a51839e1.mp3",
+      "durationSeconds": 1.032,
+      "bytes": 16940
+    },
+    "cn-01-clip-03": {
+      "text": "飘扬",
+      "pinyin": "piāo yáng",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页109",
+      "sourceKind": "editorial_extension",
+      "id": "cn-01-clip-03",
+      "spokenText": "飘扬",
+      "file": "audio/chinese-pilot/10ad53832d811895b59a64ef.mp3",
+      "durationSeconds": 1.056,
+      "bytes": 17324
+    },
+    "cn-01-clip-04": {
+      "text": "凤凰",
+      "pinyin": "fèng huáng",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页109",
+      "sourceKind": "editorial_extension",
+      "id": "cn-01-clip-04",
+      "spokenText": "凤凰",
+      "file": "audio/chinese-pilot/3e3eefc8cb20e23553ca0eda.mp3",
+      "durationSeconds": 1.104,
+      "bytes": 18092
+    },
+    "cn-01-clip-05": {
+      "text": "墙壁",
+      "pinyin": "qiáng bì",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页109",
+      "sourceKind": "editorial_extension",
+      "id": "cn-01-clip-05",
+      "spokenText": "墙壁",
+      "file": "audio/chinese-pilot/1a9b99956391783a4ee4f48a.mp3",
+      "durationSeconds": 1.056,
+      "bytes": 17324
+    },
+    "cn-01-clip-06": {
+      "text": "摇晃",
+      "pinyin": "yáo huàng",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页109",
+      "sourceKind": "editorial_extension",
+      "id": "cn-01-clip-06",
+      "spokenText": "摇晃",
+      "file": "audio/chinese-pilot/0f1e55abb36d25ae9afb4cd9.mp3",
+      "durationSeconds": 1.032,
+      "bytes": 16940
+    },
+    "cn-01-clip-07": {
+      "text": "山坡",
+      "pinyin": "shān pō",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页112",
+      "sourceKind": "editorial_extension",
+      "id": "cn-01-clip-07",
+      "spokenText": "山坡",
+      "file": "audio/chinese-pilot/c7024c61148b335efab3e9dd.mp3",
+      "durationSeconds": 1.128,
+      "bytes": 18476
+    },
+    "cn-01-clip-08": {
+      "text": "皮球",
+      "pinyin": "pí qiú",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页112",
+      "sourceKind": "editorial_extension",
+      "id": "cn-01-clip-08",
+      "spokenText": "皮球",
+      "file": "audio/chinese-pilot/1f1e5854425c0b24ad1bd1ff.mp3",
+      "durationSeconds": 1.128,
+      "bytes": 18476
+    },
+    "cn-01-clip-09": {
+      "text": "招引",
+      "pinyin": "zhāo yǐn",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页112",
+      "sourceKind": "editorial_extension",
+      "id": "cn-01-clip-09",
+      "spokenText": "招引",
+      "file": "audio/chinese-pilot/0d8164df01a5af25b485dc24.mp3",
+      "durationSeconds": 1.056,
+      "bytes": 17324
+    },
+    "cn-01-clip-10": {
+      "text": "招呼",
+      "pinyin": "zhāo hu",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页112",
+      "sourceKind": "editorial_extension",
+      "id": "cn-01-clip-10",
+      "spokenText": "招呼",
+      "file": "audio/chinese-pilot/dcd8c0a2867a06e28793d1e0.mp3",
+      "durationSeconds": 1.032,
+      "bytes": 16940
+    },
+    "cn-01-clip-11": {
+      "text": "读书",
+      "pinyin": "dú shū",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页112",
+      "sourceKind": "editorial_extension",
+      "id": "cn-01-clip-11",
+      "spokenText": "读书",
+      "file": "audio/chinese-pilot/f96a2c31447ea19234e6e180.mp3",
+      "durationSeconds": 1.032,
+      "bytes": 16940
+    },
+    "cn-01-clip-12": {
+      "text": "热闹",
+      "pinyin": "rè nao",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页112",
+      "sourceKind": "editorial_extension",
+      "id": "cn-01-clip-12",
+      "spokenText": "热闹",
+      "file": "audio/chinese-pilot/94960e594a946f98dbbfa567.mp3",
+      "durationSeconds": 1.056,
+      "bytes": 17324
+    },
+    "cn-01-clip-13": {
+      "text": "粗壮",
+      "pinyin": "cū zhuàng",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页112",
+      "sourceKind": "editorial_extension",
+      "id": "cn-01-clip-13",
+      "spokenText": "粗壮",
+      "file": "audio/chinese-pilot/6a12de52fa7f6558c1bce409.mp3",
+      "durationSeconds": 1.032,
+      "bytes": 16940
+    },
+    "cn-01-clip-14": {
+      "text": "洁白",
+      "pinyin": "jié bái",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页112",
+      "sourceKind": "editorial_extension",
+      "id": "cn-01-clip-14",
+      "spokenText": "洁白",
+      "file": "audio/chinese-pilot/967628625ef995e0cebc1b23.mp3",
+      "durationSeconds": 1.032,
+      "bytes": 16940
+    },
+    "cn-01-clip-15": {
+      "text": "学校",
+      "pinyin": "xué xiào",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页114",
+      "sourceKind": "textbook_word",
+      "id": "cn-01-clip-15",
+      "spokenText": "学校",
+      "file": "audio/chinese-pilot/affd111e7fe3dee7ed6d55ef.mp3",
+      "durationSeconds": 1.104,
+      "bytes": 18092
+    },
+    "cn-01-clip-16": {
+      "text": "课文",
+      "pinyin": "kè wén",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页114",
+      "sourceKind": "textbook_word",
+      "id": "cn-01-clip-16",
+      "spokenText": "课文",
+      "file": "audio/chinese-pilot/6ed8bb444ccdd2d042f9b048.mp3",
+      "durationSeconds": 1.056,
+      "bytes": 17324
+    },
+    "cn-01-clip-17": {
+      "text": "声音",
+      "pinyin": "shēng yīn",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页114",
+      "sourceKind": "textbook_word",
+      "id": "cn-01-clip-17",
+      "spokenText": "声音",
+      "file": "audio/chinese-pilot/563a95bd632104a242b607cd.mp3",
+      "durationSeconds": 1.08,
+      "bytes": 17708
+    },
+    "cn-01-clip-18": {
+      "text": "古老",
+      "pinyin": "gǔ lǎo",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页114",
+      "sourceKind": "textbook_word",
+      "id": "cn-01-clip-18",
+      "spokenText": "古老",
+      "file": "audio/chinese-pilot/727ddc89dafc1cfa672fe1c3.mp3",
+      "durationSeconds": 1.032,
+      "bytes": 16940
+    },
+    "cn-01-clip-19": {
+      "text": "枝干",
+      "pinyin": "zhī gàn",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页114",
+      "sourceKind": "textbook_word",
+      "id": "cn-01-clip-19",
+      "spokenText": "枝干",
+      "file": "audio/chinese-pilot/1f3bc964e4ca2b5b06d2dc84.mp3",
+      "durationSeconds": 1.032,
+      "bytes": 16940
+    },
+    "cn-04-clip-20": {
+      "text": "庭院",
+      "pinyin": "tíng yuàn",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页109",
+      "sourceKind": "editorial_extension",
+      "id": "cn-04-clip-20",
+      "spokenText": "庭院",
+      "file": "audio/chinese-pilot/4f55974b80332f1fa1623cb9.mp3",
+      "durationSeconds": 1.056,
+      "bytes": 17324
+    },
+    "cn-04-clip-21": {
+      "text": "未来",
+      "pinyin": "wèi lái",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页109",
+      "sourceKind": "editorial_extension",
+      "id": "cn-04-clip-21",
+      "spokenText": "未来",
+      "file": "audio/chinese-pilot/07ffb8de6a2c3efebc2729da.mp3",
+      "durationSeconds": 1.008,
+      "bytes": 16556
+    },
+    "cn-04-clip-22": {
+      "text": "打磨",
+      "pinyin": "dǎ mó",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页109",
+      "sourceKind": "editorial_extension",
+      "id": "cn-04-clip-22",
+      "spokenText": "打磨",
+      "file": "audio/chinese-pilot/077caafcba71d882dac2984a.mp3",
+      "durationSeconds": 1.008,
+      "bytes": 16556
+    },
+    "cn-04-clip-23": {
+      "text": "倾斜",
+      "pinyin": "qīng xié",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页109",
+      "sourceKind": "editorial_extension",
+      "id": "cn-04-clip-23",
+      "spokenText": "倾斜",
+      "file": "audio/chinese-pilot/e4bfb791ff478f7f185a03f8.mp3",
+      "durationSeconds": 1.104,
+      "bytes": 18092
+    },
+    "cn-04-clip-24": {
+      "text": "萧萧",
+      "pinyin": "xiāo xiāo",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页109",
+      "sourceKind": "editorial_extension",
+      "id": "cn-04-clip-24",
+      "spokenText": "萧萧",
+      "file": "audio/chinese-pilot/010b62c6c091ac7b596c82c5.mp3",
+      "durationSeconds": 1.128,
+      "bytes": 18476
+    },
+    "cn-04-clip-25": {
+      "text": "挑灯",
+      "pinyin": "tiǎo dēng",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页109",
+      "sourceKind": "editorial_extension",
+      "id": "cn-04-clip-25",
+      "spokenText": "挑灯",
+      "file": "audio/chinese-pilot/d561fb8ea0417096f2affea8.mp3",
+      "durationSeconds": 1.008,
+      "bytes": 16556
+    },
+    "cn-04-clip-26": {
+      "text": "促织",
+      "pinyin": "cù zhī",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页109",
+      "sourceKind": "editorial_extension",
+      "id": "cn-04-clip-26",
+      "spokenText": "促织",
+      "file": "audio/chinese-pilot/77643d1e29a71b7c9ae04bc8.mp3",
+      "durationSeconds": 1.08,
+      "bytes": 17708
+    },
+    "cn-04-clip-27": {
+      "text": "相互",
+      "pinyin": "xiāng hù",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页112",
+      "sourceKind": "editorial_extension",
+      "id": "cn-04-clip-27",
+      "spokenText": "相互",
+      "file": "audio/chinese-pilot/6eda38e2e74879ea5009741b.mp3",
+      "durationSeconds": 1.104,
+      "bytes": 18092
+    },
+    "cn-04-clip-28": {
+      "text": "寒冷",
+      "pinyin": "hán lěng",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页112",
+      "sourceKind": "editorial_extension",
+      "id": "cn-04-clip-28",
+      "spokenText": "寒冷",
+      "file": "audio/chinese-pilot/17a2e8885947150248e59813.mp3",
+      "durationSeconds": 1.056,
+      "bytes": 17324
+    },
+    "cn-04-clip-29": {
+      "text": "小径",
+      "pinyin": "xiǎo jìng",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页112",
+      "sourceKind": "editorial_extension",
+      "id": "cn-04-clip-29",
+      "spokenText": "小径",
+      "file": "audio/chinese-pilot/c25fad9fbf6e35de6299ec42.mp3",
+      "durationSeconds": 1.08,
+      "bytes": 17708
+    },
+    "cn-04-clip-30": {
+      "text": "枫叶",
+      "pinyin": "fēng yè",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页112",
+      "sourceKind": "editorial_extension",
+      "id": "cn-04-clip-30",
+      "spokenText": "枫叶",
+      "file": "audio/chinese-pilot/9ae960978ff81d8237d9193d.mp3",
+      "durationSeconds": 1.104,
+      "bytes": 18092
+    },
+    "cn-04-clip-31": {
+      "text": "霜冻",
+      "pinyin": "shuāng dòng",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页112",
+      "sourceKind": "editorial_extension",
+      "id": "cn-04-clip-31",
+      "spokenText": "霜冻",
+      "file": "audio/chinese-pilot/0c38fd661d22688a9957ce8f.mp3",
+      "durationSeconds": 1.08,
+      "bytes": 17708
+    },
+    "cn-04-clip-32": {
+      "text": "深夜",
+      "pinyin": "shēn yè",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页112",
+      "sourceKind": "editorial_extension",
+      "id": "cn-04-clip-32",
+      "spokenText": "深夜",
+      "file": "audio/chinese-pilot/cd3abfd64cfe1846ad9bfacc.mp3",
+      "durationSeconds": 1.056,
+      "bytes": 17324
+    },
+    "cn-04-clip-33": {
+      "text": "落叶",
+      "pinyin": "luò yè",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页112",
+      "sourceKind": "editorial_extension",
+      "id": "cn-04-clip-33",
+      "spokenText": "落叶",
+      "file": "audio/chinese-pilot/4a42561e7359ae10355cd51d.mp3",
+      "durationSeconds": 1.032,
+      "bytes": 16940
+    },
+    "cn-04-clip-34": {
+      "text": "湖光秋月两相和，",
+      "pinyin": "hú guāng qiū yuè liǎng xiāng hé",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页14",
+      "sourceKind": "public_domain_poem",
+      "id": "cn-04-clip-34",
+      "spokenText": "湖光秋月两相和，",
+      "file": "audio/chinese-pilot/927ee8f310f07e35ca9dfb25.mp3",
+      "durationSeconds": 2.136,
+      "bytes": 34604
+    },
+    "cn-04-clip-35": {
+      "text": "潭面无风镜未磨。",
+      "pinyin": "tán miàn wú fēng jìng wèi mó",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页14",
+      "sourceKind": "public_domain_poem",
+      "id": "cn-04-clip-35",
+      "spokenText": "潭面无风镜未磨。",
+      "file": "audio/chinese-pilot/05c7f0b74f15e25c58fc8511.mp3",
+      "durationSeconds": 2.136,
+      "bytes": 34604
+    },
+    "cn-04-clip-36": {
+      "text": "遥望洞庭山水翠，",
+      "pinyin": "yáo wàng dòng tíng shān shuǐ cuì",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页14",
+      "sourceKind": "public_domain_poem",
+      "id": "cn-04-clip-36",
+      "spokenText": "遥望洞庭山水翠，",
+      "file": "audio/chinese-pilot/e1a9b8836c3dfbaeacb903d5.mp3",
+      "durationSeconds": 2.184,
+      "bytes": 35372
+    },
+    "cn-04-clip-37": {
+      "text": "白银盘里一青螺。",
+      "pinyin": "bái yín pán lǐ yī qīng luó",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页14",
+      "sourceKind": "public_domain_poem",
+      "id": "cn-04-clip-37",
+      "spokenText": "白银盘里一青螺。",
+      "file": "audio/chinese-pilot/ad0a3b71e922f9273a371017.mp3",
+      "durationSeconds": 1.944,
+      "bytes": 31532
+    },
+    "cn-04-clip-38": {
+      "text": "远上寒山石径斜，",
+      "pinyin": "yuǎn shàng hán shān shí jìng xié",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页14",
+      "sourceKind": "public_domain_poem",
+      "id": "cn-04-clip-38",
+      "spokenText": "远上寒山石径斜，",
+      "file": "audio/chinese-pilot/c62d0e4ba939647c970ef14a.mp3",
+      "durationSeconds": 2.184,
+      "bytes": 35372
+    },
+    "cn-04-clip-39": {
+      "text": "白云生处有人家。",
+      "pinyin": "bái yún shēng chù yǒu rén jiā",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页14",
+      "sourceKind": "public_domain_poem",
+      "id": "cn-04-clip-39",
+      "spokenText": "白云生处有人家。",
+      "file": "audio/chinese-pilot/14fdee472c3be5a8093d4016.mp3",
+      "durationSeconds": 1.992,
+      "bytes": 32300
+    },
+    "cn-04-clip-40": {
+      "text": "停车坐爱枫林晚，",
+      "pinyin": "tíng chē zuò ài fēng lín wǎn",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页14",
+      "sourceKind": "public_domain_poem",
+      "id": "cn-04-clip-40",
+      "spokenText": "停车坐爱枫林晚，",
+      "file": "audio/chinese-pilot/655b051795118a26327497d2.mp3",
+      "durationSeconds": 2.136,
+      "bytes": 34604
+    },
+    "cn-04-clip-41": {
+      "text": "霜叶红于二月花。",
+      "pinyin": "shuāng yè hóng yú èr yuè huā",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页14",
+      "sourceKind": "public_domain_poem",
+      "id": "cn-04-clip-41",
+      "spokenText": "霜叶红于二月花。",
+      "file": "audio/chinese-pilot/bfe6e116fc51bb7f85a43eb9.mp3",
+      "durationSeconds": 2.088,
+      "bytes": 33836
+    },
+    "cn-04-clip-42": {
+      "text": "萧萧梧叶送寒声，",
+      "pinyin": "xiāo xiāo wú yè sòng hán shēng",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页15",
+      "sourceKind": "public_domain_poem",
+      "id": "cn-04-clip-42",
+      "spokenText": "萧萧梧叶送寒声，",
+      "file": "audio/chinese-pilot/3e90fb8588933b630535235e.mp3",
+      "durationSeconds": 2.112,
+      "bytes": 34220
+    },
+    "cn-04-clip-43": {
+      "text": "江上秋风动客情。",
+      "pinyin": "jiāng shàng qiū fēng dòng kè qíng",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页15",
+      "sourceKind": "public_domain_poem",
+      "id": "cn-04-clip-43",
+      "spokenText": "江上秋风动客情。",
+      "file": "audio/chinese-pilot/fb729bdfd23357c43bcb09f1.mp3",
+      "durationSeconds": 2.16,
+      "bytes": 34988
+    },
+    "cn-04-clip-44": {
+      "text": "知有儿童挑促织，",
+      "pinyin": "zhī yǒu ér tóng tiǎo cù zhī",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页15",
+      "sourceKind": "public_domain_poem",
+      "id": "cn-04-clip-44",
+      "spokenText": "知有儿童挑促织，",
+      "file": "audio/chinese-pilot/dd0eee3f44b33071f2d67762.mp3",
+      "durationSeconds": 1.968,
+      "bytes": 31916
+    },
+    "cn-04-clip-45": {
+      "text": "夜深篱落一灯明。",
+      "pinyin": "yè shēn lí luò yī dēng míng",
+      "sourceRef": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC 印刷页15",
+      "sourceKind": "public_domain_poem",
+      "id": "cn-04-clip-45",
+      "spokenText": "夜深篱落一灯明。",
+      "file": "audio/chinese-pilot/ad785352c7712b4efc98c397.mp3",
+      "durationSeconds": 1.992,
+      "bytes": 32300
+    }
+  },
+  "files": {
+    "audio/chinese-pilot/7d59075f23d65cc5c67e37ea.mp3": {
+      "durationSeconds": 1.032,
+      "bytes": 16940,
+      "sampleRate": 24000,
+      "peakDBFS": -6.01,
+      "rmsDBFS": -19.66,
+      "sha256": "b4c14b74fbe541c631f2eb97c787523d794670eb5ae29c4c945d96f96f3682a3"
+    },
+    "audio/chinese-pilot/7061430067e7cc71a51839e1.mp3": {
+      "durationSeconds": 1.032,
+      "bytes": 16940,
+      "sampleRate": 24000,
+      "peakDBFS": -4.87,
+      "rmsDBFS": -20.02,
+      "sha256": "9b69fb1c1e9cd1b82db1032e9d3db3bdc250fadefa515ce4e109af2aa8a8fc0c"
+    },
+    "audio/chinese-pilot/10ad53832d811895b59a64ef.mp3": {
+      "durationSeconds": 1.056,
+      "bytes": 17324,
+      "sampleRate": 24000,
+      "peakDBFS": -6.25,
+      "rmsDBFS": -19.91,
+      "sha256": "b9f77b898d4ecaad1f46ed78b8ea9a6ae04ffd9e8f37a78b18de4f386164cafa"
+    },
+    "audio/chinese-pilot/3e3eefc8cb20e23553ca0eda.mp3": {
+      "durationSeconds": 1.104,
+      "bytes": 18092,
+      "sampleRate": 24000,
+      "peakDBFS": -2.5,
+      "rmsDBFS": -19.62,
+      "sha256": "e763359bb35b884c8139b6ac210d5c5858309e6a4cc0e79d44e39de4a2978ac1"
+    },
+    "audio/chinese-pilot/1a9b99956391783a4ee4f48a.mp3": {
+      "durationSeconds": 1.056,
+      "bytes": 17324,
+      "sampleRate": 24000,
+      "peakDBFS": -3.96,
+      "rmsDBFS": -19.24,
+      "sha256": "1bddd09c32419495c0631cac258976ecf87f50a543cb615e71e02f4c9bf42d79"
+    },
+    "audio/chinese-pilot/0f1e55abb36d25ae9afb4cd9.mp3": {
+      "durationSeconds": 1.032,
+      "bytes": 16940,
+      "sampleRate": 24000,
+      "peakDBFS": -3.77,
+      "rmsDBFS": -20.25,
+      "sha256": "89289ef3d72a249618d8876cfaa44872d4e7195be032badf1b674f8cdbb41cf6"
+    },
+    "audio/chinese-pilot/c7024c61148b335efab3e9dd.mp3": {
+      "durationSeconds": 1.128,
+      "bytes": 18476,
+      "sampleRate": 24000,
+      "peakDBFS": -3.07,
+      "rmsDBFS": -19.82,
+      "sha256": "0fd83b4d30ea10ae1c221d5a5b7e07c401b6224336a20aab0ff88fa17a7973f9"
+    },
+    "audio/chinese-pilot/1f1e5854425c0b24ad1bd1ff.mp3": {
+      "durationSeconds": 1.128,
+      "bytes": 18476,
+      "sampleRate": 24000,
+      "peakDBFS": -4.65,
+      "rmsDBFS": -19.92,
+      "sha256": "19ccdc93562960e4c42e24b931cef7452dd3c21c125d3eaa403fbc319359399d"
+    },
+    "audio/chinese-pilot/0d8164df01a5af25b485dc24.mp3": {
+      "durationSeconds": 1.056,
+      "bytes": 17324,
+      "sampleRate": 24000,
+      "peakDBFS": -3.85,
+      "rmsDBFS": -18.98,
+      "sha256": "dd7ffa2eebee2a427fcab265547b9e26f516e947d4ca95bd4f738e92039d0a30"
+    },
+    "audio/chinese-pilot/dcd8c0a2867a06e28793d1e0.mp3": {
+      "durationSeconds": 1.032,
+      "bytes": 16940,
+      "sampleRate": 24000,
+      "peakDBFS": -4.84,
+      "rmsDBFS": -19.34,
+      "sha256": "c80c04b199f6ee331d5a36279f72aae7688e7725edcc73a2961ade4644adf4dc"
+    },
+    "audio/chinese-pilot/f96a2c31447ea19234e6e180.mp3": {
+      "durationSeconds": 1.032,
+      "bytes": 16940,
+      "sampleRate": 24000,
+      "peakDBFS": -6.92,
+      "rmsDBFS": -19.81,
+      "sha256": "952f30a2a468361f5925c35cedbc0ca292ed277aa5b180b6cf4d1182327ce398"
+    },
+    "audio/chinese-pilot/94960e594a946f98dbbfa567.mp3": {
+      "durationSeconds": 1.056,
+      "bytes": 17324,
+      "sampleRate": 24000,
+      "peakDBFS": -5.86,
+      "rmsDBFS": -19.75,
+      "sha256": "9678aa0846190458f6012ebaab03fb2d279a8adc8e385af55c52b41e4f7efa39"
+    },
+    "audio/chinese-pilot/6a12de52fa7f6558c1bce409.mp3": {
+      "durationSeconds": 1.032,
+      "bytes": 16940,
+      "sampleRate": 24000,
+      "peakDBFS": -2.85,
+      "rmsDBFS": -20.05,
+      "sha256": "4cea4febc46ae7f5888d35f5ee4775ec767a2067eb3df9d86a11c79c05bdee88"
+    },
+    "audio/chinese-pilot/967628625ef995e0cebc1b23.mp3": {
+      "durationSeconds": 1.032,
+      "bytes": 16940,
+      "sampleRate": 24000,
+      "peakDBFS": -4.72,
+      "rmsDBFS": -20.09,
+      "sha256": "93eedf8711c04cd540a2c8d8f6ac761b1b3223fc33495e975d9eed3a9c1c4430"
+    },
+    "audio/chinese-pilot/affd111e7fe3dee7ed6d55ef.mp3": {
+      "durationSeconds": 1.104,
+      "bytes": 18092,
+      "sampleRate": 24000,
+      "peakDBFS": -4.3,
+      "rmsDBFS": -20.05,
+      "sha256": "d2abf7326b58bc20857a2d7cca7520d9caf18d18c19a1be916e21fb2f0208c7d"
+    },
+    "audio/chinese-pilot/6ed8bb444ccdd2d042f9b048.mp3": {
+      "durationSeconds": 1.056,
+      "bytes": 17324,
+      "sampleRate": 24000,
+      "peakDBFS": -5.25,
+      "rmsDBFS": -19.67,
+      "sha256": "6b02f4829512afc2c3c3cbe2f6f6471ede8b83816085baf030bd37854644dea7"
+    },
+    "audio/chinese-pilot/563a95bd632104a242b607cd.mp3": {
+      "durationSeconds": 1.08,
+      "bytes": 17708,
+      "sampleRate": 24000,
+      "peakDBFS": -2.67,
+      "rmsDBFS": -19.89,
+      "sha256": "e4acb6e6fec033f7df5446bce1b05dfc3f854782729daa00116b4ffa34a0f46c"
+    },
+    "audio/chinese-pilot/727ddc89dafc1cfa672fe1c3.mp3": {
+      "durationSeconds": 1.032,
+      "bytes": 16940,
+      "sampleRate": 24000,
+      "peakDBFS": -5.0,
+      "rmsDBFS": -19.88,
+      "sha256": "14219ae0e5109e72851e4531b43bf2f28246f300e17468db28e7193f7d151ebd"
+    },
+    "audio/chinese-pilot/1f3bc964e4ca2b5b06d2dc84.mp3": {
+      "durationSeconds": 1.032,
+      "bytes": 16940,
+      "sampleRate": 24000,
+      "peakDBFS": -4.03,
+      "rmsDBFS": -20.09,
+      "sha256": "4e84366548e917a467f20e63a3bbc3090d264a5a20772dab4f6e14eb71aaacc3"
+    },
+    "audio/chinese-pilot/4f55974b80332f1fa1623cb9.mp3": {
+      "durationSeconds": 1.056,
+      "bytes": 17324,
+      "sampleRate": 24000,
+      "peakDBFS": -5.1,
+      "rmsDBFS": -19.72,
+      "sha256": "f5f0815c03409bafcb6226e7a0f346812d8d15ce90a3cf2db90da101318c9035"
+    },
+    "audio/chinese-pilot/07ffb8de6a2c3efebc2729da.mp3": {
+      "durationSeconds": 1.008,
+      "bytes": 16556,
+      "sampleRate": 24000,
+      "peakDBFS": -5.47,
+      "rmsDBFS": -19.41,
+      "sha256": "35cdc5f53f395ba1fda2549bc79b7b81de2f9845751702bce5b9af26bccd26c5"
+    },
+    "audio/chinese-pilot/077caafcba71d882dac2984a.mp3": {
+      "durationSeconds": 1.008,
+      "bytes": 16556,
+      "sampleRate": 24000,
+      "peakDBFS": -5.46,
+      "rmsDBFS": -19.22,
+      "sha256": "d80ef427d9f2d1784ca488405512575451c4189cc1d5858fc37f6c5cd5c7a278"
+    },
+    "audio/chinese-pilot/e4bfb791ff478f7f185a03f8.mp3": {
+      "durationSeconds": 1.104,
+      "bytes": 18092,
+      "sampleRate": 24000,
+      "peakDBFS": -3.74,
+      "rmsDBFS": -20.36,
+      "sha256": "a121a96686e7eac72b1624c9868b45d4ef2bcc8c28721abaa94aad8cecad6c9b"
+    },
+    "audio/chinese-pilot/010b62c6c091ac7b596c82c5.mp3": {
+      "durationSeconds": 1.128,
+      "bytes": 18476,
+      "sampleRate": 24000,
+      "peakDBFS": -5.46,
+      "rmsDBFS": -20.18,
+      "sha256": "aea9a78f77a86c344356d97fcfbc494080ab7f53c6d31fc82e5e1eacb0bb8071"
+    },
+    "audio/chinese-pilot/d561fb8ea0417096f2affea8.mp3": {
+      "durationSeconds": 1.008,
+      "bytes": 16556,
+      "sampleRate": 24000,
+      "peakDBFS": -3.33,
+      "rmsDBFS": -19.66,
+      "sha256": "18742ed6ab2f897b4d72e75e4513c3fa497a964b24bc2f8b780fe91608b5a667"
+    },
+    "audio/chinese-pilot/77643d1e29a71b7c9ae04bc8.mp3": {
+      "durationSeconds": 1.08,
+      "bytes": 17708,
+      "sampleRate": 24000,
+      "peakDBFS": -5.47,
+      "rmsDBFS": -20.18,
+      "sha256": "dad6d47d0befc6a2d20bb1f9ff99eb169bcdbaa9d49b112ba9b06c9b8ce20701"
+    },
+    "audio/chinese-pilot/6eda38e2e74879ea5009741b.mp3": {
+      "durationSeconds": 1.104,
+      "bytes": 18092,
+      "sampleRate": 24000,
+      "peakDBFS": -3.07,
+      "rmsDBFS": -19.62,
+      "sha256": "af20e1fe06c3840404c1c4e574947872711f422ca3d0cfe8a39d4859223e8c7e"
+    },
+    "audio/chinese-pilot/17a2e8885947150248e59813.mp3": {
+      "durationSeconds": 1.056,
+      "bytes": 17324,
+      "sampleRate": 24000,
+      "peakDBFS": -5.56,
+      "rmsDBFS": -19.92,
+      "sha256": "d941e5ffa3a9fc60257ee5229eb15b8bc9f6f33a961e8cd08ee6b3b477f9b082"
+    },
+    "audio/chinese-pilot/c25fad9fbf6e35de6299ec42.mp3": {
+      "durationSeconds": 1.08,
+      "bytes": 17708,
+      "sampleRate": 24000,
+      "peakDBFS": -2.51,
+      "rmsDBFS": -20.08,
+      "sha256": "d7388dbb29d42642c1be785afae59cbbfa58fe0ea547caad5e6a478a2fc6c1ec"
+    },
+    "audio/chinese-pilot/9ae960978ff81d8237d9193d.mp3": {
+      "durationSeconds": 1.104,
+      "bytes": 18092,
+      "sampleRate": 24000,
+      "peakDBFS": -4.32,
+      "rmsDBFS": -19.42,
+      "sha256": "130165cba6f9df44a9a33b843b29938069562311de0b7b31cdd1c1a8c4fe4429"
+    },
+    "audio/chinese-pilot/0c38fd661d22688a9957ce8f.mp3": {
+      "durationSeconds": 1.08,
+      "bytes": 17708,
+      "sampleRate": 24000,
+      "peakDBFS": -3.58,
+      "rmsDBFS": -19.67,
+      "sha256": "99335a35053c9203a8a7339edf2971882130db060c8ddf7ce1ae6882f3331b88"
+    },
+    "audio/chinese-pilot/cd3abfd64cfe1846ad9bfacc.mp3": {
+      "durationSeconds": 1.056,
+      "bytes": 17324,
+      "sampleRate": 24000,
+      "peakDBFS": -4.25,
+      "rmsDBFS": -19.8,
+      "sha256": "ca90335a4f1acda8282f632be64b926ffb336ead1bd0bf269c02d96b106e05d3"
+    },
+    "audio/chinese-pilot/4a42561e7359ae10355cd51d.mp3": {
+      "durationSeconds": 1.032,
+      "bytes": 16940,
+      "sampleRate": 24000,
+      "peakDBFS": -5.06,
+      "rmsDBFS": -19.29,
+      "sha256": "dd80188d1088de098e4736302040b985923715740f388e65d21e31b8f0fdbe98"
+    },
+    "audio/chinese-pilot/927ee8f310f07e35ca9dfb25.mp3": {
+      "durationSeconds": 2.136,
+      "bytes": 34604,
+      "sampleRate": 24000,
+      "peakDBFS": -3.59,
+      "rmsDBFS": -18.68,
+      "sha256": "db726dbdca8737a7f1b80ca11ed1d12eb6ff659e4007bd2a3e1a687fef22f758"
+    },
+    "audio/chinese-pilot/05c7f0b74f15e25c58fc8511.mp3": {
+      "durationSeconds": 2.136,
+      "bytes": 34604,
+      "sampleRate": 24000,
+      "peakDBFS": -4.76,
+      "rmsDBFS": -18.48,
+      "sha256": "ec1738007dfe42875fa6356627d31f59378447ff1b5f302548e8951e51980530"
+    },
+    "audio/chinese-pilot/e1a9b8836c3dfbaeacb903d5.mp3": {
+      "durationSeconds": 2.184,
+      "bytes": 35372,
+      "sampleRate": 24000,
+      "peakDBFS": -3.44,
+      "rmsDBFS": -18.65,
+      "sha256": "160a55a03cfbfff56bbe0849821b019d05739606254b5cb3b850904ee74f5530"
+    },
+    "audio/chinese-pilot/ad0a3b71e922f9273a371017.mp3": {
+      "durationSeconds": 1.944,
+      "bytes": 31532,
+      "sampleRate": 24000,
+      "peakDBFS": -3.25,
+      "rmsDBFS": -18.5,
+      "sha256": "163cffe3eb24b7d6dbe37bc1cce3e5b5ac51fce2632f2e5659a2d619d30d07b7"
+    },
+    "audio/chinese-pilot/c62d0e4ba939647c970ef14a.mp3": {
+      "durationSeconds": 2.184,
+      "bytes": 35372,
+      "sampleRate": 24000,
+      "peakDBFS": -4.09,
+      "rmsDBFS": -18.79,
+      "sha256": "8cd327a797d62e6871daa743a1ab9b4dbfbbcb690931509a1472a46c2adcd04f"
+    },
+    "audio/chinese-pilot/14fdee472c3be5a8093d4016.mp3": {
+      "durationSeconds": 1.992,
+      "bytes": 32300,
+      "sampleRate": 24000,
+      "peakDBFS": -3.37,
+      "rmsDBFS": -18.56,
+      "sha256": "b10eebcd304689c3e4230a9a44047966d20f91a0c24ba40077aed66e0d0e45e4"
+    },
+    "audio/chinese-pilot/655b051795118a26327497d2.mp3": {
+      "durationSeconds": 2.136,
+      "bytes": 34604,
+      "sampleRate": 24000,
+      "peakDBFS": -5.76,
+      "rmsDBFS": -18.62,
+      "sha256": "9b1e9bb105dd930c8cc6cd626e2a1a2833b66e829d3d7085cf6b81b6109d4d6a"
+    },
+    "audio/chinese-pilot/bfe6e116fc51bb7f85a43eb9.mp3": {
+      "durationSeconds": 2.088,
+      "bytes": 33836,
+      "sampleRate": 24000,
+      "peakDBFS": -4.5,
+      "rmsDBFS": -18.75,
+      "sha256": "50703646b1b373fbc08f2ae7939b71de727ba39f82bf2df95a78162fdb6cb8ec"
+    },
+    "audio/chinese-pilot/3e90fb8588933b630535235e.mp3": {
+      "durationSeconds": 2.112,
+      "bytes": 34220,
+      "sampleRate": 24000,
+      "peakDBFS": -4.94,
+      "rmsDBFS": -18.98,
+      "sha256": "10186a16d83d04858176d496b2004ddb6d9e625253cd8019227d552a0f1e99bd"
+    },
+    "audio/chinese-pilot/fb729bdfd23357c43bcb09f1.mp3": {
+      "durationSeconds": 2.16,
+      "bytes": 34988,
+      "sampleRate": 24000,
+      "peakDBFS": -3.57,
+      "rmsDBFS": -18.64,
+      "sha256": "b68a580efc3de541aeaa7aeb72de5fe94a765dfe9159a092a4b7758818f3e179"
+    },
+    "audio/chinese-pilot/dd0eee3f44b33071f2d67762.mp3": {
+      "durationSeconds": 1.968,
+      "bytes": 31916,
+      "sampleRate": 24000,
+      "peakDBFS": -4.86,
+      "rmsDBFS": -18.59,
+      "sha256": "1fe23ab4bebb30c02060b5ecbfee34746dab89de46a88d7df3784cd077bb687e"
+    },
+    "audio/chinese-pilot/ad785352c7712b4efc98c397.mp3": {
+      "durationSeconds": 1.992,
+      "bytes": 32300,
+      "sampleRate": 24000,
+      "peakDBFS": -6.34,
+      "rmsDBFS": -18.58,
+      "sha256": "777b5e24d0ea41aebaa1ad68a75dd27efe2610998fd3561e65960184ad6c3b4e"
+    }
+  }
+}

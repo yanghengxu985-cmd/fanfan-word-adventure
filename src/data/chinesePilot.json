@@ -1,0 +1,2482 @@
+{
+  "schemaVersion": 1,
+  "edition": {
+    "title": "义务教育教科书 语文 三年级 上册",
+    "publisher": "人民教育出版社",
+    "isbn": "978-7-107-39754-7",
+    "edition": "2025年6月第1版",
+    "userPrint": "2026年7月第2次印刷",
+    "status": "public_preview_checked_paper_pending"
+  },
+  "sources": [
+    {
+      "id": "preview-2025",
+      "title": "同26课目录的2025秋版教材公开预览",
+      "url": "https://www.scribd.com/document/1067004050/%E4%BA%BA%E6%95%99%E7%89%88-%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C-2025%E7%A7%8B%E7%89%88-%E8%AF%AD%E6%96%87%E7%94%B5%E5%AD%90%E8%AF%BE%E6%9C%AC",
+      "kind": "textbook_public_preview",
+      "checkedAt": "2026-10-04",
+      "status": "public_preview_checked_paper_pending",
+      "note": "目录、课1和课4课后要求、字词表可读；用户2026纸本尚待逐页复核。"
+    },
+    {
+      "id": "editorial",
+      "title": "本项目原创练习与组词示例",
+      "kind": "editorial",
+      "note": "组词示例可以有多个答案；不是新增教材必写词。字音按本课语境核对，轻声词同时保留单字本音说明。"
+    },
+    {
+      "id": "pep-official",
+      "title": "人教官方电子教材入口",
+      "url": "https://book.pep.com.cn/1211001301241/",
+      "kind": "official_entry_unavailable",
+      "note": "2026-10-04仍无法读取内页；不据此冒称官方原页已核对。"
+    }
+  ],
+  "practiceRules": {
+    "roundSize": 6,
+    "writingEvidence": "paper_self_checked",
+    "choiceEvidence": "recognition_only",
+    "wordExamplePolicy": "示例不穷尽；组词允许另一个正确答案，由家长或教师核对。",
+    "copyingPolicy": "答案揭晓前完成独立书写；看着答案补写只计订正，不计独立写对。",
+    "audioStatus": "synthesized_practice_only"
+  },
+  "lessons": [
+    {
+      "courseId": "cn-01",
+      "title": "大青树下的小学",
+      "unitNumber": 1,
+      "lessonNumber": 1,
+      "status": "public_preview_checked_paper_pending",
+      "sourceId": "preview-2025",
+      "textbookPage": "2—4",
+      "recognitionCharacters": [
+        {
+          "id": "cn-01-recognition_character-绒",
+          "character": "绒",
+          "pinyin": "róng",
+          "context": "绒球花的“绒”",
+          "wordExamples": [
+            {
+              "text": "绒毛",
+              "pinyin": "róng máo",
+              "sourceKind": "editorial_extension"
+            },
+            {
+              "text": "绒球",
+              "pinyin": "róng qiú",
+              "sourceKind": "editorial_extension"
+            }
+          ],
+          "lexemeId": "cn-01-recognition_character-01",
+          "sourcePage": "109",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-01-clip-01"
+        },
+        {
+          "id": "cn-01-recognition_character-昂",
+          "character": "昂",
+          "pinyin": "áng",
+          "context": "德昂族的“昂”",
+          "wordExamples": [
+            {
+              "text": "昂首",
+              "pinyin": "áng shǒu",
+              "sourceKind": "editorial_extension"
+            },
+            {
+              "text": "昂扬",
+              "pinyin": "áng yáng",
+              "sourceKind": "editorial_extension"
+            }
+          ],
+          "lexemeId": "cn-01-recognition_character-02",
+          "sourcePage": "109",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-01-clip-02"
+        },
+        {
+          "id": "cn-01-recognition_character-扬",
+          "character": "扬",
+          "pinyin": "yáng",
+          "context": "飘扬的“扬”",
+          "wordExamples": [
+            {
+              "text": "飘扬",
+              "pinyin": "piāo yáng",
+              "sourceKind": "editorial_extension"
+            },
+            {
+              "text": "表扬",
+              "pinyin": "biǎo yáng",
+              "sourceKind": "editorial_extension"
+            }
+          ],
+          "lexemeId": "cn-01-recognition_character-03",
+          "sourcePage": "109",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-01-clip-03"
+        },
+        {
+          "id": "cn-01-recognition_character-凤",
+          "character": "凤",
+          "pinyin": "fèng",
+          "context": "凤尾竹的“凤”",
+          "wordExamples": [
+            {
+              "text": "凤凰",
+              "pinyin": "fèng huáng",
+              "sourceKind": "editorial_extension"
+            },
+            {
+              "text": "凤尾竹",
+              "pinyin": "fèng wěi zhú",
+              "sourceKind": "editorial_extension"
+            }
+          ],
+          "lexemeId": "cn-01-recognition_character-04",
+          "sourcePage": "109",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-01-clip-04"
+        },
+        {
+          "id": "cn-01-recognition_character-墙",
+          "character": "墙",
+          "pinyin": "qiáng",
+          "context": "墙壁的“墙”",
+          "wordExamples": [
+            {
+              "text": "墙壁",
+              "pinyin": "qiáng bì",
+              "sourceKind": "editorial_extension"
+            },
+            {
+              "text": "城墙",
+              "pinyin": "chéng qiáng",
+              "sourceKind": "editorial_extension"
+            }
+          ],
+          "lexemeId": "cn-01-recognition_character-05",
+          "sourcePage": "109",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-01-clip-05"
+        },
+        {
+          "id": "cn-01-recognition_character-晃",
+          "character": "晃",
+          "pinyin": "huàng",
+          "context": "摇晃的“晃”，本课读第四声",
+          "wordExamples": [
+            {
+              "text": "摇晃",
+              "pinyin": "yáo huàng",
+              "sourceKind": "editorial_extension"
+            },
+            {
+              "text": "晃动",
+              "pinyin": "huàng dòng",
+              "sourceKind": "editorial_extension"
+            }
+          ],
+          "lexemeId": "cn-01-recognition_character-06",
+          "sourcePage": "109",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-01-clip-06"
+        }
+      ],
+      "writingCharacters": [
+        {
+          "id": "cn-01-writing_character-坡",
+          "character": "坡",
+          "pinyin": "pō",
+          "context": "山坡的“坡”",
+          "wordExamples": [
+            {
+              "text": "山坡",
+              "pinyin": "shān pō",
+              "sourceKind": "editorial_extension"
+            },
+            {
+              "text": "上坡",
+              "pinyin": "shàng pō",
+              "sourceKind": "editorial_extension"
+            }
+          ],
+          "lexemeId": "cn-01-writing_character-01",
+          "sourcePage": "112",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-01-clip-07"
+        },
+        {
+          "id": "cn-01-writing_character-球",
+          "character": "球",
+          "pinyin": "qiú",
+          "context": "绒球花的“球”",
+          "wordExamples": [
+            {
+              "text": "皮球",
+              "pinyin": "pí qiú",
+              "sourceKind": "editorial_extension"
+            },
+            {
+              "text": "足球",
+              "pinyin": "zú qiú",
+              "sourceKind": "editorial_extension"
+            }
+          ],
+          "lexemeId": "cn-01-writing_character-02",
+          "sourcePage": "112",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-01-clip-08"
+        },
+        {
+          "id": "cn-01-writing_character-招",
+          "character": "招",
+          "pinyin": "zhāo",
+          "context": "招引的“招”",
+          "wordExamples": [
+            {
+              "text": "招引",
+              "pinyin": "zhāo yǐn",
+              "sourceKind": "editorial_extension"
+            },
+            {
+              "text": "招手",
+              "pinyin": "zhāo shǒu",
+              "sourceKind": "editorial_extension"
+            }
+          ],
+          "lexemeId": "cn-01-writing_character-03",
+          "sourcePage": "112",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-01-clip-09"
+        },
+        {
+          "id": "cn-01-writing_character-呼",
+          "character": "呼",
+          "pinyin": "hū",
+          "context": "招呼的“呼”，单字本音 hū，词中通常读轻声",
+          "wordExamples": [
+            {
+              "text": "招呼",
+              "pinyin": "zhāo hu",
+              "sourceKind": "editorial_extension"
+            },
+            {
+              "text": "呼吸",
+              "pinyin": "hū xī",
+              "sourceKind": "editorial_extension"
+            }
+          ],
+          "lexemeId": "cn-01-writing_character-04",
+          "sourcePage": "112",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-01-clip-10"
+        },
+        {
+          "id": "cn-01-writing_character-飘",
+          "character": "飘",
+          "pinyin": "piāo",
+          "context": "飘扬的“飘”",
+          "wordExamples": [
+            {
+              "text": "飘扬",
+              "pinyin": "piāo yáng",
+              "sourceKind": "editorial_extension"
+            },
+            {
+              "text": "飘动",
+              "pinyin": "piāo dòng",
+              "sourceKind": "editorial_extension"
+            }
+          ],
+          "lexemeId": "cn-01-writing_character-05",
+          "sourcePage": "112",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-01-clip-03"
+        },
+        {
+          "id": "cn-01-writing_character-扬",
+          "character": "扬",
+          "pinyin": "yáng",
+          "context": "飘扬的“扬”",
+          "wordExamples": [
+            {
+              "text": "飘扬",
+              "pinyin": "piāo yáng",
+              "sourceKind": "editorial_extension"
+            },
+            {
+              "text": "表扬",
+              "pinyin": "biǎo yáng",
+              "sourceKind": "editorial_extension"
+            }
+          ],
+          "lexemeId": "cn-01-writing_character-06",
+          "sourcePage": "112",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-01-clip-03"
+        },
+        {
+          "id": "cn-01-writing_character-读",
+          "character": "读",
+          "pinyin": "dú",
+          "context": "朗读的“读”",
+          "wordExamples": [
+            {
+              "text": "读书",
+              "pinyin": "dú shū",
+              "sourceKind": "editorial_extension"
+            },
+            {
+              "text": "朗读",
+              "pinyin": "lǎng dú",
+              "sourceKind": "editorial_extension"
+            }
+          ],
+          "lexemeId": "cn-01-writing_character-07",
+          "sourcePage": "112",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-01-clip-11"
+        },
+        {
+          "id": "cn-01-writing_character-热",
+          "character": "热",
+          "pinyin": "rè",
+          "context": "热闹的“热”",
+          "wordExamples": [
+            {
+              "text": "热闹",
+              "pinyin": "rè nao",
+              "sourceKind": "editorial_extension"
+            },
+            {
+              "text": "热爱",
+              "pinyin": "rè ài",
+              "sourceKind": "editorial_extension"
+            }
+          ],
+          "lexemeId": "cn-01-writing_character-08",
+          "sourcePage": "112",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-01-clip-12"
+        },
+        {
+          "id": "cn-01-writing_character-闹",
+          "character": "闹",
+          "pinyin": "nào",
+          "context": "热闹的“闹”，单字本音 nào，词中通常读轻声",
+          "wordExamples": [
+            {
+              "text": "热闹",
+              "pinyin": "rè nao",
+              "sourceKind": "editorial_extension"
+            },
+            {
+              "text": "吵闹",
+              "pinyin": "chǎo nào",
+              "sourceKind": "editorial_extension"
+            }
+          ],
+          "lexemeId": "cn-01-writing_character-09",
+          "sourcePage": "112",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-01-clip-12"
+        },
+        {
+          "id": "cn-01-writing_character-粗",
+          "character": "粗",
+          "pinyin": "cū",
+          "context": "粗壮的“粗”",
+          "wordExamples": [
+            {
+              "text": "粗壮",
+              "pinyin": "cū zhuàng",
+              "sourceKind": "editorial_extension"
+            },
+            {
+              "text": "粗细",
+              "pinyin": "cū xì",
+              "sourceKind": "editorial_extension"
+            }
+          ],
+          "lexemeId": "cn-01-writing_character-10",
+          "sourcePage": "112",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-01-clip-13"
+        },
+        {
+          "id": "cn-01-writing_character-壮",
+          "character": "壮",
+          "pinyin": "zhuàng",
+          "context": "粗壮的“壮”",
+          "wordExamples": [
+            {
+              "text": "粗壮",
+              "pinyin": "cū zhuàng",
+              "sourceKind": "editorial_extension"
+            },
+            {
+              "text": "壮观",
+              "pinyin": "zhuàng guān",
+              "sourceKind": "editorial_extension"
+            }
+          ],
+          "lexemeId": "cn-01-writing_character-11",
+          "sourcePage": "112",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-01-clip-13"
+        },
+        {
+          "id": "cn-01-writing_character-洁",
+          "character": "洁",
+          "pinyin": "jié",
+          "context": "洁白的“洁”",
+          "wordExamples": [
+            {
+              "text": "洁白",
+              "pinyin": "jié bái",
+              "sourceKind": "editorial_extension"
+            },
+            {
+              "text": "清洁",
+              "pinyin": "qīng jié",
+              "sourceKind": "editorial_extension"
+            }
+          ],
+          "lexemeId": "cn-01-writing_character-12",
+          "sourcePage": "112",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-01-clip-14"
+        }
+      ],
+      "words": [
+        {
+          "text": "山坡",
+          "pinyin": "shān pō",
+          "lexemeId": "cn-01-textbook_word-01",
+          "sourceKind": "textbook_word",
+          "sourcePage": "114",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-01-clip-07"
+        },
+        {
+          "text": "学校",
+          "pinyin": "xué xiào",
+          "lexemeId": "cn-01-textbook_word-02",
+          "sourceKind": "textbook_word",
+          "sourcePage": "114",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-01-clip-15"
+        },
+        {
+          "text": "飘扬",
+          "pinyin": "piāo yáng",
+          "lexemeId": "cn-01-textbook_word-03",
+          "sourceKind": "textbook_word",
+          "sourcePage": "114",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-01-clip-03"
+        },
+        {
+          "text": "课文",
+          "pinyin": "kè wén",
+          "lexemeId": "cn-01-textbook_word-04",
+          "sourceKind": "textbook_word",
+          "sourcePage": "114",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-01-clip-16"
+        },
+        {
+          "text": "声音",
+          "pinyin": "shēng yīn",
+          "lexemeId": "cn-01-textbook_word-05",
+          "sourceKind": "textbook_word",
+          "sourcePage": "114",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-01-clip-17"
+        },
+        {
+          "text": "招引",
+          "pinyin": "zhāo yǐn",
+          "lexemeId": "cn-01-textbook_word-06",
+          "sourceKind": "textbook_word",
+          "sourcePage": "114",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-01-clip-09"
+        },
+        {
+          "text": "热闹",
+          "pinyin": "rè nao",
+          "lexemeId": "cn-01-textbook_word-07",
+          "sourceKind": "textbook_word",
+          "sourcePage": "114",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-01-clip-12"
+        },
+        {
+          "text": "古老",
+          "pinyin": "gǔ lǎo",
+          "lexemeId": "cn-01-textbook_word-08",
+          "sourceKind": "textbook_word",
+          "sourcePage": "114",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-01-clip-18"
+        },
+        {
+          "text": "粗壮",
+          "pinyin": "cū zhuàng",
+          "lexemeId": "cn-01-textbook_word-09",
+          "sourceKind": "textbook_word",
+          "sourcePage": "114",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-01-clip-13"
+        },
+        {
+          "text": "枝干",
+          "pinyin": "zhī gàn",
+          "lexemeId": "cn-01-textbook_word-10",
+          "sourceKind": "textbook_word",
+          "sourcePage": "114",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-01-clip-19"
+        },
+        {
+          "text": "洁白",
+          "pinyin": "jié bái",
+          "lexemeId": "cn-01-textbook_word-11",
+          "sourceKind": "textbook_word",
+          "sourcePage": "114",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-01-clip-14"
+        }
+      ],
+      "detectiveQuestions": [
+        {
+          "id": "cn-01-detective-01",
+          "kind": "reading",
+          "prompt": "“绒球花”的“绒”读什么？",
+          "options": [
+            {
+              "id": "option-1",
+              "text": "róng"
+            },
+            {
+              "id": "option-2",
+              "text": "lóng"
+            },
+            {
+              "id": "option-3",
+              "text": "rǒng"
+            }
+          ],
+          "answerId": "option-1",
+          "explanation": "“绒”读 róng，是翘舌音，第二声。",
+          "lexemeIds": [
+            "cn-01-recognition_character-01"
+          ],
+          "sourceKind": "editorial_extension",
+          "sourceId": "editorial"
+        },
+        {
+          "id": "cn-01-detective-02",
+          "kind": "reading",
+          "prompt": "“德昂族”的“昂”读什么？",
+          "options": [
+            {
+              "id": "option-1",
+              "text": "áng"
+            },
+            {
+              "id": "option-2",
+              "text": "ǎng"
+            },
+            {
+              "id": "option-3",
+              "text": "ān"
+            }
+          ],
+          "answerId": "option-1",
+          "explanation": "“昂”读 áng，第二声，后鼻音。",
+          "lexemeIds": [
+            "cn-01-recognition_character-02"
+          ],
+          "sourceKind": "editorial_extension",
+          "sourceId": "editorial"
+        },
+        {
+          "id": "cn-01-detective-03",
+          "kind": "reading",
+          "prompt": "“飘扬”的“扬”读什么？",
+          "options": [
+            {
+              "id": "option-1",
+              "text": "yáng"
+            },
+            {
+              "id": "option-2",
+              "text": "yǎng"
+            },
+            {
+              "id": "option-3",
+              "text": "yàng"
+            }
+          ],
+          "answerId": "option-1",
+          "explanation": "“扬”读 yáng，第二声。",
+          "lexemeIds": [
+            "cn-01-recognition_character-03"
+          ],
+          "sourceKind": "editorial_extension",
+          "sourceId": "editorial"
+        },
+        {
+          "id": "cn-01-detective-04",
+          "kind": "reading",
+          "prompt": "“凤尾竹”的“凤”读什么？",
+          "options": [
+            {
+              "id": "option-1",
+              "text": "fèng"
+            },
+            {
+              "id": "option-2",
+              "text": "fēng"
+            },
+            {
+              "id": "option-3",
+              "text": "fòng"
+            }
+          ],
+          "answerId": "option-1",
+          "explanation": "“凤”读 fèng，第四声。",
+          "lexemeIds": [
+            "cn-01-recognition_character-04"
+          ],
+          "sourceKind": "editorial_extension",
+          "sourceId": "editorial"
+        },
+        {
+          "id": "cn-01-detective-05",
+          "kind": "reading",
+          "prompt": "“墙壁”的“墙”读什么？",
+          "options": [
+            {
+              "id": "option-1",
+              "text": "qiáng"
+            },
+            {
+              "id": "option-2",
+              "text": "qiǎng"
+            },
+            {
+              "id": "option-3",
+              "text": "jiáng"
+            }
+          ],
+          "answerId": "option-1",
+          "explanation": "“墙”读 qiáng，第二声。",
+          "lexemeIds": [
+            "cn-01-recognition_character-05"
+          ],
+          "sourceKind": "editorial_extension",
+          "sourceId": "editorial"
+        },
+        {
+          "id": "cn-01-detective-06",
+          "kind": "reading",
+          "prompt": "“摇晃”的“晃”读什么？",
+          "options": [
+            {
+              "id": "option-1",
+              "text": "huàng"
+            },
+            {
+              "id": "option-2",
+              "text": "huǎng"
+            },
+            {
+              "id": "option-3",
+              "text": "guàng"
+            }
+          ],
+          "answerId": "option-1",
+          "explanation": "表示来回摇动时，“晃”读 huàng；“晃眼”的“晃”才读 huǎng。",
+          "lexemeIds": [
+            "cn-01-recognition_character-06"
+          ],
+          "sourceKind": "editorial_extension",
+          "sourceId": "editorial"
+        },
+        {
+          "id": "cn-01-detective-07",
+          "kind": "glyph",
+          "prompt": "国旗随风＿＿扬，应填哪个字？",
+          "options": [
+            {
+              "id": "option-1",
+              "text": "飘"
+            },
+            {
+              "id": "option-2",
+              "text": "漂"
+            },
+            {
+              "id": "option-3",
+              "text": "票"
+            }
+          ],
+          "answerId": "option-1",
+          "explanation": "“飘扬”表示随风摆动，用带“风”的“飘”；“漂”常与水有关。",
+          "lexemeIds": [
+            "cn-01-writing_character-05",
+            "cn-01-recognition_character-03"
+          ],
+          "sourceKind": "editorial_extension",
+          "sourceId": "editorial"
+        },
+        {
+          "id": "cn-01-detective-08",
+          "kind": "glyph",
+          "prompt": "老师表＿＿了认真读书的同学。",
+          "options": [
+            {
+              "id": "option-1",
+              "text": "扬"
+            },
+            {
+              "id": "option-2",
+              "text": "杨"
+            },
+            {
+              "id": "option-3",
+              "text": "阳"
+            }
+          ],
+          "answerId": "option-1",
+          "explanation": "表扬用提手旁的“扬”；杨树用木字旁的“杨”。",
+          "lexemeIds": [
+            "cn-01-recognition_character-03"
+          ],
+          "sourceKind": "editorial_extension",
+          "sourceId": "editorial"
+        },
+        {
+          "id": "cn-01-detective-09",
+          "kind": "glyph",
+          "prompt": "“山＿＿”里应填哪个字？",
+          "options": [
+            {
+              "id": "option-1",
+              "text": "坡"
+            },
+            {
+              "id": "option-2",
+              "text": "波"
+            },
+            {
+              "id": "option-3",
+              "text": "披"
+            }
+          ],
+          "answerId": "option-1",
+          "explanation": "山坡是倾斜的地面，用土字旁的“坡”。",
+          "lexemeIds": [
+            "cn-01-writing_character-01"
+          ],
+          "sourceKind": "editorial_extension",
+          "sourceId": "editorial"
+        },
+        {
+          "id": "cn-01-detective-10",
+          "kind": "grouping",
+          "prompt": "哪一组都能用“招”组词？",
+          "options": [
+            {
+              "id": "option-1",
+              "text": "招手、招引"
+            },
+            {
+              "id": "option-2",
+              "text": "召手、召引"
+            },
+            {
+              "id": "option-3",
+              "text": "招手、昭引"
+            }
+          ],
+          "answerId": "option-1",
+          "explanation": "“招”能组成招手、招引、招呼；这几处都用提手旁。",
+          "lexemeIds": [
+            "cn-01-writing_character-03"
+          ],
+          "sourceKind": "editorial_extension",
+          "sourceId": "editorial"
+        },
+        {
+          "id": "cn-01-detective-11",
+          "kind": "grouping",
+          "prompt": "哪一组词语没有错别字？",
+          "options": [
+            {
+              "id": "option-1",
+              "text": "洁白、清洁"
+            },
+            {
+              "id": "option-2",
+              "text": "结白、清洁"
+            },
+            {
+              "id": "option-3",
+              "text": "洁白、清结"
+            }
+          ],
+          "answerId": "option-1",
+          "explanation": "“洁白”和“清洁”都用三点水旁的“洁”。",
+          "lexemeIds": [
+            "cn-01-writing_character-12"
+          ],
+          "sourceKind": "editorial_extension",
+          "sourceId": "editorial"
+        },
+        {
+          "id": "cn-01-detective-12",
+          "kind": "grouping",
+          "prompt": "“粗”能和哪组字分别组成正确词语？",
+          "options": [
+            {
+              "id": "option-1",
+              "text": "细、壮"
+            },
+            {
+              "id": "option-2",
+              "text": "细、状"
+            },
+            {
+              "id": "option-3",
+              "text": "夕、壮"
+            }
+          ],
+          "answerId": "option-1",
+          "explanation": "“粗细”“粗壮”都是正确词语；“壮”表示强壮结实。",
+          "lexemeIds": [
+            "cn-01-writing_character-10",
+            "cn-01-writing_character-11"
+          ],
+          "sourceKind": "editorial_extension",
+          "sourceId": "editorial"
+        }
+      ],
+      "writingItems": [
+        {
+          "id": "cn-01-write-山坡",
+          "prompt": "在纸上写出这个词语。提示：山上倾斜的地面",
+          "pinyin": "shān pō",
+          "answers": [
+            "山坡"
+          ],
+          "explanation": "正确词语是“山坡”。核对每个字，特别留意“坡”。",
+          "audioId": "cn-01-clip-07",
+          "targetCharacters": [
+            "坡"
+          ],
+          "lexemeIds": [
+            "cn-01-textbook_word-01"
+          ],
+          "sourceKind": "textbook_word",
+          "sourcePage": "114",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "evidence": "paper_self_checked"
+        },
+        {
+          "id": "cn-01-write-学校",
+          "prompt": "在纸上写出这个词语。提示：老师教、学生学的地方",
+          "pinyin": "xué xiào",
+          "answers": [
+            "学校"
+          ],
+          "explanation": "正确词语是“学校”。核对每个字，特别留意。",
+          "audioId": "cn-01-clip-15",
+          "targetCharacters": [],
+          "lexemeIds": [
+            "cn-01-textbook_word-02"
+          ],
+          "sourceKind": "textbook_word",
+          "sourcePage": "114",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "evidence": "paper_self_checked"
+        },
+        {
+          "id": "cn-01-write-飘扬",
+          "prompt": "在纸上写出这个词语。提示：旗帜随风摆动",
+          "pinyin": "piāo yáng",
+          "answers": [
+            "飘扬"
+          ],
+          "explanation": "正确词语是“飘扬”。核对每个字，特别留意“飘”、“扬”。",
+          "audioId": "cn-01-clip-03",
+          "targetCharacters": [
+            "飘",
+            "扬"
+          ],
+          "lexemeIds": [
+            "cn-01-textbook_word-03"
+          ],
+          "sourceKind": "textbook_word",
+          "sourcePage": "114",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "evidence": "paper_self_checked"
+        },
+        {
+          "id": "cn-01-write-课文",
+          "prompt": "在纸上写出这个词语。提示：语文课本里学习的文章",
+          "pinyin": "kè wén",
+          "answers": [
+            "课文"
+          ],
+          "explanation": "正确词语是“课文”。核对每个字，特别留意。",
+          "audioId": "cn-01-clip-16",
+          "targetCharacters": [],
+          "lexemeIds": [
+            "cn-01-textbook_word-04"
+          ],
+          "sourceKind": "textbook_word",
+          "sourcePage": "114",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "evidence": "paper_self_checked"
+        },
+        {
+          "id": "cn-01-write-声音",
+          "prompt": "在纸上写出这个词语。提示：耳朵能听到的声响",
+          "pinyin": "shēng yīn",
+          "answers": [
+            "声音"
+          ],
+          "explanation": "正确词语是“声音”。核对每个字，特别留意。",
+          "audioId": "cn-01-clip-17",
+          "targetCharacters": [],
+          "lexemeIds": [
+            "cn-01-textbook_word-05"
+          ],
+          "sourceKind": "textbook_word",
+          "sourcePage": "114",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "evidence": "paper_self_checked"
+        },
+        {
+          "id": "cn-01-write-招引",
+          "prompt": "在纸上写出这个词语。提示：吸引、引来",
+          "pinyin": "zhāo yǐn",
+          "answers": [
+            "招引"
+          ],
+          "explanation": "正确词语是“招引”。核对每个字，特别留意“招”。",
+          "audioId": "cn-01-clip-09",
+          "targetCharacters": [
+            "招"
+          ],
+          "lexemeIds": [
+            "cn-01-textbook_word-06"
+          ],
+          "sourceKind": "textbook_word",
+          "sourcePage": "114",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "evidence": "paper_self_checked"
+        },
+        {
+          "id": "cn-01-write-热闹",
+          "prompt": "在纸上写出这个词语。提示：人多、活动多，气氛活跃",
+          "pinyin": "rè nao",
+          "answers": [
+            "热闹"
+          ],
+          "explanation": "正确词语是“热闹”。核对每个字，特别留意“热”、“闹”。",
+          "audioId": "cn-01-clip-12",
+          "targetCharacters": [
+            "热",
+            "闹"
+          ],
+          "lexemeIds": [
+            "cn-01-textbook_word-07"
+          ],
+          "sourceKind": "textbook_word",
+          "sourcePage": "114",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "evidence": "paper_self_checked"
+        },
+        {
+          "id": "cn-01-write-古老",
+          "prompt": "在纸上写出这个词语。提示：经历了很长时间",
+          "pinyin": "gǔ lǎo",
+          "answers": [
+            "古老"
+          ],
+          "explanation": "正确词语是“古老”。核对每个字，特别留意。",
+          "audioId": "cn-01-clip-18",
+          "targetCharacters": [],
+          "lexemeIds": [
+            "cn-01-textbook_word-08"
+          ],
+          "sourceKind": "textbook_word",
+          "sourcePage": "114",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "evidence": "paper_self_checked"
+        },
+        {
+          "id": "cn-01-write-粗壮",
+          "prompt": "在纸上写出这个词语。提示：形体大而结实",
+          "pinyin": "cū zhuàng",
+          "answers": [
+            "粗壮"
+          ],
+          "explanation": "正确词语是“粗壮”。核对每个字，特别留意“粗”、“壮”。",
+          "audioId": "cn-01-clip-13",
+          "targetCharacters": [
+            "粗",
+            "壮"
+          ],
+          "lexemeIds": [
+            "cn-01-textbook_word-09"
+          ],
+          "sourceKind": "textbook_word",
+          "sourcePage": "114",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "evidence": "paper_self_checked"
+        },
+        {
+          "id": "cn-01-write-枝干",
+          "prompt": "在纸上写出这个词语。提示：树木支撑和伸展的部分",
+          "pinyin": "zhī gàn",
+          "answers": [
+            "枝干"
+          ],
+          "explanation": "正确词语是“枝干”。核对每个字，特别留意。",
+          "audioId": "cn-01-clip-19",
+          "targetCharacters": [],
+          "lexemeIds": [
+            "cn-01-textbook_word-10"
+          ],
+          "sourceKind": "textbook_word",
+          "sourcePage": "114",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "evidence": "paper_self_checked"
+        },
+        {
+          "id": "cn-01-write-洁白",
+          "prompt": "在纸上写出这个词语。提示：干净而且很白",
+          "pinyin": "jié bái",
+          "answers": [
+            "洁白"
+          ],
+          "explanation": "正确词语是“洁白”。核对每个字，特别留意“洁”。",
+          "audioId": "cn-01-clip-14",
+          "targetCharacters": [
+            "洁"
+          ],
+          "lexemeIds": [
+            "cn-01-textbook_word-11"
+          ],
+          "sourceKind": "textbook_word",
+          "sourcePage": "114",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "evidence": "paper_self_checked"
+        },
+        {
+          "id": "cn-01-write-皮球",
+          "prompt": "在纸上写出这个词语。提示：用橡胶等材料制成，可以拍打、滚动的圆形玩具",
+          "pinyin": "pí qiú",
+          "answers": [
+            "皮球"
+          ],
+          "explanation": "正确词语是“皮球”。核对每个字，特别留意“球”。",
+          "audioId": "cn-01-clip-08",
+          "targetCharacters": [
+            "球"
+          ],
+          "lexemeIds": [
+            "cn-01-writing_character-02"
+          ],
+          "sourceKind": "editorial_extension",
+          "sourcePage": "112",
+          "sourceId": "editorial",
+          "status": "editorial_extension",
+          "evidence": "paper_self_checked"
+        },
+        {
+          "id": "cn-01-write-招呼",
+          "prompt": "在纸上写出这个词语。提示：见面时打个问候",
+          "pinyin": "zhāo hu",
+          "answers": [
+            "招呼"
+          ],
+          "explanation": "正确词语是“招呼”。核对每个字，特别留意“招”、“呼”。",
+          "audioId": "cn-01-clip-10",
+          "targetCharacters": [
+            "招",
+            "呼"
+          ],
+          "lexemeIds": [
+            "cn-01-writing_character-03",
+            "cn-01-writing_character-04"
+          ],
+          "sourceKind": "editorial_extension",
+          "sourcePage": "112",
+          "sourceId": "editorial",
+          "status": "editorial_extension",
+          "evidence": "paper_self_checked"
+        },
+        {
+          "id": "cn-01-write-读书",
+          "prompt": "在纸上写出这个词语。提示：对着书本学习",
+          "pinyin": "dú shū",
+          "answers": [
+            "读书"
+          ],
+          "explanation": "正确词语是“读书”。核对每个字，特别留意“读”。",
+          "audioId": "cn-01-clip-11",
+          "targetCharacters": [
+            "读"
+          ],
+          "lexemeIds": [
+            "cn-01-writing_character-07"
+          ],
+          "sourceKind": "editorial_extension",
+          "sourcePage": "112",
+          "sourceId": "editorial",
+          "status": "editorial_extension",
+          "evidence": "paper_self_checked"
+        }
+      ],
+      "recitation": {
+        "requirementNote": "本课课后未指定背诵或默写，不自动加入必背清单。",
+        "sourcePage": "4",
+        "sourceId": "preview-2025",
+        "status": "public_preview_checked_paper_pending",
+        "poems": []
+      },
+      "recitationItems": []
+    },
+    {
+      "courseId": "cn-04",
+      "title": "古诗三首",
+      "unitNumber": 2,
+      "lessonNumber": 4,
+      "status": "public_preview_checked_paper_pending",
+      "sourceId": "preview-2025",
+      "textbookPage": "14—15",
+      "recognitionCharacters": [
+        {
+          "id": "cn-04-recognition_character-庭",
+          "character": "庭",
+          "pinyin": "tíng",
+          "context": "洞庭的“庭”",
+          "wordExamples": [
+            {
+              "text": "庭院",
+              "pinyin": "tíng yuàn",
+              "sourceKind": "editorial_extension"
+            },
+            {
+              "text": "家庭",
+              "pinyin": "jiā tíng",
+              "sourceKind": "editorial_extension"
+            }
+          ],
+          "lexemeId": "cn-04-recognition_character-01",
+          "sourcePage": "109",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-04-clip-20"
+        },
+        {
+          "id": "cn-04-recognition_character-未",
+          "character": "未",
+          "pinyin": "wèi",
+          "context": "镜未磨的“未”",
+          "wordExamples": [
+            {
+              "text": "未来",
+              "pinyin": "wèi lái",
+              "sourceKind": "editorial_extension"
+            },
+            {
+              "text": "未必",
+              "pinyin": "wèi bì",
+              "sourceKind": "editorial_extension"
+            }
+          ],
+          "lexemeId": "cn-04-recognition_character-02",
+          "sourcePage": "109",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-04-clip-21"
+        },
+        {
+          "id": "cn-04-recognition_character-磨",
+          "character": "磨",
+          "pinyin": "mó",
+          "context": "镜未磨的“磨”，打磨的意思，读 mó",
+          "wordExamples": [
+            {
+              "text": "打磨",
+              "pinyin": "dǎ mó",
+              "sourceKind": "editorial_extension"
+            },
+            {
+              "text": "磨刀",
+              "pinyin": "mó dāo",
+              "sourceKind": "editorial_extension"
+            }
+          ],
+          "lexemeId": "cn-04-recognition_character-03",
+          "sourcePage": "109",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-04-clip-22"
+        },
+        {
+          "id": "cn-04-recognition_character-斜",
+          "character": "斜",
+          "pinyin": "xié",
+          "context": "石径斜的“斜”，现代普通话读 xié",
+          "wordExamples": [
+            {
+              "text": "倾斜",
+              "pinyin": "qīng xié",
+              "sourceKind": "editorial_extension"
+            },
+            {
+              "text": "斜坡",
+              "pinyin": "xié pō",
+              "sourceKind": "editorial_extension"
+            }
+          ],
+          "lexemeId": "cn-04-recognition_character-04",
+          "sourcePage": "109",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-04-clip-23"
+        },
+        {
+          "id": "cn-04-recognition_character-萧",
+          "character": "萧",
+          "pinyin": "xiāo",
+          "context": "萧萧梧叶的“萧”",
+          "wordExamples": [
+            {
+              "text": "萧萧",
+              "pinyin": "xiāo xiāo",
+              "sourceKind": "editorial_extension"
+            },
+            {
+              "text": "萧条",
+              "pinyin": "xiāo tiáo",
+              "sourceKind": "editorial_extension"
+            }
+          ],
+          "lexemeId": "cn-04-recognition_character-05",
+          "sourcePage": "109",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-04-clip-24"
+        },
+        {
+          "id": "cn-04-recognition_character-挑",
+          "character": "挑",
+          "pinyin": "tiǎo",
+          "context": "挑促织的“挑”，用细长的东西拨动，读 tiǎo",
+          "wordExamples": [
+            {
+              "text": "挑灯",
+              "pinyin": "tiǎo dēng",
+              "sourceKind": "editorial_extension"
+            },
+            {
+              "text": "挑动",
+              "pinyin": "tiǎo dòng",
+              "sourceKind": "editorial_extension"
+            }
+          ],
+          "lexemeId": "cn-04-recognition_character-06",
+          "sourcePage": "109",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-04-clip-25"
+        },
+        {
+          "id": "cn-04-recognition_character-促",
+          "character": "促",
+          "pinyin": "cù",
+          "context": "促织的“促”",
+          "wordExamples": [
+            {
+              "text": "促织",
+              "pinyin": "cù zhī",
+              "sourceKind": "editorial_extension"
+            },
+            {
+              "text": "促进",
+              "pinyin": "cù jìn",
+              "sourceKind": "editorial_extension"
+            }
+          ],
+          "lexemeId": "cn-04-recognition_character-07",
+          "sourcePage": "109",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-04-clip-26"
+        }
+      ],
+      "writingCharacters": [
+        {
+          "id": "cn-04-writing_character-庭",
+          "character": "庭",
+          "pinyin": "tíng",
+          "context": "洞庭的“庭”",
+          "wordExamples": [
+            {
+              "text": "庭院",
+              "pinyin": "tíng yuàn",
+              "sourceKind": "editorial_extension"
+            },
+            {
+              "text": "家庭",
+              "pinyin": "jiā tíng",
+              "sourceKind": "editorial_extension"
+            }
+          ],
+          "lexemeId": "cn-04-writing_character-01",
+          "sourcePage": "112",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-04-clip-20"
+        },
+        {
+          "id": "cn-04-writing_character-相",
+          "character": "相",
+          "pinyin": "xiāng",
+          "context": "两相和的“相”，读 xiāng",
+          "wordExamples": [
+            {
+              "text": "相互",
+              "pinyin": "xiāng hù",
+              "sourceKind": "editorial_extension"
+            },
+            {
+              "text": "相同",
+              "pinyin": "xiāng tóng",
+              "sourceKind": "editorial_extension"
+            }
+          ],
+          "lexemeId": "cn-04-writing_character-02",
+          "sourcePage": "112",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-04-clip-27"
+        },
+        {
+          "id": "cn-04-writing_character-未",
+          "character": "未",
+          "pinyin": "wèi",
+          "context": "镜未磨的“未”",
+          "wordExamples": [
+            {
+              "text": "未来",
+              "pinyin": "wèi lái",
+              "sourceKind": "editorial_extension"
+            },
+            {
+              "text": "未必",
+              "pinyin": "wèi bì",
+              "sourceKind": "editorial_extension"
+            }
+          ],
+          "lexemeId": "cn-04-writing_character-03",
+          "sourcePage": "112",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-04-clip-21"
+        },
+        {
+          "id": "cn-04-writing_character-寒",
+          "character": "寒",
+          "pinyin": "hán",
+          "context": "寒山的“寒”",
+          "wordExamples": [
+            {
+              "text": "寒冷",
+              "pinyin": "hán lěng",
+              "sourceKind": "editorial_extension"
+            },
+            {
+              "text": "寒风",
+              "pinyin": "hán fēng",
+              "sourceKind": "editorial_extension"
+            }
+          ],
+          "lexemeId": "cn-04-writing_character-04",
+          "sourcePage": "112",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-04-clip-28"
+        },
+        {
+          "id": "cn-04-writing_character-径",
+          "character": "径",
+          "pinyin": "jìng",
+          "context": "石径的“径”",
+          "wordExamples": [
+            {
+              "text": "小径",
+              "pinyin": "xiǎo jìng",
+              "sourceKind": "editorial_extension"
+            },
+            {
+              "text": "路径",
+              "pinyin": "lù jìng",
+              "sourceKind": "editorial_extension"
+            }
+          ],
+          "lexemeId": "cn-04-writing_character-05",
+          "sourcePage": "112",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-04-clip-29"
+        },
+        {
+          "id": "cn-04-writing_character-斜",
+          "character": "斜",
+          "pinyin": "xié",
+          "context": "石径斜的“斜”，现代普通话读 xié",
+          "wordExamples": [
+            {
+              "text": "倾斜",
+              "pinyin": "qīng xié",
+              "sourceKind": "editorial_extension"
+            },
+            {
+              "text": "斜坡",
+              "pinyin": "xié pō",
+              "sourceKind": "editorial_extension"
+            }
+          ],
+          "lexemeId": "cn-04-writing_character-06",
+          "sourcePage": "112",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-04-clip-23"
+        },
+        {
+          "id": "cn-04-writing_character-枫",
+          "character": "枫",
+          "pinyin": "fēng",
+          "context": "枫林的“枫”",
+          "wordExamples": [
+            {
+              "text": "枫叶",
+              "pinyin": "fēng yè",
+              "sourceKind": "editorial_extension"
+            },
+            {
+              "text": "枫树",
+              "pinyin": "fēng shù",
+              "sourceKind": "editorial_extension"
+            }
+          ],
+          "lexemeId": "cn-04-writing_character-07",
+          "sourcePage": "112",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-04-clip-30"
+        },
+        {
+          "id": "cn-04-writing_character-霜",
+          "character": "霜",
+          "pinyin": "shuāng",
+          "context": "霜叶的“霜”",
+          "wordExamples": [
+            {
+              "text": "霜冻",
+              "pinyin": "shuāng dòng",
+              "sourceKind": "editorial_extension"
+            },
+            {
+              "text": "秋霜",
+              "pinyin": "qiū shuāng",
+              "sourceKind": "editorial_extension"
+            }
+          ],
+          "lexemeId": "cn-04-writing_character-08",
+          "sourcePage": "112",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-04-clip-31"
+        },
+        {
+          "id": "cn-04-writing_character-挑",
+          "character": "挑",
+          "pinyin": "tiǎo",
+          "context": "挑促织的“挑”，用细长的东西拨动，读 tiǎo",
+          "wordExamples": [
+            {
+              "text": "挑灯",
+              "pinyin": "tiǎo dēng",
+              "sourceKind": "editorial_extension"
+            },
+            {
+              "text": "挑动",
+              "pinyin": "tiǎo dòng",
+              "sourceKind": "editorial_extension"
+            }
+          ],
+          "lexemeId": "cn-04-writing_character-09",
+          "sourcePage": "112",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-04-clip-25"
+        },
+        {
+          "id": "cn-04-writing_character-深",
+          "character": "深",
+          "pinyin": "shēn",
+          "context": "夜深的“深”",
+          "wordExamples": [
+            {
+              "text": "深夜",
+              "pinyin": "shēn yè",
+              "sourceKind": "editorial_extension"
+            },
+            {
+              "text": "深浅",
+              "pinyin": "shēn qiǎn",
+              "sourceKind": "editorial_extension"
+            }
+          ],
+          "lexemeId": "cn-04-writing_character-10",
+          "sourcePage": "112",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-04-clip-32"
+        },
+        {
+          "id": "cn-04-writing_character-落",
+          "character": "落",
+          "pinyin": "luò",
+          "context": "篱落的“落”，此处读 luò；落叶也读 luò",
+          "wordExamples": [
+            {
+              "text": "落叶",
+              "pinyin": "luò yè",
+              "sourceKind": "editorial_extension"
+            },
+            {
+              "text": "降落",
+              "pinyin": "jiàng luò",
+              "sourceKind": "editorial_extension"
+            }
+          ],
+          "lexemeId": "cn-04-writing_character-11",
+          "sourcePage": "112",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "audioId": "cn-04-clip-33"
+        }
+      ],
+      "words": [],
+      "detectiveQuestions": [
+        {
+          "id": "cn-04-detective-01",
+          "kind": "reading",
+          "prompt": "“镜未磨”的“磨”读什么？",
+          "options": [
+            {
+              "id": "option-1",
+              "text": "mó"
+            },
+            {
+              "id": "option-2",
+              "text": "mò"
+            },
+            {
+              "id": "option-3",
+              "text": "mǒ"
+            }
+          ],
+          "answerId": "option-1",
+          "explanation": "这里是打磨的意思，“磨”读 mó；“磨坊”的“磨”读 mò。",
+          "lexemeIds": [
+            "cn-04-recognition_character-03"
+          ],
+          "sourceKind": "editorial_extension",
+          "sourceId": "editorial"
+        },
+        {
+          "id": "cn-04-detective-02",
+          "kind": "reading",
+          "prompt": "“石径斜”的“斜”按普通话读什么？",
+          "options": [
+            {
+              "id": "option-1",
+              "text": "xié"
+            },
+            {
+              "id": "option-2",
+              "text": "xiá"
+            },
+            {
+              "id": "option-3",
+              "text": "xiě"
+            }
+          ],
+          "answerId": "option-1",
+          "explanation": "现代普通话“斜”读 xié，不为了押韵改读 xiá。",
+          "lexemeIds": [
+            "cn-04-recognition_character-04"
+          ],
+          "sourceKind": "editorial_extension",
+          "sourceId": "editorial"
+        },
+        {
+          "id": "cn-04-detective-03",
+          "kind": "reading",
+          "prompt": "“萧萧梧叶”的“萧”读什么？",
+          "options": [
+            {
+              "id": "option-1",
+              "text": "xiāo"
+            },
+            {
+              "id": "option-2",
+              "text": "xiào"
+            },
+            {
+              "id": "option-3",
+              "text": "xiǎo"
+            }
+          ],
+          "answerId": "option-1",
+          "explanation": "“萧”读 xiāo，第一声；“萧萧”描写风吹树叶的声音。",
+          "lexemeIds": [
+            "cn-04-recognition_character-05"
+          ],
+          "sourceKind": "editorial_extension",
+          "sourceId": "editorial"
+        },
+        {
+          "id": "cn-04-detective-04",
+          "kind": "reading",
+          "prompt": "“挑促织”的“挑”读什么？",
+          "options": [
+            {
+              "id": "option-1",
+              "text": "tiǎo"
+            },
+            {
+              "id": "option-2",
+              "text": "tiāo"
+            },
+            {
+              "id": "option-3",
+              "text": "tiào"
+            }
+          ],
+          "answerId": "option-1",
+          "explanation": "这里表示用细长的东西拨动，“挑”读 tiǎo；“挑选”读 tiāo。",
+          "lexemeIds": [
+            "cn-04-recognition_character-06"
+          ],
+          "sourceKind": "editorial_extension",
+          "sourceId": "editorial"
+        },
+        {
+          "id": "cn-04-detective-05",
+          "kind": "reading",
+          "prompt": "“促织”的“促”读什么？",
+          "options": [
+            {
+              "id": "option-1",
+              "text": "cù"
+            },
+            {
+              "id": "option-2",
+              "text": "chù"
+            },
+            {
+              "id": "option-3",
+              "text": "zú"
+            }
+          ],
+          "answerId": "option-1",
+          "explanation": "“促”读 cù，平舌音，第四声。",
+          "lexemeIds": [
+            "cn-04-recognition_character-07"
+          ],
+          "sourceKind": "editorial_extension",
+          "sourceId": "editorial"
+        },
+        {
+          "id": "cn-04-detective-06",
+          "kind": "reading",
+          "prompt": "“两相和”的“相”读什么？",
+          "options": [
+            {
+              "id": "option-1",
+              "text": "xiāng"
+            },
+            {
+              "id": "option-2",
+              "text": "xiàng"
+            },
+            {
+              "id": "option-3",
+              "text": "xiǎng"
+            }
+          ],
+          "answerId": "option-1",
+          "explanation": "“两相和”中的“相”读 xiāng；“相片”中的“相”读 xiàng。",
+          "lexemeIds": [
+            "cn-04-writing_character-02"
+          ],
+          "sourceKind": "editorial_extension",
+          "sourceId": "editorial"
+        },
+        {
+          "id": "cn-04-detective-07",
+          "kind": "glyph",
+          "prompt": "潭面无风镜＿＿磨，应填哪个字？",
+          "options": [
+            {
+              "id": "option-1",
+              "text": "未"
+            },
+            {
+              "id": "option-2",
+              "text": "末"
+            },
+            {
+              "id": "option-3",
+              "text": "朱"
+            }
+          ],
+          "answerId": "option-1",
+          "explanation": "“未”表示还没有，上横短、下横长；“末”的上横长。",
+          "lexemeIds": [
+            "cn-04-recognition_character-02"
+          ],
+          "sourceKind": "editorial_extension",
+          "sourceId": "editorial"
+        },
+        {
+          "id": "cn-04-detective-08",
+          "kind": "glyph",
+          "prompt": "“石＿＿”里应填哪个字？",
+          "options": [
+            {
+              "id": "option-1",
+              "text": "径"
+            },
+            {
+              "id": "option-2",
+              "text": "经"
+            },
+            {
+              "id": "option-3",
+              "text": "轻"
+            }
+          ],
+          "answerId": "option-1",
+          "explanation": "“石径”是石头小路，用双人旁的“径”。",
+          "lexemeIds": [
+            "cn-04-writing_character-05"
+          ],
+          "sourceKind": "editorial_extension",
+          "sourceId": "editorial"
+        },
+        {
+          "id": "cn-04-detective-09",
+          "kind": "glyph",
+          "prompt": "＿＿叶红于二月花，应填哪个字？",
+          "options": [
+            {
+              "id": "option-1",
+              "text": "霜"
+            },
+            {
+              "id": "option-2",
+              "text": "箱"
+            },
+            {
+              "id": "option-3",
+              "text": "相"
+            }
+          ],
+          "answerId": "option-1",
+          "explanation": "“霜叶”是经霜的叶子，“霜”上面是雨字头。",
+          "lexemeIds": [
+            "cn-04-writing_character-08"
+          ],
+          "sourceKind": "editorial_extension",
+          "sourceId": "editorial"
+        },
+        {
+          "id": "cn-04-detective-10",
+          "kind": "grouping",
+          "prompt": "哪一组词语没有错别字？",
+          "options": [
+            {
+              "id": "option-1",
+              "text": "庭院、家庭"
+            },
+            {
+              "id": "option-2",
+              "text": "廷院、家庭"
+            },
+            {
+              "id": "option-3",
+              "text": "庭院、家廷"
+            }
+          ],
+          "answerId": "option-1",
+          "explanation": "“庭院”“家庭”都用广字旁的“庭”；“朝廷”的“廷”不同。",
+          "lexemeIds": [
+            "cn-04-recognition_character-01"
+          ],
+          "sourceKind": "editorial_extension",
+          "sourceId": "editorial"
+        },
+        {
+          "id": "cn-04-detective-11",
+          "kind": "grouping",
+          "prompt": "“寒”能和哪组字分别组成正确词语？",
+          "options": [
+            {
+              "id": "option-1",
+              "text": "冷、风"
+            },
+            {
+              "id": "option-2",
+              "text": "岭、风"
+            },
+            {
+              "id": "option-3",
+              "text": "冷、疯"
+            }
+          ],
+          "answerId": "option-1",
+          "explanation": "“寒冷”“寒风”都是正确词语，组词时要用正确的字。",
+          "lexemeIds": [
+            "cn-04-writing_character-04"
+          ],
+          "sourceKind": "editorial_extension",
+          "sourceId": "editorial"
+        },
+        {
+          "id": "cn-04-detective-12",
+          "kind": "grouping",
+          "prompt": "哪一组词语没有错别字？",
+          "options": [
+            {
+              "id": "option-1",
+              "text": "深夜、落叶"
+            },
+            {
+              "id": "option-2",
+              "text": "伸夜、落叶"
+            },
+            {
+              "id": "option-3",
+              "text": "深夜、洛叶"
+            }
+          ],
+          "answerId": "option-1",
+          "explanation": "“深夜”的“深”有三点水旁，“落叶”的“落”上面是草字头。",
+          "lexemeIds": [
+            "cn-04-writing_character-10",
+            "cn-04-writing_character-11"
+          ],
+          "sourceKind": "editorial_extension",
+          "sourceId": "editorial"
+        }
+      ],
+      "writingItems": [
+        {
+          "id": "cn-04-write-庭院",
+          "prompt": "在纸上写出这个词语。提示：房屋前后的院子",
+          "pinyin": "tíng yuàn",
+          "answers": [
+            "庭院"
+          ],
+          "explanation": "正确词语是“庭院”。核对每个字，特别留意“庭”。",
+          "audioId": "cn-04-clip-20",
+          "targetCharacters": [
+            "庭"
+          ],
+          "lexemeIds": [
+            "cn-04-writing_character-01"
+          ],
+          "sourceKind": "editorial_extension",
+          "sourcePage": "112",
+          "sourceId": "editorial",
+          "status": "editorial_extension",
+          "evidence": "paper_self_checked"
+        },
+        {
+          "id": "cn-04-write-相互",
+          "prompt": "在纸上写出这个词语。提示：彼此",
+          "pinyin": "xiāng hù",
+          "answers": [
+            "相互"
+          ],
+          "explanation": "正确词语是“相互”。核对每个字，特别留意“相”。",
+          "audioId": "cn-04-clip-27",
+          "targetCharacters": [
+            "相"
+          ],
+          "lexemeIds": [
+            "cn-04-writing_character-02"
+          ],
+          "sourceKind": "editorial_extension",
+          "sourcePage": "112",
+          "sourceId": "editorial",
+          "status": "editorial_extension",
+          "evidence": "paper_self_checked"
+        },
+        {
+          "id": "cn-04-write-未来",
+          "prompt": "在纸上写出这个词语。提示：以后还没有到来的时间",
+          "pinyin": "wèi lái",
+          "answers": [
+            "未来"
+          ],
+          "explanation": "正确词语是“未来”。核对每个字，特别留意“未”。",
+          "audioId": "cn-04-clip-21",
+          "targetCharacters": [
+            "未"
+          ],
+          "lexemeIds": [
+            "cn-04-writing_character-03"
+          ],
+          "sourceKind": "editorial_extension",
+          "sourcePage": "112",
+          "sourceId": "editorial",
+          "status": "editorial_extension",
+          "evidence": "paper_self_checked"
+        },
+        {
+          "id": "cn-04-write-寒冷",
+          "prompt": "在纸上写出这个词语。提示：温度低，感觉很冷",
+          "pinyin": "hán lěng",
+          "answers": [
+            "寒冷"
+          ],
+          "explanation": "正确词语是“寒冷”。核对每个字，特别留意“寒”。",
+          "audioId": "cn-04-clip-28",
+          "targetCharacters": [
+            "寒"
+          ],
+          "lexemeIds": [
+            "cn-04-writing_character-04"
+          ],
+          "sourceKind": "editorial_extension",
+          "sourcePage": "112",
+          "sourceId": "editorial",
+          "status": "editorial_extension",
+          "evidence": "paper_self_checked"
+        },
+        {
+          "id": "cn-04-write-小径",
+          "prompt": "在纸上写出这个词语。提示：供人行走的小路",
+          "pinyin": "xiǎo jìng",
+          "answers": [
+            "小径"
+          ],
+          "explanation": "正确词语是“小径”。核对每个字，特别留意“径”。",
+          "audioId": "cn-04-clip-29",
+          "targetCharacters": [
+            "径"
+          ],
+          "lexemeIds": [
+            "cn-04-writing_character-05"
+          ],
+          "sourceKind": "editorial_extension",
+          "sourcePage": "112",
+          "sourceId": "editorial",
+          "status": "editorial_extension",
+          "evidence": "paper_self_checked"
+        },
+        {
+          "id": "cn-04-write-倾斜",
+          "prompt": "在纸上写出这个词语。提示：歪着、不直立",
+          "pinyin": "qīng xié",
+          "answers": [
+            "倾斜"
+          ],
+          "explanation": "正确词语是“倾斜”。核对每个字，特别留意“斜”。",
+          "audioId": "cn-04-clip-23",
+          "targetCharacters": [
+            "斜"
+          ],
+          "lexemeIds": [
+            "cn-04-writing_character-06"
+          ],
+          "sourceKind": "editorial_extension",
+          "sourcePage": "112",
+          "sourceId": "editorial",
+          "status": "editorial_extension",
+          "evidence": "paper_self_checked"
+        },
+        {
+          "id": "cn-04-write-枫叶",
+          "prompt": "在纸上写出这个词语。提示：一种树的叶子，秋季常会变红",
+          "pinyin": "fēng yè",
+          "answers": [
+            "枫叶"
+          ],
+          "explanation": "正确词语是“枫叶”。核对每个字，特别留意“枫”。",
+          "audioId": "cn-04-clip-30",
+          "targetCharacters": [
+            "枫"
+          ],
+          "lexemeIds": [
+            "cn-04-writing_character-07"
+          ],
+          "sourceKind": "editorial_extension",
+          "sourcePage": "112",
+          "sourceId": "editorial",
+          "status": "editorial_extension",
+          "evidence": "paper_self_checked"
+        },
+        {
+          "id": "cn-04-write-霜冻",
+          "prompt": "在纸上写出这个词语。提示：天气寒冷造成植物受冻的现象",
+          "pinyin": "shuāng dòng",
+          "answers": [
+            "霜冻"
+          ],
+          "explanation": "正确词语是“霜冻”。核对每个字，特别留意“霜”。",
+          "audioId": "cn-04-clip-31",
+          "targetCharacters": [
+            "霜"
+          ],
+          "lexemeIds": [
+            "cn-04-writing_character-08"
+          ],
+          "sourceKind": "editorial_extension",
+          "sourcePage": "112",
+          "sourceId": "editorial",
+          "status": "editorial_extension",
+          "evidence": "paper_self_checked"
+        },
+        {
+          "id": "cn-04-write-挑灯",
+          "prompt": "在纸上写出这个词语。提示：拨动灯芯使灯亮一些",
+          "pinyin": "tiǎo dēng",
+          "answers": [
+            "挑灯"
+          ],
+          "explanation": "正确词语是“挑灯”。核对每个字，特别留意“挑”。",
+          "audioId": "cn-04-clip-25",
+          "targetCharacters": [
+            "挑"
+          ],
+          "lexemeIds": [
+            "cn-04-writing_character-09"
+          ],
+          "sourceKind": "editorial_extension",
+          "sourcePage": "112",
+          "sourceId": "editorial",
+          "status": "editorial_extension",
+          "evidence": "paper_self_checked"
+        },
+        {
+          "id": "cn-04-write-深夜",
+          "prompt": "在纸上写出这个词语。提示：夜里很晚的时候",
+          "pinyin": "shēn yè",
+          "answers": [
+            "深夜"
+          ],
+          "explanation": "正确词语是“深夜”。核对每个字，特别留意“深”。",
+          "audioId": "cn-04-clip-32",
+          "targetCharacters": [
+            "深"
+          ],
+          "lexemeIds": [
+            "cn-04-writing_character-10"
+          ],
+          "sourceKind": "editorial_extension",
+          "sourcePage": "112",
+          "sourceId": "editorial",
+          "status": "editorial_extension",
+          "evidence": "paper_self_checked"
+        },
+        {
+          "id": "cn-04-write-落叶",
+          "prompt": "在纸上写出这个词语。提示：离开树枝的叶子",
+          "pinyin": "luò yè",
+          "answers": [
+            "落叶"
+          ],
+          "explanation": "正确词语是“落叶”。核对每个字，特别留意“落”。",
+          "audioId": "cn-04-clip-33",
+          "targetCharacters": [
+            "落"
+          ],
+          "lexemeIds": [
+            "cn-04-writing_character-11"
+          ],
+          "sourceKind": "editorial_extension",
+          "sourcePage": "112",
+          "sourceId": "editorial",
+          "status": "editorial_extension",
+          "evidence": "paper_self_checked"
+        }
+      ],
+      "recitation": {
+        "requirementNote": "公开预览 p15 要求背诵三首诗，默写《山行》；用户2026纸本课后要求仍待复核。",
+        "sourcePage": "15",
+        "sourceId": "preview-2025",
+        "status": "public_preview_checked_paper_pending",
+        "poems": [
+          {
+            "id": "wang-dong-ting",
+            "title": "望洞庭",
+            "author": "刘禹锡",
+            "dynasty": "唐",
+            "reciteRequirement": "textbook_required",
+            "dictationRequirement": "practice_only",
+            "requirementSourcePage": "15",
+            "sourcePage": "14",
+            "sourceId": "preview-2025",
+            "status": "public_preview_checked_paper_pending",
+            "textLicense": "public_domain",
+            "lines": [
+              {
+                "id": "wang-dong-ting-line-1",
+                "text": "湖光秋月两相和，",
+                "pinyin": "hú guāng qiū yuè liǎng xiāng hé",
+                "audioId": "cn-04-clip-34"
+              },
+              {
+                "id": "wang-dong-ting-line-2",
+                "text": "潭面无风镜未磨。",
+                "pinyin": "tán miàn wú fēng jìng wèi mó",
+                "audioId": "cn-04-clip-35"
+              },
+              {
+                "id": "wang-dong-ting-line-3",
+                "text": "遥望洞庭山水翠，",
+                "pinyin": "yáo wàng dòng tíng shān shuǐ cuì",
+                "audioId": "cn-04-clip-36"
+              },
+              {
+                "id": "wang-dong-ting-line-4",
+                "text": "白银盘里一青螺。",
+                "pinyin": "bái yín pán lǐ yī qīng luó",
+                "audioId": "cn-04-clip-37"
+              }
+            ]
+          },
+          {
+            "id": "shan-xing",
+            "title": "山行",
+            "author": "杜牧",
+            "dynasty": "唐",
+            "reciteRequirement": "textbook_required",
+            "dictationRequirement": "textbook_required",
+            "requirementSourcePage": "15",
+            "sourcePage": "14",
+            "sourceId": "preview-2025",
+            "status": "public_preview_checked_paper_pending",
+            "textLicense": "public_domain",
+            "lines": [
+              {
+                "id": "shan-xing-line-1",
+                "text": "远上寒山石径斜，",
+                "pinyin": "yuǎn shàng hán shān shí jìng xié",
+                "audioId": "cn-04-clip-38"
+              },
+              {
+                "id": "shan-xing-line-2",
+                "text": "白云生处有人家。",
+                "pinyin": "bái yún shēng chù yǒu rén jiā",
+                "audioId": "cn-04-clip-39"
+              },
+              {
+                "id": "shan-xing-line-3",
+                "text": "停车坐爱枫林晚，",
+                "pinyin": "tíng chē zuò ài fēng lín wǎn",
+                "audioId": "cn-04-clip-40"
+              },
+              {
+                "id": "shan-xing-line-4",
+                "text": "霜叶红于二月花。",
+                "pinyin": "shuāng yè hóng yú èr yuè huā",
+                "audioId": "cn-04-clip-41"
+              }
+            ]
+          },
+          {
+            "id": "ye-shu-suo-jian",
+            "title": "夜书所见",
+            "author": "叶绍翁",
+            "dynasty": "宋",
+            "reciteRequirement": "textbook_required",
+            "dictationRequirement": "practice_only",
+            "requirementSourcePage": "15",
+            "sourcePage": "15",
+            "sourceId": "preview-2025",
+            "status": "public_preview_checked_paper_pending",
+            "textLicense": "public_domain",
+            "lines": [
+              {
+                "id": "ye-shu-suo-jian-line-1",
+                "text": "萧萧梧叶送寒声，",
+                "pinyin": "xiāo xiāo wú yè sòng hán shēng",
+                "audioId": "cn-04-clip-42"
+              },
+              {
+                "id": "ye-shu-suo-jian-line-2",
+                "text": "江上秋风动客情。",
+                "pinyin": "jiāng shàng qiū fēng dòng kè qíng",
+                "audioId": "cn-04-clip-43"
+              },
+              {
+                "id": "ye-shu-suo-jian-line-3",
+                "text": "知有儿童挑促织，",
+                "pinyin": "zhī yǒu ér tóng tiǎo cù zhī",
+                "audioId": "cn-04-clip-44"
+              },
+              {
+                "id": "ye-shu-suo-jian-line-4",
+                "text": "夜深篱落一灯明。",
+                "pinyin": "yè shēn lí luò yī dēng míng",
+                "audioId": "cn-04-clip-45"
+              }
+            ]
+          }
+        ]
+      },
+      "recitationItems": [
+        {
+          "id": "cn-04-recite-wang-dong-ting-2",
+          "poemId": "wang-dong-ting",
+          "prompt": "《望洞庭》：湖光秋月两相和，请在纸上写出下一句。",
+          "pinyin": "",
+          "answers": [
+            "潭面无风镜未磨。"
+          ],
+          "explanation": "下一句是“潭面无风镜未磨。”。先逐字核对，再核对标点。",
+          "audioId": "cn-04-clip-35",
+          "targetCharacters": [
+            "潭",
+            "面",
+            "无",
+            "风",
+            "镜",
+            "未",
+            "磨"
+          ],
+          "lexemeIds": [],
+          "sourceKind": "public_domain_poem",
+          "sourcePage": "14",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "evidence": "paper_self_checked",
+          "dictationRequirement": "practice_only",
+          "answerLineIds": [
+            "wang-dong-ting-line-2"
+          ]
+        },
+        {
+          "id": "cn-04-recite-wang-dong-ting-4",
+          "poemId": "wang-dong-ting",
+          "prompt": "《望洞庭》：遥望洞庭山水翠，请在纸上写出下一句。",
+          "pinyin": "",
+          "answers": [
+            "白银盘里一青螺。"
+          ],
+          "explanation": "下一句是“白银盘里一青螺。”。先逐字核对，再核对标点。",
+          "audioId": "cn-04-clip-37",
+          "targetCharacters": [
+            "白",
+            "银",
+            "盘",
+            "里",
+            "一",
+            "青",
+            "螺"
+          ],
+          "lexemeIds": [],
+          "sourceKind": "public_domain_poem",
+          "sourcePage": "14",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "evidence": "paper_self_checked",
+          "dictationRequirement": "practice_only",
+          "answerLineIds": [
+            "wang-dong-ting-line-4"
+          ]
+        },
+        {
+          "id": "cn-04-recite-shan-xing-2",
+          "poemId": "shan-xing",
+          "prompt": "《山行》：远上寒山石径斜，请在纸上写出下一句。",
+          "pinyin": "",
+          "answers": [
+            "白云生处有人家。"
+          ],
+          "explanation": "下一句是“白云生处有人家。”。核对文字和标点；“白云生处”用“生”。",
+          "audioId": "cn-04-clip-39",
+          "targetCharacters": [
+            "白",
+            "云",
+            "生",
+            "处",
+            "有",
+            "人",
+            "家"
+          ],
+          "lexemeIds": [],
+          "sourceKind": "public_domain_poem",
+          "sourcePage": "14",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "evidence": "paper_self_checked",
+          "dictationRequirement": "textbook_required",
+          "answerLineIds": [
+            "shan-xing-line-2"
+          ]
+        },
+        {
+          "id": "cn-04-recite-shan-xing-4",
+          "poemId": "shan-xing",
+          "prompt": "《山行》：停车坐爱枫林晚，请在纸上写出下一句。",
+          "pinyin": "",
+          "answers": [
+            "霜叶红于二月花。"
+          ],
+          "explanation": "下一句是“霜叶红于二月花。”。先逐字核对，再核对标点。",
+          "audioId": "cn-04-clip-41",
+          "targetCharacters": [
+            "霜",
+            "叶",
+            "红",
+            "于",
+            "二",
+            "月",
+            "花"
+          ],
+          "lexemeIds": [],
+          "sourceKind": "public_domain_poem",
+          "sourcePage": "14",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "evidence": "paper_self_checked",
+          "dictationRequirement": "textbook_required",
+          "answerLineIds": [
+            "shan-xing-line-4"
+          ]
+        },
+        {
+          "id": "cn-04-recite-ye-shu-suo-jian-2",
+          "poemId": "ye-shu-suo-jian",
+          "prompt": "《夜书所见》：萧萧梧叶送寒声，请在纸上写出下一句。",
+          "pinyin": "",
+          "answers": [
+            "江上秋风动客情。"
+          ],
+          "explanation": "下一句是“江上秋风动客情。”。先逐字核对，再核对标点。",
+          "audioId": "cn-04-clip-43",
+          "targetCharacters": [
+            "江",
+            "上",
+            "秋",
+            "风",
+            "动",
+            "客",
+            "情"
+          ],
+          "lexemeIds": [],
+          "sourceKind": "public_domain_poem",
+          "sourcePage": "15",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "evidence": "paper_self_checked",
+          "dictationRequirement": "practice_only",
+          "answerLineIds": [
+            "ye-shu-suo-jian-line-2"
+          ]
+        },
+        {
+          "id": "cn-04-recite-ye-shu-suo-jian-4",
+          "poemId": "ye-shu-suo-jian",
+          "prompt": "《夜书所见》：知有儿童挑促织，请在纸上写出下一句。",
+          "pinyin": "",
+          "answers": [
+            "夜深篱落一灯明。"
+          ],
+          "explanation": "下一句是“夜深篱落一灯明。”。先逐字核对，再核对标点。",
+          "audioId": "cn-04-clip-45",
+          "targetCharacters": [
+            "夜",
+            "深",
+            "篱",
+            "落",
+            "一",
+            "灯",
+            "明"
+          ],
+          "lexemeIds": [],
+          "sourceKind": "public_domain_poem",
+          "sourcePage": "15",
+          "sourceId": "preview-2025",
+          "status": "public_preview_checked_paper_pending",
+          "evidence": "paper_self_checked",
+          "dictationRequirement": "practice_only",
+          "answerLineIds": [
+            "ye-shu-suo-jian-line-4"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-import { useState, useSyncExternalStore, useRef, useEffect } from 'react';
+import { useState, useSyncExternalStore, useRef, useEffect, lazy, Suspense } from 'react';
 import { ArrowRight, ArrowLeft, BookOpen, Map, Backpack, Leaf, Sparkles, Volume2, Check, X, Home, Users, Presentation, Search, ChevronRight, ChevronLeft, Download, Upload, Printer, Maximize2, Flag, Lightbulb, RotateCcw, Pause, Play, Compass, Settings2, CheckCircle2, Clock, ExternalLink } from 'lucide-react';
 import Island from './components/Island';
 import { courses, lexemes, getCourseLexemes, contentNotes, type Course, type Lexeme, type Subject } from './data/curriculum';
@@ -9,6 +9,9 @@ import EnglishAdventure from './components/EnglishAdventure';
 import EnglishLearningLab from './components/EnglishLearningLab';
 import { englishLabLessons, getLabLessonForLexeme, type LabLessonId } from './data/englishLearningLab';
 import { hasEnglishActivities, hasEnglishActivityReview, makeEnglishActivityRound, type EnglishActivityKind } from './data/englishActivities';
+
+const ChinesePilot = lazy(() => import('./components/ChinesePilot'));
+const ChineseSemesterPlan = lazy(() => import('./components/ChineseSemesterPlan'));
 
 const allowedIds = new Set(lexemes.map(item => item.id));
 const progressStore = createProgressStore(allowedIds);
@@ -105,7 +108,7 @@ export default function App() {
   const todayAttempts = progress.attempts.filter(item => item.localDate === today);
   const activeCourse = courses.find(course => course.id === preferences.courseId) || courses[0];
   const selectedCourse = courses.find(course => course.id === segments[1]);
-  const focusedGame = page === 'english-lab' || (page === 'play' && selectedCourse
+  const focusedGame = (page === 'chinese-pilot' && !!segments[2] && !['home', 'teacher'].includes(segments[2])) || page === 'english-lab' || (page === 'play' && selectedCourse
     ? !!englishKind(selectedCourse.id, (segments[2] || 'meaning') as GameMode)
     : (page === 'teacher' || page === 'review') && auxiliaryGameFocus);
 
@@ -165,13 +168,15 @@ export default function App() {
           <div className="gentle-note"><Lightbulb size={19} /><p><strong>今天的小提醒</strong>　先自己想一想，再看答案。能在明天想起来，也是一种进步。</p></div>
         </>}
         {page === 'map' && <SemesterMap subject={segments[1] === 'english' ? 'english' : 'chinese'} progress={progress} />}
+        {page === 'chinese-plan' && <Suspense fallback={<div className="empty-state">正在打开全学期清单…</div>}><ChineseSemesterPlan /></Suspense>}
+        {page === 'chinese-pilot' && <Suspense fallback={<div className="empty-state">正在打开语文练习…</div>}><ChinesePilot key={route} courseId={segments[1]} mode={segments[2]} teacher={segments.includes('teacher')} taskId={segments[3] && segments[3] !== 'teacher' ? decodeURIComponent(segments[3]) : undefined} /></Suspense>}
         {page === 'english-lab' && <EnglishLearningLab key={route} lessonId={segments[1]} teacher={segments[2] === 'teacher'} onAttempt={onAttempt} onExit={segments[2] === 'teacher' ? () => navigate('/teacher') : undefined} />}
         {page === 'course' && selectedCourse && <CoursePage key={selectedCourse.id} course={selectedCourse} progress={progress} onSetCurrent={() => { savePreferences({ ...preferences, courseId: selectedCourse.id }); setNotice('已经设为今天的学习课。'); }} onNotice={setNotice} />}
         {page === 'play' && selectedCourse && <CourseRound key={route} course={selectedCourse} mode={modes.includes(segments[2] as GameMode) ? segments[2] as GameMode : 'meaning'} limit={preferences.limit} onAttempt={onAttempt} />}
         {page === 'review' && <ReviewPage progress={progress} dueIds={dueIds} limit={preferences.limit} onAttempt={onAttempt} onGameFocus={setAuxiliaryGameFocus} />}
         {page === 'teacher' && <TeacherPage limit={preferences.limit} onGameFocus={setAuxiliaryGameFocus} />}
         {page === 'parent' && <ParentPage progress={progress} preferences={preferences} onPreferences={savePreferences} onImport={saveProgress} onNotice={setNotice} />}
-        {((page === 'course' || page === 'play') && !selectedCourse || !['home', 'map', 'course', 'play', 'review', 'teacher', 'parent', 'english-lab'].includes(page)) && <EmptyState title="这条小路暂时没有找到" text="回到地图，重新选择一课吧。" action={<a className="primary" href="#/">返回小岛 <Home size={18} /></a>} />}
+        {((page === 'course' || page === 'play') && !selectedCourse || !['home', 'map', 'course', 'play', 'review', 'teacher', 'parent', 'english-lab', 'chinese-plan', 'chinese-pilot'].includes(page)) && <EmptyState title="这条小路暂时没有找到" text="回到地图，重新选择一课吧。" action={<a className="primary" href="#/">返回小岛 <Home size={18} /></a>} />}
       </main>
       <footer className="page-footer"><BookOpen size={14} /> 每次发现一点点。<a href="#/teacher">老师投屏</a><span>学习记录保存在当前浏览器 · <a href="#/parent">备份与内容说明</a></span></footer>
     </div>
@@ -186,6 +191,7 @@ function SemesterMap({ subject, progress }: { subject: Subject; progress: Progre
   const subjectCourses = courses.filter(course => course.subject === subject && (!search || `${course.title} ${getCourseLexemes(course.id).map(item => item.text).join(' ')}`.toLowerCase().includes(search.toLowerCase())));
   const units = [...new Set(subjectCourses.map(course => course.unitNumber))];
   return <>
+    {subject === 'chinese' && <div className="cn-pilot-entry"><BookOpen size={25} /><div><strong>新语文练习 · 字音、辨字、纸写与古诗背默</strong><p>先试第1、4课样板，也可以查看完整的全学期字词清单。</p></div><a href="#/chinese-pilot/cn-01">第1课</a><a href="#/chinese-pilot/cn-04">第4课</a><a href="#/chinese-plan">全册清单 <ArrowRight size={16} /></a></div>}
     {subject === 'english' && <a className="english-lab-entry" href="#/english-lab"><span className="icon-box green"><Volume2 size={25} /></span><div><strong>英语体验课 · 看情景，听示范</strong><p>先学，再练，再换情景：猫、见面与告别、my / your</p></div><ArrowRight size={22} /></a>}
     <div className={`map-header ${subject}`}><div><span className="eyebrow">YOUR SEMESTER MAP</span><h1>{subject === 'chinese' ? '语文森林' : '英语港湾'}</h1><p>{subject === 'chinese' ? '沿着八条小路，发现汉字、词语和课文的意思。' : '认识朋友，介绍家人。每个单元都是一个新场景。'}</p></div><span className="map-emblem">{subject === 'chinese' ? '字' : 'Aa'}</span></div>
     <div className="map-tools"><span><Flag size={17} /> {subject === 'chinese' ? '26课 · 8个单元' : '8单元 · 2个主题 · 26字母'}</span><label className="search-box"><Search size={17} /><input value={search} onChange={event => setSearch(event.target.value)} placeholder="找课文，或一个字词…" aria-label="搜索课文或字词" /></label></div>
@@ -209,6 +215,7 @@ function CoursePage({ course, progress, onSetCurrent, onNotice }: { course: Cour
   const completeProject = course.kind === 'project';
   return <>
     <a className="back-link" href={`#/map/${course.subject}`}><ArrowLeft size={16} />回到{course.subject === 'chinese' ? '语文森林' : '英语港湾'}</a>
+    {['cn-01', 'cn-04'].includes(course.id) && <div className="cn-pilot-entry"><BookOpen size={24} /><div><strong>本课新样板已开放</strong><p>汉字侦探、纸上小练笔{course.id === 'cn-04' ? '、三首古诗背诵与《山行》默写' : '与组词参考'}。</p></div><a href={`#/chinese-pilot/${course.id}`}>打开新练习 <ArrowRight size={18} /></a></div>}
     <div className="lesson-heading"><div><span className="eyebrow">{course.subtitle}</span><h1>{courseTitle(course)}</h1><p>{course.scene} · 先和字词见一面，再选你的冒险。</p></div><button className="secondary" onClick={onSetCurrent}><Flag size={16} />设为今天的课</button></div>
     {completeProject && <div className="info-note">主题任务还在准备中。这里先集合已学单元的词卡，供回顾使用；主题海报和对话活动后续补全。</div>}
     <section className="lesson-actions" aria-label="选择关卡">{availableModes.map(mode => <a key={mode} className={`mode-card ${mode}`} href={`#/play/${course.id}/${mode}`}><span>{mode === 'meaning' ? <Sparkles size={22} /> : mode === 'context' ? <Map size={22} /> : mode === 'recall' ? <Lightbulb size={22} /> : <BookOpen size={22} />}</span><h3>{modeLabel(course.id, mode)}</h3><p>{englishKind(course.id, mode) === 'scene' ? '听朋友说话，选一句来回应' : englishKind(course.id, mode) === 'listening' ? '听清声音，找到对应的图片' : mode === 'meaning' ? '读懂一个字词的意思' : mode === 'context' ? '放进句子里想一想' : mode === 'recall' ? '藏起答案，自己想起来' : mode === 'spelling' ? '自选练习，不要求全词默写' : '纸上完成，请大人来确认'}</p><ArrowRight size={16} /></a>)}</section>
@@ -333,6 +340,7 @@ function TeacherPage({ limit, onGameFocus }: { limit: number; onGameFocus: (focu
   }, [focused, onGameFocus]);
   return <><div className="lesson-heading"><div><span className="eyebrow">A LITTLE WONDER FOR THE WHOLE CLASS</span><h1>把小岛，带进课堂。</h1><p>选一课，投屏提问。先思考，再一起揭晓。</p><div className="english-lab-teacher-links">{englishLabLessons.map(lesson => <a key={lesson.id} href={`#/english-lab/${lesson.id}/teacher`}>体验课 · {lesson.title} <ExternalLink size={15} /></a>)}</div></div><Presentation className="page-emblem" size={58} strokeWidth={1.2} /></div>
     <section className="teacher-controls"><label>选择教材和课目<select value={courseId} onChange={event => { setCourseId(event.target.value); const first = availableGameModes(event.target.value)[0]; setMode(first || 'meaning'); setRoundKey(roundKey + 1); }}>{courses.map(course => <option value={course.id} key={course.id}>{course.subject === 'chinese' ? '语文' : '英语'} · {course.title}</option>)}</select></label><label>课堂玩法<select value={mode} onChange={event => { setMode(event.target.value as GameMode); setRoundKey(roundKey + 1); }}>{availableModes.map(mode => <option key={mode} value={mode}>{modeLabel(courseId, mode)}</option>)}</select></label><button className="secondary" onClick={() => setRoundKey(roundKey + 1)}><RotateCcw size={17} />换一组</button><button className="secondary" onClick={() => document.documentElement.requestFullscreen?.().catch(() => undefined)}><Maximize2 size={17} />全屏</button><button className="secondary" onClick={() => window.print()}><Printer size={17} />打印本课词单</button></section>
+    {!focused && <div className="cn-pilot-entry"><BookOpen size={24} /><div><strong>语文新样板 · 字音、辨字与纸笔核对</strong><p>两课可直接投屏；演示不保存孩子的记录。</p></div><a href="#/chinese-pilot/cn-01/home/teacher">第1课</a><a href="#/chinese-pilot/cn-04/home/teacher">第4课</a><a href="#/chinese-plan">全册清单</a></div>}
     <CourseRound key={`${courseId}-${mode}-${roundKey}`} course={course} mode={mode} limit={limit} teacher />
     <section className="print-sheet"><h2>{course.title} · 字词练习单</h2><p>姓名：________________　日期：________________</p>{[...new Set(items.map(item => item.kind))].map(kind => <div key={kind}><h3>{kindLabels[kind]}</h3><div className="print-words">{items.filter(item => item.kind === kind).map(item => <span key={item.id}>{item.text}<small>____________</small></span>)}</div></div>)}<small>词表来自同版公开预览，使用前请核对学校纸本；合成语音仅供跟读示范。</small></section>
     <details className="content-details"><summary>本课词库与教学说明</summary><p>{course.subject === 'chinese' ? contentNotes.chinese : contentNotes.english}</p><p>{contentNotes.explanations}</p><a href={`#/course/${course.id}`}>查看本课全部词卡 →</a></details>

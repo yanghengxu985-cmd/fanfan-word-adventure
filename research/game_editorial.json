@@ -1,0 +1,2473 @@
+{
+  "english": {
+    "en-01:hello": {
+      "meaning": "见面时说的“你好”",
+      "example": "hello 表示见面时友好地打招呼。"
+    },
+    "en-01:hi": {
+      "meaning": "熟人见面时说“嗨”",
+      "example": "hi 是一种简短的问候。"
+    },
+    "en-01:I": {
+      "meaning": "说话的人用来指自己：我",
+      "example": "I am Lin."
+    },
+    "en-01:am": {
+      "meaning": "和 I 一起表示“是”",
+      "example": "I am Lin."
+    },
+    "en-01:a": {
+      "meaning": "表示一个或一只",
+      "example": "I have a cat."
+    },
+    "en-01:cat": {
+      "meaning": "猫",
+      "example": "This is a cat."
+    },
+    "en-01:Miss": {
+      "meaning": "称呼未婚女士或女教师的称谓",
+      "example": "This is Miss Lin."
+    },
+    "en-01:class": {
+      "meaning": "老师招呼全体同学时的“同学们”",
+      "example": "Good morning, class!"
+    },
+    "en-01:goodbye": {
+      "meaning": "分别时说的“再见”",
+      "example": "放学分别时，Lin 说 goodbye。"
+    },
+    "en-01:bye": {
+      "meaning": "简短的“再见”",
+      "example": "离开朋友家时，可以说 bye。"
+    },
+    "en-01:Good morning.": {
+      "meaning": "早上见面时的问候",
+      "example": "早上八点见到老师，我说：Good morning."
+    },
+    "en-01:Good afternoon.": {
+      "meaning": "下午见面时的问候",
+      "example": "下午两点见到朋友，我说：Good afternoon."
+    },
+    "en-01:ah": {
+      "meaning": "表达惊讶等情绪的“啊”",
+      "example": "听到惊喜消息时，ah 是一个感叹声。"
+    },
+    "en-02:what": {
+      "meaning": "询问“什么”",
+      "example": "I know what you want."
+    },
+    "en-02:is": {
+      "meaning": "和 he、she、it 等一起表示“是”",
+      "example": "He is Lin."
+    },
+    "en-02:your": {
+      "meaning": "属于你或你们的",
+      "example": "This is your book."
+    },
+    "en-02:name": {
+      "meaning": "名字",
+      "example": "My name is Lin."
+    },
+    "en-02:my": {
+      "meaning": "属于我的",
+      "example": "This is my book."
+    },
+    "en-02:too": {
+      "meaning": "表示“也”",
+      "example": "I am happy too."
+    },
+    "en-02:boy": {
+      "meaning": "男孩",
+      "example": "The boy is Lin."
+    },
+    "en-02:and": {
+      "meaning": "把两项连接起来：和",
+      "example": "I have a book and a ball."
+    },
+    "en-02:girl": {
+      "meaning": "女孩",
+      "example": "The girl is Lan."
+    },
+    "en-02:Mr": {
+      "meaning": "称呼男士时的“先生”",
+      "example": "This is Mr Lin."
+    },
+    "en-02:Nice to meet you!": {
+      "meaning": "初次见面表示高兴认识对方",
+      "example": "第一次见到新同学，我说：Nice to meet you!"
+    },
+    "en-03:are": {
+      "meaning": "和 you、we 等一起表示“是”",
+      "example": "We are friends."
+    },
+    "en-03:you": {
+      "meaning": "说话时所指的你或你们",
+      "example": "Can you sing?"
+    },
+    "en-03:no": {
+      "meaning": "回答时表示“不”或“不是”",
+      "example": "询问身份时，no 表示否定。"
+    },
+    "en-03:not": {
+      "meaning": "表示否定：不、没有",
+      "example": "I am not Lin."
+    },
+    "en-03:yes": {
+      "meaning": "回答时表示“是”或“对”",
+      "example": "确认是自己的书时，可以回答 yes。"
+    },
+    "en-03:but": {
+      "meaning": "表示转折：但是",
+      "example": "He is young, but he can sing."
+    },
+    "en-03:sorry": {
+      "meaning": "做错事等时表示“对不起”",
+      "example": "碰到别人后，Lin 说 sorry。"
+    },
+    "en-03:we": {
+      "meaning": "我和另外的人：我们",
+      "example": "Together, we can do this."
+    },
+    "en-03:class": {
+      "meaning": "一起上课的班级",
+      "example": "We are in the same class."
+    },
+    "en-03:in": {
+      "meaning": "在某个范围里面",
+      "example": "The cat is in the box."
+    },
+    "en-03:with": {
+      "meaning": "和某人一起",
+      "example": "I play with my friend."
+    },
+    "en-03:right": {
+      "meaning": "正确的",
+      "example": "Your answer is right."
+    },
+    "en-03:Here I am!": {
+      "meaning": "告诉找你的人“我在这里”",
+      "example": "朋友正在找我，我举手说：Here I am!"
+    },
+    "en-03:ha": {
+      "meaning": "笑时发出的“哈”声",
+      "example": "故事逗笑大家，ha 是笑声。"
+    },
+    "en-03:oh": {
+      "meaning": "表示惊讶或想到事情等时的“哦”",
+      "example": "想到答案时，oh 可以表达恍然明白。"
+    },
+    "en-03:twin": {
+      "meaning": "双胞胎中的一个",
+      "example": "Lan is a twin."
+    },
+    "en-03:excuse me": {
+      "meaning": "打扰别人或引起注意前的礼貌用语",
+      "example": "问路前，我先说 excuse me。"
+    },
+    "en-04:this": {
+      "meaning": "指较近的“这”或“这个”",
+      "example": "I like this book."
+    },
+    "en-04:friend": {
+      "meaning": "朋友",
+      "example": "Lin is my friend."
+    },
+    "en-04:she": {
+      "meaning": "指女性的“她”",
+      "example": "Lan is here. I know she can sing."
+    },
+    "en-04:he": {
+      "meaning": "指男性的“他”",
+      "example": "Lin is here. I know he can draw."
+    },
+    "en-04:it": {
+      "meaning": "指已经谈到的事物：它",
+      "example": "This is my toy. I like it."
+    },
+    "en-04:good": {
+      "meaning": "好的",
+      "example": "This is a good book."
+    },
+    "en-04:have": {
+      "meaning": "拥有",
+      "example": "I have a ball."
+    },
+    "en-04:many": {
+      "meaning": "数量很多",
+      "example": "I have many books."
+    },
+    "en-04:Thank you.": {
+      "meaning": "接受帮助等时表示感谢",
+      "example": "朋友帮我捡起书，我说：Thank you."
+    },
+    "en-05:mother": {
+      "meaning": "母亲、妈妈",
+      "example": "This is my mother."
+    },
+    "en-05:father": {
+      "meaning": "父亲、爸爸",
+      "example": "This is my father."
+    },
+    "en-05:dad": {
+      "meaning": "对爸爸的日常称呼",
+      "example": "This is my dad."
+    },
+    "en-05:mum": {
+      "meaning": "对妈妈的日常称呼",
+      "example": "This is my mum."
+    },
+    "en-05:brother": {
+      "meaning": "兄弟，可指哥哥或弟弟",
+      "example": "This is my brother."
+    },
+    "en-05:baby": {
+      "meaning": "婴儿",
+      "example": "The baby is happy."
+    },
+    "en-05:sister": {
+      "meaning": "姐妹，可指姐姐或妹妹",
+      "example": "This is my sister."
+    },
+    "en-05:look": {
+      "meaning": "看、瞧",
+      "example": "Please look at the picture."
+    },
+    "en-05:the": {
+      "meaning": "用在双方知道的那个人或物前",
+      "example": "Please clean the table."
+    },
+    "en-05:who": {
+      "meaning": "询问“谁”",
+      "example": "I know who he is."
+    },
+    "en-05:great": {
+      "meaning": "很棒的、非常好的",
+      "example": "This is a great picture."
+    },
+    "en-05:come": {
+      "meaning": "朝这里来",
+      "example": "Please come here."
+    },
+    "en-05:meet": {
+      "meaning": "见到或结识某人",
+      "example": "I want to meet your family."
+    },
+    "en-05:family": {
+      "meaning": "家人组成的家庭",
+      "example": "This is my family."
+    },
+    "en-05:say": {
+      "meaning": "说",
+      "example": "I can say hello."
+    },
+    "en-05:Good evening.": {
+      "meaning": "晚上见面时的问候",
+      "example": "晚上七点见到邻居，我说：Good evening."
+    },
+    "en-05:quick": {
+      "meaning": "快、快点",
+      "example": "Be quick, please."
+    },
+    "en-05:pond": {
+      "meaning": "池塘",
+      "example": "There is a pond near the house."
+    },
+    "en-06:grandfather": {
+      "meaning": "祖父或外祖父",
+      "example": "This is my grandfather."
+    },
+    "en-06:uncle": {
+      "meaning": "伯父、叔父、舅父等男性长辈亲属",
+      "example": "This is my uncle."
+    },
+    "en-06:aunt": {
+      "meaning": "姑母、姨母、伯母等女性长辈亲属",
+      "example": "This is my aunt."
+    },
+    "en-06:grandmother": {
+      "meaning": "祖母或外祖母",
+      "example": "This is my grandmother."
+    },
+    "en-06:cousin": {
+      "meaning": "堂兄弟姐妹或表兄弟姐妹",
+      "example": "This is my cousin."
+    },
+    "en-06:cool": {
+      "meaning": "令人觉得很酷、很棒的",
+      "example": "Your toy is cool."
+    },
+    "en-06:me": {
+      "meaning": "动词等后面指“我”",
+      "example": "Please help me."
+    },
+    "en-06:big": {
+      "meaning": "大的",
+      "example": "This is a big family."
+    },
+    "en-06:it": {
+      "meaning": "未说明性别的婴儿也可用此词指称",
+      "example": "The baby is happy. We love it."
+    },
+    "en-06:happy": {
+      "meaning": "快乐的、幸福的",
+      "example": "My family is happy."
+    },
+    "en-06:love": {
+      "meaning": "爱、热爱家人等",
+      "example": "I love my family."
+    },
+    "en-06:wow": {
+      "meaning": "表示惊叹的“哇”",
+      "example": "看到惊喜礼物时，可以说 wow。"
+    },
+    "en-07:one": {
+      "meaning": "数字1",
+      "example": "I have one book."
+    },
+    "en-07:two": {
+      "meaning": "数字2",
+      "example": "I have two books."
+    },
+    "en-07:three": {
+      "meaning": "数字3",
+      "example": "I have three books."
+    },
+    "en-07:four": {
+      "meaning": "数字4",
+      "example": "I have four books."
+    },
+    "en-07:five": {
+      "meaning": "数字5",
+      "example": "I have five books."
+    },
+    "en-07:six": {
+      "meaning": "数字6",
+      "example": "I have six books."
+    },
+    "en-07:seven": {
+      "meaning": "数字7",
+      "example": "I have seven books."
+    },
+    "en-07:eight": {
+      "meaning": "数字8",
+      "example": "I have eight books."
+    },
+    "en-07:nine": {
+      "meaning": "数字9",
+      "example": "I have nine books."
+    },
+    "en-07:ten": {
+      "meaning": "数字10",
+      "example": "I have ten books."
+    },
+    "en-07:now": {
+      "meaning": "现在、此刻",
+      "example": "I can help you now."
+    },
+    "en-07:want": {
+      "meaning": "想要",
+      "example": "I want a book."
+    },
+    "en-07:car": {
+      "meaning": "小汽车",
+      "example": "This is a toy car."
+    },
+    "en-07:book": {
+      "meaning": "书",
+      "example": "This is my book."
+    },
+    "en-07:ball": {
+      "meaning": "球",
+      "example": "I have a ball."
+    },
+    "en-07:cake": {
+      "meaning": "蛋糕等糕点",
+      "example": "This is a birthday cake."
+    },
+    "en-07:some": {
+      "meaning": "一些",
+      "example": "I have some books."
+    },
+    "en-07:toy": {
+      "meaning": "玩具",
+      "example": "This is my toy."
+    },
+    "en-07:for": {
+      "meaning": "把礼物等给某人",
+      "example": "This cake is for you."
+    },
+    "en-07:OK": {
+      "meaning": "表示同意：好、行",
+      "example": "同意朋友的请求时，可以说 OK。"
+    },
+    "en-07:please": {
+      "meaning": "提出请求时的礼貌用语“请”",
+      "example": "Help me, please."
+    },
+    "en-07:here": {
+      "meaning": "这里",
+      "example": "My book is here."
+    },
+    "en-07:love": {
+      "meaning": "非常喜欢某个东西",
+      "example": "I love this toy."
+    },
+    "en-07:thanks": {
+      "meaning": "简短地表示“谢谢”",
+      "example": "朋友递来礼物，我说 thanks。"
+    },
+    "en-07:Happy Birthday!": {
+      "meaning": "祝对方生日快乐",
+      "example": "朋友过生日，我说：Happy Birthday!"
+    },
+    "en-07:How lovely!": {
+      "meaning": "赞叹“真可爱”",
+      "example": "看到漂亮的小礼物，我说：How lovely!"
+    },
+    "en-07:Can I help you?": {
+      "meaning": "主动询问是否需要帮助",
+      "example": "看到同学搬不动书，我问：Can I help you?"
+    },
+    "en-07:Yes, please.": {
+      "meaning": "接受帮助等时的礼貌回答",
+      "example": "别人问我是否要帮忙，我需要帮助，于是说：Yes, please."
+    },
+    "en-07:How old are you?": {
+      "meaning": "询问对方的年龄",
+      "example": "我想知道新朋友的年龄，于是问：How old are you?"
+    },
+    "en-07:Here you are.": {
+      "meaning": "递东西给别人时说“给你”",
+      "example": "把书递给朋友时，我说：Here you are."
+    },
+    "en-07:You're welcome.": {
+      "meaning": "回答别人的感谢：不客气",
+      "example": "朋友向我道谢，我回答：You're welcome."
+    },
+    "en-08:can": {
+      "meaning": "能、会做某件事",
+      "example": "I can sing."
+    },
+    "en-08:do": {
+      "meaning": "做某件事",
+      "example": "I can do this."
+    },
+    "en-08:for": {
+      "meaning": "为了某人、替某人做事",
+      "example": "I can clean the table for you."
+    },
+    "en-08:clean": {
+      "meaning": "清洁、打扫",
+      "example": "I can clean the table."
+    },
+    "en-08:table": {
+      "meaning": "桌子",
+      "example": "This is a table."
+    },
+    "en-08:draw": {
+      "meaning": "画、描绘",
+      "example": "I can draw a picture."
+    },
+    "en-08:sing": {
+      "meaning": "唱歌",
+      "example": "I can sing for you."
+    },
+    "en-08:dance": {
+      "meaning": "跳舞",
+      "example": "I can dance."
+    },
+    "en-08:picture": {
+      "meaning": "图画或照片",
+      "example": "This is my picture."
+    },
+    "en-08:child": {
+      "meaning": "儿童、小孩",
+      "example": "This child can draw."
+    },
+    "en-08:take pictures": {
+      "meaning": "拍照",
+      "example": "I can take pictures for you."
+    },
+    "en-08:Are you OK?": {
+      "meaning": "关心对方是否没事",
+      "example": "朋友摔了一跤，我关心地问：Are you OK?"
+    },
+    "en-08:dizzy": {
+      "meaning": "头晕的",
+      "example": "I feel dizzy."
+    },
+    "en-08:er": {
+      "meaning": "说话犹豫时的“呃”",
+      "example": "一时想不到怎么回答，er 表示犹豫。"
+    },
+    "en-08:fox": {
+      "meaning": "狐狸",
+      "example": "This is a fox."
+    },
+    "en-08:thing": {
+      "meaning": "事情或事物",
+      "example": "I can do this thing for you."
+    }
+  },
+  "chineseWords": {
+    "cn-01:山坡": {
+      "meaning": "山上倾斜的地方",
+      "pinyin": "shān pō",
+      "example": "小树长在山坡上。"
+    },
+    "cn-01:学校": {
+      "meaning": "老师教、学生学的地方",
+      "pinyin": "xué xiào",
+      "example": "每天早上我去学校。"
+    },
+    "cn-01:飘扬": {
+      "meaning": "随风轻轻摆动",
+      "pinyin": "piāo yáng",
+      "example": "红旗在风中飘扬。"
+    },
+    "cn-01:课文": {
+      "meaning": "课本中学习的文章",
+      "pinyin": "kè wén",
+      "example": "我把课文读给妈妈听。"
+    },
+    "cn-01:声音": {
+      "meaning": "耳朵可以听到的声响",
+      "pinyin": "shēng yīn",
+      "example": "窗外传来了小鸟的声音。"
+    },
+    "cn-01:招引": {
+      "meaning": "引来、吸引过来",
+      "pinyin": "zhāo yǐn",
+      "example": "花香招引了许多蜜蜂。"
+    },
+    "cn-01:热闹": {
+      "meaning": "人多、活动多，气氛活跃",
+      "pinyin": "rè nao",
+      "example": "节日的广场真热闹。"
+    },
+    "cn-01:古老": {
+      "meaning": "经历了很长时间的",
+      "pinyin": "gǔ lǎo",
+      "example": "村口有一棵古老的大树。"
+    },
+    "cn-01:粗壮": {
+      "meaning": "又粗又结实",
+      "pinyin": "cū zhuàng",
+      "example": "大树的枝干十分粗壮。"
+    },
+    "cn-01:枝干": {
+      "meaning": "树木的枝条和树干",
+      "pinyin": "zhī gàn",
+      "example": "大树的枝干向四周伸展。"
+    },
+    "cn-01:洁白": {
+      "meaning": "干净而且很白",
+      "pinyin": "jié bái",
+      "example": "天上飘着洁白的云。"
+    },
+    "cn-02:轰响": {
+      "meaning": "发出很大很响的声音",
+      "pinyin": "hōng xiǎng",
+      "example": "远处传来雷声的轰响。"
+    },
+    "cn-02:阵雨": {
+      "meaning": "一阵一阵落下的雨",
+      "pinyin": "zhèn yǔ",
+      "example": "今天下午下了一场阵雨。"
+    },
+    "cn-02:湿润": {
+      "meaning": "有一点水分，不干燥",
+      "pinyin": "shī rùn",
+      "example": "雨后的泥土很湿润。"
+    },
+    "cn-02:风笛": {
+      "meaning": "一种利用气袋吹奏的乐器",
+      "pinyin": "fēng dí",
+      "example": "演奏者吹响了风笛。"
+    },
+    "cn-02:狂欢": {
+      "meaning": "大家尽情地欢乐",
+      "pinyin": "kuáng huān",
+      "example": "人们在节日里唱歌狂欢。"
+    },
+    "cn-02:觉得": {
+      "meaning": "心里有某种感觉或想法",
+      "pinyin": "jué de",
+      "example": "我觉得今天的故事很有趣。"
+    },
+    "cn-02:功课": {
+      "meaning": "学习的课程或作业",
+      "pinyin": "gōng kè",
+      "example": "我认真完成今天的功课。"
+    },
+    "cn-02:放学": {
+      "meaning": "学校当天的学习结束",
+      "pinyin": "fàng xué",
+      "example": "放学以后，我和朋友一起回家。"
+    },
+    "cn-02:老师": {
+      "meaning": "教我们知识、指导学习的人",
+      "pinyin": "lǎo shī",
+      "example": "老师带我们观察小树。"
+    },
+    "cn-02:急急忙忙": {
+      "meaning": "着急地赶着做事的样子",
+      "pinyin": "jí jí máng máng",
+      "example": "他急急忙忙地跑向校门。"
+    },
+    "cn-05:秋风": {
+      "meaning": "秋天吹的风",
+      "pinyin": "qiū fēng",
+      "example": "秋风吹动了金黄的树叶。"
+    },
+    "cn-05:放晴": {
+      "meaning": "阴雨后天气转为晴朗",
+      "pinyin": "fàng qíng",
+      "example": "雨停以后，天空渐渐放晴了。"
+    },
+    "cn-05:明朗": {
+      "meaning": "光线充足而且清晰",
+      "pinyin": "míng lǎng",
+      "example": "雨后的天空很明朗。"
+    },
+    "cn-05:地面": {
+      "meaning": "地表、脚下的平面",
+      "pinyin": "dì miàn",
+      "example": "落叶铺满了地面。"
+    },
+    "cn-05:亮晶晶": {
+      "meaning": "明亮、闪着光的样子",
+      "pinyin": "liàng jīng jīng",
+      "example": "水珠在阳光下亮晶晶的。"
+    },
+    "cn-05:落叶": {
+      "meaning": "从树上落下来的叶子",
+      "pinyin": "luò yè",
+      "example": "我捡起一片金黄的落叶。"
+    },
+    "cn-05:图案": {
+      "meaning": "按一定样子组合的花纹或图形",
+      "pinyin": "tú àn",
+      "example": "衣服上有小花的图案。"
+    },
+    "cn-05:闪闪发光": {
+      "meaning": "一闪一闪地发出亮光",
+      "pinyin": "shǎn shǎn fā guāng",
+      "example": "阳光照在水面上，水面闪闪发光。"
+    },
+    "cn-05:尽头": {
+      "meaning": "一直延伸到最后的地方",
+      "pinyin": "jìn tóu",
+      "example": "小路的尽头有一座桥。"
+    },
+    "cn-05:排列": {
+      "meaning": "按照一定次序摆放",
+      "pinyin": "pái liè",
+      "example": "同学们把椅子排列整齐。"
+    },
+    "cn-05:规则": {
+      "meaning": "一定的规律，或共同遵守的规定",
+      "pinyin": "guī zé",
+      "example": "圆点按相同的规则排列。"
+    },
+    "cn-05:凌乱": {
+      "meaning": "杂乱，不整齐",
+      "pinyin": "líng luàn",
+      "example": "地上的玩具摆得很凌乱。"
+    },
+    "cn-05:歌唱": {
+      "meaning": "用声音唱出歌曲",
+      "pinyin": "gē chàng",
+      "example": "小朋友们一起歌唱春天。"
+    },
+    "cn-05:迟到": {
+      "meaning": "比规定的时间晚到",
+      "pinyin": "chí dào",
+      "example": "我按时出门，上课没有迟到。"
+    },
+    "cn-06:秋天": {
+      "meaning": "夏天之后、冬天之前的季节",
+      "pinyin": "qiū tiān",
+      "example": "秋天到了，许多树叶变黄了。"
+    },
+    "cn-06:清凉": {
+      "meaning": "凉爽，让人觉得舒服",
+      "pinyin": "qīng liáng",
+      "example": "山里的泉水十分清凉。"
+    },
+    "cn-06:炎热": {
+      "meaning": "天气非常热",
+      "pinyin": "yán rè",
+      "example": "炎热的中午，我们在树荫下休息。"
+    },
+    "cn-06:枫树": {
+      "meaning": "一种叶子像手掌的树",
+      "pinyin": "fēng shù",
+      "example": "那棵枫树的叶子变红了。"
+    },
+    "cn-06:邮票": {
+      "meaning": "贴在信件等上、表示已付邮资的小票",
+      "pinyin": "yóu piào",
+      "example": "爸爸在信封上贴了一张邮票。"
+    },
+    "cn-06:凉爽": {
+      "meaning": "清凉舒适",
+      "pinyin": "liáng shuǎng",
+      "example": "秋天的早晨十分凉爽。"
+    },
+    "cn-06:果树": {
+      "meaning": "结出可食用果实的树",
+      "pinyin": "guǒ shù",
+      "example": "果园里种了许多果树。"
+    },
+    "cn-06:菊花": {
+      "meaning": "常在秋天开花的一种花",
+      "pinyin": "jú huā",
+      "example": "秋天的花园里开满了菊花。"
+    },
+    "cn-06:仙子": {
+      "meaning": "传说中有神奇本领的仙人",
+      "pinyin": "xiān zǐ",
+      "example": "故事里的仙子送来了春天。"
+    },
+    "cn-06:频频": {
+      "meaning": "一次又一次，次数很多",
+      "pinyin": "pín pín",
+      "example": "小草在风中频频点头。"
+    },
+    "cn-06:气味": {
+      "meaning": "鼻子可以闻到的味道",
+      "pinyin": "qì wèi",
+      "example": "花园里有淡淡的花香气味。"
+    },
+    "cn-06:香甜": {
+      "meaning": "又香又甜",
+      "pinyin": "xiāng tián",
+      "example": "这个苹果真香甜。"
+    },
+    "cn-06:松果": {
+      "meaning": "松树结出的球果",
+      "pinyin": "sōng guǒ",
+      "example": "松鼠抱着一个松果。"
+    },
+    "cn-06:丰收": {
+      "meaning": "庄稼、果实等收获很多",
+      "pinyin": "fēng shōu",
+      "example": "今年果园获得了丰收。"
+    },
+    "cn-08:门板": {
+      "meaning": "构成门的板片",
+      "pinyin": "mén bǎn",
+      "example": "木屋的门板有些旧了。"
+    },
+    "cn-08:准备": {
+      "meaning": "为了做某件事，先把需要的事做好",
+      "pinyin": "zhǔn bèi",
+      "example": "我准备好明天要用的书。"
+    },
+    "cn-08:旁边": {
+      "meaning": "靠近一侧的地方",
+      "pinyin": "páng biān",
+      "example": "书包放在椅子旁边。"
+    },
+    "cn-08:暴风雨": {
+      "meaning": "很大的风和很大的雨",
+      "pinyin": "bào fēng yǔ",
+      "example": "暴风雨过后，大家检查小屋。"
+    },
+    "cn-08:安心": {
+      "meaning": "心里没有担忧，可以放心",
+      "pinyin": "ān xīn",
+      "example": "听到家人平安的消息，我就安心了。"
+    },
+    "cn-08:低头": {
+      "meaning": "把头向下垂",
+      "pinyin": "dī tóu",
+      "example": "他低头看了看脚下的落叶。"
+    },
+    "cn-08:吃力": {
+      "meaning": "做起来费劲、不轻松",
+      "pinyin": "chī lì",
+      "example": "搬这个大箱子很吃力。"
+    },
+    "cn-08:再见": {
+      "meaning": "分别时的礼貌用语",
+      "pinyin": "zài jiàn",
+      "example": "回家前，我向朋友说再见。"
+    },
+    "cn-08:母鸡": {
+      "meaning": "雌性的鸡",
+      "pinyin": "mǔ jī",
+      "example": "母鸡带着小鸡找食物。"
+    },
+    "cn-08:注意": {
+      "meaning": "把心思放在某件事情上",
+      "pinyin": "zhù yì",
+      "example": "过马路时要注意车辆。"
+    },
+    "cn-08:屋子": {
+      "meaning": "供人住或放东西的房间",
+      "pinyin": "wū zi",
+      "example": "这个屋子明亮又整洁。"
+    },
+    "cn-08:漂亮": {
+      "meaning": "看起来好看",
+      "pinyin": "piào liang",
+      "example": "这条围巾真漂亮。"
+    },
+    "cn-08:意思": {
+      "meaning": "词句所表达的内容或含义",
+      "pinyin": "yì si",
+      "example": "我想明白了这句话的意思。"
+    },
+    "cn-08:因此": {
+      "meaning": "表示前面的情况带来了后面的结果",
+      "pinyin": "yīn cǐ",
+      "example": "今天下雨，因此我们改在室内活动。"
+    },
+    "cn-garden-3:恒心": {
+      "meaning": "长久坚持做事的决心",
+      "pinyin": "héng xīn",
+      "example": "练字要有恒心。"
+    },
+    "cn-garden-3:神圣": {
+      "meaning": "特别庄严、值得尊敬的",
+      "pinyin": "shén shèng",
+      "example": "保护生命是一项神圣的责任。"
+    },
+    "cn-garden-3:萌发": {
+      "meaning": "植物开始长芽，也指想法开始产生",
+      "pinyin": "méng fā",
+      "example": "春天来了，种子开始萌发。"
+    },
+    "cn-garden-3:妥当": {
+      "meaning": "安排合适，没有明显问题",
+      "pinyin": "tuǒ dang",
+      "example": "我们把活动安排得很妥当。"
+    },
+    "cn-garden-3:车轴": {
+      "meaning": "连接、支撑车轮的轴",
+      "pinyin": "chē zhóu",
+      "example": "师傅检查了小车的车轴。"
+    },
+    "cn-garden-3:阁楼": {
+      "meaning": "楼房上部较小的楼层空间",
+      "pinyin": "gé lóu",
+      "example": "爷爷把旧书收在阁楼里。"
+    },
+    "cn-garden-3:培植": {
+      "meaning": "种植、照料使植物生长",
+      "pinyin": "péi zhí",
+      "example": "园丁细心培植幼苗。"
+    },
+    "cn-garden-3:厘米": {
+      "meaning": "长度单位，一米的一百分之一",
+      "pinyin": "lí mǐ",
+      "example": "这支铅笔长十五厘米。"
+    },
+    "cn-11:声明": {
+      "meaning": "明确地向别人说明自己的意思",
+      "pinyin": "shēng míng",
+      "example": "他先作了一个声明：这是自己的想法。"
+    },
+    "cn-11:神仙": {
+      "meaning": "传说中有神奇能力的角色",
+      "pinyin": "shén xiān",
+      "example": "童话里出现了一位神仙。"
+    },
+    "cn-11:普通": {
+      "meaning": "常见的，不特别的",
+      "pinyin": "pǔ tōng",
+      "example": "这是一个普通的杯子。"
+    },
+    "cn-11:让步": {
+      "meaning": "争论或竞争时放宽自己的要求",
+      "pinyin": "ràng bù",
+      "example": "为了和好，两人都作了一点让步。"
+    },
+    "cn-11:条件": {
+      "meaning": "做某件事需要满足的要求或情况",
+      "pinyin": "tiáo jiàn",
+      "example": "参加比赛的条件是按时报名。"
+    },
+    "cn-11:指甲": {
+      "meaning": "手指或脚趾尖上的硬片",
+      "pinyin": "zhǐ jia",
+      "example": "洗手时也要洗净指甲缝。"
+    },
+    "cn-11:得到": {
+      "meaning": "获得原先没有的东西或帮助",
+      "pinyin": "dé dào",
+      "example": "我得到了一张书签。"
+    },
+    "cn-11:衣服": {
+      "meaning": "穿在身上的物品",
+      "pinyin": "yī fu",
+      "example": "天冷了，要多穿一件衣服。"
+    },
+    "cn-11:所以": {
+      "meaning": "表示前面的原因带来后面的结果",
+      "pinyin": "suǒ yǐ",
+      "example": "小路很滑，所以我们慢慢走。"
+    },
+    "cn-11:要是": {
+      "meaning": "表示假设：如果",
+      "pinyin": "yào shi",
+      "example": "要是明天天晴，我们就去观察花草。"
+    },
+    "cn-11:同学": {
+      "meaning": "一起学习的人",
+      "pinyin": "tóng xué",
+      "example": "我的同学很爱看书。"
+    },
+    "cn-11:可怜": {
+      "meaning": "处境不好，让人想同情和帮助",
+      "pinyin": "kě lián",
+      "example": "受伤的小猫很可怜。"
+    },
+    "cn-11:最好": {
+      "meaning": "最合适、最值得选择的",
+      "pinyin": "zuì hǎo",
+      "example": "出门前最好看看天气。"
+    },
+    "cn-11:科学": {
+      "meaning": "通过观察、实验等研究事物的方法与知识",
+      "pinyin": "kē xué",
+      "example": "科学帮助我们认识世界。"
+    },
+    "cn-12:旅行": {
+      "meaning": "离开常住地到别处走访或游览",
+      "pinyin": "lǚ xíng",
+      "example": "假期里，我们去山中旅行。"
+    },
+    "cn-12:要好": {
+      "meaning": "相处亲密、感情好",
+      "pinyin": "yào hǎo",
+      "example": "我和同桌是要好的朋友。"
+    },
+    "cn-12:答应": {
+      "meaning": "同意别人的请求或表示愿意做",
+      "pinyin": "dā ying",
+      "example": "我答应放学后帮助他。"
+    },
+    "cn-12:做梦": {
+      "meaning": "睡觉时出现梦中的情景",
+      "pinyin": "zuò mèng",
+      "example": "我昨晚做梦去了海边。"
+    },
+    "cn-12:来得及": {
+      "meaning": "剩下的时间足够完成事情",
+      "pinyin": "lái de jí",
+      "example": "现在出发，还来得及赶上车。"
+    },
+    "cn-12:救命": {
+      "meaning": "把生命从危险中救出来",
+      "pinyin": "jiù mìng",
+      "example": "落水的人高声喊救命。"
+    },
+    "cn-12:大吃一惊": {
+      "meaning": "感到非常惊讶",
+      "pinyin": "dà chī yī jīng",
+      "example": "听到这个意外消息，我大吃一惊。"
+    },
+    "cn-12:尾巴": {
+      "meaning": "动物身体后端伸出的部分",
+      "pinyin": "wěi ba",
+      "example": "小狗摇着尾巴跑来了。"
+    },
+    "cn-12:牙齿": {
+      "meaning": "嘴里用来咬、嚼食物的坚硬部分",
+      "pinyin": "yá chǐ",
+      "example": "我们每天都要清洁牙齿。"
+    },
+    "cn-12:肚皮": {
+      "meaning": "肚子外面的部分",
+      "pinyin": "dù pí",
+      "example": "小猫躺着露出了肚皮。"
+    },
+    "cn-12:食物": {
+      "meaning": "可以吃、给身体营养的东西",
+      "pinyin": "shí wù",
+      "example": "我们准备了旅行的食物。"
+    },
+    "cn-12:消化": {
+      "meaning": "身体把吃下的食物分解、吸收的过程",
+      "pinyin": "xiāo huà",
+      "example": "胃和肠帮助身体消化食物。"
+    },
+    "cn-12:当然": {
+      "meaning": "表示情况本来就是这样，或很肯定",
+      "pinyin": "dāng rán",
+      "example": "朋友需要帮助，我当然愿意。"
+    },
+    "cn-12:刚才": {
+      "meaning": "离现在很近的过去一小段时间",
+      "pinyin": "gāng cái",
+      "example": "刚才有一只鸟飞过窗前。"
+    },
+    "cn-12:知觉": {
+      "meaning": "通过感觉发现、知道周围情况的能力",
+      "pinyin": "zhī jué",
+      "example": "睡醒后，我的知觉慢慢清楚了。"
+    },
+    "cn-12:光亮": {
+      "meaning": "光线或明亮的程度",
+      "pinyin": "guāng liàng",
+      "example": "窗外透进了一点光亮。"
+    },
+    "cn-garden-4:申请": {
+      "meaning": "向有关人或部门提出请求",
+      "pinyin": "shēn qǐng",
+      "example": "我向老师申请参加读书活动。"
+    },
+    "cn-garden-4:介绍": {
+      "meaning": "让别人了解一个人或一件事",
+      "pinyin": "jiè shào",
+      "example": "我向朋友介绍自己的学校。"
+    },
+    "cn-garden-4:主旨": {
+      "meaning": "文章或谈话最主要的意思",
+      "pinyin": "zhǔ zhǐ",
+      "example": "我们一起找出这篇文章的主旨。"
+    },
+    "cn-garden-4:占领": {
+      "meaning": "取得并控制某个地方",
+      "pinyin": "zhàn lǐng",
+      "example": "故事里，军队占领了高地。"
+    },
+    "cn-garden-4:乏力": {
+      "meaning": "没有力气、使不上劲",
+      "pinyin": "fá lì",
+      "example": "生病时，他感到浑身乏力。"
+    },
+    "cn-14:母亲": {
+      "meaning": "妈妈",
+      "pinyin": "mǔ qīn",
+      "example": "母亲陪我在河边散步。"
+    },
+    "cn-14:外祖父": {
+      "meaning": "妈妈的父亲",
+      "pinyin": "wài zǔ fù",
+      "example": "外祖父教我认识花草。"
+    },
+    "cn-14:船夫": {
+      "meaning": "驾驶或划船的人",
+      "pinyin": "chuán fū",
+      "example": "船夫划着船慢慢前进。"
+    },
+    "cn-14:羽毛": {
+      "meaning": "鸟身体表面的毛",
+      "pinyin": "yǔ máo",
+      "example": "小鸟的羽毛很柔软。"
+    },
+    "cn-14:翠绿": {
+      "meaning": "鲜明、好看的绿色",
+      "pinyin": "cuì lǜ",
+      "example": "雨后的树叶更加翠绿。"
+    },
+    "cn-14:静悄悄": {
+      "meaning": "非常安静，没有明显声音",
+      "pinyin": "jìng qiāo qiāo",
+      "example": "夜晚的院子静悄悄的。"
+    },
+    "cn-14:翠鸟": {
+      "meaning": "常在水边活动、羽毛鲜艳的一种鸟",
+      "pinyin": "cuì niǎo",
+      "example": "翠鸟停在水边的枝条上。"
+    },
+    "cn-14:捕鱼": {
+      "meaning": "捕捉鱼",
+      "pinyin": "bǔ yú",
+      "example": "渔民划着小船去捕鱼。"
+    },
+    "cn-15:草地": {
+      "meaning": "长满草的地方",
+      "pinyin": "cǎo dì",
+      "example": "我们在草地上观察昆虫。"
+    },
+    "cn-15:蒲公英": {
+      "meaning": "有黄色花、种子带白色绒毛的植物",
+      "pinyin": "pú gōng yīng",
+      "example": "风把蒲公英的种子吹走了。"
+    },
+    "cn-15:盛开": {
+      "meaning": "花朵开得很旺盛",
+      "pinyin": "shèng kāi",
+      "example": "春天，许多鲜花盛开了。"
+    },
+    "cn-15:玩耍": {
+      "meaning": "游戏、玩儿",
+      "pinyin": "wán shuǎ",
+      "example": "放学后，我和朋友一起玩耍。"
+    },
+    "cn-15:一本正经": {
+      "meaning": "态度十分认真、严肃",
+      "pinyin": "yī běn zhèng jīng",
+      "example": "他一本正经地向大家说明规则。"
+    },
+    "cn-15:使劲": {
+      "meaning": "用力",
+      "pinyin": "shǐ jìn",
+      "example": "他使劲把门推开。"
+    },
+    "cn-15:钓鱼": {
+      "meaning": "用鱼钩、鱼线等把鱼钓上来",
+      "pinyin": "diào yú",
+      "example": "爷爷在岸边钓鱼。"
+    },
+    "cn-15:观察": {
+      "meaning": "有目的地仔细看，发现特点",
+      "pinyin": "guān chá",
+      "example": "我每天观察种子的变化。"
+    },
+    "cn-15:合拢": {
+      "meaning": "分开的部分收在一起",
+      "pinyin": "hé lǒng",
+      "example": "夜里，有些花瓣会合拢。"
+    },
+    "cn-15:张开": {
+      "meaning": "原本合着的部分展开",
+      "pinyin": "zhāng kāi",
+      "example": "小鸟张开翅膀飞走了。"
+    },
+    "cn-15:喜爱": {
+      "meaning": "喜欢、爱好",
+      "pinyin": "xǐ ài",
+      "example": "我很喜爱阅读故事。"
+    },
+    "cn-16:风景": {
+      "meaning": "地方呈现出来的景色",
+      "pinyin": "fēng jǐng",
+      "example": "海边的风景很美。"
+    },
+    "cn-16:优美": {
+      "meaning": "美好、让人感到舒服",
+      "pinyin": "yōu měi",
+      "example": "这段音乐十分优美。"
+    },
+    "cn-16:物产": {
+      "meaning": "一个地方出产的物品和资源",
+      "pinyin": "wù chǎn",
+      "example": "这座海岛的物产很丰富。"
+    },
+    "cn-16:交错": {
+      "meaning": "相互交叉、穿插",
+      "pinyin": "jiāo cuò",
+      "example": "花园里的小路交错分布。"
+    },
+    "cn-16:岩石": {
+      "meaning": "组成山体和地壳等的坚硬石块",
+      "pinyin": "yán shí",
+      "example": "海浪拍打着岸边的岩石。"
+    },
+    "cn-16:鹿角": {
+      "meaning": "鹿头上的角",
+      "pinyin": "lù jiǎo",
+      "example": "树枝的样子像鹿角。"
+    },
+    "cn-16:成群结队": {
+      "meaning": "许多人或动物聚在一起成群成队",
+      "pinyin": "chéng qún jié duì",
+      "example": "鸟儿成群结队地飞过天空。"
+    },
+    "cn-16:布满": {
+      "meaning": "遍布整个范围",
+      "pinyin": "bù mǎn",
+      "example": "天空布满了星星。"
+    },
+    "cn-16:条纹": {
+      "meaning": "长条形的纹路",
+      "pinyin": "tiáo wén",
+      "example": "小鱼身上有蓝色条纹。"
+    },
+    "cn-16:周身": {
+      "meaning": "全身各处",
+      "pinyin": "zhōu shēn",
+      "example": "小狗周身的毛都是白色的。"
+    },
+    "cn-16:皮球": {
+      "meaning": "用皮革或橡胶等制成的球",
+      "pinyin": "pí qiú",
+      "example": "妹妹抱着一个皮球。"
+    },
+    "cn-16:茂密": {
+      "meaning": "草木又多又密",
+      "pinyin": "mào mì",
+      "example": "山上长着茂密的树林。"
+    },
+    "cn-16:肥料": {
+      "meaning": "提供植物生长所需养分的材料",
+      "pinyin": "féi liào",
+      "example": "园丁给花草施肥料。"
+    },
+    "cn-16:祖国": {
+      "meaning": "自己所属的国家",
+      "pinyin": "zǔ guó",
+      "example": "我爱自己的祖国。"
+    },
+    "cn-16:事业": {
+      "meaning": "人们长久投入的重要工作或活动",
+      "pinyin": "shì yè",
+      "example": "老师把教育作为自己的事业。"
+    },
+    "cn-16:发展": {
+      "meaning": "从原来的样子不断变化、进步",
+      "pinyin": "fā zhǎn",
+      "example": "这座城市正在发展。"
+    },
+    "cn-17:海滨": {
+      "meaning": "靠近大海的地方",
+      "pinyin": "hǎi bīn",
+      "example": "我们在海滨散步。"
+    },
+    "cn-17:街道": {
+      "meaning": "城镇里供人和车辆通行的道路",
+      "pinyin": "jiē dào",
+      "example": "这条街道两旁种着树。"
+    },
+    "cn-17:交界": {
+      "meaning": "两个地方相接的地方",
+      "pinyin": "jiāo jiè",
+      "example": "村庄位于两座山的交界处。"
+    },
+    "cn-17:水平线": {
+      "meaning": "与水面方向一致的横线",
+      "pinyin": "shuǐ píng xiàn",
+      "example": "老师画了一条水平线。"
+    },
+    "cn-17:机帆船": {
+      "meaning": "既能用机器也能用帆推动的船",
+      "pinyin": "jī fān chuán",
+      "example": "一艘机帆船驶向海面。"
+    },
+    "cn-17:来来往往": {
+      "meaning": "不停地来和去",
+      "pinyin": "lái lái wǎng wǎng",
+      "example": "街上来来往往的人很多。"
+    },
+    "cn-17:朝阳": {
+      "meaning": "早晨升起的太阳",
+      "pinyin": "zhāo yáng",
+      "example": "朝阳照亮了海面。"
+    },
+    "cn-17:渔民": {
+      "meaning": "以捕鱼等为主要工作的人",
+      "pinyin": "yú mín",
+      "example": "渔民整理好渔网。"
+    },
+    "cn-17:贝壳": {
+      "meaning": "贝类动物身体外面的硬壳",
+      "pinyin": "bèi ké",
+      "example": "海滩上有许多贝壳。"
+    },
+    "cn-17:汽笛": {
+      "meaning": "船舶或车辆上发出信号声的装置",
+      "pinyin": "qì dí",
+      "example": "港口传来了汽笛声。"
+    },
+    "cn-17:出海": {
+      "meaning": "离开陆地、港口，驶向海上",
+      "pinyin": "chū hǎi",
+      "example": "渔船清晨出海了。"
+    },
+    "cn-17:银光闪闪": {
+      "meaning": "一闪一闪地发出银白色的亮光",
+      "pinyin": "yín guāng shǎn shǎn",
+      "example": "月光下的水面银光闪闪。"
+    },
+    "cn-17:庭院": {
+      "meaning": "房屋前后围起来的院子",
+      "pinyin": "tíng yuàn",
+      "example": "庭院里种着一棵桂花树。"
+    },
+    "cn-17:亚热带": {
+      "meaning": "位于热带和温带之间的气候地区",
+      "pinyin": "yà rè dài",
+      "example": "有些城市位于亚热带地区。"
+    },
+    "cn-17:散发": {
+      "meaning": "向四周发出或传开",
+      "pinyin": "sàn fā",
+      "example": "花朵散发着清香。"
+    },
+    "cn-17:打扫": {
+      "meaning": "清除灰尘、杂物，使地方干净",
+      "pinyin": "dǎ sǎo",
+      "example": "我们一起打扫教室。"
+    },
+    "cn-17:干净": {
+      "meaning": "没有脏东西",
+      "pinyin": "gān jìng",
+      "example": "洗好的杯子很干净。"
+    },
+    "cn-18:东北": {
+      "meaning": "东和北之间的方向，也可指我国相应的区域",
+      "pinyin": "dōng běi",
+      "example": "地图的东北方向有一片树林。"
+    },
+    "cn-18:密密层层": {
+      "meaning": "很多层紧密地叠在一起",
+      "pinyin": "mì mì céng céng",
+      "example": "树叶密密层层，遮住了天空。"
+    },
+    "cn-18:严严实实": {
+      "meaning": "遮挡或包裹得很紧，没有明显空隙",
+      "pinyin": "yán yán shí shí",
+      "example": "积雪把小屋盖得严严实实。"
+    },
+    "cn-18:视线": {
+      "meaning": "眼睛看向物体的方向和范围",
+      "pinyin": "shì xiàn",
+      "example": "大树挡住了我的视线。"
+    },
+    "cn-18:山谷": {
+      "meaning": "山与山之间低下的地方",
+      "pinyin": "shān gǔ",
+      "example": "清澈的小溪流过山谷。"
+    },
+    "cn-18:起来": {
+      "meaning": "",
+      "notes": "本课具体读音尚未完成纸本/原文核对，仅供词卡查看；不用于自动音义判题。"
+    },
+    "cn-18:照射": {
+      "meaning": "光线照到某个地方",
+      "pinyin": "zhào shè",
+      "example": "阳光照射在草地上。"
+    },
+    "cn-18:各种各样": {
+      "meaning": "有许多不同种类和样子",
+      "pinyin": "gè zhǒng gè yàng",
+      "example": "花园里有各种各样的花。"
+    },
+    "cn-18:花坛": {
+      "meaning": "有一定形状、种植花草的地块",
+      "pinyin": "huā tán",
+      "example": "校园的花坛开满了鲜花。"
+    },
+    "cn-18:显得": {
+      "meaning": "表现出某种样子，使人觉得",
+      "pinyin": "xiǎn de",
+      "example": "阳光下，小屋显得更加明亮。"
+    },
+    "cn-18:苍翠": {
+      "meaning": "草木浓绿的样子",
+      "pinyin": "cāng cuì",
+      "example": "远处的松树十分苍翠。"
+    },
+    "cn-18:药材": {
+      "meaning": "可以用于制药的原料",
+      "pinyin": "yào cái",
+      "example": "山里生长着一些药材。"
+    },
+    "cn-18:捕捉": {
+      "meaning": "捉住人或动物等",
+      "pinyin": "bǔ zhuō",
+      "example": "猫在田里捕捉老鼠。"
+    },
+    "cn-18:野兔": {
+      "meaning": "生活在野外的兔",
+      "pinyin": "yě tù",
+      "example": "一只野兔跑过草丛。"
+    },
+    "cn-18:景色": {
+      "meaning": "一个地方呈现出的景象",
+      "pinyin": "jǐng sè",
+      "example": "秋天的山林景色迷人。"
+    },
+    "cn-18:宝库": {
+      "meaning": "存放许多宝贵东西的地方",
+      "pinyin": "bǎo kù",
+      "example": "森林像一座绿色的宝库。"
+    },
+    "cn-21:大自然": {
+      "meaning": "天然形成的山水、生物等整个自然世界",
+      "pinyin": "dà zì rán",
+      "example": "我们在大自然中观察花鸟。"
+    },
+    "cn-21:美妙": {
+      "meaning": "美好而令人喜欢",
+      "pinyin": "měi miào",
+      "example": "这段琴声真美妙。"
+    },
+    "cn-21:音乐家": {
+      "meaning": "创作或演奏音乐有专长的人",
+      "pinyin": "yīn yuè jiā",
+      "example": "音乐家在舞台上演奏。"
+    },
+    "cn-21:手风琴": {
+      "meaning": "用手拉动风箱、按键演奏的乐器",
+      "pinyin": "shǒu fēng qín",
+      "example": "姐姐正在练习手风琴。"
+    },
+    "cn-21:歌手": {
+      "meaning": "擅长唱歌或以唱歌为工作的人",
+      "pinyin": "gē shǒu",
+      "example": "这位歌手唱得很好听。"
+    },
+    "cn-21:感受": {
+      "meaning": "通过亲身经历得到感觉或体会",
+      "pinyin": "gǎn shòu",
+      "example": "闭上眼睛，我能感受微风。"
+    },
+    "cn-21:温柔": {
+      "meaning": "柔和、不生硬，也可形容态度友好",
+      "pinyin": "wēn róu",
+      "example": "妈妈的声音很温柔。"
+    },
+    "cn-21:合奏": {
+      "meaning": "多种乐器一起演奏",
+      "pinyin": "hé zòu",
+      "example": "同学们用笛子和琴合奏。"
+    },
+    "cn-21:充满": {
+      "meaning": "某样东西遍布、装满整个范围",
+      "pinyin": "chōng mǎn",
+      "example": "教室里充满了笑声。"
+    },
+    "cn-21:威力": {
+      "meaning": "强大的力量",
+      "pinyin": "wēi lì",
+      "example": "我们感受到了风暴的威力。"
+    },
+    "cn-21:乐器": {
+      "meaning": "用于演奏音乐的器具",
+      "pinyin": "yuè qì",
+      "example": "笛子是一种乐器。"
+    },
+    "cn-21:屋顶": {
+      "meaning": "房屋最上面的覆盖部分",
+      "pinyin": "wū dǐng",
+      "example": "雨点落在屋顶上。"
+    },
+    "cn-21:河流": {
+      "meaning": "地面上沿一定路径流动的水道",
+      "pinyin": "hé liú",
+      "example": "这条河流经过村庄。"
+    },
+    "cn-21:轻快": {
+      "meaning": "轻松、活泼、速度不拖沓",
+      "pinyin": "qīng kuài",
+      "example": "小鸟唱着轻快的歌。"
+    },
+    "cn-21:合唱": {
+      "meaning": "许多人一起唱歌",
+      "pinyin": "hé chàng",
+      "example": "我们一起合唱了一首歌。"
+    },
+    "cn-21:水塘": {
+      "meaning": "积水的池塘",
+      "pinyin": "shuǐ táng",
+      "example": "小鸭在水塘里游动。"
+    },
+    "cn-22:昆虫": {
+      "meaning": "通常有六条腿、身体分头胸腹的动物",
+      "pinyin": "kūn chóng",
+      "example": "我们观察草地上的昆虫。"
+    },
+    "cn-22:万物": {
+      "meaning": "世上的各种事物",
+      "pinyin": "wàn wù",
+      "example": "春天让万物充满生机。"
+    },
+    "cn-22:沉思": {
+      "meaning": "安静、专心地深入思考",
+      "pinyin": "chén sī",
+      "example": "看完故事，我陷入了沉思。"
+    },
+    "cn-22:搬家": {
+      "meaning": "从原来的住处迁到别的住处",
+      "pinyin": "bān jiā",
+      "example": "邻居昨天搬家了。"
+    },
+    "cn-22:井然有序": {
+      "meaning": "有条理、整齐，不杂乱",
+      "pinyin": "jǐng rán yǒu xù",
+      "example": "书架上的书摆得井然有序。"
+    },
+    "cn-22:精神": {
+      "meaning": "这里指人的状态和活力",
+      "pinyin": "jīng shen",
+      "example": "睡好觉后，他很有精神。"
+    },
+    "cn-22:植物": {
+      "meaning": "树木、花草等这一类生物",
+      "pinyin": "zhí wù",
+      "example": "我们照料窗台上的植物。"
+    },
+    "cn-22:千姿百态": {
+      "meaning": "有许多不同的姿态和样子",
+      "pinyin": "qiān zī bǎi tài",
+      "example": "天空中的云千姿百态。"
+    },
+    "cn-22:鲜美": {
+      "meaning": "食物新鲜、味道好",
+      "pinyin": "xiān měi",
+      "example": "这碗汤味道鲜美。"
+    },
+    "cn-22:池塘": {
+      "meaning": "比湖小的蓄水区域",
+      "pinyin": "chí táng",
+      "example": "池塘里有几条小鱼。"
+    },
+    "cn-22:秋高气爽": {
+      "meaning": "秋天天空高朗、空气清爽",
+      "pinyin": "qiū gāo qì shuǎng",
+      "example": "今天秋高气爽，适合出游。"
+    },
+    "cn-22:倒映": {
+      "meaning": "物体的影像反向映在水面等上",
+      "pinyin": "dào yìng",
+      "example": "大树倒映在湖水里。"
+    },
+    "cn-22:游玩": {
+      "meaning": "到某个地方游览、玩耍",
+      "pinyin": "yóu wán",
+      "example": "周末我们去公园游玩。"
+    },
+    "cn-22:画册": {
+      "meaning": "汇集许多图画的一本书",
+      "pinyin": "huà cè",
+      "example": "妹妹正在翻看画册。"
+    },
+    "cn-22:无穷": {
+      "meaning": "没有尽头、非常多",
+      "pinyin": "wú qióng",
+      "example": "阅读给我带来了无穷的乐趣。"
+    },
+    "cn-22:奥秘": {
+      "meaning": "深奥、还不容易明白的道理或秘密",
+      "pinyin": "ào mì",
+      "example": "我们一起探索大自然的奥秘。"
+    },
+    "cn-22:无尽": {
+      "meaning": "没有尽头、没有终止",
+      "pinyin": "wú jìn",
+      "example": "书里有无尽的故事。"
+    },
+    "cn-garden-7:田螺": {
+      "meaning": "常生活在淡水中、有螺旋硬壳的小动物",
+      "pinyin": "tián luó",
+      "example": "水田里有一只田螺。"
+    },
+    "cn-garden-7:螃蟹": {
+      "meaning": "有硬壳、钳状前肢、常横着走的动物",
+      "pinyin": "páng xiè",
+      "example": "螃蟹在石头边爬行。"
+    },
+    "cn-garden-7:鲤鱼": {
+      "meaning": "一种常见的淡水鱼",
+      "pinyin": "lǐ yú",
+      "example": "池塘里游着一条鲤鱼。"
+    },
+    "cn-garden-7:鲫鱼": {
+      "meaning": "一种常见的淡水鱼",
+      "pinyin": "jì yú",
+      "example": "爷爷认识这条鲫鱼。"
+    },
+    "cn-garden-7:鲨鱼": {
+      "meaning": "一种身体呈流线形、用鳃呼吸的鱼",
+      "pinyin": "shā yú",
+      "example": "鲨鱼在海里游动。"
+    },
+    "cn-24:生物": {
+      "meaning": "有生命的物体，如动物和植物",
+      "pinyin": "shēng wù",
+      "example": "小草也是一种生物。"
+    },
+    "cn-24:从事": {
+      "meaning": "进行某种工作或活动",
+      "pinyin": "cóng shì",
+      "example": "叔叔从事科学研究。"
+    },
+    "cn-24:成就": {
+      "meaning": "通过努力取得的成果",
+      "pinyin": "chéng jiù",
+      "example": "她在研究中取得了成就。"
+    },
+    "cn-24:学期": {
+      "meaning": "学校一年中划分的一段学习时间",
+      "pinyin": "xué qī",
+      "example": "这个学期我们读了很多书。"
+    },
+    "cn-24:考试": {
+      "meaning": "用题目或操作检查学习情况",
+      "pinyin": "kǎo shì",
+      "example": "考试前，我认真复习。"
+    },
+    "cn-24:再三": {
+      "meaning": "一次又一次",
+      "pinyin": "zài sān",
+      "example": "老师再三提醒我们注意安全。"
+    },
+    "cn-24:同意": {
+      "meaning": "赞成或接受别人的想法、请求",
+      "pinyin": "tóng yì",
+      "example": "我同意他的建议。"
+    },
+    "cn-24:难得": {
+      "meaning": "不常遇到，很不容易有",
+      "pinyin": "nán dé",
+      "example": "这次相聚的机会十分难得。"
+    },
+    "cn-24:值班": {
+      "meaning": "按安排在一定时间内负责工作",
+      "pinyin": "zhí bān",
+      "example": "今天由这位老师值班。"
+    },
+    "cn-24:努力": {
+      "meaning": "认真用力去做，尽自己的力量",
+      "pinyin": "nǔ lì",
+      "example": "他努力把字写好。"
+    },
+    "cn-24:留学": {
+      "meaning": "到国外学习",
+      "pinyin": "liú xué",
+      "example": "姐姐计划到国外留学。"
+    },
+    "cn-24:国家": {
+      "meaning": "有共同领土和治理组织的政治共同体",
+      "pinyin": "guó jiā",
+      "example": "我们生活在同一个国家。"
+    },
+    "cn-24:落后": {
+      "meaning": "比别人慢或处在后面",
+      "pinyin": "luò hòu",
+      "example": "跑步时，他暂时落后了。"
+    },
+    "cn-24:地位": {
+      "meaning": "人在社会或事物中所处的位置",
+      "pinyin": "dì wèi",
+      "example": "每个人在集体里都有自己的地位。"
+    },
+    "cn-24:环节": {
+      "meaning": "整个过程中的一个部分",
+      "pinyin": "huán jié",
+      "example": "检查是制作过程的重要环节。"
+    },
+    "cn-24:难度": {
+      "meaning": "事情有多难的程度",
+      "pinyin": "nán dù",
+      "example": "这道题的难度不大。"
+    },
+    "cn-24:刻苦": {
+      "meaning": "认真努力、能坚持克服困难",
+      "pinyin": "kè kǔ",
+      "example": "他刻苦学习乐器。"
+    },
+    "cn-24:兴奋": {
+      "meaning": "因高兴等而情绪活跃、激动",
+      "pinyin": "xīng fèn",
+      "example": "听到好消息，我很兴奋。"
+    },
+    "cn-25:手术台": {
+      "meaning": "医生给病人做手术用的台子",
+      "pinyin": "shǒu shù tái",
+      "example": "医生在手术台旁做好准备。"
+    },
+    "cn-25:阵地": {
+      "meaning": "为作战或开展工作等占用的位置",
+      "pinyin": "zhèn dì",
+      "example": "战士守卫着阵地。"
+    },
+    "cn-25:战斗": {
+      "meaning": "武装冲突中的交战，也可比喻努力斗争",
+      "pinyin": "zhàn dòu",
+      "example": "战斗结束后，大家救助伤员。"
+    },
+    "cn-25:打响": {
+      "meaning": "战斗等开始，或开始取得响亮成果",
+      "pinyin": "dǎ xiǎng",
+      "example": "战斗在清晨打响了。"
+    },
+    "cn-25:消灭": {
+      "meaning": "使敌人或有害事物不再存在",
+      "pinyin": "xiāo miè",
+      "example": "我们要消灭害虫。"
+    },
+    "cn-25:伤员": {
+      "meaning": "在战斗或事故中受伤的人",
+      "pinyin": "shāng yuán",
+      "example": "医生正在帮助伤员。"
+    },
+    "cn-25:陆续": {
+      "meaning": "前后接着发生，不是同时一下子",
+      "pinyin": "lù xù",
+      "example": "同学们陆续走进教室。"
+    },
+    "cn-25:血丝": {
+      "meaning": "细细的、像丝一样的血痕或红色线条",
+      "pinyin": "xuè sī",
+      "example": "熬夜后，他眼里有一些血丝。"
+    },
+    "cn-25:匆匆": {
+      "meaning": "急忙、时间短促的样子",
+      "pinyin": "cōng cōng",
+      "example": "他匆匆赶到了学校。"
+    },
+    "cn-25:医生": {
+      "meaning": "检查、治疗病人的专业人员",
+      "pinyin": "yī shēng",
+      "example": "医生给病人检查身体。"
+    },
+    "cn-25:转告": {
+      "meaning": "把别人的话传给另一个人",
+      "pinyin": "zhuǎn gào",
+      "example": "请把消息转告给老师。"
+    },
+    "cn-25:赶忙": {
+      "meaning": "赶紧、连忙",
+      "pinyin": "gǎn máng",
+      "example": "下雨了，我赶忙收起衣服。"
+    },
+    "cn-25:迅速": {
+      "meaning": "速度很快",
+      "pinyin": "xùn sù",
+      "example": "消防员迅速赶到现场。"
+    },
+    "cn-25:争分夺秒": {
+      "meaning": "抓紧每一点时间做事",
+      "pinyin": "zhēng fēn duó miǎo",
+      "example": "救援人员争分夺秒地帮助受困者。"
+    },
+    "cn-25:连续": {
+      "meaning": "一个接一个，没有明显中断",
+      "pinyin": "lián xù",
+      "example": "他连续三天按时浇水。"
+    },
+    "cn-garden-8:怒目圆睁": {
+      "meaning": "愤怒地把眼睛睁得很大",
+      "pinyin": "nù mù yuán zhēng",
+      "example": "故事里的人物气得怒目圆睁。"
+    },
+    "cn-garden-8:眨眼": {
+      "meaning": "眼睛很快地闭一下再张开",
+      "pinyin": "zhǎ yǎn",
+      "example": "他眨眼向朋友打招呼。"
+    },
+    "cn-garden-8:眼眶": {
+      "meaning": "眼睛周围的部位",
+      "pinyin": "yǎn kuàng",
+      "example": "她感动得眼眶湿润。"
+    },
+    "cn-garden-8:目瞪口呆": {
+      "meaning": "非常惊讶，睁大眼睛说不出话",
+      "pinyin": "mù dèng kǒu dāi",
+      "example": "看到神奇的表演，我目瞪口呆。"
+    },
+    "cn-garden-8:耳闻目睹": {
+      "meaning": "亲耳听到、亲眼看到",
+      "pinyin": "ěr wén mù dǔ",
+      "example": "这件事是我耳闻目睹的。"
+    }
+  },
+  "chineseCharacters": {
+    "cn-01:绒": {
+      "meaning": "柔软的短毛或像短毛的纤维",
+      "pinyin": "róng",
+      "example": "绒毛摸起来很柔软。"
+    },
+    "cn-01:昂": {
+      "meaning": "向上抬起，也可表示精神振奋",
+      "pinyin": "áng",
+      "example": "小队员昂起了头。"
+    },
+    "cn-01:扬": {
+      "meaning": "向上举起或向外传播",
+      "pinyin": "yáng",
+      "example": "红旗在风中飘扬。"
+    },
+    "cn-01:凤": {
+      "meaning": "传说中的一种神鸟",
+      "pinyin": "fèng",
+      "example": "故事里出现了一只凤凰。"
+    },
+    "cn-01:墙": {
+      "meaning": "房屋等四周直立的建筑部分",
+      "pinyin": "qiáng",
+      "example": "墙上挂着一幅画。"
+    },
+    "cn-01:晃": {
+      "meaning": "来回摇动",
+      "pinyin": "huàng",
+      "example": "树枝在风中摇晃。"
+    },
+    "cn-01:坡": {
+      "meaning": "倾斜的地面",
+      "pinyin": "pō",
+      "example": "山坡上开着小花。"
+    },
+    "cn-01:球": {
+      "meaning": "圆形的物体",
+      "pinyin": "qiú",
+      "example": "我和朋友一起踢球。"
+    },
+    "cn-01:招": {
+      "meaning": "挥手示意或引来",
+      "pinyin": "zhāo",
+      "example": "我向远处的朋友招手。"
+    },
+    "cn-01:呼": {
+      "meaning": "叫喊或往外出气",
+      "pinyin": "hū",
+      "example": "我们一起大声欢呼。"
+    },
+    "cn-01:飘": {
+      "meaning": "随着风或水流动",
+      "pinyin": "piāo",
+      "example": "白云轻轻飘过天空。"
+    },
+    "cn-01:读": {
+      "meaning": "看着文字念出或理解",
+      "pinyin": "dú",
+      "example": "我读了一本故事书。"
+    },
+    "cn-01:热": {
+      "meaning": "温度高；也可形容气氛活跃",
+      "pinyin": "rè",
+      "example": "今天的天气很热。"
+    },
+    "cn-01:闹": {
+      "meaning": "声音多、活动活跃或发生争扰",
+      "pinyin": "nào",
+      "example": "大家在热闹的广场唱歌。"
+    },
+    "cn-01:粗": {
+      "meaning": "横截面较大，也可指不细致",
+      "pinyin": "cū",
+      "example": "这根树枝比较粗。"
+    },
+    "cn-01:壮": {
+      "meaning": "结实、有力量",
+      "pinyin": "zhuàng",
+      "example": "小树长得越来越壮。"
+    },
+    "cn-01:洁": {
+      "meaning": "干净、没有污物",
+      "pinyin": "jié",
+      "example": "我们保持教室整洁。"
+    },
+    "cn-02:轰": {
+      "meaning": "形容很大的响声",
+      "pinyin": "hōng",
+      "example": "远处轰的一声打雷了。"
+    },
+    "cn-02:湿": {
+      "meaning": "有水分、不干燥",
+      "pinyin": "shī",
+      "example": "雨水把衣服弄湿了。"
+    },
+    "cn-02:荒": {
+      "meaning": "无人照料或缺少活动的",
+      "pinyin": "huāng",
+      "example": "远处有一片荒地。"
+    },
+    "cn-02:笛": {
+      "meaning": "用吹气奏响的管乐器",
+      "pinyin": "dí",
+      "example": "姐姐在吹笛子。"
+    },
+    "cn-02:罚": {
+      "meaning": "对违反规则的行为作出惩处",
+      "pinyin": "fá",
+      "example": "违反规则会受到处罚。"
+    },
+    "cn-02:假": {
+      "meaning": "按规定不工作或不上课的日子",
+      "pinyin": "jià",
+      "example": "放假时，我去公园游玩。"
+    },
+    "cn-02:臂": {
+      "meaning": "肩到手腕的肢体部分",
+      "pinyin": "bì",
+      "example": "他张开手臂。"
+    },
+    "cn-02:润": {
+      "meaning": "有水分、湿而不干",
+      "pinyin": "rùn",
+      "example": "春雨让土地湿润了。"
+    },
+    "cn-02:狂": {
+      "meaning": "猛烈、兴奋得超过一般程度",
+      "pinyin": "kuáng",
+      "example": "一阵狂风吹过树林。"
+    },
+    "cn-02:功": {
+      "meaning": "努力得到的成绩或本领",
+      "pinyin": "gōng",
+      "example": "坚持练习就能练好基本功。"
+    },
+    "cn-02:互": {
+      "meaning": "彼此之间",
+      "pinyin": "hù",
+      "example": "同学之间要互相帮助。"
+    },
+    "cn-02:碰": {
+      "meaning": "接触、撞到",
+      "pinyin": "pèng",
+      "example": "球碰到了墙壁。"
+    },
+    "cn-02:黄": {
+      "meaning": "像成熟香蕉外皮那样的颜色",
+      "pinyin": "huáng",
+      "example": "这片叶子变黄了。"
+    },
+    "cn-02:急": {
+      "meaning": "因事情紧迫而不安，或需要赶快做",
+      "pinyin": "jí",
+      "example": "别急，慢慢说。"
+    },
+    "cn-03:诵": {
+      "meaning": "大声念出或背出",
+      "pinyin": "sòng",
+      "example": "他在诵读诗歌。"
+    },
+    "cn-03:例": {
+      "meaning": "用来说明情况的样本",
+      "pinyin": "lì",
+      "example": "老师举了一个例子。"
+    },
+    "cn-03:糊": {
+      "meaning": "这里表示不明白、不清楚",
+      "pinyin": "hú",
+      "example": "他对这件事有点糊涂。"
+    },
+    "cn-03:戒": {
+      "meaning": "警惕、防止，或约束行为",
+      "pinyin": "jiè",
+      "example": "老师把戒尺放在桌上。"
+    },
+    "cn-03:厉": {
+      "meaning": "严格、严肃或猛烈",
+      "pinyin": "lì",
+      "example": "他听到了严厉的提醒。"
+    },
+    "cn-03:详": {
+      "meaning": "仔细、内容充分",
+      "pinyin": "xiáng",
+      "example": "老师作了详细的说明。"
+    },
+    "cn-03:挨": {
+      "meaning": "本课表示遭受，读ái",
+      "pinyin": "ái",
+      "example": "他担心挨批评。"
+    },
+    "cn-04:庭": {
+      "meaning": "堂前的空地；也用于一个著名湖泊的名称",
+      "pinyin": "tíng",
+      "example": "我们在地图上找到了洞庭湖。"
+    },
+    "cn-04:未": {
+      "meaning": "还没有",
+      "pinyin": "wèi",
+      "example": "这朵花尚未开放。"
+    },
+    "cn-04:磨": {
+      "meaning": "用摩擦使物体表面光滑",
+      "pinyin": "mó",
+      "example": "这面镜子尚未打磨。"
+    },
+    "cn-04:斜": {
+      "meaning": "不直立、带有倾角的",
+      "pinyin": "xié",
+      "example": "一条小路斜伸到山上。"
+    },
+    "cn-04:萧": {
+      "meaning": "这里描写风吹树叶的声音",
+      "pinyin": "xiāo",
+      "example": "秋风吹动树叶，发出萧萧声。"
+    },
+    "cn-04:挑": {
+      "meaning": "用细长的东西拨动",
+      "pinyin": "tiǎo",
+      "example": "孩子用草茎挑动小虫。"
+    },
+    "cn-04:促": {
+      "meaning": "催使、加快",
+      "pinyin": "cù",
+      "example": "夜里传来促织的叫声。"
+    },
+    "cn-04:相": {
+      "meaning": "",
+      "notes": "本课具体读音尚未完成纸本/原文核对，仅供词卡查看；不用于自动音义判题。"
+    },
+    "cn-04:寒": {
+      "meaning": "冷、温度低",
+      "pinyin": "hán",
+      "example": "秋夜有些寒冷。"
+    },
+    "cn-04:径": {
+      "meaning": "较窄的小路",
+      "pinyin": "jìng",
+      "example": "小径一直伸向树林。"
+    },
+    "cn-04:枫": {
+      "meaning": "一种叶形像手掌、部分种类秋叶会变红的树",
+      "pinyin": "fēng",
+      "example": "秋天的枫叶红了。"
+    },
+    "cn-04:霜": {
+      "meaning": "寒冷时水汽在物体表面形成的白色冰晶",
+      "pinyin": "shuāng",
+      "example": "早晨，草叶上结了一层霜。"
+    },
+    "cn-04:深": {
+      "meaning": "从表面到底部距离大，也指时间晚等",
+      "pinyin": "shēn",
+      "example": "夜深了，窗前仍有灯光。"
+    },
+    "cn-04:落": {
+      "meaning": "",
+      "notes": "本课具体读音尚未完成纸本/原文核对，仅供词卡查看；不用于自动音义判题。"
+    },
+    "cn-07:抖": {
+      "meaning": "轻轻地颤动或使东西振动",
+      "pinyin": "dǒu",
+      "example": "风把树叶抖落下来。"
+    },
+    "cn-07:振": {
+      "meaning": "来回摇动或使精神奋发",
+      "pinyin": "zhèn",
+      "example": "鸟儿振动翅膀。"
+    },
+    "cn-07:韵": {
+      "meaning": "声音和谐的节奏或情趣",
+      "pinyin": "yùn",
+      "example": "这首诗很有韵味。"
+    },
+    "cn-07:掠": {
+      "meaning": "轻快地经过",
+      "pinyin": "lüè",
+      "example": "燕子从水面掠过。"
+    },
+    "cn-07:吟": {
+      "meaning": "有节奏地念、唱",
+      "pinyin": "yín",
+      "example": "他轻轻吟诵古诗。"
+    },
+    "cn-07:辽": {
+      "meaning": "遥远或宽广",
+      "pinyin": "liáo",
+      "example": "眼前是辽阔的田野。"
+    },
+    "cn-07:阔": {
+      "meaning": "宽、范围大",
+      "pinyin": "kuò",
+      "example": "这里的视野很开阔。"
+    },
+    "cn-09:陶": {
+      "meaning": "用黏土烧成的材料",
+      "pinyin": "táo",
+      "example": "桌上放着一个陶罐。"
+    },
+    "cn-09:适": {
+      "meaning": "合乎要求、使人舒服",
+      "pinyin": "shì",
+      "example": "这双鞋大小合适。"
+    },
+    "cn-09:谈": {
+      "meaning": "说话、讨论",
+      "pinyin": "tán",
+      "example": "我们谈了自己的发现。"
+    },
+    "cn-09:婚": {
+      "meaning": "与两人成为夫妻有关",
+      "pinyin": "hūn",
+      "example": "故事里正在举行婚礼。"
+    },
+    "cn-09:庆": {
+      "meaning": "为值得高兴的事情表示快乐",
+      "pinyin": "qìng",
+      "example": "大家一起庆祝节日。"
+    },
+    "cn-09:典": {
+      "meaning": "隆重活动的仪式",
+      "pinyin": "diǎn",
+      "example": "同学们参加开学典礼。"
+    },
+    "cn-09:途": {
+      "meaning": "道路、行进的路线",
+      "pinyin": "tú",
+      "example": "旅途中，我们经过了森林。"
+    },
+    "cn-09:括": {
+      "meaning": "包含，或把内容归纳起来",
+      "pinyin": "kuò",
+      "example": "活动包括唱歌和画画。"
+    },
+    "cn-09:史": {
+      "meaning": "过去发生的事情的记录",
+      "pinyin": "shǐ",
+      "example": "他很喜欢历史故事。"
+    },
+    "cn-09:倍": {
+      "meaning": "相同数量增加的份数",
+      "pinyin": "bèi",
+      "example": "四是二的两倍。"
+    },
+    "cn-09:几": {
+      "meaning": "",
+      "notes": "本课具体读音尚未完成纸本/原文核对，仅供词卡查看；不用于自动音义判题。"
+    },
+    "cn-09:持": {
+      "meaning": "拿着，或长久延续一种做法",
+      "pinyin": "chí",
+      "example": "他坚持每天读书。"
+    },
+    "cn-09:官": {
+      "meaning": "担任管理职务的人",
+      "pinyin": "guān",
+      "example": "故事里的官员帮助了大家。"
+    },
+    "cn-10:陌": {
+      "meaning": "不熟悉的",
+      "pinyin": "mò",
+      "example": "他来到一个陌生的地方。"
+    },
+    "cn-10:吗": {
+      "meaning": "",
+      "notes": "本课具体读音尚未完成纸本/原文核对，仅供词卡查看；不用于自动音义判题。"
+    },
+    "cn-10:讨": {
+      "meaning": "请求、索取，或谈论商议",
+      "pinyin": "tǎo",
+      "example": "我们一起讨论这个问题。"
+    },
+    "cn-10:厌": {
+      "meaning": "不喜欢、觉得烦",
+      "pinyin": "yàn",
+      "example": "他很讨厌乱丢垃圾。"
+    },
+    "cn-10:访": {
+      "meaning": "去看望或询问",
+      "pinyin": "fǎng",
+      "example": "我们访问了一位园丁。"
+    },
+    "cn-10:记": {
+      "meaning": "把事情保存下来、不忘掉",
+      "pinyin": "jì",
+      "example": "我记下了植物的变化。"
+    },
+    "cn-10:忍": {
+      "meaning": "控制情绪或承受困难",
+      "pinyin": "rěn",
+      "example": "他忍住了笑。"
+    },
+    "cn-10:委": {
+      "meaning": "本课用于表示受不公平待遇的词语中",
+      "pinyin": "wěi",
+      "example": "他把任务委托给同伴。"
+    },
+    "cn-10:屈": {
+      "meaning": "弯曲；也可表示受到不公平对待",
+      "pinyin": "qū",
+      "example": "他觉得自己受了委屈。"
+    },
+    "cn-10:中": {
+      "meaning": "",
+      "notes": "本课具体读音尚未完成纸本/原文核对，仅供词卡查看；不用于自动音义判题。"
+    },
+    "cn-10:弹": {
+      "meaning": "",
+      "notes": "本课具体读音尚未完成纸本/原文核对，仅供词卡查看；不用于自动音义判题。"
+    },
+    "cn-10:疯": {
+      "meaning": "失常或过度猛烈",
+      "pinyin": "fēng",
+      "example": "风在疯狂地吹动树枝。"
+    },
+    "cn-10:局": {
+      "meaning": "某种情势，或一场游戏",
+      "pinyin": "jú",
+      "example": "我们一起玩了一局棋。"
+    },
+    "cn-10:汪": {
+      "meaning": "形容狗叫的声音",
+      "pinyin": "wāng",
+      "example": "小狗汪汪地叫。"
+    },
+    "cn-10:搞": {
+      "meaning": "做、弄、开展某件事",
+      "pinyin": "gǎo",
+      "example": "我们要把问题搞清楚。"
+    },
+    "cn-13:宣": {
+      "meaning": "公开地说出来",
+      "pinyin": "xuān",
+      "example": "老师宣布了活动规则。"
+    },
+    "cn-13:处": {
+      "meaning": "",
+      "notes": "本课具体读音尚未完成纸本/原文核对，仅供词卡查看；不用于自动音义判题。"
+    },
+    "cn-13:恐": {
+      "meaning": "害怕、担心",
+      "pinyin": "kǒng",
+      "example": "黑暗让他有些恐惧。"
+    },
+    "cn-13:诱": {
+      "meaning": "引导、吸引或用某种办法使人去做",
+      "pinyin": "yòu",
+      "example": "食物的香气很诱人。"
+    },
+    "cn-13:毅": {
+      "meaning": "坚定，能坚持",
+      "pinyin": "yì",
+      "example": "困难中，他表现出毅力。"
+    },
+    "cn-13:强": {
+      "meaning": "",
+      "notes": "本课具体读音尚未完成纸本/原文核对，仅供词卡查看；不用于自动音义判题。"
+    },
+    "cn-13:纪": {
+      "meaning": "共同遵守的规定，也可记录事情",
+      "pinyin": "jì",
+      "example": "同学们遵守纪律。"
+    },
+    "cn-13:性": {
+      "meaning": "人或事物的特点",
+      "pinyin": "xìng",
+      "example": "小猫的性格很温和。"
+    },
+    "cn-13:渣": {
+      "meaning": "东西处理后剩下的碎屑",
+      "pinyin": "zhā",
+      "example": "盘子里剩下了一点面包渣。"
+    },
+    "cn-13:犯": {
+      "meaning": "违反或发生错误",
+      "pinyin": "fàn",
+      "example": "每个人都可能犯错误。"
+    },
+    "cn-13:禁": {
+      "meaning": "",
+      "notes": "本课具体读音尚未完成纸本/原文核对，仅供词卡查看；不用于自动音义判题。"
+    },
+    "cn-13:旧": {
+      "meaning": "用了很久或过去的",
+      "pinyin": "jiù",
+      "example": "旧书里夹着一张照片。"
+    },
+    "cn-13:聚": {
+      "meaning": "从各处来到一起",
+      "pinyin": "jù",
+      "example": "大家聚在一起商量办法。"
+    },
+    "cn-19:贸": {
+      "meaning": "与买卖、交换商品有关",
+      "pinyin": "mào",
+      "example": "港口的贸易很繁忙。"
+    },
+    "cn-19:愧": {
+      "meaning": "因为做得不好而感到不好意思",
+      "pinyin": "kuì",
+      "example": "他为自己的错误感到惭愧。"
+    },
+    "cn-19:仅": {
+      "meaning": "只有、不过",
+      "pinyin": "jǐn",
+      "example": "盒子里仅有一支笔。"
+    },
+    "cn-19:议": {
+      "meaning": "谈论、商量意见",
+      "pinyin": "yì",
+      "example": "我们提出了一个建议。"
+    },
+    "cn-19:政": {
+      "meaning": "国家等的治理事务",
+      "pinyin": "zhèng",
+      "example": "大家关心政府的工作。"
+    },
+    "cn-19:府": {
+      "meaning": "机关或住宅的名称中使用",
+      "pinyin": "fǔ",
+      "example": "居民向政府提出建议。"
+    },
+    "cn-19:赠": {
+      "meaning": "把东西送给别人",
+      "pinyin": "zèng",
+      "example": "他赠给朋友一本书。"
+    },
+    "cn-19:幻": {
+      "meaning": "不真实或不断变化的",
+      "pinyin": "huàn",
+      "example": "云的形状变幻不定。"
+    },
+    "cn-19:焰": {
+      "meaning": "火燃烧时发出的光和火苗",
+      "pinyin": "yàn",
+      "example": "明亮的火焰跳动着。"
+    },
+    "cn-19:澳": {
+      "meaning": "沿海可停船的水湾等",
+      "pinyin": "ào",
+      "example": "我们在地图上找到了澳门。"
+    },
+    "cn-19:扮": {
+      "meaning": "装饰自己或装作某个角色",
+      "pinyin": "bàn",
+      "example": "他装扮成故事里的人物。"
+    },
+    "cn-19:角": {
+      "meaning": "",
+      "notes": "本课具体读音尚未完成纸本/原文核对，仅供词卡查看；不用于自动音义判题。"
+    },
+    "cn-20:返": {
+      "meaning": "回来、回到原处",
+      "pinyin": "fǎn",
+      "example": "夕阳的光又返回树林。"
+    },
+    "cn-20:苔": {
+      "meaning": "通常在潮湿地方生长的低矮绿色植物",
+      "pinyin": "tái",
+      "example": "石头上长着青苔。"
+    },
+    "cn-20:亦": {
+      "meaning": "文言里表示“也”",
+      "pinyin": "yì",
+      "example": "雨天的景色亦很美。"
+    },
+    "cn-20:抹": {
+      "meaning": "涂上或擦",
+      "pinyin": "mǒ",
+      "example": "她把颜料轻轻抹开。"
+    },
+    "cn-20:宜": {
+      "meaning": "合适、适合",
+      "pinyin": "yí",
+      "example": "今天的天气宜于出游。"
+    },
+    "cn-20:望": {
+      "meaning": "向远处看，也可表示期盼",
+      "pinyin": "wàng",
+      "example": "我望着远处的青山。"
+    },
+    "cn-20:断": {
+      "meaning": "分开、隔绝，不再连接",
+      "pinyin": "duàn",
+      "example": "细绳断成了两截。"
+    },
+    "cn-20:楚": {
+      "meaning": "本课用于古诗里对一段长江的称呼",
+      "pinyin": "chǔ",
+      "example": "我们在诗中读到了楚江。"
+    },
+    "cn-20:至": {
+      "meaning": "到、到达",
+      "pinyin": "zhì",
+      "example": "旅行队从山脚至山顶。"
+    },
+    "cn-20:岸": {
+      "meaning": "水边较高的陆地",
+      "pinyin": "àn",
+      "example": "小船停在岸边。"
+    },
+    "cn-20:孤": {
+      "meaning": "单独的，没有伙伴的",
+      "pinyin": "gū",
+      "example": "远处出现了一只孤帆。"
+    },
+    "cn-20:饮": {
+      "meaning": "喝",
+      "pinyin": "yǐn",
+      "example": "我们在湖边饮茶。"
+    },
+    "cn-20:欲": {
+      "meaning": "想要、将要",
+      "pinyin": "yù",
+      "example": "乌云密布，天空似欲下雨。"
+    },
+    "cn-23:司": {
+      "meaning": "管理或掌管，也可用作姓氏",
+      "pinyin": "sī",
+      "example": "故事里的人物名叫司马光。"
+    },
+    "cn-23:皆": {
+      "meaning": "文言里表示“都”",
+      "pinyin": "jiē",
+      "example": "同学们皆已到齐。"
+    },
+    "cn-23:弃": {
+      "meaning": "放下不要、舍掉",
+      "pinyin": "qì",
+      "example": "他不愿放弃自己的目标。"
+    },
+    "cn-23:登": {
+      "meaning": "从低处到高处",
+      "pinyin": "dēng",
+      "example": "我们登上了小山。"
+    },
+    "cn-23:跌": {
+      "meaning": "失去平衡摔倒或往下落",
+      "pinyin": "diē",
+      "example": "他差点跌倒。"
+    },
+    "cn-23:持": {
+      "meaning": "拿着，或长久延续一种做法",
+      "pinyin": "chí",
+      "example": "他手里持着一根木棒。"
+    },
+    "cn-23:击": {
+      "meaning": "打、敲",
+      "pinyin": "jī",
+      "example": "雨点击打着窗户。"
+    },
+    "cn-26:瓷": {
+      "meaning": "用特定黏土烧成、较坚硬的材料",
+      "pinyin": "cí",
+      "example": "桌上摆着一个瓷碗。"
+    },
+    "cn-26:赵": {
+      "meaning": "一个姓氏",
+      "pinyin": "zhào",
+      "example": "赵老师走进教室。"
+    },
+    "cn-26:抗": {
+      "meaning": "抵挡、反对",
+      "pinyin": "kàng",
+      "example": "我们要抵抗疾病。"
+    },
+    "cn-26:束": {
+      "meaning": "捆在一起的一组东西",
+      "pinyin": "shù",
+      "example": "她手里拿着一束花。"
+    },
+    "cn-26:缸": {
+      "meaning": "装水等用的大容器",
+      "pinyin": "gāng",
+      "example": "院子里放着一个水缸。"
+    },
+    "cn-26:还": {
+      "meaning": "",
+      "notes": "本课具体读音尚未完成纸本/原文核对，仅供词卡查看；不用于自动音义判题。"
+    },
+    "cn-26:顿": {
+      "meaning": "暂停，或用于饭食的次数",
+      "pinyin": "dùn",
+      "example": "我们吃了一顿午饭。"
+    },
+    "cn-26:灶": {
+      "meaning": "用来烧火做饭的设备",
+      "pinyin": "zào",
+      "example": "爷爷把柴放进灶里。"
+    },
+    "cn-26:沾": {
+      "meaning": "东西附着上去",
+      "pinyin": "zhān",
+      "example": "他的衣角沾了泥。"
+    },
+    "cn-26:禁": {
+      "meaning": "",
+      "notes": "本课具体读音尚未完成纸本/原文核对，仅供词卡查看；不用于自动音义判题。"
+    },
+    "cn-26:锅": {
+      "meaning": "煮、炒食物等用的器具",
+      "pinyin": "guō",
+      "example": "锅里煮着汤。"
+    },
+    "cn-26:侦": {
+      "meaning": "暗中观察、查找情况",
+      "pinyin": "zhēn",
+      "example": "故事里的战士进行侦察。"
+    }
+  }
+}

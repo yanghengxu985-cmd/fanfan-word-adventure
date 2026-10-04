@@ -94,6 +94,7 @@ export default function App() {
   const [progress, setProgress] = useState<Progress>(() => progressStore.load());
   const [preferences, setPreferences] = useState(readPreferences);
   const [notice, setNotice] = useState('');
+  const [auxiliaryGameFocus, setAuxiliaryGameFocus] = useState(false);
   const segments = route.split('/').filter(Boolean);
   const page = segments[0] || 'home';
   const today = localDateKey();
@@ -102,6 +103,9 @@ export default function App() {
   const todayAttempts = progress.attempts.filter(item => item.localDate === today);
   const activeCourse = courses.find(course => course.id === preferences.courseId) || courses[0];
   const selectedCourse = courses.find(course => course.id === segments[1]);
+  const focusedGame = page === 'play' && selectedCourse
+    ? !!englishKind(selectedCourse.id, (segments[2] || 'meaning') as GameMode)
+    : (page === 'teacher' || page === 'review') && auxiliaryGameFocus;
 
   function savePreferences(next: typeof preferences) {
     setPreferences(next);
@@ -125,7 +129,7 @@ export default function App() {
     { path: '/review', key: 'review', icon: Backpack, label: '复习背包' },
   ];
   const activeKey = page === 'map' ? `map-${segments[1]}` : page;
-  return <div className="app-shell">
+  return <div className={`app-shell${focusedGame ? ' game-focus' : ''}${focusedGame && page === 'teacher' ? ' teacher-game-focus' : ''}`}>
     <a href="#main" className="skip-link" onClick={event => { event.preventDefault(); document.getElementById('main')?.focus(); }}>跳到内容</a>
     <aside className="sidebar">
       <a className="brand" href="#/" aria-label="字词冒险岛首页"><span className="brand-mark"><BookOpen size={24} strokeWidth={1.7} /></span><span>字词冒险岛<small>每次发现一点点</small></span></a>
@@ -161,8 +165,8 @@ export default function App() {
         {page === 'map' && <SemesterMap subject={segments[1] === 'english' ? 'english' : 'chinese'} progress={progress} />}
         {page === 'course' && selectedCourse && <CoursePage key={selectedCourse.id} course={selectedCourse} progress={progress} onSetCurrent={() => { savePreferences({ ...preferences, courseId: selectedCourse.id }); setNotice('已经设为今天的学习课。'); }} onNotice={setNotice} />}
         {page === 'play' && selectedCourse && <CourseRound key={route} course={selectedCourse} mode={modes.includes(segments[2] as GameMode) ? segments[2] as GameMode : 'meaning'} limit={preferences.limit} onAttempt={onAttempt} />}
-        {page === 'review' && <ReviewPage progress={progress} dueIds={dueIds} limit={preferences.limit} onAttempt={onAttempt} />}
-        {page === 'teacher' && <TeacherPage limit={preferences.limit} />}
+        {page === 'review' && <ReviewPage progress={progress} dueIds={dueIds} limit={preferences.limit} onAttempt={onAttempt} onGameFocus={setAuxiliaryGameFocus} />}
+        {page === 'teacher' && <TeacherPage limit={preferences.limit} onGameFocus={setAuxiliaryGameFocus} />}
         {page === 'parent' && <ParentPage progress={progress} preferences={preferences} onPreferences={savePreferences} onImport={saveProgress} onNotice={setNotice} />}
         {((page === 'course' || page === 'play') && !selectedCourse || !['home', 'map', 'course', 'play', 'review', 'teacher', 'parent'].includes(page)) && <EmptyState title="这条小路暂时没有找到" text="回到地图，重新选择一课吧。" action={<a className="primary" href="#/">返回小岛 <Home size={18} /></a>} />}
       </main>
@@ -260,9 +264,14 @@ function Round({ course, mode, limit, onAttempt, teacher = false, preferredIds, 
   </section>;
 }
 
-function ReviewPage({ progress, dueIds, limit, onAttempt }: { progress: Progress; dueIds: string[]; limit: number; onAttempt: (input: AttemptInput) => void }) {
+function ReviewPage({ progress, dueIds, limit, onAttempt, onGameFocus }: { progress: Progress; dueIds: string[]; limit: number; onAttempt: (input: AttemptInput) => void; onGameFocus: (focused: boolean) => void }) {
   const [playing, setPlaying] = useState(false);
   const [englishReview, setEnglishReview] = useState<{ courseId: string; kind: EnglishActivityKind; ids: string[] } | null>(null);
+  const focused = !!englishReview;
+  useEffect(() => {
+    onGameFocus(focused);
+    return () => onGameFocus(false);
+  }, [focused, onGameFocus]);
   const practicedIds = [...new Set(progress.attempts.map(item => item.lexemeId))];
   const [reviewSnapshot, setReviewSnapshot] = useState<{ ids: string[]; targets: { lexemeId: string; skill: Skill }[] }>({ ids: [], targets: [] });
   const targets = (dueIds.length ? getDueReviews(progress).filter(target => dueIds.includes(target.lexemeId))
@@ -296,13 +305,18 @@ function ReviewPage({ progress, dueIds, limit, onAttempt }: { progress: Progress
   </>;
 }
 
-function TeacherPage({ limit }: { limit: number }) {
+function TeacherPage({ limit, onGameFocus }: { limit: number; onGameFocus: (focused: boolean) => void }) {
   const [courseId, setCourseId] = useState('cn-01');
   const [mode, setMode] = useState<GameMode>('meaning');
   const [roundKey, setRoundKey] = useState(0);
   const course = courses.find(course => course.id === courseId)!;
   const items = getCourseLexemes(courseId);
   const availableModes = availableGameModes(courseId);
+  const focused = !!englishKind(courseId, mode);
+  useEffect(() => {
+    onGameFocus(focused);
+    return () => onGameFocus(false);
+  }, [focused, onGameFocus]);
   return <><div className="lesson-heading"><div><span className="eyebrow">A LITTLE WONDER FOR THE WHOLE CLASS</span><h1>把小岛，带进课堂。</h1><p>选一课，投屏提问。先思考，再一起揭晓。</p></div><Presentation className="page-emblem" size={58} strokeWidth={1.2} /></div>
     <section className="teacher-controls"><label>选择教材和课目<select value={courseId} onChange={event => { setCourseId(event.target.value); const first = availableGameModes(event.target.value)[0]; setMode(first || 'meaning'); setRoundKey(roundKey + 1); }}>{courses.map(course => <option value={course.id} key={course.id}>{course.subject === 'chinese' ? '语文' : '英语'} · {course.title}</option>)}</select></label><label>课堂玩法<select value={mode} onChange={event => { setMode(event.target.value as GameMode); setRoundKey(roundKey + 1); }}>{availableModes.map(mode => <option key={mode} value={mode}>{modeLabel(courseId, mode)}</option>)}</select></label><button className="secondary" onClick={() => setRoundKey(roundKey + 1)}><RotateCcw size={17} />换一组</button><button className="secondary" onClick={() => document.documentElement.requestFullscreen?.().catch(() => undefined)}><Maximize2 size={17} />全屏</button><button className="secondary" onClick={() => window.print()}><Printer size={17} />打印本课词单</button></section>
     <CourseRound key={`${courseId}-${mode}-${roundKey}`} course={course} mode={mode} limit={limit} teacher />

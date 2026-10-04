@@ -9,6 +9,7 @@ async (page) => {
   const base = initialUrl.href;
   const checks = [];
   const errors = [];
+  let failureRoute;
   const progressKey = 'fanfan-word-adventure:progress:v1';
   const preferencesKey = 'fanfan-word-adventure:preferences:v1';
   const originalStorage = await page.evaluate(({ progressKey, preferencesKey }) => ({
@@ -205,19 +206,26 @@ async (page) => {
           }
           const recorded = await attemptCount();
           await section().getByRole('button', { name: '轮到你开口', exact: true }).click();
-          assert(await section().getByText('这里不打分。', { exact: false }).count() > 0 && await attemptCount() === recorded,
+          const oralDialog = page.getByRole('dialog', { name: '轮到你当小伙伴', exact: true });
+          await oralDialog.waitFor();
+          assert(await oralDialog.getByText('这里不打分。', { exact: false }).count() > 0 && await attemptCount() === recorded,
             task.id + ' 可选口头练习不打分，也不写结果');
-          await listenFully(section().locator('.ea-model').getByRole('button', { name: '听示范', exact: true }));
+          await oralDialog.getByRole('button', { name: '回到题目', exact: true }).click();
+          await section().getByRole('button', { name: '看看示范', exact: true }).click();
+          const modelDialog = page.getByRole('dialog', { name: '小伙伴的示范', exact: true });
+          await modelDialog.waitFor();
+          await listenFully(modelDialog.getByRole('button', { name: '听示范', exact: true }));
           assert(await attemptCount() === recorded, task.id + ' 听完示范不额外记录');
           if (task.dialogueAudioId) {
-            const dialogueButton = section().getByRole('button', { name: '听完整对话', exact: true });
+            const dialogueButton = modelDialog.getByRole('button', { name: '听完整对话', exact: true });
             await listenFully(dialogueButton);
             assert(await attemptCount() === recorded, task.id + ' 完整对话真实播完且不额外计分');
           }
+          await modelDialog.getByRole('button', { name: '回到题目', exact: true }).click();
           if (/en02-listen-(my|your)$/.test(task.id)) {
             await page.screenshot({ path: 'output/playwright/audio/' + task.id + '.png', fullPage: true });
           }
-          const nextPlaying = await play(section().locator('.ea-model').getByRole('button', { name: '听示范', exact: true }));
+          const nextPlaying = await play(promptButton());
           await nextButton().click();
           await page.waitForFunction(id => document.querySelector('.english-adventure[data-activity-id]')?.getAttribute('data-activity-id') !== id, task.id);
           assert((await audioState(nextPlaying)).paused, task.id + ' 换题或完成一轮立即停止上一段录音');
@@ -241,14 +249,16 @@ async (page) => {
     const beforeAbort = await attemptCount();
     let aborted = 0;
     const failAudio = async route => { aborted++; await route.abort('failed'); };
+    failureRoute = { url: abortUrl, handler: failAudio };
     await page.route(abortUrl, failAudio);
     const failedIndex = await audioCount();
     await promptButton().click();
     await page.waitForFunction(index => window.__qaActivityAudios[index]?.__qaActivityEvents.includes('error'), failedIndex, { timeout: 20000 });
-    await section().getByText('声音暂时没加载出来，请再点一次。', { exact: true }).waitFor();
+    await section().locator('.ea-action-dock').getByText('声音暂时没加载出来，请再点一次。', { exact: true }).waitFor();
     assert(aborted > 0 && await disabledChoices() && await attemptCount() === beforeAbort,
       '真实提示音频请求中断不记答错，选项保持锁定并提示重试');
     await page.unroute(abortUrl, failAudio);
+    failureRoute = undefined;
     await listenFully(promptButton());
     await page.waitForFunction(() => [...document.querySelectorAll('.english-adventure .ea-pick')].every(button => !button.disabled));
     const recoveredIds = await availableChoiceIds();
@@ -268,7 +278,11 @@ async (page) => {
       const ids = await availableChoiceIds();
       await pickChoice(ids.find(id => task.acceptedChoiceIds.includes(id))).click();
       await feedback().waitFor();
-      const index = await play(section().locator('.ea-model').getByRole('button', { name: '听示范', exact: true }));
+      await section().getByRole('button', { name: '看看示范', exact: true }).click();
+      const modelDialog = page.getByRole('dialog', { name: '小伙伴的示范', exact: true });
+      await listenFully(modelDialog.getByRole('button', { name: '听示范', exact: true }));
+      await modelDialog.getByRole('button', { name: '回到题目', exact: true }).click();
+      const index = await play(promptButton());
       await nextButton().click();
       assert((await audioState(index)).paused && JSON.stringify(await progress()) === beforeTeacher,
         '老师的 ' + mode + ' 演示播放、选择、换题都不写个人学习记录');
@@ -322,6 +336,7 @@ async (page) => {
     assert(errors.length === 0, '全部情景、听力、老师、复习流程没有 pageerror');
     return { base, checks, errors, activitiesCovered: visited.size, activityAudioEntries: Object.keys(manifest.entries).length };
   } finally {
+    if (failureRoute) await page.unroute(failureRoute.url, failureRoute.handler);
     await page.evaluate(({ progressKey, preferencesKey, originalStorage }) => {
       for (const [key, value] of [[progressKey, originalStorage.progress], [preferencesKey, originalStorage.preferences]]) {
         if (value === null) localStorage.removeItem(key);

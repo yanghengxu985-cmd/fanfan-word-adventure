@@ -1,17 +1,19 @@
 import { useEffect, useId, useState, type ReactNode } from 'react';
 import type { SemanticSceneProps } from './ChineseSemanticScene';
 import type { PolishedFrame } from './polishedSceneTypes';
+import { ProgressiveSvgImage, useSceneImageSource } from '../SceneImageFrame';
+import { getAtlasImageDelivery } from '../../lib/imageDelivery';
 
-export function PolishedAtlasImage({ frame, onError }: { frame: PolishedFrame; onError?: () => void }) {
+export function PolishedAtlasImage({ frame }: { frame: PolishedFrame; onError?: () => void }) {
   const column = frame.index % frame.columns;
   const row = Math.floor(frame.index / frame.columns);
-  const base = import.meta.env?.BASE_URL ?? '/';
-  const source = `${base}${frame.file}`;
+  const delivery = getAtlasImageDelivery(frame.file, frame.index);
   return <svg width="900" height="600"
     viewBox={`${column * 900 + 3} ${row * 600 + 3} 894 594`}
     preserveAspectRatio="xMidYMid slice" data-frame-file={frame.file} data-frame-index={frame.index}>
-    <image href={source} width={frame.columns * 900} height={frame.rows * 600}
-      preserveAspectRatio="none" onError={onError} />
+    <ProgressiveSvgImage source={delivery.source} x={delivery.split ? column * 900 : 0} y={delivery.split ? row * 600 : 0}
+      width={delivery.split ? 900 : frame.columns * 900} height={delivery.split ? 600 : frame.rows * 600}
+      preserveAspectRatio="none" />
   </svg>;
 }
 
@@ -48,7 +50,7 @@ function useReducedMotion() {
   return reduced;
 }
 
-function StaticSequence({ frames, onError }: {frames:PolishedFrame[];onError:(file:string)=>void}) {
+function StaticSequence({ frames }: {frames:PolishedFrame[]}) {
   const clipPrefix=useId();
   const columns=2;
   const rows=Math.ceil(frames.length/columns);
@@ -60,7 +62,7 @@ function StaticSequence({ frames, onError }: {frames:PolishedFrame[];onError:(fi
       <Objects objects={frame.objects}>
         <svg width={width-6} height={height-36} viewBox={`${crop.x} ${crop.y} ${crop.width} ${crop.height}`} preserveAspectRatio="xMidYMid meet">
           <defs><clipPath id={clipId}><rect x={crop.x} y={crop.y} width={crop.width} height={crop.height} /></clipPath></defs>
-          <g clipPath={`url(#${clipId})`}><PolishedAtlasImage frame={frame} onError={()=>onError(frame.file)} /></g>
+          <g clipPath={`url(#${clipId})`}><PolishedAtlasImage frame={frame} /></g>
         </svg>
       </Objects>
       <text x="12" y={height-12} fontSize="18" fill="#355735">{index+1}. {frame.caption.split(/[：，；]/)[0]}</text>
@@ -69,16 +71,16 @@ function StaticSequence({ frames, onError }: {frames:PolishedFrame[];onError:(fi
 }
 
 /** Draw a single complete painted scene, with existing controls selecting its state. */
-export default function ChinesePolishedScene({ frame, fallback, ...props }: SemanticSceneProps & { frame: PolishedFrame; fallback: ReactNode }) {
+export default function ChinesePolishedScene({ frame, fallback: _fallback, ...props }: SemanticSceneProps & { frame: PolishedFrame; fallback: ReactNode }) {
   const reducedMotion = useReducedMotion();
   const sequence = frame.sequence;
   const identity = `${props.courseId}:${props.variant ?? ''}:${props.sceneKey ?? props.step}:${frame.file}:${frame.index}`;
   const [position, setPosition] = useState({ identity, index: 0 });
-  const [failedSource, setFailedSource] = useState<string>();
   const index = position.identity === identity ? position.index : 0;
   const active = sequence?.frames[index] ?? frame;
+  const { status: imageStatus } = useSceneImageSource(getAtlasImageDelivery(active.file, active.index).source);
   useEffect(() => {
-    if (!sequence || props.paused || reducedMotion) return;
+    if (!sequence || props.paused || reducedMotion || imageStatus !== 'ready') return;
     const count = sequence.frames.length;
     const timer = window.setInterval(() => {
       setPosition(current => {
@@ -88,9 +90,8 @@ export default function ChinesePolishedScene({ frame, fallback, ...props }: Sema
       });
     }, Math.max(300, sequence.frameDurationMs));
     return () => window.clearInterval(timer);
-  }, [identity, Boolean(sequence), sequence?.frames.length, sequence?.frameDurationMs, props.paused, reducedMotion]);
+  }, [identity, Boolean(sequence), sequence?.frames.length, sequence?.frameDurationMs, props.paused, reducedMotion, imageStatus]);
   const staticFrames=reducedMotion?sequence?.frames:undefined;
-  if (failedSource === active.file || staticFrames?.some(frame=>frame.file===failedSource)) return fallback;
   const crop = active.crop ?? { x: 0, y: 0, width: 900, height: 600 };
   const caption=staticFrames?staticFrames.map(frame=>frame.caption).join('；'):active.caption;
   return <svg className="chinese-painted-scene chinese-polished-scene" viewBox="0 0 900 600"
@@ -101,9 +102,9 @@ export default function ChinesePolishedScene({ frame, fallback, ...props }: Sema
     data-observer-position={props.courseId === 'cn-20' && props.variant === 'wangtianmenshan' ? props.parameter : undefined}
     data-paused={props.paused || reducedMotion || undefined}>
     <title>{caption}</title>
-    {staticFrames ? <StaticSequence frames={staticFrames} onError={setFailedSource} /> : <Objects objects={active.objects}>
+    {staticFrames ? <StaticSequence frames={staticFrames} /> : <Objects objects={active.objects}>
       <svg width="900" height="600" viewBox={`${crop.x} ${crop.y} ${crop.width} ${crop.height}`} preserveAspectRatio="xMidYMid slice">
-        <PolishedAtlasImage frame={active} onError={() => setFailedSource(active.file)} />
+        <PolishedAtlasImage frame={active} />
       </svg>
     </Objects>}
     <SoundSourceMarks courseId={props.courseId} frame={active} gains={props.gains} />

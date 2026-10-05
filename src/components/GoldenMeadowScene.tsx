@@ -1,5 +1,6 @@
 import { memo, useId, type CSSProperties } from 'react'
 import { clampGoldenMeadowOpenness, getGoldenMeadowFrame } from '../lib/goldenMeadowMotion'
+import { ProgressiveImage, SceneImageFrame, useSceneImageSource } from './SceneImageFrame'
 import './goldenMeadowScene.css'
 
 export type GoldenMeadowSceneProps = {
@@ -12,8 +13,6 @@ export type GoldenMeadowSceneProps = {
 
 type MeadowStyle = CSSProperties & Record<`--gm-${string}`, string | number>
 type PlantPosition = { x: number; y: number; size: number; angle?: number; flipped?: boolean }
-const imageBase = new URL(`${import.meta.env.BASE_URL}images/golden-meadow/`, document.baseURI).href
-const polishedImageBase = new URL(`${import.meta.env.BASE_URL}images/chinese-polished/`, document.baseURI).href
 
 // Root positions and sizes are percentages of the un-cropped 3:2 scene.
 // All five poses share the cell's (50%, 92%) root anchor, so leaf/stem placement
@@ -54,6 +53,28 @@ const Dandelion = memo(function Dandelion({ position, className = '' }: { positi
   )
 })
 
+/** Keep sprite placement unchanged while the frame tracks its shared image load. */
+function MeadowPlants({ examined, displayedOpenness, flowerState }: { examined: boolean; displayedOpenness: number; flowerState: string }) {
+  const flower = useSceneImageSource('images/chinese-polished/cn-15-flower-states-v3.webp')
+  const imageStyle: MeadowStyle = { '--gm-flower-image': `url("${flower.src}")` }
+  return examined ? (
+    <div className="gm-scene__specimen" style={imageStyle}>
+      <Dandelion className="gm-scene__plant--specimen" />
+    </div>
+  ) : (
+    <>
+      <div className="gm-scene__field" style={imageStyle} aria-hidden="true">
+        {fieldPlants.map((position, index) => <Dandelion key={index} position={position} />)}
+      </div>
+      <div className="gm-scene__detail" style={imageStyle} aria-label={`同一时刻的花朵近看：${flowerState}`}>
+        <span className="gm-scene__detail-title">近看这一朵</span>
+        <Dandelion className="gm-scene__plant--detail" />
+        <span className="gm-scene__detail-state">{displayedOpenness >= 0.5 ? '黄色花瓣显露' : '花瓣被包住'}</span>
+      </div>
+    </>
+  )
+}
+
 export default function GoldenMeadowScene({ mode, progress, openness, reducedMotion = false }: GoldenMeadowSceneProps) {
   const uid = useId()
   const frame = getGoldenMeadowFrame(progress)
@@ -66,7 +87,6 @@ export default function GoldenMeadowScene({ mode, progress, openness, reducedMot
   const pose = Math.round(displayedOpenness * 4)
   const sceneStyle: MeadowStyle = {
     '--gm-openness': displayedOpenness,
-    '--gm-flower-image': `url("${polishedImageBase}cn-15-flower-states-v3.webp")`,
     '--gm-flower-x': `${(pose % 2) * 100}%`,
     '--gm-flower-y': `${Math.floor(pose / 2) * 50}%`,
     // Keep the full-open crown intact while excluding neighbouring leaf tips
@@ -79,7 +99,7 @@ export default function GoldenMeadowScene({ mode, progress, openness, reducedMot
   const caption = examined ? `近看同一朵花 · ${flowerState}` : frame.caption
 
   return (
-    <figure
+    <SceneImageFrame as="figure"
       className={`gm-scene gm-scene--${mode}`}
       style={sceneStyle}
       data-period={frame.period}
@@ -88,34 +108,19 @@ export default function GoldenMeadowScene({ mode, progress, openness, reducedMot
       data-reduced-motion={reducedMotion ? 'true' : 'false'}
       aria-labelledby={`${uid}-caption`}
     >
-      <img
+      <ProgressiveImage
         className="gm-scene__landscape"
-        src={`${imageBase}meadow-landscape-v1.png`}
+        source="images/golden-meadow/meadow-landscape-v1.png"
         alt="一片自然草地伸向远处的低丘和树篱。"
         draggable={false}
       />
       {!examined && <div className="gm-scene__daylight" aria-hidden="true" />}
-      {examined ? (
-        <div className="gm-scene__specimen">
-          <Dandelion className="gm-scene__plant--specimen" />
-        </div>
-      ) : (
-        <>
-          <div className="gm-scene__field" aria-hidden="true">
-            {fieldPlants.map((position, index) => <Dandelion key={index} position={position} />)}
-          </div>
-          <div className="gm-scene__detail" aria-label={`同一时刻的花朵近看：${flowerState}`}>
-            <span className="gm-scene__detail-title">近看这一朵</span>
-            <Dandelion className="gm-scene__plant--detail" />
-            <span className="gm-scene__detail-state">{displayedOpenness >= 0.5 ? '黄色花瓣显露' : '花瓣被包住'}</span>
-          </div>
-        </>
-      )}
+      <MeadowPlants examined={examined} displayedOpenness={displayedOpenness} flowerState={flowerState} />
       <figcaption id={`${uid}-caption`} className="gm-scene__caption">
         <span className="gm-scene__caption-rule" aria-hidden="true" />
         <span>{caption}</span>
       </figcaption>
       <span className="gm-scene__sr-only">这是课文中的时段变化示意，演示进度不是实际钟点。同一株蒲公英保持叶茎，黄色花朵展开或合拢。</span>
-    </figure>
+    </SceneImageFrame>
   )
 }

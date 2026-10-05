@@ -6,6 +6,7 @@ import {
   KINGFISHER_WATER_ANCHOR,
   type KingfisherPose,
 } from '../lib/kingfisherMotion'
+import { ProgressiveImage, SceneImageFrame, useSceneImageSource } from './SceneImageFrame'
 import './KingfisherScene.css'
 
 export type KingfisherPart = 'feathers' | 'wings' | 'beak'
@@ -19,9 +20,6 @@ export type KingfisherSceneProps = {
 }
 
 type SceneStyle = CSSProperties & Record<`--kf-${string}`, string | number>
-// CSS consumes these variables from a stylesheet in assets/. Resolve the
-// public asset URLs against the document first so Pages subpaths remain valid.
-const imageBase = new URL(`${import.meta.env.BASE_URL}images/kingfisher/`, document.baseURI).href
 
 const smooth = (value: number) => {
   const t = Math.min(1, Math.max(0, value))
@@ -65,6 +63,53 @@ function rippleAt(progress: number, start: number, index: number) {
   }
 }
 
+/** Register sprite loading inside the scene frame without adding layout wrappers. */
+function KingfisherBird({ pose, wingDown, interactive, selectedPart, onSelectPart }: {
+  pose: KingfisherPose
+  wingDown: boolean
+  interactive: boolean
+  selectedPart: KingfisherPart | null
+  onSelectPart?: (part: KingfisherPart) => void
+}) {
+  const atlas = useSceneImageSource('images/kingfisher/kingfisher-poses-v2.png')
+  const flightDown = useSceneImageSource('images/kingfisher/kingfisher-flight-down-v2.png')
+  const imageStyle: SceneStyle = {
+    '--kf-atlas-image': `url("${atlas.src}")`,
+    '--kf-flight-down-image': `url("${flightDown.src}")`,
+  }
+  return <>
+    <div className="kf-scene__bird-anchor" style={imageStyle}>
+      <div className="kf-scene__bird" aria-hidden="true">
+        <div className={`kf-scene__pose${wingDown ? ' kf-scene__pose--wing-down' : ''}`}
+          data-pose={pose} data-wing={wingDown ? 'down' : 'up'}
+          style={wingDown ? undefined : { backgroundPosition: `${(pose % 3) * 50}% ${pose < 3 ? 0 : 100}%` }} />
+      </div>
+      {interactive && (
+        <div className="kf-scene__parts" role="group" aria-label="选择要观察的翠鸟部位">
+          {partDetails.map(part => (
+            <button
+              key={part.id}
+              type="button"
+              className={`kf-scene__part kf-scene__part--${part.id}`}
+              style={{ left: `${part.x}%`, top: `${part.y}%` }}
+              aria-label={`观察${part.detail}`}
+              aria-pressed={selectedPart === part.id}
+              onClick={() => onSelectPart?.(part.id)}
+            >
+              <span className="kf-scene__part-dot" aria-hidden="true" />
+              <span className="kf-scene__part-label">{part.label}</span>
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+    {!interactive && pose >= 2 && pose <= 4 && <div className={`kf-scene__beak-detail${pose === 2 ? ' kf-scene__beak-detail--flight' : ''}`} style={imageStyle} aria-label={pose === 4 ? '近看鱼头朝向长嘴，准备吞下' : '近看长嘴衔着鱼'}>
+      <span>{pose === 4 ? '吞下' : '衔住 · 部位近看'}</span>
+      <div className="kf-scene__beak-picture"><div className="kf-scene__pose" style={{backgroundPosition:`${pose === 4 ? 50 : 0}% 100%`}} /></div>
+    </div>}
+  </>
+}
+
 /** The bird and river are generated raster assets; only controls and ripples are HTML/CSS. */
 export default function KingfisherScene({
   mode,
@@ -91,23 +136,21 @@ export default function KingfisherScene({
     '--kf-bird-facing': observed ? 1 : facingAt(motionT),
     '--kf-water-x': `${KINGFISHER_WATER_ANCHOR.x}%`,
     '--kf-water-y': `${KINGFISHER_WATER_ANCHOR.y}%`,
-    '--kf-atlas-image': `url("${imageBase}kingfisher-poses-v2.png")`,
-    '--kf-flight-down-image': `url("${imageBase}kingfisher-flight-down-v2.png")`,
   }
   const sceneLabel = observed
     ? `观察翠鸟的翠绿色羽毛、蓝色翅膀和红色长嘴。${interactive ? '点击画中的部位。' : ''}`
     : `翠鸟捕鱼演示，${getKingfisherFrame(t).phase}。`
 
   return (
-    <figure
+    <SceneImageFrame as="figure"
       className={`kf-scene kf-scene--${mode}`}
       style={sceneStyle}
       data-reduced-motion={reducedMotion ? 'true' : 'false'}
       aria-labelledby={`${uid}-caption`}
     >
-      <img
+      <ProgressiveImage
         className="kf-scene__landscape"
-        src={`${imageBase}river-scene-v2.png`}
+        source="images/kingfisher/river-scene-v2.png"
         alt="江面上停着一只木船，船头伸向水面，远处山岸安静朦胧。"
         draggable={false}
       />
@@ -124,42 +167,13 @@ export default function KingfisherScene({
         </div>
       )}
 
-      <div className="kf-scene__bird-anchor">
-        <div className="kf-scene__bird" aria-hidden="true">
-          <div className={`kf-scene__pose${wingDown ? ' kf-scene__pose--wing-down' : ''}`}
-            data-pose={pose} data-wing={wingDown ? 'down' : 'up'}
-            style={wingDown ? undefined : { backgroundPosition: `${(pose % 3) * 50}% ${pose < 3 ? 0 : 100}%` }} />
-        </div>
-        {interactive && (
-          <div className="kf-scene__parts" role="group" aria-label="选择要观察的翠鸟部位">
-            {partDetails.map(part => (
-              <button
-                key={part.id}
-                type="button"
-                className={`kf-scene__part kf-scene__part--${part.id}`}
-                style={{ left: `${part.x}%`, top: `${part.y}%` }}
-                aria-label={`观察${part.detail}`}
-                aria-pressed={selectedPart === part.id}
-                onClick={() => onSelectPart?.(part.id)}
-              >
-                <span className="kf-scene__part-dot" aria-hidden="true" />
-                <span className="kf-scene__part-label">{part.label}</span>
-              </button>
-            ))}
-          </div>
-        )}
-      </div>
-
-      {!observed && pose >= 2 && pose <= 4 && <div className={`kf-scene__beak-detail${pose === 2 ? ' kf-scene__beak-detail--flight' : ''}`} aria-label={pose === 4 ? '近看鱼头朝向长嘴，准备吞下' : '近看长嘴衔着鱼'}>
-        <span>{pose === 4 ? '吞下' : '衔住 · 部位近看'}</span>
-        <div className="kf-scene__beak-picture"><div className="kf-scene__pose" style={{backgroundPosition:`${pose === 4 ? 50 : 0}% 100%`}} /></div>
-      </div>}
+      <KingfisherBird pose={pose} wingDown={wingDown} interactive={interactive} selectedPart={selectedPart} onSelectPart={onSelectPart} />
 
       <figcaption id={`${uid}-caption`} className="kf-scene__caption">
         <span className="kf-scene__caption-rule" aria-hidden="true" />
         <span>{observed ? (interactive ? '近看翠鸟 · 点击羽毛、翅膀或长嘴' : '近看翠鸟的外形') : getKingfisherFrame(t).phase}</span>
       </figcaption>
       <span className="kf-scene__sr-only">{sceneLabel}</span>
-    </figure>
+    </SceneImageFrame>
   )
 }

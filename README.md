@@ -4,6 +4,8 @@
 
 2026-10-05：完成26课阅读画面的逐状态整改，后续故事、景物与操作选项接入精细场景；补齐翠鸟衔鱼、蒲公英半开、司马光退水离瓮等细节。见 [逐课整改对照](docs/CHINESE_VISUAL_REFINEMENT_2026-10-05.md)、[状态核验记录](docs/CHINESE_VISUAL_VERIFICATION_2026-10-05.json) 和 [素材来源与哈希](docs/CHINESE_SCENE_ASSETS_V3.json)。
 
+同日优化网页图片交付：保留原画，生成压缩副本与124张独立情境图格；先显示小预览，清晰图准备好后替换，并提供加载提示与失败重试。第一课初始画面的图片请求从约2.3MB降至约156KB。继续使用GitHub Pages，详见 [交付体积、画质与验收](docs/CHINESE_IMAGE_DELIVERY.md)。
+
 ## 立即体验
 
 在线地址：[字词冒险岛](https://yanghengxu985-cmd.github.io/fanfan-word-adventure/)。更新 `main` 会自动测试、构建并发布。

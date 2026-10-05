@@ -1,3 +1,4 @@
+import { ProgressiveSvgImage } from '../SceneImageFrame';
 import { useId, type CSSProperties, type ReactNode } from 'react';
 import './chineseNatureScenes.css';
 
@@ -39,7 +40,7 @@ function Definitions({ id }: { id: string }) {
 }
 
 function ImageBackground({ courseId, opacity = 1 }: { courseId: string; opacity?: number }) {
-  return <image data-scene-object="context-background" href={photo(courseId)} x="0" y="0" width="900" height="600" opacity={opacity} preserveAspectRatio="xMidYMid slice" />;
+  return <ProgressiveSvgImage data-scene-object="context-background" source={photo(courseId)} x="0" y="0" width="900" height="600" opacity={opacity} preserveAspectRatio="xMidYMid slice" />;
 }
 
 function LeafShape({ id, kind = 'oval', x = 0, y = 0, size = 1, angle = 0, colour = 'green', className = '', object }: {
@@ -173,7 +174,7 @@ function Campus({ id, step, sceneKey }: { id: string; step: number; sceneKey?: s
   if (phase === 1) return <>
     <rect width="900" height="600" fill="#ede4cf" />
     <path d="M0 490H580V600H0Z" fill="#a29577" /><path d="M0 540H580M90 490l-24 110m141-110-4 110m112-110 17 110m103-110 30 110" stroke="#8b8069" opacity=".5" />
-    <svg x="589" y="80" width="267" height="405" viewBox="0 0 267 405"><image href={photo('cn-01')} width="1500" height="1000" preserveAspectRatio="xMinYMin slice" /></svg>
+    <svg x="589" y="80" width="267" height="405" viewBox="0 0 267 405"><ProgressiveSvgImage source={photo('cn-01')} width="1500" height="1000" preserveAspectRatio="xMinYMin slice" /></svg>
     <g data-scene-object="classroom-window"><rect x="588" y="80" width="267" height="405" rx="3" fill="none" stroke="#ded4b9" strokeWidth="24" /><path d="M722 84V489M592 273H851" stroke="#baaa87" strokeWidth="9" /><path d="M854 87h24v407h-24" fill="#a79672" /><path d="M589 489h289v18H581Z" fill="#dacbb0" /></g>
     <path d="M28 50H538V218H28Z" fill="#305951" stroke="#8a795b" strokeWidth="9" /><path d="M85 86h165m-165 18h157m-149 30h265m-267 18h243m-212 28h255" stroke="#cdd8b8" strokeWidth="3" opacity=".6" />
     <g data-scene-object="reading-children">{[154,325,485].map((x,i) => <g key={x}><Child x={x} y={401+i%2*40} size={1.1} pose="read" colour={['#a87757','#6b8977','#a59b63'][i]} skirt={i===1} /><path d={`M${x-71} ${431+i%2*40}h142v15H${x-71}m12 15v95m116-95v95`} fill="#b19b75" stroke="#776e56" strokeWidth="2" /><path d={`M${x-53} ${446+i%2*40}h107`} stroke="#d2bf96" strokeWidth="2" /></g>)}</g>

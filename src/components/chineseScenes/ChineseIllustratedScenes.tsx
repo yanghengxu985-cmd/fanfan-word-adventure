@@ -1,18 +1,22 @@
 import { useState, type ReactNode } from 'react';
 import type { SemanticSceneProps } from './ChineseSemanticScene';
+import { ProgressiveSvgImage } from '../SceneImageFrame';
+import { getAtlasImageDelivery } from '../../lib/imageDelivery';
 
 function Frame({ courseId, index, x = 0, y = 0, width = 900, height = 600 }: {
   courseId: string; index: number; x?: number; y?: number; width?: number; height?: number;
 }) {
-  if (courseId === 'cn-05') return <image href={`${import.meta.env?.BASE_URL ?? '/'}images/chinese-scenes/cn-05-footsteps.webp`} width="900" height="600" />;
+  if (courseId === 'cn-05') return <ProgressiveSvgImage source="images/chinese-scenes/cn-05-footsteps.webp" width="900" height="600" />;
   const context = courseId === 'cn-23' && index >= 6;
   const frame = context ? index === 6 ? 0 : 2 : index;
   const rows = courseId === 'cn-23' && !context ? 3 : 2;
-  const source = `${import.meta.env?.BASE_URL ?? '/'}images/chinese-scenes/${courseId}-${context ? 'context' : 'atlas'}.webp`;
+  const source = `images/chinese-scenes/${courseId}-${context ? 'context' : 'atlas'}.webp`;
+  const delivery = getAtlasImageDelivery(source, frame);
   // The grid is a source texture, not an on-screen comic. Display one selected frame.
   return <svg x={x} y={y} width={width} height={height}
     viewBox={`${frame % 2 * 900 + 1} ${Math.floor(frame / 2) * 600 + 1} 898 598`} preserveAspectRatio="xMidYMid slice">
-    <image href={source} width="1800" height={rows * 600} preserveAspectRatio="none" />
+    <ProgressiveSvgImage source={delivery.source} x={delivery.split ? frame % 2 * 900 : 0} y={delivery.split ? Math.floor(frame / 2) * 600 : 0}
+      width={delivery.split ? 900 : 1800} height={delivery.split ? 600 : rows * 600} preserveAspectRatio="none" />
   </svg>;
 }
 

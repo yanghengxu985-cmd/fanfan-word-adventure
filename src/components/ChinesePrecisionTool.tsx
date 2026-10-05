@@ -10,25 +10,22 @@ import {
 import ChineseLessonArt from './ChineseLessonArt';
 import ChineseSemanticScene, { supportsSemanticScene, type SemanticSceneProps } from './chineseScenes/ChineseSemanticScene';
 import { getPolishedFrame } from './chineseScenes/polishedFrames';
+import { ProgressiveImage, SceneImageFrame } from './SceneImageFrame';
+import { hasImageDelivery } from '../lib/imageDelivery';
 import './chinesePrecisionTool.css';
-
-// Vite tracks files as they arrive during authoring; absent assets use the existing illustration.
-const bitmaps = import.meta.glob('/public/images/chinese-precision/*.webp', { eager: true, query: '?url', import: 'default' });
 
 export function PrecisionIllustration({ courseId, step = 0, variant, overview = false, sceneKey, parameter, gains, paused }: Omit<SemanticSceneProps, 'step'> & {
   step?: number; overview?: boolean;
 }) {
   const name = variant || courseId;
-  const [failed, setFailed] = useState(false);
-  useEffect(() => { setFailed(false); }, [name]);
-  const available = Object.hasOwn(bitmaps, `/public/images/chinese-precision/${name}.webp`);
+  const available = hasImageDelivery(`images/chinese-precision/${name}.webp`);
   const polished = !overview && getPolishedFrame({ courseId, step, variant, sceneKey, parameter, gains, paused });
   const semantic = supportsSemanticScene(courseId) && !overview && (Boolean(polished) || Boolean(sceneKey) || step > 0 || courseId === 'cn-18' || courseId === 'cn-22' || courseId === 'cn-23');
-  const bitmap = available && !failed && !semantic;
+  const bitmap = available && !semantic;
   const base = new URL(`${import.meta.env.BASE_URL}images/chinese-precision/`, document.baseURI).href;
-  return <div className="cpt-illustration" data-art-source={polished ? 'polished-scene' : semantic ? 'semantic-scene' : bitmap ? 'bitmap' : 'existing-scene'}>
-    {semantic ? <ChineseSemanticScene courseId={courseId} step={step} variant={variant} sceneKey={sceneKey} parameter={parameter} gains={gains} paused={paused} /> : bitmap ? <img src={`${base}${name}.webp`} alt="本课阅读情境示意，文字内容请对照课本" onError={() => setFailed(true)} /> : <ChineseLessonArt courseId={courseId} step={step} variant={variant} />}
-  </div>;
+  return <SceneImageFrame className="cpt-illustration" data-art-source={polished ? 'polished-scene' : semantic ? 'semantic-scene' : bitmap ? 'bitmap' : 'existing-scene'}>
+    {semantic ? <ChineseSemanticScene courseId={courseId} step={step} variant={variant} sceneKey={sceneKey} parameter={parameter} gains={gains} paused={paused} /> : bitmap ? <ProgressiveImage source={`${base}${name}.webp`} alt="本课阅读情境示意，文字内容请对照课本" /> : <ChineseLessonArt courseId={courseId} step={step} variant={variant} />}
+  </SceneImageFrame>;
 }
 
 type Props = { courseId: string; tool: PrecisionTool; state: PrecisionToolState; onChange: (next: PrecisionToolState) => void; onBeforeAudio?: () => void; stopSignal?: number; paused?: boolean };

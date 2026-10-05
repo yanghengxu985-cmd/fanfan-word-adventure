@@ -1,3 +1,4 @@
+import { ProgressiveSvgImage } from '../SceneImageFrame';
 import { useId, type CSSProperties, type ReactNode } from 'react';
 import './chineseStoryScenes.css';
 
@@ -436,7 +437,7 @@ export default function ChineseStoryScenes({ courseId, step, sceneKey, parameter
     <title id={`${uid}-title`}>{titles[courseId]}</title><desc id={`${uid}-description`}>原创教学观察示意。当前对象和动作：{key}。现代课文须配合纸本，图景不代替原文依据。</desc>
     <defs><linearGradient id={`${uid}-paper`} x1="0" y1="0" x2="1" y2="1"><stop stopColor="#fffaeb" /><stop offset="1" stopColor="#e8e9d4" /></linearGradient><filter id={`${uid}-shadow`} x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="2.5" floodColor="#6b5b3b" floodOpacity=".12" /></filter></defs>
     <rect width="900" height="600" rx="26" fill={`url(#${uid}-paper)`} />
-    <image href={`${imageBase}${courseId}.webp`} x="0" y="0" width="900" height="600" preserveAspectRatio="xMidYMid slice" opacity=".12" aria-hidden="true" />
+    <ProgressiveSvgImage source={`${imageBase}${courseId}.webp`} x="0" y="0" width="900" height="600" preserveAspectRatio="xMidYMid slice" opacity=".12" aria-hidden="true" />
     <path d="M28 87H872M28 571H872" stroke="#cabd99" strokeOpacity=".55" />
     <Label x={450} y={51}>{titles[courseId]}</Label><Label x={450} y={77} small fill="#8b826a">观察对象和变化，再把依据读回课本</Label>
     <g className="css-main-objects" filter={`url(#${uid}-shadow)`}>{render[courseId]}</g>

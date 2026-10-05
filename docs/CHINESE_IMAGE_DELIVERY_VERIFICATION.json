@@ -1,0 +1,2819 @@
+{
+  "generatedOn": "2026-10-05",
+  "mode": "deterministic lossy delivery encoding; original lossless and legacy sources retained",
+  "fullImageGeometry": "parent copies unchanged; frame copies use integer source-pixel grid cells, no resizing",
+  "fullAlpha": "exactly preserved",
+  "opaqueQuality": 90,
+  "transparentQuality": 94,
+  "previewMaxEdge": 192,
+  "assets": [
+    {
+      "source": "images/chinese-polished/cn-01-atlas-v3.webp",
+      "sourceSha256": "ac24050dd47646247d3cfbfdf6af46eb0eb67278accc9b34ccddfe7fb7467e04",
+      "fullSha256": "be4ec5b9b1d3fe8a033cb550c2fedef157cfdad0cda5982f25337df9b1f42418",
+      "previewSha256": "38cdc77139c9fa1ed20878c67ba2a4a0539b97a030ba4e69ae18af4878e35c5f",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.186205332999048,
+      "visibleRgbPsnr": 38.065328404643864
+    },
+    {
+      "source": "images/chinese-polished/cn-01-atlas-v3.webp#frame=0",
+      "sourceSha256": "ac24050dd47646247d3cfbfdf6af46eb0eb67278accc9b34ccddfe7fb7467e04",
+      "fullSha256": "f5b74598ec8c3082a17dfd4ac7730b7a6502e318a82e111668d8e1910a11e439",
+      "previewSha256": "946e2441d5fea43647ac68f03180144f736b7a31c26321a07516f63c4610563e",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.2276880960559073,
+      "visibleRgbPsnr": 37.952972398127734,
+      "parent": "images/chinese-polished/cn-01-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-01-atlas-v3.webp#frame=1",
+      "sourceSha256": "ac24050dd47646247d3cfbfdf6af46eb0eb67278accc9b34ccddfe7fb7467e04",
+      "fullSha256": "679a05f6fb655526fa6d807cbc24ae031010de35ace3911384a5c23552df975f",
+      "previewSha256": "e2a44edb2b515060d12c50a683e3e8735dcf7c2ad891aaedb4fabceaef966812",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.8800248173244873,
+      "visibleRgbPsnr": 38.94287900640669,
+      "parent": "images/chinese-polished/cn-01-atlas-v3.webp",
+      "crop": {
+        "left": 768,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-01-atlas-v3.webp#frame=2",
+      "sourceSha256": "ac24050dd47646247d3cfbfdf6af46eb0eb67278accc9b34ccddfe7fb7467e04",
+      "fullSha256": "c1c02f4b8be8d89bc2c83423ff9a4e2e315aae006830117cfca4c477e624ccad",
+      "previewSha256": "32d1c792b8e102d6073aff0beca63569d2e676efe2782c650322e12529c529c8",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.3068779473844465,
+      "visibleRgbPsnr": 37.74244028951379,
+      "parent": "images/chinese-polished/cn-01-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-01-atlas-v3.webp#frame=3",
+      "sourceSha256": "ac24050dd47646247d3cfbfdf6af46eb0eb67278accc9b34ccddfe7fb7467e04",
+      "fullSha256": "dce5a066a1ac486f9f89dcf252e0c8ccdb1df6b4ebbd995f075d3f87203db5f6",
+      "previewSha256": "10bfff1b9f704206fdc685040abe7d73c045e821624aaaf3dd303d7158b6b35d",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.1879942267735375,
+      "visibleRgbPsnr": 38.0604530836999,
+      "parent": "images/chinese-polished/cn-01-atlas-v3.webp",
+      "crop": {
+        "left": 768,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-02-atlas-v3.webp",
+      "sourceSha256": "14817c823f82d97b71549d9c4641e6aea8dbaae0b45f19db62389f25716eb116",
+      "fullSha256": "c4ca45b4af5481becb46f1bb696a399547ae2bfbf55912cf175249131f4a4d02",
+      "previewSha256": "4b3091e8604f4e2e3e91c99125d0ae5def46861743136a49d6f8b4d07285022a",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.9344710552679394,
+      "visibleRgbPsnr": 36.2330765150272
+    },
+    {
+      "source": "images/chinese-polished/cn-02-atlas-v3.webp#frame=0",
+      "sourceSha256": "14817c823f82d97b71549d9c4641e6aea8dbaae0b45f19db62389f25716eb116",
+      "fullSha256": "e240f0fa00a05ee49b17e1844998eca776252e4f760df7019e2eedbe45d67fd1",
+      "previewSha256": "af415124c28be693c5ee39482753b65f14a865540ca800d7e8fb6a93f9328953",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 4.1356143727994805,
+      "visibleRgbPsnr": 35.80000288884335,
+      "parent": "images/chinese-polished/cn-02-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-02-atlas-v3.webp#frame=1",
+      "sourceSha256": "14817c823f82d97b71549d9c4641e6aea8dbaae0b45f19db62389f25716eb116",
+      "fullSha256": "6ec0ceecc012fa6aa0f7e27a4d6c40e444be62be073fac04743345af271f6a55",
+      "previewSha256": "83cb709dd564d5a209d5221675dbcbfe73a5483662982579970ce82b746a4d11",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.492554874994845,
+      "visibleRgbPsnr": 37.2679388392526,
+      "parent": "images/chinese-polished/cn-02-atlas-v3.webp",
+      "crop": {
+        "left": 768,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-02-atlas-v3.webp#frame=2",
+      "sourceSha256": "14817c823f82d97b71549d9c4641e6aea8dbaae0b45f19db62389f25716eb116",
+      "fullSha256": "021b06b990daff8bf3bfbf9deaff103fbc46ee825f9de4e1eeac64d59406db51",
+      "previewSha256": "00ceabcbc682352fbb940ae0a83331f5b9d68754136aabc78180dbb0f1ba7b4a",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.9598279841574877,
+      "visibleRgbPsnr": 36.17727719902639,
+      "parent": "images/chinese-polished/cn-02-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-02-atlas-v3.webp#frame=3",
+      "sourceSha256": "14817c823f82d97b71549d9c4641e6aea8dbaae0b45f19db62389f25716eb116",
+      "fullSha256": "284dd122a05e480bd4cd971bd134dc2cda9a04a72ccb327a853968e5495d865b",
+      "previewSha256": "b3e63b8e00da2c1b68b0851a2cc33ce312988db2a38b4e8c745eed2796cdc624",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 4.083332191519026,
+      "visibleRgbPsnr": 35.91050935787956,
+      "parent": "images/chinese-polished/cn-02-atlas-v3.webp",
+      "crop": {
+        "left": 768,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-03-atlas-v3.webp",
+      "sourceSha256": "d1ca854ecae66726d0bec90ed068ad552d1656e762efc9c92133ae5a7a322180",
+      "fullSha256": "ca4b6b4304c1a01ae37e5f5485133bdd4cdc8e0fbd70b4f11742882869b2732c",
+      "previewSha256": "b99810f39af9ee8566502658dafe6b5211c807cbf8845fca390c9bd76044c025",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.6581596341679603,
+      "visibleRgbPsnr": 39.63918243503623
+    },
+    {
+      "source": "images/chinese-polished/cn-03-atlas-v3.webp#frame=0",
+      "sourceSha256": "d1ca854ecae66726d0bec90ed068ad552d1656e762efc9c92133ae5a7a322180",
+      "fullSha256": "6072323a9202053f658c5fdb8d01a508a3076d6ff76a3ee530240df92b6c8ed0",
+      "previewSha256": "00101b79b72e7d488cd47233ee1a2b1a74b3706fb6082b6d1d2a357f84247315",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.625023574319573,
+      "visibleRgbPsnr": 39.74813944888011,
+      "parent": "images/chinese-polished/cn-03-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-03-atlas-v3.webp#frame=1",
+      "sourceSha256": "d1ca854ecae66726d0bec90ed068ad552d1656e762efc9c92133ae5a7a322180",
+      "fullSha256": "ed2d3043eb6a2c2c99f2ca0f9968f8c6ede0b002331548ae99d225db891a0455",
+      "previewSha256": "3d3910d4ad42a1efc2cc5f33b36f555e489469f7c9782755e9b6bb32a901a262",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.671169135714744,
+      "visibleRgbPsnr": 39.59677584913508,
+      "parent": "images/chinese-polished/cn-03-atlas-v3.webp",
+      "crop": {
+        "left": 768,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-03-atlas-v3.webp#frame=2",
+      "sourceSha256": "d1ca854ecae66726d0bec90ed068ad552d1656e762efc9c92133ae5a7a322180",
+      "fullSha256": "1b5f29018f8a4273a21581c5d50c9cee733d5ca526d03f7d5e8b1cc705f43b04",
+      "previewSha256": "4eb75223cb20bb3d71960fd3fc900f05e757711734a50fec9c9c1d274746cd71",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.6241282473808814,
+      "visibleRgbPsnr": 39.75110248417381,
+      "parent": "images/chinese-polished/cn-03-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-03-atlas-v3.webp#frame=3",
+      "sourceSha256": "d1ca854ecae66726d0bec90ed068ad552d1656e762efc9c92133ae5a7a322180",
+      "fullSha256": "cf6d033a341b80d66bc8d70c89e940fb145c0316d550799670c3b3e31c9d96e6",
+      "previewSha256": "4d81478ba03ee95e7d3c2096c2f22168545cda3d635072ad85569a41eb331833",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.677684751014167,
+      "visibleRgbPsnr": 39.57561470149274,
+      "parent": "images/chinese-polished/cn-03-atlas-v3.webp",
+      "crop": {
+        "left": 768,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-04-shanxing-comparison-v3.webp",
+      "sourceSha256": "91d18e8dc6aed694947e5ead04a477ea75ff2ea561dca5df7b0bd42cdbbbb2f0",
+      "fullSha256": "5d41c67bc2f49e432b6e47dcb0159f6662e8f3d0f9b56053b53cc06f8d154d47",
+      "previewSha256": "b359be5fc0071d6e3f98ecf9ee0c248cf0a6634075df918f8872b31105d5f555",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.3061093918039073,
+      "visibleRgbPsnr": 37.74445922245315
+    },
+    {
+      "source": "images/chinese-polished/cn-04-wangdongting-atlas-v3.webp",
+      "sourceSha256": "0cda9cd926e58573de73eaaf7606de79454d99fbf17bc5c7d1a734fd3e37a994",
+      "fullSha256": "6444735495792e4e58a863b0abf06e12f06b2607c48e95bcb6995153f5b38f38",
+      "previewSha256": "42a79a66633c74b9b3fae442a39894ac7e93b17ce135a4d47e0afd88e46e23ca",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.9425950830323373,
+      "visibleRgbPsnr": 38.75619350976066
+    },
+    {
+      "source": "images/chinese-polished/cn-04-wangdongting-atlas-v3.webp#frame=0",
+      "sourceSha256": "0cda9cd926e58573de73eaaf7606de79454d99fbf17bc5c7d1a734fd3e37a994",
+      "fullSha256": "ca21e24ea4213e1a89ce91cccb297675ee267954cf232c08e0b551f85a4cbbea",
+      "previewSha256": "e492da2c6f163fd61dc3234d24b350a82c5cbd14448f3c19d62583a5aee9a5ec",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.2115678872274884,
+      "visibleRgbPsnr": 37.9964614744111,
+      "parent": "images/chinese-polished/cn-04-wangdongting-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-04-wangdongting-atlas-v3.webp#frame=1",
+      "sourceSha256": "0cda9cd926e58573de73eaaf7606de79454d99fbf17bc5c7d1a734fd3e37a994",
+      "fullSha256": "d18b9f9e24d635617a2a0b0199fdad70c42a3984718bd208adf7c070a440b630",
+      "previewSha256": "783d84ed3de23586fede159cf2d42877bcca7780444bac9be490398e31d8c89d",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.283942504705481,
+      "visibleRgbPsnr": 40.9571002704729,
+      "parent": "images/chinese-polished/cn-04-wangdongting-atlas-v3.webp",
+      "crop": {
+        "left": 768,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-04-wangdongting-atlas-v3.webp#frame=2",
+      "sourceSha256": "0cda9cd926e58573de73eaaf7606de79454d99fbf17bc5c7d1a734fd3e37a994",
+      "fullSha256": "bfb8933c19cf8acbd98c1a1f67571f68a35a75218583792649f395e0d2517d88",
+      "previewSha256": "a44d7cab920883d5512600a42d401a5444c6f1f6e31ef1a318d45ae4abf3e2b1",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.2099528663161636,
+      "visibleRgbPsnr": 38.00083049982831,
+      "parent": "images/chinese-polished/cn-04-wangdongting-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-04-wangdongting-atlas-v3.webp#frame=3",
+      "sourceSha256": "0cda9cd926e58573de73eaaf7606de79454d99fbf17bc5c7d1a734fd3e37a994",
+      "fullSha256": "4af5d10217ccb2773333fec6f492febd7b0e4ab230b0ad4484d109bc18168e47",
+      "previewSha256": "114ebca8dc628799752b1338a5f4bb35bfdc517bed1e75ce9c40d42854e3d2bd",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.953603626107281,
+      "visibleRgbPsnr": 38.72375935818327,
+      "parent": "images/chinese-polished/cn-04-wangdongting-atlas-v3.webp",
+      "crop": {
+        "left": 768,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-06-winter-v3.webp",
+      "sourceSha256": "2627045488db6fc35d83989506214b7616357065c41b07d4af788f8830a68109",
+      "fullSha256": "d2e860553151ec65498caa3a337e7b63d6729a4153e7e642eb5a469dcae9861c",
+      "previewSha256": "c0692a1e3978e4444b86c7fb56a34300a31809f4aac3e3691f94300e7fd22247",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.4991529438803246,
+      "visibleRgbPsnr": 37.25154510065221
+    },
+    {
+      "source": "images/chinese-polished/cn-07-atlas-v3.webp",
+      "sourceSha256": "65aa7d38d148b70d888030f8c8fccb962894f546af76e7eb461e0652ec999666",
+      "fullSha256": "0f03d9997434a75f94eed5d6da2f385c431cad774021ccf8d8fb543d4b37c192",
+      "previewSha256": "c250698161b9486dc051175d206701b8128726493185ae5507fe9037db14ff27",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.3468049256640606,
+      "visibleRgbPsnr": 37.63819561892798
+    },
+    {
+      "source": "images/chinese-polished/cn-07-atlas-v3.webp#frame=0",
+      "sourceSha256": "65aa7d38d148b70d888030f8c8fccb962894f546af76e7eb461e0652ec999666",
+      "fullSha256": "5151f63a916ee5ebd9a18ecaff489405fa2e388c55e5696a00d32fbe1320e0a2",
+      "previewSha256": "cd092212a347df5904b0e7023774c6c4917a54d782f4ffc0caf81e76928528e5",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.3740338484975654,
+      "visibleRgbPsnr": 37.56781490584592,
+      "parent": "images/chinese-polished/cn-07-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-07-atlas-v3.webp#frame=1",
+      "sourceSha256": "65aa7d38d148b70d888030f8c8fccb962894f546af76e7eb461e0652ec999666",
+      "fullSha256": "3824b12386e932a744ea7d59a40ad3db72f75f58ea58f30874415acff50e8c92",
+      "previewSha256": "e73bfb30deb411d41aba6af66010c47559f6a87fabf21bb3fee1ff7de72b0995",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.864291829391564,
+      "visibleRgbPsnr": 38.99045832592277,
+      "parent": "images/chinese-polished/cn-07-atlas-v3.webp",
+      "crop": {
+        "left": 768,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-07-atlas-v3.webp#frame=2",
+      "sourceSha256": "65aa7d38d148b70d888030f8c8fccb962894f546af76e7eb461e0652ec999666",
+      "fullSha256": "b3e854745c0193d41ea548d30ae3cafd9c18a42b5e65edaeb5ddaa32cbde7afb",
+      "previewSha256": "5e4f04548d1e3665b7b8823d32337f5a4a9bd062d0192fc3bc93343c4362c880",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.2957462831391497,
+      "visibleRgbPsnr": 37.77172818940222,
+      "parent": "images/chinese-polished/cn-07-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-07-atlas-v3.webp#frame=3",
+      "sourceSha256": "65aa7d38d148b70d888030f8c8fccb962894f546af76e7eb461e0652ec999666",
+      "fullSha256": "7b63b20ff59bc916664119092b9ad46f51b57941973514a2629faa70006a2061",
+      "previewSha256": "6753bac1b9a2f139cd04968ed700695c1e0bc815ad36972ab246e3c56136604c",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.923690233961307,
+      "visibleRgbPsnr": 36.25690933784171,
+      "parent": "images/chinese-polished/cn-07-atlas-v3.webp",
+      "crop": {
+        "left": 768,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-08-atlas-v3.webp",
+      "sourceSha256": "86e030402434a19920509ee4d763a4bb654a4764073c26a7d42aca12d20f2e7c",
+      "fullSha256": "23a643e8b432e12870b05351858cab7cf767fe192d949ab28b585c76d737f0a9",
+      "previewSha256": "8f38b39a93012329387bf06a51704f1a743ed7e75461c90e07644eaab244f9a5",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 4.049966814859491,
+      "visibleRgbPsnr": 35.98177431565709
+    },
+    {
+      "source": "images/chinese-polished/cn-08-atlas-v3.webp#frame=0",
+      "sourceSha256": "86e030402434a19920509ee4d763a4bb654a4764073c26a7d42aca12d20f2e7c",
+      "fullSha256": "10c64188176e38fb1566d2fcdd2ccf3cdb24f40db2caaae61fae7fb3a9f45494",
+      "previewSha256": "68aeb56f22e83c42c33f1d0148acb32bcdeab7abf518e5a37297a185bde1ea6f",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 4.308842606246998,
+      "visibleRgbPsnr": 35.4435909999999,
+      "parent": "images/chinese-polished/cn-08-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-08-atlas-v3.webp#frame=1",
+      "sourceSha256": "86e030402434a19920509ee4d763a4bb654a4764073c26a7d42aca12d20f2e7c",
+      "fullSha256": "27740fd5e8267c4a89da5b2cec71f38d50d8d4ba8d4b915684c6707726412e93",
+      "previewSha256": "4becddedd395d411729decee9635813e1b86f9f4cc6f53aac8ffbcc002311941",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.667657706347798,
+      "visibleRgbPsnr": 36.84302766403563,
+      "parent": "images/chinese-polished/cn-08-atlas-v3.webp",
+      "crop": {
+        "left": 627,
+        "top": 0,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-08-atlas-v3.webp#frame=2",
+      "sourceSha256": "86e030402434a19920509ee4d763a4bb654a4764073c26a7d42aca12d20f2e7c",
+      "fullSha256": "d12a10fdcf853c3d465684b67b0b0dc295ae5f5e6d577e2540b46afb3289021c",
+      "previewSha256": "a279b62599251f08c134b9ceff8de055c4b8df49496133d72d554c268011caec",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 4.632050691921368,
+      "visibleRgbPsnr": 34.81533753772302,
+      "parent": "images/chinese-polished/cn-08-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 418,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-08-atlas-v3.webp#frame=3",
+      "sourceSha256": "86e030402434a19920509ee4d763a4bb654a4764073c26a7d42aca12d20f2e7c",
+      "fullSha256": "13c36520f9d8e72b580856636f211000b7ddef5d4593ebd9cd897a21265e9a8f",
+      "previewSha256": "29002a08c39212b9abf3aaaf473720821e6969632729f08fea66f3c98f01709c",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.8104815433445536,
+      "visibleRgbPsnr": 36.511206360770665,
+      "parent": "images/chinese-polished/cn-08-atlas-v3.webp",
+      "crop": {
+        "left": 627,
+        "top": 418,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-08-atlas-v3.webp#frame=4",
+      "sourceSha256": "86e030402434a19920509ee4d763a4bb654a4764073c26a7d42aca12d20f2e7c",
+      "fullSha256": "8f31e43758272fc09a364fc7cb3adee8978f0b71391af2146b85e546361cc2f3",
+      "previewSha256": "fc832c9fde07071cc90c3fb5d189d2c8f289019b6c9217bfabde1dd890f2e188",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 4.008790251895911,
+      "visibleRgbPsnr": 36.07053693528866,
+      "parent": "images/chinese-polished/cn-08-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 836,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-08-atlas-v3.webp#frame=5",
+      "sourceSha256": "86e030402434a19920509ee4d763a4bb654a4764073c26a7d42aca12d20f2e7c",
+      "fullSha256": "4391ab1ebb47781f2158c882be64ca2bc33179a06995b39f52741e85621fa5cb",
+      "previewSha256": "b82f4f57865923c957fccc4d35d8d031a2bb12043f8786633b06923810ffe2dc",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.7523711393156525,
+      "visibleRgbPsnr": 36.644687868561135,
+      "parent": "images/chinese-polished/cn-08-atlas-v3.webp",
+      "crop": {
+        "left": 627,
+        "top": 836,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-09-atlas-v3.webp",
+      "sourceSha256": "5b6288292dbb06a454770d626972329c3f7bbe2f844b7a98f30f7f7fb5eb886b",
+      "fullSha256": "9ce3891dc8a4f92c03357243b9b7bc4344960ba71c6db6140d811f247298f872",
+      "previewSha256": "637b656952e821dc8d249a4da7c6fb99329108039c8c7226aba908eb09ba988a",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.4177574029399778,
+      "visibleRgbPsnr": 37.455978955341976
+    },
+    {
+      "source": "images/chinese-polished/cn-09-atlas-v3.webp#frame=0",
+      "sourceSha256": "5b6288292dbb06a454770d626972329c3f7bbe2f844b7a98f30f7f7fb5eb886b",
+      "fullSha256": "161c899f5c166edec5e0e976d0095c602c695f8903a1fa1d68a5d60058bb4251",
+      "previewSha256": "08d13dbf1ddcef283af70ec1c49bcbe802cf63d9c46a2447133f4a1478469372",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 4.002594318431552,
+      "visibleRgbPsnr": 36.08397211731837,
+      "parent": "images/chinese-polished/cn-09-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-09-atlas-v3.webp#frame=1",
+      "sourceSha256": "5b6288292dbb06a454770d626972329c3f7bbe2f844b7a98f30f7f7fb5eb886b",
+      "fullSha256": "b6bce0c1222f35104bcf6f069f699fccf7967427cc108e02fb57ff2355d01e01",
+      "previewSha256": "8ea1a37ec6066c6497c2780137eb4e4b52b651c6468bc3925cb582c65f39508d",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.927876031406434,
+      "visibleRgbPsnr": 38.7997499206234,
+      "parent": "images/chinese-polished/cn-09-atlas-v3.webp",
+      "crop": {
+        "left": 768,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-09-atlas-v3.webp#frame=2",
+      "sourceSha256": "5b6288292dbb06a454770d626972329c3f7bbe2f844b7a98f30f7f7fb5eb886b",
+      "fullSha256": "3e1f5c46379b0f1048ce114a9c81449156bd9182eeaaccb0eb5332e595f1f235",
+      "previewSha256": "d0145ea3f0c3b32175d7043efa882ba6c14d62da85116ac43aee74d94985a6ef",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.3025678565971033,
+      "visibleRgbPsnr": 37.75376861546603,
+      "parent": "images/chinese-polished/cn-09-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-09-atlas-v3.webp#frame=3",
+      "sourceSha256": "5b6288292dbb06a454770d626972329c3f7bbe2f844b7a98f30f7f7fb5eb886b",
+      "fullSha256": "0064fdee29a6cc8903f76a038a2d57794a02cc7cd5f9b84d9443a904b165a7a0",
+      "previewSha256": "a2207efa47fafb947f361d3447551a2a06e2a3e3d8866ff4cc4841b7b4a3026f",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.088812967856985,
+      "visibleRgbPsnr": 38.3349713700493,
+      "parent": "images/chinese-polished/cn-09-atlas-v3.webp",
+      "crop": {
+        "left": 768,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-09-direction-v3.webp",
+      "sourceSha256": "002479d82bd39084843f6a9ed1a3a2c669111a99926b876555a1afce7cf545f2",
+      "fullSha256": "d6b01815636f0a4a606193ee7e6bd381fb900ce3ab8ee9a90da8518e73227b27",
+      "previewSha256": "75928f468d29d3aae0fa8e02fd109f89caa168eff3baffc9e553023b031e4c40",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.1668513060163272,
+      "visibleRgbPsnr": 38.11825016247627
+    },
+    {
+      "source": "images/chinese-polished/cn-10-atlas-v3.webp",
+      "sourceSha256": "eb5c3eb055a7f9428a5045ec6be43944ac41d617e1d3767b93285913eacaf752",
+      "fullSha256": "766f3e11e13e0318d82008f01cb842106e0c52605445171b62433b71ef487d73",
+      "previewSha256": "2da3beab7f49de16d3b2c23aaef18ddfb6dc8d4717a3dfb80bf279d9205f8359",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.673004642253839,
+      "visibleRgbPsnr": 36.83037406380453
+    },
+    {
+      "source": "images/chinese-polished/cn-10-atlas-v3.webp#frame=0",
+      "sourceSha256": "eb5c3eb055a7f9428a5045ec6be43944ac41d617e1d3767b93285913eacaf752",
+      "fullSha256": "c0bf1ed6ffc3cf7fa60408c4fa45db2c66ef45313a005ed481ba187f158f92a4",
+      "previewSha256": "1b0a2bda1e4eb4fb32e9023c267edd9a7fca36ef1a6eb5b8a53ef7c7be299a7b",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.764228019750295,
+      "visibleRgbPsnr": 36.617285146093664,
+      "parent": "images/chinese-polished/cn-10-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-10-atlas-v3.webp#frame=1",
+      "sourceSha256": "eb5c3eb055a7f9428a5045ec6be43944ac41d617e1d3767b93285913eacaf752",
+      "fullSha256": "ad190173ea5e396e6d5eed50e83a2d652056efb643775a163db51ebcf9c0dcc6",
+      "previewSha256": "ac755fc365fbc559d9e32bca56838a19917de1e8230496b2c60d254d7f396178",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.8015806910488115,
+      "visibleRgbPsnr": 36.53151934655051,
+      "parent": "images/chinese-polished/cn-10-atlas-v3.webp",
+      "crop": {
+        "left": 627,
+        "top": 0,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-10-atlas-v3.webp#frame=2",
+      "sourceSha256": "eb5c3eb055a7f9428a5045ec6be43944ac41d617e1d3767b93285913eacaf752",
+      "fullSha256": "492df68cc61a683c77016d41c0e67cbff6cdaec5383794ea83d077941c87fbe5",
+      "previewSha256": "83063186e8795421bd685517197ffdf51a33657167f3630b74812181b829ae04",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.851983536736774,
+      "visibleRgbPsnr": 36.417115162784164,
+      "parent": "images/chinese-polished/cn-10-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 418,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-10-atlas-v3.webp#frame=3",
+      "sourceSha256": "eb5c3eb055a7f9428a5045ec6be43944ac41d617e1d3767b93285913eacaf752",
+      "fullSha256": "e9e75339498a0e5ca2e330e8cbc1e3c174d024cc9eef3becd54e57d3d2f8f914",
+      "previewSha256": "76fac9fa54e8ce3682b94a4253113c75c5600bf6e4b66051b7fa09ec22c56e27",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.7389818054290784,
+      "visibleRgbPsnr": 36.67573657262321,
+      "parent": "images/chinese-polished/cn-10-atlas-v3.webp",
+      "crop": {
+        "left": 627,
+        "top": 418,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-10-atlas-v3.webp#frame=4",
+      "sourceSha256": "eb5c3eb055a7f9428a5045ec6be43944ac41d617e1d3767b93285913eacaf752",
+      "fullSha256": "79b34f0009677d33c987f67d6a7c50f0b9d954e303e701111ed81298ac07c4f9",
+      "previewSha256": "4825bd79965fec0f13cf3bcca70d9ccd9cbd19407124c2b902240afc40b79fe2",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.8136779433372183,
+      "visibleRgbPsnr": 36.50392330766808,
+      "parent": "images/chinese-polished/cn-10-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 836,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-10-atlas-v3.webp#frame=5",
+      "sourceSha256": "eb5c3eb055a7f9428a5045ec6be43944ac41d617e1d3767b93285913eacaf752",
+      "fullSha256": "9641ff0128a8e07dfaddcc5333cd7652fa2680ca1b9870c539b2ac29d036de68",
+      "previewSha256": "3d7598743900848ddec62b71c65cd6c7d7671769e33c1c148cb70fb79ad4b238",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.4060261180078415,
+      "visibleRgbPsnr": 37.485844130961354,
+      "parent": "images/chinese-polished/cn-10-atlas-v3.webp",
+      "crop": {
+        "left": 627,
+        "top": 836,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-11-atlas-v3.webp",
+      "sourceSha256": "56a3080c32a54163ce6dd896abaf5f6c3f901cfbcf1f2791333a9af5a2b6413b",
+      "fullSha256": "8349a82fe9f8abe51140186f2272ec4a90d38adfd289dfba149b4b49f446485e",
+      "previewSha256": "4b80b259c3b48587ea7256fe0d36ac7c177cf96039052d573e9671e2fe93d0f1",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.8723917753871686,
+      "visibleRgbPsnr": 38.96593011813127
+    },
+    {
+      "source": "images/chinese-polished/cn-11-atlas-v3.webp#frame=0",
+      "sourceSha256": "56a3080c32a54163ce6dd896abaf5f6c3f901cfbcf1f2791333a9af5a2b6413b",
+      "fullSha256": "5f2e783c6a2703ee18804f36f50d099c6f5ec0f02932fab916bff65c4ec71c8e",
+      "previewSha256": "95645ca5e288b607be9aaa217a18933f1f05e0bc00b578fa58bbfc68373bc078",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.9521530139554066,
+      "visibleRgbPsnr": 38.72802633296064,
+      "parent": "images/chinese-polished/cn-11-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-11-atlas-v3.webp#frame=1",
+      "sourceSha256": "56a3080c32a54163ce6dd896abaf5f6c3f901cfbcf1f2791333a9af5a2b6413b",
+      "fullSha256": "506a57354473e6d65298b66dc2fe031ac4a2eb17af95889311214d30f3712432",
+      "previewSha256": "ebc40663e5a77cabf2370d30604a17e85e6598d7e422bbe8b68fb4dc55ba06ec",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.084900054164483,
+      "visibleRgbPsnr": 38.34598164568928,
+      "parent": "images/chinese-polished/cn-11-atlas-v3.webp",
+      "crop": {
+        "left": 768,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-11-atlas-v3.webp#frame=2",
+      "sourceSha256": "56a3080c32a54163ce6dd896abaf5f6c3f901cfbcf1f2791333a9af5a2b6413b",
+      "fullSha256": "6fd2d0fa9fe97ba069d1a9837950858a43f6a0c34c05c4ddf090102420a3d768",
+      "previewSha256": "0f8dcce21568c0011a7d87aeca0d7f9cbf339411c313696f433cebc7e349239b",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.392043325291953,
+      "visibleRgbPsnr": 40.555422779903296,
+      "parent": "images/chinese-polished/cn-11-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-11-atlas-v3.webp#frame=3",
+      "sourceSha256": "56a3080c32a54163ce6dd896abaf5f6c3f901cfbcf1f2791333a9af5a2b6413b",
+      "fullSha256": "f66e2048effd34144a94df8ba6eb6eb430160fdcdabaf0f67e44e0417a359e9b",
+      "previewSha256": "40cbde6f8e943aae92c47eef7c6965d6fd0c6663e25be27a9e0d06ac8fbae0cc",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.1484325189080393,
+      "visibleRgbPsnr": 38.168915820630424,
+      "parent": "images/chinese-polished/cn-11-atlas-v3.webp",
+      "crop": {
+        "left": 768,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-12-atlas-v3.webp",
+      "sourceSha256": "311dee68a68891124779e9e1967902b1dfd1e765017ef31c5f95d327dd3aa53f",
+      "fullSha256": "e96149763b6ad2bc043fd60d64bdc77536e3e62d6125d38510fa6cd98fdb4fa1",
+      "previewSha256": "110fd59aa70061af7830aaaaacd1e8894362d704e27ebe493bcc6589b2d4424b",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.236905267885454,
+      "visibleRgbPsnr": 37.92820382042147
+    },
+    {
+      "source": "images/chinese-polished/cn-12-atlas-v3.webp#frame=0",
+      "sourceSha256": "311dee68a68891124779e9e1967902b1dfd1e765017ef31c5f95d327dd3aa53f",
+      "fullSha256": "4764a1c8a6cc05221ffa5ba6b2ae0995fd4f295eedf4cf0b91614c51f42d0707",
+      "previewSha256": "26f8e242a47627df52bc4faac1fafdfab02d3fd7585efea9d8e39d50bbd8e6c0",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.9822627616613033,
+      "visibleRgbPsnr": 36.12820535484817,
+      "parent": "images/chinese-polished/cn-12-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-12-atlas-v3.webp#frame=1",
+      "sourceSha256": "311dee68a68891124779e9e1967902b1dfd1e765017ef31c5f95d327dd3aa53f",
+      "fullSha256": "c024e635c7c66ced64e1a990b50e3c11987a3f1298641a2d8dc2f4e66e8c2afa",
+      "previewSha256": "7ea21bacc1eff8b1dc2d6c79c8a5992162993c002334d0e15b6712c57461ff45",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.24666680941649,
+      "visibleRgbPsnr": 37.90204918359783,
+      "parent": "images/chinese-polished/cn-12-atlas-v3.webp",
+      "crop": {
+        "left": 627,
+        "top": 0,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-12-atlas-v3.webp#frame=2",
+      "sourceSha256": "311dee68a68891124779e9e1967902b1dfd1e765017ef31c5f95d327dd3aa53f",
+      "fullSha256": "e6e5b81e5a8106eeacd6248e1c9cd0d8648a9b124845e477b9dbe7935e1b2de8",
+      "previewSha256": "b32de247472af322423b33f1d8298f79c1b2c2569c8166f5fa7065b9c87dea6f",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.881035540086521,
+      "visibleRgbPsnr": 38.93983129438455,
+      "parent": "images/chinese-polished/cn-12-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 418,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-12-atlas-v3.webp#frame=3",
+      "sourceSha256": "311dee68a68891124779e9e1967902b1dfd1e765017ef31c5f95d327dd3aa53f",
+      "fullSha256": "7baa34d5ff0aac8893d73ba42866d4e4e0e7e02d6f874d9563cbdb906303d73b",
+      "previewSha256": "18b0fd99b380153f35eec5a7c2ec35da0a29719467d50b251ec583ec81b19db6",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.773798013412934,
+      "visibleRgbPsnr": 39.26930695305438,
+      "parent": "images/chinese-polished/cn-12-atlas-v3.webp",
+      "crop": {
+        "left": 627,
+        "top": 418,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-12-atlas-v3.webp#frame=4",
+      "sourceSha256": "311dee68a68891124779e9e1967902b1dfd1e765017ef31c5f95d327dd3aa53f",
+      "fullSha256": "40757883052da0c08069ecfafcaa5e452f54e3bf86262eaa70a36276d99ffbbf",
+      "previewSha256": "0507848f8c54a62c6179f93488ff62734a17dbaf9a906ddc80c80a0ea9c16512",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.247677143873248,
+      "visibleRgbPsnr": 37.89934663081564,
+      "parent": "images/chinese-polished/cn-12-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 836,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-12-atlas-v3.webp#frame=5",
+      "sourceSha256": "311dee68a68891124779e9e1967902b1dfd1e765017ef31c5f95d327dd3aa53f",
+      "fullSha256": "46fcab272889e5b78729ff38e0e148c8d98e6bdb4ceccd542881c2033371c832",
+      "previewSha256": "07448139f4051268de078fe2b41188838242c61a24afbd7570b0a8a09e8892a7",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.3364684248735497,
+      "visibleRgbPsnr": 37.665063224661985,
+      "parent": "images/chinese-polished/cn-12-atlas-v3.webp",
+      "crop": {
+        "left": 627,
+        "top": 836,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-13-atlas-v3.webp",
+      "sourceSha256": "f846c3c78f2066356af8af564a9adf6a09260e074fd3b263c166207cbfa4e0b2",
+      "fullSha256": "5ac0c02598155a15eb1a6f65e84ce03f060944cf059cda962e176f89dc3f85d6",
+      "previewSha256": "72faae0ca9d65223e8d7797bd29524ee1f1199fe4e0216e4494ab4be732c1ff4",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.807934255194402,
+      "visibleRgbPsnr": 39.16306490804617
+    },
+    {
+      "source": "images/chinese-polished/cn-13-atlas-v3.webp#frame=0",
+      "sourceSha256": "f846c3c78f2066356af8af564a9adf6a09260e074fd3b263c166207cbfa4e0b2",
+      "fullSha256": "5c71b83f08fb06d2e28de2e440af817ee5b7b1d7243cc15949b22da8ffa94d66",
+      "previewSha256": "69f547ca0691977f7add2fb046f4f77f02b2f00fa02d214266835be878290528",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.007637615541713,
+      "visibleRgbPsnr": 38.56629345334208,
+      "parent": "images/chinese-polished/cn-13-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-13-atlas-v3.webp#frame=1",
+      "sourceSha256": "f846c3c78f2066356af8af564a9adf6a09260e074fd3b263c166207cbfa4e0b2",
+      "fullSha256": "74753697ceb2e94ee438d5b2875e16f587086e91377d9bfb2bb76fb367f99524",
+      "previewSha256": "ed8cc75eabe304bb5b9afb8c27bec657d90090bdfa040e388ed9d7d8337ac98c",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.6833881001382456,
+      "visibleRgbPsnr": 39.55713381860858,
+      "parent": "images/chinese-polished/cn-13-atlas-v3.webp",
+      "crop": {
+        "left": 768,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-13-atlas-v3.webp#frame=2",
+      "sourceSha256": "f846c3c78f2066356af8af564a9adf6a09260e074fd3b263c166207cbfa4e0b2",
+      "fullSha256": "38a412f6fc21cf5e61554e664baa9a6103e81c6b0aa1df2f534dade0e60c7954",
+      "previewSha256": "787ac2016f49e5f30ce6d545306f293be070a1afca99933d5c5b52acae504d47",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.736818879355422,
+      "visibleRgbPsnr": 39.38588246719392,
+      "parent": "images/chinese-polished/cn-13-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-13-atlas-v3.webp#frame=3",
+      "sourceSha256": "f846c3c78f2066356af8af564a9adf6a09260e074fd3b263c166207cbfa4e0b2",
+      "fullSha256": "caa560a2e9b6f5e77938e59bfa8ba062d05e740f8f555e47687f4408fae69210",
+      "previewSha256": "0011e4ea6a4ff626c413669bf49e40b65182f78f1da6eeefdd0bfd9ff59c2bfc",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.8207513028139135,
+      "visibleRgbPsnr": 39.12350766066433,
+      "parent": "images/chinese-polished/cn-13-atlas-v3.webp",
+      "crop": {
+        "left": 768,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-15-flower-states-v3.webp",
+      "sourceSha256": "124c4958c0cb4f4a3559d604a5f39acacfa04720336276b5ebbd92f57fb1e8b7",
+      "fullSha256": "882daaf733c797d3b498d249a6943579deaa99826f3486d553f3592e224fe73b",
+      "previewSha256": "b12a42114899bb06dee31533dfebfa714441395afcb153619783e4d8fbc184b9",
+      "quality": 94,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.085338590473876,
+      "visibleRgbPsnr": 38.34474698420811
+    },
+    {
+      "source": "images/chinese-polished/cn-16-atlas-v3.webp",
+      "sourceSha256": "4041d463ae5e3208fd90b7d2b9eee5c881d3a8f2de45cf644a7ff2e3d8d2cc02",
+      "fullSha256": "dec64e201d87b08c0d5b4471e38a3791996ada723a1f229c9c53e0cf77fed8d9",
+      "previewSha256": "961764a5a2a725106b9d76b61782f36fad5b6dcd1a16e08071bea6aa328e5dd8",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 4.023677077253935,
+      "visibleRgbPsnr": 36.03834123131122
+    },
+    {
+      "source": "images/chinese-polished/cn-16-atlas-v3.webp#frame=0",
+      "sourceSha256": "4041d463ae5e3208fd90b7d2b9eee5c881d3a8f2de45cf644a7ff2e3d8d2cc02",
+      "fullSha256": "211e79242e11838e183a69e0f70826221b9dbbddd39d8e5991c1acfe74cfad2c",
+      "previewSha256": "dc534514e12ee3b417898fe5a83be7dbfb9e7e7ae6245e1b7b4ca3999591dd33",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 4.017134524965111,
+      "visibleRgbPsnr": 36.05247609791036,
+      "parent": "images/chinese-polished/cn-16-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-16-atlas-v3.webp#frame=1",
+      "sourceSha256": "4041d463ae5e3208fd90b7d2b9eee5c881d3a8f2de45cf644a7ff2e3d8d2cc02",
+      "fullSha256": "cdaddd529b1352ba437b8aa0a07cb8127028ecf25a828ed5dac5442ae49e5842",
+      "previewSha256": "d1bdd2700612f0abdab31ca0cb8ca6ce400ff1f4e64b8bcb2690343e8a1e9044",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 4.088496259368342,
+      "visibleRgbPsnr": 35.899531513774534,
+      "parent": "images/chinese-polished/cn-16-atlas-v3.webp",
+      "crop": {
+        "left": 768,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-16-atlas-v3.webp#frame=2",
+      "sourceSha256": "4041d463ae5e3208fd90b7d2b9eee5c881d3a8f2de45cf644a7ff2e3d8d2cc02",
+      "fullSha256": "22e3c5c0bcce6dda86bdd0d3c9cdbb36555696589f0a555562bd2baddcdfd3d5",
+      "previewSha256": "ceb58a0b021ecfd19f038ca85adca660654eb7db874bcabe2f0a827b5ae51b24",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 4.145860834845185,
+      "visibleRgbPsnr": 35.77850921007401,
+      "parent": "images/chinese-polished/cn-16-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-16-atlas-v3.webp#frame=3",
+      "sourceSha256": "4041d463ae5e3208fd90b7d2b9eee5c881d3a8f2de45cf644a7ff2e3d8d2cc02",
+      "fullSha256": "1aa1fcafe2cce00d69d0e7fbc452e0c3886d23cdb83decdd48c557b1a076f330",
+      "previewSha256": "f413e66e5585bc5c7d465033d14e609a4e6fbd8d892cd11b0d82ad521f9c8134",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.6785456961761853,
+      "visibleRgbPsnr": 36.81728050129145,
+      "parent": "images/chinese-polished/cn-16-atlas-v3.webp",
+      "crop": {
+        "left": 768,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-17-atlas-v3.webp",
+      "sourceSha256": "6aa7a3c23f6969da91c0ea393ca3698f2be8a8f208c4a0a4998c7078e8aaf3fa",
+      "fullSha256": "6766c8037c838a69911bfa2fcb992f2a73675b602428518ab09992185b4e16bd",
+      "previewSha256": "66069580c5ea030037bb98ae6b0e675561b3ee84a5432a3d4637f86bc72b4cfa",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 4.125317365466274,
+      "visibleRgbPsnr": 35.82165630965647
+    },
+    {
+      "source": "images/chinese-polished/cn-17-atlas-v3.webp#frame=0",
+      "sourceSha256": "6aa7a3c23f6969da91c0ea393ca3698f2be8a8f208c4a0a4998c7078e8aaf3fa",
+      "fullSha256": "ba84185dc63d0130b54f69b5b8a61a7b13fd12582fde4d3bb430bf45f42c467b",
+      "previewSha256": "57c67795a550b7cd7a6a535c662bfa07811569515d253afdae348d178434f7cc",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.747858637017175,
+      "visibleRgbPsnr": 36.655139575469924,
+      "parent": "images/chinese-polished/cn-17-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-17-atlas-v3.webp#frame=1",
+      "sourceSha256": "6aa7a3c23f6969da91c0ea393ca3698f2be8a8f208c4a0a4998c7078e8aaf3fa",
+      "fullSha256": "c91d4053c0b5a72e5d06c1a069d3fb61ea4b5b552c08125de63d5761349ff7a2",
+      "previewSha256": "3fffe30506eeb5afbde28056128e1394d95a58f907a7f1b9e8d3003b7b66af46",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 4.655366476665806,
+      "visibleRgbPsnr": 34.771726110585604,
+      "parent": "images/chinese-polished/cn-17-atlas-v3.webp",
+      "crop": {
+        "left": 768,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-17-atlas-v3.webp#frame=2",
+      "sourceSha256": "6aa7a3c23f6969da91c0ea393ca3698f2be8a8f208c4a0a4998c7078e8aaf3fa",
+      "fullSha256": "313966df6f6548ce5095e7ae16a0010a08c87e373d2b1ba1e5bff37c8cffa050",
+      "previewSha256": "c68999cbc7d31319e1cdad135ad3035b2acb6b26657f6992465eba42bbda85a9",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 4.126499815296275,
+      "visibleRgbPsnr": 35.819167008555574,
+      "parent": "images/chinese-polished/cn-17-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-17-atlas-v3.webp#frame=3",
+      "sourceSha256": "6aa7a3c23f6969da91c0ea393ca3698f2be8a8f208c4a0a4998c7078e8aaf3fa",
+      "fullSha256": "25dc7ac4a295883a75a98803417c2f94ce367385f59a52a104fc98c3369355ca",
+      "previewSha256": "22fcd55126d3ee777d8d58171b9c4f86ff5753f749d73181ab55b17f9ea3d840",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 4.012836839079096,
+      "visibleRgbPsnr": 36.0617735728768,
+      "parent": "images/chinese-polished/cn-17-atlas-v3.webp",
+      "crop": {
+        "left": 768,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-17-atlas-v4.webp",
+      "sourceSha256": "81443b565dc82a7600e5e990138b4ccd36a87a95de32364d0aa38f895e0a05bb",
+      "fullSha256": "b3dad02321977739bb776bfe47c9c699006c44f04a55d3f346602a8933bcea41",
+      "previewSha256": "49c629a038c47893d60d11dc74a2a634e6e5b9098eff459ab95161256e66f601",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.4337157101333378,
+      "visibleRgbPsnr": 37.415516898944645
+    },
+    {
+      "source": "images/chinese-polished/cn-17-atlas-v4.webp#frame=0",
+      "sourceSha256": "81443b565dc82a7600e5e990138b4ccd36a87a95de32364d0aa38f895e0a05bb",
+      "fullSha256": "3d86707dbe8a6bff84676d9d2d6a2733702dc1e96fc540be50593b068a025373",
+      "previewSha256": "d8e3eb9ce287acd5dcdd7ac6265ea6a9aa6d3efd9664aa23b3425452f71da1c2",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.2645181973566015,
+      "visibleRgbPsnr": 37.85442173210545,
+      "parent": "images/chinese-polished/cn-17-atlas-v4.webp",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-17-atlas-v4.webp#frame=1",
+      "sourceSha256": "81443b565dc82a7600e5e990138b4ccd36a87a95de32364d0aa38f895e0a05bb",
+      "fullSha256": "e176e72fbdfff163b34f8b712a4951983a5dee596b6f9e3956ca965d1d78d3d9",
+      "previewSha256": "912b53074db183161ea861d817e9b286e60dd77204c6d573d529b04121c0bc97",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.7989644117405215,
+      "visibleRgbPsnr": 36.537499105613676,
+      "parent": "images/chinese-polished/cn-17-atlas-v4.webp",
+      "crop": {
+        "left": 768,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-17-atlas-v4.webp#frame=2",
+      "sourceSha256": "81443b565dc82a7600e5e990138b4ccd36a87a95de32364d0aa38f895e0a05bb",
+      "fullSha256": "3db4833d72da0a4dd7b89dff2aa68c2b056e78d02c8bf7ecbba65f262e617430",
+      "previewSha256": "45304fcc08d088dc6338e4fca223811ad532a29c444f1dab59720aafffaed589",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.396578529519671,
+      "visibleRgbPsnr": 37.50997040845833,
+      "parent": "images/chinese-polished/cn-17-atlas-v4.webp",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-17-atlas-v4.webp#frame=3",
+      "sourceSha256": "81443b565dc82a7600e5e990138b4ccd36a87a95de32364d0aa38f895e0a05bb",
+      "fullSha256": "a3242ef411e2abfefd03f7d7a23de2114aa170930b5e8d8b402d91270cbe16a3",
+      "previewSha256": "fd717bdbbe70aaac4f02e63b7e9b1137be5c4a93eeca0de20d1cbfac46639f60",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.400795024595926,
+      "visibleRgbPsnr": 37.49919447704962,
+      "parent": "images/chinese-polished/cn-17-atlas-v4.webp",
+      "crop": {
+        "left": 768,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-19-atlas-v3.webp",
+      "sourceSha256": "8f13ea64457198fb341aebe468f9df20d0882f4dcc1a609bdcf1e0719e6c0420",
+      "fullSha256": "06ad427952eb3d8f5eaa1ce1b8488561c617511dac3fbccc9b99e268205b9dbe",
+      "previewSha256": "c5177dddfc9fc1865017632a84c31a9186e23d77cf90c9830eee3ea1aaaa21c3",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 4.2735690651245015,
+      "visibleRgbPsnr": 35.51498906903034
+    },
+    {
+      "source": "images/chinese-polished/cn-19-atlas-v3.webp#frame=0",
+      "sourceSha256": "8f13ea64457198fb341aebe468f9df20d0882f4dcc1a609bdcf1e0719e6c0420",
+      "fullSha256": "cb290730c464a73149bc6b47878833a939094a5aa127ae1d1038a716c5118c95",
+      "previewSha256": "ebaca43cc9cbbbd9f9d4a3b80ca9d8db9e3d6d73e9da4c92c93b4e569bd5bdc3",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 4.343492093194061,
+      "visibleRgbPsnr": 35.37402290330399,
+      "parent": "images/chinese-polished/cn-19-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-19-atlas-v3.webp#frame=1",
+      "sourceSha256": "8f13ea64457198fb341aebe468f9df20d0882f4dcc1a609bdcf1e0719e6c0420",
+      "fullSha256": "a3ec7822c73b7d62b61eac14b328c0571b092d0ef7cd4b27784cc94553dd00b2",
+      "previewSha256": "9a8f2c4369c1848020afb891564bc5a8ec0c6ad2e8fcf1c57bd7a01942657318",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.674227923358974,
+      "visibleRgbPsnr": 36.82748174083017,
+      "parent": "images/chinese-polished/cn-19-atlas-v3.webp",
+      "crop": {
+        "left": 768,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-19-atlas-v3.webp#frame=2",
+      "sourceSha256": "8f13ea64457198fb341aebe468f9df20d0882f4dcc1a609bdcf1e0719e6c0420",
+      "fullSha256": "76a476a7aa916e1f0c50ee8c69b2babe006733219bbfd620c333f21f824350b9",
+      "previewSha256": "3f432f2dd94d6df982522e0da28c5479e53108a77da088cf890aa41ee4b67454",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 4.2392913942789585,
+      "visibleRgbPsnr": 35.58493821867834,
+      "parent": "images/chinese-polished/cn-19-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-19-atlas-v3.webp#frame=3",
+      "sourceSha256": "8f13ea64457198fb341aebe468f9df20d0882f4dcc1a609bdcf1e0719e6c0420",
+      "fullSha256": "96d81d4ee752a030be7b9a1e579cb142591f7b0be122dd01fffd032c6d51a3af",
+      "previewSha256": "5cdb34e4dbfa2d1506aa3931cb8048353e1f2d837546964ffa2c57a3d9b71d12",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 4.763770949396248,
+      "visibleRgbPsnr": 34.57178617549002,
+      "parent": "images/chinese-polished/cn-19-atlas-v3.webp",
+      "crop": {
+        "left": 768,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-19-sculpture-atlas-v3.webp",
+      "sourceSha256": "a5b393507c418941d77e0d2994889028a1a2baec491ee4171d786b5c96ec25c6",
+      "fullSha256": "cf4b190d21489289f51e36c85459bc8856f7d2203b6f4d7a9dbb28fb6db3c2b6",
+      "previewSha256": "0c222d0de61cd4f0190d2b533cad9f50b11b03944422b2fc4a392a01d3b7a6ee",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 4.219978260468406,
+      "visibleRgbPsnr": 35.624599335336285
+    },
+    {
+      "source": "images/chinese-polished/cn-21-atlas-v3.webp",
+      "sourceSha256": "fa0922593bddcf8fbb9311066461ab4057ebec811697a4527108a4a1437aa341",
+      "fullSha256": "3db1f15e6bba4771177975a596372f233aa1cffee7738a4a991458a6a04f2cf4",
+      "previewSha256": "e0dffdabc6b592bed0f08f6bbe2f45868688eef73a9768273d8abe89650c0002",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 4.292071189150858,
+      "visibleRgbPsnr": 35.477465275703956
+    },
+    {
+      "source": "images/chinese-polished/cn-21-atlas-v3.webp#frame=0",
+      "sourceSha256": "fa0922593bddcf8fbb9311066461ab4057ebec811697a4527108a4a1437aa341",
+      "fullSha256": "74c87ded85a7c8bf36ffde69ce171e9842f9a5b4a8ac46802dd465e2e93de97e",
+      "previewSha256": "240dc1824645024506ee05460eb052eaf9164f71e9861aef6f61ecbe83723003",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 4.988146068901113,
+      "visibleRgbPsnr": 34.17202035814282,
+      "parent": "images/chinese-polished/cn-21-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-21-atlas-v3.webp#frame=1",
+      "sourceSha256": "fa0922593bddcf8fbb9311066461ab4057ebec811697a4527108a4a1437aa341",
+      "fullSha256": "eaef2486aa761d9f1bcddf3ea9aae74c43afb29613fa38d7e312f4568c3716ce",
+      "previewSha256": "08bcf98f04cce5f0d305f2f01ff04ffbe53149997b55a5d6d5fe95ab30d950a1",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 4.430944220879161,
+      "visibleRgbPsnr": 35.20087795003224,
+      "parent": "images/chinese-polished/cn-21-atlas-v3.webp",
+      "crop": {
+        "left": 627,
+        "top": 0,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-21-atlas-v3.webp#frame=2",
+      "sourceSha256": "fa0922593bddcf8fbb9311066461ab4057ebec811697a4527108a4a1437aa341",
+      "fullSha256": "5a2554ebbd4e3eb556bb1a4d1123f9faad6f65c2a476a168ffd619b9b0b33643",
+      "previewSha256": "9226bb7db5688447aa61862992bdd06ea201e4c35de010b02fbcd845138d816a",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.770813906432849,
+      "visibleRgbPsnr": 36.6021016076288,
+      "parent": "images/chinese-polished/cn-21-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 418,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-21-atlas-v3.webp#frame=3",
+      "sourceSha256": "fa0922593bddcf8fbb9311066461ab4057ebec811697a4527108a4a1437aa341",
+      "fullSha256": "154bbd59b4df54c29a02f2fe39f8c98931bc4f02b944d4bd31c713b2e2869aba",
+      "previewSha256": "1dfb00509987013d96b1afee8207739a7080100dc03026a9b32fae97414b1b0b",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 4.375562551794484,
+      "visibleRgbPsnr": 35.310125673241906,
+      "parent": "images/chinese-polished/cn-21-atlas-v3.webp",
+      "crop": {
+        "left": 627,
+        "top": 418,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-21-atlas-v3.webp#frame=4",
+      "sourceSha256": "fa0922593bddcf8fbb9311066461ab4057ebec811697a4527108a4a1437aa341",
+      "fullSha256": "6ce96a0b9683d0232ba42b0494a08d63a1104d3339e148eb5be9028e5438ad86",
+      "previewSha256": "836974eeee640bf33ff73d13626f340b3121790f18a20fc0a5a846810785e56d",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.8037770953464554,
+      "visibleRgbPsnr": 36.52650242916251,
+      "parent": "images/chinese-polished/cn-21-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 836,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-21-atlas-v3.webp#frame=5",
+      "sourceSha256": "fa0922593bddcf8fbb9311066461ab4057ebec811697a4527108a4a1437aa341",
+      "fullSha256": "ec4b2e232d80cc710ab38efa1d3568ea42b61fe4e80d4c6bdfe83b72d82e7000",
+      "previewSha256": "5a0c15e5e616c30c87367b1a3656466152dac99274008fccef4502328f06b342",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 4.317828437725244,
+      "visibleRgbPsnr": 35.425495962329734,
+      "parent": "images/chinese-polished/cn-21-atlas-v3.webp",
+      "crop": {
+        "left": 627,
+        "top": 836,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-22-atlas-v3.webp",
+      "sourceSha256": "91f3f913ff109461f544b0c1308c16b98670a6fbc1e7a23c6309847950f33499",
+      "fullSha256": "250454711e7ade4d14385c505bd8003bc897b9a55a17881d7bfc68f436c4149a",
+      "previewSha256": "502770dfd6e225ada4ae57eadd1aba68d30bb30390106177418be5eb749a29db",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 4.042778365507621,
+      "visibleRgbPsnr": 35.997204949581395
+    },
+    {
+      "source": "images/chinese-polished/cn-22-atlas-v3.webp#frame=0",
+      "sourceSha256": "91f3f913ff109461f544b0c1308c16b98670a6fbc1e7a23c6309847950f33499",
+      "fullSha256": "50c8b60b55ef5e3087f8093447f2a667ecf94171a80b981ebd25b3b5c850b1b1",
+      "previewSha256": "4a292eb141eff75ee2cac7a10d4e9020e175ce33c18d4191e55ef2b58e41ea2a",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.789131665543339,
+      "visibleRgbPsnr": 36.56000967881694,
+      "parent": "images/chinese-polished/cn-22-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-22-atlas-v3.webp#frame=1",
+      "sourceSha256": "91f3f913ff109461f544b0c1308c16b98670a6fbc1e7a23c6309847950f33499",
+      "fullSha256": "c72876d4438e6bfdb5010052a339bcb9dee5c3acae62206a3a3720b88c81b45f",
+      "previewSha256": "32da0ec37e3162d43147559e115bebb066cb132d2c0b2336559a25fa5cbd9920",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.3437295430337017,
+      "visibleRgbPsnr": 37.64618076155849,
+      "parent": "images/chinese-polished/cn-22-atlas-v3.webp",
+      "crop": {
+        "left": 627,
+        "top": 0,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-22-atlas-v3.webp#frame=2",
+      "sourceSha256": "91f3f913ff109461f544b0c1308c16b98670a6fbc1e7a23c6309847950f33499",
+      "fullSha256": "dab07303bd99750f4c7269b700a7053a85df42de1ed537439fdba960e814581f",
+      "previewSha256": "5a75a3fb76e76b69a10940dd9274638879991a56226d4671e38082ed7e3895ed",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 4.340160562634057,
+      "visibleRgbPsnr": 35.38068768121179,
+      "parent": "images/chinese-polished/cn-22-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 418,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-22-atlas-v3.webp#frame=3",
+      "sourceSha256": "91f3f913ff109461f544b0c1308c16b98670a6fbc1e7a23c6309847950f33499",
+      "fullSha256": "11f1c87665968a98fae446730df94d5ada36d44234da6ada2ce416d150feaf99",
+      "previewSha256": "dd175e84913e67305b4631232c9f5a356da7758d6d693a87978e91e90d186ae0",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 4.023571167970161,
+      "visibleRgbPsnr": 36.038569860110165,
+      "parent": "images/chinese-polished/cn-22-atlas-v3.webp",
+      "crop": {
+        "left": 627,
+        "top": 418,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-22-atlas-v3.webp#frame=4",
+      "sourceSha256": "91f3f913ff109461f544b0c1308c16b98670a6fbc1e7a23c6309847950f33499",
+      "fullSha256": "7c75d6e2d50a52d11e8014b2269e060b77e2cd901cb3a8d09620d909e50a38f0",
+      "previewSha256": "680f2389fdceb3a56631d032f3cf523fd12ddd68b855f7f1bf56832fd1069d26",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 4.392436431936989,
+      "visibleRgbPsnr": 35.27669390804734,
+      "parent": "images/chinese-polished/cn-22-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 836,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-22-atlas-v3.webp#frame=5",
+      "sourceSha256": "91f3f913ff109461f544b0c1308c16b98670a6fbc1e7a23c6309847950f33499",
+      "fullSha256": "0fddafe7625cb0bc3056cd80032eee721fed233a8f5d153ac1be901aec2ea2eb",
+      "previewSha256": "098b92c623ab3230da1527921272fe0fcbfd14ade1761c5c135f6997f860b03d",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.7402592232563596,
+      "visibleRgbPsnr": 36.67276955756519,
+      "parent": "images/chinese-polished/cn-22-atlas-v3.webp",
+      "crop": {
+        "left": 627,
+        "top": 836,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-23-saved-atlas-v3.webp",
+      "sourceSha256": "57d7cd53db9c13f0e502ed899d787bf3eb58911ea94c03a7ea0420b6291f5844",
+      "fullSha256": "5c79f8b745d90c1ebb69eaf5bf43f0c0a0e4130846ecf4d9b22f3d5181aa1870",
+      "previewSha256": "36afa429df902005cee9610cd947c00ed3925b7add80c0a6f58a8c9b35983527",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.2143373004198277,
+      "visibleRgbPsnr": 37.9889746478434
+    },
+    {
+      "source": "images/chinese-polished/cn-23-transition-atlas-v3.webp",
+      "sourceSha256": "c3c3863e8739fa21cd18ee9e89da7298a28b296ad784c8a957c570a551a91e7b",
+      "fullSha256": "50ddd7db8e9f96967138b325af29cb8d2ecd40a761bd225482c0d574f70d6e57",
+      "previewSha256": "28380436ee664d279025732438b6ad1e5ee33d59ff9b0ec6aed7134cee2bca5e",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.8812700904850033,
+      "visibleRgbPsnr": 38.93912418892798
+    },
+    {
+      "source": "images/chinese-polished/cn-23-transition-atlas-v3.webp#frame=0",
+      "sourceSha256": "c3c3863e8739fa21cd18ee9e89da7298a28b296ad784c8a957c570a551a91e7b",
+      "fullSha256": "a3fc30f7148131af8a5429a493ec58e1cc42f4cd0e9f0780ddef6d75dd8c8acb",
+      "previewSha256": "a6998c6c15bb0a66072f1b03e5550fb62c30574fcd4cbbf091835f92f26034ba",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.874939259057932,
+      "visibleRgbPsnr": 38.958230139363565,
+      "parent": "images/chinese-polished/cn-23-transition-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-23-transition-atlas-v3.webp#frame=1",
+      "sourceSha256": "c3c3863e8739fa21cd18ee9e89da7298a28b296ad784c8a957c570a551a91e7b",
+      "fullSha256": "7d8e68c5664cc6bff00f38037b21704a50288d59155919eb69d24b3175fd79a0",
+      "previewSha256": "7aed404c4800bcd61ac948205e1cd1990127dda449129caa6602f6eac771cae8",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.8536461125718513,
+      "visibleRgbPsnr": 39.022801324113416,
+      "parent": "images/chinese-polished/cn-23-transition-atlas-v3.webp",
+      "crop": {
+        "left": 768,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-23-transition-atlas-v3.webp#frame=2",
+      "sourceSha256": "c3c3863e8739fa21cd18ee9e89da7298a28b296ad784c8a957c570a551a91e7b",
+      "fullSha256": "dbbe98bc0d2657bd17e420212228d124ca64446cc3edeeb3466e7dca61f5f9ea",
+      "previewSha256": "9c9c80bb8f43adf5606af8d11688d40a210bc4cc17e3282acab3253d3915aefa",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.9563845811050022,
+      "visibleRgbPsnr": 38.71558503731003,
+      "parent": "images/chinese-polished/cn-23-transition-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-23-transition-atlas-v3.webp#frame=3",
+      "sourceSha256": "c3c3863e8739fa21cd18ee9e89da7298a28b296ad784c8a957c570a551a91e7b",
+      "fullSha256": "e3feb7e65f0b256e631fef30dfde8f1c2b0bf6c6c5de095085ff01d482357d4d",
+      "previewSha256": "ea6e6ac18ee849e601b37eba2292e09feeab56d5175389c33544355ed8896fb1",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.879574439785213,
+      "visibleRgbPsnr": 38.94423740980767,
+      "parent": "images/chinese-polished/cn-23-transition-atlas-v3.webp",
+      "crop": {
+        "left": 768,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-24-atlas-v3.webp",
+      "sourceSha256": "07cc91f0640f7747c36f6b19164753017d40bde896b1673c2fe059c3f7644b8a",
+      "fullSha256": "af0bd8dcb33eec96f81992785976e42474b05a8ff6a8b3a8c80448a745321ac6",
+      "previewSha256": "81095202fc6eeb296fdca280fb13dfef5014d0a2ffc021ef25187be79c1c3b5d",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.6694866492866254,
+      "visibleRgbPsnr": 39.60224854481289
+    },
+    {
+      "source": "images/chinese-polished/cn-24-atlas-v3.webp#frame=0",
+      "sourceSha256": "07cc91f0640f7747c36f6b19164753017d40bde896b1673c2fe059c3f7644b8a",
+      "fullSha256": "0a00933a7053c9a3425245c4a44f88d2583396daff1abfe8078e17991c672176",
+      "previewSha256": "8712afafcff3de8d4b29b6f745c8095198f384078685b2ecbd75151c42d7c645",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.78982086487992,
+      "visibleRgbPsnr": 39.219277248524776,
+      "parent": "images/chinese-polished/cn-24-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-24-atlas-v3.webp#frame=1",
+      "sourceSha256": "07cc91f0640f7747c36f6b19164753017d40bde896b1673c2fe059c3f7644b8a",
+      "fullSha256": "a69006e9ea1f8a962e93db7345dcefadd574d1be80f16d882293f44c42fed623",
+      "previewSha256": "5d622e86ecb0684aaa05ea22502a34926362708ce38a9d2007d6ea3b14b2f02b",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.989766433417341,
+      "visibleRgbPsnr": 38.61805837490036,
+      "parent": "images/chinese-polished/cn-24-atlas-v3.webp",
+      "crop": {
+        "left": 627,
+        "top": 0,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-24-atlas-v3.webp#frame=2",
+      "sourceSha256": "07cc91f0640f7747c36f6b19164753017d40bde896b1673c2fe059c3f7644b8a",
+      "fullSha256": "b04e1bf910cbdd073643321c4da7b969d54e7c1bba5346e5d1380ca65449d638",
+      "previewSha256": "455b1d66735d1731058ba7c01c36e6373ad0418fd6eb7495e3e59ae6e4c9d5c6",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.5424205855957593,
+      "visibleRgbPsnr": 40.02585568279084,
+      "parent": "images/chinese-polished/cn-24-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 418,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-24-atlas-v3.webp#frame=3",
+      "sourceSha256": "07cc91f0640f7747c36f6b19164753017d40bde896b1673c2fe059c3f7644b8a",
+      "fullSha256": "d6452a3c075264c448d5f280ee93246b7e5a4cd9b43aadd82a880f2aaa28a371",
+      "previewSha256": "dbb799ff2cbc7f12b025fbb27decc86d4fceffb1808661d35892bba267e42cc9",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.7388484669404063,
+      "visibleRgbPsnr": 39.37944351702899,
+      "parent": "images/chinese-polished/cn-24-atlas-v3.webp",
+      "crop": {
+        "left": 627,
+        "top": 418,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-24-atlas-v3.webp#frame=4",
+      "sourceSha256": "07cc91f0640f7747c36f6b19164753017d40bde896b1673c2fe059c3f7644b8a",
+      "fullSha256": "078f4df1d66ee680cb039a14c1912439657b63774a946a862870d2b71f39bbcd",
+      "previewSha256": "81b86868005a5d980429996ae3e5e03e0fac3c78c42286ac5d1c73fd1d74fcbc",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.6163269289709894,
+      "visibleRgbPsnr": 39.77696338309035,
+      "parent": "images/chinese-polished/cn-24-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 836,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-24-atlas-v3.webp#frame=5",
+      "sourceSha256": "07cc91f0640f7747c36f6b19164753017d40bde896b1673c2fe059c3f7644b8a",
+      "fullSha256": "1d38a78f8333cc38f55a570fe87a44b523b224374dd112801f5393e21491b057",
+      "previewSha256": "8f6018615a97742173e18a5e2f81b9718119d40d6055954b600f7ad35212037a",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.6292977401737634,
+      "visibleRgbPsnr": 39.73400824567768,
+      "parent": "images/chinese-polished/cn-24-atlas-v3.webp",
+      "crop": {
+        "left": 627,
+        "top": 836,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-25-atlas-v3.webp",
+      "sourceSha256": "d20d0e20d1005430678f11beea32ad800ed2e35b629c8086f760e5cb630dbd67",
+      "fullSha256": "b0da9f85f7340becc817c93d1dd95a4cb511091e8ba6fc44b248dfb1a8423a90",
+      "previewSha256": "eaeffa60b3965dc0aaa81822499355060f90ebfa9aa98089c1b419068201dda7",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.8621210786799325,
+      "visibleRgbPsnr": 38.99704356604388
+    },
+    {
+      "source": "images/chinese-polished/cn-25-atlas-v3.webp#frame=0",
+      "sourceSha256": "d20d0e20d1005430678f11beea32ad800ed2e35b629c8086f760e5cb630dbd67",
+      "fullSha256": "a9638c8d91f90c7ad3de5a59ffc1eaad4242249d521646abf9367cc50e16ce3a",
+      "previewSha256": "a5f48d55f919412d123f880a3a341885c3f5b6944542cd4639be636d21644362",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.881595583307973,
+      "visibleRgbPsnr": 38.93814301223522,
+      "parent": "images/chinese-polished/cn-25-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-25-atlas-v3.webp#frame=1",
+      "sourceSha256": "d20d0e20d1005430678f11beea32ad800ed2e35b629c8086f760e5cb630dbd67",
+      "fullSha256": "a2c4e7282547e23247d13b6991af86de443c0a7fecbebfb199520a3fe7461b50",
+      "previewSha256": "eaea276c38992b145d01323ae41a8e6d171b4569c78ce12b61e7be0691b02b31",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.8450900729252364,
+      "visibleRgbPsnr": 39.048883202456814,
+      "parent": "images/chinese-polished/cn-25-atlas-v3.webp",
+      "crop": {
+        "left": 768,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-25-atlas-v3.webp#frame=2",
+      "sourceSha256": "d20d0e20d1005430678f11beea32ad800ed2e35b629c8086f760e5cb630dbd67",
+      "fullSha256": "52cda01f76134ff8b16e63d7637c53e5c8a510c1a1f2466f6605a3face7ea61a",
+      "previewSha256": "6a0828ff4af6fb58cbede68a99bed50b5bd2bbf779ce1154e8516273f5ae90c5",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.8442188663574965,
+      "visibleRgbPsnr": 39.05154335125142,
+      "parent": "images/chinese-polished/cn-25-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-25-atlas-v3.webp#frame=3",
+      "sourceSha256": "d20d0e20d1005430678f11beea32ad800ed2e35b629c8086f760e5cb630dbd67",
+      "fullSha256": "9e803ef2c941690468114908b647cafa14a1c927c11cc83df4175d5b3aedfee9",
+      "previewSha256": "6e9acf65530a2c9a092bfddefb5201c648c71cec0699ef9c1e5ca28de7bdb4ed",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.6480253655997723,
+      "visibleRgbPsnr": 39.67236079024996,
+      "parent": "images/chinese-polished/cn-25-atlas-v3.webp",
+      "crop": {
+        "left": 768,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-26-atlas-v3.webp",
+      "sourceSha256": "b96f1c908ff91b72a22e577284f89ac639eba9a8412214337ece567c89610abf",
+      "fullSha256": "d35221c60d14aeb5413aeb92e1cf3a26b56144c2ea48dfb098494948eee860d9",
+      "previewSha256": "f593b8fffbb660fad1a46ecfb0106bca5525396f483a27c3cbedea4f1ea2e946",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.6738240790097514,
+      "visibleRgbPsnr": 39.5881470088631
+    },
+    {
+      "source": "images/chinese-polished/cn-26-atlas-v3.webp#frame=0",
+      "sourceSha256": "b96f1c908ff91b72a22e577284f89ac639eba9a8412214337ece567c89610abf",
+      "fullSha256": "e55d9afef7e8469432d347b4e3e7b0767930f10d83a46eee908ce1b11ec18e3a",
+      "previewSha256": "b93798bb044d6eee09cfe3b48f180c7396ea1fa6f7b6315674f4bc511e2a8517",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.1038116841782832,
+      "visibleRgbPsnr": 38.29289633506955,
+      "parent": "images/chinese-polished/cn-26-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-26-atlas-v3.webp#frame=1",
+      "sourceSha256": "b96f1c908ff91b72a22e577284f89ac639eba9a8412214337ece567c89610abf",
+      "fullSha256": "b1dd0fc9e0660fb7f167c298119e2419b6ded039021bbabb70b7349e1f7bea6a",
+      "previewSha256": "45d12054e5e5f02f63cca1896227f17aa32de423d6da21248acaddb3e2493d3c",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.599163606399375,
+      "visibleRgbPsnr": 39.83413126128947,
+      "parent": "images/chinese-polished/cn-26-atlas-v3.webp",
+      "crop": {
+        "left": 627,
+        "top": 0,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-26-atlas-v3.webp#frame=2",
+      "sourceSha256": "b96f1c908ff91b72a22e577284f89ac639eba9a8412214337ece567c89610abf",
+      "fullSha256": "dd2d84c30e78e6e3e25d3d0a8c5f84a8bb95830b7bab0b9f9f859419d8607675",
+      "previewSha256": "d1ea435637d43de971ab442dc771c08ea10d952f44fd1b375e29149d346fda35",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.5210117725605823,
+      "visibleRgbPsnr": 40.09930613389543,
+      "parent": "images/chinese-polished/cn-26-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 418,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-26-atlas-v3.webp#frame=3",
+      "sourceSha256": "b96f1c908ff91b72a22e577284f89ac639eba9a8412214337ece567c89610abf",
+      "fullSha256": "fcd697ee90c9ea497503c5f03a5efdfaab37c1b5e9a0499dce0fefe0a29105a7",
+      "previewSha256": "b9ac16031dfa43673d5c41efa851d791a2b3f9ad0fc239a91951b805ff656ab3",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.603590469515469,
+      "visibleRgbPsnr": 39.81935014606186,
+      "parent": "images/chinese-polished/cn-26-atlas-v3.webp",
+      "crop": {
+        "left": 627,
+        "top": 418,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-26-atlas-v3.webp#frame=4",
+      "sourceSha256": "b96f1c908ff91b72a22e577284f89ac639eba9a8412214337ece567c89610abf",
+      "fullSha256": "077ba532eb0b38f7bb121db15e62b861715d655d9db0ea13d1995e5634ccee39",
+      "previewSha256": "2db43c01cad52b7bafd923d346557831fcb6619b93aa7085f1cfa492c07eb675",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.6783744709531927,
+      "visibleRgbPsnr": 39.57337767196921,
+      "parent": "images/chinese-polished/cn-26-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 836,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-26-atlas-v3.webp#frame=5",
+      "sourceSha256": "b96f1c908ff91b72a22e577284f89ac639eba9a8412214337ece567c89610abf",
+      "fullSha256": "0d4cc11253f315e5c2f391e5afef9cc12060a890642c47f50ede6f5ed6be68ad",
+      "previewSha256": "64a8e0e9da5ec1383a3d9695322b25a467346e66726b746b01155018e4ee0a53",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.5006087591153254,
+      "visibleRgbPsnr": 40.16988864691048,
+      "parent": "images/chinese-polished/cn-26-atlas-v3.webp",
+      "crop": {
+        "left": 627,
+        "top": 836,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-polished/cn-observation-transfer-v3.webp",
+      "sourceSha256": "d5e448de4755416d2a11f961fa593eece57b4c83f982e10216e1340c1ef33395",
+      "fullSha256": "8f7e0402af09531ba260d70121f296a570bb3ccc98e9f61c7fec9e4dce58db6a",
+      "previewSha256": "388b07e9e11085faab30a6bdb652c7d475c1f2616a9ea9ac0326c23c7cac62d0",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.3478310062939625,
+      "visibleRgbPsnr": 37.635533062436046
+    },
+    {
+      "source": "images/chinese-polished/tianmen-atlas-v3.webp",
+      "sourceSha256": "2f89d2d8d5b97a17c23755771d95897150c0d925df700ee326be8b4d8dc74c8a",
+      "fullSha256": "b7bb7a5777ed66cea7c47d053e2ae2905214c3202024a3f7a48becfe2f10b646",
+      "previewSha256": "f649db37f90206d1a5026f3ac843abe3d586dd073fc6b3ab3986671f59286e8f",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.9525551634457834,
+      "visibleRgbPsnr": 36.19324481198733
+    },
+    {
+      "source": "images/chinese-polished/tianmen-atlas-v3.webp#frame=0",
+      "sourceSha256": "2f89d2d8d5b97a17c23755771d95897150c0d925df700ee326be8b4d8dc74c8a",
+      "fullSha256": "6f00a58fb679a26aabf1b7c7531c0a6acfe6b8aefdb5591b83cb3e741c7f5fa6",
+      "previewSha256": "bb5a84e831beca5c31d1a10559b54c68e9b046ded38407bbac98ae678fd5e377",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 4.1514702946180835,
+      "visibleRgbPsnr": 35.76676491418433,
+      "parent": "images/chinese-polished/tianmen-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/tianmen-atlas-v3.webp#frame=1",
+      "sourceSha256": "2f89d2d8d5b97a17c23755771d95897150c0d925df700ee326be8b4d8dc74c8a",
+      "fullSha256": "a0b27a9eb00deceaa7d3e24d2515f6fe8f25ab84c615209fcc45959f8242880c",
+      "previewSha256": "be97b2be3c49d7b6bbeb1956e4d023c825eb582d6adfee862587398472634d47",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 4.035049422291136,
+      "visibleRgbPsnr": 36.01382643992438,
+      "parent": "images/chinese-polished/tianmen-atlas-v3.webp",
+      "crop": {
+        "left": 768,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/tianmen-atlas-v3.webp#frame=2",
+      "sourceSha256": "2f89d2d8d5b97a17c23755771d95897150c0d925df700ee326be8b4d8dc74c8a",
+      "fullSha256": "bb0a2a607c6afb5ab1ce808fe466fd940ca45bf2e99452b5aadce5a16920dbda",
+      "previewSha256": "524370b05457747626c5d08fe5c8bf7431cbaee8428da77589b952de2a00dfad",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.8002113506591737,
+      "visibleRgbPsnr": 36.53464859280317,
+      "parent": "images/chinese-polished/tianmen-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/tianmen-atlas-v3.webp#frame=3",
+      "sourceSha256": "2f89d2d8d5b97a17c23755771d95897150c0d925df700ee326be8b4d8dc74c8a",
+      "fullSha256": "406bffc9254b4db18e14f0f79f483542d8df721bc557b2e64bda2039503e3444",
+      "previewSha256": "e47d0667b15a80928ed4f6ff6e71e495e326e4417ee7a25a74c17da4b2954c28",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.7821427229363196,
+      "visibleRgbPsnr": 36.57604534158615,
+      "parent": "images/chinese-polished/tianmen-atlas-v3.webp",
+      "crop": {
+        "left": 768,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/westlake-atlas-v3.webp",
+      "sourceSha256": "a1d8f82507c013b1f14920eea8c49f9b8080017cc8077f6f4f15b37346d91e7b",
+      "fullSha256": "b00fc8816d13288be4bf52d02cfe95dadd7091905952a1477d9cf269c6926d4c",
+      "previewSha256": "0b376076b6375457ebcf2542c2cccf704558f521bda46d5dadca7c86d2028391",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.548632962399513,
+      "visibleRgbPsnr": 37.12958196293778
+    },
+    {
+      "source": "images/chinese-polished/westlake-atlas-v3.webp#frame=0",
+      "sourceSha256": "a1d8f82507c013b1f14920eea8c49f9b8080017cc8077f6f4f15b37346d91e7b",
+      "fullSha256": "b348b003c0f56fbf470ce0582796ae82565eb724e767484c6cf05b6760389663",
+      "previewSha256": "b48cbca77a288583e5e99771f0587f14466fd9a948127b3da9383aae0889a7c9",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.898071299043997,
+      "visibleRgbPsnr": 36.31380803927493,
+      "parent": "images/chinese-polished/westlake-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/westlake-atlas-v3.webp#frame=1",
+      "sourceSha256": "a1d8f82507c013b1f14920eea8c49f9b8080017cc8077f6f4f15b37346d91e7b",
+      "fullSha256": "c76f78e4f0db02307f9cb2078665eadb0b458f30ebc5b617b587a566402e705f",
+      "previewSha256": "b8393af9c1e1ddad9a570d6a9b19c58a460122aa98052e1e2fde4958c9f89865",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.0521363827691967,
+      "visibleRgbPsnr": 38.43872489090734,
+      "parent": "images/chinese-polished/westlake-atlas-v3.webp",
+      "crop": {
+        "left": 768,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/westlake-atlas-v3.webp#frame=2",
+      "sourceSha256": "a1d8f82507c013b1f14920eea8c49f9b8080017cc8077f6f4f15b37346d91e7b",
+      "fullSha256": "6512d9d15c3080f94f0e472b62b4691f93f554ee1b40635050be07111b11acad",
+      "previewSha256": "4dd6520529d4575983065048e1310a3cbb08e6d2b703a21407971a6cca2a27cf",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.168118997113581,
+      "visibleRgbPsnr": 38.1147738951582,
+      "parent": "images/chinese-polished/westlake-atlas-v3.webp",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-polished/westlake-atlas-v3.webp#frame=3",
+      "sourceSha256": "a1d8f82507c013b1f14920eea8c49f9b8080017cc8077f6f4f15b37346d91e7b",
+      "fullSha256": "8f34e9c68ebc0d8de1285a882effb0856d0cb5d40f28d21046a80bc1561bda01",
+      "previewSha256": "41c1e165d790ee6bf11b523605da14048e920bed7f17061e177e98bbe77564a3",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 4.225925951533074,
+      "visibleRgbPsnr": 35.6123659508621,
+      "parent": "images/chinese-polished/westlake-atlas-v3.webp",
+      "crop": {
+        "left": 768,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-precision/cn-01.webp",
+      "sourceSha256": "544eb9c1ea4830121712cf5327915d18e0a056b1f4ef176b8443fe23ecc14167",
+      "fullSha256": "f00782923424bd322a41919b7cfe6a2786ce73e7eb28f992b5769293d06a575e",
+      "previewSha256": "50e6a7ff1f5ef19c0a57cff9d8341e46e7070fcdcac1797042a8f8cb857cbffe",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.394429423006542,
+      "visibleRgbPsnr": 40.5467627982336
+    },
+    {
+      "source": "images/chinese-precision/cn-02.webp",
+      "sourceSha256": "a822a6afbadf5298235de7a53b622a9c47c65c439cdff9eeeb8f7f20dea58130",
+      "fullSha256": "ea7b115b984dc35cbc24d36e2f500be5b4c1b143ab51677a0b535275d7a84106",
+      "previewSha256": "a63ce306846c47bca0fd16baa87516e80b707c7daa0c7f44997d695be75ff5d8",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.5636370444144876,
+      "visibleRgbPsnr": 39.953672838903486
+    },
+    {
+      "source": "images/chinese-precision/cn-03.webp",
+      "sourceSha256": "3602ae48edc43989359ebdf552944f13fd6cea77eb2bdfb1879ba5b8f0e73710",
+      "fullSha256": "a72a361a75c256c57c4bedd2f69e2f24c7fd8dd3e4a9431024deb122230f7b22",
+      "previewSha256": "579951c7a837e66e546faf6a1ad74918b0a4c43095286a14e6e1864d31c2cdb5",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.108234464515996,
+      "visibleRgbPsnr": 41.65242543438666
+    },
+    {
+      "source": "images/chinese-precision/cn-05.webp",
+      "sourceSha256": "0b71eb9278762baedf90e14acbd553a02ec5c42512a5dd57b5f24923d5085b6e",
+      "fullSha256": "df731380f9091aab346da0538755c782c6bc8c8b55e62bdf93df07f4faf163bb",
+      "previewSha256": "1c1eb1e41968e23eef7f307530405cf7088a2c24bbd118a5e13ed72a0f369d31",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.721902084556472,
+      "visibleRgbPsnr": 39.433353644688204
+    },
+    {
+      "source": "images/chinese-precision/cn-06.webp",
+      "sourceSha256": "8f8901934aa17fda877407c059f1f7cfa29b1ba792283e9c3e2e59276db8d713",
+      "fullSha256": "b817e8af24c32acd98df433671779e9efad7dad926df1c90660059bb96f16be5",
+      "previewSha256": "bdb23f53461ce4c3d2b3eaa7c497b3b9b2255bca1596b0a014d72663cbc9a10e",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.6688526253941287,
+      "visibleRgbPsnr": 39.604311756347656
+    },
+    {
+      "source": "images/chinese-precision/cn-07.webp",
+      "sourceSha256": "8e3f28519c59e99107d0b92303665c679fa4ca822b61574de2a0a2e2e9ca00b8",
+      "fullSha256": "5e6ca87bc206fc40ad99ca7977aabdab922709d1e56c7cf74b22896a301f1d23",
+      "previewSha256": "47ee1e11cfc97789bbae657b2df845b81be655296cc0dc34771ef0f72188e21d",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.4703614546088395,
+      "visibleRgbPsnr": 40.275593561645294
+    },
+    {
+      "source": "images/chinese-precision/cn-09.webp",
+      "sourceSha256": "25de84316a1c9e395532b298e8d5bbba3598f5b61fa721110681137134aea04f",
+      "fullSha256": "ce398848b8ce1866a8dddc87bce8ed6184be5fe72e43fe7b8abd47a35f35c969",
+      "previewSha256": "3638be3aca119db4a7a10439f5ebd683d82a020bbee7c018a131dc873c9e0fad",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.582779937865042,
+      "visibleRgbPsnr": 39.889055522706386
+    },
+    {
+      "source": "images/chinese-precision/cn-10.webp",
+      "sourceSha256": "c46c97e47e93f70da0669f77c7317b985c41d77a50bef079333ea709761afe8f",
+      "fullSha256": "0865d6817e0061773f1c78c17d1ee42cb9ca1e0b94c164bdca848551df9a68ec",
+      "previewSha256": "274ce961d8c1ff4072c9cab8efdc0e342ce33cca9313d3784ed850150910fb9a",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.499174108779306,
+      "visibleRgbPsnr": 40.174873349310225
+    },
+    {
+      "source": "images/chinese-precision/cn-11.webp",
+      "sourceSha256": "4a38fc391d7b775e020ea6bef3d3b29424fd355c085c97676827feb6c01bfe17",
+      "fullSha256": "a413153679d02f78125483c98d5cd856adfe928f19f789f841aaec2d1e76baf5",
+      "previewSha256": "960f2a210277a1fcfc36c0d943cd85d5b711cb276b570b019ef325086bf136c7",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.1962011310349023,
+      "visibleRgbPsnr": 41.29736139130876
+    },
+    {
+      "source": "images/chinese-precision/cn-12.webp",
+      "sourceSha256": "a5d109b34dae220e7d7a94e4c5120ba5cf1de745b10f0604988ae9ce87265ca3",
+      "fullSha256": "0068788f87f84cc221651b5822e0a4f462449fa4ff689854272f824ff91e7b88",
+      "previewSha256": "16da46c60947f5265a8b9ba6a86d36ed56e42efd9b145367b33e02b6e0fa56da",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.4116586117279297,
+      "visibleRgbPsnr": 40.48448700479048
+    },
+    {
+      "source": "images/chinese-precision/cn-13.webp",
+      "sourceSha256": "280bf9e3ee1b8262b8a2142923f6a3e893fa197f6ee4494586e53d4f8ed4febc",
+      "fullSha256": "cf306ea02ae69529fab209765edd630ecab06b61e46981ee334b2d2f8610565c",
+      "previewSha256": "7eb0a757aa4bca1b3bde70d9c70b7e47f0eefeceb178c50c184288a967f14c88",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.2090354618963657,
+      "visibleRgbPsnr": 41.24674985456147
+    },
+    {
+      "source": "images/chinese-precision/cn-16.webp",
+      "sourceSha256": "96af838171fe1821beb197e2bc9ddb49d588061cbe1807791609057261b81407",
+      "fullSha256": "2ae99b81f4f7c0eb039e95cec5b336fb9ebfc6c204c12000c90612837e9770ac",
+      "previewSha256": "adbeedc35ffb1b78c917bb6cf250271cfe238d95d7c6a52a28da216cdc66a530",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.5244709178196114,
+      "visibleRgbPsnr": 40.08739616986888
+    },
+    {
+      "source": "images/chinese-precision/cn-17.webp",
+      "sourceSha256": "519476f1395f2a7230de71c6948c270213886d2a681d0b765b6af5325479b398",
+      "fullSha256": "93c93b9710fd323df256af0def2c30dde35a3542233045217e6a116ebcc07edb",
+      "previewSha256": "e8e30e527ebed74c426eb88f6e16e3d220014ba6488db3d7005f712d09891f71",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.555228898921647,
+      "visibleRgbPsnr": 39.98220739726158
+    },
+    {
+      "source": "images/chinese-precision/cn-18.webp",
+      "sourceSha256": "2a7a4a93dd6826a019980aa26e35251a064e6063495ad420debe65cf5a96f437",
+      "fullSha256": "2197d5b0d39b8b819c946a61afe36167cb288df8c0ccc99058130db88f0d2711",
+      "previewSha256": "1c71f0e58e513c30101d5f4de456cf74986aab12a3f55ff6ea5b5d4c6438d184",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.622218035391071,
+      "visibleRgbPsnr": 39.75742760659911
+    },
+    {
+      "source": "images/chinese-precision/cn-19.webp",
+      "sourceSha256": "ccc9b6102d574efaee941ccc6ca1d29e02297ad6f0ff7cbcf8bcc448ff9ae88e",
+      "fullSha256": "6a375609976e022c92f38b528cae589e2edd881f2b08235ba3dd923ffcd00b14",
+      "previewSha256": "0b579b8000705b8d8012789f7f2495f67bfbc424f9955fd520e0a0de57df4a6a",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.4404523744207474,
+      "visibleRgbPsnr": 40.381396872848676
+    },
+    {
+      "source": "images/chinese-precision/cn-21.webp",
+      "sourceSha256": "e5df146ef20c83f785311ecfa36b8184b3fc495e7cb0c7d630e2445e72b9f946",
+      "fullSha256": "ca65712497aadc8c661450964fe30893348ae2598f2b61d42aec937fd628619a",
+      "previewSha256": "48ddd4fbcc97a528ee25a6c8e8914e73cfe03c916fd30b3bd3be05e355697b49",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.6196034176121623,
+      "visibleRgbPsnr": 39.7660926416677
+    },
+    {
+      "source": "images/chinese-precision/cn-22.webp",
+      "sourceSha256": "00479b40bfca1f87aae440f9f183c5d3c139b9a71d15cbaf7c4654d65ae81d42",
+      "fullSha256": "e63d64dd774ef6d80342100f77b24194ecf7b2d442e0f7789f564878fe09907d",
+      "previewSha256": "1c59501cc342ad691ef17318fc5b7c17f8e883374faaabd5be130d9fa14cdc14",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.5055833563586245,
+      "visibleRgbPsnr": 40.152626498006015
+    },
+    {
+      "source": "images/chinese-precision/cn-23.webp",
+      "sourceSha256": "518e69973cb2072701240f4a3ca1dc63872cfd677f6b50ba6e5b653407ca06f2",
+      "fullSha256": "2c5dea53a589c0100cc11db11e5c86f4cc0a72e1e4d1838f41a61ba481765859",
+      "previewSha256": "aebbff95c5eb570d1e43fc8b60d9dbd1c7ae05834dcf03d7441ac36e2505f49f",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.447057088802887,
+      "visibleRgbPsnr": 40.35792158116223
+    },
+    {
+      "source": "images/chinese-precision/cn-24.webp",
+      "sourceSha256": "3d392eb29913bf33f7d3bf1f26196753c75e7784d34ac70d2697fca777b51b46",
+      "fullSha256": "96817fb361ee990523f8ae040cb094278c83158f30040df079814ba473b7cea7",
+      "previewSha256": "a29297f74b0b205b67dbfd96204cff6c434dff5c9c8e170de0c33688f29f3748",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.012756198663611,
+      "visibleRgbPsnr": 42.05498015250991
+    },
+    {
+      "source": "images/chinese-precision/cn-25.webp",
+      "sourceSha256": "b35dd08141fbc9dd5b8ef1c3d509894eaf58675b97788146c567d1e9b3b979e4",
+      "fullSha256": "7e586650dacdcb3acbe9954da329fa6262109b670de9e273d9bb97ebf86fed6c",
+      "previewSha256": "f1fa90d7f8b0f8f6232827863e0c9939fc6cabe3678de52bf3a8b1314cdc3727",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.076301813869187,
+      "visibleRgbPsnr": 41.784993941424354
+    },
+    {
+      "source": "images/chinese-precision/cn-26.webp",
+      "sourceSha256": "ccd3bc3e03a5c233e49229ec663572222e5cd245e46a4bab025d2e14a6f611d0",
+      "fullSha256": "a82ebd8ae82df39817945e5e238424ff1c7234e1619b19afa6bb303ae2ccfec6",
+      "previewSha256": "cc6906817a294dbbef124c0aa3a8509067cf9e6bcb29fe3b7c1ea2d6cd458889",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.029689613336617,
+      "visibleRgbPsnr": 41.98221102304147
+    },
+    {
+      "source": "images/chinese-precision/luchai.webp",
+      "sourceSha256": "ba625952417cfb7aaf34efa1605952e8f8a53fb69fc24ecb75806705f2b30e74",
+      "fullSha256": "1cb5084a30ae2cf4672129461b8278b0b8d739582fae4a06c49426eb1cde5413",
+      "previewSha256": "323638af6c10f4da1c5be4b17681e623895b4f53595a1932f7c8552ae3d69a6e",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.5081935974604472,
+      "visibleRgbPsnr": 40.143582510450784
+    },
+    {
+      "source": "images/chinese-precision/shanxing.webp",
+      "sourceSha256": "82d4169edc65774e6213be775a701c5c1d1c8fbd2119d520289ea72895395446",
+      "fullSha256": "1f6b0e52b10e29028d887fe825e283bab910469a637ca21c09dee4ef74a39923",
+      "previewSha256": "e696e18da4479b6e58ec22708354608442c61bf65b8963c1b23d6aacc58eafbd",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.7430714881745444,
+      "visibleRgbPsnr": 39.36606108753886
+    },
+    {
+      "source": "images/chinese-precision/wangdongting.webp",
+      "sourceSha256": "4e736e84503a2b060cf9c3cdc90c9dfded5b73d19221b16f4cf54551a82f89c1",
+      "fullSha256": "d16b0b35a1937e7672a787287b8ac1461faab199542e7bdae400e8298a3d0769",
+      "previewSha256": "09f2d76d6130eca89a7ee7f70c2629c8d8cd73640edb6c0f1fc9641eec3085a0",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.0750875942222784,
+      "visibleRgbPsnr": 41.790074928589576
+    },
+    {
+      "source": "images/chinese-precision/wangtianmenshan.webp",
+      "sourceSha256": "dc4d9d2b432a9b8993b358b3a5bed7a895b731a880672a3004024dd575684944",
+      "fullSha256": "ec42ddd8eaaaa7dee598105e479df98e8dc0a0d825b4a74d425c576d438a71b6",
+      "previewSha256": "7901dad52b7833085f30126f91259bd538f7b8a8b789ca211511587151380a09",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.2775300932821203,
+      "visibleRgbPsnr": 40.98152112730397
+    },
+    {
+      "source": "images/chinese-precision/yeshusuojian.webp",
+      "sourceSha256": "c3676cd63897a84692bf00bc09eb4861ce93e3bdca7f3c0d2a8dcfcbcd44557c",
+      "fullSha256": "f2ab514da8012e1f35ef27142e9441fa27cf4f2eb37791b33786cbc8f9fe7eb2",
+      "previewSha256": "0260949c0473b384039bbd62091ab4fb062e1fc9ccdcb325434832ac33b54945",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.3838808760099277,
+      "visibleRgbPsnr": 40.585112615705576
+    },
+    {
+      "source": "images/chinese-precision/yinhushang.webp",
+      "sourceSha256": "541c279794db690a93426711ecf5eb5f67669c6f79112e8076c13f0388feb27e",
+      "fullSha256": "1f59cf34753f71599ce7ca748474c3f8bb2ed657f5d0bd68ec85ea575f1dcdb7",
+      "previewSha256": "d71abcf3a26c48d1c01fafbf1d2dde9a58fbb9d5046163a3a4df18c1ca647183",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.473638488439062,
+      "visibleRgbPsnr": 40.26407901525132
+    },
+    {
+      "source": "images/chinese-scenes/cn-05-footsteps.webp",
+      "sourceSha256": "d9bf65692a8107eeac2c96990506963c8a893eb2ce12bf988e7acf32dc5ae83e",
+      "fullSha256": "dd7d3dd0e5cbe354d9d7c24909c78797ec220a24e086fd7bb2b7fd88b061e814",
+      "previewSha256": "72d2290924cc0dbd953fc2be01676e4d5430cfc87f978fc0eb0496af74325cfb",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.074127200211022,
+      "visibleRgbPsnr": 38.37636693612137
+    },
+    {
+      "source": "images/chinese-scenes/cn-06-atlas.webp",
+      "sourceSha256": "d4a1444b28b4255abb650333c2eb4aca60e3b360b75b6c997fe236666abadbe1",
+      "fullSha256": "d7a8e9dd9e6251b01af8da0940f65f7da666e254191e586af1a27013d4bd254f",
+      "previewSha256": "7863462c79195ca570299ff3a1449395fb0ee90dcd50930efed520db34d28c68",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.6590304765498076,
+      "visibleRgbPsnr": 36.86348307271964
+    },
+    {
+      "source": "images/chinese-scenes/cn-06-atlas.webp#frame=0",
+      "sourceSha256": "d4a1444b28b4255abb650333c2eb4aca60e3b360b75b6c997fe236666abadbe1",
+      "fullSha256": "e2d1eaa1d4d60a9a59610b2cc4238f07b5aa0c552e90b79c87acaa9a95b9afe0",
+      "previewSha256": "3f2a6315e222ce52ceb192229290b24673ba4865ddd4e5da66603165f25c5728",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 4.110586551043512,
+      "visibleRgbPsnr": 35.85272766893776,
+      "parent": "images/chinese-scenes/cn-06-atlas.webp",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-scenes/cn-06-atlas.webp#frame=1",
+      "sourceSha256": "d4a1444b28b4255abb650333c2eb4aca60e3b360b75b6c997fe236666abadbe1",
+      "fullSha256": "738f82f86001cbd6dd3988ecc89ad3a75d77c319aa8f89042c5df2f07e9b0e93",
+      "previewSha256": "206c23f6e024ed539cb6991fef8730a2b6a5805cca2bc5a889497a032b310a82",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.3057257201547077,
+      "visibleRgbPsnr": 37.74546727227579,
+      "parent": "images/chinese-scenes/cn-06-atlas.webp",
+      "crop": {
+        "left": 768,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-scenes/cn-06-atlas.webp#frame=2",
+      "sourceSha256": "d4a1444b28b4255abb650333c2eb4aca60e3b360b75b6c997fe236666abadbe1",
+      "fullSha256": "8d486258bc109a467d7d5fa4c9373eaf6be967aaa5717ff60dd9f7a5d7546fc5",
+      "previewSha256": "f9951e6f3438baac50885b0e901a9a43c1045606abce57019df6b6000be9a0d1",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.4811065808653074,
+      "visibleRgbPsnr": 37.29645720347549,
+      "parent": "images/chinese-scenes/cn-06-atlas.webp",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-scenes/cn-06-atlas.webp#frame=3",
+      "sourceSha256": "d4a1444b28b4255abb650333c2eb4aca60e3b360b75b6c997fe236666abadbe1",
+      "fullSha256": "809278b063e2db90d310f4ffcb1f4b2b7ba3074a48f740445ba96fda90151ace",
+      "previewSha256": "23b446146ac88cec94a0329176e78e0bbd1051d08c1c30e1c86b51631270168c",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.2211340312735177,
+      "visibleRgbPsnr": 37.97062768520402,
+      "parent": "images/chinese-scenes/cn-06-atlas.webp",
+      "crop": {
+        "left": 768,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-scenes/cn-18-atlas.webp",
+      "sourceSha256": "b2efc6d49551398ae6d93bbe79dd37c0d61e71ae72c1615b3ca83b750cbb3795",
+      "fullSha256": "b47b961c692a1674b69246ceaae1364e0ab36e50a77cc2564f473e3e0219738a",
+      "previewSha256": "577a2f19ea57e675244ccdb5dfab4b1dd8ea0b71ec527eb0b889ba81c8cc2d08",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 4.4939846524026175,
+      "visibleRgbPsnr": 35.07817191051594
+    },
+    {
+      "source": "images/chinese-scenes/cn-18-atlas.webp#frame=0",
+      "sourceSha256": "b2efc6d49551398ae6d93bbe79dd37c0d61e71ae72c1615b3ca83b750cbb3795",
+      "fullSha256": "39d3e702c7ef37db68055727cb77eda70cb23541ba9ce197073a94142014ce65",
+      "previewSha256": "3e4e7d91d06dc6d793c1128b4d61871d06e539bd55189fd41f726dc3f22f2fa7",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 4.456204485441605,
+      "visibleRgbPsnr": 35.151501379812196,
+      "parent": "images/chinese-scenes/cn-18-atlas.webp",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-scenes/cn-18-atlas.webp#frame=1",
+      "sourceSha256": "b2efc6d49551398ae6d93bbe79dd37c0d61e71ae72c1615b3ca83b750cbb3795",
+      "fullSha256": "f8232b4dccfcfc2c0968075c76595e0923aabdddf2a2f196b645848cf03319b2",
+      "previewSha256": "ac2532fde5ed786ca050fece2d0418acdb1b491a001eeb321e548deb51f556e5",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 4.588442180361857,
+      "visibleRgbPsnr": 34.89749833936151,
+      "parent": "images/chinese-scenes/cn-18-atlas.webp",
+      "crop": {
+        "left": 768,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-scenes/cn-18-atlas.webp#frame=2",
+      "sourceSha256": "b2efc6d49551398ae6d93bbe79dd37c0d61e71ae72c1615b3ca83b750cbb3795",
+      "fullSha256": "346d03353c56e25d459d176d8764328a95c83a8961d6465993280640c1afa196",
+      "previewSha256": "e1b34f6ddd5fc30152e9e5b3303b51ecb278414d223fa56ca7e32fa539d27c0d",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 5.028748832397174,
+      "visibleRgbPsnr": 34.101604713830596,
+      "parent": "images/chinese-scenes/cn-18-atlas.webp",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-scenes/cn-18-atlas.webp#frame=3",
+      "sourceSha256": "b2efc6d49551398ae6d93bbe79dd37c0d61e71ae72c1615b3ca83b750cbb3795",
+      "fullSha256": "f7751e7fdbab55bea505d327f01946938dc2fbaa33e0554f0b6cc36f6c681dd4",
+      "previewSha256": "ad64c7e28467877d9072314198a345587b0cc2dc2927e39061b2cc3a2e01351f",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.3668048087505302,
+      "visibleRgbPsnr": 37.586444832683334,
+      "parent": "images/chinese-scenes/cn-18-atlas.webp",
+      "crop": {
+        "left": 768,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-scenes/cn-23-atlas.webp",
+      "sourceSha256": "7b2491967cddcfef4e1f86432e0a4c037afbd52b25be5aa79fcf57644be5c83c",
+      "fullSha256": "47996ef18953eff9f47d0395deed34fc973bf21d2846c895ff5f81fbbfbba44c",
+      "previewSha256": "a601807ebabb0f75602ea093683d5adaf49d845cc6e0e645590de542f06523af",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.837402080950464,
+      "visibleRgbPsnr": 39.072385950464586
+    },
+    {
+      "source": "images/chinese-scenes/cn-23-atlas.webp#frame=0",
+      "sourceSha256": "7b2491967cddcfef4e1f86432e0a4c037afbd52b25be5aa79fcf57644be5c83c",
+      "fullSha256": "a7e6c79d7adaef09163ddbee0931f92fe31872704dfafdca5eca7ad8c6a93a29",
+      "previewSha256": "2d5d454d8c90f2ca0275dc743c3c1f44bda562f78d88f12ad2ed73392b91e10f",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.847291328439534,
+      "visibleRgbPsnr": 39.04216549959494,
+      "parent": "images/chinese-scenes/cn-23-atlas.webp",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-scenes/cn-23-atlas.webp#frame=1",
+      "sourceSha256": "7b2491967cddcfef4e1f86432e0a4c037afbd52b25be5aa79fcf57644be5c83c",
+      "fullSha256": "2913a705b83fc9185af9022f0cb66b50974630fb1bc4d8af6b99cd7a0d0a1aaa",
+      "previewSha256": "368ced421221f9433260e091d4e90caf7bfc0b6b22b96934ac716831088f657b",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.7914301429060333,
+      "visibleRgbPsnr": 39.21426833145595,
+      "parent": "images/chinese-scenes/cn-23-atlas.webp",
+      "crop": {
+        "left": 627,
+        "top": 0,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-scenes/cn-23-atlas.webp#frame=2",
+      "sourceSha256": "7b2491967cddcfef4e1f86432e0a4c037afbd52b25be5aa79fcf57644be5c83c",
+      "fullSha256": "b672b126b6c37a183148fae69732048e4ca54e99c2b8f415d399f58e48793089",
+      "previewSha256": "5ec08f27b476a01eb06bb77827356e4e1ca30b75a8895d8be6ab5ce1814d9542",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.876502868324404,
+      "visibleRgbPsnr": 38.95350738025048,
+      "parent": "images/chinese-scenes/cn-23-atlas.webp",
+      "crop": {
+        "left": 0,
+        "top": 418,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-scenes/cn-23-atlas.webp#frame=3",
+      "sourceSha256": "7b2491967cddcfef4e1f86432e0a4c037afbd52b25be5aa79fcf57644be5c83c",
+      "fullSha256": "b836605f9f3cfce29171c7f3f181daf1a9b5ddc44504819ccc9af50654d2fb11",
+      "previewSha256": "b8904bec75c4581d464de6b260bf617bcd52887ceecaef33601fc6cc803bbabc",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.849430154390004,
+      "visibleRgbPsnr": 39.03564328955194,
+      "parent": "images/chinese-scenes/cn-23-atlas.webp",
+      "crop": {
+        "left": 627,
+        "top": 418,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-scenes/cn-23-atlas.webp#frame=4",
+      "sourceSha256": "7b2491967cddcfef4e1f86432e0a4c037afbd52b25be5aa79fcf57644be5c83c",
+      "fullSha256": "e9308ce5ad06bca1e30c3497b62043b3efdc37eba921ee26a5b041e0dc059054",
+      "previewSha256": "0514d469ab42238f3c90acaaf739876901b061bd7a4588676ad85d6237304862",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.8855236268290163,
+      "visibleRgbPsnr": 38.92631091494363,
+      "parent": "images/chinese-scenes/cn-23-atlas.webp",
+      "crop": {
+        "left": 0,
+        "top": 836,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-scenes/cn-23-atlas.webp#frame=5",
+      "sourceSha256": "7b2491967cddcfef4e1f86432e0a4c037afbd52b25be5aa79fcf57644be5c83c",
+      "fullSha256": "7546d60063c40789ab827519f94046705cefbfbac2d54d46354e1cc99a69869c",
+      "previewSha256": "82dc686de851ae3a1d5d10660328eacf478d8a8e43e615a9a55822c4801f622a",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.9020695699434866,
+      "visibleRgbPsnr": 38.87664722141796,
+      "parent": "images/chinese-scenes/cn-23-atlas.webp",
+      "crop": {
+        "left": 627,
+        "top": 836,
+        "width": 627,
+        "height": 418
+      }
+    },
+    {
+      "source": "images/chinese-scenes/cn-23-context.webp",
+      "sourceSha256": "850dc86f9e936590597b8a4c694d1a5d027a91b9dd01d6e3cd8e2f6e109d57ab",
+      "fullSha256": "2d24b7b6e9134441c1df4b075f6f4036e5ede7ca359e3074cb99f981e3b0db82",
+      "previewSha256": "933c6235f8a3278c75b0088b2143892f969cf3b4d8d99d5e6e2c4d9dbd1549f1",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.9622259185811197,
+      "visibleRgbPsnr": 38.69844005737508
+    },
+    {
+      "source": "images/chinese-scenes/cn-23-context.webp#frame=0",
+      "sourceSha256": "850dc86f9e936590597b8a4c694d1a5d027a91b9dd01d6e3cd8e2f6e109d57ab",
+      "fullSha256": "8d146d48396887b0fce48bdab42ad00718c0afe49e824c305cee29135f39672a",
+      "previewSha256": "56647b7f5eee18796fbd8a414d2620e13ac6d0f217de871167b205c04be34c3b",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.0161509036069454,
+      "visibleRgbPsnr": 38.54174228273293,
+      "parent": "images/chinese-scenes/cn-23-context.webp",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-scenes/cn-23-context.webp#frame=1",
+      "sourceSha256": "850dc86f9e936590597b8a4c694d1a5d027a91b9dd01d6e3cd8e2f6e109d57ab",
+      "fullSha256": "04fb0d350bdff49f13c0ced445d5961162a7f431c85a5edbbba93ac34e6e6b21",
+      "previewSha256": "69954c7738391ea4e989fca1f164b4c139e03e1a41131b17e025e8de32bb96bb",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.9541131664430034,
+      "visibleRgbPsnr": 38.72226104291576,
+      "parent": "images/chinese-scenes/cn-23-context.webp",
+      "crop": {
+        "left": 768,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-scenes/cn-23-context.webp#frame=2",
+      "sourceSha256": "850dc86f9e936590597b8a4c694d1a5d027a91b9dd01d6e3cd8e2f6e109d57ab",
+      "fullSha256": "1328a8cba94f7be5e9a43cfdf3e9dbf75ab9d1a4c33e5983994786defd0e28c8",
+      "previewSha256": "f1fc49cfc01a02df83c05bbe62e0cd1db767628120595406158ddd2a7c990ff8",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.964762404415839,
+      "visibleRgbPsnr": 38.69100571258705,
+      "parent": "images/chinese-scenes/cn-23-context.webp",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-scenes/cn-23-context.webp#frame=3",
+      "sourceSha256": "850dc86f9e936590597b8a4c694d1a5d027a91b9dd01d6e3cd8e2f6e109d57ab",
+      "fullSha256": "6ec75de3e915edd2cfbac295eeeb4525db3c9a8bb644c07b1ca380cd0c599d42",
+      "previewSha256": "596561660310031749c42528c876ff399b8af3c405678aeccbe33ba490a87170",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.9217823034259895,
+      "visibleRgbPsnr": 38.817846522113264,
+      "parent": "images/chinese-scenes/cn-23-context.webp",
+      "crop": {
+        "left": 768,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "source": "images/chinese-scenes/luchai-background.webp",
+      "sourceSha256": "39ae7ea38caeb7156d4cf98581108e2f6773f7b798a128b6cbe362c8bbb9699b",
+      "fullSha256": "fd9ce189a85ad912808dcdf869fd15ddf87fc587424baa0943c5086f4b16112e",
+      "previewSha256": "060b32f8df833eccd4be42b42ef8cc0239829ae5b64d331ae5dba62e089bf23a",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.9433757193981425,
+      "visibleRgbPsnr": 38.753889549517496
+    },
+    {
+      "source": "images/chinese-scenes/tianmen-background.webp",
+      "sourceSha256": "62b7eaaedf50c6c2f23c9f904fff764cd0164e14df2f1f7a1de4806613ca229f",
+      "fullSha256": "410116e701a1db1fd484841bc0d22f877056ec53b4a6dafb86a462b94c75c753",
+      "previewSha256": "8c2d1b80bb9409a8239e8b50e61d0f44cdb8c3c0f344b569bca2c13f5c32316e",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.8706201925453625,
+      "visibleRgbPsnr": 38.97128889976803
+    },
+    {
+      "source": "images/kingfisher/kingfisher-flight-down-v2.png",
+      "sourceSha256": "1d3a9a863e815ef8d33c01d69c4c5123da65ffe4cf6d8593c5dee18e64a3547d",
+      "fullSha256": "cfbf17c53697f6478173f6db0c775ebb90b080f096b27d12fc33a4992251f386",
+      "previewSha256": "ed4fbc479eab9b69afe4d76a08e14bffdc4e05dcf724e204736b7c9add44574e",
+      "quality": 94,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 7.319606024559828,
+      "visibleRgbPsnr": 30.84104949014604
+    },
+    {
+      "source": "images/kingfisher/kingfisher-poses-v2.png",
+      "sourceSha256": "d5d0ffe739d3d41343495836b977a6c7308cfd3db36b148b32fb5c2548081ff4",
+      "fullSha256": "678e0f70036f042964385083d023ccb1b59811a93e7b018d32373078c3dfa0f3",
+      "previewSha256": "845ad23334688fe694c2cd277c014ff6c9b4b96285b8087253a49fea43844a08",
+      "quality": 94,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.8538403978413363,
+      "visibleRgbPsnr": 36.41292911050045
+    },
+    {
+      "source": "images/kingfisher/river-scene-v2.png",
+      "sourceSha256": "e56d536c74924376269d4077be00ae8c3ab3f91a1edc86b591f1cef702b6e8c1",
+      "fullSha256": "8d26fa0341f2ab4f3cc55bdeab83fb3d402d0c7e855364cac2609f9571c1a6f5",
+      "previewSha256": "44a5739058954f14bab6bbe8d0c2d71a0f6a3d7b04a4ea4e8368970e7c46c8c0",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.7292999157396434,
+      "visibleRgbPsnr": 39.40977837278952
+    },
+    {
+      "source": "images/golden-meadow/meadow-landscape-v1.png",
+      "sourceSha256": "4c868c2a514ba98dfdb433ce214a761d94116695c9dc97aeb620bed4c2459563",
+      "fullSha256": "f0a00b59a2c96c5e36eb8f10a00475df4e7fa6fa09fbec0ee44488a89d170c47",
+      "previewSha256": "eea8bac9dc789dbf44e1b78d386cb71a1ad7dfa3c02b3ba827ffa1d56fe19ef7",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.689331605560446,
+      "visibleRgbPsnr": 36.79184976143389
+    },
+    {
+      "source": "images/old-house/old-house-landscape-v1.webp",
+      "sourceSha256": "ac1e897318e7eb855bdc7377e3f64e33f1405f4bca65d97bf1a3616460b99963",
+      "fullSha256": "6c830bc0a221bab6fc309272618b28c53796b92a448e602a0432dd7aaa0363c4",
+      "previewSha256": "34f9fa61b482fcd5d7d693af00db92955394808586d7945adfe7798e5abe65ba",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 2.671992784547486,
+      "visibleRgbPsnr": 39.59409798796405
+    },
+    {
+      "source": "images/old-house/old-house-landscape-v1.png",
+      "sourceSha256": "06dc182818458ec060f3c38eb66e8dd55e053e554edafcb20efa028debbedaf6",
+      "fullSha256": "8dc89711e72c569c95fc88f86d583fa71074ab695c29e0fc479f27d8b084fece",
+      "previewSha256": "8cec8705ef84a9577baba383dddc6fe633bdcfa3b25e151873cedb6899f2872b",
+      "quality": 90,
+      "maxAlphaError": 0,
+      "visibleRgbRms": 3.563064708903328,
+      "visibleRgbPsnr": 37.094329415577086
+    }
+  ]
+}

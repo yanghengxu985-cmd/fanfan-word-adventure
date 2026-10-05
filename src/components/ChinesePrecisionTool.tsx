@@ -9,6 +9,7 @@ import {
 } from '../lib/chineseLessonPrecision';
 import ChineseLessonArt from './ChineseLessonArt';
 import ChineseSemanticScene, { supportsSemanticScene, type SemanticSceneProps } from './chineseScenes/ChineseSemanticScene';
+import { getPolishedFrame } from './chineseScenes/polishedFrames';
 import './chinesePrecisionTool.css';
 
 // Vite tracks files as they arrive during authoring; absent assets use the existing illustration.
@@ -21,15 +22,16 @@ export function PrecisionIllustration({ courseId, step = 0, variant, overview = 
   const [failed, setFailed] = useState(false);
   useEffect(() => { setFailed(false); }, [name]);
   const available = Object.hasOwn(bitmaps, `/public/images/chinese-precision/${name}.webp`);
-  const semantic = supportsSemanticScene(courseId) && !overview && (Boolean(sceneKey) || step > 0 || courseId === 'cn-18' || courseId === 'cn-22' || courseId === 'cn-23');
+  const polished = !overview && getPolishedFrame({ courseId, step, variant, sceneKey, parameter, gains, paused });
+  const semantic = supportsSemanticScene(courseId) && !overview && (Boolean(polished) || Boolean(sceneKey) || step > 0 || courseId === 'cn-18' || courseId === 'cn-22' || courseId === 'cn-23');
   const bitmap = available && !failed && !semantic;
   const base = new URL(`${import.meta.env.BASE_URL}images/chinese-precision/`, document.baseURI).href;
-  return <div className="cpt-illustration" data-art-source={semantic ? 'semantic-scene' : bitmap ? 'bitmap' : 'existing-scene'}>
+  return <div className="cpt-illustration" data-art-source={polished ? 'polished-scene' : semantic ? 'semantic-scene' : bitmap ? 'bitmap' : 'existing-scene'}>
     {semantic ? <ChineseSemanticScene courseId={courseId} step={step} variant={variant} sceneKey={sceneKey} parameter={parameter} gains={gains} paused={paused} /> : bitmap ? <img src={`${base}${name}.webp`} alt="本课阅读情境示意，文字内容请对照课本" onError={() => setFailed(true)} /> : <ChineseLessonArt courseId={courseId} step={step} variant={variant} />}
   </div>;
 }
 
-type Props = { courseId: string; tool: PrecisionTool; state: PrecisionToolState; onChange: (next: PrecisionToolState) => void; onBeforeAudio?: () => void; stopSignal?: number };
+type Props = { courseId: string; tool: PrecisionTool; state: PrecisionToolState; onChange: (next: PrecisionToolState) => void; onBeforeAudio?: () => void; stopSignal?: number; paused?: boolean };
 
 function PrecisionLens({ courseId, step, variant, spot }: {
   courseId: string; step: number; variant?: string; spot: { id: string; label: string; x: number; y: number; zoom: number };
@@ -54,7 +56,7 @@ function PrecisionLens({ courseId, step, variant, spot }: {
   </div>;
 }
 
-export default function ChinesePrecisionTool({ courseId, tool, state, onChange, onBeforeAudio, stopSignal }: Props) {
+export default function ChinesePrecisionTool({ courseId, tool, state, onChange, onBeforeAudio, stopSignal, paused }: Props) {
   const view = getPrecisionView(tool, state);
   const assessment = assessPrecisionTool(tool, state);
   const [checked, setChecked] = useState(false);
@@ -134,7 +136,7 @@ export default function ChinesePrecisionTool({ courseId, tool, state, onChange, 
       <div className="cpt-scene-head"><span><Search size={16} />{tool.kind === 'prediction' ? '只看已经读到的' : tool.title}</span><small>教学情境示意</small></div>
       <div className="cpt-stage">
         <div className="cpt-scene-frame" style={!semantic && view.effect?.type === 'distance' ? visualStyle : undefined}>
-        <div className={`cpt-image-layer cpt-effect-${semantic ? 'none' : view.effect?.type ?? 'none'}`} style={semantic || view.effect?.type === 'distance' ? undefined : visualStyle}><PrecisionIllustration courseId={courseId} step={classicalMode === 'reference' && referenceTarget ? referenceTarget.artStep : view.artStep} variant={view.artVariant} overview={tool.kind === 'hotspot' && !semantic} sceneKey={currentExperience ?? sceneKey} parameter={view.effect?.value} gains={tool.kind === 'sound' ? state.gains : undefined} /></div>
+        <div className={`cpt-image-layer cpt-effect-${semantic ? 'none' : view.effect?.type ?? 'none'}`} style={semantic || view.effect?.type === 'distance' ? undefined : visualStyle}><PrecisionIllustration courseId={courseId} step={classicalMode === 'reference' && referenceTarget ? referenceTarget.artStep : view.artStep} variant={view.artVariant} overview={tool.kind === 'hotspot' && !semantic} sceneKey={currentExperience ?? sceneKey} parameter={view.effect?.value} gains={tool.kind === 'sound' ? state.gains : undefined} paused={paused} /></div>
         {!semantic && view.effect?.type === 'rain' && <div className="cpt-rain" style={visualStyle} aria-hidden="true" />}
         {!semantic && view.effect?.type === 'light' && <div className="cpt-light" style={visualStyle} aria-hidden="true" />}
         {tool.kind === 'hotspot' && !semantic ? tool.spots.map(spot => <button key={spot.id} className={`cpt-hotspot-button ${state.spotId === spot.id ? 'is-active' : ''}`} style={{ left: `clamp(${27 + spot.label.length * 6}px, ${spot.x}%, calc(100% - ${27 + spot.label.length * 6}px))`, top: `clamp(22px, ${spot.y}%, calc(100% - 22px))` }} aria-label={`近看${spot.label}`} aria-pressed={state.spotId === spot.id} onClick={() => change(selectPrecisionOption(tool, state, spot.id))}><span /><strong>{spot.label}</strong></button>) : !semantic && view.marks.map(mark => <span key={mark.id} className={`cpt-mark cpt-mark-${mark.shape}`} style={{ left: `${mark.x}%`, top: `${mark.y}%` }}><i /><strong>{mark.label}</strong></span>)}

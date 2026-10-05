@@ -1,0 +1,7 @@
+.transfer-observation{margin:0;aspect-ratio:3/2;width:100%;padding:3%;display:flex;flex-direction:column;justify-content:center;background:#eeeedd;color:#355735;box-sizing:border-box;overflow:hidden}
+.transfer-observation>figcaption{font:500 clamp(12px,1.3vw,18px)/1.6 'Songti SC',serif;margin-bottom:2%;text-align:center;letter-spacing:.08em}
+.transfer-observation__strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5%;min-height:0}
+.transfer-observation__strip>div{min-width:0;display:flex;flex-direction:column;gap:6px;text-align:center}
+.transfer-observation__strip svg{display:block;width:100%;aspect-ratio:2/3;min-height:0;border-radius:6px}
+.transfer-observation__strip span{font:500 clamp(10px,1.15vw,15px)/1.5 'Songti SC',serif}
+.gm-scene-body>.transfer-observation,.kf-scene-body>.transfer-observation{width:min(100cqw,150cqh);max-height:100%;flex:0 0 auto}

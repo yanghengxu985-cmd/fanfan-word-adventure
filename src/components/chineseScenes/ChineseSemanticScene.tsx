@@ -2,6 +2,8 @@ import ChineseNatureScenes, { supportsNatureScene } from './ChineseNatureScenes'
 import ChineseStoryScenes, { supportsStoryScene } from './ChineseStoryScenes';
 import ChinesePoemScenes from './ChinesePoemScenes';
 import ChineseIllustratedScenes, { getIllustratedFrame } from './ChineseIllustratedScenes';
+import ChinesePolishedScene from './ChinesePolishedScene';
+import { getPolishedFrame } from './polishedFrames';
 
 export type SemanticSceneProps = {
   courseId: string; step: number; variant?: string; sceneKey?: string;
@@ -14,6 +16,12 @@ export function supportsSemanticScene(courseId: string) {
 
 /** An option identifies the object/action; a shared numeric step cannot do that. */
 export default function ChineseSemanticScene(props: SemanticSceneProps) {
+  const polished = getPolishedFrame(props);
+  if (polished) return <ChinesePolishedScene key={`${props.courseId}:${props.variant ?? ''}:${props.sceneKey ?? props.step}:${polished.file}:${polished.index}`} {...props} frame={polished} fallback={<LegacySemanticScene {...props} />} />;
+  return <LegacySemanticScene {...props} />;
+}
+
+function LegacySemanticScene(props: SemanticSceneProps) {
   if (props.variant && (props.courseId === 'cn-04' || props.courseId === 'cn-20')) return <ChinesePoemScenes {...props} variant={props.variant} />;
   if (getIllustratedFrame(props) !== null) {
     const fallback = supportsNatureScene(props.courseId) ? <ChineseNatureScenes {...props} /> : <ChineseStoryScenes {...props} />;

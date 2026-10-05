@@ -5,6 +5,7 @@ import { getLessonWords, lessonCourseById } from '../data/chineseLessons';
 import { getGoldenMeadowFrame, GOLDEN_MEADOW_DURATION, GOLDEN_MEADOW_PRESETS } from '../lib/goldenMeadowMotion';
 import ChineseWordWorkbench, { type ChineseWordWorkbenchHandle } from './ChineseWordWorkbench';
 import GoldenMeadowScene from './GoldenMeadowScene';
+import TransferObservationScene from './TransferObservationScene';
 import { chineseReturnHref, resolveChineseLessonMode, type ChineseLessonTab } from '../lib/chineseLessonNavigation';
 import ChineseLessonPaperPanel from './ChineseLessonPaperPanel';
 import './kingfisherLesson.css';
@@ -177,7 +178,7 @@ function GoldenMeadowLessonContent({ teacher = false, initialTab }: { teacher?: 
       {mode === 'read' && <>
         <div className="kf-art gm-method-art">
           <div className="kf-art-heading"><span><Leaf size={16} />把发现连成一份观察记录</span><small>比较时段，再近看原因</small></div>
-          <div className="gm-scene-body"><GoldenMeadowScene mode={promptIndex === 1 ? 'examine' : 'time'} progress={9} openness={promptIndex === 1 ? 0 : undefined} reducedMotion={reducedMotion} /></div>
+          <div className="gm-scene-body">{promptIndex === 2 ? <TransferObservationScene subject="dew" /> : <GoldenMeadowScene mode={promptIndex === 1 ? 'examine' : 'time'} progress={9} openness={promptIndex === 1 ? 0 : undefined} reducedMotion={reducedMotion} />}</div>
           <div className="gm-observation-record"><table><caption>课文里的三次观察</caption><thead><tr><th scope="col">什么时候</th><th scope="col">草地颜色</th><th scope="col">花朵状态</th></tr></thead><tbody>{meadowLessonCopy.observationTimes.map(item => <tr key={item.id}><th scope="row">{item.label}</th><td><i className={item.id === 'noon' ? 'is-golden' : ''} />{item.grassColour}</td><td>{item.flowerLabel}</td></tr>)}</tbody></table><p>先记看见的，再走近找出原因。</p></div>
         </div>
         <div className="kf-reading kf-side">

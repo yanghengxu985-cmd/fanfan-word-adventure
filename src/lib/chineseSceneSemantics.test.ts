@@ -12,6 +12,8 @@ registerHooks({ load(url, context, nextLoad) {
   return nextLoad(url, context);
 } });
 const { default: Scene, supportsSemanticScene } = await import('../components/chineseScenes/ChineseSemanticScene');
+const { getPolishedFrame } = await import('../components/chineseScenes/polishedFrames');
+const { default: PaintedScene } = await import('../components/chineseScenes/ChinesePolishedScene');
 type SceneProps = Parameters<typeof Scene>[0];
 function render(props: SceneProps) { return renderToStaticMarkup(createElement(Scene, props)); }
 function toolFor(courseId: string) { return chinesePrecisionLessons.find(item => item.courseId === courseId)!.tools[0]; }
@@ -86,7 +88,15 @@ test('holding, striking, breaking, flowing water and rescue are separate drawabl
   assert.equal(new Set(outputs).size, frames.length);
   hasObject(outputs[0], 'stone'); hasObject(outputs[1], 'stone');
   assert.doesNotMatch(outputs[0], /data-scene-object="rescued-child"/);
-  hasObject(outputs[4], 'rescued-child');
+  // Rescue now includes water falling and the wet child stepping out before
+  // the preserved final illustration. Check the genuine ending, not a label
+  // that would falsely claim the child has already escaped in the first frame.
+  const rescue = getPolishedFrame({courseId:'cn-23',step:3,sceneKey:'saved'})!;
+  assert.ok(rescue.sequence && rescue.sequence.frames.length >= 3);
+  assert.ok(rescue.sequence.frames[0].objects.includes('flowing-water'));
+  assert.ok(rescue.sequence.frames.some(frame=>frame.objects.includes('wet-clothes-water-drops')));
+  const final = rescue.sequence.frames.at(-1)!;
+  hasObject(renderToStaticMarkup(createElement(PaintedScene,{courseId:'cn-23',step:3,sceneKey:'saved',frame:final,fallback:null,paused:true})), 'rescued-child');
 });
 
 test('multiple active sound sources remain in the same illustration', () => {
@@ -113,5 +123,8 @@ test('Tianmen moves the observer boat while retaining fixed banks', () => {
   const near = render({ courseId: 'cn-20', step: 1, variant: 'wangtianmenshan', sceneKey: 'mountains', parameter: 1 });
   for (const markup of [far, near]) { hasObject(markup, 'fixed-left-bank'); hasObject(markup, 'fixed-right-bank'); hasObject(markup, 'observer-boat'); }
   assert.match(far, /data-observer-position="0"/); assert.match(near, /data-observer-position="1"/);
-  assert.notEqual(far.match(/data-scene-object="observer-boat" transform="([^"]+)"/)?.[1], near.match(/data-scene-object="observer-boat" transform="([^"]+)"/)?.[1]);
+  // Complete painted viewpoints replace the old moving polygon boat.
+  assert.notEqual(far.match(/data-polished-frame="(\d+)"/)?.[1], near.match(/data-polished-frame="(\d+)"/)?.[1]);
+  assert.notDeepEqual(getPolishedFrame({courseId:'cn-20',step:1,variant:'wangtianmenshan',sceneKey:'mountains',parameter:0})?.crop,
+    getPolishedFrame({courseId:'cn-20',step:1,variant:'wangtianmenshan',sceneKey:'mountains',parameter:1})?.crop);
 });

@@ -1,0 +1,864 @@
+{
+  "date": "2026-10-05",
+  "tool": "builtin tools.image_gen__imagegen",
+  "conversion": "Sharp lossless WebP; no resizing or pixel editing. Runtime SVG/CSS clips atlas cells. Fully transparent RGB may be normalised; alpha and every visible RGB byte are compared.",
+  "newFiles": 30,
+  "newBytes": 69823360,
+  "assets": [
+    {
+      "file": "public/images/chinese-polished/cn-01-atlas-v3.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2306494,
+      "sha256": "ac24050dd47646247d3cfbfdf6af46eb0eb67278accc9b34ccddfe7fb7467e04",
+      "originalLocalOnly": "output/imagegen-sources/chinese-polished/cn-01-atlas-v3.png",
+      "originalSha256": "232553bdf7b5403e564e174fef53988bff6720f884684085e5ef5a825a689652",
+      "visibleDecodedPixelsIdentical": true,
+      "allDecodedBytesIdentical": true
+    },
+    {
+      "file": "public/images/chinese-polished/cn-02-atlas-v3.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2742578,
+      "sha256": "14817c823f82d97b71549d9c4641e6aea8dbaae0b45f19db62389f25716eb116",
+      "originalLocalOnly": "output/imagegen-sources/chinese-polished/cn-02-atlas-v3.png",
+      "originalSha256": "bfe51df79625d1de87ae9528fe0a1b500d2fe76c8cedbda1982b6adea0eda039",
+      "visibleDecodedPixelsIdentical": true,
+      "allDecodedBytesIdentical": true
+    },
+    {
+      "file": "public/images/chinese-polished/cn-03-atlas-v3.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1947438,
+      "sha256": "d1ca854ecae66726d0bec90ed068ad552d1656e762efc9c92133ae5a7a322180",
+      "originalLocalOnly": "output/imagegen-sources/chinese-polished/cn-03-atlas-v3.png",
+      "originalSha256": "a8469ac0d86c2896f0aff9552f3cac23d660eb1dc4b2ceac52e4d757e83d8981",
+      "visibleDecodedPixelsIdentical": true,
+      "allDecodedBytesIdentical": true
+    },
+    {
+      "file": "public/images/chinese-polished/cn-04-shanxing-comparison-v3.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2415612,
+      "sha256": "91d18e8dc6aed694947e5ead04a477ea75ff2ea561dca5df7b0bd42cdbbbb2f0",
+      "originalLocalOnly": "output/imagegen-sources/chinese-polished/cn-04-shanxing-comparison-v3.png",
+      "originalSha256": "a1b72b1eb7ab22b3ab899ca3e63536ddee4fc9cce0dac74a5abf0c6fdafcf1f4",
+      "visibleDecodedPixelsIdentical": true,
+      "allDecodedBytesIdentical": true
+    },
+    {
+      "file": "public/images/chinese-polished/cn-04-wangdongting-atlas-v3.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2100236,
+      "sha256": "0cda9cd926e58573de73eaaf7606de79454d99fbf17bc5c7d1a734fd3e37a994",
+      "originalLocalOnly": "output/imagegen-sources/chinese-polished/cn-04-wangdongting-atlas-v3.png",
+      "originalSha256": "503a6cbba9eeba930a934fe7dac49aa6259b77785f741aa8720aead644056e5e",
+      "visibleDecodedPixelsIdentical": true,
+      "allDecodedBytesIdentical": true
+    },
+    {
+      "file": "public/images/chinese-polished/cn-06-winter-v3.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2445116,
+      "sha256": "2627045488db6fc35d83989506214b7616357065c41b07d4af788f8830a68109",
+      "originalLocalOnly": "output/imagegen-sources/chinese-polished/cn-06-winter-v3.png",
+      "originalSha256": "ff8fc7900a52d079cb526552b97fb9643cc9cd9bd0bd9be70981b8a0be72afd6",
+      "visibleDecodedPixelsIdentical": true,
+      "allDecodedBytesIdentical": true
+    },
+    {
+      "file": "public/images/chinese-polished/cn-07-atlas-v3.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2305992,
+      "sha256": "65aa7d38d148b70d888030f8c8fccb962894f546af76e7eb461e0652ec999666",
+      "originalLocalOnly": "output/imagegen-sources/chinese-polished/cn-07-atlas-v3.png",
+      "originalSha256": "4c82deacf257f3fac9efa8e684da08eb085b305fd11e8f750649e6e663714111",
+      "visibleDecodedPixelsIdentical": true,
+      "allDecodedBytesIdentical": true
+    },
+    {
+      "file": "public/images/chinese-polished/cn-08-atlas-v3.webp",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2552762,
+      "sha256": "86e030402434a19920509ee4d763a4bb654a4764073c26a7d42aca12d20f2e7c",
+      "originalLocalOnly": "output/imagegen-sources/chinese-polished/cn-08-atlas-v3.png",
+      "originalSha256": "a16f3bbacecb07010a988abc39cbc9dad406e95d70173d36554a7714cf0e14c0",
+      "visibleDecodedPixelsIdentical": true,
+      "allDecodedBytesIdentical": true
+    },
+    {
+      "file": "public/images/chinese-polished/cn-09-atlas-v3.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2328858,
+      "sha256": "5b6288292dbb06a454770d626972329c3f7bbe2f844b7a98f30f7f7fb5eb886b",
+      "originalLocalOnly": "output/imagegen-sources/chinese-polished/cn-09-atlas-v3.png",
+      "originalSha256": "f2d9acb37e2f87065f8bc20130018ae56b87c5f43a07afff0b1080345f64ef95",
+      "visibleDecodedPixelsIdentical": true,
+      "allDecodedBytesIdentical": true
+    },
+    {
+      "file": "public/images/chinese-polished/cn-09-direction-v3.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2413790,
+      "sha256": "002479d82bd39084843f6a9ed1a3a2c669111a99926b876555a1afce7cf545f2",
+      "originalLocalOnly": "output/imagegen-sources/chinese-polished/cn-09-direction-v3.png",
+      "originalSha256": "0ca02b7baba26818a45fd40c80127d9803e6e8050f4af6b538e542dd964ac354",
+      "visibleDecodedPixelsIdentical": true,
+      "allDecodedBytesIdentical": true
+    },
+    {
+      "file": "public/images/chinese-polished/cn-10-atlas-v3.webp",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2655820,
+      "sha256": "eb5c3eb055a7f9428a5045ec6be43944ac41d617e1d3767b93285913eacaf752",
+      "originalLocalOnly": "output/imagegen-sources/chinese-polished/cn-10-atlas-v3.png",
+      "originalSha256": "06b058a58bf9f99e1598ffa484631f41f0fdc2fe5064fa63afb21a693a0b4665",
+      "visibleDecodedPixelsIdentical": true,
+      "allDecodedBytesIdentical": true
+    },
+    {
+      "file": "public/images/chinese-polished/cn-11-atlas-v3.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2135214,
+      "sha256": "56a3080c32a54163ce6dd896abaf5f6c3f901cfbcf1f2791333a9af5a2b6413b",
+      "originalLocalOnly": "output/imagegen-sources/chinese-polished/cn-11-atlas-v3.png",
+      "originalSha256": "31f8cca5ae396130b2a59d4e4c8f27f54ec3c9bc8371b4992f053a8e57ec89f2",
+      "visibleDecodedPixelsIdentical": true,
+      "allDecodedBytesIdentical": true
+    },
+    {
+      "file": "public/images/chinese-polished/cn-12-atlas-v3.webp",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2389890,
+      "sha256": "311dee68a68891124779e9e1967902b1dfd1e765017ef31c5f95d327dd3aa53f",
+      "originalLocalOnly": "output/imagegen-sources/chinese-polished/cn-12-atlas-v3.png",
+      "originalSha256": "0ba17111e9fc461e34d51e317444a32a2092644a51b9066edca8d61fb136ef8f",
+      "visibleDecodedPixelsIdentical": true,
+      "allDecodedBytesIdentical": true
+    },
+    {
+      "file": "public/images/chinese-polished/cn-13-atlas-v3.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2019630,
+      "sha256": "f846c3c78f2066356af8af564a9adf6a09260e074fd3b263c166207cbfa4e0b2",
+      "originalLocalOnly": "output/imagegen-sources/chinese-polished/cn-13-atlas-v3.png",
+      "originalSha256": "2e28175a1507c781516cfdded6a8d0ecb8bad6db30ea2166422f1ce1c8a0b315",
+      "visibleDecodedPixelsIdentical": true,
+      "allDecodedBytesIdentical": true
+    },
+    {
+      "file": "public/images/chinese-polished/cn-15-flower-states-v3.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1177520,
+      "sha256": "124c4958c0cb4f4a3559d604a5f39acacfa04720336276b5ebbd92f57fb1e8b7",
+      "originalLocalOnly": "output/imagegen-sources/chinese-polished/cn-15-flower-states-v3.png",
+      "originalSha256": "ed760928af6c9d8346aa86a8979262b6840c5c069ca6d285e47688f9e892c90e",
+      "visibleDecodedPixelsIdentical": true,
+      "allDecodedBytesIdentical": false
+    },
+    {
+      "file": "public/images/chinese-polished/cn-16-atlas-v3.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2760104,
+      "sha256": "4041d463ae5e3208fd90b7d2b9eee5c881d3a8f2de45cf644a7ff2e3d8d2cc02",
+      "originalLocalOnly": "output/imagegen-sources/chinese-polished/cn-16-atlas-v3.png",
+      "originalSha256": "11337eab65ae76c95228cc4e1bbc6fd73b35d9927015463fc65463fde46208c5",
+      "visibleDecodedPixelsIdentical": true,
+      "allDecodedBytesIdentical": true
+    },
+    {
+      "file": "public/images/chinese-polished/cn-17-atlas-v3.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2776204,
+      "sha256": "6aa7a3c23f6969da91c0ea393ca3698f2be8a8f208c4a0a4998c7078e8aaf3fa",
+      "originalLocalOnly": "output/imagegen-sources/chinese-polished/cn-17-atlas-v3.png",
+      "originalSha256": "5ef38a9ac34622e3777c3265888d84ec7a2d48b1794d2479ec08e2bd153d5e7a",
+      "visibleDecodedPixelsIdentical": true,
+      "allDecodedBytesIdentical": true
+    },
+    {
+      "file": "public/images/chinese-polished/cn-17-atlas-v4.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2517406,
+      "sha256": "81443b565dc82a7600e5e990138b4ccd36a87a95de32364d0aa38f895e0a05bb",
+      "originalLocalOnly": "output/imagegen-sources/chinese-polished/cn-17-atlas-v4.png",
+      "originalSha256": "aff3fe3ed1046f18f0979c1cd0ff3f368c91d9a3615a0eddd273882fde9b05bc",
+      "visibleDecodedPixelsIdentical": true,
+      "allDecodedBytesIdentical": true
+    },
+    {
+      "file": "public/images/chinese-polished/cn-19-atlas-v3.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2551050,
+      "sha256": "8f13ea64457198fb341aebe468f9df20d0882f4dcc1a609bdcf1e0719e6c0420",
+      "originalLocalOnly": "output/imagegen-sources/chinese-polished/cn-19-atlas-v3.png",
+      "originalSha256": "93150d75c4b2216b972b3c5247bf078a57384bba27261f4965bec6a0f38ffa74",
+      "visibleDecodedPixelsIdentical": true,
+      "allDecodedBytesIdentical": true
+    },
+    {
+      "file": "public/images/chinese-polished/cn-19-sculpture-atlas-v3.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2297522,
+      "sha256": "a5b393507c418941d77e0d2994889028a1a2baec491ee4171d786b5c96ec25c6",
+      "originalLocalOnly": "output/imagegen-sources/chinese-polished/cn-19-sculpture-atlas-v3.png",
+      "originalSha256": "af6ca030cf2c0cbea5188d323817130c33da3bc6530dda782e919f1e4e0e7ec5",
+      "visibleDecodedPixelsIdentical": true,
+      "allDecodedBytesIdentical": true
+    },
+    {
+      "file": "public/images/chinese-polished/cn-21-atlas-v3.webp",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2834770,
+      "sha256": "fa0922593bddcf8fbb9311066461ab4057ebec811697a4527108a4a1437aa341",
+      "originalLocalOnly": "output/imagegen-sources/chinese-polished/cn-21-atlas-v3.png",
+      "originalSha256": "442492681f13345b94479cc3c4fbc0b2b1d4a3a47c8808945f7316cd8e448d41",
+      "visibleDecodedPixelsIdentical": true,
+      "allDecodedBytesIdentical": true
+    },
+    {
+      "file": "public/images/chinese-polished/cn-22-atlas-v3.webp",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2642010,
+      "sha256": "91f3f913ff109461f544b0c1308c16b98670a6fbc1e7a23c6309847950f33499",
+      "originalLocalOnly": "output/imagegen-sources/chinese-polished/cn-22-atlas-v3.png",
+      "originalSha256": "7de9c227e1b382b254f1c366c87bd1d94ef76b5e8e8d725bebb5ab703dfffbd9",
+      "visibleDecodedPixelsIdentical": true,
+      "allDecodedBytesIdentical": true
+    },
+    {
+      "file": "public/images/chinese-polished/cn-23-saved-atlas-v3.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2040118,
+      "sha256": "57d7cd53db9c13f0e502ed899d787bf3eb58911ea94c03a7ea0420b6291f5844",
+      "originalLocalOnly": "output/imagegen-sources/chinese-polished/cn-23-saved-atlas-v3.png",
+      "originalSha256": "868d8643e79d7f271d18a7242cd3aa60f04171bae6163eaf8819f1765ec58161",
+      "visibleDecodedPixelsIdentical": true,
+      "allDecodedBytesIdentical": true
+    },
+    {
+      "file": "public/images/chinese-polished/cn-23-transition-atlas-v3.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1991610,
+      "sha256": "c3c3863e8739fa21cd18ee9e89da7298a28b296ad784c8a957c570a551a91e7b",
+      "originalLocalOnly": "output/imagegen-sources/chinese-polished/cn-23-transition-atlas-v3.png",
+      "originalSha256": "716beaa5cd37c4a11ff1e78353f590342533db06e8986d9e4f13492678a1084d",
+      "visibleDecodedPixelsIdentical": true,
+      "allDecodedBytesIdentical": true
+    },
+    {
+      "file": "public/images/chinese-polished/cn-24-atlas-v3.webp",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2000570,
+      "sha256": "07cc91f0640f7747c36f6b19164753017d40bde896b1673c2fe059c3f7644b8a",
+      "originalLocalOnly": "output/imagegen-sources/chinese-polished/cn-24-atlas-v3.png",
+      "originalSha256": "6235c5d9c2d7bf975055e93460f85ac24e73779b42076bb7b449bf1dd75cfe3f",
+      "visibleDecodedPixelsIdentical": true,
+      "allDecodedBytesIdentical": true
+    },
+    {
+      "file": "public/images/chinese-polished/cn-25-atlas-v3.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2008730,
+      "sha256": "d20d0e20d1005430678f11beea32ad800ed2e35b629c8086f760e5cb630dbd67",
+      "originalLocalOnly": "output/imagegen-sources/chinese-polished/cn-25-atlas-v3.png",
+      "originalSha256": "68833374ec76326f6cdb4fca734743939dbe55dae8730c19018821dd70c30a52",
+      "visibleDecodedPixelsIdentical": true,
+      "allDecodedBytesIdentical": true
+    },
+    {
+      "file": "public/images/chinese-polished/cn-26-atlas-v3.webp",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 1933704,
+      "sha256": "b96f1c908ff91b72a22e577284f89ac639eba9a8412214337ece567c89610abf",
+      "originalLocalOnly": "output/imagegen-sources/chinese-polished/cn-26-atlas-v3.png",
+      "originalSha256": "f2b0760184d54633435a6a1d82bdd65a8b04959f104c09474caee5e7dd4457e5",
+      "visibleDecodedPixelsIdentical": true,
+      "allDecodedBytesIdentical": true
+    },
+    {
+      "file": "public/images/chinese-polished/cn-observation-transfer-v3.webp",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2321960,
+      "sha256": "d5e448de4755416d2a11f961fa593eece57b4c83f982e10216e1340c1ef33395",
+      "originalLocalOnly": "output/imagegen-sources/chinese-polished/cn-observation-transfer-v3.png",
+      "originalSha256": "d3fb351f90381788ecd4b1452778fafc9614b719f35b6c1be24190fe258e8c31",
+      "visibleDecodedPixelsIdentical": true,
+      "allDecodedBytesIdentical": true
+    },
+    {
+      "file": "public/images/chinese-polished/tianmen-atlas-v3.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2672166,
+      "sha256": "2f89d2d8d5b97a17c23755771d95897150c0d925df700ee326be8b4d8dc74c8a",
+      "originalLocalOnly": "output/imagegen-sources/chinese-polished/tianmen-atlas-v3.png",
+      "originalSha256": "989f9fb8a0dbcf316ba747727afa7112855b291fb3c86066ba0bb46995101353",
+      "visibleDecodedPixelsIdentical": true,
+      "allDecodedBytesIdentical": true
+    },
+    {
+      "file": "public/images/chinese-polished/westlake-atlas-v3.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2538486,
+      "sha256": "a1d8f82507c013b1f14920eea8c49f9b8080017cc8077f6f4f15b37346d91e7b",
+      "originalLocalOnly": "output/imagegen-sources/chinese-polished/westlake-atlas-v3.png",
+      "originalSha256": "409542889a0e596336faa14558476752726881abf9d5af665bc01aba2fd3b796",
+      "visibleDecodedPixelsIdentical": true,
+      "allDecodedBytesIdentical": true
+    }
+  ],
+  "provenance": {
+    "early": {
+      "generations": [
+        {
+          "id": "01",
+          "prompt": "Use case: illustration-story.\nAsset type: production classroom reading illustration atlas for Chinese grade 3 lesson 大青树下的小学.\nReference image 1 defines the SAME village school, banyan tree, white walls, tiled roof, bronze bell, bamboo and schoolchildren; use its detailed painterly storybook finish. Generate a single landscape 3:2 atlas arranged in an EXACT 2 columns × 2 rows grid. Each quadrant itself is 3:2 and is a completely filled independent illustration. Perfectly straight midline cuts. No gaps, gutters, borders, written text, labels, numbers or watermark. Every panel must have equal care, natural anatomy, individually modelled faces, proper hands, believable contact and perspective.\nTop left: a closer exterior morning greeting under the huge banyan, three happy Chinese 8–9 year old pupils, the same blue jacket boy and pink jacket girl, white blouse/red scarf girl. Backpacks and natural five-finger hands, stone steps touch shoes. White school with its small bronze bell and bamboo remains visible.\nTop right: inside this school's sunlit classroom, several pupils at real wooden desks reading aloud together from books physically held/on desks. Blue jacket boy, pink girl. Teacher listening at front. Through the open window on the left, a natural small bird and squirrel sit quietly on tree branches; they are not giant and not pasted in cards. Clear view of mouths reading and calm animals.\nBottom left: recess beneath the same banyan. Four pupils in red scarves dancing together in a loose circle, actual hands joined, balanced running/dancing feet touching stone earth. Two other pupils play a simple wrestling game farther away, natural gentle play. School wall, bell, bamboo behind. No incoming-student image copied behind them.\nBottom right: richly observed campus detail, foreground bronze bell physically suspended by chain from a wooden beam beside the school's open doorway, detailed patterned cast metal, bamboo leaves at the side, mossy stone steps and a corner of the banyan. Not a floating icon. Bell and bamboo remain natural size.\nStyle: refined watercolor/gouache with realistic Chinese children's book detail, organic textures and depth, rich varied greens and warm sunlight. No flat vector characters.",
+          "hint": "Generated images are saved to C:\\Users\\lenovo\\.codex\\generated_images\\01a10996-bf05-7403-beaa-834b40b071ff as C:\\Users\\lenovo\\.codex\\generated_images\\01a10996-bf05-7403-beaa-834b40b071ff\\exec-0ca1627e-7934-4925-9e47-ddee069711cf.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+        },
+        {
+          "id": "02",
+          "prompt": "Use case: illustration-story. Production reading scene atlas for Chinese grade 3 花的学校.\nReference image 1 is the natural flower garden and establishes detailed watercolor/gouache texture, rain, bamboo, white/yellow/purple petals. Create one precisely aligned 2×2 atlas, overall landscape 3:2, each equal cell 3:2, filled to edges, no gutters, frames, labels, words or numbers. Four FULL scenes with even level of fine detail. It is literature's imaginary flower children, not a science diagram.\nTOP LEFT: a natural garden close view, actual blooming white, yellow, purple flowers with detailed petals, veins, stamens and raindrops; bamboo behind. Wind gently bends stems. No human-faced flowers here.\nTOP RIGHT: imagined underground school inside a warm earthy grotto below this garden. Six little flower children resemble ordinary appealing children wearing richly layered white/yellow/purple PETAL OUTFITS and subtle petal head ornaments. They sit on tiny root stools, real small desks and books. Earthy curved ceiling with plant roots; a small opening above lets daylight in. NO adult flower mother, no labels. Each face, hands, clothing fold fully modelled and feet properly grounded. The same cast throughout later panels.\nBOTTOM LEFT: rain has come and imaginary flower children rush joyfully OUT of their underground school into the garden. Show the earth tunnel's open entrance at side, children midway between entrance and wet soil above, wearing the same purple/yellow/white petal clothes. Gentle running postures, natural hands, actual feet/shoes contacting path, one child's feet just lifted in a jump. Background real flower blossoms rain bamboo. No closed door, no arrows, no giant character cards.\nBOTTOM RIGHT: in this same garden the same flower children stand among real flowers and extend both arms UP toward the sky with yearning delighted faces; clearly tilted faces, natural hands, detailed petal clothes, feet on damp earth. Cloudy blue sky visible at top. Do not depict any mother in the sky; that is imagined by the reader.\nStyle matches reference rich painterly natural textures and Chinese children's-book faces, immersive 3D spacing and atmospheric light; not flat vector figures. Each panel can be used independently as a full reading scene.",
+          "hint": "Generated images are saved to C:\\Users\\lenovo\\.codex\\generated_images\\01a10996-bf05-7403-beaa-834b40b071ff as C:\\Users\\lenovo\\.codex\\generated_images\\01a10996-bf05-7403-beaa-834b40b071ff\\exec-817e2f75-9e11-4601-a8e9-6e6ef1bae8f2.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+        },
+        {
+          "id": "03",
+          "prompt": "Use case: historical-scene and illustration-story. Production Chinese grade 3 不懂就要问 four-stage atlas.\nReference image 1 defines a late Qing southern Chinese private school: wooden lattice windows, simple old wooden desks, sunlight, SAME 8-year-old short black-haired Sun Yat-sen in indigo cotton long jacket, SAME elderly teacher in charcoal robe and black soft cap with moustache and sparse beard, same classmates in muted robes. Match the reference's detailed warm painterly texture and realistic hands/cloth/materials.\nGenerate ONE exact 2 columns × 2 rows landscape 3:2 atlas. Each panel itself 3:2. Four separate full edge-to-edge illustrations, no gutters or border, no text/labels/symbols/arrows/watermark.\nTOP LEFT doubt: boy seated at desk with an open book lying on its wooden surface, one hand holding its edge, the other natural hand near his chin, brow puzzled while classmates quietly read. He knows how to recite but does not understand. No raised hand yet. Teacher in background.\nTOP RIGHT ask: same boy stands beside his desk and raises one hand to ask; other palm naturally rests on the open book on desk. Teacher turns toward him, serious/initially surprised. Classmates pause and look at him; natural age-specific faces. No cartoon question bubble.\nBOTTOM LEFT check recitation: boy stands confidently reciting, mouth open, BOTH HANDS lowered naturally at his sides or resting against desk, closed book on his desk. Teacher stands facing him holding a thin traditional wooden ruler DOWN alongside his robe, listening seriously. It is not corporal punishment; teacher never swings ruler or strikes. Classmates observe.\nBOTTOM RIGHT understand: teacher has laid the ruler visibly flat on HIS desk and patiently explains meaning using a natural open hand directed toward the boy's open book. Boy now attentive and relieved, seated, classmates listen and some lean toward the lesson. No raised hand at this stage. Books on actual desks, realistic physical contacts, no floating book.\nConsistent cast, classroom positions and costumes. Individual detailed faces, anatomy, real five-finger hands, natural shadows and worn wooden grain. Every panel as refined as the reference, not vector flat art.",
+          "hint": "Generated images are saved to C:\\Users\\lenovo\\.codex\\generated_images\\01a10996-bf05-7403-beaa-834b40b071ff as C:\\Users\\lenovo\\.codex\\generated_images\\01a10996-bf05-7403-beaa-834b40b071ff\\exec-613d0efc-06e7-4a78-9452-ebe58cfd0da0.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+        },
+        {
+          "id": "04",
+          "prompt": "Use case: illustration-story. Refined educational poetry illustration atlas for 望洞庭, grade 3 Chinese.\nReference image 1 supplies a realistic painterly moonlit Dongting lake, a low tree-covered GREEN Junshan island, distant misty shores. Retain that natural-night feeling and detailed foliage/water; moon is moon, never daylight yellow sun.\nMake a single exact 2×2 grid atlas, overall landscape 3:2, each cell a complete filled 3:2 picture. No gutters, margins, border, labels, text or watermark.\nTOP LEFT: the whole calm autumn night lake panorama, large silver-blue expanse of still water in lower two thirds, full pale moon in upper left, gentle moon reflection. A SMALL rounded green tree-covered Junshan island at approximately 65% width, 35% height. Clear layers of distant land and dark blue sky, no boat or people. The composition should permit a smooth zoom toward the island without losing the lake.\nTOP RIGHT: low viewpoint close to the STILL smooth lake surface. Subtle blurred silver moon reflection across smooth undisturbed blue water, distant small green island and hazy mountains across horizon. Water is calm like an unpolished bronze mirror, NO storm, no waves or overt mirror object.\nBOTTOM LEFT: far observation again; green Junshan island is small and rounded, sitting amid broad silvery lake water, dense fine woodland on it, distant mist. Not an oversized mountain mountain-climbing view. Still moonlit night, realistic organic contours.\nBOTTOM RIGHT: clearly poetic comparison still-life on a small wooden lakeside ledge in foreground: one delicately worked flat round SILVER PLATE and one SMALL natural snail with a deep GREEN spiral SHELL resting on the plate. Snail physically on plate, anatomically believable, objects have fine metal highlights and shell ridges. Same night lake and small green island visible beyond in background. No enormous snail or plate in lake, no floating white card or pasted icon. This panel represents a literary association, not an actual lake object.\nAll four equal refined watercolor/gouache detail, deep blues, pale silver, living forest green; delicate lake surface, tactile grasses and trees. No flat vector shapes.",
+          "hint": "Generated images are saved to C:\\Users\\lenovo\\.codex\\generated_images\\01a10996-bf05-7403-beaa-834b40b071ff as C:\\Users\\lenovo\\.codex\\generated_images\\01a10996-bf05-7403-beaa-834b40b071ff\\exec-14385b9c-dbe1-432f-810c-be2153cc0c32.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+        },
+        {
+          "id": "06",
+          "prompt": "Use case: illustration-story. One full landscape 3:2 fine painterly nature scene for 秋天的雨, grade 3 Chinese. Reference image 1 contains four illustrations: use ONLY its bottom left squirrel and bottom right frog as the appearance/style reference and recombine naturally into a SINGLE continuous autumn woodland floor scene. Do not recreate a grid, no inset, no border, no floating cards, no text or watermark.\nLeft half: a realistic red-brown squirrel with detailed fur and bushy tail sits beside the foot of a textured pine tree, gently holding one pine cone in its tiny actual paws; additional cones gathered inside tree trunk hollow behind it, needles and cones on mossy earth. Keep its entire head ears and tail visible and uncropped.\nRight half: a SMALLER realistic green-brown frog, roughly one fourth the squirrel's body size, sits at the entrance of a little soil burrow under oak/sycamore leaves, limbs properly attached and toes contacting earth. Show burrow dark inside. Both animals fully independent, neither overlaps the other's face/body.\nSame ground plane and light, natural relative animal sizes, tiny clear rain droplets on golden fallen leaves, wet bark and pine needles. Frog at bottom right can be read easily because it is in nearer foreground, not oversized. Atmosphere autumn preparation for winter, no snow, no alarming predators. Rich watercolor/gouache fine realistic woodland textures, match reference.",
+          "hint": "Generated images are saved to C:\\Users\\lenovo\\.codex\\generated_images\\01a10996-bf05-7403-beaa-834b40b071ff as C:\\Users\\lenovo\\.codex\\generated_images\\01a10996-bf05-7403-beaa-834b40b071ff\\exec-b503d090-8689-463f-9434-44b5b91872ad.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+        },
+        {
+          "id": "07",
+          "prompt": "Use case: illustration-story. Grade 3 Chinese 听听，秋的声音 nature-reading atlas. Reference image 1 defines a beautifully detailed warm autumn hillside, broad leaves, cricket in grass, flying wild geese and distant valley. Retain its painterly realism.\nCreate one EXACT 2×2 grid landscape 3:2 atlas, each quadrant filled independent 3:2 image, no gutter/white line/border/text/cards/watermark. Every source is part of its natural ENVIRONMENT, not a detached icon or a cartoon musical instrument.\nTOP LEFT: golden broad autumn leaves on a real textured trunk/branch and a few just falling through air above wet leaf litter. Clear leaf veins and attached stems, gentle wind felt from actual bent grasses. No hand-like leaf characters, no arrows.\nTOP RIGHT: close natural view of ONE cricket standing firmly on a leaf/rock among grass stems, clearly shaped cricket antennae, segmented abdomen, articulated powerful folded hind legs and smaller walking legs, fine forewing ridges. Show forewings slightly raised rubbing each other to make a call; NO violin, bow, literal human arms or musical notes. Natural brown cricket similar reference, not grasshopper silhouette, no duplicate ghost limbs.\nBOTTOM LEFT: a small flock of realistic wild geese flying in a broad V across blue autumn sky, long necks stretched straight forward, two feathered wings per bird with individual natural attitudes. Under them a treetop, valley lake and golden field. Each bird recognisable and fully inside panel, no birds cut at right edge. No wire arrows or labels.\nBOTTOM RIGHT: wide harmonious natural autumn meadow composition showing all three sound sources TOGETHER: leafy tree on left with a few falling leaves, a realistically scaled cricket near lower-left in detailed foreground grasses, geese flock small upper-right sky. Lower foreground also small wildflowers, golden grain heads and grass stems, all sufficiently separated, none hides another. Lake and hill distance, warm light.\nUse subtle depth to make key subjects legible yet naturally proportional. Organic detailed storybook gouache/watercolor, no simplified card art, no flat vector overlay.",
+          "hint": "Generated images are saved to C:\\Users\\lenovo\\.codex\\generated_images\\01a10996-bf05-7403-beaa-834b40b071ff as C:\\Users\\lenovo\\.codex\\generated_images\\01a10996-bf05-7403-beaa-834b40b071ff\\exec-7910ad01-f3e7-43d6-b59d-904f1c916253.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+        },
+        {
+          "id": "09",
+          "prompt": "Use case: illustration-story. Grade 3 Chinese 犟龟 / The persistent tortoise, production classroom prediction-state atlas.\nReference image 1 establishes SAME realistic small brown land tortoise with a domed brown-gold scute shell, pebbly legs, alert friendly natural face, leafy forest path and warm mountainous valley. Match painterly fine detail. Generate ONE exact 2×2 grid atlas, overall landscape 3:2, all four cells independently full 3:2 pictures. No gutter or border, no text, labels, arrows or watermark. No lion, wedding, celebration, banquet, future story ending anywhere. No anthropomorphic green cartoon turtle, no clothes, no detached character cards.\nTOP LEFT journey start: same brown tortoise at a gentle fork in forest earthen path. View from slightly behind, feet firmly on dirt, forest and warm distant valley. It is only starting a journey. Nothing indicates any later encounter.\nTOP RIGHT spider's warning: tortoise stopped facing a natural SMALL brown spider on a low twig beside path. Tortoise face fully visible, spider has eight slender articulated legs, small web strands attached to twig. Spider is naturally tiny compared with tortoise (about one tenth body length); place its twig closer to camera so a child can see it clearly. Both looking toward each other; not predator aggression, not touching, no giant spider. Close natural story encounter, moss, twigs and autumn leaves.\nBOTTOM LEFT tortoise continues after spider's warning: SAME tortoise walking farther along this same quiet path toward distance, slightly front-side view showing one foot in a walking pose contacting ground, determined gentle expression. Spider remains SMALL on the branch behind in left background. No snail or gecko or outcome clue in this panel, no invented later destination.\nBOTTOM RIGHT gecko gives new news: SAME tortoise stopped at a mossy stone beside path, looking at a small natural gray-brown gecko on the stone. Gecko has four limbs, slender tail, fine skin scales and separated tiny toes contacting stone. Gecko's body about one third tortoise length, never larger than shell. Gecko head turned toward tortoise, tortoise attentive face slightly thoughtful. This picture shows ONLY this encounter and leaves what happens next open. No spider or snail or wedding decorations, no continuation implied.\nFine natural animal anatomy, nonviolent child-friendly encounter, proper contact shadows, individual shell scutes, wet leaf veins, twigs and stone textures. Consistent cast, light, forest and natural proportional animals, refined immersive watercolor/gouache detail as reference.",
+          "hint": "Generated images are saved to C:\\Users\\lenovo\\.codex\\generated_images\\01a10996-bf05-7403-beaa-834b40b071ff as C:\\Users\\lenovo\\.codex\\generated_images\\01a10996-bf05-7403-beaa-834b40b071ff\\exec-0a195504-4df4-4989-9aeb-b34868d7c4c6.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+        },
+        {
+          "id": "09direction",
+          "prompt": "Use case: illustration-story. One full landscape 3:2 production reading scene for Chinese grade 3 犟龟, the snail's useful direction reminder. Reference 1 defines the SAME brown-gold land tortoise, forest leaf path and detailed watercolor/gouache style. Match tortoise shell scutes, pebbly limbs and warm forest light.\nOn a forest earthen forked path, brown tortoise pauses on left facing a SMALL natural snail on a mossy stone on the right. The snail's brown spiral shell and delicate extended feelers are visible, body actually contacting stone, about one eighth the tortoise body length. Show snail nearer foreground so legible but not giant. Tortoise head attentive, mouth neutral, feet grounded. Two gentle paths diverge behind with plants framing them, one goes diagonally into valley, one to wooded slope, no road signs, no drawn arrows, no text. This is only the known encounter about route direction, not the story ending.\nHighly detailed warm painterly leaf veins, shell ridges, bark, moss and physical contact shadows. No human clothes, no wedding, no lion, no spider or gecko, no celebration or unknown future outcome. No panel, no inset, no cards, no label, no watermark.",
+          "hint": "Generated images are saved to C:\\Users\\lenovo\\.codex\\generated_images\\01a10996-bf05-7403-beaa-834b40b071ff as C:\\Users\\lenovo\\.codex\\generated_images\\01a10996-bf05-7403-beaa-834b40b071ff\\exec-06a4a051-80d8-4b90-8e3b-f582ff86108d.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+        },
+        {
+          "id": "04shan",
+          "prompt": "Use case: illustration-story. Asset: one landscape 3:2 finely painted Chinese primary-school poetry comparison scene for Du Fu's 山行, line 霜叶红于二月花. Image 1 is STYLE REFERENCE and autumn-place reference, not a scene to copy unchanged. Match its rich painterly watercolor and gouache textures, natural botany and soft mountain light.\nMake a single complete image with a clear left-to-right comparison of TWO DIFFERENT SEASONS, not a real garden with both seasons coexisting. Left half: a near branch of mature autumn maple, large richly observed five-lobed vivid vermilion/red leaves with detailed vein networks, serrated edges, slender petioles physically connected to textured branch. A few golden leaves farther back. Soft distant stone mountain path and blue-gray hills from the reference provide context. Right half: a near branch of early spring peach blossoms, delicately observed PALE PINK five-petalled actual flowers with translucent petal edges, fine reddish yellow-tipped stamens, buds and real brown bark. Soft distant misty mountain orchard background. Use a gentle natural vertical dissolve of background light at the image center to signify a conceptual comparison of seasons; no white panel, no drawn frame, no chart marks. Both branches are roughly equal prominence and lit under the same soft neutral afternoon light so colours can be fairly compared: red maple visually deeper/redder than pastel pink flowers. Leaves and blossoms are not floating icons, both genuinely connected to branches, no cutout edge.\nSuperb close-up detail, proper branch structure and botanical anatomy, individual leaves and petals with naturally varied perspective, rich layered brushwork. Foreground red maple at left and blossom spray at right occupy ~75% of image height with sufficient margin not cut off, readable at classroom projection size. No people, no carriage, no butterfly, no numbers, no text, no labels, no arrows, no logo or watermark, no simplistic flat vector flower.",
+          "hint": "Generated images are saved to C:\\Users\\lenovo\\.codex\\generated_images\\01a10996-bf05-7403-beaa-834b40b071ff as C:\\Users\\lenovo\\.codex\\generated_images\\01a10996-bf05-7403-beaa-834b40b071ff\\exec-1d585e14-9197-46a3-9a37-c1624d7af1be.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+        }
+      ],
+      "schoolRevised": {
+        "prompt": "Use case: precise-object-edit. Edit target is this existing 2×2 classroom atlas. Keep the exact image resolution, exact 2×2 equal 3:2 cell grid, all existing people, lighting, scenery and brushwork. Leave TOP LEFT, TOP RIGHT and BOTTOM RIGHT completely unchanged.\nChange ONLY BOTTOM LEFT recess panel: ADD two small natural observers that belong to this same school environment: one realistic small bird perched on a low banyan branch at the left side above/behind the dancing children's heads, and one small realistic red-brown squirrel on a root at far lower-left under the banyan looking toward the playing children. Detailed wings/feathers and fur/tail, naturally small compared with children, visible yet never pasted cards. Actual claws grasp branch/root, realistic contact and depth. Do not overlap or obscure any child's face/hand/foot or the wrestling children at right. Keep all children and complete dance circle unchanged. The animals have come to watch the playful scene. Do not add butterflies or any extra humans.\nEvery added animal must match the refined painterly natural style. No text, labels, borders, no vector shapes; preserve all other content.",
+        "hint": "Generated images are saved to C:\\Users\\lenovo\\.codex\\generated_images\\01a10996-bf05-7403-beaa-834b40b071ff as C:\\Users\\lenovo\\.codex\\generated_images\\01a10996-bf05-7403-beaa-834b40b071ff\\exec-6fdf0ffe-6a5a-4572-8884-2ff27852aef4.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    "middle": {
+      "generations": [
+        {
+          "id": "10",
+          "generated": "C:\\Users\\lenovo\\.codex\\generated_images\\01a10996-f38b-7912-b380-c089c8b6f3a3\\exec-f93d54fb-f8f5-486b-9996-a3ebbdd3a5f9.png",
+          "prompt": "Use case: illustration-story. Create an ORIGINAL finely painted children's literary lesson illustration atlas, matching the reference image's detailed warm painterly realism. Reference image is ONLY identity/style reference: same small brown and white fluffy puppy, white muzzle/chest/paws, brown floppy ears, warm forest path, no changes to puppy's identity.\nOUTPUT: precisely 2 columns by 3 rows of six INDEPENDENT equally sized images, edge-to-edge, no gutters, no labels, no borders, no text or watermark. Whole atlas square, each cell exactly landscape 3:2. Every scene complete within its cell, never bleed across boundaries. Aim 1800x1800 or higher. Rich texture, depth, clearly readable puppy expressions, paws on ground, correct animal anatomy.\nCells in reading order:\n0 top-left: puppy alone on forest path, looking worried and eager to learn a call, ears slightly lowered, expressive face and fluffy fur; no other animal or any ending clues.\n1 top-right: puppy learning from a colorful rooster beside a rustic fence, rooster beak clearly open crowing, puppy looking up listening intently; both feet/paws grounded, fully detailed feather texture.\n2 middle-left: puppy near a forest tree listens to a cuckoo bird perched on a visible branch with gripping claws, beak open; no hunter, no danger, no flight implying an ending. Puppy same identity.\n3 middle-right: puppy alone at three branching forest paths, paused uncertainly at their entrance. NO cow, farmer, other dog, silhouettes, speech bubbles, letters or any clues revealing outcomes.\n4 bottom-left: a single cell containing three visibly separate narrow storybook vignette spaces (soft natural scenery division, no graphic icons): the SAME puppy facing a distant cow beside a meadow path; SAME puppy facing a distant farmer standing on a village path; SAME puppy listening attentively on forest path with a small offscreen sound impression suggested by wind in leaves, NO extra dog visible. These are only beginning cues for three alternative endings, NOT complete endings: no new success, attack, conclusion, rescue, transformations, or dialogue.\n5 bottom-right: puppy alone sitting near mossy rock on forest path attentively thinking, same identity, no other character, a calm neutral reflection scene.\nKeep all character interactions concrete and natural, no clipart, vector shapes, childish flat diagram or symbols. This is literary fiction; do NOT invent specific unrevealed conclusion. No Chinese or English lettering anywhere.",
+          "columns": 2,
+          "rows": 3,
+          "review": "Puppy identity preserved, rooster/cuckoo poses readable, pending gate has no ending characters; revealed cell contains entrance-only three vignettes. Tiny white divider removed only using runtime cell crop.",
+          "png": "H:\\AI-Project\\教材\\word-adventure\\output\\imagegen-sources\\chinese-polished\\cn-10-atlas-v3.png",
+          "webp": "H:\\AI-Project\\教材\\word-adventure\\public\\images\\chinese-polished\\cn-10-atlas-v3.webp",
+          "width": 1254,
+          "height": 1254,
+          "pngBytes": 3504950,
+          "webpBytes": 2655820,
+          "losslessDecodedPixels": true
+        },
+        {
+          "id": "11",
+          "generated": "C:\\Users\\lenovo\\.codex\\generated_images\\01a10996-f38b-7912-b380-c089c8b6f3a3\\exec-44f92e6b-dec9-490c-b21b-b0bfcb85fe08.png",
+          "prompt": "Use case: illustration-story. Produce an ORIGINAL polished narrative lesson atlas for a Chinese grade-three literary story, using the reference ONLY as character/style identity reference. Keep EXACT SAME elderly Chinese grandmother: gray-black hair in low bun, wrinkled warm smiling face, purple-brown patterned blouse, blue floral apron, seated rustic wooden home; keep EXACT SAME 8-year-old boy: short dark tousled hair, white long sleeve shirt, blue vest, expressive rosy face. Warm sophisticated painterly illustrated realism with detailed skin, fabric, real hands, wood grain and garden plants, the same refinement as reference.\nOUTPUT precisely 2 columns x 2 rows, four separate equal landscape 3:2 paintings, edge-to-edge with NO gutters, NO labels, NO borders, NO text, NO watermark. Overall landscape 3:2 atlas preferably 1800x1200 or larger. Images must not bleed across boundaries.\n0 top-left: grandmother telling a story to boy at wooden table, boy listening. Above background in a clearly dreamlike soft pale cloud vignette, a golden double-bulb gourd, imaginary story object rather than physical object held by anyone. A real book on table has blank lines, no legible characters. Hands natural and grounded on table.\n1 top-right: same grandmother and same boy story conversation; grandmother gently gesturing with one hand as boy imagines several ripe pink peaches WITHIN a distinct small soft cloud-shaped thought vignette in background. The peaches represent imaginary story wishes, not physical table fruit. Gourd included inside SAME imaginary vignette only. Faces consistent and detailed.\n2 bottom-left: same boy at a wooden school desk looks frustrated thoughtfully over an arithmetic exercise book (blank ruled marks, no writing). One hand on forehead and other naturally rests on desk. Background simple rural Chinese classroom, soft dream thought vignette with golden gourd clearly imaginary. Do not show that magic has solved math; no glowing correct answers, no teacher or extra child needed.\n3 bottom-right: same boy crouches beside a weak poorly growing sunflower in earthen garden pot. Sunflower specifically BENT slender stem with visibly drooping leaves and small DOWNWARD hanging flower head, not healthy upright bloom. Boy carefully examines it; fingers naturally touch pot rim, feet on ground. A small golden gourd in softly separated thought cloud only, NO magically growing healthy flower or success outcome.\nNo floating physical objects or vague icons. The real scene and thought cloud must be visually separated. Consistent faces and clothes across all four paintings. Detailed believable boy/grandmother anatomy, no spare fingers or merged limbs.",
+          "columns": 2,
+          "rows": 2,
+          "review": "Grandmother and boy consistent, arithmetic posture and pot-rim hand contact readable, sunflower visibly droops; imagined gourd is separated in clouds.",
+          "png": "H:\\AI-Project\\教材\\word-adventure\\output\\imagegen-sources\\chinese-polished\\cn-11-atlas-v3.png",
+          "webp": "H:\\AI-Project\\教材\\word-adventure\\public\\images\\chinese-polished\\cn-11-atlas-v3.webp",
+          "width": 1536,
+          "height": 1024,
+          "pngBytes": 3083507,
+          "webpBytes": 2135214,
+          "losslessDecodedPixels": true
+        },
+        {
+          "id": "12",
+          "generated": "C:\\Users\\lenovo\\.codex\\generated_images\\01a10996-f38b-7912-b380-c089c8b6f3a3\\exec-1e68af66-13e3-401a-9657-369a5f2cedde.png",
+          "prompt": "Use case: illustration-story. Create ORIGINAL finely painted narrative atlas for a Chinese grade-three fictional story about two cricket friends, REDHEAD and GREENHEAD, and a brown cow. Reference is style/animal texture only. Same brown cow with small horns in all cells; same TWO realistic detailed crickets throughout: REDHEAD warm reddish brown head/body markings, GREENHEAD olive green head/body markings, both dark wing covers, long fine antennae and correct six insect legs. Distinguishable colors without human clothes or giant red/green cartoon heads.\nOUTPUT EXACT 2 columns x 3 rows of six independent equal landscape 3:2 images. Whole atlas square, edge-to-edge cells, NO gutters, borders, lettering, labels or watermark. Every scene separate, no bleed across cells. 1800x1800 or larger, rich painterly illustrated realism, detailed grass, insect joints, cow hair and nose texture. Legs/paws/feet must touch a real surface.\nCells in reading order:\n0 top-left: both cricket friends close up on green grass leaves in meadow, brown cow grazing farther behind. Both insects clearly separately visible, feet grip actual grass blade.\n1 top-right: close three-quarter cow muzzle reaching down to eat a mouthful of grass. ONE red-brown cricket clings to that grass just entering the cow's open mouth, apprehensive; ONE green-marked friend stands safely on grass OUTSIDE cow at lower edge. Clear grass-to-mouth contact, not swallowed into a giant hole; family-safe, no gore.\n2 middle-left: REDHEAD alone on wet grass in a dark warm soft abstract STORY-IMAGINATION interior. Textured grass and soft light suggest a confined story location; this is NOT anatomical reconstruction, no realistic organs, organ chamber anatomy, acid, diagram, tubes or labels. ONE clearly separate small inset in upper-right shows GREENHEAD OUTSIDE beside cow hoof on meadow, physically grounded, not inside with red cricket.\n3 middle-right: REDHEAD alone perched on a DIFFERENT shifted wet grass pile, still in darker warm abstract story-imagination space; little light reaches from upper-left, posture/expression urgent but non-horror. ONE distinctly separated upper-right inset shows GREENHEAD outside near cow muzzle planning help. Do not pretend to draw a scientifically correct first or second stomach. Imaginary two locations are distinguished by camera, grass arrangement and lighting, not invented organs.\n4 bottom-left: REDHEAD returns to the mouth: clear close-up cow lips and grass, one red cricket visible among wet chewed grass at the open lip, exhausted. GREENHEAD is separately OUTSIDE on the brown cow's muzzle near its nostril, gripping nose hairs with legs, reaching toward nostril to tickle. Full facial context so nostril and mouth are distinct, no insect merges into cow eye.\n5 bottom-right: the cow has just sneezed: side/three-quarter head on meadow, a few realistic grass blades and small droplets move outward from muzzle. ONE REDHEAD is just emerging safely and landing on grass, one GREENHEAD stays gripping the nostril edge helping. Show a clear safe escape moment with one of each cricket, no duplicated insects, no blood, no violent explosion.\nInterior panels must read as story fantasy illustration, not scientific anatomy. The external green friend appears only in separate context inset. Strong clear action, nuanced lifelike faces/texture, avoid crude generic route diagrams, flat clipart, blob insects or symbols.",
+          "columns": 2,
+          "rows": 3,
+          "review": "Red/green head markings remain distinct in all six cells; green friend is outside inset in interior narrative cells. Cow mouth and nose separate, escape motion clear; imagined interior is not anatomy. Tiny dividers removed by runtime crop.",
+          "png": "H:\\AI-Project\\教材\\word-adventure\\output\\imagegen-sources\\chinese-polished\\cn-12-atlas-v3.png",
+          "webp": "H:\\AI-Project\\教材\\word-adventure\\public\\images\\chinese-polished\\cn-12-atlas-v3.webp",
+          "width": 1254,
+          "height": 1254,
+          "pngBytes": 3244042,
+          "webpBytes": 2389890,
+          "losslessDecodedPixels": true
+        },
+        {
+          "id": "13",
+          "generated": "C:\\Users\\lenovo\\.codex\\generated_images\\01a10996-f38b-7912-b380-c089c8b6f3a3\\exec-b2327887-bfb3-4d6a-9bf3-b61664b7a279.png",
+          "prompt": "Use case: illustration-story. Create ORIGINAL richly detailed storybook illustration atlas for Chinese grade-three story about an ant captain resisting a cheese crumb and asking the smallest ant to eat it. Reference image is character/style/forest/cheese identity reference: realistic reddish brown ants with shiny dark abdomens, six articulate legs, two antennae, one captain slightly larger; same yellow cheese block with rounded holes. Warm woodland painterly realism, fine insect anatomy, dew, moss, bark, cheese crumb texture. No human clothes or hats.\nOUTPUT precisely 2 columns x 2 rows, four independent equal landscape 3:2 paintings, overall landscape 3:2, edge-to-edge, no gutters, no writing/borders/watermarks, 1800x1200 or larger. Each cell a complete separate image.\n0 top-left: several ants work together actually carrying the cheese block along a forest ground path. Their bodies and raised forelegs support the cheese's underside, feet planted on ground, cheese stable. Larger captain walks at the front giving direction, not duplicated.\n1 top-right: after a tiny yellow crumb falls from the block, captain stands near it, looking tempted thoughtfully but mouth has NOT touched crumb. Cheese block rests safely nearby and other ants in background pause. Only ONE captain, tiny crumb at ground level next to captain, no thought bubble or moral icons.\n2 bottom-left: captain has called the other ants back: several ant workers gathered on same woodland path, captain faces them with antennae raised and one front leg gesturing to the small crumb on ground. Same cheese block rests behind, consistent scale. Clear real insect pose, not ant standing like a human with extra arms. Crumb not yet consumed.\n3 bottom-right: the visibly smallest ant ACTUALLY EATING the yellow crumb at ground level: mandibles touch crumb, a small fresh bite missing at contact, front feet grip ground and touch crumb side; captain calmly watches from side, other worker ants beside safely resting main cheese block. Captain's mouth is away from crumb. Both characters distinctly visible; no crumb floating over back or carrying confused with eating.\nKeep ants and objects sharp/detailed, correct six legs and no limbs glued together, physical contacts clearly legible at lesson display size. No generic vector ants, no flat repeated composition, no lettering.",
+          "columns": 2,
+          "rows": 2,
+          "review": "Captain pauses beside untouched crumb, recalls workers, smallest ant actually contacts crumb with mandibles in last cell; cheese carrier underside contact and body legs checked visually.",
+          "png": "H:\\AI-Project\\教材\\word-adventure\\output\\imagegen-sources\\chinese-polished\\cn-13-atlas-v3.png",
+          "webp": "H:\\AI-Project\\教材\\word-adventure\\public\\images\\chinese-polished\\cn-13-atlas-v3.webp",
+          "width": 1536,
+          "height": 1024,
+          "pngBytes": 3070918,
+          "webpBytes": 2019630,
+          "losslessDecodedPixels": true
+        },
+        {
+          "id": "16",
+          "generated": "C:\\Users\\lenovo\\.codex\\generated_images\\01a10996-f38b-7912-b380-c089c8b6f3a3\\exec-02267b6a-5238-4ab9-90a6-cc6d3411b829.png",
+          "prompt": "Use case: scientific-educational and illustration-story. Create ORIGINAL richly detailed painterly lesson illustration atlas about tropical Xisha islands of southern China. Reference is STYLE, marine water, reef and tropical island visual reference only. Match original sophisticated naturalistic watercolor/oil storybook painting quality. Accurate textured animals and plants, depth, light, real ecological setting; not flat diagrams.\nOUTPUT EXACT 2 columns x 2 rows of four independent equal landscape 3:2 paintings, overall landscape 3:2. Edge-to-edge, no gaps, borders, labels, text, lettering or watermark. 1800x1200 or larger.\n0 top-left: elevated oblique view across a tropical island coast showing real visibly changing water colors caused by depth: transparent pale turquoise shallows revealing light sand, mid-depth vivid blue-green reef water, distant deep blue sea. Natural shore and reef shapes, rippled light, small white-sand island with green trees. NO artificial straight colored bands, charts or labels.\n1 top-right: finely observed reef floor underwater with TWO unmistakable coral forms: prominent fine branching antler-shaped coral and distinct broad LAYERED PLATE coral. A realistic sea cucumber with rough leathery bumps rests on sandy bottom beside a realistic spiny lobster with clear segmented tail, legs, long paired antennae and no oversized claws. A few small fish provide underwater context. Everything underwater; no trees or land birds here.\n2 bottom-left: vibrant but realistic schools of DIFFERENT fish above reef, at least four clearly different silhouettes: striped oval fish, long slender fish, spotted fish, round-bodied fish with fan fins. Fins and tails attached properly, distinct bodies and readable textures; medium-large fish close and smaller fish in depth. These are living animals, not four repeated generic icons. No turtle needed.\n3 bottom-right: entirely DRY-LAND island bird habitat: lush tropical trees, sturdy detailed branches with seabirds naturally PERCHED with gripping claws, a securely supported twig nest containing several clearly visible eggs, one flying bird with real feathered wings behind. Coastal sea visible ONLY beyond shoreline in far background; foreground sandy soil, fallen leaves and roots remain dry, no underwater coral or fish visible below branches. Real proportional nest integrated on branch, no giant floating bowl. Birds belong on a real island and occupy separate readable positions.\nMatch polished original rich atmosphere in ALL four cells. No simple vector overlay, generic repeated tree icons, mixed underwater/land scene or vague clipart.",
+          "columns": 2,
+          "rows": 2,
+          "review": "Natural water depth colors, distinct branching/plate coral, clear lobster/cucumber, diverse fish anatomy, bird nest fully on dry branch-supported land separated from underwater setting.",
+          "png": "H:\\AI-Project\\教材\\word-adventure\\output\\imagegen-sources\\chinese-polished\\cn-16-atlas-v3.png",
+          "webp": "H:\\AI-Project\\教材\\word-adventure\\public\\images\\chinese-polished\\cn-16-atlas-v3.webp",
+          "width": 1536,
+          "height": 1024,
+          "pngBytes": 3932106,
+          "webpBytes": 2760104,
+          "losslessDecodedPixels": true
+        },
+        {
+          "id": "17",
+          "generated": "C:\\Users\\lenovo\\.codex\\generated_images\\01a10996-f38b-7912-b380-c089c8b6f3a3\\exec-a3872611-6006-439b-aa88-ce6b53dc2597.png",
+          "prompt": "Use case: illustration-story. Create ORIGINAL finely detailed literary lesson atlas for a beautiful clean SMALL SEASIDE TOWN IN SOUTHERN CHINA. Use reference only as visual STYLE and architectural continuity reference: white limewashed houses, weathered gray roof tiles, small fishing harbor, warm sunshine, lush trees, fine traditional texture. The coastal town in all paintings is the SAME place. Sophisticated warm painterly realism, NOT generic vector overlays, clear spatial depth and real contact.\nOUTPUT precise 2 columns by 2 rows of four independent landscape 3:2 paintings, overall landscape 3:2, edge to edge. No gaps, borders, labels, text, lettering or watermark. 1800x1200 or larger.\n0 top-left: town's actual sea shore, sandy beach close with several delicate differently patterned seashells resting on sand; beyond are three detailed small Chinese fishing boats returning toward a sheltered harbor, correct hull and rigging, sea wavelets and tiled-roof town behind. No added gigantic graphic boat pasted over a lane.\n1 top-right: inside a real seaside HOUSE COURTYARD with varied subtropical trees in ground: gently curving coconut palm with pinnate fronds, leafy evergreen olive tree, tall eucalyptus with fine slender drooping leaves, spreading phoenix tree with a profusion of orange-red flowers. White wall and gray tiled house create coherent courtyard boundaries, visible trunks grounded with roots, botanical shapes distinct. Real branches bear blossoms, no floating cartoon flowers or Christmas pine trees. Warm fragrant atmosphere.\n2 bottom-left: a real seaside PUBLIC PARK under a monumental BANYAN: broad dense spreading leafy canopy, gnarled trunk, natural aerial roots, shade falling across ground and wooden bench. Two ordinary Chinese townspeople rest on the bench with natural body posture, hands and feet in correct contact; enough light/shadow contrast to make 'wide leafy shade' obvious. Same white walls/gray roofs glimpsed in background. No opaque pale disk posing as canopy.\n3 bottom-right: eye-level view down a truly clean open SIDE STREET of the same coastal town, spacious pale fine-sand lane bounded by limewashed walls and gray roof houses, subtle clean granular ground texture, sun-dappled edges and a couple of tidy planters beside walls. No loose litter or leaves on road, no person necessary, no giant flat trapezoid masking background. Perspective coherent through road, walls and harbor at far distance.\nPolish every leaf, branch, roof, vessel, shell and road texture. Scenes belong to one Chinese coastal town, no European church spire, tourist Greece copy, text signs, extra classroom UI or abstract symbolic trees.",
+          "columns": 2,
+          "rows": 2,
+          "review": "Same coherent Chinese coastal town; separate courtyard palm/eucalyptus/olive/phoenix forms, real banyan roots and leaf canopy shading seated townspeople, fine sand street with coherent perspective.",
+          "png": "H:\\AI-Project\\教材\\word-adventure\\output\\imagegen-sources\\chinese-polished\\cn-17-atlas-v3.png",
+          "webp": "H:\\AI-Project\\教材\\word-adventure\\public\\images\\chinese-polished\\cn-17-atlas-v3.webp",
+          "width": 1536,
+          "height": 1024,
+          "pngBytes": 3985564,
+          "webpBytes": 2776204,
+          "losslessDecodedPixels": true
+        }
+      ],
+      "streetRevised": {
+        "source": "output/imagegen-sources/chinese-polished/cn-17-atlas-v4.png",
+        "dest": "public/images/chinese-polished/cn-17-atlas-v4.webp",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 2517406,
+        "losslessDecodedPixels": true,
+        "edit": "Only clean street state uses corrected fine-sand road atlas; other states keep v3",
+        "tool": "image_gen.imagegen (built-in)",
+        "referencedImagePaths": [
+          "H:/AI-Project/教材/word-adventure/public/images/chinese-polished/cn-17-atlas-v3.webp"
+        ],
+        "generatedOriginal": "C:/Users/lenovo/.codex/generated_images/01a10996-f38b-7912-b380-c089c8b6f3a3/exec-2e9fd600-d52c-466d-a1ae-8eb99c82dfd3.png",
+        "transparentBackground": false,
+        "prompt": "Edit target: the attached original educational 2x2 illustration atlas for the Chinese story 海滨小城. Preserve all FOUR exact equal 3:2 panels and the exact overall 1536x1024 composition. Preserve the top-left fishing harbour panel, top-right varied courtyard trees panel, and bottom-left banyan shade park panel as closely as possible, including every existing boat, tree, house, person, leaf, shell, bench and lighting. EDIT ONLY THE ROAD SURFACE IN THE BOTTOM-RIGHT PANEL: this story describes a clean street paved with fine sand, NOT irregular flagstone paving. Replace every paving stone or cobblestone polygon from the foreground all the way to the distance in that bottom-right alley with one physically believable continuous dry fine light-golden sandy surface, densely resolved minute grains, tiny shallow footprints, subtle granular ripples and leaf shadows. NO stone slabs, NO paving blocks, NO large polygon outlines, NO asphalt. Keep the existing houses, flowers, shoreline in distance, border positions and strong perspective. The little stone doorstep at the wall edges can stay but the entire walkable STREET MUST BE SAND. The road should remain spotless and clean without litter, fallen leaves or garbage, and well lit so the tiny sand granules are visible. This is a surgical material correction, not a redesign. Original detailed painterly realism. No text, captions, labels, watermarks, separators or new framing."
+      }
+    },
+    "special": [
+      {
+        "file": "cn-15-flower-states-v3.webp",
+        "prompt": "Edit the supplied botanical dandelion references into ONE production sprite atlas, six equal square cells in exactly 2 columns and 3 rows, row-major, no gaps, no outlines, no labels or text. True transparent background over the entire atlas. Each cell contains exactly the same complete mature yellow dandelion plant, with identical leaf shapes, stem curvature, size, base/root anchor at cell x50% y92%, same detailed watercolor/gouache texture and light direction as references. Change ONLY the yellow flower head's opening through these six states: top left tightly closed green involucre around yellow petals; top right quarter open with a few yellow petals visibly lifting apart; middle left genuinely HALF OPEN, a narrower cup of yellow petals with green involucre supporting below, no superimposed full-open blossom or duplicate contours; middle right three-quarters open; bottom left fully open yellow disk; bottom right fully open same pose duplicate. Never turn the yellow bloom into a white seed head. Every plant opaque, no cross-faded ghost image. Main use is Grade3 interactive slider, single cell displayed at a time: clean specimen rendering, crisp realistic petal tips/veins, botanically plausible anatomical connection, green serrated leaves and hairy stem remain same in all cells. Preserve a 6% transparent cell margin around flower and leaves, no clipping. Generate high-resolution portrait atlas 2048x3072 if supported, otherwise largest consistent atlas; no background, no shadow rectangle.",
+        "sourceHint": "Generated images are saved to C:\\Users\\lenovo\\.codex\\generated_images\\01a0fd14-dc43-7fe3-9349-0038aa3755b0 as C:\\Users\\lenovo\\.codex\\generated_images\\01a0fd14-dc43-7fe3-9349-0038aa3755b0\\exec-8b466bd3-b1bd-4a6b-bd50-37f975c5ee24.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      },
+      {
+        "file": "cn-08-atlas-v3.webp",
+        "prompt": "Create ONE finely painted children's literature teaching illustration atlas for Chinese Grade 3 \"The old house that would never fall down\". Use the referenced aged timber house and forest setting as the exact visual anchor. ONE atlas of 2 columns × 3 rows, each cell a full 3:2 scene, overall square composition at highest available resolution. No words, no labels, no arrows, no gutters or white borders. Detailed painterly watercolor textures, coherent perspective and believable animal sizes, contact shadows, authentic architecture throughout. Same old house, doorway and moss-covered wooden beams in all six scenes. Row-major cells: 0 a small wet tabby cat politely asking at the doorway during actual overcast heavy rain, puddles and cloudy sky, cat's paws on ground and body much smaller than doorway; 1 the same cat safely asleep curled in straw INSIDE the sheltered house, dry cozy interior and rain outside the door; 2 a naturally proportioned brown hen asking beside doorway, feet visibly standing on ground; 3 the SAME hen quietly brooding eggs in a protected straw nest inside house, not a standing duplicate; 4 a natural close view of a small spider on an old wooden beam near the doorway, aged timber detail, the full old house context in soft background and no completed web yet; 5 same beam and spider in a beautiful finely detailed web catching a small insect, quiet sheltered house visible behind. These are distinct before-and-after stages; do not mix animals from other cells or show completed events in before cells. Full environment in every cell, not cutout avatars.",
+        "sourceHint": "Generated images are saved to C:\\Users\\lenovo\\.codex\\generated_images\\01a0fd14-dc43-7fe3-9349-0038aa3755b0 as C:\\Users\\lenovo\\.codex\\generated_images\\01a0fd14-dc43-7fe3-9349-0038aa3755b0\\exec-cf3ca7b9-dd4d-41bc-a3f6-d4093857ffdb.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      },
+      {
+        "file": "cn-observation-transfer-v3.webp",
+        "prompt": "Create ONE atlas containing SIX separate fully finished educational storybook watercolor paintings. 2 columns × 3 rows, each cell 3:2, overall square, highest available resolution. No words, symbols, arrows, labels, white borders or gutters. Each cell is a complete believable detailed scene, not an icon. Natural lighting, anatomy, hand-painted textures, same viewpoint within each subject. Row-major 0: small friendly golden-brown spaniel in a grassy park moving toward a red ball, young owner seated at far left; 1: same dog bends neck and grips that ball securely with mouth, front paws planted, same park view and owner; 2: same dog returns to same owner with ball visibly in its mouth, owner hand reaching to receive ball. Cells 3,4,5 are a NEW independent nature subject: exactly the same close-up broad green leaf from identical angle with the same visible vein pattern, branch and background. Cell3 early morning cool light with distinct rounded dew droplets across leaf; cell4 midday natural warm light, the SAME leaf with NO droplets; cell5 evening soft amber light, SAME leaf with NO droplets. Do not depict causes of disappearing dew, no wind/rain invented, only observed change. Crisp macro texture and beautiful detailed watercolor realism. The two subject groups must stay isolated in their cells.",
+        "sourceHint": "Generated images are saved to C:\\Users\\lenovo\\.codex\\generated_images\\01a0fd14-dc43-7fe3-9349-0038aa3755b0 as C:\\Users\\lenovo\\.codex\\generated_images\\01a0fd14-dc43-7fe3-9349-0038aa3755b0\\exec-70baea89-12c9-4cb5-99f2-11340773f727.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    ],
+    "late": [
+      {
+        "id": "cn-19",
+        "src": "C:\\Users\\lenovo\\.codex\\generated_images\\01a10997-2313-7852-a289-eb713a6c1582\\exec-46d958a2-120d-4482-af3a-6bff0e51ac17.png",
+        "png": "H:\\AI-Project\\教材\\word-adventure\\output\\imagegen-sources\\chinese-polished\\cn-19-atlas-v3.png",
+        "webp": "H:\\AI-Project\\教材\\word-adventure\\public\\images\\chinese-polished\\cn-19-atlas-v3.webp",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 2551050,
+        "pixelsIdentical": true,
+        "pngSha256": "93150d75c4b2216b972b3c5247bf078a57384bba27261f4965bec6a0f38ffa74",
+        "webpSha256": "8f13ea64457198fb341aebe468f9df20d0882f4dcc1a609bdcf1e0719e6c0420",
+        "generationKey": "polish-late-cn-19",
+        "generation": {
+          "prompt": "Use case: illustration-story. Create a highly detailed painted children's textbook scene atlas for Hong Kong. The input image is STYLE and LOCATION reference, not an edit target. EXACT grid 2 columns × 2 rows, 4 equal edge-to-edge 3:2 landscape cells, overall 3:2 ratio (1800×1200 or a larger exact equivalent). NO borders, gutters, writing, words, captions, numbering or labels. Full painted environments in every cell, rich tangible surfaces, realistic anatomy and lighting matching the reference, no flat diagram/cartoon icon collages. Reading order cells: 0 upper left: Hong Kong harbour cargo trade, foreground dock workers of visibly different adult identities examining assorted crates and goods, actual hands holding a crate on the dock, container cargo vessel in mid-ground, reference-style skyline and harbour. 1 upper right: close warm restaurant table with varied precisely painted cuisines: steaming bamboo basket of dim sum, noodles with chopsticks resting on bowl, roast food on ceramic plates, visible food textures, discreet Chinese restaurant depth; no logos or text. 2 lower left: accurately recognisable Golden Bauhinia sculpture, golden metallic six-petalled orchid monument with reflective surfaces on its reddish plinth near Hong Kong convention-centre harbour waterfront, several small visitors give scale, scenic depth; not a simple generic gold flower. 3 lower right: Victoria Harbour genuinely at night: dark blue sky, glowing architectural windows, warm and cool light reflecting in water, recognisable green-white ferry fully painted in coherent night lighting. Every frame is a finished luminous illustrated painting as detailed as the provided cover, not a background with a flat image sticker.",
+          "referenced_image_paths": [
+            "H:/AI-Project/教材/word-adventure/public/images/chinese-precision/cn-19.webp"
+          ],
+          "transparent_background": false,
+          "timestamp": "2026-10-05T01:26:33.472Z",
+          "sourceCallId": "call_H6DUTNy9A6QdzvFg3rOBWcnl",
+          "generationKey": "polish-late-cn-19"
+        },
+        "references": [
+          {
+            "path": "H:/AI-Project/教材/word-adventure/public/images/chinese-precision/cn-19.webp",
+            "sha256OfRetainedReference": "ccc9b6102d574efaee941ccc6ca1d29e02297ad6f0ff7cbcf8bcc448ff9ae88e"
+          }
+        ],
+        "promptSha256": "40a368369e4e047d8e8454e7041410e5d20730c483208ce9778567312b5041cb"
+      },
+      {
+        "id": "cn-21",
+        "src": "C:\\Users\\lenovo\\.codex\\generated_images\\01a10997-2313-7852-a289-eb713a6c1582\\exec-1119920e-a908-436d-bf2e-107d4e5c9da0.png",
+        "png": "H:\\AI-Project\\教材\\word-adventure\\output\\imagegen-sources\\chinese-polished\\cn-21-atlas-v3.png",
+        "webp": "H:\\AI-Project\\教材\\word-adventure\\public\\images\\chinese-polished\\cn-21-atlas-v3.webp",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 2834770,
+        "pixelsIdentical": true,
+        "pngSha256": "442492681f13345b94479cc3c4fbc0b2b1d4a3a47c8808945f7316cd8e448d41",
+        "webpSha256": "fa0922593bddcf8fbb9311066461ab4057ebec811697a4527108a4a1437aa341",
+        "generationKey": "polish-late-cn-21",
+        "generation": {
+          "prompt": "Use case: illustration-story / scientific-educational. Create a superbly detailed painterly atlas for Chinese primary school The Sounds of Nature. Reference image is STYLE and SETTING reference: same autumn-leaf forest stream, moss-covered rocks, reeds, waterfall, birds. EXACT grid 2 columns x 3 rows of six equal 3:2 landscape cells, total square. NO gutters/borders, labels, writing, numbers, audio icons, arrows, cards, diagrams, inset stickers. Every subject exists naturally IN its full detailed environment. Cell0 top left: same sunlit forest stream wide panorama, gently curved leafy branch top left, two small painted songbirds on branch top right, a small real cricket perched on low right reed, creek across centre; calm overview. Cell1 top right: close scenic view of windy stream bank, many distinctly shaped oak/maple leaves and reeds visibly bowing in breeze, light crossing leaves, no motion icons. Cell2 middle left: genuine rain close view in same forest, raindrops visibly strike an actual large leaf near foreground centre, crisp droplets splash into creek ripples beneath, wet leaf veins and stones, birds sheltered under branch, coherent cloudy light. Cell3 middle right: broader flowing river from small forest stream in foreground into wide water in midground toward distant open sea, naturally coherent aerial scenic landscape that makes stream-river-sea scale progression recognisable without arrows or diagrams; real waves/textures. Cell4 bottom left: detailed natural bird and cricket observation in same stream setting: two songbirds with finely painted feathers actually opening beaks on the upper right branch; foreground right cricket with six anatomically articulated legs, antennae, textured wings perched naturally on reed; actual relative scales, no giant toy insects. Cell5 bottom right: same wide forest stream with simultaneously visible windy leaves upper left, falling rain striking a centre-left leaf and creek surface, richer running water, singing birds upper right and cricket lower right, coherent natural atmosphere and rich materials. Keep layout of sound-source locations near stable so overlay markers can accurately target real leaves, water, birds and cricket. No floating cards, no flat vector subjects, full original-cover-quality painting.",
+          "referenced_image_paths": [
+            "H:/AI-Project/教材/word-adventure/public/images/chinese-precision/cn-21.webp"
+          ],
+          "transparent_background": false,
+          "timestamp": "2026-10-05T01:30:05.286Z",
+          "sourceCallId": "call_HD0xLXY3EZ7DHoEeQE8H1V82",
+          "generationKey": "polish-late-cn-21"
+        },
+        "references": [
+          {
+            "path": "H:/AI-Project/教材/word-adventure/public/images/chinese-precision/cn-21.webp",
+            "sha256OfRetainedReference": "e5df146ef20c83f785311ecfa36b8184b3fc495e7cb0c7d630e2445e72b9f946"
+          }
+        ],
+        "promptSha256": "f16152b4b5ec2c81296a4248a3d235e06875984dc4c3bab681d37403e2ec2941"
+      },
+      {
+        "id": "cn-22",
+        "src": "C:\\Users\\lenovo\\.codex\\generated_images\\01a10997-2313-7852-a289-eb713a6c1582\\exec-d0c9d6a0-f892-4ce8-9f87-30e7a583641f.png",
+        "png": "H:\\AI-Project\\教材\\word-adventure\\output\\imagegen-sources\\chinese-polished\\cn-22-atlas-v3.png",
+        "webp": "H:\\AI-Project\\教材\\word-adventure\\public\\images\\chinese-polished\\cn-22-atlas-v3.webp",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 2642010,
+        "pixelsIdentical": true,
+        "pngSha256": "7de9c227e1b382b254f1c366c87bd1d94ef76b5e8e8d725bebb5ab703dfffbd9",
+        "webpSha256": "91f3f913ff109461f544b0c1308c16b98670a6fbc1e7a23c6309847950f33499",
+        "generationKey": "polish-late-cn-22-final",
+        "generation": {
+          "prompt": "New original fine children's nature atlas inspired by attached painting. OUTPUT MUST BE SQUARE. A square canvas divided by an exact central vertical boundary and exact horizontal boundaries at ONE THIRD and TWO THIRDS of canvas height. Thus 2 columns, 3 equal rows, six equally sized 3:2 landscape frames. No margins, dividers or text. IMPORTANT evenly spaced rows 0%-33.33%,33.33%-66.67%,66.67%-100%; all row heights equal. Frame order: top left realistic small sparrows hopping on stone garden path, eagle gliding high right over fine traditional Chinese garden; top right close real ants marching in curved soil trail amongst leaf litter, segmented bodies and legs. Middle left flowers and differently shaped grass leaves beside a peach branch with delicate pink blossoms ONLY, no fruit. Middle right SAME branch in later fruiting season with realistic peaches and green leaves ONLY, NO remaining blossom, same flower garden below. Bottom left actual bamboo stems with well defined nodes and narrow leaves on left, fan palm tree on right reflected in quiet Chinese garden pool, architecture and layered natural landscape. Bottom right fine close view bamboo nodes and natural fan palm leaf shape reflected in water. All six scenes exquisitely painted with rich fine leaf veins, real soil gravel, feathers, bark, natural light and shadows, preserve nature anatomy. SQUARE ATLAS, SIX SAME-SIZE 3:2 FRAMES, NO TEXT, arrows, labels, symbols or collage cards. Do NOT stretch anatomy.",
+          "referenced_image_paths": [
+            "H:/AI-Project/教材/word-adventure/public/images/chinese-precision/cn-22.webp"
+          ],
+          "transparent_background": false,
+          "timestamp": "2026-10-05T01:40:42.578Z",
+          "sourceCallId": "call_kuccpjIMSfnWHOChmvVbVcb6",
+          "generationKey": "polish-late-cn-22-final"
+        },
+        "references": [
+          {
+            "path": "H:/AI-Project/教材/word-adventure/public/images/chinese-precision/cn-22.webp",
+            "sha256OfRetainedReference": "00479b40bfca1f87aae440f9f183c5d3c139b9a71d15cbaf7c4654d65ae81d42"
+          }
+        ],
+        "promptSha256": "4ebf4e51088c3b3449413e827bbd6e083c93af7267d71bb407b77548cefc2f2b"
+      },
+      {
+        "id": "cn-24",
+        "src": "C:\\Users\\lenovo\\.codex\\generated_images\\01a10997-2313-7852-a289-eb713a6c1582\\exec-2c51a63f-1bcf-45aa-9030-b94bfe2ee987.png",
+        "png": "H:\\AI-Project\\教材\\word-adventure\\output\\imagegen-sources\\chinese-polished\\cn-24-atlas-v3.png",
+        "webp": "H:\\AI-Project\\教材\\word-adventure\\public\\images\\chinese-polished\\cn-24-atlas-v3.webp",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 2000570,
+        "pixelsIdentical": true,
+        "pngSha256": "6235c5d9c2d7bf975055e93460f85ac24e73779b42076bb7b449bf1dd75cfe3f",
+        "webpSha256": "07cc91f0640f7747c36f6b19164753017d40bde896b1673c2fe059c3f7644b8a",
+        "generationKey": "polish-late-cn-24",
+        "generation": {
+          "prompt": "Use case: historical-scene / illustration-story. Create an exquisitely detailed Chinese textbook historical narrative atlas, EXACT 2 columns × 3 rows, 6 equal edge-to-edge 3:2 landscape cells, overall square (1800×1800 or 2048×2048). No text, numbers, panels borders, gutters, white gaps, charts, arrows, stars or checkmarks. Reference is style and the SAME Chinese student Tong Dizhou character as youth: short dark hair, blue-grey traditional student robe, expressive realistic face, cloth texture. Later adult version retains facial identity but has naturally mature face and simple grey laboratory jacket. Historically evocative early 20th-century school/laboratory, not modern computers. Each cell is a complete detailed painterly setting with actual physical action. Reading order: 0 top left: youthful Tong Dizhou at wooden school desk, struggling with open mathematics notebook, concentrated worried expression, pencil touches paper and other hand supports cheek, books and soft daylight. 1 top right: SAME youth studying under a street lamp near school at early dawn, open book in both hands and intent expression, faint morning sky, period stone path; show studying as specific action rather than standing generic clipart. 2 middle left: SAME youth at school desk solving a geometry construction, compass/ruler and pencil physically touch notebook; teacher nearby looking approvingly at the completed diagram, student relieved but focused, do not print scores or letters. 3 middle right: adult Tong Dizhou at period biology workbench facing a difficult observation: hand on forehead, examining a small clear specimen dish beside microscope and open research notebook, frustration yet persistence; do NOT invent visible surgical/frog dissection procedure. 4 bottom left: SAME adult leaning eye to microscope eyepiece with one hand adjusting focus wheel and other near specimen dish on workbench, hands really contact instruments, detailed brass/steel/glass materials, quiet laboratory light. 5 bottom right: SAME adult recording observations with pen tip on notebook, microscope and small covered clear specimen dish nearby; colleague quietly examines results with respectful expression, success conveyed through calm actual actions, no trophy or symbolic badges. Rich human expressions, different specific poses, dimensional environments, source-cover quality in all six frames.",
+          "referenced_image_paths": [
+            "H:/AI-Project/教材/word-adventure/public/images/chinese-precision/cn-24.webp"
+          ],
+          "transparent_background": false,
+          "timestamp": "2026-10-05T01:26:33.472Z",
+          "sourceCallId": "call_H6DUTNy9A6QdzvFg3rOBWcnl",
+          "generationKey": "polish-late-cn-24"
+        },
+        "references": [
+          {
+            "path": "H:/AI-Project/教材/word-adventure/public/images/chinese-precision/cn-24.webp",
+            "sha256OfRetainedReference": "3d392eb29913bf33f7d3bf1f26196753c75e7784d34ac70d2697fca777b51b46"
+          }
+        ],
+        "promptSha256": "92bd9f98fee2f6c74d225bc12149744f0a967ea634227a4a1a9b50a81bafe20d"
+      },
+      {
+        "id": "cn-25",
+        "src": "C:\\Users\\lenovo\\.codex\\generated_images\\01a10997-2313-7852-a289-eb713a6c1582\\exec-4345dd88-d726-47a0-b285-dcf61ad07282.png",
+        "png": "H:\\AI-Project\\教材\\word-adventure\\output\\imagegen-sources\\chinese-polished\\cn-25-atlas-v3.png",
+        "webp": "H:\\AI-Project\\教材\\word-adventure\\public\\images\\chinese-polished\\cn-25-atlas-v3.webp",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 2008730,
+        "pixelsIdentical": true,
+        "pngSha256": "68833374ec76326f6cdb4fca734743939dbe55dae8730c19018821dd70c30a52",
+        "webpSha256": "d20d0e20d1005430678f11beea32ad800ed2e35b629c8086f760e5cb630dbd67",
+        "generationKey": "polish-late-cn-25",
+        "generation": {
+          "prompt": "Use case: historical-scene / illustration-story. Create a fully detailed painterly 2 columns ×2 rows atlas, four edge-to-edge 3:2 landscape cells, overall 3:2. Reference establishes SAME middle-aged western doctor Norman Bethune, wavy brown hair with grey, round spectacles, serious mature facial features, white coat and rolled sleeves over blue shirt; SAME Chinese adult female nurse, dark tucked hair, white nurse cap, slate-blue blouse and white apron. SAME historical wartime canvas medical tent, worn wooden work table, folded clean gauze, metal/enamel bowls, lantern and medical bag. No letters, badges/logos, text, numbers, borders/gutters, flat avatars, diagram cards. No blood, wounds, invasive surgery detail, weapons or explosion gore. Four cells are full cohesive painted narrative scenes with distinct physical poses while keeping identity. Cell0 top left: wider tent view, doctor and nurse preparing treatment table, a patient lying on bed covered with clean sheet, only face and hand visible, actual doctor hands make gentle contact with sheet/covered wrist, nurse sorts gauze. Cell1 top right: outside smoke/haze has approached the tent entrance, soft debris-light in far exterior; doctor bent forward concentrating at same covered treatment table, nurse helping with gauze, nobody frozen in a T pose, actual palms/fingers contact sheet and table objects. Cell2 bottom left: a young Chinese uniformed messenger at tent door visibly speaks and gestures toward exit, Bethune turns head toward him while one hand remains resting on covered table, nurse attentive; serious responsibility conversation no speech text. Cell3 bottom right: close focused return to work, mature doctor leaning in with hands gently near covered patient's wrist, nurse handing a folded cloth at actual hand-to-cloth contact, lantern highlights ageing face/spectacles and clean fabric, smoke remains faint outside. Keep patient's body covered and dignified. Highly polished original-cover-quality textures and expressions, not teaching icon schematic.",
+          "referenced_image_paths": [
+            "H:/AI-Project/教材/word-adventure/public/images/chinese-precision/cn-25.webp"
+          ],
+          "transparent_background": false,
+          "timestamp": "2026-10-05T01:30:05.286Z",
+          "sourceCallId": "call_HD0xLXY3EZ7DHoEeQE8H1V82",
+          "generationKey": "polish-late-cn-25"
+        },
+        "references": [
+          {
+            "path": "H:/AI-Project/教材/word-adventure/public/images/chinese-precision/cn-25.webp",
+            "sha256OfRetainedReference": "b35dd08141fbc9dd5b8ef1c3d509894eaf58675b97788146c567d1e9b3b979e4"
+          }
+        ],
+        "promptSha256": "19ec6932348ac31ea40f74cc1d30c6cffb51ca92de74d43602cb69b1ebcafd28"
+      },
+      {
+        "id": "cn-26",
+        "src": "C:\\Users\\lenovo\\.codex\\generated_images\\01a10997-2313-7852-a289-eb713a6c1582\\exec-f070f77a-7477-4ecd-be78-50ead278fd4a.png",
+        "png": "H:\\AI-Project\\教材\\word-adventure\\output\\imagegen-sources\\chinese-polished\\cn-26-atlas-v3.png",
+        "webp": "H:\\AI-Project\\教材\\word-adventure\\public\\images\\chinese-polished\\cn-26-atlas-v3.webp",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 1933704,
+        "pixelsIdentical": true,
+        "pngSha256": "f2b0760184d54633435a6a1d82bdd65a8b04959f104c09474caee5e7dd4457e5",
+        "webpSha256": "b96f1c908ff91b72a22e577284f89ac639eba9a8412214337ece567c89610abf",
+        "generationKey": "polish-late-cn-26",
+        "generation": {
+          "prompt": "Use case: historical-scene / illustration-story. Create a richly detailed narrative atlas for Chinese primary school lesson A Large Coarse Porcelain Bowl, 2 columns × 3 rows of six equal 3:2 landscape cells, total square. Reference image defines painterly style, rural kitchen setting AND SAME thick-walled off-white coarse unglazed/speckled ceramic bowl: irregular thick rim, brown mineral flecks, worn rough texture. This bowl must remain IDENTICAL in all panels where present; never substitute smooth green bowl. No text, numbers, labels, arrows, badges, borders, gutters, white gaps. People MUST be differentiated: Zhao Yiman is an adult CHINESE WOMAN with soft determined mature face and black hair tucked in grey-green historical military cap, grey-green period uniform. Male messenger is a younger man with angular face, darker blue-grey coat; new soldier is a teen male with short hair and lighter green uniform. No weapons, gore or distress. Cell0 top left: detailed close view of the same empty rough bowl on sunlit worn wooden kitchen table, clay stove and basket background like reference. Cell1 top right: Zhao Yiman physically hands her existing BROWN old metal/enamel utensils to the new male soldier, hands touch utensils, she now has no bowl; clear compassionate action, SAME period rural kitchen. Cell2 middle left: young male messenger physically presents the reference rough white bowl now containing rice to Zhao Yiman, both hands hold actual sides of bowl, both faces visible and distinct. Cell3 middle right: Zhao Yiman tilts SAME rough bowl at clay stove and pours cooked white rice back INTO iron rice pot, her hand clearly grips bowl, visible falling rice connects bowl to pot, food being preserved for other soldiers, not dumped on floor. Cell4 bottom left: Zhao Yiman sits at wooden table, holds SAME bowl now containing simple leafy vegetable porridge, uses wooden spoon, iron pot with rice set nearby; quiet modest meal, visibly distinct from cell3. Cell5 bottom right: SAME rough bowl serves as shared basin of cooked vegetables on a rough wooden mess table with a few soldiers using simple chopsticks; Zhao Yiman has let others use it, no duplicate hero bowl. Precise hands and food contact, full dimensional environments with light, fabric, ceramic, wood and rice textures. Every frame polished to cover quality, no flat military avatar diagrams.",
+          "referenced_image_paths": [
+            "H:/AI-Project/教材/word-adventure/public/images/chinese-precision/cn-26.webp"
+          ],
+          "transparent_background": false,
+          "timestamp": "2026-10-05T01:26:33.472Z",
+          "sourceCallId": "call_H6DUTNy9A6QdzvFg3rOBWcnl",
+          "generationKey": "polish-late-cn-26"
+        },
+        "references": [
+          {
+            "path": "H:/AI-Project/教材/word-adventure/public/images/chinese-precision/cn-26.webp",
+            "sha256OfRetainedReference": "ccd3bc3e03a5c233e49229ec663572222e5cd245e46a4bab025d2e14a6f611d0"
+          }
+        ],
+        "promptSha256": "5125af795235c50bb41ba2f596db0484d6372fffbd490281de290d178aa71c1d"
+      },
+      {
+        "id": "tianmen",
+        "src": "C:\\Users\\lenovo\\.codex\\generated_images\\01a10997-2313-7852-a289-eb713a6c1582\\exec-1268ec94-61a7-4b73-b407-db9d2e245c98.png",
+        "png": "H:\\AI-Project\\教材\\word-adventure\\output\\imagegen-sources\\chinese-polished\\tianmen-atlas-v3.png",
+        "webp": "H:\\AI-Project\\教材\\word-adventure\\public\\images\\chinese-polished\\tianmen-atlas-v3.webp",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 2672166,
+        "pixelsIdentical": true,
+        "pngSha256": "989f9fb8a0dbcf316ba747727afa7112855b291fb3c86066ba0bb46995101353",
+        "webpSha256": "2f89d2d8d5b97a17c23755771d95897150c0d925df700ee326be8b4d8dc74c8a",
+        "generationKey": "polish-late-tianmen",
+        "generation": {
+          "prompt": "Create an exceptionally detailed original hand-painted children's Chinese literature illustration atlas, 2 columns by 2 rows, each cell exactly 3:2 landscape, seamless touching cells with NO borders, gaps, captions, letters or numbers. Overall 3:2 landscape. Reference the attached Tianmen mountains scene for warm lyrical painterly realism, rich rock and wood textures, NOT flat icons. Depict real Tianmen East/West mountain banks separated by one continuous mighty green Yangtze channel, wooded dark cliffs, sun near the distant river horizon. SAME lone traditional brown wooden junk with one cream cloth sail and one small adult person visible, believable mast rigging, plank joints, moving physically TOWARD the foreground from the sunlight. FOUR distinct snapshots of this SAME boat approaching the viewer, same two mountain banks and coherent sun position. Cell row1 col1: widest river view from low right-bank shore, lone boat quite far at the sunlit horizon center, both wooded banks clear with a true open river gap. Cell row1 col2: boat halfway toward viewer, medium sized slightly right of center on rippled current, left bank sheer cliff and right bank shoulder show scale. Cell row2 col1: boat now close in lower middle, individual cream sail seams and real skipper on deck, both green mountain sides visibly flank its position, rippling bow wake, strongest currents near the cliff bend. Cell row2 col2: closer boat fills foreground lower center, high detailed wood sail and human with correct proportions, taller bank cliffs on either side shifted due to closer vantage, distant sun on horizon behind boat. Physical relationship must be readable at a small lesson display: actual boat position/size substantially changes each frame, NOT identical background zoom only. Fine layered distant mountains, broken cliff textures, leaf foliage, reflective river and wave highlights throughout. No text, numbers, watermark, collage cards, line-art or symbolic triangle mountains.",
+          "referenced_image_paths": [
+            "H:/AI-Project/教材/word-adventure/public/images/chinese-scenes/tianmen-background.webp"
+          ],
+          "transparent_background": false,
+          "timestamp": "2026-10-05T01:34:42.640Z",
+          "sourceCallId": "call_I2zdTkNLL8Z5SM3LM5iofPML",
+          "generationKey": "polish-late-tianmen"
+        },
+        "references": [
+          {
+            "path": "H:/AI-Project/教材/word-adventure/public/images/chinese-scenes/tianmen-background.webp",
+            "sha256OfRetainedReference": "62b7eaaedf50c6c2f23c9f904fff764cd0164e14df2f1f7a1de4806613ca229f"
+          }
+        ],
+        "promptSha256": "a97446c58b109ab3f0ea89265c52f76ee0584240968554bda609623b1ac93739"
+      },
+      {
+        "id": "westlake",
+        "src": "C:\\Users\\lenovo\\.codex\\generated_images\\01a10997-2313-7852-a289-eb713a6c1582\\exec-f9b0cc53-c604-4296-aded-94ffce174c13.png",
+        "png": "H:\\AI-Project\\教材\\word-adventure\\output\\imagegen-sources\\chinese-polished\\westlake-atlas-v3.png",
+        "webp": "H:\\AI-Project\\教材\\word-adventure\\public\\images\\chinese-polished\\westlake-atlas-v3.webp",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 2538486,
+        "pixelsIdentical": true,
+        "pngSha256": "409542889a0e596336faa14558476752726881abf9d5af665bc01aba2fd3b796",
+        "webpSha256": "a1d8f82507c013b1f14920eea8c49f9b8080017cc8077f6f4f15b37346d91e7b",
+        "generationKey": "polish-late-westlake",
+        "generation": {
+          "prompt": "Paint a richly detailed original children's literature illustration ATLAS, 2 columns x 2 rows, four touching 3:2 landscape cells, overall 3:2. No borders, gutters, labels, text or numbers. Use reference's painterly fine West Lake setting and SAME small girl with two plaits (pale green top and light flowing skirt) and small brown white dog at lakeside, willow foliage near left, graceful tiled Chinese pavilion on far shore right, distant soft hills, one tiny quiet wooden pleasure boat on lake. FOUR carefully coordinated views of the SAME composition and objects; fine leaves, woven clothing, real clouds, subtle lake reflections, pavilion wooden pillars and tiled roof detail. Cell row1 col1 SUNNY WEST LAKE: clear bright calm daytime, shimmering water with actual ripples and glitter, hills distinct clear, girl and dog in lower left shore, sunshine through leaves. Cell row1 col2 RAINY WEST LAKE: same framing but real gentle rain streaks, small raindrop rings on water, damp stone shore, mist obscures hills, softer grey clouds, girl holding a plain oil-paper umbrella above herself and dog, same pavilion and boat recognizable through mist. Cell row2 col1 SOFT PALE WEST LAKE: same view in subtly cloudy light, pale mist green and softly restrained color, delicate foliage and real architecture fully detailed, girl umbrella closed resting by her, not fogged to blankness. Cell row2 col2 RICH SATURATED WEST LAKE: same view in warm clear bright sunlight, deeper lush green hills and brighter sparkling turquoise lake, fine willow shadows and warm pavilion wood, girl's umbrella remains closed, vivid but natural color. These four paintings support comparing sunny/rainy and soft/rich beauty. Keep adult-free, no fantasy effects, no geometric cards or icons. Strictly textless.",
+          "referenced_image_paths": [
+            "H:/AI-Project/教材/word-adventure/public/images/chinese-precision/yinhushang.webp"
+          ],
+          "transparent_background": false,
+          "timestamp": "2026-10-05T01:34:42.640Z",
+          "sourceCallId": "call_I2zdTkNLL8Z5SM3LM5iofPML",
+          "generationKey": "polish-late-westlake"
+        },
+        "references": [
+          {
+            "path": "H:/AI-Project/教材/word-adventure/public/images/chinese-precision/yinhushang.webp",
+            "sha256OfRetainedReference": "541c279794db690a93426711ecf5eb5f67669c6f79112e8076c13f0388feb27e"
+          }
+        ],
+        "promptSha256": "112263c993ba5303c6cc7426736b349eba56c8b028202e4c28070d06fa316a69"
+      },
+      {
+        "id": "cn-23-transition",
+        "src": "C:\\Users\\lenovo\\.codex\\generated_images\\01a10997-2313-7852-a289-eb713a6c1582\\exec-6047f752-c7ea-4ccd-8f17-f429ecbc8add.png",
+        "png": "H:\\AI-Project\\教材\\word-adventure\\output\\imagegen-sources\\chinese-polished\\cn-23-transition-atlas-v3.png",
+        "webp": "H:\\AI-Project\\教材\\word-adventure\\public\\images\\chinese-polished\\cn-23-transition-atlas-v3.webp",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 1991610,
+        "pixelsIdentical": true,
+        "pngSha256": "716beaa5cd37c4a11ff1e78353f590342533db06e8986d9e4f13492678a1084d",
+        "webpSha256": "c3c3863e8739fa21cd18ee9e89da7298a28b296ad784c8a957c570a551a91e7b",
+        "generationKey": "polish-late-cn-23-transition-approved",
+        "generation": {
+          "prompt": "Refine ONLY LOWER RIGHT frame of attached four-frame illustration to keep BROKEN URN OPENING consistent with LOWER LEFT. Lower-left already correctly has a tall broken opening extending from just below rim down to near bottom, revealing child's torso and legs, shallow water at bottom. Lower-right MUST retain that SAME tall irregular opening and same broken fragments on ground, not restore ceramic wall or shrink hole. Fallen child cream floral shirt + mauve trousers + double hair buns physically steps out through SAME tall opening, one foot outside and one still inside; wet sleeve and hem dripping small clear water drops. Blue-grey-robed Sima Guang stands on left supporting actual wrist. Remove any extra ceramic wall that would close the enlarged hole. Preserve TOP LEFT climbing and TOP RIGHT slipping cells, and LOWER LEFT shallow drained water entirely unchanged. 2x2 equal3:2 frames overall3:2. Same safe fine illustration, no injuries, no text, arrows or borders. Detailed physically consistent hand foot and ceramic contact. Same warm courtyard light.",
+          "referenced_image_paths": [
+            "C:/Users/lenovo/.codex/generated_images/01a10997-2313-7852-a289-eb713a6c1582/exec-f94ba6d3-ccd0-41c8-bc31-5f42808f6706.png"
+          ],
+          "transparent_background": false,
+          "timestamp": "2026-10-05T01:47:52.553Z",
+          "sourceCallId": "call_sVaFtXwXfYTJdfdW4pgujUcd",
+          "generationKey": "polish-late-cn-23-transition-approved"
+        },
+        "references": [
+          {
+            "path": "C:/Users/lenovo/.codex/generated_images/01a10997-2313-7852-a289-eb713a6c1582/exec-f94ba6d3-ccd0-41c8-bc31-5f42808f6706.png",
+            "sha256OfRetainedReference": "89f6ae518950b80913e8946a4337029432f4a5fa21f0d42df1752ca7015f5540"
+          }
+        ],
+        "promptSha256": "e7a500c9b5a9bf542f4c2b6f34b83ff15b973d87ac220a5fc60209c8323a56ca"
+      },
+      {
+        "id": "cn-23-saved",
+        "src": "C:/Users/lenovo/.codex/generated_images/01a10997-2313-7852-a289-eb713a6c1582/exec-7fe93115-ab05-47fd-8f35-1600deba87fc.png",
+        "png": "H:\\AI-Project\\教材\\word-adventure\\output\\imagegen-sources\\chinese-polished\\cn-23-saved-atlas-v3.png",
+        "webp": "H:\\AI-Project\\教材\\word-adventure\\public\\images\\chinese-polished\\cn-23-saved-atlas-v3.webp",
+        "width": 1536,
+        "height": 1024,
+        "columns": 1,
+        "rows": 1,
+        "bytes": 2040118,
+        "pixelsIdentical": true,
+        "pngSha256": "868d8643e79d7f271d18a7242cd3aa60f04171bae6163eaf8819f1765ec58161",
+        "webpSha256": "57d7cd53db9c13f0e502ed899d787bf3eb58911ea94c03a7ea0420b6291f5844",
+        "generationKey": "polish-late-cn-23-saved",
+        "generation": {
+          "prompt": "Create ONE final standalone horizontal 3:2 illustration, NOT a grid, as the immediately following moment after the bottom-right panel of the referenced 2×2 Chinese textbook story illustration. Match its fine cinematic tactile storybook 3D painterly quality exactly: amber sun through ginkgo leaves, realistic textured brown glazed earthenware, old courtyard plaster, timber gate, wet cobblestone reflections. STRICT continuity: the same rescued small child has two dark hair buns with orange ribbons, cream jacket with muted beige floral pattern, mauve trousers, black cloth shoes; the same Sima Guang boy has topknot, blue-grey robe, brown belt, cream trousers and black shoes. The child is now COMPLETELY OUTSIDE the water urn, BOTH feet firmly on wet cobblestones in front of the LARGE U-shaped broken opening, standing safely and looking relieved, visible drips from both wet cuffs and the jacket hem. Sima Guang stands to the LEFT, gently supporting the child at the forearm with an actual hand contacting fabric, reassuring expression. IMPORTANT urn continuity: the same huge jagged opening spans from just BELOW the upper rim down to the base, about half of its front wall is missing, leaving the TOP RIM intact as an arch above the opening, matching the bottom-right reference panel; inside is visibly empty except a very shallow puddle. Use SAME woven diamond pottery surface and size relative to children. Brown ceramic shards remain around its base, a low puddle extends outside; no new tiny round hole, no intact replacement urn. Wider framing lets both children's complete feet, whole urn rim, shards and water droplets be clearly visible. Two background friends can be absent or very far in the timber doorway, never duplicate the rescued child. Warm calm happy final moment, not comedic or dangerous. Fine material detail, clear contact and anatomy, good compositional depth, no writing, no letters, no captions, no watermarks, no diagram arrows.",
+          "referenced_image_paths": [
+            "C:/Users/lenovo/.codex/generated_images/01a10997-2313-7852-a289-eb713a6c1582/exec-6047f752-c7ea-4ccd-8f17-f429ecbc8add.png"
+          ],
+          "transparent_background": false,
+          "timestamp": "2026-10-05T02:03:16.767Z",
+          "sourceCallId": "call_j8uLNhxA1zX3FnZrELp3o5Pb",
+          "generationKey": "polish-late-cn-23-saved"
+        },
+        "references": [
+          {
+            "path": "C:/Users/lenovo/.codex/generated_images/01a10997-2313-7852-a289-eb713a6c1582/exec-6047f752-c7ea-4ccd-8f17-f429ecbc8add.png",
+            "sha256OfRetainedReference": "716beaa5cd37c4a11ff1e78353f590342533db06e8986d9e4f13492678a1084d"
+          }
+        ],
+        "promptSha256": "fc104b0ce62a8ea6c6b5f6b27ba33e2080b72d120115a8ec6b37b21652536981"
+      },
+      {
+        "id": "cn-19-sculpture",
+        "src": "C:/Users/lenovo/.codex/generated_images/01a10997-2313-7852-a289-eb713a6c1582/exec-c0a55897-7fe4-4b69-968d-f7808cd7b0a6.png",
+        "png": "H:\\AI-Project\\教材\\word-adventure\\output\\imagegen-sources\\chinese-polished\\cn-19-sculpture-atlas-v3.png",
+        "webp": "H:\\AI-Project\\教材\\word-adventure\\public\\images\\chinese-polished\\cn-19-sculpture-atlas-v3.webp",
+        "width": 1536,
+        "height": 1024,
+        "columns": 1,
+        "rows": 1,
+        "bytes": 2297522,
+        "pixelsIdentical": true,
+        "pngSha256": "af6ca030cf2c0cbea5188d323817130c33da3bc6530dda782e919f1e4e0e7ec5",
+        "webpSha256": "a5b393507c418941d77e0d2994889028a1a2baec491ee4171d786b5c96ec25c6",
+        "officialReferenceUrl": "https://www.gohk.gov.hk/en/spots/spot_detail.php?spot=Golden+Bauhinia+Square",
+        "generationKey": "polish-late-cn-19-sculpture",
+        "generation": {
+          "prompt": "Create ONE original highly detailed horizontal 3:2 children's literature illustration of Hong Kong's Golden Bauhinia Square. First reference is an OFFICIAL photograph used ONLY to accurately understand the shape and proportions of the Forever Blooming Bauhinia sculpture. Second reference is a four-frame atlas used ONLY for the luminous detailed painterly style, especially its lower-left waterfront setting. Do NOT copy the photo pixels or make a collage. Depict the TRUE three-dimensional golden Bauhinia sculpture as in the first official reference: broad upward-curving metallic petals with gently rolled curled edges and visible concave grooves, distinctive uneven heights and central curved botanical details, an asymmetric natural sculpted flower on a slender flower-stem-like lower support and small rounded decorative base, NOT a closed symmetric tulip with one pointed central spear, NOT a lotus, NOT a flat five-petal flag emblem, NOT an ornamental many-petal fantasy flower. Sculpture dominates centre-left, on a tall polished reddish granite pillar rising from a stepped red granite pedestal. The convention centre's distinctive sweeping gull-wing roof and glass facade lie behind left, blue Victoria Harbour and distant towers behind right. Sunny bright daytime, well drawn small visitors in foreground give honest six-metre monument scale; visitors are individuals with realistic hands and clothing, a small girl in coral-pink dress and boy in blue shirt can observe together lower right. Rich gold specular highlights, minute stone speckles, masonry joints, subtle wear, full layered sea/architecture environment, original illustration suitable for a precise textbook lesson. Use the actual official sculpture geometry to prevent generic AI shape substitution while keeping warm beautiful painterly art. No written words, plaque letters, captions, arrows, diagrams, numbering, watermark or borders. No giant foreground lettering or signs.",
+          "referenced_image_paths": [
+            "H:/AI-Project/教材/word-adventure/output/polish-late-hk-official-reference-photo.png",
+            "H:/AI-Project/教材/word-adventure/public/images/chinese-polished/cn-19-atlas-v3.webp"
+          ],
+          "transparent_background": false,
+          "timestamp": "2026-10-05T02:14:14.057Z",
+          "sourceCallId": "call_GTMhhQkAg6lJMgQ1kmreVDOc",
+          "generationKey": "polish-late-cn-19-sculpture"
+        },
+        "references": [
+          {
+            "path": "H:/AI-Project/教材/word-adventure/output/polish-late-hk-official-reference-photo.png",
+            "sha256OfRetainedReference": "074166c0b072587f84b43560b418f0c1bebfe2d01c11e7594c6c91da8ac1f1bb"
+          },
+          {
+            "path": "H:/AI-Project/教材/word-adventure/public/images/chinese-polished/cn-19-atlas-v3.webp",
+            "sha256OfRetainedReference": "8f13ea64457198fb341aebe468f9df20d0882f4dcc1a609bdcf1e0719e6c0420"
+          }
+        ],
+        "promptSha256": "978caa5790015be5473bfcf3ffd80bab1b3d8897ab4f4a6202116d2d549e67c2"
+      }
+    ]
+  },
+  "note": "Original generated PNGs remain locally in ignored output. This manifest preserves source hashes and actual generation records; old fine illustrations reused by the new renderer remain covered by prior manifests."
+}

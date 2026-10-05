@@ -13,9 +13,10 @@ export type GoldenMeadowSceneProps = {
 type MeadowStyle = CSSProperties & Record<`--gm-${string}`, string | number>
 type PlantPosition = { x: number; y: number; size: number; angle?: number; flipped?: boolean }
 const imageBase = new URL(`${import.meta.env.BASE_URL}images/golden-meadow/`, document.baseURI).href
+const polishedImageBase = new URL(`${import.meta.env.BASE_URL}images/chinese-polished/`, document.baseURI).href
 
 // Root positions and sizes are percentages of the un-cropped 3:2 scene.
-// Both poses share the cell's (50%, 92%) root anchor, so leaf/stem placement
+// All five poses share the cell's (50%, 92%) root anchor, so leaf/stem placement
 // never changes as the yellow flower opens or closes.
 const meadowRows = [
   { y: 36, size: 2.8, count: 16, start: 16 },
@@ -47,8 +48,7 @@ const Dandelion = memo(function Dandelion({ position, className = '' }: { positi
   return (
     <div className={`gm-scene__plant ${className}`} style={style} aria-hidden="true">
       <div className="gm-scene__plant-body">
-        <div className="gm-scene__flower gm-scene__flower--closed" />
-        <div className="gm-scene__flower gm-scene__flower--open" />
+        <div className="gm-scene__flower" />
       </div>
     </div>
   )
@@ -60,13 +60,20 @@ export default function GoldenMeadowScene({ mode, progress, openness, reducedMot
   const examined = mode === 'examine'
   const directOpenness = examined && openness !== undefined
   const requestedOpenness = directOpenness ? clampGoldenMeadowOpenness(openness) : frame.openness
-  // Automatic playback can show key states only. Manual close-up controls
-  // retain the exact state the learner chose, including intermediate values.
+  // Five painted key poses show actual petal shapes; opacity blending would
+  // incorrectly superimpose a closed flower on an open one.
   const displayedOpenness = reducedMotion && !directOpenness ? (requestedOpenness >= 0.5 ? 1 : 0) : requestedOpenness
+  const pose = Math.round(displayedOpenness * 4)
   const sceneStyle: MeadowStyle = {
     '--gm-openness': displayedOpenness,
-    '--gm-closed-image': `url("${imageBase}dandelion-closed-v1.png")`,
-    '--gm-open-image': `url("${imageBase}dandelion-open-v1.png")`,
+    '--gm-flower-image': `url("${polishedImageBase}cn-15-flower-states-v3.webp")`,
+    '--gm-flower-x': `${(pose % 2) * 100}%`,
+    '--gm-flower-y': `${Math.floor(pose / 2) * 50}%`,
+    // Keep the full-open crown intact while excluding neighbouring leaf tips
+    // at the atlas cell's upper corners. Intermediate crowns start lower.
+    '--gm-flower-clip': pose === 4
+      ? 'polygon(1% 2%, 35% 2%, 35% 0%, 65% 0%, 65% 2%, 99% 2%, 99% 99%, 1% 99%)'
+      : `inset(${pose === 2 || pose === 3 ? '2%' : '0%'} 1% 1%)`,
   }
   const flowerState = displayedOpenness === 0 ? '花朵合拢' : displayedOpenness === 1 ? '黄色花朵展开' : '花朵正在开合'
   const caption = examined ? `近看同一朵花 · ${flowerState}` : frame.caption
@@ -77,6 +84,7 @@ export default function GoldenMeadowScene({ mode, progress, openness, reducedMot
       style={sceneStyle}
       data-period={frame.period}
       data-phase={examined ? (displayedOpenness === 0 ? 'closed' : displayedOpenness === 1 ? 'open' : 'intermediate') : frame.phase}
+      data-flower-pose={pose}
       data-reduced-motion={reducedMotion ? 'true' : 'false'}
       aria-labelledby={`${uid}-caption`}
     >
@@ -86,6 +94,7 @@ export default function GoldenMeadowScene({ mode, progress, openness, reducedMot
         alt="一片自然草地伸向远处的低丘和树篱。"
         draggable={false}
       />
+      {!examined && <div className="gm-scene__daylight" aria-hidden="true" />}
       {examined ? (
         <div className="gm-scene__specimen">
           <Dandelion className="gm-scene__plant--specimen" />

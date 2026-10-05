@@ -19,7 +19,6 @@ export type KingfisherSceneProps = {
 }
 
 type SceneStyle = CSSProperties & Record<`--kf-${string}`, string | number>
-type PoseLayer = { pose: KingfisherPose; opacity: number }
 // CSS consumes these variables from a stylesheet in assets/. Resolve the
 // public asset URLs against the document first so Pages subpaths remain valid.
 const imageBase = new URL(`${import.meta.env.BASE_URL}images/kingfisher/`, document.baseURI).href
@@ -34,24 +33,6 @@ const partDetails: Array<{ id: KingfisherPart; label: string; detail: string; x:
   { id: 'wings', label: '翅膀', detail: '带着蓝色的翅膀', x: 39, y: 54 },
   { id: 'beak', label: '长嘴', detail: '红色的长嘴', x: 78, y: 40 },
 ]
-
-// Blend atlas layers using progress itself. A paused/scrubbed scene never has
-// an unfinished CSS transition running after its parent has stopped playback.
-function poseLayers(t: number, pose: KingfisherPose): PoseLayer[] {
-  const blends: Array<[number, number, KingfisherPose, KingfisherPose]> = [
-    [2, 2.16, 0, 1],
-    [9.76, 10, 2, 3],
-    [12, 12.18, 3, 4],
-    [13.3, 13.5, 4, 5],
-  ]
-  for (const [from, to, before, after] of blends) {
-    if (t >= from && t < to) {
-      const weight = smooth((t - from) / (to - from))
-      return [{ pose: before, opacity: 1 - weight }, { pose: after, opacity: weight }]
-    }
-  }
-  return [{ pose, opacity: 1 }]
-}
 
 function facingAt(t: number) {
   // A short edge-on turn avoids an abrupt right-facing/left-facing flip.
@@ -98,8 +79,9 @@ export default function KingfisherScene({
   const frame = getKingfisherFrame(motionT)
   const observed = mode === 'observe'
   const interactive = observed && Boolean(onSelectPart)
-  const layers = observed ? [{ pose: 0 as const, opacity: 1 }] : poseLayers(motionT, frame.pose)
+  const pose: KingfisherPose = observed ? 0 : frame.pose
   const wingBeat = observed || reducedMotion ? 0 : getKingfisherWingBeat(motionT)
+  const wingDown = pose === 2 && wingBeat >= 0.5
   const sceneStyle: SceneStyle = {
     '--kf-bird-x': `${observed ? 51 : frame.x}%`,
     '--kf-bird-y': `${observed ? 88 : frame.y}%`,
@@ -144,24 +126,9 @@ export default function KingfisherScene({
 
       <div className="kf-scene__bird-anchor">
         <div className="kf-scene__bird" aria-hidden="true">
-          {layers.flatMap(layer => [
-            <div
-              key={layer.pose}
-              className="kf-scene__pose"
-              data-pose={layer.pose}
-              style={{
-                backgroundPosition: `${(layer.pose % 3) * 50}% ${layer.pose < 3 ? 0 : 100}%`,
-                opacity: layer.opacity * (layer.pose === 2 ? 1 - wingBeat : 1),
-              }}
-            />,
-            ...(layer.pose === 2 ? [
-              <div
-                key="wing-down"
-                className="kf-scene__pose kf-scene__pose--wing-down"
-                style={{ opacity: layer.opacity * wingBeat }}
-              />,
-            ] : []),
-          ])}
+          <div className={`kf-scene__pose${wingDown ? ' kf-scene__pose--wing-down' : ''}`}
+            data-pose={pose} data-wing={wingDown ? 'down' : 'up'}
+            style={wingDown ? undefined : { backgroundPosition: `${(pose % 3) * 50}% ${pose < 3 ? 0 : 100}%` }} />
         </div>
         {interactive && (
           <div className="kf-scene__parts" role="group" aria-label="选择要观察的翠鸟部位">
@@ -182,6 +149,11 @@ export default function KingfisherScene({
           </div>
         )}
       </div>
+
+      {!observed && pose >= 2 && pose <= 4 && <div className={`kf-scene__beak-detail${pose === 2 ? ' kf-scene__beak-detail--flight' : ''}`} aria-label={pose === 4 ? '近看鱼头朝向长嘴，准备吞下' : '近看长嘴衔着鱼'}>
+        <span>{pose === 4 ? '吞下' : '衔住 · 部位近看'}</span>
+        <div className="kf-scene__beak-picture"><div className="kf-scene__pose" style={{backgroundPosition:`${pose === 4 ? 50 : 0}% 100%`}} /></div>
+      </div>}
 
       <figcaption id={`${uid}-caption`} className="kf-scene__caption">
         <span className="kf-scene__caption-rule" aria-hidden="true" />

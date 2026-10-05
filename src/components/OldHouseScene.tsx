@@ -1,4 +1,5 @@
-import { useId } from 'react'
+import { useId, useState } from 'react'
+import { PolishedAtlasImage } from './chineseScenes/ChinesePolishedScene'
 import './oldHouseScene.css'
 
 export type OldHouseStage = 'opening' | 'cat' | 'hen' | 'spider'
@@ -19,8 +20,10 @@ const stageNotes: Record<OldHouseStage, { title: string; caption: string }> = {
 
 export default function OldHouseScene({ stage, revealed = false, reducedMotion = false }: OldHouseSceneProps) {
   const uid = useId()
+  const [failed, setFailed] = useState(false)
   const note = stageNotes[stage]
-  const raining = stage === 'cat' && !revealed
+  const index = (stage === 'cat' ? 0 : stage === 'hen' ? 2 : 4) + (revealed ? 1 : 0)
+  const outcomes = { cat:'小猫在老屋里安心睡了一夜。', hen:'母鸡在老屋里安静地孵蛋。', spider:'蜘蛛在老屋结网捉虫，继续讲着故事。' }
 
   return (
     <figure
@@ -30,7 +33,7 @@ export default function OldHouseScene({ stage, revealed = false, reducedMotion =
       data-reduced-motion={reducedMotion ? 'true' : 'false'}
       aria-labelledby={`${uid}-caption`}
     >
-      <picture>
+      {stage === 'opening' || failed ? <picture>
       <source srcSet={`${imageBase}old-house-landscape-v1.webp`} type="image/webp" />
       <img
         className="oh-scene__landscape"
@@ -38,25 +41,17 @@ export default function OldHouseScene({ stage, revealed = false, reducedMotion =
         alt="树林旁的一间老屋，门前有一条小路。"
         draggable={false}
       />
-      </picture>
-      {raining && (
-        <div className="oh-scene__rain" aria-hidden="true">
-          {Array.from({ length: 11 }, (_, index) => <i key={index} style={{ left: `${8 + index * 8}%`, animationDelay: `${-index * 0.27}s` }} />)}
-        </div>
-      )}
-      {stage !== 'opening' && (
-        <div className={`oh-scene__visitor oh-scene__visitor--${stage}`} aria-label={`当前来访：${note.title}`}>
-          <picture className="oh-scene__visitor-source"><source srcSet={`${imageBase}${stage}-v1.webp`} type="image/webp" /><img className="oh-scene__visitor-picture" src={`${imageBase}${stage}-v1.png`} alt="" draggable={false} /></picture>
-          <span className="oh-scene__visitor-label">{stage === 'spider' ? '蜘蛛 · 放大' : note.title}</span>
-        </div>
-      )}
+      </picture> : <svg className="oh-scene__painted" viewBox="0 0 900 600" role="img" aria-label={revealed ? outcomes[stage] : note.caption} data-polished-frame={index}>
+        <title>{revealed ? outcomes[stage] : note.caption}</title>
+        <PolishedAtlasImage frame={{file:'images/chinese-polished/cn-08-atlas-v3.webp',index,columns:2,rows:3,caption:note.caption,objects:[]}} onError={() => setFailed(true)} />
+      </svg>}
       <div className="oh-scene__bookmark" aria-hidden="true">
         <span>读到这里</span>
-        <strong>{stage === 'opening' ? '故事开始' : `${note.title}来求助`}</strong>
+        <strong>{stage === 'opening' ? '故事开始' : revealed ? `${note.title}的后续` : `${note.title}来求助`}</strong>
       </div>
       <figcaption id={`${uid}-caption`} className="oh-scene__caption">
         <span className="oh-scene__caption-rule" aria-hidden="true" />
-        <span>{revealed ? '故事继续了，回头看看刚才的预测和依据。' : note.caption}</span>
+        <span>{revealed && stage !== 'opening' ? outcomes[stage] : note.caption}</span>
       </figcaption>
     </figure>
   )

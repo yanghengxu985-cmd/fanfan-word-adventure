@@ -57,21 +57,15 @@
 
 .gm-scene__flower {
   background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-position: center;
+  background-image: var(--gm-flower-image);
+  background-size: 200% 300%;
+  background-position: var(--gm-flower-x) var(--gm-flower-y);
+  clip-path: var(--gm-flower-clip);
 }
 
-.gm-scene__flower--closed {
-  background-image: var(--gm-closed-image);
-  opacity: calc(1 - var(--gm-openness));
-  transform: translate(var(--gm-closed-offset-x), var(--gm-closed-offset-y));
-}
-
-.gm-scene__flower--open {
-  background-image: var(--gm-open-image);
-  opacity: var(--gm-openness);
-  transform: translate(var(--gm-open-offset-x), var(--gm-open-offset-y));
-}
+.gm-scene__daylight { position:absolute; inset:0; z-index:2; pointer-events:none; }
+.gm-scene[data-period='morning'] .gm-scene__daylight { background:linear-gradient(145deg,rgb(179 207 226 / 22%),transparent 65%); }
+.gm-scene[data-period='evening'] .gm-scene__daylight { background:linear-gradient(145deg,rgb(217 130 53 / 23%),rgb(65 69 105 / 16%)); }
 
 .gm-scene__detail {
   position: absolute;

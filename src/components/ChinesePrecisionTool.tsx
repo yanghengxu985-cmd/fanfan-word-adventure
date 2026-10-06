@@ -12,6 +12,7 @@ import ChineseSemanticScene, { supportsSemanticScene, type SemanticSceneProps } 
 import { getPolishedFrame } from './chineseScenes/polishedFrames';
 import { ProgressiveImage, SceneImageFrame } from './SceneImageFrame';
 import { hasImageDelivery } from '../lib/imageDelivery';
+import { createNatureSoundPlayer } from '../lib/natureSound';
 import './chinesePrecisionTool.css';
 
 export function PrecisionIllustration({ courseId, step = 0, variant, overview = false, sceneKey, parameter, gains, paused }: Omit<SemanticSceneProps, 'step'> & {
@@ -62,22 +63,60 @@ export default function ChinesePrecisionTool({ courseId, tool, state, onChange, 
   const [referenceId, setReferenceId] = useState<string>();
   const [soundLayerId, setSoundLayerId] = useState<string>();
   const [soundPlaying, setSoundPlaying] = useState(false);
+  const [soundLoading, setSoundLoading] = useState(false);
   const [soundStatus, setSoundStatus] = useState('');
   const sound = useRef<{ context: AudioContext; gains: Record<string, GainNode> } | null>(null);
+  const recordedSound = useRef<ReturnType<typeof createNatureSoundPlayer> | null>(null);
+  const recordedLayers = tool.kind === 'sound' && tool.layers.every(layer => layer.recording);
   function change(next: PrecisionToolState) { setChecked(false); onChange(next); }
-  function stopSound() { const current = sound.current; sound.current = null; void current?.context.close(); setSoundPlaying(false); setSoundStatus(''); }
+  function stopSound() {
+    const recording = recordedSound.current; recordedSound.current = null; recording?.stop();
+    const current = sound.current; sound.current = null; void current?.context.close().catch(() => {});
+    setSoundPlaying(false); setSoundLoading(false); setSoundStatus('');
+  }
   useEffect(() => { stopSound(); }, [stopSignal]);
   useEffect(() => {
     const stop = () => stopSound();
     const hide = () => { if (document.hidden) stop(); };
     window.addEventListener('hashchange', stop); window.addEventListener('pagehide', stop); document.addEventListener('visibilitychange', hide);
-    return () => { const current = sound.current; sound.current = null; void current?.context.close(); window.removeEventListener('hashchange', stop); window.removeEventListener('pagehide', stop); document.removeEventListener('visibilitychange', hide); };
+    return () => {
+      const recording = recordedSound.current; recordedSound.current = null; recording?.stop();
+      const current = sound.current; sound.current = null; void current?.context.close().catch(() => {});
+      window.removeEventListener('hashchange', stop); window.removeEventListener('pagehide', stop); document.removeEventListener('visibilitychange', hide);
+    };
   }, []);
-  useEffect(() => { for (const [id, gain] of Object.entries(sound.current?.gains ?? {})) gain.gain.setTargetAtTime((state.gains[id] ?? 0) * .12, sound.current!.context.currentTime, .035); }, [state.gains]);
+  useEffect(() => {
+    for (const [id, value] of Object.entries(state.gains)) recordedSound.current?.setGain(id, value);
+    for (const [id, gain] of Object.entries(sound.current?.gains ?? {})) gain.gain.setTargetAtTime((state.gains[id] ?? 0) * .12, sound.current!.context.currentTime, .035);
+  }, [state.gains]);
   useEffect(() => { setChecked(false); }, [tool.id]);
   async function playSound(soundTool: PrecisionSoundTool) {
-    if (soundPlaying) { stopSound(); return; }
+    if (sound.current || recordedSound.current?.state === 'loading' || recordedSound.current?.state === 'playing') { stopSound(); return; }
     onBeforeAudio?.();
+    if (soundTool.layers.every(layer => layer.recording)) {
+      if (!(window.AudioContext || (window as unknown as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext)) {
+        setSoundStatus('这个浏览器暂不支持录音混合播放，请用支持音频的浏览器打开本课。');
+        return;
+      }
+      recordedSound.current?.stop();
+      const player = createNatureSoundPlayer({
+        layers: soundTool.layers.map(layer => ({
+          id: layer.id,
+          source: new URL(`${import.meta.env.BASE_URL}${layer.recording!.source}`, document.baseURI).href,
+        })),
+        gains: state.gains,
+        onState: phase => {
+          if (recordedSound.current !== player) return;
+          setSoundPlaying(phase === 'playing'); setSoundLoading(phase === 'loading');
+          setSoundStatus(phase === 'loading' ? '正在加载三层真实录音，可以随时取消。'
+            : phase === 'playing' ? '正在播放真实录音，拖动滑杆比较轻重；点声部名称可以关闭或打开。'
+            : phase === 'error' ? '录音暂时没有加载成功，请再次点试听重试。' : '');
+        },
+      });
+      recordedSound.current = player;
+      await player.start();
+      return;
+    }
     try {
       const Context = window.AudioContext || (window as unknown as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
       if (!Context) { setSoundStatus('这个浏览器暂不能播放声音示意，可以看声部线索。'); return; }
@@ -174,7 +213,7 @@ export default function ChinesePrecisionTool({ courseId, tool, state, onChange, 
       </>}
       {tool.kind === 'sound' && <>
         <div className="cpt-sound-layers">{tool.layers.map(layer => <div key={layer.id}><button className={state.gains[layer.id] > 0 ? 'is-active' : ''} aria-pressed={state.gains[layer.id] > 0} onClick={() => { setSoundLayerId(layer.id); change(setPrecisionGain(tool, state, layer.id, state.gains[layer.id] > 0 ? 0 : .5)); }}><span className={`cpt-wave cpt-wave-${layer.pattern}`} aria-hidden="true">{[1, 2, 3, 4, 5].map(i => <i key={i} style={{ height: `${7 + (i * 7 % 17)}px` }} />)}</span><strong>{layer.label}</strong></button><label><span>声部轻重 · {Math.round(state.gains[layer.id] * 100)}%</span><input aria-label={`${layer.label}的轻重`} type="range" min="0" max="1" step=".05" value={state.gains[layer.id]} onChange={event => { setSoundLayerId(layer.id); change(setPrecisionGain(tool, state, layer.id, Number(event.target.value))); }} /></label></div>)}</div>
-        <p className="cpt-question">{tool.question}</p><div className="cpt-check-row"><button className="cnl-primary" onClick={() => void playSound(tool)}>{soundPlaying ? <Pause size={17} /> : <Volume2 size={17} />}{soundPlaying ? '停止声音示意' : '试听声部示意'}</button></div><small className="cpt-boundary" role="status">{soundStatus || tool.simulationNote}</small>
+        <p className="cpt-question">{tool.question}</p><div className="cpt-check-row"><button className="cnl-primary" aria-busy={soundLoading || undefined} onClick={() => void playSound(tool)}>{soundPlaying || soundLoading ? <Pause size={17} /> : <Volume2 size={17} />}{soundLoading ? '取消加载' : soundPlaying ? recordedLayers ? '停止声音' : '停止声音示意' : recordedLayers ? '试听真实声音' : '试听声部示意'}</button></div><small className="cpt-boundary" role="status">{soundPlaying && !tool.layers.some(layer => state.gains[layer.id] > 0) ? '所有声部已静音，点声部名称或调高滑杆即可听见。' : soundStatus || tool.simulationNote}</small>
       </>}
       {tool.kind === 'classical' && line && <>
         <div className="cpt-classical-views" role="group" aria-label="直接选择文言阅读工具">{(['pause', 'action', 'reference'] as const).map(value => <button key={value} className={classicalMode === value ? 'is-active' : ''} aria-pressed={classicalMode === value} onClick={() => { setChecked(false); setClassicalMode(value); if (value === 'reference' && reference) change(selectPrecisionOption(tool, state, reference.lineId)); }}>{({ pause: '按意思停顿', action: '词句连行动', reference: '词义与对象' })[value]}</button>)}</div>

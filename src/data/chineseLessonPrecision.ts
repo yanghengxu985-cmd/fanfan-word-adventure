@@ -1,4 +1,5 @@
 import { lessonCourseById, lessonMaterialById } from './chineseLessons';
+import { autumnNatureRecordings, type NatureRecording } from './chineseNatureSounds';
 
 export type PrecisionSceneOption = {
   id: string; label: string; artStep: number; artVariant?: string;
@@ -44,6 +45,7 @@ export type PrecisionSoundTool = ToolBase & {
   layers: {
     id: string; label: string; artStep: number; clue: string; soundHint: string;
     pattern: 'wind' | 'rain' | 'stream' | 'bird' | 'insect';
+    recording?: NatureRecording;
     x: number; y: number; initial: number;
   }[];
   contrast: string; simulationNote: string;
@@ -146,12 +148,12 @@ export const chinesePrecisionLessons: PrecisionLesson[] = [
   }], ['选一个方面，用概括加一个细节介绍秋天。']),
 
   lesson('cn-07', 'sound', '把秋声的来源、动作与作者的想象联系起来。', [{
-    ...base('autumn-sound-layers', '把秋声一层层打开', '调节不同声源的示意强弱，看看声源标记和声音层次如何组合。', '声音来自谁？作者又把它想成什么？', '用发声事物、动作和想象三项说清；略读口头交流即可，不新增必写。'),
+    ...base('autumn-sound-layers', '把秋声一层层打开', '试听真实录音，调节树叶、蟋蟀和大雁的轻重；也可以关闭其他声部，单独听一种。', '声音来自谁？作者又把它想成什么？', '用发声事物、动作和想象三项说清；“告别”“歌唱”“叮咛”是诗人的想象，不是录音里的说话。略读口头交流即可，不新增必写。'),
     kind: 'sound', layers: [
-      { id: 'leaves', label: '树叶与秋风', artStep: 0, clue: '落叶的变化与告别的想象相连。', soundHint: '沙沙的叶声示意', pattern: 'wind', x: 26, y: 40, initial: .5 },
-      { id: 'cricket', label: '蟋蟀', artStep: 1, clue: '蟋蟀的鸣叫与歌唱、告别的想象相连。', soundHint: '短促虫鸣示意', pattern: 'insect', x: 53, y: 79, initial: 0 },
-      { id: 'geese', label: '远行的大雁', artStep: 2, clue: '天空中的大雁声让诗人想到叮咛。', soundHint: '远近呼应的鸣叫示意', pattern: 'bird', x: 75, y: 22, initial: 0 },
-    ], contrast: '先单独看一种声源，再组合；说清楚来源和诗人赋予的想象，不把声波示意当成诗句证据。', simulationNote: '声音或波纹为合成/图形提示，不是教材朗读录音或自然声音实录。',
+      { id: 'leaves', label: '树叶与秋风', artStep: 0, clue: '落叶的变化与告别的想象相连。', soundHint: '真实落叶沙沙声', pattern: 'wind', recording: autumnNatureRecordings.leaves, x: 26, y: 40, initial: .5 },
+      { id: 'cricket', label: '蟋蟀', artStep: 1, clue: '蟋蟀的鸣叫与歌唱、告别的想象相连。', soundHint: '真实蟋蟀鸣叫', pattern: 'insect', recording: autumnNatureRecordings.cricket, x: 53, y: 79, initial: 0 },
+      { id: 'geese', label: '远行的大雁', artStep: 2, clue: '天空中的大雁声让诗人想到叮咛。', soundHint: '真实灰雁飞行鸣叫', pattern: 'bird', recording: autumnNatureRecordings.geese, x: 75, y: 22, initial: 0 },
+    ], contrast: '先单独听一种声源，再组合；说清楚真实声音与诗人想象的联系，不把录音当成课文的原声。', simulationNote: '三层为真实录音参考；“告别、歌唱、叮咛”是诗人的想象。录音来源见右上角“资料与指导”。',
   }], ['口头介绍一种秋声：谁怎样活动，让作者想到什么？'], '本课为略读，不新增必写、必背或必默任务。'),
 
   lesson('cn-09', 'story', '根据旅途中的消息预测，区分坚持目标与听取有用提醒。', [{

@@ -1,0 +1,55 @@
+{
+    "lesson":  "cn-07",
+    "unitTestsPassed":  279,
+    "build":  "passed",
+    "chromium":  {
+                     "engine":  "chromium",
+                     "checks":  [
+                                    "Three real MP3 buffers start in a running AudioContext",
+                                    "Every decoded recording is complete and audible",
+                                    "Autumn tool creates no electronic oscillators",
+                                    "Recordings load from this site, without third-party playback requests",
+                                    "Muting all three sliders actually silences audio and shows feedback",
+                                    "Leaves can be heard as an isolated layer",
+                                    "Cricket can be heard as an isolated layer",
+                                    "Flying geese can be heard as an isolated layer",
+                                    "Tapping a muted layer opens it at a useful volume",
+                                    "Stop closes the native audio context",
+                                    "Second playback reuses decoded recordings",
+                                    "Sources dialog credits the actual goose recording",
+                                    "Play control remains visible at 1024x700",
+                                    "Play control remains visible at 768x1024",
+                                    "Switching tabs stops every layer",
+                                    "Failed downloads show a retryable error rather than playing",
+                                    "Retry after failed downloads plays successfully",
+                                    "Cancelling a pending load closes audio and leaves the tool ready",
+                                    "Immediate retry after cancellation starts a fresh working player",
+                                    "Teacher pause stops recorded sound layers",
+                                    "Existing nature lesson keeps its correctly labelled legacy sound path",
+                                    "No uncaught browser errors"
+                                ],
+                     "recordingRequests":  [
+                                               "http://127.0.0.1:5176/audio/nature/autumn-leaves.mp3",
+                                               "http://127.0.0.1:5176/audio/nature/field-cricket.mp3",
+                                               "http://127.0.0.1:5176/audio/nature/greylag-flight-calls.mp3"
+                                           ],
+                     "errors":  [
+
+                                ]
+                 },
+    "webkit":  {
+                   "engine":  "webkit",
+                   "audioPlayback":  "unavailable in this engine; not a Safari device playback test",
+                   "checks":  [
+                                  "Engine without Web Audio shows an accurate unsupported-browser message",
+                                  "Recording attribution remains available without Web Audio",
+                                  "Play control visible at 1024x700",
+                                  "Play control visible at 768x1024",
+                                  "No uncaught browser errors in unsupported-audio fallback"
+                              ],
+                   "errors":  [
+
+                              ]
+               },
+    "limitation":  "Native Web Audio is absent in this Windows WebKit build. Actual iPad Safari playback and human listening have not been verified."
+}

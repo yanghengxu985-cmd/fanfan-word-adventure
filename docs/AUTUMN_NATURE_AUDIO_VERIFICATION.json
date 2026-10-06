@@ -1,0 +1,42 @@
+{
+  "lesson": "cn-07",
+  "pipeline": "field-recordings-mono-mp3-v1",
+  "checks": "Source identity/licence checked; complete natural timing retained; decoded PCM checked for silence/clipping.",
+  "listeningLimit": "Automated checks are not an auditory review. Naturalness remains subject to user listening.",
+  "totalBytes": 342212,
+  "entries": [
+    {
+      "id": "leaves",
+      "source": "audio/nature/autumn-leaves.mp3",
+      "sampleRate": 44100,
+      "channels": 1,
+      "duration": 9.41658,
+      "bytes": 105264,
+      "peak": 0.764904,
+      "rms": 0.052312,
+      "sha256": "21fddb8506414b5be7bf19fe48320098178dc646c7e46117230ef4afa3436ca4"
+    },
+    {
+      "id": "cricket",
+      "source": "audio/nature/field-cricket.mp3",
+      "sampleRate": 44100,
+      "channels": 1,
+      "duration": 12.27374,
+      "bytes": 139068,
+      "peak": 0.264921,
+      "rms": 0.079741,
+      "sha256": "c92451ed9850d88d9aaed4df3a38ab07c0847b8ae6c317de5976882976baef17"
+    },
+    {
+      "id": "geese",
+      "source": "audio/nature/greylag-flight-calls.mp3",
+      "sampleRate": 44100,
+      "channels": 1,
+      "duration": 10.79857,
+      "bytes": 97880,
+      "peak": 0.472719,
+      "rms": 0.079932,
+      "sha256": "5c5de40bf94d3aaa1dedaabd060e09807a180c2047bb80fc704ef18826ec41e5"
+    }
+  ]
+}
